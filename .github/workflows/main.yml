@@ -1,10 +1,10 @@
-name: documentation
+name: main
 
 on:
   pull_request:
-    branches: [documentation]
+    branches: [main]
   push:
-    branches: [documentation]
+    branches: [main]
 
 jobs:
   checks:
