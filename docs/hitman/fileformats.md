@@ -1,8 +1,9 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # File Formats
+Glacier Engine 2 file formats
 ```
 AIBB: BehaviorTreeEntityBlueprint
 AIBX: BehaviorTreeEntityType
