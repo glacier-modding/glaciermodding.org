@@ -13,8 +13,8 @@ module.exports = {
     navbar: {
       title: 'wiki.notex.app',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Glacier Engine 2 Modding Logo',
+        src: 'img/logo.png',
       },
       items: [
         {
