@@ -8,13 +8,12 @@ RPKGs (Retail/Runtime Packages) are the archive format Glacier 2 Engine games us
 
 ### HITMAN 3
 #### Base archive structure
-
 | Type              | Description                                                                               |
 |-------------------|-------------------------------------------------------------------------------------------|
 | string            | 2KPR                                                                                      |
 | uint32_t          | unknown (always seems to be 0x1)                                                          |
 | uint8_t           | chunk number                                                                              |
-| uint16_t/uint8_t? | could be used with chunk number above, making the chunk number possibly uint16_t in size  |
+| uint8_t           | unknown (always seems to be 0x0)                                                          |
 | uint8_t           | chunk patch number                                                                        |
 | uint8_t           | unknown (always seems to be 0x78)                                                         |
 | uint8_t           | unknown (always seems to be 0x78)                                                         |
@@ -48,13 +47,12 @@ RPKGs (Retail/Runtime Packages) are the archive format Glacier 2 Engine games us
 | uint64_t          | hash file hash value                                                                      |
 
 #### Patch archive structure
-
 | Type              | Description                                                                               |
 |-------------------|-------------------------------------------------------------------------------------------|
 | string            | 2KPR                                                                                      |
 | uint32_t          | unknown (always seems to be 0x1)                                                          |
 | uint8_t           | chunk number                                                                              |
-| uint16_t/uint8_t? | could be used with chunk number above, making the chunk number possibly uint16_t in size  |
+| uint8_t           | unknown (always seems to be 0x0)                                                          |
 | uint8_t           | chunk patch number                                                                        |
 | uint8_t           | unknown (always seems to be 0x78)                                                         |
 | uint8_t           | unknown (always seems to be 0x78)                                                         |
