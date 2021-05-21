@@ -1,10 +1,9 @@
 ---
 sidebar_position: 1
-slug: /
 ---
 
-# Home
+# Information
 
-Welcome to the wiki for the RPKG Tool and various other bits of information on the Glacier 2 Engine.
+The RPKG tool allows for easy (un)packing of files from the Glacier Engine RPKG file format!
 
 The wiki is currently a work in progress at the moment, please feel free to contribute @ https://github.com/Notexe/wiki.notex.app
