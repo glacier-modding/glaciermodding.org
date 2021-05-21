@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# RPKGs
+# RPKG
 
 RPKGs (Retail/Runtime Packages) are the archive format Glacier 2 Engine games use.
 
