@@ -7,7 +7,7 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'notexe', // Usually your GitHub org/user name.
+  organizationName: 'glacier-modding', // Usually your GitHub org/user name.
   projectName: 'wiki.notex.app', // Usually your repo name.
   themeConfig: {
     navbar: {
@@ -18,7 +18,7 @@ module.exports = {
       },
       items: [
         {
-          href: 'https://github.com/Notexe/wiki.notex.app',
+          href: 'https://github.com/glacier-modding/wiki.notex.app',
           label: 'GitHub',
           position: 'right',
         },
@@ -34,7 +34,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/Notexe/wiki.notex.app/blob/main/',
+            'https://github.com/glacier-modding/wiki.notex.app/blob/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
