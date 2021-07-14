@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Details about RPKG, the file format used by Glacier 2.
 ---
 
 # RPKG

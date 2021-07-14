@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Documentation for the HitmanDB API.
 ---
 
 # API

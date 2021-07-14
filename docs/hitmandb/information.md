@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Details about HitmanDB.
 ---
 
 # Information

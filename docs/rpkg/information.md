@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+description: Details about the RPKG Tool, made for unpacking and repacking of Glacier 2 RPKG files.
 ---
 
 # Information

@@ -1,9 +1,12 @@
 ---
 sidebar_position: 1
+description: All the files that can appear in an RPKG, and what they correspond to.
 ---
 
 # File Formats
+
 Glacier 2 Engine file formats
+
 ```
 AIBB: BehaviorTreeEntityBlueprint
 AIBX: BehaviorTreeEntityType
