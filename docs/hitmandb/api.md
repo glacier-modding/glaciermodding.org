@@ -5,13 +5,14 @@ description: Documentation for the HitmanDB API.
 
 # API
 
-### [POST] /search
+### <span class="badge badge--primary">POST</span> /search
 Searches the Hash DB with the specified parameters.  
 You can use any HTTP request method, but it is recommended to use POST.  
 
 **Type:** JSON  
 **Required Headers:** Content-Length  
 **Note:** Any status code other than 200 should be considered an error. The following JSON will be returned if an error has occurred:
+
 ```json
 {
     "error": "invalid request json"
@@ -20,6 +21,7 @@ You can use any HTTP request method, but it is recommended to use POST.
 This is currently the only error that can occur.
 
 #### Request Fields (all are required, case insensitive):
+
 | Field Name        | Type          | Description                                                            |
 |-------------------|---------------|------------------------------------------------------------------------|
 | search_term       | string        | Term to search for                                                     |
@@ -28,6 +30,7 @@ This is currently the only error that can occur.
 | page_number       | int           | What page to return results from (starting from 0)                     |
 
 #### Example Request:
+
 ```json
 {
     "search_term": "azalea",
@@ -38,6 +41,7 @@ This is currently the only error that can occur.
 ```
 
 #### Response Fields:
+
 | Field Name        | Type           | Description                                                                          |
 |-------------------|----------------|--------------------------------------------------------------------------------------|
 | results           | array (result) | The results returned from the search ([see an example format below](#result-format)) |
@@ -45,6 +49,7 @@ This is currently the only error that can occur.
 | page_number       | int            | What page to return results from (starting from 0) (as specified by user)            |
 
 #### Result Format:
+
 ```json
 {
     "hash": "00C736630357B43C",
@@ -54,6 +59,7 @@ This is currently the only error that can occur.
 ```
 
 #### Example Response:
+
 ```json
 {
     "number_of_results": 3,
@@ -79,4 +85,5 @@ This is currently the only error that can occur.
 ```
 
 #### List of Types:
+
 Same as [Glacier 2 File Formats](/glacier2/fileformats) but with an added `ANY` type which will return all types.
