@@ -30,11 +30,11 @@ ECPB: ExtendedCppEntityBlueprint
 ECPT: ExtendedCppEntityType
 ENUM: EnumType
 ERES: EntityResource
-FXAC: Actor
-FXAS: AnimSet
+FXAC: FaceFX Actor
+FXAS: FaceFX AnimSet
 GFXF: ScaleformGFx
-GFXI: ScaleformGFx
-GFXV: ScaleformGfxVideo
+GFXI: ScaleformGFx Images
+GFXV: ScaleformGfx Video
 GIDX: GlobalResourceIndex
 HIKC: HIKCharacter
 IMAP: IDMap
