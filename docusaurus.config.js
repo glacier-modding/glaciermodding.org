@@ -24,6 +24,9 @@ module.exports = {
         },
       ],
     },
+    colorMode: {
+      defaultMode: 'dark'
+    }
   },
   presets: [
     [
