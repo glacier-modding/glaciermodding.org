@@ -26,6 +26,7 @@ CPPT: CppEntityType
 CRMD: CrowdMapDataResource
 DITL: DialogSoundTemplateList
 DLGE: DialogEvent
+DSWB: SAudioSwitchBlueprintData
 ECPB: ExtendedCppEntityBlueprint
 ECPT: ExtendedCppEntityType
 ENUM: EnumType
