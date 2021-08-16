@@ -30,7 +30,7 @@ Chunk 20 S2 Sheep (Hawke’s Bay)
 Chunk 21 Season1
 Chunk 22 S1 Hokkaido / Snowcrane (Hokkaido)
 Chunk 23 S1 Colorado / Bull (Colorado)
-Chunk 24 S1 Bangkok
+Chunk 24 S1 Bangkok / Tiger (Bangkok)
 Chunk 25 S1 Marrakesh / Marrakech Coup (Marrakesh)
 Chunk 26 S1 Coastal Town/ Italy Virus (Sapienza)
 Chunk 27 S1 Paris Fashion (Paris)
