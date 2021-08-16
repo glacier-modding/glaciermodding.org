@@ -7,7 +7,7 @@ description: A walkthrough of Glacier 2 and modding.
 
 ## Background
 
-The Glacier 2 Engine is a custom-built, private piece of software developed by IOI for the main purpose of running Hitman games. What is known about the engine is a result of reverse-engineering the files provided to the community via the game itself.
+The Glacier 2 Engine is IO Interactive's proprietary custom game engine designed to run Hitman games. What is known about the engine is a result of reverse-engineering the files provided to the community via the games themselves
 
 ## Game Assets
 
