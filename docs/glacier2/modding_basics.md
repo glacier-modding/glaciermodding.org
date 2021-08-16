@@ -28,5 +28,4 @@ Also included in the `Runtime` folder is a `packagedefinition.txt` file. This fi
 todo
 
 ---
-
-<sup>1</sup>*Please, for the love of god, do not run the program directly from the ZIP file/7zip/whatever program you use.*
+<sup>1</sup>Please, for the love of god, do not run the program directly from the ZIP file/7zip/whatever program you use.
