@@ -73,6 +73,7 @@ WSGT: AudioStateType
 WSWB: AudioSwitchBlueprint
 WSWT: AudioSwitchType
 WWEM: Wem
+WWES: Wem (HITMAN 3 specific, contains dialogue)
 WWEV: WwiseEvent
 YSHP: PhysicsSystem
 ```
