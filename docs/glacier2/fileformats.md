@@ -15,8 +15,8 @@ AIRG: ReasoningGridResource
 ALOC: Physics
 ASEB: AspectEntityBlueprint
 ASET: AspectEntityType
-ASVA: AnimSetVariation
-ATMD: AMD
+ASVA: AnimationSetVariation
+ATMD: AnimationTakeMetaData
 BLOB: ResourceBlob
 BMSK: BoneMask
 BORG: AnimationBoneData
@@ -47,8 +47,8 @@ MATE: RenderMaterialEffect
 MATI: RenderMaterialInstance
 MATT: RenderMaterialEntityType
 MJBA: Animation
-MRTN: Network
-MRTR: Rig
+MRTN: MorphemeRuntimeNetwork
+MRTR: MorphemeRuntimeRig
 NAVP: NavpowerNavmesh
 ORES: OnlineResource
 PREL: Preload
