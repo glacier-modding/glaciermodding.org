@@ -5,7 +5,7 @@ description: Details about RPKG, the file format used by Glacier 2.
 
 # RPKG
 
-RPKGs (Retail/Runtime Packages) are the archive format Glacier 2 Engine games use.
+RPKGs (Resource Packages) are the archive format Glacier 2 Engine games use.
 
 ### HITMAN 3
 #### Base archive structure
