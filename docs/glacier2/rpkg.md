@@ -90,7 +90,3 @@ RPKGs (Resource Packages) are the archive format Glacier 2 Engine games use.
 | Type              | Description                                                                               |
 |-------------------|-------------------------------------------------------------------------------------------|
 | uint64_t          | hash file hash value                                                                      |
-
-### HITMAN 2
-
-### HITMAN 1

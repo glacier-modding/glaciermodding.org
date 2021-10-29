@@ -22,10 +22,3 @@ The `Runtime` folder contains files with the `rpkg` file extension. These are th
 Asset data formats are diverse, but both readable and editable when using the proper tools. To make sense of these files, download the fittingly-named `rpkg` tool [here](https://www.notex.app/rpkg).<sup>1</sup> Make sure you have the [.NET Framework](https://dotnet.microsoft.com/download/dotnet-framework) installed on your machine.
 
 Also included in the `Runtime` folder is a `packagedefinition.txt` file. This file tracks the patches - updates and mod additions - to the game's content. The included file in a retail installation limits the amount of patches that the file can contain, so it itself also needs to be patched! You can find the patched version as well as a decoder and encoder [here](https://www.notex.app/tools/online/xtea).
-
-## Using RPKG
-
-todo
-
----
-<sup>1</sup>Please, for the love of god, do not run the program directly from the ZIP file/7zip/whatever program you use.
