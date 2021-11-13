@@ -41,7 +41,7 @@ HIKC: HIKCharacter
 IMAP: IDMap
 JSON: JsonResource
 LINE: TextLine
-LOCR: Localization
+LOCR: LocalizationResource
 MATB: RenderMaterialEntityBlueprint
 MATE: RenderMaterialEffect
 MATI: RenderMaterialInstance
@@ -56,15 +56,15 @@ PRIM: RenderPrimitive
 REPO: Repository
 RTLV: RuntimeLocalizedVideo
 SCDA: ScatterData
-SDEF: SDefs
+SDEF: SoundDefinitions
 SLMX: SelectMatrix
-TBLU: TemplateBlueprint
+TBLU: TemplateEntityBlueprint
 TELI: TextList
-TEMP: Template
+TEMP: TemplateEntity
 TEXD: RenderTextureData
 TEXT: RenderTexture
-UICB: UIControl
-UICT: UIControl
+UICB: UIControl Blueprint
+UICT: UIControl Template
 VIDB: VideoDatabaseResource
 VTXD: VertexData
 WBNK: WwiseBank
@@ -72,9 +72,9 @@ WSGB: AudioStateBlueprint
 WSGT: AudioStateType
 WSWB: AudioSwitchBlueprint
 WSWT: AudioSwitchType
-WWEM: Wem
-WWES: Wem (HITMAN 3 specific, contains dialogue)
-WWEV: WwiseEvent
+WWEM: Wwise Encoded Media
+WWES: Wwise Encoded Media (HITMAN 3 specific, contains dialogue)
+WWEV: Wwise Event
 YSHP: PhysicsSystem
 ```
 ---
