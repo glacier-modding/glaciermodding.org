@@ -46,7 +46,7 @@ MATB: RenderMaterialEntityBlueprint
 MATE: RenderMaterialEffect
 MATI: RenderMaterialInstance
 MATT: RenderMaterialEntityType
-MJBA: Animation
+MJBA: MorphemeJointBoneAnimationData
 MRTN: MorphemeRuntimeNetwork
 MRTR: MorphemeRuntimeRig
 NAVP: NavpowerNavmesh
