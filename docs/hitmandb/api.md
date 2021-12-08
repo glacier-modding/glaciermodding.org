@@ -26,7 +26,7 @@ This is currently the only error that can occur.
 |-------------------|---------------|------------------------------------------------------------------------|
 | search_term       | string        | Term to search for                                                     |
 | number_of_results | int           | How many results should be returned on one "page"                      |
-| resource_type     | string (type) | What type to search for ([see list of types](#list-of-types)) e.g. ANY |
+| resource_type     | string (type) | What type to search for ([see list of types](#list-of-types)) e.g. any |
 | page_number       | int           | What page to return results from (starting from 0)                     |
 
 #### Example Request:
@@ -86,4 +86,4 @@ This is currently the only error that can occur.
 
 #### List of Types:
 
-Same as [Glacier 2 File Formats](/glacier2/fileformats) but with an added `ANY` type which will return all types.
+Same as [Glacier 2 File Formats](/glacier2/fileformats) but with an added `any` type which will return all types.
