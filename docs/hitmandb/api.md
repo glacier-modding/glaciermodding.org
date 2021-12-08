@@ -7,7 +7,7 @@ description: Documentation for the HitmanDB API.
 
 ### <span class="badge badge--primary">POST</span> /search
 Searches the Hash DB with the specified parameters.  
-You can use any HTTP request method, but it is recommended to use POST.  
+You can use any HTTP request methods except OPTIONS and HEAD, but it is recommended to use POST.  
 
 **Type:** JSON  
 **Required Headers:** Content-Length  
