@@ -20,6 +20,7 @@ ATMD: AnimationTakeMetaData
 BLOB: ResourceBlob
 BMSK: BoneMask
 BORG: AnimationBoneData
+BOXC: RenderBoxReflectionCache
 CBLU: CppEntityBlueprint
 CLNG: DialogCascadingLanguageDependencies
 CPPT: CppEntityType
