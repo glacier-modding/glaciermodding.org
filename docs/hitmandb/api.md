@@ -6,8 +6,9 @@ description: Documentation for the HitmanDB API.
 # API
 
 ### <span class="badge badge--primary">POST</span> /search
+
 Searches the Hash DB with the specified parameters.  
-You can use any HTTP request methods except OPTIONS and HEAD, but it is recommended to use POST.  
+You can use any HTTP request methods except OPTIONS and HEAD, but it is recommended to use POST.
 
 **Type:** JSON  
 **Required Headers:** Content-Length  
@@ -18,12 +19,13 @@ You can use any HTTP request methods except OPTIONS and HEAD, but it is recommen
     "error": "invalid request json"
 }
 ```
+
 This is currently the only error that can occur.
 
 #### Request Fields (all are required, case insensitive):
 
 | Field Name        | Type          | Description                                                            |
-|-------------------|---------------|------------------------------------------------------------------------|
+| ----------------- | ------------- | ---------------------------------------------------------------------- |
 | search_term       | string        | Term to search for                                                     |
 | number_of_results | int           | How many results should be returned on one "page"                      |
 | resource_type     | string (type) | What type to search for ([see list of types](#list-of-types)) e.g. any |
@@ -43,7 +45,7 @@ This is currently the only error that can occur.
 #### Response Fields:
 
 | Field Name        | Type           | Description                                                                          |
-|-------------------|----------------|--------------------------------------------------------------------------------------|
+| ----------------- | -------------- | ------------------------------------------------------------------------------------ |
 | results           | array (result) | The results returned from the search ([see an example format below](#result-format)) |
 | number_of_results | int            | How many results should be returned on one "page" (as specified by user)             |
 | page_number       | int            | What page to return results from (starting from 0) (as specified by user)            |
