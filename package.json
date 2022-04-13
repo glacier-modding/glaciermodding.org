@@ -21,8 +21,11 @@
         "@mdx-js/react": "^1.6.21",
         "@svgr/webpack": "^6.2.1",
         "clsx": "^1.1.1",
+        "esbuild": "^0.14.36",
+        "esbuild-loader": "^2.18.0",
         "react": "^18.0.0",
-        "react-dom": "^18.0.0"
+        "react-dom": "^18.0.0",
+        "webpack": "^5.72.0"
     },
     "browserslist": {
         "production": [

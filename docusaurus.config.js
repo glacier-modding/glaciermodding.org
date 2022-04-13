@@ -28,6 +28,15 @@ module.exports = {
             defaultMode: "dark",
         },
     },
+    webpack: {
+        jsLoader: (isServer) => ({
+            loader: require.resolve("esbuild-loader"),
+            options: {
+                loader: "jsx",
+                target: isServer ? "node14" : "es2017",
+            },
+        }),
+    },
     plugins: [
         [
             "@docusaurus/plugin-content-docs",
