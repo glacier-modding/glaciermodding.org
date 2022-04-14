@@ -1,3 +1,6 @@
 .docusaurus
 .yarn/sdks
 .pnp.*
+
+static/generated
+build

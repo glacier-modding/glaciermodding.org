@@ -38,6 +38,7 @@ module.exports = {
         }),
     },
     plugins: [
+        require.resolve("./plugins/generate-classes-plugin.cjs"),
         [
             "@docusaurus/plugin-content-docs",
             {

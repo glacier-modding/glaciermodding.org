@@ -1576,7 +1576,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/module-type-aliases@npm:2.0.0-beta.18":
+"@docusaurus/module-type-aliases@npm:2.0.0-beta.18, @docusaurus/module-type-aliases@npm:^2.0.0-beta.18":
   version: 2.0.0-beta.18
   resolution: "@docusaurus/module-type-aliases@npm:2.0.0-beta.18"
   dependencies:
@@ -1734,7 +1734,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/types@npm:2.0.0-beta.18":
+"@docusaurus/types@npm:2.0.0-beta.18, @docusaurus/types@npm:^2.0.0-beta.18":
   version: 2.0.0-beta.18
   resolution: "@docusaurus/types@npm:2.0.0-beta.18"
   dependencies:
@@ -10280,8 +10280,10 @@ __metadata:
   resolution: "wiki-notex-app@workspace:."
   dependencies:
     "@docusaurus/core": 2.0.0-beta.18
+    "@docusaurus/module-type-aliases": ^2.0.0-beta.18
     "@docusaurus/plugin-content-docs": 2.0.0-beta.18
     "@docusaurus/theme-classic": 2.0.0-beta.18
+    "@docusaurus/types": ^2.0.0-beta.18
     "@mdx-js/react": ^1.6.21
     "@svgr/webpack": ^6.2.1
     clsx: ^1.1.1
