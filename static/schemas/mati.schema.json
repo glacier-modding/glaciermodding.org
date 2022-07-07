@@ -50,6 +50,7 @@
                 }
             },
             "required": [
+                "ERID",
                 "INST",
                 "TYPE",
                 "UnknownFlags"
