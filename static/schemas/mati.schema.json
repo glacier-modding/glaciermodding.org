@@ -10,9 +10,25 @@
                     "type": "string",
                     "description": "Link to the schema file"
                 },
-                "ERID": {
-                    "type": "integer",
-                    "description": "EntityResource Id"
+                "TYPE": {
+                    "type": "string",
+                    "description": "Type of material",
+                    "default": "Standard",
+                    "examples": [
+                        "Standard",
+                        "StandardLinked",
+                        "StandardWeighted",
+                        "SpriteParticle_AO",
+                        "SpriteParticleVelocity"
+                    ]
+                },
+                "MATE": {
+                    "type": "string",
+                    "description": "MATE: Material Class Hash/Path"
+                },
+                "ERES": {
+                    "type": "string",
+                    "description": "ERES: EntityResource Hash/Path"
                 },
                 "UnknownFlags": {
                     "type": "object",
@@ -29,18 +45,6 @@
                         }
                     }
                 },
-                "TYPE": {
-                    "type": "string",
-                    "description": "Type of material",
-                    "default": "Standard",
-                    "examples": [
-                        "Standard",
-                        "StandardLinked",
-                        "StandardWeighted",
-                        "SpriteParticle_AO",
-                        "SpriteParticleVelocity"
-                    ]
-                },
                 "INST": {
                     "type": "array",
                     "description": "Instance",
@@ -50,8 +54,9 @@
                 }
             },
             "required": [
-                "ERID",
+                "ERES",
                 "INST",
+                "MATE",
                 "TYPE",
                 "UnknownFlags"
             ],
@@ -210,8 +215,8 @@
                     "description": "Tiling V"
                 },
                 "TXID": {
-                    "type": "integer",
-                    "description": "Texture Id"
+                    "type": "string",
+                    "description": "TEXT: Texture Hash/Path"
                 },
                 "TYPE": {
                     "type": "string",
