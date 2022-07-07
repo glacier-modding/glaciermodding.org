@@ -17,7 +17,7 @@
                 "UnknownFlags": {
                     "type": "object",
                     "additionalProperties": false,
-                    "description": "Unknown Flags",
+                    "description": "Unknown Flags (Seems to be in some way connected to the MATE material class dependency)",
                     "properties": {
                         "Unk1": {
                             "type": "integer",
