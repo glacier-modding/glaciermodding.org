@@ -28,7 +28,7 @@
                 },
                 "ERES": {
                     "type": "string",
-                    "description": "ERES: EntityResource Hash/Path"
+                    "description": "ERES: EntityResource Hash/Path (Can be blank if no ERES is required)"
                 },
                 "UnknownFlags": {
                     "type": "object",
