@@ -1,0 +1,237 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$ref": "#/definitions/MATI",
+    "definitions": {
+        "MATI": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$schema": {
+                    "type": "string",
+                    "description": "Link to the schema file"
+                },
+                "ERID": {
+                    "type": "integer",
+                    "description": "EntityResource Id"
+                },
+                "UnknownFlags": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "description": "Unknown Flags",
+                    "properties": {
+                        "Unk1": {
+                            "type": "integer",
+                            "description": "Unknown Flag 1"
+                        },
+                        "Unk2": {
+                            "type": "integer",
+                            "description": "Unknown Flag 2"
+                        }
+                    }
+                },
+                "TYPE": {
+                    "type": "string",
+                    "description": "Type of material",
+                    "default": "Standard",
+                    "examples": [
+                        "Standard",
+                        "StandardLinked",
+                        "StandardWeighted",
+                        "SpriteParticle_AO",
+                        "SpriteParticleVelocity"
+                    ]
+                },
+                "INST": {
+                    "type": "array",
+                    "description": "Instance",
+                    "items": {
+                        "$ref": "#/definitions/Inst"
+                    }
+                }
+            },
+            "required": [
+                "INST",
+                "TYPE",
+                "UnknownFlags"
+            ],
+            "title": "MATI"
+        },
+        "Inst": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "NAME": {
+                    "type": "string",
+                    "description": "Name of material"
+                },
+                "TAGS": {
+                    "type": "string",
+                    "description": "Tags"
+                },
+                "BIND": {
+                    "type": "array",
+                    "description": "Binder",
+                    "items": {
+                        "$ref": "#/definitions/Bind"
+                    }
+                }
+            },
+            "required": [
+                "BIND",
+                "NAME",
+                "TAGS"
+            ],
+            "title": "Inst"
+        },
+        "Bind": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "RSTA": {
+                    "type": "array",
+                    "description": "Render State",
+                    "items": {
+                        "$ref": "#/definitions/Types"
+                    }
+                },
+                "FLTV": {
+                    "type": "array",
+                    "description": "Float Value",
+                    "items": {
+                        "$ref": "#/definitions/Types"
+                    }
+                },
+                "TEXT": {
+                    "type": "array",
+                    "description": "Texture",
+                    "items": {
+                        "$ref": "#/definitions/Types"
+                    }
+                },
+                "COLO": {
+                    "type": "array",
+                    "description": "Colour",
+                    "items": {
+                        "$ref": "#/definitions/Types"
+                    }
+                }
+            },
+            "required": [
+                "COLO",
+                "FLTV",
+                "RSTA",
+                "TEXT"
+            ],
+            "title": "Bind"
+        },
+        "Types": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "AREF": {
+                    "type": "integer",
+                    "description": "Alpha Reference"
+                },
+                "ATST": {
+                    "type": "integer",
+                    "description": "Alpha Test Enabled"
+                },
+                "BENA": {
+                    "type": "integer",
+                    "description": "Blend Enabled"
+                },
+                "BMOD": {
+                    "type": "string",
+                    "description": "Blend Mode"
+                },
+                "CULL": {
+                    "type": "string",
+                    "description": "Culling Mode"
+                },
+                "DBDE": {
+                    "type": "integer",
+                    "description": "Decal Blend Diffuse"
+                },
+                "DBEE": {
+                    "type": "integer",
+                    "description": "Decal Blend Emission"
+                },
+                "DBNE": {
+                    "type": "integer",
+                    "description": "Decal Blend Normal"
+                },
+                "DBRE": {
+                    "type": "integer",
+                    "description": "Decal Blend Roughness"
+                },
+                "DBSE": {
+                    "type": "integer",
+                    "description": "Decal Blend Specular"
+                },
+                "ENAB": {
+                    "type": "integer",
+                    "description": "Enabled"
+                },
+                "FENA": {
+                    "type": "integer",
+                    "description": "Fog Enabled"
+                },
+                "NAME": {
+                    "type": "string",
+                    "description": "Name"
+                },
+                "OPAC": {
+                    "type": "number",
+                    "description": "Opacity"
+                },
+                "SSBW": {
+                    "type": "number",
+                    "description": "Subsurface Value"
+                },
+                "SSVB": {
+                    "type": "number",
+                    "description": "Subsurface Blue"
+                },
+                "SSVG": {
+                    "type": "number",
+                    "description": "Subsurface Green"
+                },
+                "SSVR": {
+                    "type": "number",
+                    "description": "Subsurface Red"
+                },
+                "TILU": {
+                    "type": "string",
+                    "description": "Tiling U"
+                },
+                "TILV": {
+                    "type": "string",
+                    "description": "Tiling V"
+                },
+                "TXID": {
+                    "type": "integer",
+                    "description": "Texture Id"
+                },
+                "TYPE": {
+                    "type": "string",
+                    "description": "Type"
+                },
+                "VALU": {
+                    "type": [
+                        "array",
+                        "number"
+                    ],
+                    "description": "Value"
+                },
+                "ZBIA": {
+                    "type": "integer",
+                    "description": "Z Bias"
+                },
+                "ZOFF": {
+                    "type": "number",
+                    "description": "Z Offset"
+                }
+            }
+        }
+    }
+}
