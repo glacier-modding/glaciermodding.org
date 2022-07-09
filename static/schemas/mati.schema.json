@@ -216,7 +216,7 @@
                 },
                 "TXID": {
                     "type": "string",
-                    "description": "TEXT: Texture Hash/Path"
+                    "description": "TEXT: Texture Hash/Path (Can be blank if no TXID is required)"
                 },
                 "TYPE": {
                     "type": "string",
