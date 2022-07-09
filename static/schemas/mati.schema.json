@@ -148,7 +148,14 @@
                 },
                 "BMOD": {
                     "type": "string",
-                    "description": "Blend Mode"
+                    "description": "Blend Mode",
+                    "examples": [
+                        "ADD",
+                        "TRANS",
+                        "TRANS_PREMULTIPLIED_ALPHA",
+                        "TRANS_ON_OPAQUE",
+                        "OPAQUE"
+                    ]
                 },
                 "CULL": {
                     "type": "string",
