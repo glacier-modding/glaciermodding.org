@@ -159,7 +159,12 @@
                 },
                 "CULL": {
                     "type": "string",
-                    "description": "Culling Mode"
+                    "description": "Culling Mode",
+                    "examples": [
+                        "DontCare",
+                        "OneSided",
+                        "TwoSided"
+                    ]
                 },
                 "DBDE": {
                     "type": "integer",
@@ -227,7 +232,13 @@
                 },
                 "TYPE": {
                     "type": "string",
-                    "description": "Type"
+                    "description": "Type",
+                    "examples": [
+                        "AsColorMap",
+                        "AsCompoundNormal",
+                        "AsHeightMap",
+                        "AsNormalMap"
+                    ]
                 },
                 "VALU": {
                     "type": [
