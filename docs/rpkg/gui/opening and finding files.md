@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Opening RPKG's
+# Opening RPKGs
 Once setup you can load in the chunk files into the tool by using `Import` > `Import RPKGs folder` and pointing it to the `HITMAN 3\Runtime` folder. This will load all the chunk files into the tool which is recommended when you are unsure where the file you are looking for is located. You can also load in individual files using the `Import` > `Import RPKG file`
 
 # Searching RPKG's
