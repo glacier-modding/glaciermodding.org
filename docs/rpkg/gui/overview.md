@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Overview
 
-The RPKG has two panels.
+The RPKG tool has two panels.
 
 ## Left panel
 The left panel includes the tabs Resource View, the Depenency View and the Search
@@ -22,6 +22,17 @@ Once a file has been selected by left clicking it's content can be viewed in the
 * JSON Viewer presents the content of a JSON file. Only applicable to JSON and LOCR files.
 * 3D Viewer renders a mesh of the content. Only applicable to RIM files.
 * Audio Player plays the content of a file. Only applicable to WWEM, WWES and WWEV  files.
+
+## Functions
+In addition to the two main panels the RPKG tool has additional functions which can be accessed through the menu bar.
+These are:
+* [Extract](https://wiki.notex.app/rpkg/gui/extracting)
+* [Generate](https://wiki.notex.app/rpkg/gui/generate)
+* [Mass Extract](https://wiki.notex.app/rpkg/gui/mass_extract)
+* [Rebuild](https://wiki.notex.app/rpkg/gui/rebuild)
+* [Map Editing] ()
+* Color Theme 
+* [Utilities] ()
 
 
 
