@@ -152,7 +152,9 @@ The final piece of the puzzle is the mod's manifest. We can either modify Realis
   "frameworkVersion": "1.5.7"
 }
 ```
+
 The "frameworkVersion" will change depending on what version of SMF you're using. As of this writing, the current version is 1.5.7.
+
 
 If we copy this section and paste it into our `manifest.json`, we can then change the version, id, name, description, and authors to our liking. You can call it whatever you'd like, just make sure to only modify the text within the quotation marks. This needs to follow proper JSON syntax, including all quotation marks, commas, brackets, etc. If the syntax is incorrect, SMF will be unable to load any mods at all, and the mod list will appear blank. If you ever run into this issue, the `manifest.json` for one of your mods is likely broken.
 
