@@ -202,7 +202,7 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 
 `invalid` - Original chunk flowchart, of which V2 was based.
 
-`Notex`, `REDACTED`, [and all other contributors](https://github.com/glacier-modding/RPKG-Tool/graphs/contributors) - RPKG Tool.
+`Notex`, `REDACTED`, [and all RPKG contributors](https://github.com/glacier-modding/RPKG-Tool/graphs/contributors) - RPKG Tool.
 
 `HMBM47` - Hitman 3 Outfits spreadsheet. The original lists were created by grappigegovert and 2kpr, which were then formatted, expanded, organized and later added to by HMBM47.
 
