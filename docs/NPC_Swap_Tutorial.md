@@ -8,11 +8,10 @@ description: An introductory modding guide that will show you how to swap 47's S
 * [Chunk Data](https://wiki.notex.app/glacier2/chunkdata)
 
 # Requirements
-* [RPKG tool](https://wiki.notex.app/rpkg/information)
-* [HitmanDB](https://wiki.notex.app/hitmandb/information)
-* A program to read JSON and edit files (Notepad++ will suffice in this scenario as we're only changing a single value at the beginning of the document, but QuickEntity Editor is superior in most cases)
-* A program to extract and archive to ZIP
+* [RPKG Tool](https://notex.app/rpkg/)
 * [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200)
+* A program to read and edit JSON files (Notepad++ is recommended, but any text editor will suffice in this scenario as we're only changing a single value at the beginning of the document. Otherwise, QuickEntity Editor is the superior choice when editing QN JSON files)
+* A program to extract and archive ZIP files (such as 7-Zip)
 
 # Background
 Replacing an outfit requires you to identify an outfit to be replaced as well as an outfit to be replaced by. For the purpose of this tutorial, we will attempt to replace 47’s Signature Suit with that of Silvio Caruso, who is already present in the game's files. 
@@ -22,7 +21,7 @@ Every outfit in the game has its own TEMP/TBLU combo. TEMP files are Templates w
 # Chunk Basics
 You will notice from [Glacier 2 Modding Basics](https://wiki.notex.app/glacier2/modding_basics) that the game's data is split into "chunks" numbered chunk0 to chunk27. Some also have additional patch1 and patch2 chunks (e.g., chunk0patch2). Generally, these chunk files correspond to a location in the game and hold the content that is specific to that level. For example, looking at [Chunk Data](https://wiki.notex.app/glacier2/chunkdata) we can see that the content for the Paris level is located in “Chunk 27”. When the game loads a level, it will only load the content needed for that specific level.
 
-Another tool that can be used to visualize the relationship between chunks is the [Hitman 3 Chunk Hierarchy flowchart](https://i.imgur.com/cqDzJC9.png) (which was created by Oakheart, based off of an earlier chart by invalid). For example, we can see that chunk2 (Season 3) is accessed by most of the Hitman 3 levels, chunks 3 (Dartmoor) through 7 (Romania). In turn, chunk2 is accessed by chunk1 (Base), which is then accessed by chunk0 (Dubai/Boot). Note that while chunk0 can be acessed *from* anywhere, it is a one-way street; lower-level chunks can not access higher-level chunks. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1.
+Another tool that can be used to visualize the relationship between chunks is the [Hitman 3 Chunk Hierarchy flowchart](https://i.imgur.com/gOhpfDS.png) (which was created by Oakheart, based off of an earlier chart by invalid). For example, we can see that chunk2 (Season 3) is accessed by all but one of the Hitman 3 levels, chunks 3 (Dartmoor) through 7 (Romania). In turn, chunk1 (Base) is accessed by chunk2, and finally, chunk0 (Dubai/Boot) is then accessed by chunk1. Note that while chunk0 can be accessed *from* anywhere, it is a one-way street; lower-level chunks cannot access higher-level chunks. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1.
 
 Using these two resources, we can begin to get an idea of where to look for Silvio Caruso’s TEMP/TBLU files. We can see that the assets for Sapienza are in chunk26, and since that's a Hitman 1 location, chunk8 (Legacy) and chunk21 (Season1) may also have what we're looking for. Finally, chunk0 (Boot) and chunk1 (Base) are definitely worth checking as well, as these are essentially "main" chunks.
 
@@ -31,19 +30,19 @@ Another hint: most (if not all) outfit TEMP/TBLU files start with the string `ou
 Therefore, we need to identify which `outfit_*****.pc_entitytemplate` file belongs to Silvio Caruso, and we know it's probably in either chunk0 (Boot), chunk1 (Base), chunk8 (Legacy), chunk21 (Season 1), or chunk26 (Sapienza).
 
 # Finding the Correct Files
-The [RPKG Tool](https://wiki.notex.app/rpkg/information) allows us to search within the chunk files. Once setup, we can load the chunk files into the tool by using `Import` > `Import RPKGs folder` and pointing it to the `HITMAN 3\Runtime` folder. This will load all the chunk files into the tool, which is required when looking for the correct files. Next, we can search by using the left panel and going to `Search` > ` Search RPKGs`
+The [RPKG Tool](https://notex.app/rpkg/) allows us to search within the chunk files. Once setup, we can load the chunk files into the tool by using `Import` > `Import RPKGs folder` and pointing it to the `HITMAN 3\Runtime` folder. This will load all the chunk files into the tool, which is required when looking for the correct files. Next, we can search by using the left panel and going to `Search` > ` Search RPKGs`
 
-There are two ways to find the correct files. You can search for them yourself, or you can use community made resources to quickly find the correct files. Using the community made resources will save you time as most of the work has been done for you. Note that while this is easier, you will skip some valuable steps in the modding process which might be useful to know if you decide to make more complex mods. Therefore, if you are creating your first Hitman mod, you are recommended to try and find the correct files yourself. 
+There are two ways to find the correct files. You can search for them yourself, or you can use community-made resources to quickly find the correct files. Using the community-made resources will save you time as most of the work has been done for you. Note that while this is easier, you will skip some valuable steps in the modding process, which might be useful to know if you decide to make more complex mods. Therefore, if you are creating your first Hitman mod, you are recommended to try and find the correct files yourself. 
 
 ## Finding the Correct Files (Using Community Resources)
-Now, while we *could* search for the files manually, it isn't stricly necessary. Instead, we can use HMBM47's [Hitman 3 Outfits Spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRDiyiqdRebu0Olvvkr20CDhh6ANxu7FOQZ_O-1YHFN9e6kh0WmpbwDYbfgzevSvc3fO4_4Exu1fmQH/pubhtml#). We also have grappigegovert (who created the original outfit list) and 2kpr (who compiled a list of the NPCs by their names, their outfits, their pieces, etc.) to thank for this wonderful resource.
+Now, while we *could* search for the files manually, it isn't strictly necessary. Instead, we can use HMBM47's [Hitman 3 Outfits Spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRDiyiqdRebu0Olvvkr20CDhh6ANxu7FOQZ_O-1YHFN9e6kh0WmpbwDYbfgzevSvc3fO4_4Exu1fmQH/pubhtml#). We also have grappigegovert (who created the original outfit list) and 2kpr (who compiled a list of the NPCs by their names, their outfits, their pieces, etc.) to thank for this wonderful resource.
 
 If we access the `Outfits by Character Name` section of the spreadsheet, we can see each NPC's in-game name is located in the `Name` column on the right, while their outfit's filename is in the `Outfit` column. So, if we simply search for `Silvio Caruso`, we can see the filename we're looking for is `outfit_silviocarusso_actor_v0`.
 
 If we now go back to RPKG Tool and search for `outfit_silviocarusso_actor_v0`, the result should be several files with `outfit_silviocarusso_actor_vX.entitytemplate].pc_entityblueprint` in the name, in both `chunk1` and `chunk8`.
 
 ## Finding the Correct Files (Manually)
-When creating your first Hitman mods, finding the correct files to modify is arguably the biggest initial challenge. So, knowing how to utilize the search function is key.
+When creating your first Hitman mod, finding the correct files to modify is arguably the biggest initial challenge. So, knowing how to utilize the search function is key.
 
 If we search for `outfit_` using the `Search RPKGs` function, we get all the chunk files that contain something with this name. If we then expand chunk26 (Sapienza), we can see that it is divided into a TBLU and a TEMP tree. For our purposes, we can ignore TBLU files entirely, as we can only extract what we need using TEMP files. So, if we expand the TEMP tree under chunk26, we can see that the first result is:
 
@@ -68,7 +67,7 @@ So let's try searching `outfit_silviocarusso` (now that we know it includes an e
 
 Bingo! The result should be several files with `outfit_silviocarusso_actor_vX.entitytemplate].pc_entityblueprint` in the name, in both `chunk1` and `chunk8`.
 
-## After Finding the Correct File
+## After Finding the Correct Files
 As we're specifically looking for Caruso's TEMP file, we can ignore the TBLU results. Since the TEMP files in `chunk1patch2` and `chunk8` seem to be duplicates, we can use either of them. But for the sake of this tutorial, let’s use the TEMP files located in `chunk1patch2`.
 Expanding the TEMP tree under `chunk1patch2` shows us that Silvio Caruso has two outfit variants, as indicated by `_v0` and `_v1` in the filenames. Remember that these TEMP files contain references to the components that are used for a certain outfit. Therefore, by selecting the `v1` variant and checking the `Depends on X other hash files/resources` section in the panel on the right, we can see what the outfit consists of. In this case, we can see the entry:
 
@@ -85,7 +84,7 @@ You are advised to create a new folder somewhere that will serve as an output fo
 
 With the correct chunk, TEMP and variant selected, right click the filename in the left panel and select `Extract to QN (QuickEntity) JSON`. Select the output folder created in the previous step. This will create a JSON file. You can name it whatever you'd like, but make sure it ends with `.entity.json`.
 
-Since Caruo's outfit is in `chunk1` but our mod will be in `chunk0`, we will also need to extract the depends (which are the assets the outfit uses) and `patch` them to chunk0. Remember that while chunk1 can read from chunk0, chunk0 can not read from chunk1. If we try to run our mod without including the depends it needs, the game will simply crash.
+Since Caruo's outfit is in `chunk1` but our mod will be in `chunk0`, we will also need to extract the depends (which are the assets the outfit uses) and `patch` them to chunk0. Remember that while chunk1 can access chunk0, chunk0 can not access chunk1. If we try to run our mod without including the depends it needs, the game will simply crash.
 
 While you still have the correct file selected in the left box, left-click `Extract Hash Depends` in the right box, then select `Extract Recursive Hash Depends` and extract them to the same folder as the JSON. 
 
@@ -115,13 +114,13 @@ Make sure you keep the file syntax intact, as even a single extra space or perio
 # Creating a Mod Using Simple Mod Framework
 There's only one step left, and that's creating the actual mod using Atampy26's [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200) (which will hereon be referred to as "SMF"). When you enable the mod in SMF, it will automatically generate a chunk file for you, which eliminates the need to pack one yourself.
 
-If you follow along with the install instructions, the SMF folder will be located at `HITMAN 3\Simple Mod Framework`. If you then access the `Info` folder, you'll see that SMF includes all the documentation you would need to set up your SMF mod. However, we'll quickly go over the basics here.
+If you follow along with the install instructions, the SMF folder will be located at `HITMAN 3\Simple Mod Framework`. If you then access the `Info` folder, you'll see that SMF includes all the documentation you would need to set up your mod. However, we'll quickly go over the basics here.
 
-First, you'll want to access the `Mods` folder located at `HITMAN 3\Simple Mod Framework\Mods`. Here, you'll see SMF already comes with a mod included, `Realistic AI`. If we open up that folder, we'll see it includes a JSON named `manifest.json`. As the name implies, this is the mod's manifest, and includes information such as the mod's name, author's name, version number, content folder(s), etc. If we then open up any of the content-\*\*\*\*\*\* folders, we'll see they all include a `chunk0` folder, and inside of that, there's another JSON. By examing Realistic AI, we can see how a SMF mod is structured, so we can use that as a template for our own mod.
+First, you'll want to access the `Mods` folder located at `HITMAN 3\Simple Mod Framework\Mods`. Here, you'll see SMF already comes with a mod included, `Realistic AI`. If we open up that folder, we'll see it includes a JSON named `manifest.json`. As the name implies, this is the mod's manifest, and includes information such as the mod's name, author's name, version number, content folder(s), etc. If we then open up any of the content-\*\*\*\*\*\* folders, we'll see they all include a `chunk0` folder, and inside of that, there's another JSON. By examining Realistic AI, we can see how a SMF mod is structured, so we can use that as a template for our own mod.
 
 Let's make a copy of the Realistic AI folder, and then name that copy `Silvio Caruso Swap`. Next, we'll open that folder and delete the 3 content-****** folders. The folder structure for our mod will be quite simple, as it only includes one option. So, we'll create a folder within the Silvio Curuso Swap folder named `content`, and then inside the content folder, we'll create another folder named `chunk0`. This chunk0 folder is where we're going to place the 5 depends folders and the `00873434CB4F9FCD.entity.json` file from earlier. So, all we need to do is access that folder, and move the contents to the chunk0 folder.
 
-The final piece of the puzzle is the mod's manifest. We can either modify Realistic AI's manifest.json, or create or own. For the purpose of this tutorial, let's open the existing manifest.json, and erase the contents. Then, if we access the `Manifest.md` document located at `HITMAN 3\Simple Mod Framework\Mods`, we can see it gives the following example:
+The final piece of the puzzle is the mod's manifest. We can either modify Realistic AI's manifest.json, or create our own. For the purpose of this tutorial, let's open the existing manifest.json and erase the contents. Then, if we access the `Manifest.md` document located at `HITMAN 3\Simple Mod Framework\Mods`, we can see it gives the following example:
 
 ```
 {
@@ -163,8 +162,7 @@ When uploading mods to Nexus Mods, there are a few things to keep in mind. First
 
 Of course, you are free to release whatever you'd like as long as it doesn't break any rules or include other people's work without their permission. These are only guidelines for those new to the modding scene.
 
-# TL;DR:
-
+# TL;DR
 1. Import the Runtime folder into RPKG Tool.
 2. Find the outfit_\*\*\*\*\*\*" TEMP file for the outfit/NPC you're looking for.
 3. Extract both the TEMP's QuickEntity JSON and the recursive hash depends to the chunk0 folder in your Simple Mod Framework mod.
@@ -177,19 +175,25 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 10. Enable the mod in Simple Mod Framework and then click "Apply Enabled Mods".
 
 # Credits
-
 `Metaphoria` - Tutorial author.
+
 `Oakheart` - Editing and conversion to markdown, as well as the V2 chunk flowchart.
+
 `invalid` - Original chunk flowchart, of which V2 was based.
+
 `Notex` & `REDACTED` - RPKG Tool.
+
 `HMBM47` - Hitman 3 Outfits spreadsheet. The original lists were created by grappigegovert and 2kpr, which were then formatted, expanded, organized and later added to by HMBM47.
+
 `grappigegovert`- Original outfit list.
+
 `2kpr` - Compiled a list of the NPCs by their names, their outfits, their pieces, etc.
+
 `Atampy26` - Simple Mod Framework, QuickEntity, and QuickEntity Editor.
 
+[All contributors to wiki.notex.app](https://github.com/glacier-modding/wiki.notex.app/graphs/contributors)
 
-## Suit Codenames
-\*
+## Suit Codenames *
 ```
 birthsuit = Premiere White Suit
 lifesuit = Crimson Red Suit
@@ -211,8 +215,7 @@ wolverine = Subject 47
 summersuit = Summer Sightseeing Suit
 ```
 
-## Suit Level Codename Examples
-\*\*
+## Suit Level Codename Examples **
 ```
 bulldog = Dartmoor (e.g. outfit_agent47_bulldog_heroa_v0 = Classic Cut Long Coat Suit)
 fox = Berlin (e.g. outfit_agent47_fox_gloves_heroa_v0 = Number Six with Gloves)
