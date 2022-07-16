@@ -141,7 +141,8 @@ Let's make a copy of the Realistic AI folder, and then name that copy `Silvio Ca
 
 The final piece of the puzzle is the mod's manifest. We can either modify Realistic AI's manifest.json, or create our own. For the purpose of this tutorial, let's open the existing manifest.json and erase the contents. Then, if we access the `Manifest.md` document located at `HITMAN 3\Simple Mod Framework\Mods`, we can see it gives the following example:
 
-```
+```json
+
 {
   "version": "1.0.0",
   "id": "YourNameOrUserName.FirstMod",
