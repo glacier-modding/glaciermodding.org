@@ -10,7 +10,7 @@ description: An introductory modding guide that will show you how to swap 47's S
 # Requirements
 * [RPKG Tool](https://notex.app/rpkg/)
 * [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200)
-* A program to read and edit JSON files (Notepad++ is recommended, but any text editor will suffice in this scenario as we're only changing a single value at the beginning of the document. Otherwise, QuickEntity Editor is the superior choice when editing QN JSON files)
+* A program to read and edit JSON files (VSCode is recommended, but any basic code editor will suffice in this scenario as we're only changing a single value at the beginning of the document. Otherwise, QuickEntity Editor is the superior choice when editing QN JSON files)
 * A program to extract and archive ZIP files (such as 7-Zip)
 
 # Background
