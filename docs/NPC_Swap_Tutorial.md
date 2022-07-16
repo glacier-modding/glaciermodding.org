@@ -131,7 +131,7 @@ The final piece of the puzzle is the mod's manifest. We can either modify Realis
   "description": "Extremely good description",
   "authors": ["YourNameOrUserName"],
   "contentFolder": "content",
-  "frameworkVersion": "1.5.6*"
+  "frameworkVersion": "1.5.6"
 }
 ```
 The "frameworkVersion" will change depending on what version of SMF you're using. As of this writing, the current version is 1.5.6.
@@ -147,7 +147,7 @@ When you're done modifying the example to your liking, you should have something
   "description": "Swaps 47's Signature Suit with Silvio Caruso.",
   "authors": ["HitmanModder"],
   "contentFolder": "content",
-  "frameworkVersion": "1.5.6*"
+  "frameworkVersion": "1.5.6"
 }
 ```
 Save the manifest.json file, and open up SMF's Mod Manager, which can be accessed at either `\HITMAN 3\Simple Mod Framework\Mod Manager.cmd` or `\HITMAN 3\Simple Mod Framework\Load Order Manager\Load Order Manager.exe`. If your `manifest.json` was set up correctly, you should see your mod listed in the Available Mods section on the left. If it's missing, there must be an issue with your `manifest.json`, so you would need to go back and compare with either the included manifest example, or Realistic AI's `manifest.json`.
@@ -166,7 +166,7 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 # TL;DR:
 
 1. Import the Runtime folder into RPKG Tool.
-2. Find the "outfit_\*\*\*\*\*\*" TEMP file for the outfit/NPC you're looking for.
+2. Find the outfit_\*\*\*\*\*\*" TEMP file for the outfit/NPC you're looking for.
 3. Extract both the TEMP's QuickEntity JSON and the recursive hash depends to the chunk0 folder in your Simple Mod Framework mod.
 4. Find the TEMP value for the suit you want to replace.
 5. Open the outfit's \*\*\*\*\*\*.entity.json and replace its tempHash value with the value you found in step 4.
@@ -187,8 +187,9 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 `2kpr` - Compiled a list of the NPCs by their names, their outfits, their pieces, etc.
 `Atampy26` - Simple Mod Framework, QuickEntity, and QuickEntity Editor.
 
-\*
+
 ## Suit Codenames
+\*
 ```
 birthsuit = Premiere White Suit
 lifesuit = Crimson Red Suit
@@ -209,8 +210,9 @@ spring_break = Blue Flamingo Suit
 wolverine = Subject 47
 summersuit = Summer Sightseeing Suit
 ```
-\*\*
+
 ## Suit Level Codename Examples
+\*\*
 ```
 bulldog = Dartmoor (e.g. outfit_agent47_bulldog_heroa_v0 = Classic Cut Long Coat Suit)
 fox = Berlin (e.g. outfit_agent47_fox_gloves_heroa_v0 = Number Six with Gloves)
