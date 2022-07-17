@@ -2,26 +2,26 @@
 sidebar_position: 1
 description: An introductory modding guide that will show you how to swap 47's Signature Suit with an NPC.
 ---
-
-# Recommended reading 
+# NPC Swap guide
+## Recommended reading 
 
 * [Glacier 2 Modding Basics](https://wiki.notex.app/glacier2/modding_basics)
 * [Chunk Data](https://wiki.notex.app/glacier2/chunkdata)
 
-# Requirements
+## Requirements
 
 * [RPKG Tool](https://notex.app/rpkg/)
 * [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200)
 * A program to read and edit JSON files (VSCode is recommended, but any basic code editor will suffice in this scenario as we're only changing a single value at the beginning of the document. Otherwise, QuickEntity Editor is the superior choice when editing QN JSON files)
 * A program to extract and archive ZIP files (such as 7-Zip)
 
-# Background
+## Background
 
 Replacing an outfit requires you to identify an outfit to be replaced as well as an outfit to be replaced by. For the purpose of this tutorial, we will attempt to replace 47’s Signature Suit with that of Silvio Caruso, who is already present in the game's files. 
 Creating a mod requires you to create your own `chunk` file, which you then add to the game's files. This can be done in multiple ways. This tutorial uses [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200) to automate this part, as the modding process is already convoluted enough without this tool.
 Every outfit in the game has its own TEMP/TBLU combo. TEMP files are Templates whereas TBLU files are Template Blueprints. Note that these files don't actually contain the *assets* of the character's outfit, such as models, textures, etc. These files merely serve to point the game to the correct assets to use (hence, why they're called "templates", or "TEMP" for short), which are located somewhere other than the TEMP/TBLU files themselves. Therefore, this tutorial only covers replacing outfits that are already present in the game's files, and not custom outfits that have to be imported.
 
-# Chunk Basics
+## Chunk Basics
 
 You will notice from [Glacier 2 Modding Basics](https://wiki.notex.app/glacier2/modding_basics) that the game's data is split into "chunks" numbered chunk0 to chunk27. All chunks will have additional patch chunks (e.g., chunk0patch2). Generally, these chunk files correspond to a location in the game and hold the content that is specific to that level. For example, looking at [Chunk Data](https://wiki.notex.app/glacier2/chunkdata) we can see that the content for the Paris level is located in “Chunk 27”. We can also see that Season 1 is "Chunk 21", and Legacy is "Chunk 8". Finally, we have "Chunk 1" (Base) and Chunk 0 (Dubai/Boot). When the game loads a level, it will only load the content needed for that specific level. In the case of Paris, the chunks would be accessed in the following order: chunk27 (Paris) -> chunk21 (Season 1) -> chunk8 (Legacy) -> chunk1 (Base) -> chunk0 (Boot).
 
@@ -33,13 +33,13 @@ Another hint: most (if not all) outfit TEMP/TBLU files start with the string `ou
 
 Therefore, we need to identify which `outfit_*****.pc_entitytemplate` file belongs to Silvio Caruso, and we know it's probably in either chunk0 (Boot), chunk1 (Base), chunk8 (Legacy), chunk21 (Season 1), or chunk26 (Sapienza).
 
-# Finding the Correct Files
+## Finding the Correct Files
 
 The [RPKG Tool](https://notex.app/rpkg/) allows us to search within the chunk files. Once setup, we can load the chunk files into the tool by using `Import` > `Import RPKGs folder` and pointing it to the `HITMAN 3/Runtime` folder. This will load all the chunk files into the tool, which is required when looking for the correct files. Next, we can search by using the left panel and going to `Search` > ` Search RPKGs`
 
 There are two ways to find the correct files. You can search for them yourself, or you can use community-made resources to quickly find the correct files. Using the community-made resources will save you time as most of the work has been done for you. Note that while this is easier, you will skip some valuable steps in the modding process, which might be useful to know if you decide to make more complex mods. Therefore, if you are creating your first Hitman mod, you are recommended to try and find the correct files yourself. 
 
-## Finding the Correct Files (Using Community Resources)
+### Finding the Correct Files (Using Community Resources)
 
 Now, while we *could* search for the files manually, it isn't strictly necessary. Instead, we can use HMBM47's [Hitman 3 Outfits Spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRDiyiqdRebu0Olvvkr20CDhh6ANxu7FOQZ_O-1YHFN9e6kh0WmpbwDYbfgzevSvc3fO4_4Exu1fmQH/pubhtml#). We also have grappigegovert (who created the original outfit list) and 2kpr (who compiled a list of the NPCs by their names, their outfits, their pieces, etc.) to thank for this wonderful resource.
 
@@ -76,7 +76,7 @@ So let's try searching `outfit_silviocarusso` (now that we know it includes an e
 
 Bingo! The result should be several files with `outfit_silviocarusso_actor_vX.entitytemplate].pc_entityblueprint` in the name, in both `chunk1` and `chunk8`.
 
-## After Finding the Correct Files
+### After Finding the Correct Files
 
 As we're specifically looking for Caruso's TEMP file, we can ignore the TBLU results. Since the TEMP files in `chunk1patch2` and `chunk8` seem to be duplicates, we can use either of them. But for the sake of this tutorial, let’s use the TEMP files located in `chunk1patch2`.
 Expanding the TEMP tree under `chunk1patch2` shows us that Silvio Caruso has two outfit variants, as indicated by `_v0` and `_v1` in the filenames. Remember that these TEMP files contain references to the components that are used for a certain outfit. Therefore, by selecting the `v1` variant and checking the `Depends on X other hash files/resources` section in the panel on the right, we can see what the outfit consists of. In this case, we can see the entry:
@@ -87,7 +87,7 @@ This shows us that the v1 variant is Silvio Caruso in a hazmat suit. Therefore, 
 
 `[assembly:/_pro/characters/templates/sapiensa/char_sapienza_unique.template?/outfit_silviocarusso_actor_v0.entitytemplate].pc_entitytemplate`
 
-# Extracting the Files
+## Extracting the Files
 
 Now that we have found our outfit's TEMP file, we can start extracting the files we need. 
 
@@ -109,7 +109,7 @@ If we examine the contents of `chunk1`, we can see it contains 5 different folde
 
 You should now have the `00873434CB4F9FCD.entity.json` file and 5 folders (BORG - TEXT) in the output folder.
 
-# Modifying the Files (Manually)
+## Modifying the Files (Manually)
 
 The next step is to find the TEMP and TBLU hash values for the outfit that is to be replaced: the default Signature Suit. All of 47's suits begin with the string `outfit_agent47`, and as mentioned earlier, they are all located in `chunk0`. Therefore, you can search for the string `outfit_agent47` using RPKG Tool's `Search RPKGs` function, and then examine the results in `chunk0`, `chunk0patch1`, or `chunk0patch2`. Many of the filenames will match up with the suit's in-game name, but many will not. Some suits have their own codenames\*, and some use the codename for the level they're from\*\*. Finally, you'll notice that many suits have both an `actor` and a `heroa` variant. The actor variants are for NPCs, while the heroa variant is specifically for 47, so you'll always want to use the heroa variants when creating NPC or outfit swaps.
 
@@ -117,7 +117,7 @@ In this case, the default Signature Suit is fairly easy to find, as it's the sec
 
 Next, we will want to locate the TBLU value. In this case, since we still have the results in chunk0 open, we can simply access the entry in the TBLU tree instead. We can see the TBLU is named `0046BB3BE76661CC.TBLU`, so the value we're looking for is `0046BB3BE76661CC`. Make a note of this TBLU hash as well.
 
-# Modifying the Files (Using Community Resources)
+## Modifying the Files (Using Community Resources)
 
 Alternatively, we can use HMBM47's [Hitman 3 Outfits Spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRDiyiqdRebu0Olvvkr20CDhh6ANxu7FOQZ_O-1YHFN9e6kh0WmpbwDYbfgzevSvc3fO4_4Exu1fmQH/pubhtml#), only this time, we'll access the `chunk0 47 Base Suits` section. As before, we'll see each suit's in-game name in the `Name` column, and the suit's filename in the `Outfit` column. However, we'll need the TEMP and TBLU hashes rather than the filename, so we can locate them in the `TEMP` and `TBLU` columns, respectively. First, if we search for `Signature Suit`, we can identify which is the default version and which is the gloved version by looking at either the `Notes` column, or the filename in the `Outfit` column. Then, we can identify the outfit's TEMP by looking at the TEMP column on the left, which is `00FF8C6314EA882E.TEMP`. Therefore, the TEMP hash we need is `00FF8C6314EA882E`. We can then do for the outfit's TBLU by examining the TBLU column, which gives us `0046BB3BE76661CC.TBLU`. Therefore, the TBLU hash we need is `0046BB3BE76661CC`.
 
@@ -129,7 +129,7 @@ Make sure you keep the file syntax intact, as even a single extra space or perio
 
 Optionally, one way to format the JSON file for easier editing is to import it into [QuickEntity Editor](https://www.dropbox.com/s/p1mkwm3ji0uyr8n/QuickEntityEditor.7z?dl=1) and then save it using "Save Entity". This will convert it from one giant block of text to something that is much easier to browse and edit, especially for more complex edits.
 
-# Creating a Mod Using Simple Mod Framework
+## Creating a Mod Using Simple Mod Framework
 
 There's only one step left, and that's creating the actual mod using Atampy26's [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200) (which will hereon be referred to as "SMF"). When you enable the mod in SMF, it will automatically generate a chunk file for you, which eliminates the need to pack one yourself.
 
@@ -177,14 +177,14 @@ If your mod appears on the list, all you need to do is click the "Enable" button
 
 Congrats! You are now an official modder :)
 
-# Sharing a Mod
+## Sharing a Mod
 If you have followed the instructions above correctly, you should now have a folder with your mod in your `HITMAN 3\Simple Mod Framework\Mods` folder. To share this mod, simply add the Silvio Caruso Swap folder to a ZIP file. Note that it must be in the ZIP format, as other compression formats like RAR or 7z will not work. This ZIP file can now be shared with friends or uploaded to [Nexus Mods](https://www.nexusmods.com/hitman3). To install your mod, the end user only needs to import the ZIP file using SMF.
 
 When uploading mods to Nexus Mods, there are a few things to keep in mind. First, you'll want to make sure that what you're uploading is unique and has not already been released by another modder. For example, since azirus3 has already uploaded an NPC swap pack that includes Silvio Caruso, we probably wouldn't want to upload our swap as a stand-alone mod. Also, you'll want to consider if what you're releasing will need its own stand-alone page and will appeal to as many users as possible. For example, if we were to create a number of small suit modifications and release them all as separate mods, it could lead to a lot of clutter (think ReShade presets). But if we were to collect all those modifications and release them as a single mod, not only would it make things less cluttered, but it would also be easier for the end user as everything would be available in one place.
 
 Of course, you are free to release whatever you'd like as long as it doesn't break any rules or include other people's work without their permission. These are only guidelines for those new to the modding scene.
 
-# TL;DR
+## TL;DR
 
 1. Import the Runtime folder into RPKG Tool.
 2. Find the outfit_\*\*\*\*\*\*" TEMP file for the outfit/NPC you're looking for.
@@ -197,7 +197,7 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 9. Make sure the folder structure for your Simple Mod Framework mod is correct, with the JSON/Depends in a chunk0 folder, and make sure there are no errors in your mod's manifest.json.
 10. Enable the mod in Simple Mod Framework and then click "Apply Enabled Mods".
 
-# Credits
+## Credits
 
 `Metaphoria` - Tutorial author.
 
