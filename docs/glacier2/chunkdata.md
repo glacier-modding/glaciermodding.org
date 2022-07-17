@@ -5,6 +5,14 @@ description: The Runtime chunk files and their descriptions
 
 # Chunk Data
 
+### Information
+
+The game's data is split into "chunk" files that have a .rpkg extension. These Chunks contain all the assets the game uses. Chunk files also have corresponding chunk patch files. Generally, these chunk files correspond to a location in the game and hold the content that is specific to that location. Loading a location will therefore load in the assets for that location. However some chunk files contain assets used in most levels and will therefore always be loaded.
+
+The following flowchart visualizes the the relationship between chunks. Note that the chunk files are split into levels. The loading process for the chunk files ia a one-way street; lower-level chunks can not access higher-level chunks. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1. Chunk can also only access lower-levl chunk and not adjacent chunks. So looking at the flowchart chunk12 cannot access chunk13 but it can accesss chunk9.
+
+![Chunk Diagram](./assets/Chunk_Data_Diagram.svg)
+
 ### Hitman 3
 
 | chunk     | codename     | name         | location               |
