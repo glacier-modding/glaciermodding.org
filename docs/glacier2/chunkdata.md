@@ -11,7 +11,7 @@ The game's data is split into "chunk" files that have a .rpkg extension. These C
 
 The following flowchart visualizes the the relationship between chunks. Note that the chunk files are split into levels. The loading process for the chunk files ia a one-way street; lower-level chunks can not access higher-level chunks. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1. Chunk can also only access lower-levl chunk and not adjacent chunks. So looking at the flowchart chunk12 cannot access chunk13 but it can accesss chunk9.
 
-![Chunk Diagram](./assets/Chunk_Data_Diagram.svg)
+![Chunk Diagram](../assets/Chunk_Data_Diagram.svg)
 
 ### Hitman 3
 
