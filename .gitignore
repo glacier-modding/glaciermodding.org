@@ -19,3 +19,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/.pnp.cjs
+/.pnp.loader.mjs
+.yarn/cache
+.yarn/install-state.gz
+.yarn/unplugged

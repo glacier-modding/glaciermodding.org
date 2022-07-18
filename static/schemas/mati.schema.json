@@ -53,13 +53,7 @@
                     }
                 }
             },
-            "required": [
-                "ERES",
-                "INST",
-                "MATE",
-                "TYPE",
-                "UnknownFlags"
-            ],
+            "required": ["ERES", "INST", "MATE", "TYPE", "UnknownFlags"],
             "title": "MATI"
         },
         "Inst": {
@@ -82,11 +76,7 @@
                     }
                 }
             },
-            "required": [
-                "BIND",
-                "NAME",
-                "TAGS"
-            ],
+            "required": ["BIND", "NAME", "TAGS"],
             "title": "Inst"
         },
         "Bind": {
@@ -122,12 +112,7 @@
                     }
                 }
             },
-            "examples": [
-                "COLO",
-                "FLTV",
-                "RSTA",
-                "TEXT"
-            ],
+            "examples": ["COLO", "FLTV", "RSTA", "TEXT"],
             "title": "Bind"
         },
         "Types": {
@@ -160,11 +145,7 @@
                 "CULL": {
                     "type": "string",
                     "description": "Culling Mode",
-                    "examples": [
-                        "DontCare",
-                        "OneSided",
-                        "TwoSided"
-                    ]
+                    "examples": ["DontCare", "OneSided", "TwoSided"]
                 },
                 "DBDE": {
                     "type": "integer",
@@ -241,10 +222,7 @@
                     ]
                 },
                 "VALU": {
-                    "type": [
-                        "array",
-                        "number"
-                    ],
+                    "type": ["array", "number"],
                     "description": "Value"
                 },
                 "ZBIA": {
