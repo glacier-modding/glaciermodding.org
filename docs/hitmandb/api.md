@@ -88,4 +88,4 @@ This is currently the only error that can occur.
 
 #### List of Types:
 
-Same as [Glacier 2 File Formats](/glacier2/fileformats) but with an added `any` type which will return all types.
+Same as [Glacier 2 File Formats](../glacier2/fileformats.md) but with an added `any` type which will return all types.

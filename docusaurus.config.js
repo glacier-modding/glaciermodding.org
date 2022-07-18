@@ -7,10 +7,10 @@ module.exports = {
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
     favicon: "img/favicon.ico",
-    organizationName: "glacier-modding", // Usually your GitHub org/user name.
-    projectName: "wiki.notex.app", // Usually your repo name.
+    organizationName: "glacier-modding",
+    projectName: "wiki.notex.app",
     themeConfig: {
-        metadata: [{ name: "keywords", content: "hitman, glacier, modding" }],
+        metadata: [{ name: "keywords", content: "hitman, glacier, modding, 007" }],
         navbar: {
             title: "wiki.notex.app",
             logo: {

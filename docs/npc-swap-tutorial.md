@@ -7,8 +7,8 @@ description: An introductory modding guide that will show you how to swap 47's S
 
 ## Recommended reading
 
--   [Glacier 2 Modding Basics](https://wiki.notex.app/glacier2/modding_basics)
--   [Chunk Data](https://wiki.notex.app/glacier2/chunkdata)
+-   [Glacier 2 Modding Basics](./glacier2/modding_basics.md)
+-   [Chunk Data](./glacier2/chunkdata.md)
 
 ## Requirements
 
@@ -25,11 +25,11 @@ Every outfit in the game has its own TEMP/TBLU combo. TEMP files are Templates w
 
 ## Chunk Basics
 
-You will notice from [Glacier 2 Modding Basics](https://wiki.notex.app/glacier2/modding_basics) that the game's data is split into "chunks" numbered chunk0 to chunk27. All chunks will have additional patch chunks (e.g., chunk0patch2). Generally, these chunk files correspond to a location in the game and hold the content that is specific to that level. For example, looking at [Chunk Data](https://wiki.notex.app/glacier2/chunkdata) we can see that the content for the Paris level is located in “Chunk 27”. We can also see that Season 1 is "Chunk 21", and Legacy is "Chunk 8". Finally, we have "Chunk 1" (Base) and Chunk 0 (Dubai/Boot). When the game loads a level, it will only load the content needed for that specific level. In the case of Paris, the chunks would be accessed in the following order: chunk27 (Paris) -> chunk21 (Season 1) -> chunk8 (Legacy) -> chunk1 (Base) -> chunk0 (Boot).
+You will notice from [Glacier 2 Modding Basics](./glacier2/modding_basics.md) that the game's data is split into "chunks" numbered chunk0 to chunk27. All chunks will have additional patch chunks (e.g., chunk0patch2). Generally, these chunk files correspond to a location in the game and hold the content that is specific to that level. For example, looking at [Chunk Data](./glacier2/chunkdata.md) we can see that the content for the Paris level is located in “Chunk 27”. We can also see that Season 1 is "Chunk 21", and Legacy is "Chunk 8". Finally, we have "Chunk 1" (Base) and Chunk 0 (Dubai/Boot). When the game loads a level, it will only load the content needed for that specific level. In the case of Paris, the chunks would be accessed in the following order: chunk27 (Paris) -> chunk21 (Season 1) -> chunk8 (Legacy) -> chunk1 (Base) -> chunk0 (Boot).
 
 Another tool that can be used to visualize the relationship between chunks is the [Hitman 3 Chunk Hierarchy flowchart](https://i.imgur.com/gOhpfDS.png) (which was created by Oakheart, based off of an earlier chart by invalid). For example, we can see that chunk2 (Season 3) is accessed by all but one of the Hitman 3 levels, chunks 3 (Dartmoor) through 7 (Romania). In turn, chunk1 (Base) is accessed by chunk2, and finally, chunk0 (Dubai/Boot) is then accessed by chunk1. Note that while chunk0 can be accessed _from_ anywhere, it is a one-way street; lower-level chunks cannot access higher-level chunks. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1.
 
-Using these two resources, we can begin to get an idea of where to look for Silvio Caruso’s TEMP/TBLU files. We can see that the assets for Sapienza are in chunk26, and since that's a Hitman 1 location, chunk8 (Legacy) and chunk21 (Season1) may also have what we're looking for. Finally, chunk0 (Boot) and chunk1 (Base) are definitely worth checking as well, as these are essentially "main" chunks.
+Using these two resources, we can begin to get an idea of where to look for Silvio Caruso's TEMP/TBLU files. We can see that the assets for Sapienza are in chunk26, and since that's a Hitman 1 location, chunk8 (Legacy) and chunk21 (Season1) may also have what we're looking for. Finally, chunk0 (Boot) and chunk1 (Base) are definitely worth checking as well, as these are essentially "main" chunks.
 
 Another hint: most (if not all) outfit TEMP/TBLU files start with the string `outfit_` typically followed by the level's name/codename or character's name, and end with the string `.pc_entitytemplate`. While it is important to note that this will only be true for outfits we have the paths for, you are unlikely to run into issues as we do have the paths for almost all of them.
 
@@ -96,7 +96,7 @@ Now that we have found our outfit's TEMP file, we can start extracting the files
 
 You are advised to create a new folder somewhere that will serve as an output folder for the files we will be extracting. This is only a temporary storage space for these files, as we will be moving them to a Simple Mod Framework folder later on.
 
-With the correct chunk, TEMP and variant selected, right click the filename in the left panel and select `Extract to QN (QuickEntity) JSON`. Select the output folder created in the previous step. This will create a JSON file. You can name it whatever you'd like, but make sure it ends with `.entity.json`.
+With the correct chunk, TEMP and variant selected, right-click the filename in the left panel and select `Extract to QN (QuickEntity) JSON`. Select the output folder created in the previous step. This will create a JSON file. You can name it whatever you'd like, but make sure it ends with `.entity.json`.
 
 Since Caruo's outfit is in `chunk1` but our mod will be in `chunk0`, we will also need to extract the depends (which are the assets the outfit uses) and `patch` them to chunk0. Remember that while chunk1 can access chunk0, chunk0 can not access chunk1. If we try to run our mod without including the depends it needs, the game will simply crash.
 
@@ -136,11 +136,11 @@ Optionally, one way to format the JSON file for easier editing is to import it i
 
 There's only one step left, and that's creating the actual mod using Atampy26's [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200) (which will hereon be referred to as "SMF"). When you enable the mod in SMF, it will automatically generate a chunk file for you, which eliminates the need to pack one yourself.
 
-If you follow along with the install instructions, the SMF folder will be located at `HITMAN 3\Simple Mod Framework`. If you then access the `Info` folder, you'll see that SMF includes all the documentation you would need to set up your mod. However, we'll quickly go over the basics here.
+If you follow along with the installation instructions, the SMF folder will be located at `HITMAN 3\Simple Mod Framework`. If you then access the `Info` folder, you'll see that SMF includes all the documentation you would need to set up your mod. However, we'll quickly go over the basics here.
 
-First, you'll want to access the `Mods` folder located at `HITMAN 3\Simple Mod Framework\Mods`. Here, you'll see SMF already comes with a mod included, `Realistic AI`. If we open up that folder, we'll see it includes a JSON named `manifest.json`. As the name implies, this is the mod's manifest, and includes information such as the mod's name, author's name, version number, content folder(s), etc. If we then open up any of the content-\*\*\*\*\*\* folders, we'll see they all include a `chunk0` folder, and inside of that, there's another JSON. By examining Realistic AI, we can see how a SMF mod is structured, so we can use that as a template for our own mod.
+First, you'll want to access the `Mods` folder located at `HITMAN 3\Simple Mod Framework\Mods`. Here, you'll see SMF already comes with a mod included, `Realistic AI`. If we open up that folder, we'll see it includes a JSON named `manifest.json`. As the name implies, this is the mod's manifest, and includes information such as the mod's name, author's name, version number, content folder(s), etc. If we then open up any of the content-\*\*\*\*\*\* folders, we'll see they all include a `chunk0` folder, and inside that, there's another JSON. By examining Realistic AI, we can see how a SMF mod is structured, so we can use that as a template for our own mod.
 
-Let's make a copy of the Realistic AI folder, and then name that copy `Silvio Caruso Swap`. Next, we'll open that folder and delete the 3 content-**\*\*** folders. The folder structure for our mod will be quite simple, as it only includes one option. So, we'll create a folder within the Silvio Curuso Swap folder named `content`, and then inside the content folder, we'll create another folder named `chunk0`. This chunk0 folder is where we're going to place the 5 depends folders and the `00873434CB4F9FCD.entity.json` file from earlier. So, all we need to do is access that folder, and move the contents to the chunk0 folder.
+Let's make a copy of the Realistic AI folder, and then name that copy `Silvio Caruso Swap`. Next, we'll open that folder and delete the 3 content-**\*\*** folders. The folder structure for our mod will be quite simple, as it only includes one option. So, we'll create a folder within the Silvio Caruso Swap folder named `content`, and then inside the content folder, we'll create another folder named `chunk0`. This chunk0 folder is where we're going to place the 5 depends folders and the `00873434CB4F9FCD.entity.json` file from earlier. So, all we need to do is access that folder, and move the contents to the chunk0 folder.
 
 The final piece of the puzzle is the mod's manifest. We can either modify Realistic AI's manifest.json, or create our own. For the purpose of this tutorial, let's open the existing manifest.json and erase the contents. Then, if we access the `Manifest.md` document located at `HITMAN 3\Simple Mod Framework\Mods`, we can see it gives the following example:
 
@@ -197,8 +197,8 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 5. Open the outfit's \*\*\*\*\*\*.entity.json and replace its tempHash value with the value you found in step 4.
 6. Open the \*\*\*\*\*\*.TEMP folder within the ALLDEPENDS folder. You will only need the depends from the chunk the suit is in (e.g. if the suit is in chunk1, you will only need the files from chunk1 and its patches). Move everything in each patchX folder to the outfit's base chunkX folder (e.g. chunk1patch1 to chunk1, then chunk1patch2 to chunk1, overwriting anything in the base chunk if necessary).
 7. Move all the depends from the outfit's base chunkX folder to the chunk0 folder in your SMF mod (the same place your **\*\***.entity.json is located).
-8. Delete whatever's remaining in the ALLDEPENDS folder.
-9. Make sure the folder structure for your Simple Mod Framework mod is correct, with the JSON/Depends in a chunk0 folder, and make sure there are no errors in your mod's manifest.json.
+8. Delete whatever remains in the ALLDEPENDS folder.
+9. Make sure the folder structure for your Simple Mod Framework mod is correct, with the JSON/depends in a chunk0 folder, and make sure there are no errors in your mod's manifest.json.
 10. Enable the mod in Simple Mod Framework and then click "Apply Enabled Mods".
 
 ## Credits
@@ -221,7 +221,7 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 
 [All contributors to wiki.notex.app](https://github.com/glacier-modding/wiki.notex.app/graphs/contributors)
 
-## Suit Codenames \*
+## Suit Codenames
 
 ```
 birthsuit = Premiere White Suit
@@ -244,7 +244,7 @@ wolverine = Subject 47
 summersuit = Summer Sightseeing Suit
 ```
 
-## Suit Level Codename Examples \*\*
+## Suit Level Codename Examples
 
 ```
 bulldog = Dartmoor (e.g. outfit_agent47_bulldog_heroa_v0 = Classic Cut Long Coat Suit)
