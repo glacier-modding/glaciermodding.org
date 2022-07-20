@@ -10,7 +10,9 @@ module.exports = {
     organizationName: "glacier-modding",
     projectName: "wiki.notex.app",
     themeConfig: {
-        metadata: [{ name: "keywords", content: "hitman, glacier, modding, 007" }],
+        metadata: [
+            { name: "keywords", content: "hitman, glacier, modding, 007" },
+        ],
         navbar: {
             title: "wiki.notex.app",
             logo: {
