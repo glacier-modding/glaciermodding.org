@@ -164,13 +164,13 @@ When you're done modifying the example to your liking, you should have something
 
 ```json
 {
-  "version": "1.0.0",
-  "id": "HitmanModder.SilvioCarusoSwap",
-  "name": "Silvio Caruso Swap",
-  "description": "Swaps 47's Signature Suit with Silvio Caruso.",
-  "authors": ["HitmanModder"],
-  "contentFolder": "content",
-  "frameworkVersion": "1.5.7"
+    "version": "1.0.0",
+    "id": "HitmanModder.SilvioCarusoSwap",
+    "name": "Silvio Caruso Swap",
+    "description": "Swaps 47's Signature Suit with Silvio Caruso.",
+    "authors": ["HitmanModder"],
+    "contentFolder": "content",
+    "frameworkVersion": "1.5.7"
 }
 ```
 
