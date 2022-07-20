@@ -21,6 +21,7 @@ jobs:
 
       - name: Prettify code
         uses: creyD/prettier_action@v4.2
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
           # This part is also where you can pass other options, for example:
           prettier_options: --write **/*.{js,md,json}
