@@ -1,0 +1,45 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$ref": "#/$defs/SDEF",
+    "$defs": {
+        "SDEF": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$schema": {
+                    "type": "string",
+                    "description": "Link to the schema file"
+                },
+                "SDEF": {
+                    "type": "array",
+                    "description": "SDEF Root",
+                    "items": {
+                        "$ref": "#/$defs/Sdef"
+                    }
+                }
+            },
+            "required": ["SDEF"],
+            "title": "SDEF"
+        },
+        "Sdef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "DLGE": {
+                    "type": "string",
+                    "description": "DLGE: DialogEvent Hash/Path"
+                },
+                "_Path_Hint": {
+                    "type": "string",
+                    "description": "Fake path for descriptive purposes only"
+                },
+                "_Slot_Hint": {
+                    "type": "string",
+                    "description": "Hint for descriptive purposes only"
+                }
+            },
+            "required": ["DLGE"],
+            "title": "Slot"
+        }
+    }
+}
