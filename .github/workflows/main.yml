@@ -10,6 +10,7 @@ on:
 
 jobs:
   deployment:
+    needs: prettier
     runs-on: ubuntu-latest
 
     strategy:
