@@ -3,9 +3,9 @@ sidebar_position: 1
 description: An introductory modding guide that will show you how to swap 47's Signature Suit with an NPC.
 ---
 
-# NPC Swap guide
+# NPC Swap Guide
 
-## Recommended reading
+## Recommended Reading
 
 -   [Glacier 2 Modding Basics](./glacier2/modding_basics.md)
 -   [Chunk Data](./glacier2/chunkdata.md)
@@ -51,7 +51,7 @@ If we now go back to RPKG Tool and search for `outfit_silviocarusso_actor_v0`, t
 
 It is important to note that in some cases, we may not have the hashes available for what you're looking for, and this applies to all files in general. In our case, however, the hashes for Caruso's outfit files are known, so we can access them without issue.
 
-## Finding the Correct Files (Manually)
+### Finding the Correct Files (Manually)
 
 When creating your first Hitman mod, finding the correct files to modify is arguably the biggest initial challenge. So, knowing how to utilize the search function is key.
 
@@ -59,7 +59,7 @@ If we search for `outfit_` using the `Search RPKGs` function, we get all the chu
 
 > `[assembly:/_pro/characters/templates/sapiensa/char_sapienza_unique.template?/outfit_`**francescadesantis**`_actor_v0.entitytemplate].pc_entitytemplate`
 
-By name alone, we can derive that this has to be Francesea De Santis' TEMP file, but she's not who we're looking for. Logically, you would expect the string `outfit_silviocaruso` to give you Silvio Caruso’s files. However, searching for this doesn’t give any results, meaning the outfit file doesn't match Silvio Caruso’s name (or at least not exactly). Therefore, his outfit must use a different name.
+By name alone, we can derive that this has to be Francesca De Santis' TEMP file, but she's not who we're looking for. Logically, you would expect the string `outfit_silviocaruso` to give you Silvio Caruso’s files. However, searching for this doesn’t give any results, meaning the outfit file doesn't match Silvio Caruso’s name (or at least not exactly). Therefore, his outfit must use a different name.
 
 Let's take another look at De Santis' outfit string, since Caruso's probably follows a similar pattern:
 
@@ -79,7 +79,7 @@ So let's try searching `outfit_silviocarusso` (now that we know it includes an e
 
 Bingo! The result should be several files with `outfit_silviocarusso_actor_vX.entitytemplate].pc_entityblueprint` in the name, in both `chunk1` and `chunk8`.
 
-### After Finding the Correct Files
+## After Finding the Correct Files
 
 As we're specifically looking for Caruso's TEMP file, we can ignore the TBLU results. Since the TEMP files in `chunk1patch2` and `chunk8` seem to be duplicates, we can use either of them. But for the sake of this tutorial, let’s use the TEMP files located in `chunk1patch2`.
 Expanding the TEMP tree under `chunk1patch2` shows us that Silvio Caruso has two outfit variants, as indicated by `_v0` and `_v1` in the filenames. Remember that these TEMP files contain references to the components that are used for a certain outfit. Therefore, by selecting the `v1` variant and checking the `Depends on X other hash files/resources` section in the panel on the right, we can see what the outfit consists of. In this case, we can see the entry:
@@ -98,7 +98,7 @@ You are advised to create a new folder somewhere that will serve as an output fo
 
 With the correct chunk, TEMP and variant selected, right-click the filename in the left panel and select `Extract to QN (QuickEntity) JSON`. Select the output folder created in the previous step. This will create a JSON file. You can name it whatever you'd like, but make sure it ends with `.entity.json`.
 
-Since Caruo's outfit is in `chunk1` but our mod will be in `chunk0`, we will also need to extract the depends (which are the assets the outfit uses) and `patch` them to chunk0. Remember that while chunk1 can access chunk0, chunk0 can not access chunk1. If we try to run our mod without including the depends it needs, the game will simply crash.
+Since Caruso's outfit is in `chunk1` but our mod will be in `chunk0`, we will also need to extract the depends (which are the assets the outfit uses) and `patch` them to chunk0. Remember that while chunk1 can access chunk0, chunk0 can not access chunk1. If we try to run our mod without including the depends it needs, the game will simply crash.
 
 While you still have the correct file selected in the left box, left-click `Extract Hash Depends` in the right box, then select `Extract Recursive Hash Depends` and extract them to the same folder as the JSON.
 
@@ -112,7 +112,7 @@ If we examine the contents of `chunk1`, we can see it contains 5 different folde
 
 You should now have the `00873434CB4F9FCD.entity.json` file and 5 folders (BORG - TEXT) in the output folder.
 
-## Modifying the Files (Manually)
+### Modifying the Files (Manually)
 
 The next step is to find the TEMP and TBLU hash values for the outfit that is to be replaced: the default Signature Suit. All of 47's suits begin with the string `outfit_agent47`, and as mentioned earlier, they are all located in `chunk0`. Therefore, you can search for the string `outfit_agent47` using RPKG Tool's `Search RPKGs` function, and then examine the results in `chunk0`, `chunk0patch1`, or `chunk0patch2`. Many of the filenames will match up with the suit's in-game name, but many will not. Some suits have their own codenames\*, and some use the codename for the level they're from\*\*. Finally, you'll notice that many suits have both an `actor` and a `heroa` variant. The actor variants are for NPCs, while the heroa variant is specifically for 47, so you'll always want to use the heroa variants when creating NPC or outfit swaps.
 
@@ -120,7 +120,7 @@ In this case, the default Signature Suit is fairly easy to find, as it's the sec
 
 Next, we will want to locate the TBLU value. In this case, since we still have the results in chunk0 open, we can simply access the entry in the TBLU tree instead. We can see the TBLU is named `0046BB3BE76661CC.TBLU`, so the value we're looking for is `0046BB3BE76661CC`. Make a note of this TBLU hash as well.
 
-## Modifying the Files (Using Community Resources)
+### Modifying the Files (Using Community Resources)
 
 Alternatively, we can use HMBM47's [Hitman 3 Outfits Spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRDiyiqdRebu0Olvvkr20CDhh6ANxu7FOQZ_O-1YHFN9e6kh0WmpbwDYbfgzevSvc3fO4_4Exu1fmQH/pubhtml#), only this time, we'll access the `chunk0 47 Base Suits` section. As before, we'll see each suit's in-game name in the `Name` column, and the suit's filename in the `Outfit` column. However, we'll need the TEMP and TBLU hashes rather than the filename, so we can locate them in the `TEMP` and `TBLU` columns, respectively. First, if we search for `Signature Suit`, we can identify which is the default version and which is the gloved version by looking at either the `Notes` column, or the filename in the `Outfit` column. Then, we can identify the outfit's TEMP by looking at the TEMP column on the left, which is `00FF8C6314EA882E.TEMP`. Therefore, the TEMP hash we need is `00FF8C6314EA882E`. We can then do for the outfit's TBLU by examining the TBLU column, which gives us `0046BB3BE76661CC.TBLU`. Therefore, the TBLU hash we need is `0046BB3BE76661CC`.
 
@@ -162,15 +162,15 @@ If we copy this section and paste it into our `manifest.json`, we can then chang
 
 When you're done modifying the example to your liking, you should have something like this:
 
-```
+```json
 {
-  "version": "1.0.0",
-  "id": "HitmanModder.SilvioCarusoSwap",
-  "name": "Silvio Caruso Swap",
-  "description": "Swaps 47's Signature Suit with Silvio Caruso.",
-  "authors": ["HitmanModder"],
-  "contentFolder": "content",
-  "frameworkVersion": "1.5.7"
+    "version": "1.0.0",
+    "id": "HitmanModder.SilvioCarusoSwap",
+    "name": "Silvio Caruso Swap",
+    "description": "Swaps 47's Signature Suit with Silvio Caruso.",
+    "authors": ["HitmanModder"],
+    "contentFolder": "content",
+    "frameworkVersion": "1.5.7"
 }
 ```
 
