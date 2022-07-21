@@ -31,7 +31,9 @@ For example, if we look at the [Chunk Data](./glacier2/chunkdata.md), we can see
 
 > chunk27 (Paris) -> chunk21 (Season 1) -> chunk8 (Legacy) -> chunk1 (Base) -> chunk0 (Boot).
 
-Note that the loading process for chunk files is a one-way street; lower-level chunks cannot access higher-level chunks. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1. Chunks can also only access lower-level chunks and not adjacent chunks. So, as we can see from the flowchart, chunk12 can not access chunk13, but it can access chunk9.
+Note that while chunk0 can be accessed *from* anywhere, it is a one-way street; chunks higher in the hierarchy cannot access chunks lower in the hierarchy. The lower the chunk *number*, the higher it is in the chunk *hierarchy*. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1, because chunk1 (Level 1) is lower in the hierarchy than chunk0 (Level 0). Furthermore, chunks cannot access adjacent chunks. So, as we can see from the flowchart, chunk12 can not access chunk13, but it can access chunk9.
+
+If that all sounds a bit too confusing, don't worry. For now, the important thing is to simply follow the arrows on the flowchart.
 
 Using these resources, we can begin to get an idea of where to look for Silvio Caruso's TEMP/TBLU files. We can see that the assets for Sapienza are in chunk26, and since that's a Hitman 1 location, chunk8 (Legacy) and chunk21 (Season1) may also have what we're looking for. Finally, chunk0 (Boot) and chunk1 (Base) are definitely worth checking as well, as these are essentially "main" chunks.
 
