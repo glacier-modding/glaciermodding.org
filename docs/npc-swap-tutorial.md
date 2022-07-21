@@ -196,7 +196,7 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 
 1. Import Hitman 3's Runtime folder into RPKG Tool.
 2. Find the outfit\_\*\*\*\*\*\* TEMP file for the outfit/NPC you're looking for.
-3. Extract the TEMP's QuickEntity JSON. If that TEMP isn't located in chunk0 or its patches, extract its recursive hash depends to the chunk0 folder in your Simple Mod Framework mod as well.
+3. Extract both the TEMP's QuickEntity JSON and the recursive hash depends to the chunk0 folder in your Simple Mod Framework mod.
 4. Find the TEMP and TBLU values for the suit you want to replace.
 5. Open the outfit's \*\*\*\*\*\*.entity.json and replace its tempHash and tbluHash values with the values you found in step 4.
 6. Open the \*\*\*\*\*\*.TEMP folder within the ALLDEPENDS folder. You will only need the depends from the chunk the suit is in (e.g. if the suit is in chunk1, you will only need the files from chunk1 and its patches). Move everything in each patchX folder to the outfit's base chunkX folder (e.g. chunk1patch1 to chunk1, then chunk1patch2 to chunk1, overwriting anything in the base chunk if necessary).
