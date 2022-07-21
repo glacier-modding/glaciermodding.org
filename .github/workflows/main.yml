@@ -34,6 +34,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          # Specifying the branch manually should get any changes that the previous job has made instead of defaulting to the reference or SHA for the event.
+          ref: main
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
