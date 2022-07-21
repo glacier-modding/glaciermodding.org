@@ -25,11 +25,15 @@ Every outfit in the game has its own TEMP/TBLU combo. TEMP files are Templates w
 
 ## Chunk Basics
 
-You will notice from [Glacier 2 Modding Basics](./glacier2/modding_basics.md) that the game's data is split into "chunks" numbered chunk0 to chunk27. All chunks will have additional patch chunks (e.g., chunk0patch2). Generally, these chunk files correspond to a location in the game and hold the content that is specific to that level. For example, looking at [Chunk Data](./glacier2/chunkdata.md) we can see that the content for the Paris level is located in “Chunk 27”. We can also see that Season 1 is "Chunk 21", and Legacy is "Chunk 8". Finally, we have "Chunk 1" (Base) and Chunk 0 (Dubai/Boot). When the game loads a level, it will only load the content needed for that specific level. In the case of Paris, the chunks would be accessed in the following order: chunk27 (Paris) -> chunk21 (Season 1) -> chunk8 (Legacy) -> chunk1 (Base) -> chunk0 (Boot).
+You will notice from [Glacier 2 Modding Basics](./glacier2/modding_basics.md) that the game's data is split into "chunks" numbered chunk0 to chunk27. Also, all chunks will have additional patch chunks (e.g., chunk0patch2). Generally, these chunk files correspond to a location in the game and hold the content that is specific to that level. However, some chunk files contain assets used in most levels and will therefore always be loaded (e.g., chunk0).
 
-Another tool that can be used to visualize the relationship between chunks is the [Hitman 3 Chunk Hierarchy flowchart](https://i.imgur.com/gOhpfDS.png) (which was created by Oakheart, based off of an earlier chart by invalid). For example, we can see that chunk2 (Season 3) is accessed by all but one of the Hitman 3 levels, chunks 3 (Dartmoor) through 7 (Romania). In turn, chunk1 (Base) is accessed by chunk2, and finally, chunk0 (Dubai/Boot) is then accessed by chunk1. Note that while chunk0 can be accessed _from_ anywhere, it is a one-way street; lower-level chunks cannot access higher-level chunks. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1.
+For example, if we look at [Chunk Data](./glacier2/chunkdata.md), we can see that the content for the Paris level is located in `chunk27`. We can also see that Season 1 is `chunk21`, and Legacy is `chunk8`. Finally, we have `chunk1` (Base) and `chunk0` (Dubai/Boot). When the game loads a level, it will only load the content needed for that specific level, but the chunks will also be accessed in a specific order. To visualize the relationship between chunks, we can use the [Hitman 3 Chunk Hierarchy flowchart](./assets/Chunk_Data_Diagram.svg) (which was created by Oakheart, based on an earlier chart by invalid). So, if we follow along with the flowchart (starting with chunk27), we can see that the chunks for Paris would be accessed in the following order: 
 
-Using these two resources, we can begin to get an idea of where to look for Silvio Caruso's TEMP/TBLU files. We can see that the assets for Sapienza are in chunk26, and since that's a Hitman 1 location, chunk8 (Legacy) and chunk21 (Season1) may also have what we're looking for. Finally, chunk0 (Boot) and chunk1 (Base) are definitely worth checking as well, as these are essentially "main" chunks.
+> chunk27 (Paris) -> chunk21 (Season 1) -> chunk8 (Legacy) -> chunk1 (Base) -> chunk0 (Boot).
+
+Note that the loading process for chunk files is a one-way street; lower-level chunks cannot access higher-level chunks. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1. Chunks can also only access lower-level chunks and not adjacent chunks. So, as we can see from the flowchart, chunk12 can not access chunk13, but it can access chunk9.
+
+Using these resources, we can begin to get an idea of where to look for Silvio Caruso's TEMP/TBLU files. We can see that the assets for Sapienza are in chunk26, and since that's a Hitman 1 location, chunk8 (Legacy) and chunk21 (Season1) may also have what we're looking for. Finally, chunk0 (Boot) and chunk1 (Base) are definitely worth checking as well, as these are essentially "main" chunks.
 
 Another hint: most (if not all) outfit TEMP/TBLU files start with the string `outfit_` typically followed by the level's name/codename or character's name, and end with the string `.pc_entitytemplate`. While it is important to note that this will only be true for outfits we have the paths for, you are unlikely to run into issues as we do have the paths for almost all of them.
 
@@ -45,11 +49,11 @@ There are two ways to find the correct files. You can search for them yourself, 
 
 Now, while we _could_ search for the files manually, it isn't strictly necessary. Instead, we can use HMBM47's [Hitman 3 Outfits Spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRDiyiqdRebu0Olvvkr20CDhh6ANxu7FOQZ_O-1YHFN9e6kh0WmpbwDYbfgzevSvc3fO4_4Exu1fmQH/pubhtml#). We also have grappigegovert (who created the original outfit list) and 2kpr (who compiled a list of the NPCs by their names, their outfits, their pieces, etc.) to thank for this wonderful resource.
 
-If we access the `Outfits by Character Name` section of the spreadsheet, we can see each NPC's in-game name is located in the `Name` column on the right, while their outfit's filename is in the `Outfit` column. So, if we simply search for `Silvio Caruso`, we can see the filename we're looking for is `outfit_silviocarusso_actor_v0`.
+If we access the `Outfits by Character Name` section of the spreadsheet, we can see each NPC's in-game name is located in the `Name` column on the right, while their outfit's filename is in the `Outfit` column. So, if we simply search for `Silvio Caruso` and then check the `Outfit` column, we can see the filename we're looking for is `outfit_silviocarusso_actor_v0`.
 
 If we now go back to RPKG Tool and search for `outfit_silviocarusso_actor_v0`, the result should be several files with `outfit_silviocarusso_actor_vX.entitytemplate].pc_entityblueprint` in the name, in both `chunk1` and `chunk8`.
 
-It is important to note that in some cases, we may not have the hashes available for what you're looking for, and this applies to all files in general. In our case, however, the hashes for Caruso's outfit files are known, so we can access them without issue.
+It is important to note that in some cases, we may not have the hashes available for what you're looking for, and this applies to all files in general. That said, RPKG Tool will notify you whenever there is a new version of the hash list available, so whenever you see this prompt, be sure to click "OK" to automatically update to the latest version. In our case, however, the hashes for Caruso's outfit files are known, so we can access them without issue. 
 
 ### Finding the Correct Files (Manually)
 
@@ -122,7 +126,7 @@ Next, we will want to locate the TBLU value. In this case, since we still have t
 
 ### Modifying the Files (Using Community Resources)
 
-Alternatively, we can use HMBM47's [Hitman 3 Outfits Spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRDiyiqdRebu0Olvvkr20CDhh6ANxu7FOQZ_O-1YHFN9e6kh0WmpbwDYbfgzevSvc3fO4_4Exu1fmQH/pubhtml#), only this time, we'll access the `chunk0 47 Base Suits` section. As before, we'll see each suit's in-game name in the `Name` column, and the suit's filename in the `Outfit` column. However, we'll need the TEMP and TBLU hashes rather than the filename, so we can locate them in the `TEMP` and `TBLU` columns, respectively. First, if we search for `Signature Suit`, we can identify which is the default version and which is the gloved version by looking at either the `Notes` column, or the filename in the `Outfit` column. Then, we can identify the outfit's TEMP by looking at the TEMP column on the left, which is `00FF8C6314EA882E.TEMP`. Therefore, the TEMP hash we need is `00FF8C6314EA882E`. We can then do for the outfit's TBLU by examining the TBLU column, which gives us `0046BB3BE76661CC.TBLU`. Therefore, the TBLU hash we need is `0046BB3BE76661CC`.
+Alternatively, we can use HMBM47's [Hitman 3 Outfits Spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRDiyiqdRebu0Olvvkr20CDhh6ANxu7FOQZ_O-1YHFN9e6kh0WmpbwDYbfgzevSvc3fO4_4Exu1fmQH/pubhtml#), only this time, we'll access the `chunk0 47 Base Suits` section. As before, we'll see each suit's in-game name in the `Name` column, and the suit's filename in the `Outfit` column. However, we'll need the TEMP and TBLU hashes rather than the filename, so we can locate them in the `TEMP` and `TBLU` columns, respectively. First, if we search for `Signature Suit`, we can determine which is the default version and which is the gloved version by looking at either the `Notes` column, or the filename in the `Outfit` column. Next, we can identify the outfit's TEMP by looking at the TEMP column on the left, which is `00FF8C6314EA882E.TEMP`. Therefore, the TEMP hash we need is `00FF8C6314EA882E`. We can then do the same for the outfit's TBLU by examining the TBLU column, which gives us `0046BB3BE76661CC.TBLU`. Therefore, the TBLU hash we need is `0046BB3BE76661CC`.
 
 In either case, once you have the TEMP and TBLU hashes, the next step is to open the `00873434CB4F9FCD.entity.json` file (which we previously exported) using a code editor. You'll see it starts with: `{"tempHash":"00873434CB4F9FCD","tbluHash": "00945FFF47BBBDE3",` All we need to do is replace the tempHash and tbluHash values in this string with the ones we obtained in the previous step. Therefore, we would change `"tempHash":"00873434CB4F9FCD"` to `"tempHash":"00FF8C6314EA882E"` and `"tbluHash":"00945FFF47BBBDE3"` to `"tbluHash":"0046BB3BE76661CC"`
 
@@ -190,13 +194,13 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 
 ## TL;DR
 
-1. Import the Runtime folder into RPKG Tool.
-2. Find the outfit\_\*\*\*\*\*\*" TEMP file for the outfit/NPC you're looking for.
-3. Extract both the TEMP's QuickEntity JSON and the recursive hash depends to the chunk0 folder in your Simple Mod Framework mod.
-4. Find the TEMP value for the suit you want to replace.
-5. Open the outfit's \*\*\*\*\*\*.entity.json and replace its tempHash value with the value you found in step 4.
+1. Import Hitman 3's Runtime folder into RPKG Tool.
+2. Find the outfit\_\*\*\*\*\*\* TEMP file for the outfit/NPC you're looking for.
+3. Extract the TEMP's QuickEntity JSON. If that TEMP isn't located in chunk0 or its patches, extract its recursive hash depends to the chunk0 folder in your Simple Mod Framework mod as well.
+4. Find the TEMP and TBLU values for the suit you want to replace.
+5. Open the outfit's \*\*\*\*\*\*.entity.json and replace its tempHash and tbluHash values with the values you found in step 4.
 6. Open the \*\*\*\*\*\*.TEMP folder within the ALLDEPENDS folder. You will only need the depends from the chunk the suit is in (e.g. if the suit is in chunk1, you will only need the files from chunk1 and its patches). Move everything in each patchX folder to the outfit's base chunkX folder (e.g. chunk1patch1 to chunk1, then chunk1patch2 to chunk1, overwriting anything in the base chunk if necessary).
-7. Move all the depends from the outfit's base chunkX folder to the chunk0 folder in your SMF mod (the same place your **\*\***.entity.json is located).
+7. Move all the depends from the outfit's base chunkX folder to the chunk0 folder in your SMF mod (the same place your \*\*\*\*\*\*.entity.json is located).
 8. Delete whatever remains in the ALLDEPENDS folder.
 9. Make sure the folder structure for your Simple Mod Framework mod is correct, with the JSON/depends in a chunk0 folder, and make sure there are no errors in your mod's manifest.json.
 10. Enable the mod in Simple Mod Framework and then click "Apply Enabled Mods".
@@ -205,13 +209,13 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 
 `Metaphoria` - Tutorial author.
 
-`Oakheart` - Editing and conversion to markdown, as well as the V2 chunk flowchart.
+`Oakheart` - Editing, conversion to markdown, and the V2 chunk flowchart.
 
-`invalid` - Original chunk flowchart, of which V2 was based.
+`invalid` - Original chunk flowchart, on which V2 was based.
 
 `Notex`, `REDACTED`, [and all RPKG contributors](https://github.com/glacier-modding/RPKG-Tool/graphs/contributors) - RPKG Tool.
 
-`HMBM47` - Hitman 3 Outfits spreadsheet. The original lists were created by grappigegovert and 2kpr, which were then formatted, expanded, organized and later added to by HMBM47.
+`HMBM47` - Hitman 3 Outfits spreadsheet. The original lists were created by grappigegovert and 2kpr, which were then formatted, expanded, organized, and later added to by HMBM47.
 
 `grappigegovert`- Original outfit list.
 
@@ -249,5 +253,5 @@ summersuit = Summer Sightseeing Suit
 ```
 bulldog = Dartmoor (e.g. outfit_agent47_bulldog_heroa_v0 = Classic Cut Long Coat Suit)
 fox = Berlin (e.g. outfit_agent47_fox_gloves_heroa_v0 = Number Six with Gloves)
-stingray = Haven Island (stingray = The Tropical Islander, reward_stingray = The Tropical Suit)
+stingray = Haven Island (stingray_heroa = The Tropical Islander, stingray_reward = The Tropical Suit)
 ```
