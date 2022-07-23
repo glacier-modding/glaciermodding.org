@@ -20,8 +20,9 @@ description: An introductory modding guide that will show you how to swap 47's S
 ## Background
 
 Replacing an outfit requires you to identify an outfit to be replaced as well as an outfit to be replaced by. For the purpose of this tutorial, we will attempt to replace 47’s Signature Suit with that of Silvio Caruso, who is already present in the game's files.
-Creating a mod requires you to create your own `chunk` file, which you then add to the game's files. This can be done in multiple ways. This tutorial uses [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200) to automate this part, as the modding process is already convoluted enough without this tool.
-Every outfit in the game has its own TEMP/TBLU combo. TEMP files are Templates whereas TBLU files are Template Blueprints. Note that these files don't actually contain the _assets_ of the character's outfit, such as models, textures, etc. These files merely serve to point the game to the correct assets to use (hence, why they're called "templates", or "TEMP" for short), which are located somewhere other than the TEMP/TBLU files themselves. Therefore, this tutorial only covers replacing outfits that are already present in the game's files, and not custom outfits that have to be imported.
+Creating a mod requires you to create your own `chunk` file, which you then add to the game's files. This chunk file can be generated manually using [RPKG Tool](https://notex.app/rpkg/) or automatically using [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200). For this tutorial, we will be using Simple Mod Framework, as it will not only generate the chunk file automatically but place it inside the appropriate folder as well.
+
+Every outfit in the game has its own TEMP/TBLU combo. TEMP files are **Templates** whereas TBLU files are **Template Blueprints**. Note that these files don't actually contain the _assets_ of the character's outfit, such as models, textures, etc. These files merely tell the game which assets to use (hence why they're called "templates", or "TEMP" for short). Therefore, this tutorial only covers replacing outfits that are already present in the game's files, and not custom outfits that have to be imported.
 
 ## Chunk Basics
 
@@ -31,7 +32,7 @@ For example, if we look at the [Chunk Data](./glacier2/chunkdata.md), we can see
 
 > chunk27 (Paris) -> chunk21 (Season 1) -> chunk8 (Legacy) -> chunk1 (Base) -> chunk0 (Boot).
 
-Note that while chunk0 can be accessed _from_ anywhere, it is a one-way street; chunks higher in the hierarchy cannot access chunks lower in the hierarchy. The lower the chunk _number_, the higher it is in the chunk _hierarchy_. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1, because chunk1 (Level 1) is lower in the hierarchy than chunk0 (Level 0). Furthermore, chunks cannot access adjacent chunks. So, as we can see from the flowchart, chunk12 can not access chunk13, but it can access chunk9.
+Note that while chunk0 can be accessed _from_ anywhere, it is a one-way street; chunks higher in the hierarchy cannot access chunks lower in the hierarchy. The lower the chunk _number_, the higher it is in the chunk _hierarchy_. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1, because chunk1 (Level 1) is lower in the hierarchy than chunk0 (Level 0). Furthermore, chunks cannot access adjacent chunks. So, as we can see from the flowchart, chunk12 can not access chunk11, but it can access chunk9.
 
 If that all sounds a bit too confusing, don't worry. For now, the important thing is to simply follow the arrows on the flowchart.
 
@@ -148,7 +149,7 @@ First, you'll want to access the `Mods` folder located at `HITMAN 3\Simple Mod F
 
 Let's make a copy of the Realistic AI folder, and then name that copy `Silvio Caruso Swap`. Next, we'll open that folder and delete the 3 content-**\*\*** folders. The folder structure for our mod will be quite simple, as it only includes one option. So, we'll create a folder within the Silvio Caruso Swap folder named `content`, and then inside the content folder, we'll create another folder named `chunk0`. This chunk0 folder is where we're going to place the 5 depends folders and the `00873434CB4F9FCD.entity.json` file from earlier. So, all we need to do is access that folder, and move the contents to the chunk0 folder.
 
-The final piece of the puzzle is the mod's manifest. We can either modify Realistic AI's manifest.json, or create our own. For the purpose of this tutorial, let's open the existing manifest.json and erase the contents. Then, if we access the `Manifest.md` document located at `HITMAN 3\Simple Mod Framework\Mods`, we can see it gives the following example:
+The final piece of the puzzle is the mod's manifest. We can either modify Realistic AI's manifest.json, or create our own. For the purpose of this tutorial, let's open the existing manifest.json and erase the contents. Then, if we access the `Manifest.md` document located at `HITMAN 3\Simple Mod Framework\Info`, we can see it gives the following example:
 
 ```json
 {
@@ -217,13 +218,13 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 
 `Notex`, `REDACTED`, [and all RPKG contributors](https://github.com/glacier-modding/RPKG-Tool/graphs/contributors) - RPKG Tool.
 
+`Atampy26` - Simple Mod Framework, QuickEntity, and QuickEntity Editor.
+
 `HMBM47` - Hitman 3 Outfits spreadsheet. The original lists were created by grappigegovert and 2kpr, which were then formatted, expanded, organized, and later added to by HMBM47.
 
 `grappigegovert`- Original outfit list.
 
 `2kpr` - Compiled a list of the NPCs by their names, their outfits, their pieces, etc.
-
-`Atampy26` - Simple Mod Framework, QuickEntity, and QuickEntity Editor.
 
 [All contributors to wiki.notex.app](https://github.com/glacier-modding/wiki.notex.app/graphs/contributors)
 
