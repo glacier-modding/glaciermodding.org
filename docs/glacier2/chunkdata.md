@@ -7,9 +7,13 @@ description: The Runtime chunk files and their descriptions
 
 ### Information
 
-The game's data is split into "chunk" files that have a .rpkg extension. These Chunks contain all the assets the game uses. Chunk files also have corresponding chunk patch files. Generally, these chunk files correspond to a location in the game and hold the content that is specific to that location. Loading a location will therefore load in the assets for that location. However, some chunk files contain assets used in most levels and will therefore always be loaded.
+The game's data is split into `chunk` files, which have an `.rpkg` extension. These chunks contain all the assets the game uses, and are numbered from `chunk0` through `chunk27`. Each of these "base" chunks will also be accompanied by two "patch" chunks, which follow the format `chunkXpatchX.rpkg`. Generally, these chunk files correspond to a location in the game and hold the content that is specific to that location (e.g., chunk27 = Paris). When the game loads a level, it will only load the content needed for that level, but the chunks will also be accessed in a specific order. However, some chunks contain assets used in most levels and will therefore always be loaded (e.g., chunk0).
 
-The following flowchart visualizes the relationship between chunks. Note that the chunk files are split into levels. The loading process for the chunk files ia a one-way street; lower-level chunks can not access higher-level chunks. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1. Chunk can also only access lower-level chunk and not adjacent chunks. So looking at the flowchart chunk12 cannot access chunk13, but it can access chunk9.
+To visualize the relationship between chunks, we can use the `Hitman 3 Chunk Hierarchy flowchart`. After locating the chunk on the flowchart, all we need to do is follow the arrows. Using chunk27 (Paris) as an example, we can see the chunks are accessed in the following order:
+
+> chunk27 (Paris) -> chunk21 (Season 1) -> chunk8 (Legacy) -> chunk1 (Base) -> chunk0 (Boot).
+
+Note that while chunk0 can be accessed _from_ anywhere, it is a one-way street; chunks higher in the hierarchy cannot access chunks lower in the hierarchy. The lower the chunk _number_, the higher it is in the chunk _hierarchy_. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1, because chunk1 (Level 1) is lower in the hierarchy than chunk0 (Level 0). Furthermore, chunks cannot access adjacent chunks. So, as we can see from the flowchart, chunk12 can not access chunk11, but it can access chunk9.
 
 ![Chunk Diagram](../assets/Chunk_Data_Diagram.svg)
 
