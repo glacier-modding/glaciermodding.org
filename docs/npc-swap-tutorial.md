@@ -20,7 +20,7 @@ description: An introductory modding guide that will show you how to swap 47's S
 ## Background
 
 Replacing an outfit requires you to identify an outfit to be replaced as well as an outfit to be replaced by. For the purpose of this tutorial, we will attempt to replace 47’s Signature Suit with that of Silvio Caruso, who is already present in the game's files.
-Creating a mod requires you to create your own `chunk` file, which you then add to the game's files. This chunk file can be generated manually using [RPKG Tool](https://notex.app/rpkg/) or automatically using [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200). For this tutorial, we will be using Simple Mod Framework, as it will not only generate the chunk file automatically but place it inside the appropriate folder as well.
+Creating a mod requires you to create your own `chunk` file, which you then add to the game's files. The chunk file can either be generated manually using [RPKG Tool](https://notex.app/rpkg/) or automatically using [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200). For this tutorial, we will be using Simple Mod Framework, as it will not only generate the chunk file automatically but place it inside the appropriate folder as well.
 
 Every outfit in the game has its own TEMP/TBLU combo. TEMP files are **Templates** whereas TBLU files are **Template Blueprints**. Note that these files don't actually contain the _assets_ of the character's outfit, such as models, textures, etc. These files merely tell the game which assets to use (hence why they're called "templates", or "TEMP" for short). Therefore, this tutorial only covers replacing outfits that are already present in the game's files, and not custom outfits that have to be imported.
 
