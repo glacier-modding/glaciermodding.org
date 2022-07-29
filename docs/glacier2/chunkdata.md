@@ -7,7 +7,7 @@ description: The Runtime chunk files and their descriptions
 
 ### Information
 
-The game's data is split into `chunk` files, which have an `.rpkg` extension. These chunks contain all the assets the game uses, and are numbered from `chunk0` through `chunk27`. Each of these "base" chunks will also be accompanied by two "patch" chunks, which follow the format `chunkXpatchX.rpkg`. Generally, these chunk files correspond to a location in the game and hold the content that is specific to that location (e.g., chunk27 = Paris). When the game loads a level, it will only load the content needed for that level, but the chunks will also be accessed in a specific order. However, some chunks contain assets used in most levels and will therefore always be loaded (e.g., chunk0).
+The game's data is split into `chunk` files, which have an `.rpkg` extension. These chunks contain all the assets the game uses, and are numbered from `chunk0` through `chunk28`. Each of these "base" chunks will also be accompanied by two "patch" chunks, which follow the format `chunkXpatchX.rpkg`. Generally, these chunk files correspond to a location in the game and hold the content that is specific to that location (e.g., chunk27 = Paris). When the game loads a level, it will only load the content needed for that level, but the chunks will also be accessed in a specific order. However, some chunks contain assets used in most levels and will therefore always be loaded (e.g., chunk0).
 
 To visualize the relationship between chunks, we can use the `Hitman 3 Chunk Hierarchy flowchart`. After locating the chunk on the flowchart, all we need to do is follow the arrows. Using chunk27 (Paris) as an example, we can see the chunks are accessed in the following order:
 
@@ -49,6 +49,7 @@ Note that while chunk0 can be accessed _from_ anywhere, it is a one-way street; 
 | Chunk 25 | Marrakesh    | Spider       | Marrakesh              |
 | Chunk 26 | Coastal Town | Octopus      | Sapienza               |
 | Chunk 27 | Paris        | Peacock      | Paris                  |
+| Chunk 28 | Rocky        | Dugong       | Ambrose Island         |
 
 ### Hitman 2
 
