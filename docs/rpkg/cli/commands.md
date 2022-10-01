@@ -230,7 +230,9 @@ sidebar_position: 1
 -version <text string>
     Specifices the ResourceTool Hitman game version. Options are: HM2016, HM2, or HM3.
 ```
+
 ### Examples:
+
 ```
 Computes the IOI style truncated md5 hash/runtimeid from a string:
     rpkg-cli.exe -compute_ioi_hash "[assembly:/_PRO/Scenes/Missions/CoastalTown/Mission01.entity].pc_entitytemplate"
