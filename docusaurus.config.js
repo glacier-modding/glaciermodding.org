@@ -1,27 +1,27 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-    title: "wiki.notex.app",
+    title: "wiki.glaciermodding.org",
     tagline: "",
-    url: "https://wiki.notex.app",
+    url: "https://wiki.glaciermodding.org",
     baseUrl: "/",
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
     favicon: "img/favicon.ico",
     organizationName: "glacier-modding",
-    projectName: "wiki.notex.app",
+    projectName: "wiki.glaciermodding.org",
     themeConfig: {
         metadata: [
             { name: "keywords", content: "hitman, glacier, modding, 007" },
         ],
         navbar: {
-            title: "wiki.notex.app",
+            title: "wiki.glaciermodding.org",
             logo: {
                 alt: "Glacier Engine 2 Modding Logo",
                 src: "img/logo.png",
             },
             items: [
                 {
-                    href: "https://github.com/glacier-modding/wiki.notex.app",
+                    href: "https://github.com/glacier-modding/wiki.glaciermodding.org",
                     label: "GitHub",
                     position: "right",
                 },
@@ -56,7 +56,7 @@ module.exports = {
                     sidebarPath: require.resolve("./sidebars.js"),
                     // Please change this to your repo.
                     editUrl:
-                        "https://github.com/glacier-modding/wiki.notex.app/blob/main/",
+                        "https://github.com/glacier-modding/wiki.glaciermodding.org/blob/main/",
                 },
                 theme: {
                     customCss: require.resolve("./src/css/custom.css"),

@@ -8,4 +8,4 @@ The extract file feature allows you to extract individual files and their depene
 
 Before extracting you should ask yourself if you are editing the correct files. For example if you want to remove an accessory from an outfit you should be editing TEMP and TBLU files (which contain the references to the combination of outfit and accessories) and not the PRIM files (which contains the mesh).
 
-The wiki is currently a work in progress at the moment, please feel free to contribute @ https://github.com/glacier-modding/wiki.notex.app
+The wiki is currently a work in progress at the moment, please feel free to contribute @ https://github.com/glacier-modding/wiki.glaciermodding.org

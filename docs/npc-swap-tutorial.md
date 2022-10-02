@@ -12,7 +12,7 @@ description: An introductory modding guide that will show you how to swap 47's S
 
 ## Requirements
 
--   [RPKG Tool](https://notex.app/rpkg/)
+-   [RPKG Tool](https://glaciermodding.org/rpkg/)
 -   [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200)
 -   A program to read and edit JSON files (VSCode is recommended, but any basic code editor will suffice in this scenario as we're only changing a single value at the beginning of the document. Otherwise, QuickEntity Editor is the superior choice when editing QN JSON files)
 -   A program to extract and archive ZIP files (such as 7-Zip)
@@ -20,7 +20,7 @@ description: An introductory modding guide that will show you how to swap 47's S
 ## Background
 
 Replacing an outfit requires you to identify an outfit to be replaced as well as an outfit to be replaced by. For the purpose of this tutorial, we will attempt to replace 47’s Signature Suit with that of Silvio Caruso, who is already present in the game's files.
-Creating a mod requires you to create your own `chunk` file, which you then add to the game's files. The chunk file can either be generated manually using [RPKG Tool](https://notex.app/rpkg/) or automatically using [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200). For this tutorial, we will be using Simple Mod Framework, as it will not only generate the chunk file automatically but place it inside the appropriate folder as well.
+Creating a mod requires you to create your own `chunk` file, which you then add to the game's files. The chunk file can either be generated manually using [RPKG Tool](https://glaciermodding.org/rpkg/) or automatically using [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200). For this tutorial, we will be using Simple Mod Framework, as it will not only generate the chunk file automatically but place it inside the appropriate folder as well.
 
 Every outfit in the game has its own TEMP/TBLU combo. TEMP files are **Templates** whereas TBLU files are **Template Blueprints**. Note that these files don't actually contain the _assets_ of the character's outfit, such as models, textures, etc. These files merely tell the game which assets to use (hence why they're called "templates", or "TEMP" for short). Therefore, this tutorial only covers replacing outfits that are already present in the game's files, and not custom outfits that have to be imported.
 
@@ -44,7 +44,7 @@ Therefore, we need to identify which `outfit_*****.pc_entitytemplate` file belon
 
 ## Finding the Correct Files
 
-The [RPKG Tool](https://notex.app/rpkg/) allows us to search within the chunk files. Once setup, we can load the chunk files into the tool by using `Import` > `Import RPKGs folder` and pointing it to the `HITMAN 3/Runtime` folder. This will load all the chunk files into the tool, which is required when looking for the correct files. Next, we can search by using the left panel and going to `Search` > ` Search RPKGs`
+The [RPKG Tool](https://glaciermodding.org/rpkg/) allows us to search within the chunk files. Once setup, we can load the chunk files into the tool by using `Import` > `Import RPKGs folder` and pointing it to the `HITMAN 3/Runtime` folder. This will load all the chunk files into the tool, which is required when looking for the correct files. Next, we can search by using the left panel and going to `Search` > ` Search RPKGs`
 
 There are two ways to find the correct files. You can search for them yourself, or you can use community-made resources to quickly find the correct files. Using the community-made resources will save you time as most of the work has been done for you. Note that while this is easier, you will skip some valuable steps in the modding process, which might be useful to know if you decide to make more complex mods. Therefore, if you are creating your first Hitman mod, you are recommended to try and find the correct files yourself.
 
@@ -115,7 +115,7 @@ When creating suit swaps or modifications, we'll ultimately want to place our mo
 
 That will leave us with 3 folders: `chunk1`, `chunk1patch2`, and `chunk8`. First, it's important to mention that outfits can only read from the same chunk they reside in. Therefore, if we're swapping an outfit that's located in chunk1, we will only ever need the depends from chunk1 and its patches. So, we can safely delete `chunk8`. Next, we'd usually start by transferring the depends from the patchX chunks to their base chunks. For example, we'd move the depends from `chunk1patch2` to `chunk1`, and replace anything if it asks. However, in this case, we can see `chunk1patch2` only contains a TBLU file and a TEMP file. If we were to restore `chunk8`, we would see that it contains the same TEMP/TBLU pair, which matches what we saw in RPKG Tool. Namely, that `chunk1patch2` and `chunk8` contained duplicate TEMP/TBLU pairs. We also know from earlier that TBLU and TEMP files contain outfit templates, but we've already converted Caruso's TEMP/TBLU pair to a QuickEntity JSON, so we no longer need them. Therefore, that only leaves `chunk1`.
 
-If we examine the contents of `chunk1`, we can see it contains 5 different folders with various file types. If we check the [Glacier 2 Engine file formats](https://wiki.notex.app/glacier2/fileformats), we can see this chunk appears to include important assets, like meshes (PRIM), bone rigs (BORG), textures (TEXT/TEXD), etc. So, these must be the depends we're looking for. We'll want to move these 5 folders (BORG - TEXT) to the same location as the `00873434CB4F9FCD.entity.json` file we extracted. The chunkX.meta files can be ignored. Once this is done, you can delete the `ALLDEPENDS` folder and its remaining content.
+If we examine the contents of `chunk1`, we can see it contains 5 different folders with various file types. If we check the [Glacier 2 Engine file formats](https://wiki.glaciermodding.org/glacier2/fileformats), we can see this chunk appears to include important assets, like meshes (PRIM), bone rigs (BORG), textures (TEXT/TEXD), etc. So, these must be the depends we're looking for. We'll want to move these 5 folders (BORG - TEXT) to the same location as the `00873434CB4F9FCD.entity.json` file we extracted. The chunkX.meta files can be ignored. Once this is done, you can delete the `ALLDEPENDS` folder and its remaining content.
 
 You should now have the `00873434CB4F9FCD.entity.json` file and 5 folders (BORG - TEXT) in the output folder.
 
@@ -226,7 +226,7 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 
 `2kpr` - Compiled a list of the NPCs by their names, their outfits, their pieces, etc.
 
-[All contributors to wiki.notex.app](https://github.com/glacier-modding/wiki.notex.app/graphs/contributors)
+[All contributors to wiki.glaciermodding.org](https://github.com/glacier-modding/wiki.glaciermodding.org/graphs/contributors)
 
 ## Suit Codenames
 

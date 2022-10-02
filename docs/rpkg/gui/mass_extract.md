@@ -11,4 +11,4 @@ Some options will not only export but also convert the file to a more edit frien
 
 A `metas` folder will be created together with the extracted files. This folder is needed when rebuilding the files back into the game.
 
-The wiki is currently a work in progress at the moment, please feel free to contribute @ https://github.com/glacier-modding/wiki.notex.app
+The wiki is currently a work in progress at the moment, please feel free to contribute @ https://github.com/glacier-modding/wiki.glaciermodding.org

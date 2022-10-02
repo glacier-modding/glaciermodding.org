@@ -1,4 +1,4 @@
 User-agent: *
 Allow: *
 Disallow:
-Sitemap: https://wiki.notex.app/sitemap.xml
+Sitemap: https://wiki.glaciermodding.org/sitemap.xml
