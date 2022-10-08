@@ -11,17 +11,17 @@ RPKGs (Resource Packages) are the archive format Glacier 2 Engine games use.
 
 #### Base archive structure
 
-| Type     | Description                       |
-| -------- | --------------------------------- |
-| string   | 2KPR                              |
-| uint32_t | unknown (always seems to be 0x1)  |
-| uint8_t  | chunk number                      |
-| uint8_t  | unknown (always seems to be 0x0)  |
-| uint8_t  | chunk patch number                |
-| uint8_t  | unknown (always seems to be 0x78) |
-| uint8_t  | unknown (always seems to be 0x78) |
-| uint32_t | resource count                    |
-| uint32_t | resource data table size          |
+| Type     | Description                            |
+| -------- | ---------------------------------------|
+| string   | 2KPR                                   |
+| uint32_t | unknown (always seems to be 0x1)       |
+| uint8_t  | chunk number                           |
+| uint8_t  | chunk type (0x00 standard, 0x01 addon) |
+| uint8_t  | chunk patch number                     |
+| uint8_t  | unknown (always seems to be 0x78)      |
+| uint8_t  | unknown (always seems to be 0x78)      |
+| uint32_t | resource count                         |
+| uint32_t | resource data table size               |
 
 ##### resource data table, per entry:
 
@@ -62,18 +62,18 @@ RPKGs (Resource Packages) are the archive format Glacier 2 Engine games use.
 
 #### Patch archive structure
 
-| Type     | Description                       |
-| -------- | --------------------------------- |
-| string   | 2KPR                              |
-| uint32_t | unknown (always seems to be 0x1)  |
-| uint8_t  | chunk number                      |
-| uint8_t  | unknown (always seems to be 0x0)  |
-| uint8_t  | chunk patch number                |
-| uint8_t  | unknown (always seems to be 0x78) |
-| uint8_t  | unknown (always seems to be 0x78) |
-| uint32_t | resource count                    |
-| uint32_t | resource data table size          |
-| uint32_t | patch deletion entry count        |
+| Type     | Description                            |
+| -------- | ---------------------------------------|
+| string   | 2KPR                                   |
+| uint32_t | unknown (always seems to be 0x1)       |
+| uint8_t  | chunk number                           |
+| uint8_t  | chunk type (0x00 standard, 0x01 addon) |
+| uint8_t  | chunk patch number                     |
+| uint8_t  | unknown (always seems to be 0x78)      |
+| uint8_t  | unknown (always seems to be 0x78)      |
+| uint32_t | resource count                         |
+| uint32_t | resource data table size               |
+| uint32_t | patch deletion entry count             |
 
 ##### patch entries (if patch deletion entry count > 0):
 
