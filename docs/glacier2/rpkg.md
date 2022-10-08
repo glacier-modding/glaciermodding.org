@@ -12,7 +12,7 @@ RPKGs (Resource Packages) are the archive format Glacier 2 Engine games use.
 #### Base archive structure
 
 | Type     | Description                            |
-| -------- | ---------------------------------------|
+| -------- | -------------------------------------- |
 | string   | 2KPR                                   |
 | uint32_t | unknown (always seems to be 0x1)       |
 | uint8_t  | chunk number                           |
@@ -63,7 +63,7 @@ RPKGs (Resource Packages) are the archive format Glacier 2 Engine games use.
 #### Patch archive structure
 
 | Type     | Description                            |
-| -------- | ---------------------------------------|
+| -------- | -------------------------------------- |
 | string   | 2KPR                                   |
 | uint32_t | unknown (always seems to be 0x1)       |
 | uint8_t  | chunk number                           |
