@@ -24,7 +24,7 @@
                 },
                 "MATE": {
                     "type": "string",
-                    "description": "MATE: Material Class Hash/Path"
+                    "description": "MATE: Material Effect Hash/Path"
                 },
                 "ERES": {
                     "type": "string",
