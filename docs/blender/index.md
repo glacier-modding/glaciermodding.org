@@ -6,41 +6,41 @@ description: Details about the Glacier 2 Blender Add-on
 
 The Glacier 2 [Blender](https://www.blender.org/) Add-on allows importing and exporting various Glacier 2 file formats (Only supports exporting to PRIM at the moment).
 
-
 ![lod_slider](https://user-images.githubusercontent.com/43296291/203970131-4080b2cb-c09e-49e4-b8a9-5aa9a9a61d50.gif)
 
 ### [Installation](/blender/installation)
 
 ### Supported Titles and Features
+
 The following games are supported by this addon:
 
- * Hitman 2016
- * Hitman 2
- * Hitman 3
+-   Hitman 2016
+-   Hitman 2
+-   Hitman 3
 
 The addon supports the following formats:
 
-| Extension 	| Description 						| Can import 					| Can export 					|
-|---------------|-----------------------------------|:-----------------------------:|:-----------------------------:|
-| .prim			| Standard RenderPrimitive			| Yes							| Yes							|
-| .weightedprim	| Weighted RenderPrimitive			| Yes							| Partial (Exports to standard)	|
-| .linkedprim	| Linked RenderPrimitive			| Yes							| Partial (Exports to standard)	|
-| .borg			| AnimationBoneData 				| Yes							| No							|
-| .mjba			| MorphemeJointBoneAnimationData	| No							| No							|
-| .mrtr			| MorphemeRuntimeRig				| No							| No							|
-| .vtxd			| VertexData						| Yes							| No							|
- 
-*Support for more formats or titles may be added in the future*
- 
-### Requirements
- - Blender **3.0.0** or above
+| Extension     | Description                    | Can import |          Can export           |
+| ------------- | ------------------------------ | :--------: | :---------------------------: |
+| .prim         | Standard RenderPrimitive       |    Yes     |              Yes              |
+| .weightedprim | Weighted RenderPrimitive       |    Yes     | Partial (Exports to standard) |
+| .linkedprim   | Linked RenderPrimitive         |    Yes     | Partial (Exports to standard) |
+| .borg         | AnimationBoneData              |    Yes     |              No               |
+| .mjba         | MorphemeJointBoneAnimationData |     No     |              No               |
+| .mrtr         | MorphemeRuntimeRig             |     No     |              No               |
+| .vtxd         | VertexData                     |    Yes     |              No               |
 
+_Support for more formats or titles may be added in the future_
+
+### Requirements
+
+-   Blender **3.0.0** or above
 
 ### Credits
 
- * [PawREP](https://github.com/pawREP)
-   * For making the original `.prim` editing tool known as PrimIO that was used as a reference.
+-   [PawREP](https://github.com/pawREP)
 
+    -   For making the original `.prim` editing tool known as PrimIO that was used as a reference.
 
- * [Khronos Group](https://github.com/KhronosGroup)
-   * For making glTF-Blender-IO that was used as a reference addon.
+-   [Khronos Group](https://github.com/KhronosGroup)
+    -   For making glTF-Blender-IO that was used as a reference addon.
