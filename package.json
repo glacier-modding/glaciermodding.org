@@ -19,7 +19,7 @@
         "@docusaurus/plugin-client-redirects": "^2.2.0",
         "@docusaurus/preset-classic": "2.2.0",
         "@docusaurus/theme-common": "^2.2.0",
-        "@easyops-cn/docusaurus-search-local": "^0.29.3",
+        "@easyops-cn/docusaurus-search-local": "^0.33.5",
         "@mdx-js/react": "^1.6.21",
         "@svgr/webpack": "^6.2.1",
         "clsx": "^1.2.1",
@@ -42,7 +42,7 @@
     },
     "packageManager": "yarn@4.0.0-rc.13",
     "devDependencies": {
-        "prettier": "^2.7.1"
+        "prettier": "^2.8.0"
     },
     "prettier": {
         "semi": false,

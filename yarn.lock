@@ -2443,9 +2443,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@easyops-cn/docusaurus-search-local@npm:^0.29.3":
-  version: 0.29.3
-  resolution: "@easyops-cn/docusaurus-search-local@npm:0.29.3"
+"@easyops-cn/docusaurus-search-local@npm:^0.33.5":
+  version: 0.33.5
+  resolution: "@easyops-cn/docusaurus-search-local@npm:0.33.5"
   dependencies:
     "@docusaurus/plugin-content-docs": "npm:^2.0.0-rc.1"
     "@docusaurus/theme-translations": "npm:^2.0.0-rc.1"
@@ -2467,7 +2467,7 @@ __metadata:
     "@docusaurus/theme-common": ^2.0.0-rc.1
     react: ^16.14.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.14.0 || ^17.0.0 || ^18.0.0
-  checksum: 06afed55edac86ad7012f45937529a347061cabdfee65b3e91d5102a4cc71e5ee92c45a316a174f75f5409d5655af21ec50e10ecbe9a986031fd34a4be0ab6db
+  checksum: 7cd7730d6d07307aa1a7e62408469cba952cbb59f0f2f76a159ca737279ce3e8a9fe41b50efc74d5ab05b6ece0540c9775f34553e077bef0155bac135427963c
   languageName: node
   linkType: hard
 
@@ -8694,12 +8694,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.7.1":
-  version: 2.7.1
-  resolution: "prettier@npm:2.7.1"
+"prettier@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "prettier@npm:2.8.0"
   bin:
     prettier: bin-prettier.js
-  checksum: d2cd7adc83b4f3eb86ab665fa76c58fb3c60c879b37e6d858f71a9d97d2091d4c8a7fe92ad6a1dfa211832025e3660635df9c5e27b3ef79c99d431923bdf933b
+  checksum: c95699326db607eac7f63274d38ca9c21462fa538fb69cf06cb3be2122f2d53daa02f96f69cffa985af852a95c6211472ddf3798dbdb2f20c520aded15f78684
   languageName: node
   linkType: hard
 
@@ -11066,12 +11066,12 @@ __metadata:
     "@docusaurus/plugin-client-redirects": "npm:^2.2.0"
     "@docusaurus/preset-classic": "npm:2.2.0"
     "@docusaurus/theme-common": "npm:^2.2.0"
-    "@easyops-cn/docusaurus-search-local": "npm:^0.29.3"
+    "@easyops-cn/docusaurus-search-local": "npm:^0.33.5"
     "@mdx-js/react": "npm:^1.6.21"
     "@svgr/webpack": "npm:^6.2.1"
     clsx: "npm:^1.2.1"
     file-loader: "npm:^6.2.0"
-    prettier: "npm:^2.7.1"
+    prettier: "npm:^2.8.0"
     react: "npm:^17.0.2"
     react-dom: "npm:^17.0.2"
     url-loader: "npm:^4.1.1"
