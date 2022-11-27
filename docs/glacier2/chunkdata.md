@@ -15,7 +15,7 @@ To visualize the relationship between chunks, we can use the `Hitman 3 Chunk Hie
 
 Note that while chunk0 can be accessed _from_ anywhere, it is a one-way street; chunks higher in the hierarchy cannot access chunks lower in the hierarchy. The lower the chunk _number_, the higher it is in the chunk _hierarchy_. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1, because chunk1 (Level 1) is lower in the hierarchy than chunk0 (Level 0). Furthermore, chunks cannot access adjacent chunks. So, as we can see from the flowchart, chunk12 can not access chunk11, but it can access chunk9.
 
-![Chunk Diagram](../assets/Chunk_Data_Diagram.svg)
+![Chunk Diagram](../assets/chunkdata/chunk_data_diagram.svg)
 
 ### Hitman 3
 

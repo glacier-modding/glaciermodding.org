@@ -64,4 +64,17 @@ module.exports = {
             },
         ],
     ],
+    plugins: [
+        [
+            '@docusaurus/plugin-client-redirects',
+            {
+                redirects: [
+                    {
+                        to: '/npc_swap_tutorial',
+                        from: '/npc-swap-tutorial',
+                    },
+                ],
+            },
+        ],
+    ],
 }
