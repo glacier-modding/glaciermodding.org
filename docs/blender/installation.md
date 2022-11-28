@@ -4,7 +4,7 @@ title: Installation
 description: Installation instructions for the Glacier 2 Blender Add-on
 ---
 
--   Download the Add-on: **[io_scene_glacier](https://github.com/glacier-modding/io_scene_glacier/releases/latest/download/io_scene_glacier-v0.1.1.zip)**.
+-   Download the Add-on: **[io_scene_glacier](https://github.com/glacier-modding/io_scene_glacier/releases/latest/download/io_scene_glacier.zip)**.
 -   Install the Add-on in Blender like so:
     -   Go to _Edit > Preferences > Add-ons_.
     -   Press the _Install…_ button and use the File Browser to select `io_scene_glacier.zip` and then press the `Install Add-on` button.
