@@ -9,7 +9,7 @@ This guide does not go into creating the LOD meshes, you can do that either manu
 
 ### PRIM Properties Panel
 
-This is the PRIM Properties Panel where you can assign the LOD Levels for indiviual meshes. Depending on the complexity and size of your model it may be best to assign the highest geometry mesh with LOD Levels 0 and 1 otherwise you might noticable pop-in. You'll have to experiment though to get the best results for your model.
+This is the PRIM Properties Panel where you can assign the LOD Levels for individual meshes. Depending on the complexity and size of your model it may be best to assign the highest geometry mesh with LOD Levels 0 and 1 otherwise you might noticeable pop-in. You'll have to experiment though to get the best results for your model.
 
 ![Screenshot of LOD Properties](pathname:///media/blender/tutorials/lod_setup/lod_properties.png)
 
@@ -25,9 +25,9 @@ This is the PRIM Properties Panel where you can assign the LOD Levels for indivi
 
 ### Example of LOD Levels in-game
 
-The distance between each LOD Level depends on your "Level of detail" setting in-game and also seems to change depending on the overall size of your model.
+The distance between each LOD Level depends on your "Level of detail" setting in-game and seems to change depending on the overall size of your model.
 
-LOD 0 (Fairly clos):
+LOD 0:
 ![Screenshot of LOD Level 0](pathname:///media/blender/tutorials/lod_setup/lod_0.png)
 LOD 1:
 ![Screenshot of LOD Level 1](pathname:///media/blender/tutorials/lod_setup/lod_1.png)
@@ -39,7 +39,7 @@ LOD 4:
 ![Screenshot of LOD Level 4](pathname:///media/blender/tutorials/lod_setup/lod_4.png)
 LOD 5:
 ![Screenshot of LOD Level 5](pathname:///media/blender/tutorials/lod_setup/lod_5.png)
-LOD 6 and 7 were too far away to see this specific model.
+LOD 6 and 7 are too far away to see this specific model.
 
 ### Blend file download
 
