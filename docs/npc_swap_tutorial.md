@@ -133,7 +133,7 @@ Alternatively, we can use HMBM47's [Hitman 3 Outfits Spreadsheet](https://docs.g
 
 In either case, once you have the TEMP and TBLU hashes, the next step is to open the `00873434CB4F9FCD.entity.json` file (which we previously exported) using a code editor. You'll see it starts with: `{"tempHash":"00873434CB4F9FCD","tbluHash": "00945FFF47BBBDE3",` All we need to do is replace the tempHash and tbluHash values in this string with the ones we obtained in the previous step. Therefore, we would change `"tempHash":"00873434CB4F9FCD"` to `"tempHash":"00FF8C6314EA882E"` and `"tbluHash":"00945FFF47BBBDE3"` to `"tbluHash":"0046BB3BE76661CC"`
 
-The end result should be: `{"tempHash":"00FF8C6314EA882E","tbluHash":"00945FFF47BBBDE3"`
+The end result should be: `{"tempHash":"00FF8C6314EA882E","tbluHash":"0046BB3BE76661CC"`
 
 Make sure you keep the file syntax intact, as even a single extra space or period will break it. Save the file.
 
@@ -234,7 +234,7 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 birthsuit = Premiere White Suit
 lifesuit = Crimson Red Suit
 deathsuit = Ultimate Black Suit
-[color]specialsuit = All Platform Specific Suits (e.g. blackspecialsuit = The Black Streak)
+[colour]specialsuit = All Platform Specific Suits (e.g. blackspecialsuit = The Black Streak)
 hotsummersuit = Summer Suave Suit
 newzealandsuit = Tactical Wetsuit
 northamericasuit = Suburban Suit
