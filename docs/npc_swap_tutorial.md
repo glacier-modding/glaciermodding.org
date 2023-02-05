@@ -153,13 +153,13 @@ The final piece of the puzzle is the mod's manifest. We can either modify Realis
 
 ```json
 {
-  "version": "1.0.0",
-  "id": "YourNameOrUserName.FirstMod",
-  "name": "Your First Mod",
-  "description": "Extremely good description",
-  "authors": ["YourNameOrUserName"],
-  "contentFolders": ["content"],
-  "frameworkVersion": "2.12.4"
+    "version": "1.0.0",
+    "id": "YourNameOrUserName.FirstMod",
+    "name": "Your First Mod",
+    "description": "Extremely good description",
+    "authors": ["YourNameOrUserName"],
+    "contentFolders": ["content"],
+    "frameworkVersion": "2.12.4"
 }
 ```
 
@@ -171,13 +171,13 @@ When you're done modifying the example to your liking, you should have something
 
 ```json
 {
-  "version": "1.0.0",
-  "id": "HitmanModder.SilvioCarusoSwap",
-  "name": "Silvio Caruso Swap",
-  "description": "Swaps 47's Signature Suit with Silvio Caruso.",
-  "authors": ["HitmanModder"],
-  "contentFolders": ["content"],
-  "frameworkVersion": "2.12.4"
+    "version": "1.0.0",
+    "id": "HitmanModder.SilvioCarusoSwap",
+    "name": "Silvio Caruso Swap",
+    "description": "Swaps 47's Signature Suit with Silvio Caruso.",
+    "authors": ["HitmanModder"],
+    "contentFolders": ["content"],
+    "frameworkVersion": "2.12.4"
 }
 ```
 
