@@ -135,7 +135,7 @@ In either case, once you have the TEMP and TBLU hashes, the next step is to open
 
 The end result should be: `{"tempHash":"00FF8C6314EA882E","tbluHash":"0046BB3BE76661CC"`
 
-Make sure you keep the file syntax intact, as even a single extra space or period will break it. Save the file.
+Make sure to keep the file syntax intact by only replacing the hashes. Save the file.
 
 Optionally, one way to format the JSON file for easier editing is to import it into [QuickEntity Editor](https://www.dropbox.com/s/p1mkwm3ji0uyr8n/QuickEntityEditor.7z?dl=1) and then save it using "Save Entity". This will convert it from one giant block of text to something that is much easier to browse and edit, especially for more complex edits.
 
@@ -149,7 +149,7 @@ First, you'll want to access the `Mods` folder located at `HITMAN 3\Simple Mod F
 
 Let's make a copy of the Realistic AI folder, and then name that copy `Silvio Caruso Swap`. Next, we'll open that folder and delete the 3 content-**\*\*** folders. The folder structure for our mod will be quite simple, as it only includes one option. So, we'll create a folder within the Silvio Caruso Swap folder named `content`, and then inside the content folder, we'll create another folder named `chunk0`. This chunk0 folder is where we're going to place the 5 depends folders and the `00873434CB4F9FCD.entity.json` file from earlier. So, all we need to do is access that folder, and move the contents to the chunk0 folder.
 
-The final piece of the puzzle is the mod's manifest. We can either modify Realistic AI's manifest.json, or create our own. For the purpose of this tutorial, let's open the existing manifest.json and erase the contents. Then, if we access the `Manifest.md` document located at `HITMAN 3\Simple Mod Framework\Info`, we can see it gives the following example:
+The final piece of the puzzle is the mod's manifest. We can either modify Realistic AI's manifest.json, or create our own. For the purpose of this tutorial, let's open the existing manifest.json and erase the contents. Then, if we access the `Making a Mod.md` document located at `HITMAN 3\Simple Mod Framework\Info`, we can see it gives the following example:
 
 ```json
 {
@@ -181,7 +181,7 @@ When you're done modifying the example to your liking, you should have something
 }
 ```
 
-Save the manifest.json file, and open up SMF's Mod Manager, which can be accessed at either `\HITMAN 3\Simple Mod Framework\Mod Manager.cmd` or `\HITMAN 3\Simple Mod Framework\Load Order Manager\Load Order Manager.exe`. If your `manifest.json` was set up correctly, you should see your mod listed in the Available Mods section on the left. If it's missing, there must be an issue with your `manifest.json`, so you would need to go back and compare with either the included manifest example, or Realistic AI's `manifest.json`.
+Save the manifest.json file, and open up SMF's Mod Manager, which can be accessed at either `\HITMAN 3\Simple Mod Framework\Mod Manager.cmd` or `\HITMAN 3\Simple Mod Framework\Mod Manager\Mod Manager.exe`. If your `manifest.json` was set up correctly, you should see your mod listed in the Available Mods section on the left. If it's missing, there must be an issue with your `manifest.json`, so you would need to go back and compare with either the included manifest example, or Realistic AI's `manifest.json`.
 
 If your mod appears on the list, all you need to do is click the "Enable" button next to it, and then the "Apply Enabled Mods" button at the top. This will deploy your mod, and any other mods you have enabled. The only thing left to do is launch Hitman 3, and load into a level with 47's Signature Suit. If you've done everything correctly, Silvio Caruso will be in 47's place.
 
