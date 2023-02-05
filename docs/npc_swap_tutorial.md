@@ -137,7 +137,7 @@ The end result should be: `{"tempHash":"00FF8C6314EA882E","tbluHash":"0046BB3BE7
 
 Make sure to keep the file syntax intact by only replacing the hashes. Save the file.
 
-Optionally, one way to format the JSON file for easier editing is to import it into [QuickEntity Editor](https://www.dropbox.com/s/p1mkwm3ji0uyr8n/QuickEntityEditor.7z?dl=1) and then save it using "Save Entity". This will convert it from one giant block of text to something that is much easier to browse and edit, especially for more complex edits.
+Optionally, one way to format the JSON file for easier editing is to import it into [QuickEntity Editor](https://github.com/atampy25/quickentity-editor-next/releases/latest) and then save it using "Save Entity". This will convert it from one giant block of text to something that is much easier to browse and edit, especially for more complex edits.
 
 ## Creating a Mod Using Simple Mod Framework
 
