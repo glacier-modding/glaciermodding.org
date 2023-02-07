@@ -133,11 +133,11 @@ Alternatively, we can use HMBM47's [Hitman 3 Outfits Spreadsheet](https://docs.g
 
 In either case, once you have the TEMP and TBLU hashes, the next step is to open the `00873434CB4F9FCD.entity.json` file (which we previously exported) using a code editor. You'll see it starts with: `{"tempHash":"00873434CB4F9FCD","tbluHash": "00945FFF47BBBDE3",` All we need to do is replace the tempHash and tbluHash values in this string with the ones we obtained in the previous step. Therefore, we would change `"tempHash":"00873434CB4F9FCD"` to `"tempHash":"00FF8C6314EA882E"` and `"tbluHash":"00945FFF47BBBDE3"` to `"tbluHash":"0046BB3BE76661CC"`
 
-The end result should be: `{"tempHash":"00FF8C6314EA882E","tbluHash":"00945FFF47BBBDE3"`
+The end result should be: `{"tempHash":"00FF8C6314EA882E","tbluHash":"0046BB3BE76661CC"`
 
-Make sure you keep the file syntax intact, as even a single extra space or period will break it. Save the file.
+Make sure to keep the file syntax intact by only replacing the hashes. Save the file.
 
-Optionally, one way to format the JSON file for easier editing is to import it into [QuickEntity Editor](https://www.dropbox.com/s/p1mkwm3ji0uyr8n/QuickEntityEditor.7z?dl=1) and then save it using "Save Entity". This will convert it from one giant block of text to something that is much easier to browse and edit, especially for more complex edits.
+Optionally, one way to format the JSON file for easier editing is to import it into [QuickEntity Editor](https://github.com/atampy25/quickentity-editor-next/releases/latest) and then save it using "Save Entity". This will convert it from one giant block of text to something that is much easier to browse and edit, especially for more complex edits.
 
 ## Creating a Mod Using Simple Mod Framework
 
@@ -149,7 +149,7 @@ First, you'll want to access the `Mods` folder located at `HITMAN 3\Simple Mod F
 
 Let's make a copy of the Realistic AI folder, and then name that copy `Silvio Caruso Swap`. Next, we'll open that folder and delete the 3 content-**\*\*** folders. The folder structure for our mod will be quite simple, as it only includes one option. So, we'll create a folder within the Silvio Caruso Swap folder named `content`, and then inside the content folder, we'll create another folder named `chunk0`. This chunk0 folder is where we're going to place the 5 depends folders and the `00873434CB4F9FCD.entity.json` file from earlier. So, all we need to do is access that folder, and move the contents to the chunk0 folder.
 
-The final piece of the puzzle is the mod's manifest. We can either modify Realistic AI's manifest.json, or create our own. For the purpose of this tutorial, let's open the existing manifest.json and erase the contents. Then, if we access the `Manifest.md` document located at `HITMAN 3\Simple Mod Framework\Info`, we can see it gives the following example:
+The final piece of the puzzle is the mod's manifest. We can either modify Realistic AI's manifest.json, or create our own. For the purpose of this tutorial, let's open the existing manifest.json and erase the contents. Then, if we access the `Making a Mod.md` document located at `HITMAN 3\Simple Mod Framework\Info`, we can see it gives the following example:
 
 ```json
 {
@@ -158,12 +158,12 @@ The final piece of the puzzle is the mod's manifest. We can either modify Realis
     "name": "Your First Mod",
     "description": "Extremely good description",
     "authors": ["YourNameOrUserName"],
-    "contentFolder": "content",
-    "frameworkVersion": "1.5.7"
+    "contentFolders": ["content"],
+    "frameworkVersion": "2.12.4"
 }
 ```
 
-The "frameworkVersion" will change depending on what version of SMF you're using. As of this writing, the current version is 1.5.7.
+The "frameworkVersion" will change depending on what version of SMF you're using. As of this writing, the current version is 2.12.4.
 
 If we copy this section and paste it into our `manifest.json`, we can then change the version, id, name, description, and authors to our liking. You can call it whatever you'd like, just make sure to only modify the text within the quotation marks. This needs to follow proper JSON syntax, including all quotation marks, commas, brackets, etc. If the syntax is incorrect, SMF will be unable to load any mods at all, and the mod list will appear blank. If you ever run into this issue, the `manifest.json` for one of your mods is likely broken.
 
@@ -176,12 +176,12 @@ When you're done modifying the example to your liking, you should have something
     "name": "Silvio Caruso Swap",
     "description": "Swaps 47's Signature Suit with Silvio Caruso.",
     "authors": ["HitmanModder"],
-    "contentFolder": "content",
-    "frameworkVersion": "1.5.7"
+    "contentFolders": ["content"],
+    "frameworkVersion": "2.12.4"
 }
 ```
 
-Save the manifest.json file, and open up SMF's Mod Manager, which can be accessed at either `\HITMAN 3\Simple Mod Framework\Mod Manager.cmd` or `\HITMAN 3\Simple Mod Framework\Load Order Manager\Load Order Manager.exe`. If your `manifest.json` was set up correctly, you should see your mod listed in the Available Mods section on the left. If it's missing, there must be an issue with your `manifest.json`, so you would need to go back and compare with either the included manifest example, or Realistic AI's `manifest.json`.
+Save the manifest.json file, and open up SMF's Mod Manager, which can be accessed at either `\HITMAN 3\Simple Mod Framework\Mod Manager.cmd` or `\HITMAN 3\Simple Mod Framework\Mod Manager\Mod Manager.exe`. If your `manifest.json` was set up correctly, you should see your mod listed in the Available Mods section on the left. If it's missing, there must be an issue with your `manifest.json`, so you would need to go back and compare with either the included manifest example, or Realistic AI's `manifest.json`.
 
 If your mod appears on the list, all you need to do is click the "Enable" button next to it, and then the "Apply Enabled Mods" button at the top. This will deploy your mod, and any other mods you have enabled. The only thing left to do is launch Hitman 3, and load into a level with 47's Signature Suit. If you've done everything correctly, Silvio Caruso will be in 47's place.
 
@@ -234,7 +234,7 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 birthsuit = Premiere White Suit
 lifesuit = Crimson Red Suit
 deathsuit = Ultimate Black Suit
-[color]specialsuit = All Platform Specific Suits (e.g. blackspecialsuit = The Black Streak)
+[colour]specialsuit = All Platform Specific Suits (e.g. blackspecialsuit = The Black Streak)
 hotsummersuit = Summer Suave Suit
 newzealandsuit = Tactical Wetsuit
 northamericasuit = Suburban Suit
