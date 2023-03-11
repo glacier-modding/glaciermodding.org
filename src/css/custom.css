@@ -23,3 +23,34 @@
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
 }
+
+.pin-list code {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 0 5px;
+}
+
+.pin-entity {
+  margin-top: 15px;
+}
+
+.pin-entity .path {
+  background: var(--ifm-color-secondary-light);
+  border-radius: var(--ifm-global-radius);
+  padding: 5px 10px;
+  color: var(--ifm-color-black);
+}
+
+.pin-entity .path .badge {
+  margin-right: 6px;
+}
+
+.pin-entity .path .badge--secondary {
+  background: var(--ifm-color-secondary-darker);
+}
+
+.pin-search {
+  width: 30rem;
+  max-width: 100%;
+}
