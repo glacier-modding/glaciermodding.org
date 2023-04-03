@@ -17,10 +17,6 @@
     --ifm-code-font-size: 95%;
 }
 
-.hero--primary {
-    background: linear-gradient(var(--ifm-color-primary), var(--ifm-color-primary-lightest));
-}
-
 @media screen and (max-width: 768px) {
     .hero--primary {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
