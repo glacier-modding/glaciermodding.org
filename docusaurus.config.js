@@ -17,7 +17,7 @@ module.exports = {
             title: "glaciermodding.org",
             logo: {
                 alt: "Glacier Engine 2 Modding Logo",
-                src: "img/logo.png",
+                src: "img/logo.svg",
             },
             items: [
                 {
