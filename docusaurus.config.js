@@ -1,29 +1,79 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-    title: "wiki.glaciermodding.org",
+    title: "glaciermodding.org",
     tagline: "",
-    url: "https://wiki.glaciermodding.org",
+    url: "https://glaciermodding.org",
     baseUrl: "/",
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
     favicon: "img/favicon.ico",
     organizationName: "glacier-modding",
-    projectName: "wiki.glaciermodding.org",
+    projectName: "glaciermodding.org",
     themeConfig: {
         metadata: [
             { name: "keywords", content: "hitman, glacier, modding, 007" },
         ],
         navbar: {
-            title: "wiki.glaciermodding.org",
+            title: "glaciermodding.org",
             logo: {
                 alt: "Glacier Engine 2 Modding Logo",
                 src: "img/logo.png",
             },
             items: [
                 {
-                    href: "https://github.com/glacier-modding/wiki.glaciermodding.org",
-                    label: "GitHub",
+                    type: "dropdown",
+                    label: "Tools",
+                    position: "left",
+                    items: [
+                        {
+                            label: "RPKG Tool",
+                            to: "/rpkg",
+                        },
+                        {
+                            label: "G2WiseDataTool",
+                            to: "/g2wwisedatatool",
+                        },
+                        {
+                            to: "/tools/online/xtea",
+                            label: "Online XTEA Tool",
+                        },
+                    ],
+                },
+                {
+                    href: "https://hitmandb.glaciermodding.org",
+                    label: "HitmanDB",
+                },
+                {
+                    label: "Hitman Resources",
+                    href: "https://hitman-resources.netlify.app/",
+                },
+                {
+                    label: "Documentation",
+                    to: "/docs",
+                },
+                {
+                    href: "https://github.com/glacier-modding",
                     position: "right",
+                    className: "header-github-link",
+                    "aria-label": "GitHub repository",
+                },
+            ],
+        },
+        footer: {
+            copyright: `<span class="trademark">All third party trademarks (including logos, icons and text) referenced within this website are the property of their respective owners. Unless otherwise stated as such. Glacier Modding's use of third party trademarks does not indicate any relationship, sponsorship, or endorsement between Glacier Modding and the respective trademark owners.</span>`,
+            links: [
+                {
+                    title: "Links",
+                    items: [
+                        {
+                            label: "GitHub",
+                            href: "https://github.com/glacier-modding",
+                        },
+                        {
+                            label: "Discord Server",
+                            href: "https://discord.gg/6UDtuYhZP6",
+                        },
+                    ],
                 },
             ],
         },
@@ -52,11 +102,12 @@ module.exports = {
             "@docusaurus/preset-classic",
             {
                 docs: {
-                    routeBasePath: "/",
+                    path: "docs",
+                    // routeBasePath: "/",
                     sidebarPath: require.resolve("./sidebars.js"),
                     // Please change this to your repo.
                     editUrl:
-                        "https://github.com/glacier-modding/wiki.glaciermodding.org/blob/main/",
+                        "https://github.com/glacier-modding/glaciermodding.org/blob/main/",
                 },
                 theme: {
                     customCss: require.resolve("./src/css/custom.css"),
@@ -70,8 +121,8 @@ module.exports = {
             {
                 redirects: [
                     {
-                        to: "/npc_swap_tutorial",
-                        from: "/npc-swap-tutorial",
+                        to: "/tools/online/xtea",
+                        from: "/xtea",
                     },
                 ],
             },
