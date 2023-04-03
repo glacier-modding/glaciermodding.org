@@ -46,7 +46,7 @@ export default function Home() {
                                 HITMAN 3)
                             </li>
                         </ul>
-                        At the moment we are mainly focusing on Hitman 3 and
+                        At the moment we are mainly focusing on HITMAN 3 and
                         future games.
                     </p>
                 </div>
