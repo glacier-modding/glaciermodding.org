@@ -182,10 +182,11 @@ If you've done it right, the entity should look like this:
 			"value": "eReplace"
 		},
 		"Texture2D_01": {
-		"type": "ZRuntimeResourceID",
-		"value": {
-			"resource": "001F1D36FD5588E7",
-			"flag": "5F"
+			"type": "ZRuntimeResourceID",
+			"value": {
+				"resource": "001F1D36FD5588E7",
+				"flag": "5F"
+			}
 		},
 		"Texture2D_01_enab": {
 			"type": "bool",
