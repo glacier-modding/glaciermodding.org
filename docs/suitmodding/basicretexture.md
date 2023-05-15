@@ -28,7 +28,7 @@ Now we need to find the suit that we're looking for. Please refer to [HMBM47's o
 
 Click the tab **chunk0 47 Base Suits** in the spreadsheet and find the **Casual Suit with Gloves** toward the top of the spreadsheet. This is the suit we will be working on for the purposes of this tutorial. More specifically, find its template hash, - `TEMP` -, which the spreadsheet tells us is `00B2741A27743D8D`.
 
-:::Caution Actor and HeroA
+:::caution Actor and HeroA
 
 Looking at the spreadsheet, you will find two versions of the suit: one marked in blue called Actor and one marked in red called HeroA. You will always want to edit the HeroA version; this is the suit you actually wear for gameplay. The Actor version is used for cutscenes and things of that nature.
 
@@ -38,7 +38,7 @@ In RPKG Tool, click **Search** and paste the `TEMP` hash into the **Search strin
 
 The `Details` screen on the right side will show information about the file you've selected. Under `Depends on 60 other hash files/resources:`, you will find everything the template file makes use of, including the texture we're looking for.
 
-:::Info Assembly Paths
+:::info Assembly Paths
 
 What you are seeing is a list of obfuscated hashes and their decoded **assembly paths**—basically, where they are in IOI's internal filing system. Not all hashes have been decoded to assembly paths, so you'll sometimes just see a hash and a filetype. So you have no way of knowing what the file is until you search for it and examine it yourself.
 
@@ -103,7 +103,7 @@ This means that Simple Mod Framework, when applying the mod, will use this infor
 
 Now that we have an entirely new texture, it's time to use it. Open QuickEntity Editor.
 
-:::Caution: QuickEntity Editor
+:::caution QuickEntity Editor
 
 If this is your first time starting QuickEntity Editor, don't forget to set the paths to your Hitman Retail and Runtime folders in the settings.
 
@@ -231,7 +231,7 @@ Make a new file called **manifest.json** in the folder and populate it with the 
 }
 ```
 
-:::Tip: VSCode Schema
+:::tip VSCode Schema
 
 If you edit the manifest with Visual Studio Code, VSCode will use the schema you imported with the first line to help you validate your manifest. That is, if you make any errors or write anything invalid, VSCode can point it out to you. This is why we first recommend VSCode as an editor.
 
