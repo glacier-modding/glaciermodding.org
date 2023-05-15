@@ -95,7 +95,7 @@ We can use these assembly paths to come up with some of our own. You don't *have
 - \[assembly:/_pro/characters/assets/hero/agent47/textures/my_cool_and_awesome_shirt.texture?/diffuse_a.tex](ascolormap).pc_tex
 - \[assembly:/_pro/characters/assets/hero/agent47/textures/my_cool_and_awesome_shirt.texture?/diffuse_a.tex](ascolormap).pc_mipblock1
 
-Let's put these two lines into the hash calculator, and it will give us `001F1D36FD5588E7` and `00366C40059C0978`, respectively. With this, let's rename our .texture.tga and .meta files to `001F1D36FD5588E7~00366C40059C0978.texture.tga` and `001F1D36FD5588E7~00366C40059C0978.texture.meta`.
+Let's put these two lines into the hash calculator, and it will give us `001F1D36FD5588E7` and `00366C40059C0978`, respectively. With this, let's rename our .texture.tga and .meta files to `001F1D36FD5588E7~00366C40059C0978.texture.tga` and `001F1D36FD5588E7~00366C40059C0978.texture.tga.meta`.
 
 This means that Simple Mod Framework, when applying the mod, will use this information to convert our .tga to a `TEXT` with the hash `001F1D36FD5588E7` and a `TEXD` with the hash `00366C40059C0978`. Great!
 
