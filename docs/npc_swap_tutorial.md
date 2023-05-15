@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 description: An introductory modding guide that will show you how to swap 47's Signature Suit with an NPC.
 ---
 
