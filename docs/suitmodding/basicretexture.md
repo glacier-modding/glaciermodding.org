@@ -257,4 +257,4 @@ Go into pre-planning at any level you like and choose the Casual Suit with Glove
 
 ![The end result](pathname:///media/suitmodding/basicretexture/endresult.jpg)
 
-You can now zip up your SMF mod and release it into the world. You're a mod author now
+You can now zip up your SMF mod and release it into the world. You're a mod author now.
