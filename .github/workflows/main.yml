@@ -35,7 +35,7 @@ jobs:
 
       - name: Upload site
         id: upload
-        uses: actions/upload-pages-artifact
+        uses: actions/upload-pages-artifact@v1
         with:
           path: ./build
 
