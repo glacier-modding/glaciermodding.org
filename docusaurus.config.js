@@ -48,6 +48,10 @@ module.exports = {
                     href: "https://hitman-resources.netlify.app/",
                 },
                 {
+                    label: "TonyTools",
+                    href: "https://tonytools.win/",
+                },
+                {
                     label: "Documentation",
                     to: "/docs",
                 },
