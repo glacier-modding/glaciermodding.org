@@ -42,7 +42,7 @@ export default function Home() {
                             <li>HITMAN™: Sniper Assassin</li>
                             <li>HITMAN™ 2</li>
                             <li>
-                                HITMAN: World of Assassination (formely known as
+                                HITMAN: World of Assassination (formerly known as
                                 HITMAN 3)
                             </li>
                         </ul>
