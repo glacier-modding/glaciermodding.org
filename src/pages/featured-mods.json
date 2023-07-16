@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Lighting Ultimate",
+        "author": "Team Mushroom",
+        "imageURL": [
+            "/media/featured-mods/lighting-ultimate-1.png",
+            "/media/featured-mods/lighting-ultimate-2.png",
+            "/media/featured-mods/lighting-ultimate-3.png",
+            "/media/featured-mods/lighting-ultimate-4.png",
+            "/media/featured-mods/lighting-ultimate-5.png"
+        ],
+        "description": "The DEFINITIVE lighting mod for HITMAN III. This mod significantly improves visual clarity, accessibility, and aesthetic choices. Eliminates arbitrary effects and filters, significantly reduces bloom, and makes critical changes to skyboxes and color correction.",
+        "installLink": "https://hitman-resources.netlify.app/smf-install-link/https://github.com/team-mushroom/lighting-ultimate/releases/latest/download/mod.framework.zip",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/45"
+    },
+    {
+        "name": "Time Of Day Mod",
+        "author": "KevinRuddMP",
+        "imageURL": [
+            "/media/featured-mods/time-of-day-mod-1.png",
+            "/media/featured-mods/time-of-day-mod-2.png",
+            "/media/featured-mods/time-of-day-mod-3.png",
+            "/media/featured-mods/time-of-day-mod-4.png",
+            "/media/featured-mods/time-of-day-mod-5.png"
+        ],
+        "description": "Changes maps to other times of day. Night Miami and Whittleton Creek? Daytime Hawke's Bay and Ambrose? So many more! This mod is periodically updated to include more maps/ToDs.",
+        "installLink": "https://hitman-resources.netlify.app/smf-install-link/https://hitman-resources.netlify.app/framework/updates/third-party/TOD%20Changes.framework.zip",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/212"
+    },
+    {
+        "name": "Placeholder",
+        "author": "",
+        "imageURL": [
+            "/media/featured-mods/placeholder.png"
+        ],
+        "description": "More mods coming later.",
+        "installLink": "",
+        "nexusLink": ""
+    }
+]

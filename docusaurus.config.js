@@ -47,6 +47,10 @@ module.exports = {
                         {
                             label: "Nexus Mods",
                             href: "https://www.nexusmods.com/hitman3",
+                        },
+                        {
+                            label: "Featured Mods",
+                            to: "/featured-mods",
                         }
                     ],
                 },
