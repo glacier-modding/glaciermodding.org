@@ -40,6 +40,17 @@ module.exports = {
                     ],
                 },
                 {
+                    type: "dropdown",
+                    label: "Mods",
+                    position: "left",
+                    items: [
+                        {
+                            label: "Nexus Mods",
+                            href: "https://www.nexusmods.com/hitman3",
+                        }
+                    ],
+                },
+                {
                     href: "https://hitmandb.glaciermodding.org",
                     label: "HitmanDB",
                 },
