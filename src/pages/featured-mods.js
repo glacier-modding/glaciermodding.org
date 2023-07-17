@@ -53,7 +53,7 @@ export default function FeaturedMods() {
                     <div className="row">
                         {featuredModsData.map((mod, index) => (
                             <div className="col col--4" key={index}>
-                                <div className="card">
+                                <div className="card margin-vert--sm">
                                     <div className="card__header">
                                         <div class="avatar">
                                             <div class="avatar__intro">

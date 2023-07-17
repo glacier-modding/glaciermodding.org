@@ -3,11 +3,11 @@
         "name": "Lighting Ultimate",
         "author": "Team Mushroom",
         "imageURL": [
-            "/media/featured-mods/lighting-ultimate-1.png",
-            "/media/featured-mods/lighting-ultimate-2.png",
-            "/media/featured-mods/lighting-ultimate-3.png",
-            "/media/featured-mods/lighting-ultimate-4.png",
-            "/media/featured-mods/lighting-ultimate-5.png"
+            "/media/featured-mods/lighting-ultimate/lighting-ultimate-1.png",
+            "/media/featured-mods/lighting-ultimate/lighting-ultimate-2.png",
+            "/media/featured-mods/lighting-ultimate/lighting-ultimate-3.png",
+            "/media/featured-mods/lighting-ultimate/lighting-ultimate-4.png",
+            "/media/featured-mods/lighting-ultimate/lighting-ultimate-5.png"
         ],
         "description": "The DEFINITIVE lighting mod for HITMAN III. This mod significantly improves visual clarity, accessibility, and aesthetic choices. Eliminates arbitrary effects and filters, significantly reduces bloom, and makes critical changes to skyboxes and color correction.",
         "installLink": "https://hitman-resources.netlify.app/smf-install-link/https://github.com/team-mushroom/lighting-ultimate/releases/latest/download/mod.framework.zip",
@@ -15,26 +15,51 @@
     },
     {
         "name": "Time Of Day Mod",
-        "author": "KevinRuddMP",
+        "author": "Kevin Rudd and Kercyx",
         "imageURL": [
-            "/media/featured-mods/time-of-day-mod-1.png",
-            "/media/featured-mods/time-of-day-mod-2.png",
-            "/media/featured-mods/time-of-day-mod-3.png",
-            "/media/featured-mods/time-of-day-mod-4.png",
-            "/media/featured-mods/time-of-day-mod-5.png"
+            "/media/featured-mods/time-of-day-mod/time-of-day-mod-1.png",
+            "/media/featured-mods/time-of-day-mod/time-of-day-mod-2.png",
+            "/media/featured-mods/time-of-day-mod/time-of-day-mod-3.png",
+            "/media/featured-mods/time-of-day-mod/time-of-day-mod-4.png",
+            "/media/featured-mods/time-of-day-mod/time-of-day-mod-5.png"
         ],
         "description": "Changes maps to other times of day. Night Miami and Whittleton Creek? Daytime Hawke's Bay and Ambrose? So many more! This mod is periodically updated to include more maps/ToDs.",
         "installLink": "https://hitman-resources.netlify.app/smf-install-link/https://hitman-resources.netlify.app/framework/updates/third-party/TOD%20Changes.framework.zip",
         "nexusLink": "https://www.nexusmods.com/hitman3/mods/212"
     },
     {
-        "name": "Placeholder",
-        "author": "",
+        "name": "Reality Control",
+        "author": "Atampy26",
         "imageURL": [
-            "/media/featured-mods/placeholder.png"
+            "/media/featured-mods/reality-control/reality-control-1.png"
         ],
-        "description": "More mods coming later.",
+        "description": "Tools for messing with the AI and with the world in general. The successor to AI Playground.",
+        "installLink": "https://hitman-resources.netlify.app/smf-install-link/https://github.com/atampy25/h3-reality-control/releases/latest/download/mod.framework.zip",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/455"
+    },
+    {
+        "name": "Chongqing Noodle Massacre",
+        "author": "Kevin Rudd & Piepieonline",
+        "imageURL": [
+            "/media/featured-mods/chongqing-noodle-massacre/chongqing-noodle-massacre-1.png",
+            "/media/featured-mods/chongqing-noodle-massacre/chongqing-noodle-massacre-2.png",
+            "/media/featured-mods/chongqing-noodle-massacre/chongqing-noodle-massacre-3.png",
+            "/media/featured-mods/chongqing-noodle-massacre/chongqing-noodle-massacre-4.png",
+            "/media/featured-mods/chongqing-noodle-massacre/chongqing-noodle-massacre-5.png"
+        ],
+        "description": "A remake of The Seafood Massacre from Hitman: Contracts/Codename 47. New NPCs, outfits, Time of Day, map changes, unlisted Mission Stories.",
+        "installLink": "https://hitman-resources.netlify.app/smf-install-link/https://github.com/piepieonline/HM3-Seafood-Massacre/releases/download/1.1.2/Chongqing.Noodle.Massacre.1.1.2.zip",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/354"
+    },
+    {
+        "name": "Methlab - Cut Content",
+        "author": "Kevin Rudd",
+        "imageURL": [
+            "/media/featured-mods/methlab-cut-content/methlab-cut-content-1.png",
+            "/media/featured-mods/methlab-cut-content/methlab-cut-content-2.png"
+        ],
+        "description": "Restores and upgrades the IO-made unfinished Sapienza side mission/ET known as \"Methlab\"",
         "installLink": "",
-        "nexusLink": ""
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/571"
     }
 ]
