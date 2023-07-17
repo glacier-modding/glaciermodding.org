@@ -45,12 +45,12 @@ module.exports = {
                     position: "left",
                     items: [
                         {
-                            label: "Nexus Mods",
-                            href: "https://www.nexusmods.com/hitman3",
-                        },
-                        {
                             label: "Featured Mods",
                             to: "/featured-mods",
+                        },
+                        {
+                            label: "Nexus Mods",
+                            href: "https://www.nexusmods.com/hitman3",
                         }
                     ],
                 },
