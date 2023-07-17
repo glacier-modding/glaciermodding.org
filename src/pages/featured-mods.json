@@ -61,5 +61,61 @@
         "description": "Restores and upgrades the IO-made unfinished Sapienza side mission/ET known as \"Methlab\"",
         "installLink": "",
         "nexusLink": "https://www.nexusmods.com/hitman3/mods/571"
+    },
+    {
+        "name": "Freelancer Variations",
+        "author": "Kevin Rudd, Piepieonline and Kercyx",
+        "imageURL": [
+            "/media/featured-mods/freelancer-variations/freelancer-variations-1.png",
+            "/media/featured-mods/freelancer-variations/freelancer-variations-2.png",
+            "/media/featured-mods/freelancer-variations/freelancer-variations-3.png",
+            "/media/featured-mods/freelancer-variations/freelancer-variations-4.png",
+            "/media/featured-mods/freelancer-variations/freelancer-variations-5.png"
+        ],
+        "description": "Brings Bonus Missions, random times of day/weather and more to Freelancer. A must have!",
+        "installLink": "https://hitman-resources.netlify.app/smf-install-link/https://github.com/Kevin-Rudd/FV-Autoupdater/releases/download/1.1.1/Freelancer.Variations.1.1.1.zip",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/437"
+    },
+    {
+        "name": "Heritage UI",
+        "author": "Burn The Witch",
+        "imageURL": [
+            "/media/featured-mods/heritage-ui/heritage-ui-1.png",
+            "/media/featured-mods/heritage-ui/heritage-ui-2.png",
+            "/media/featured-mods/heritage-ui/heritage-ui-3.png",
+            "/media/featured-mods/heritage-ui/heritage-ui-4.png",
+            "/media/featured-mods/heritage-ui/heritage-ui-5.png"
+        ],
+        "description": "Improves HITMAN WOA's UI by looking to the past and present of the WOA trilogy.",
+        "installLink": "",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/323"
+    },
+    {
+        "name": "Misc Outfit Mesh and Texture fixes",
+        "author": "HMBM47",
+        "imageURL": [
+            "/media/featured-mods/misc-outfit-mesh-and-texture-fixes/misc-outfit-mesh-and-texture-fixes-1.png",
+            "/media/featured-mods/misc-outfit-mesh-and-texture-fixes/misc-outfit-mesh-and-texture-fixes-2.png",
+            "/media/featured-mods/misc-outfit-mesh-and-texture-fixes/misc-outfit-mesh-and-texture-fixes-3.png",
+            "/media/featured-mods/misc-outfit-mesh-and-texture-fixes/misc-outfit-mesh-and-texture-fixes-4.png",
+            "/media/featured-mods/misc-outfit-mesh-and-texture-fixes/misc-outfit-mesh-and-texture-fixes-5.png"
+        ],
+        "description": "Various mesh and texture fixes of 47 and NPC outfits.",
+        "installLink": "",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/84"
+    },
+    {
+        "name": "Portable Chair",
+        "author": "Notex",
+        "imageURL": [
+            "/media/featured-mods/portable-chair/portable-chair-1.png",
+            "/media/featured-mods/portable-chair/portable-chair-2.png",
+            "/media/featured-mods/portable-chair/portable-chair-3.png",
+            "/media/featured-mods/portable-chair/portable-chair-4.png",
+            "/media/featured-mods/portable-chair/portable-chair-5.png"
+        ],
+        "description": "Unleash the power of comfort with the Portable Chair Mod for HITMAN 3. As Agent 47, you can now carry a chair with you on your mission and take a well-deserved break whenever you desire. Immerse yourself in the game's surroundings and experience a new level of realism like never before.",
+        "installLink": "https://hitman-resources.netlify.app/smf-install-link/https://github.com/Notexe/Portable-Chair/releases/latest/download/mod.framework.zip",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/453"
     }
 ]
