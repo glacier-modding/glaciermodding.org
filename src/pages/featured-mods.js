@@ -73,6 +73,7 @@ export default function FeaturedMods() {
                                             <a
                                                 href={mod.installLink}
                                                 className="button button--primary button--block margin-bottom--md"
+                                                target="_blank"
                                             >
                                                 Install
                                             </a>
@@ -81,6 +82,7 @@ export default function FeaturedMods() {
                                             <a
                                                 href={mod.nexusLink}
                                                 className="button button--secondary button--block"
+                                                target="_blank"
                                             >
                                                 Nexus Page
                                             </a>
