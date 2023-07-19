@@ -48,50 +48,54 @@ export default function FeaturedMods() {
             description="Various mods for Hitman 3 that are worth checking out"
         >
             <main>
-                <br />
                 <div className="container">
-                    <div className="row">
-                        {featuredModsData.map((mod, index) => (
-                            <div className="col col--4" key={index}>
-                                <div className="card margin-vert--sm">
-                                    <div className="card__header">
-                                        <div class="avatar">
-                                            <div class="avatar__intro">
-                                                <div class="avatar__name">{mod.name}</div>
-                                                <small class="avatar__subtitle">{mod.author}</small>
+                    {Array.from(new Set(featuredModsData.map((mod) => mod.category))).map((category) => (
+                        <div key={category} className="margin-vert--md">
+                            <h2>{category}</h2>
+                            <div className="row">
+                                {featuredModsData.filter((mod) => mod.category === category).map((mod, index) => (
+                                    <div className="col col--4" key={index}>
+                                        <div className="card margin-vert--sm">
+                                            <div className="card__header">
+                                                <div className="avatar">
+                                                    <div className="avatar__intro">
+                                                        <div className="avatar__name">{mod.name}</div>
+                                                        <small className="avatar__subtitle">{mod.author}</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="card__image">
+                                                <ImageCarousel images={mod.imageURL} />
+                                            </div>
+                                            <div className="card__body">
+                                                <p>{mod.description}</p>
+                                            </div>
+                                            <div className="card__footer">
+                                                {mod.installLink && (
+                                                    <a
+                                                        href={mod.installLink}
+                                                        className="button button--primary button--block margin-bottom--md"
+                                                        target="_blank"
+                                                    >
+                                                        Install
+                                                    </a>
+                                                )}
+                                                {mod.nexusLink && (
+                                                    <a
+                                                        href={mod.nexusLink}
+                                                        className="button button--secondary button--block"
+                                                        target="_blank"
+                                                    >
+                                                        Nexus Page
+                                                    </a>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="card__image">
-                                        <ImageCarousel images={mod.imageURL} />
-                                    </div>
-                                    <div className="card__body">
-                                        <p>{mod.description}</p>
-                                    </div>
-                                    <div className="card__footer">
-                                        {mod.installLink && (
-                                            <a
-                                                href={mod.installLink}
-                                                className="button button--primary button--block margin-bottom--md"
-                                                target="_blank"
-                                            >
-                                                Install
-                                            </a>
-                                        )}
-                                        {mod.nexusLink && (
-                                            <a
-                                                href={mod.nexusLink}
-                                                className="button button--secondary button--block"
-                                                target="_blank"
-                                            >
-                                                Nexus Page
-                                            </a>
-                                        )}
-                                    </div>
-                                </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
             </main>
         </Layout>

@@ -2,6 +2,7 @@
     {
         "name": "Lighting Ultimate",
         "author": "Team Mushroom",
+        "category": "Visuals and Graphics",
         "imageURL": [
             "/media/featured-mods/lighting-ultimate/lighting-ultimate-1.jpg",
             "/media/featured-mods/lighting-ultimate/lighting-ultimate-2.jpg",
@@ -16,6 +17,7 @@
     {
         "name": "Time Of Day Mod",
         "author": "Kevin Rudd and Kercyx",
+        "category": "Visuals and Graphics",
         "imageURL": [
             "/media/featured-mods/time-of-day-mod/time-of-day-mod-1.jpg",
             "/media/featured-mods/time-of-day-mod/time-of-day-mod-2.jpg",
@@ -30,6 +32,7 @@
     {
         "name": "Reality Control",
         "author": "Atampy26",
+        "category": "Gameplay",
         "imageURL": [
             "/media/featured-mods/reality-control/reality-control-1.jpg"
         ],
@@ -40,6 +43,7 @@
     {
         "name": "Chongqing Noodle Massacre",
         "author": "Kevin Rudd & Piepieonline",
+        "category": "Missions",
         "imageURL": [
             "/media/featured-mods/chongqing-noodle-massacre/chongqing-noodle-massacre-1.jpg",
             "/media/featured-mods/chongqing-noodle-massacre/chongqing-noodle-massacre-2.jpg",
@@ -54,6 +58,7 @@
     {
         "name": "Methlab - Cut Content",
         "author": "Kevin Rudd",
+        "category": "Missions",
         "imageURL": [
             "/media/featured-mods/methlab-cut-content/methlab-cut-content-1.jpg",
             "/media/featured-mods/methlab-cut-content/methlab-cut-content-2.jpg"
@@ -65,6 +70,7 @@
     {
         "name": "Freelancer Variations",
         "author": "Kevin Rudd, Piepieonline and Kercyx",
+        "category": "Missions",
         "imageURL": [
             "/media/featured-mods/freelancer-variations/freelancer-variations-1.jpg",
             "/media/featured-mods/freelancer-variations/freelancer-variations-2.jpg",
@@ -79,6 +85,7 @@
     {
         "name": "Heritage UI",
         "author": "Burn The Witch",
+        "category": "User Interface",
         "imageURL": [
             "/media/featured-mods/heritage-ui/heritage-ui-1.jpg",
             "/media/featured-mods/heritage-ui/heritage-ui-2.jpg",
@@ -93,6 +100,7 @@
     {
         "name": "Misc Outfit Mesh and Texture fixes",
         "author": "HMBM47",
+        "category": "Apparel",
         "imageURL": [
             "/media/featured-mods/misc-outfit-mesh-and-texture-fixes/misc-outfit-mesh-and-texture-fixes-1.jpg",
             "/media/featured-mods/misc-outfit-mesh-and-texture-fixes/misc-outfit-mesh-and-texture-fixes-2.jpg",
@@ -107,6 +115,7 @@
     {
         "name": "Portable Chair",
         "author": "Notex",
+        "category": "Weapons",
         "imageURL": [
             "/media/featured-mods/portable-chair/portable-chair-1.jpg",
             "/media/featured-mods/portable-chair/portable-chair-2.jpg",
