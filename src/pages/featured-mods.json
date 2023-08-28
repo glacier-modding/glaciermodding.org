@@ -42,7 +42,7 @@
     },
     {
         "name": "Chongqing Noodle Massacre",
-        "author": "Kevin Rudd & Piepieonline",
+        "author": "Kevin Rudd and Piepieonline",
         "category": "Missions",
         "imageURL": [
             "/media/featured-mods/chongqing-noodle-massacre/chongqing-noodle-massacre-1.jpg",
@@ -126,5 +126,20 @@
         "description": "Unleash the power of comfort with the Portable Chair Mod for HITMAN 3. As Agent 47, you can now carry a chair with you on your mission and take a well-deserved break whenever you desire. Immerse yourself in the game's surroundings and experience a new level of realism like never before.",
         "installLink": "https://hitman-resources.netlify.app/smf-install-link/https://github.com/Notexe/Portable-Chair/releases/latest/download/mod.framework.zip",
         "nexusLink": "https://www.nexusmods.com/hitman3/mods/453"
+    },
+    {
+        "name": "Sandbox Hantu Port",
+        "author": "Kevin Rudd and Kercyx",
+        "category": "Missions",
+        "imageURL": [
+            "/media/featured-mods/sandbox-hantu-port/sandbox-hantu-port-1.jpg",
+            "/media/featured-mods/sandbox-hantu-port/sandbox-hantu-port-2.jpg",
+            "/media/featured-mods/sandbox-hantu-port/sandbox-hantu-port-3.jpg",
+            "/media/featured-mods/sandbox-hantu-port/sandbox-hantu-port-4.jpg",
+            "/media/featured-mods/sandbox-hantu-port/sandbox-hantu-port-5.jpg"
+        ],
+        "description": "Converts sniper map Hantu Port (Singapore) into a fully functional sandbox map with all gameplay features you'd expect.",
+        "installLink": "",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/588"
     }
 ]
