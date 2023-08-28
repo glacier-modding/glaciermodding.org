@@ -71,7 +71,7 @@ export default function FeaturedMods() {
                                                 <p>{mod.description}</p>
                                             </div>
                                             <div className="card__footer">
-                                                {mod.installLink && (
+                                                {/* {mod.installLink && (
                                                     <a
                                                         href={mod.installLink}
                                                         className="button button--primary button--block margin-bottom--md"
@@ -79,7 +79,7 @@ export default function FeaturedMods() {
                                                     >
                                                         Install
                                                     </a>
-                                                )}
+                                                )} */}
                                                 {mod.nexusLink && (
                                                     <a
                                                         href={mod.nexusLink}
