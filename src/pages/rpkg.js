@@ -49,7 +49,7 @@ const ImageCarousel = () => {
 }
 
 export default function RPKG() {
-    const RPKGVersion = "2.30.0"
+    const RPKGVersion = "2.31.0"
 
     return (
         <Layout
