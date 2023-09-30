@@ -30,7 +30,7 @@ jobs:
       - name: Build site
         id: build
         run: |
-          yarn install --frozen-lockfile
+          yarn install --immutable
           yarn run build
 
       - name: Upload site
