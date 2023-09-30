@@ -29,8 +29,10 @@ export default function Home() {
                     <p>
                         Glacier Modding is an organisation dedicated to creating
                         tools and mods for the{" "}
-                        <a href="https://ioi.dk/glacier" target="_blank">Glacier 2</a> game
-                        engine.
+                        <a href="https://ioi.dk/glacier" target="_blank">
+                            Glacier 2
+                        </a>{" "}
+                        game engine.
                     </p>
                     <p>
                         Glacier 2 is a game engine developed by IO Interactive
@@ -42,8 +44,8 @@ export default function Home() {
                             <li>HITMAN™: Sniper Assassin</li>
                             <li>HITMAN™ 2</li>
                             <li>
-                                HITMAN: World of Assassination (formerly known as
-                                HITMAN 3)
+                                HITMAN: World of Assassination (formerly known
+                                as HITMAN 3)
                             </li>
                         </ul>
                         At the moment we are mainly focusing on HITMAN 3 and
