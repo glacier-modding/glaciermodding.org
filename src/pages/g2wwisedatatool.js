@@ -18,9 +18,9 @@ export default function G2WwiseDataTool() {
                         with the Glacier 2 engine.
                     </p>
                     <div class="dropdown dropdown--hoverable">
-                        <a className="button button--secondary">
+                        <button className="button button--secondary">
                             Download latest v{G2WwiseDataToolVersion}
-                        </a>
+                        </button>
                         <ul class="dropdown__menu">
                             <li>
                                 <a
