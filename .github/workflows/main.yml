@@ -30,7 +30,7 @@ jobs:
       - name: Build site
         id: build
         run: |
-          yarn install --immutable
+          yarn install
           yarn run build
 
       - name: Upload site
