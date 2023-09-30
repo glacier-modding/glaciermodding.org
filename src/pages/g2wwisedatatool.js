@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "@theme/Layout"
 
 export default function G2WwiseDataTool() {
+    const G2WwiseDataToolVersion = "1.6.0"
     return (
         <Layout
             title="G2WwiseDataTool"
@@ -16,13 +17,45 @@ export default function G2WwiseDataTool() {
                         from a WWise project into files which are compatible
                         with the Glacier 2 engine.
                     </p>
-                    <a
-                        href={`https://github.com/glacier-modding/G2WwiseDataTool`}
-                        target="_blank"
-                        className="button button--secondary"
-                    >
-                        Visit GitHub Repository
-                    </a>
+                    <div class="dropdown dropdown--hoverable">
+                        <a className="button button--secondary">
+                            Download latest v{G2WwiseDataToolVersion}
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a
+                                    class="dropdown__link"
+                                    href={`https://github.com/glacier-modding/G2WwiseDataTool/releases/download/v${G2WwiseDataToolVersion}/win-x64.zip`}
+                                >
+                                    Windows
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="dropdown__link"
+                                    href={`https://github.com/glacier-modding/G2WwiseDataTool/releases/download/v${G2WwiseDataToolVersion}/linux-x64.zip`}
+                                >
+                                    Linux
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="dropdown__link"
+                                    href={`https://github.com/glacier-modding/G2WwiseDataTool/releases/download/v${G2WwiseDataToolVersion}/osx-x64.zip`}
+                                >
+                                    MacOS
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="margin-vert--sm">
+                        <a
+                            href="https://github.com/glacier-modding/G2WwiseDataTool"
+                            className="button button--info"
+                        >
+                            Source code
+                        </a>
+                    </div>
                 </div>
             </header>
             <main>
