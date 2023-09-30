@@ -41,7 +41,7 @@
             "last 1 safari version"
         ]
     },
-    "packageManager": "yarn@4.0.0-rc.42",
+    "packageManager": "yarn@3.6.3",
     "devDependencies": {
         "prettier": "^2.8.0"
     },
