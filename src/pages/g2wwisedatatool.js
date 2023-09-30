@@ -17,14 +17,14 @@ export default function G2WwiseDataTool() {
                         from a WWise project into files which are compatible
                         with the Glacier 2 engine.
                     </p>
-                    <div class="dropdown dropdown--hoverable">
+                    <div className="dropdown dropdown--hoverable">
                         <button className="button button--secondary">
                             Download latest v{G2WwiseDataToolVersion}
                         </button>
-                        <ul class="dropdown__menu">
+                        <ul className="dropdown__menu">
                             <li>
                                 <a
-                                    class="dropdown__link"
+                                    className="dropdown__link"
                                     href={`https://github.com/glacier-modding/G2WwiseDataTool/releases/download/v${G2WwiseDataToolVersion}/win-x64.zip`}
                                 >
                                     Windows
@@ -40,7 +40,7 @@ export default function G2WwiseDataTool() {
                             </li>
                             <li>
                                 <a
-                                    class="dropdown__link"
+                                    className="dropdown__link"
                                     href={`https://github.com/glacier-modding/G2WwiseDataTool/releases/download/v${G2WwiseDataToolVersion}/osx-x64.zip`}
                                 >
                                     MacOS
