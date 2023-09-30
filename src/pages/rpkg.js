@@ -80,6 +80,7 @@ export default function RPKG() {
                         <a
                             href="https://github.com/glacier-modding/RPKG-Tool"
                             className="button button--info"
+                            target="_blank"
                         >
                             Source code
                         </a>

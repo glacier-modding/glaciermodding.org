@@ -52,6 +52,7 @@ export default function G2WwiseDataTool() {
                         <a
                             href="https://github.com/glacier-modding/G2WwiseDataTool"
                             className="button button--info"
+                            target="_blank"
                         >
                             Source code
                         </a>
