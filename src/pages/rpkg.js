@@ -76,6 +76,14 @@ export default function RPKG() {
                     >
                         Download latest CLI v{RPKGVersion}
                     </a>
+                    <div className="margin-vert--sm">
+                        <a
+                            href="https://github.com/glacier-modding/RPKG-Tool"
+                            className="button button--info"
+                        >
+                            Source code
+                        </a>
+                    </div>
                 </div>
             </header>
             <main>
