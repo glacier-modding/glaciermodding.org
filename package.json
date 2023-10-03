@@ -5,6 +5,7 @@
     "scripts": {
         "docusaurus": "docusaurus",
         "start": "docusaurus start",
+        "prebuild": "node fetch-tool-versions",
         "build": "docusaurus build && yarn node postbuild",
         "swizzle": "docusaurus swizzle",
         "deploy": "docusaurus deploy",
@@ -43,6 +44,7 @@
     },
     "packageManager": "yarn@3.6.3",
     "devDependencies": {
+        "node-fetch": "^3.3.2",
         "prettier": "^2.8.0"
     },
     "prettier": {

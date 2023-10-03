@@ -31,7 +31,8 @@ jobs:
         id: build
         run: |
           yarn install
-          yarn run build
+          yarn prebuild
+          yarn build
 
       - name: Upload site
         id: upload

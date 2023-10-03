@@ -1,8 +1,9 @@
 import React from "react"
 import Layout from "@theme/Layout"
+import versionData from "../../tool-versions.json"
 
 export default function G2WwiseDataTool() {
-    const G2WwiseDataToolVersion = "1.6.1"
+    const G2WwiseDataToolVersion = versionData.G2WwiseDataTool
     return (
         <Layout
             title="G2WwiseDataTool"
@@ -19,21 +20,21 @@ export default function G2WwiseDataTool() {
                     </p>
                     <div className="dropdown dropdown--hoverable">
                         <button className="button button--secondary">
-                            Download latest v{G2WwiseDataToolVersion}
+                            Download latest {G2WwiseDataToolVersion}
                         </button>
                         <ul className="dropdown__menu">
                             <li>
                                 <a
                                     className="dropdown__link"
-                                    href={`https://github.com/glacier-modding/G2WwiseDataTool/releases/download/v${G2WwiseDataToolVersion}/win-x64.zip`}
+                                    href={`https://github.com/glacier-modding/G2WwiseDataTool/releases/download/${G2WwiseDataToolVersion}/win-x64.zip`}
                                 >
                                     Windows
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    class="dropdown__link"
-                                    href={`https://github.com/glacier-modding/G2WwiseDataTool/releases/download/v${G2WwiseDataToolVersion}/linux-x64.zip`}
+                                    className="dropdown__link"
+                                    href={`https://github.com/glacier-modding/G2WwiseDataTool/releases/download/${G2WwiseDataToolVersion}/linux-x64.zip`}
                                 >
                                     Linux
                                 </a>
@@ -41,7 +42,7 @@ export default function G2WwiseDataTool() {
                             <li>
                                 <a
                                     className="dropdown__link"
-                                    href={`https://github.com/glacier-modding/G2WwiseDataTool/releases/download/v${G2WwiseDataToolVersion}/osx-x64.zip`}
+                                    href={`https://github.com/glacier-modding/G2WwiseDataTool/releases/download/${G2WwiseDataToolVersion}/osx-x64.zip`}
                                 >
                                     MacOS
                                 </a>

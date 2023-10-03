@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "@theme/Layout"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from "react-responsive-carousel"
+import versionData from "../../tool-versions.json"
 
 const ImageCarousel = () => {
     const images = [
@@ -49,7 +50,7 @@ const ImageCarousel = () => {
 }
 
 export default function RPKG() {
-    const RPKGVersion = "2.31.0"
+    const RPKGToolVersion = versionData["RPKG-Tool"]
 
     return (
         <Layout
@@ -64,17 +65,17 @@ export default function RPKG() {
                         formats
                     </p>
                     <a
-                        href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${RPKGVersion}/rpkg_v${RPKGVersion}-gui.zip`}
+                        href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/${RPKGToolVersion}/rpkg_${RPKGToolVersion}-gui.zip`}
                         className="button button--secondary"
                     >
-                        Download latest GUI v{RPKGVersion}
+                        Download latest GUI {RPKGToolVersion}
                     </a>
                     <span className="margin-horiz--sm"></span>
                     <a
-                        href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/v${RPKGVersion}/rpkg_v${RPKGVersion}-cli.zip`}
+                        href={`https://github.com/glacier-modding/RPKG-Tool/releases/download/${RPKGToolVersion}/rpkg_${RPKGToolVersion}-cli.zip`}
                         className="button button--secondary"
                     >
-                        Download latest CLI v{RPKGVersion}
+                        Download latest CLI {RPKGToolVersion}
                     </a>
                     <div className="margin-vert--sm">
                         <a
