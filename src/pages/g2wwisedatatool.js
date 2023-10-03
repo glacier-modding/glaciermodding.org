@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "@theme/Layout"
 
 export default function G2WwiseDataTool() {
-    const G2WwiseDataToolVersion = "1.6.0"
+    const G2WwiseDataToolVersion = "1.6.1"
     return (
         <Layout
             title="G2WwiseDataTool"
