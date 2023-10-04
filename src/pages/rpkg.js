@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "@theme/Layout"
+import IconExternalLink from "@theme/Icon/ExternalLink"
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from "react-responsive-carousel"
 import versionData from "../../tool-versions.json"
@@ -84,6 +85,7 @@ export default function RPKG() {
                             target="_blank"
                         >
                             Source code
+                            <IconExternalLink />
                         </a>
                     </div>
                 </div>

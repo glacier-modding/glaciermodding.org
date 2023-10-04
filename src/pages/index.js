@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "@theme/Layout"
+import IconExternalLink from "@theme/Icon/ExternalLink"
 
 export default function Home() {
     return (
@@ -20,6 +21,7 @@ export default function Home() {
                         className="button button--secondary"
                     >
                         GitHub
+                        <IconExternalLink />
                     </a>
                 </div>
             </header>

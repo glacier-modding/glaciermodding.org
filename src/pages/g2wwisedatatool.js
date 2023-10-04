@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "@theme/Layout"
+import IconExternalLink from "@theme/Icon/ExternalLink"
 import versionData from "../../tool-versions.json"
 
 export default function G2WwiseDataTool() {
@@ -56,6 +57,7 @@ export default function G2WwiseDataTool() {
                             target="_blank"
                         >
                             Source code
+                            <IconExternalLink />
                         </a>
                     </div>
                 </div>
