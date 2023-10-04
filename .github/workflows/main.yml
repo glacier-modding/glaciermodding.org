@@ -6,7 +6,9 @@ on:
       - main
 
   workflow_dispatch:
+  
   repository_dispatch:
+    types: [build_site]
 
 jobs:
   build:
