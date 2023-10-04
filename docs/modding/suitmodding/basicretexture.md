@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 description: Basic Retexture
 ---
 
@@ -14,7 +14,7 @@ For this tutorial, we will go over a basic texture override for a suit. In broad
 -   Open the suit's outfit entity with QuickEntity Editor and override the suit's stock texture with our custom texture
 -   Package it all up in an SMF mod
 
-Before continuing, please make sure you have all the tools required from the [previous step](gettingstarted.md)!
+Before continuing, please make sure you have all the tools required from the [previous step](.)!
 
 Hitman uses a physically based rendering pipeline, and the models use 3 textures: a **diffuse map**, a **specular map** and a **normal map**.
 
@@ -239,7 +239,7 @@ If you edit the manifest with Visual Studio Code, VSCode will use the schema you
 
 `frameworkVersion` is the version of the framework you are currently using. At the time of writing, the latest version is 2.25.0.
 
-`contentFolders` in the manifest tells Simple Mod Framework what folders will be used for mod content. Make a new folder called **content**. Inside the content folder, make a new folder called **chunk0**. If you want to know more about chunks, [please see this article](../glacier2/chunkdata.md). Enter the chunk0 folder and move your mod files there. So when all is said and done, this should be the tree structure of your mod:
+`contentFolders` in the manifest tells Simple Mod Framework what folders will be used for mod content. Make a new folder called **content**. Inside the content folder, make a new folder called **chunk0**. If you want to know more about chunks, [please see this article](../../glacier2/chunkdata.md). Enter the chunk0 folder and move your mod files there. So when all is said and done, this should be the tree structure of your mod:
 
 ```
 📁My Cool Shirt
