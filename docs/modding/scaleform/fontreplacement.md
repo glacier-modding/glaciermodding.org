@@ -51,5 +51,5 @@ A GFXF folder should be generated in the output path that you choose. Navigate t
 
 8. You can now close JPEXS Free Flash Decompiler.
 
-## Rebuilding the GFX file
+## Rebuilding the font GFX file
 Now you can head back into the RPKG Tool and use the "Rebuild Scaleform GFX/DDS/TGA (GFXF) From Folder" option in the Rebuild menu. Select the GFXF root folder that was generated earlier. You'll now have a "GFXF.rebuilt" folder next to the "00B8A5288E3707E1.GFXF.GFX" file if everything went right. You should be able to find a file named "00B8A5288E3707E1.GFXF" inside of it. You can copy this file into your Simple Mod Framework mod.
