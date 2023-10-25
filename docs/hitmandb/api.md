@@ -20,14 +20,20 @@ You can use any HTTP request methods except OPTIONS and HEAD, but it is recommen
 }
 ```
 
-This is currently the only error that can occur.
+The following JSON will be returned if number_of_results is greater than 500:
+
+```json
+{
+    "error": "number_of_results exceeds the limit of 500"
+}
+```
 
 #### Request Fields (all are required, case insensitive):
 
 | Field Name        | Type          | Description                                                            |
 | ----------------- | ------------- | ---------------------------------------------------------------------- |
 | search_term       | string        | Term to search for                                                     |
-| number_of_results | int           | How many results should be returned on one "page"                      |
+| number_of_results | int           | How many results should be returned on one "page" (max 500)            |
 | resource_type     | string (type) | What type to search for ([see list of types](#list-of-types)) e.g. any |
 | page_number       | int           | What page to return results from (starting from 0)                     |
 
