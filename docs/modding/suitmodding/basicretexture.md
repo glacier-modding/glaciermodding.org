@@ -105,7 +105,7 @@ Now that we have an entirely new texture, it's time to use it. Open QuickEntity 
 
 :::caution QuickEntity Editor
 
-If this is your first time starting QuickEntity Editor, don't forget to set the paths to your Hitman Retail and Runtime folders in the settings.
+In case you missed it from the [requirements](.), if this is your first time starting QuickEntity Editor, don't forget to set the paths to your Hitman Retail and Runtime folders in the settings. If you don't do this, the **Load entity from game** option we will be using will not work.
 
 :::
 
