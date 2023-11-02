@@ -14,7 +14,7 @@ For this tutorial, we will go over a basic texture override for a suit. In broad
 -   Open the suit's outfit entity with QuickEntity Editor and override the suit's stock texture with our custom texture
 -   Package it all up in an SMF mod
 
-Before continuing, please make sure you have all the tools required from the [previous step](.)!
+Before continuing, please make sure you have all the tools in the [requirements](.)!
 
 Hitman uses a physically based rendering pipeline, and the models use 3 textures: a **diffuse map**, a **specular map** and a **normal map**.
 
@@ -55,7 +55,7 @@ Depends on 1 other hash files/resources:
   - 0091D8EF5EAF2E40.TEXD 9F [assembly:/_pro/characters/assets/hero/agent47/textures/male_reg_agent47_bangkok_shirt.texture?/diffuse_a.tex](ascolormap).pc_mipblock1
 ```
 
-We will also need to export this `TEXD` file. Glacier 2's textures always come in pairs: the `TEXD` contains the full-sized, but compressed, texture and its [mipmaps](https://en.wikipedia.org/wiki/Mipmap), the `TEXT` contains a smaller scaled-down version with its own mipmaps for fast streaming from disk. Extract this TEXD right next to its TEXT in the folder.
+We will also need to export this `TEXD` file. Glacier 2's textures always come in pairs: the `TEXT` contains a scaled down version of the texture for fast streaming and the `TEXD` contains the full sized texture, both files have their own [mipmaps](https://en.wikipedia.org/wiki/Mipmap). HMTextureTools will still need both files as the `TEXT` file contains important metadata which the `TEXD` lacks. Extract this TEXD right next to its TEXT in the folder.
 
 # Convert the Texture to .tga
 
@@ -225,7 +225,7 @@ Make a new file called **manifest.json** in the folder and populate it with the 
 	"name": "My Cool Shirt",
 	"description": "Makes the Casual Suit totally rad.",
 	"authors": ["My Name"],
-	"frameworkVersion": "2.25.0",
+	"frameworkVersion": "2.33.4",
 	"version": "1.0.0",
 	"contentFolders": ["content"]
 }
@@ -237,9 +237,11 @@ If you edit the manifest with Visual Studio Code, VSCode will use the schema you
 
 :::
 
-`frameworkVersion` is the version of the framework you are currently using. At the time of writing, the latest version is 2.25.0.
+`frameworkVersion` is the version of the framework you are currently using. At the time of writing, the latest version is 2.33.4.
 
-`contentFolders` in the manifest tells Simple Mod Framework what folders will be used for mod content. Make a new folder called **content**. Inside the content folder, make a new folder called **chunk0**. If you want to know more about chunks, [please see this article](../../glacier2/chunkdata.md). Enter the chunk0 folder and move your mod files there. So when all is said and done, this should be the tree structure of your mod:
+`contentFolders` in the manifest tells Simple Mod Framework what folders will be used for mod content.
+
+Make a new folder called **content**. Inside the content folder, make a new folder called **chunk0**. If you want to know more about chunks, [please see this article](../../glacier2/chunkdata.md). Enter the chunk0 folder and move your mod files there. So when all is said and done, this should be the tree structure of your mod:
 
 ```
 📁My Cool Shirt
