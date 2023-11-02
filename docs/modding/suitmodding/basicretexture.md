@@ -55,7 +55,7 @@ Depends on 1 other hash files/resources:
   - 0091D8EF5EAF2E40.TEXD 9F [assembly:/_pro/characters/assets/hero/agent47/textures/male_reg_agent47_bangkok_shirt.texture?/diffuse_a.tex](ascolormap).pc_mipblock1
 ```
 
-We will also need to export this `TEXD` file. Glacier 2's textures always come in pairs: the `TEXT` contains the full-sized texture and the `TEXD` contains the [mipmaps](https://en.wikipedia.org/wiki/Mipmap). Extract this TEXD right next to its TEXT in the folder.
+We will also need to export this `TEXD` file. Glacier 2's textures always come in pairs: the `TEXD` contains the full-sized, but compressed, texture and its [mipmaps](https://en.wikipedia.org/wiki/Mipmap), the `TEXT` contains a smaller scaled-down version with its own mipmaps for fast streaming from disk. Extract this TEXD right next to its TEXT in the folder.
 
 # Convert the Texture to .tga
 
