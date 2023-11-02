@@ -14,7 +14,7 @@ We recommend that you start at the beginning and work your way up, as the early 
 This is a list of tools that are essential for any kind of Hitman modding. The tutorials will assume you have them installed and will ask you to make frequent use of them.
 
 -   [RPKG Tool](https://glaciermodding.org/rpkg/)
--   [Simple Mod Framework](https://www.nexusmods.com/hitman3/mods/200)
+-   [Simple Mod Framework](https://github.com/atampy25/simple-mod-framework/releases/latest)
 -   [QuickEntity Editor](https://github.com/atampy25/quickentity-editor-next/releases/latest)
 -   [TonyTools](https://github.com/AnthonyFuller/TonyTools/releases/latest)
 -   A program to read and edit JSON files ([VSCode](https://code.visualstudio.com/Download) is recommended, but any basic code editor will suffice)
