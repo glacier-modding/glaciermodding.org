@@ -43,4 +43,4 @@ LOD 6 and 7 are too far away to see this specific model.
 
 ### Blend file download
 
-[lod_setup.blend](/img/blender/tutorials/lod_setup/lod_setup.blend)
+[lod_setup.blend](/files/blender/tutorials/lod_setup/lod_setup.blend)
