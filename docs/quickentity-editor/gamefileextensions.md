@@ -89,7 +89,7 @@ Diffuse_Color_01 is simple enough but what the hell is a ConstantVector1D_01? Yo
 
 Game file extensions will show a friendly human-readable name next to the property, like so:
 
-![showcasing human readable names of properties](pathname:///media/quickentity-editor/gamefileextensions/gfe.png)
+![showcasing human readable names of properties](/img/quickentity-editor/gamefileextensions/gfe.png)
 
 All around, enabling GFE will give you a much better experience in QNE.
 
