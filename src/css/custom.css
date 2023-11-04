@@ -64,7 +64,7 @@
     width: 24px;
     height: 24px;
     display: flex;
-    background: url("/media/github-mark-white.svg") no-repeat;
+    background: url("/img/github-mark-white.svg") no-repeat;
     background-size: 24px;
 }
 
@@ -73,7 +73,7 @@
     width: 24px;
     height: 24px;
     display: flex;
-    background: url("/media/github-mark.svg") no-repeat;
+    background: url("/img/github-mark.svg") no-repeat;
     background-size: 24px;
 }
 

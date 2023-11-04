@@ -257,6 +257,6 @@ That's all we need. Start Simple Mod Framework and click **Enable/disable mods**
 
 Go into pre-planning at any level you like and choose the Casual Suit with Gloves. Start the level, and if you did everything right, the fruits of your labor should be before your eyes!
 
-![The end result](pathname:///media/suitmodding/basicretexture/endresult.jpg)
+![The end result](/img/suitmodding/basicretexture/endresult.jpg)
 
 You can now zip up your SMF mod and release it into the world. You're a mod author now.

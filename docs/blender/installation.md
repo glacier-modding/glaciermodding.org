@@ -8,6 +8,6 @@ description: Installation instructions for the Glacier 2 Blender Add-on
 -   Install the Add-on in Blender like so:
     -   Go to _Edit > Preferences > Add-ons_.
     -   Press the _Install…_ button and use the File Browser to select `io_scene_glacier.zip` and then press the `Install Add-on` button.
-        ![Screenshot of Blender's Add-on installation screen](pathname:///media/blender/installation/blender_add-on_installation.png)
+        ![Screenshot of Blender's Add-on installation screen](/img/blender/installation/blender_add-on_installation.png)
     -   Once complete you should now find an Add-on called `Glacier 2 Engine Tools` in Blender's Add-ons screen.
-        ![Screenshot of Blender's Add-on screen](pathname:///media/blender/installation/blender_add-ons_screen.png)
+        ![Screenshot of Blender's Add-on screen](/img/blender/installation/blender_add-ons_screen.png)

@@ -6,7 +6,7 @@ description: Details about the Glacier 2 Blender Add-on
 
 The Glacier 2 [Blender](https://www.blender.org/) Add-on allows importing and exporting various Glacier 2 file formats (Only supports exporting to PRIM at the moment).
 
-![lod_slider](pathname:///media/blender/lod_slider.gif)
+![lod_slider](/img/blender/lod_slider.gif)
 
 ### [Installation](/docs/blender/installation)
 

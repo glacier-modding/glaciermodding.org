@@ -8,19 +8,19 @@ import versionData from "../../tool-versions.json"
 const ImageCarousel = () => {
     const images = [
         {
-            url: "/media/rpkg/rpkg-1.png",
+            url: "/img/rpkg/rpkg-1.png",
         },
         {
-            url: "/media/rpkg/rpkg-2.png",
+            url: "/img/rpkg/rpkg-2.png",
         },
         {
-            url: "/media/rpkg/rpkg-3.png",
+            url: "/img/rpkg/rpkg-3.png",
         },
         {
-            url: "/media/rpkg/rpkg-4.png",
+            url: "/img/rpkg/rpkg-4.png",
         },
         {
-            url: "/media/rpkg/rpkg-5.png",
+            url: "/img/rpkg/rpkg-5.png",
         },
     ]
 
