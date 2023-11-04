@@ -117,7 +117,7 @@ That's all we need. Next, start Simple Mod Framework and click **Enable/disable 
 
 Go into pre-planning at any level you like and choose the Absolution Suit with Gloves. Finally, start the level, and if you did everything right, the fruits of your labor should be before your eyes!
 
-![The end result](pathname:///media/suitmodding/addingparts/endresult.jpg)
+![The end result](/img/suitmodding/addingparts/endresult.jpg)
 
 And that is how to patch an outfit to add new body parts. Of course, as you can also remove body parts, the combination of these principles is the foundation for composing entirely new outfits. We will soon go over the best practices for making new and exciting outfits.
 

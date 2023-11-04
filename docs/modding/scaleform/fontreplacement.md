@@ -18,34 +18,34 @@ The game has multiple font GFX files. For this tutorial we will be modifying `[a
 
 Once you find the font resource in the game right click it and choose the "Extract GFXF files from GFXF" option.
 
-![Screenshot showing RPKG Tool's context menu for GFXF files](pathname:///media/scaleform/fontreplacement/extract-font-gfx.png)
+![Screenshot showing RPKG Tool's context menu for GFXF files](/img/scaleform/fontreplacement/extract-font-gfx.png)
 
 A GFXF folder should be generated in the output path that you choose. Navigate through the folders until you find the font GFX file. In this case it is named: `00B8A5288E3707E1.GFXF.GFX`.
 
 ## Modifying the font GFX file
 1. Open the font GFX file in JPEXS Free Flash Decompiler. You should see a list of fonts on the left side of the window under the "Fonts" folder.
 
-![](pathname:///media/scaleform/fontreplacement/jpexs-fonts.png)
+![](/img/scaleform/fontreplacement/jpexs-fonts.png)
 
 2. Select the font that you wish to replace and highlight all of the characters on the right side and copy them to the clipboard.
 
-![](pathname:///media/scaleform/fontreplacement/jpexs-font-characters-highlighted.png)
+![](/img/scaleform/fontreplacement/jpexs-font-characters-highlighted.png)
 
 3. Paste the characters into the "Add characters" field, select a source font and then hit "Ok".
 
-![](pathname:///media/scaleform/fontreplacement/jpexs-font-add-characters.png)
+![](/img/scaleform/fontreplacement/jpexs-font-add-characters.png)
 
 4. You will get this warning, just hit "Yes to all".
 
-![](pathname:///media/scaleform/fontreplacement/jpexs-font-replacement-warning.png)
+![](/img/scaleform/fontreplacement/jpexs-font-replacement-warning.png)
 
 5. You will then get this warning, just hit "Yes" again.
 
-![](pathname:///media/scaleform/fontreplacement/jpexs-font-replacement-2nd-warning.png)
+![](/img/scaleform/fontreplacement/jpexs-font-replacement-2nd-warning.png)
 
 6. You should now notice that the font characters have been replaced.
 
-![](pathname:///media/scaleform/fontreplacement/jpexs-font-replacement-done.png)
+![](/img/scaleform/fontreplacement/jpexs-font-replacement-done.png)
 
 7. Click "Save" under the File tab at the top of the program.
 

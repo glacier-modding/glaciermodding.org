@@ -7,9 +7,9 @@ description: Templates you can copy and paste into QNE!
 ### How to use
 
 1. Hover your mouse over the template you wish to use and click the copy button at the very right hand side.
-   ![video showcasing the first step](pathname:///media/quickentity-editor/templates/step1.gif)
+   ![video showcasing the first step](/img/quickentity-editor/templates/step1.gif)
 2. Right click the entity that you wish to paste the template into and click Clipboard > Paste Entity.
-   ![video showcasing the second step](pathname:///media/quickentity-editor/templates/step2.gif)
+   ![video showcasing the second step](/img/quickentity-editor/templates/step2.gif)
 
 ## Templates
 
