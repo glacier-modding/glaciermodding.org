@@ -14,19 +14,19 @@ For this tutorial, we will go over patching new parts to an outfit, like a hat o
 
 Before continuing, please make sure you have all the tools in the [requirements](.) section. Ideally, you should get your feet wet with [basic retexturing](basicretexture.md) first to acclimate yourself to these tools.
 
-# Find a Suit to Modify
+## Find a Suit to Modify
 
 We will once again consult [HMBM47's Outfit Spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRDiyiqdRebu0Olvvkr20CDhh6ANxu7FOQZ_O-1YHFN9e6kh0WmpbwDYbfgzevSvc3fO4_4Exu1fmQH/pubhtml#) for this. Bookmark it, if you haven't! For this tutorial, we will be modifying the Absolution Suit with Gloves.
 
 Click the tab **chunk0 47 Base Suits** in the spreadsheet and find the **Absolution Suit** at the top of the spreadsheet. Write down its `TEMP`, which the spreadsheet tells us is `0075CC9E284E3236`.
 
-# Decide What to Add
+## Decide What to Add
 
 Finding accessories, clothing, and so on to use in your outfits can be as easy as finding an outfit in the game, sussing out what it's called in the RPKG tool, and opening its `TEMP` with QuickEntity Editor. From there, you can simply copy and paste the part entity to your own outfit. You can also look for the raw models (so-called `PRIM` files) in the RPKG tool.
 
 However, that is a little advanced for your first time, so for this tutorial, we will be adding a pair of sunglasses to the Absolution Suit. The easiest way to do that would be to copy and paste from another outfit. We will be using the Italian Suit's sunglasses. Look in the outfit spreadsheet again for the Italian Suit; its `TEMP` is `00444A5FE5DDA137`.
 
-# Open the Source Outfit
+## Open the Source Outfit
 
 First, we will be opening the Italian Suit to copy its sunglasses entity so we can paste it onto the Absolution suit. Open QuickEntity Editor, and click **Load** -> **Load entity from game**. Then, paste in the Italian Suit's `TEMP` hash, click Load, and wait a moment while the editor extracts the relevant files.
 
@@ -60,7 +60,7 @@ Nice, this is what we're looking for.
 
 Right-click Part_Glasses in the tree and mouse over **Clipboard**. Click **Copy Entity**. The whole entity is now in your clipboard, and you can paste it into any text editor if you want to save it for later.
 
-# Open the Destination Outfit
+## Open the Destination Outfit
 
 Now, let's load the Absolution Suit entity. Click **Load** -> **Load entity from game** and enter the Absolution Suit's `TEMP`, `0075CC9E284E3236`.
 
@@ -72,7 +72,7 @@ Right-click Part_Glasses and click **Copy ID**. Now, click the root entity `OUTF
 
 Now that the sunglasses body part is in the array, click **Save as** -> **Save as patch file**. Name it something like `absolution_glasses.entity.patch.json` and save it to your disk. Next, we will make an SMF mod to apply it to our game.
 
-# Make Our SMF Mod
+## Make Our SMF Mod
 
 We have already explained how to create a basic SMF mod in the [previous chapter](basicretexture.md), but we will reiterate it here to make sure it sticks.
 
@@ -121,7 +121,7 @@ Go into pre-planning at any level you like and choose the Absolution Suit with G
 
 And that is how to patch an outfit to add new body parts. Of course, as you can also remove body parts, the combination of these principles is the foundation for composing entirely new outfits. We will soon go over the best practices for making new and exciting outfits.
 
-# Addendum
+## Addendum
 
 If you have any doubts or difficulties with adding certain things to your outfits, the best question you can ask is, *"how are IOI doing it?"* You can learn a lot by opening `TEMP` files in QuickEntity Editor and studying the makeup of the outfit. Do not be afraid to open the RPKG Tool, search for an outfit, and study any `TEMP` files you find.
 
