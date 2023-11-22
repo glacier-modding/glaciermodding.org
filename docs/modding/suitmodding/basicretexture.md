@@ -20,7 +20,7 @@ Hitman uses a physically based rendering pipeline, and the models use 3 textures
 
 The diffuse map can basically be said to be the base color of the model. The specular map is how it reflects light, and the normal map is, in essence, how shadows fall on the model. Normal maps are used to fake detail on low-polygon models in video games. In this example, we will be changing the **diffuse map**.
 
-# Extract Texture
+## Extract Texture
 
 Begin by opening RPKG Tool and importing your `Runtime` folder. You do this by clicking **Import** -> **Import RPKGs Folder**, and there navigate to your Hitman: World of Assassination install directory and find the `Runtime` folder. Give it a second for the RPKGs to load, and you will now be in the resource view and should see the list of opened file archives.
 
@@ -57,7 +57,7 @@ Depends on 1 other hash files/resources:
 
 We will also need to export this `TEXD` file. Glacier 2's textures always come in pairs: the `TEXT` contains a scaled down version of the texture for fast streaming and the `TEXD` contains the full sized texture, both files have their own [mipmaps](https://en.wikipedia.org/wiki/Mipmap). HMTextureTools will still need both files as the `TEXT` file contains important metadata which the `TEXD` lacks. Extract this TEXD right next to its TEXT in the folder.
 
-# Convert the Texture to .tga
+## Convert the Texture to .tga
 
 For this step we will be using `HMTextureTools.exe` from TonyTools to convert our `TEXT` and `TEXD` to a format we can actually work with: TARGA.
 
@@ -75,11 +75,11 @@ This is by design; Simple Mod Framework has the capability to convert the .tga *
 
 HMTextureTools will also produce a .tonymeta file. Rename the extension to .meta and we will be ready to move on.
 
-# Edit the .tga
+## Edit the .tga
 
 Open the .tga in your favorite image editing program and get creative. Save it when you're done.
 
-# Make up New Hashes
+## Make up New Hashes
 
 Now we have the suit's diffuse texture and we've made our changes to it. Is it time to bring it back into the game? Not quite; simply **replacing** stock assets is a dirty way of doing things, and the consequences of doing so can be difficult to anticipate. If it happens that another item in the game uses the texture, things can look really crazy in ways that you didn't intend. The correct procedure is to introduce it to the game as a new texture and edit the outfit to use our new texture.
 
@@ -99,7 +99,7 @@ Let's put these two lines into the hash calculator, and it will give us `001F1D3
 
 This means that Simple Mod Framework, when applying the mod, will use this information to convert our .tga to a `TEXT` with the hash `001F1D36FD5588E7` and a `TEXD` with the hash `00366C40059C0978`. Great!
 
-# Patch the Texture Change in the Outfit
+## Patch the Texture Change in the Outfit
 
 Now that we have an entirely new texture, it's time to use it. Open QuickEntity Editor.
 
@@ -212,7 +212,7 @@ These are all the changes we need to make. Click **Save as** and choose **Save a
 
 We have our new texture, its meta file, and our entity patch. The last step is getting it into the game.
 
-# Making Our SMF Mod
+## Making Our SMF Mod
 
 Navigate to your Simple Mod Framework folder and open the `Mods` folder. Create a new folder in here called **My Cool Shirt**. Enter the folder.
 
