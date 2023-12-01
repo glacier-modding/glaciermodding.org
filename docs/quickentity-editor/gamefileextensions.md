@@ -98,7 +98,7 @@ First, note that this does involve extracting a bunch of game files and this wil
 ### Install game-file extensions
 
 - The script requires node.js so [download and install](https://nodejs.org/en) it.
-- Download [the Game File Extensions script](https://github.com/atampy25/quickentity-editor-next/releases/latest/download/Game_File_Extensions_Scripts.zip), you can extract this archive to the QuickEntity Editor folder.
+- Download [the Game File Extensions script](https://github.com/atampy25/quickentity-editor-next/releases/latest/download/Game_File_Extensions_Scripts.zip). It's easiest to extract this archive to the QuickEntity Editor folder. **Note:** If you installed QuickEntity Editor to Program Files, you won't be able to install Game File Extensions there due to Windows permission shenanigans. You'll need to extract the archive someplace else in such a case, somewhere that's not under Program Files.
 - Download [rpkg-cli](https://github.com/glacier-modding/RPKG-Tool/releases/latest) and extract it to the game-file-extensions folder.
 - Download [ResourceTool](https://github.com/OrfeasZ/ZHMTools/releases/latest) and extract it to the game-file-extensions folder.
 - In the game-file-extensions folder, rename the hash_list.txt file to hash_list2.txt.
