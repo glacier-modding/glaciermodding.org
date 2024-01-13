@@ -141,5 +141,20 @@
         "description": "Converts sniper map Hantu Port (Singapore) into a fully functional sandbox map with all gameplay features you'd expect.",
         "installLink": "",
         "nexusLink": "https://www.nexusmods.com/hitman3/mods/588"
+    },
+    {
+        "name": "Bonfire",
+        "author": "WINNODD",
+        "category": "Gameplay",
+        "imageURL": [
+            "/img/featured-mods/bonfire/bonfire-1.jpg",
+            "/img/featured-mods/bonfire/bonfire-2.jpg",
+            "/img/featured-mods/bonfire/bonfire-3.jpg",
+            "/img/featured-mods/bonfire/bonfire-4.jpg",
+            "/img/featured-mods/bonfire/bonfire-5.jpg"
+        ],
+        "description": "Bonfires where you can change your outfits have been set up in all WoA locations. Not including sniper maps.",
+        "installLink": "",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/717"
     }
 ]
