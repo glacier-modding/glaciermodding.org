@@ -5,6 +5,10 @@ description: Convert a Season 1 rigged model to the Season 3 rig
 
 # Port S1 Rigged Model to S3 Rig
 
+:::info
+This tutorial is now deprecated in favour of 2kpr's [rebone](/rebone) tool.
+:::
+
 If you use a body part model from season 1 in an outfit that is rigged for season 3, or vice versa, the result will look very silly indeed. This is because IOI altered the skeleton over the years.
 
 ![47 attempting to imitate his favorite brand of noodles](/img/rig_conversion/noodly.jpg)

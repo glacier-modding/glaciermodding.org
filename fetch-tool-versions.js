@@ -14,7 +14,7 @@ const fetchVersion = async (repo) => {
     }
 }
 
-const repos = ["glacier-modding/G2WwiseDataTool", "glacier-modding/RPKG-Tool"]
+const repos = ["glacier-modding/G2WwiseDataTool", "glacier-modding/RPKG-Tool", "2kpr/rebone", "2kpr/primport"]
 
 ;(async () => {
     const versions = {}

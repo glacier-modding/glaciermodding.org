@@ -34,6 +34,14 @@ module.exports = {
                             to: "/g2wwisedatatool",
                         },
                         {
+                            label: "Rebone",
+                            to: "/rebone",
+                        },
+                        {
+                            label: "PrimPort",
+                            to: "/primport",
+                        },
+                        {
                             to: "/tools/online/xtea",
                             label: "Online XTEA Tool",
                         },
