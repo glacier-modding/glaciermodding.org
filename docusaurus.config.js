@@ -30,7 +30,7 @@ module.exports = {
                             to: "/rpkg",
                         },
                         {
-                            label: "G2WiseDataTool",
+                            label: "G2WwiseDataTool",
                             to: "/g2wwisedatatool",
                         },
                         {
