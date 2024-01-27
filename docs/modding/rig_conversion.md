@@ -31,7 +31,7 @@ Then, in RPKG Tool, click **Import** -> **Import RPKG File** and select your new
 
 ## Step 1: Export model
 
-Right-click the `PRIM` in the Resource View, nested under your new RPKG. Click *Extract 00B618F2DCD237B2.PRIM to GLB file* and make a new folder. Name it something so you can understand that this is the original season 1 version, like shirt_s1. Export the GLB to this folder.
+Right-click the `PRIM` in the Resource View, nested under your new RPKG. Click _Extract 00B618F2DCD237B2.PRIM to GLB file_ and make a new folder. Name it something so you can understand that this is the original season 1 version, like shirt_s1. Export the GLB to this folder.
 
 ## Step 2: Edit hash depends
 
@@ -39,7 +39,7 @@ With your `PRIM` selected in RPKG Tool, click **Edit Hash Depends** under **Deta
 
 ## Step 3: Export model again
 
-RPKG Tool will close your RPKG archive now that it's been regenerated. Go to the bottom of the Resource View and expand it. Find your `PRIM` again and click on it. You will note that the first depend hash has been altered to our new `BORG`. Once again right-click on the `PRIM` in the Resource View and click *Extract 00B618F2DCD237B2.PRIM to GLB file* and make a new folder. Name it something so you can understand that this is the season 3 depends version, like shirt_s3. Export the GLB to this folder.
+RPKG Tool will close your RPKG archive now that it's been regenerated. Go to the bottom of the Resource View and expand it. Find your `PRIM` again and click on it. You will note that the first depend hash has been altered to our new `BORG`. Once again right-click on the `PRIM` in the Resource View and click _Extract 00B618F2DCD237B2.PRIM to GLB file_ and make a new folder. Name it something so you can understand that this is the season 3 depends version, like shirt_s3. Export the GLB to this folder.
 
 ## Step 4: Overwrite meta files
 
@@ -53,11 +53,11 @@ You can now enter the shirt_s1 folder, and go into the REBUILT folder nested ins
 
 It would be prudent to generate a new hash for this converted `PRIM` in RPKG Tool using **Utilities** -> **Hash Calculator**, so you don't overwrite the original. In this case, we can tweak the original IOI assembly path:
 
-```[assembly:/_pro/characters/assets/individuals/colorado/ezraberg/geometry/male_reg_ezraberg.wl2?/shirt.weightedprim](bodypart).pc_weightedprim```
+`[assembly:/_pro/characters/assets/individuals/colorado/ezraberg/geometry/male_reg_ezraberg.wl2?/shirt.weightedprim](bodypart).pc_weightedprim`
 
 And simply append s3_rig to it:
 
-```[assembly:/_pro/characters/assets/individuals/colorado/ezraberg/geometry/male_reg_ezraberg.wl2?/shirt_s3_rig.weightedprim](bodypart).pc_weightedprim```
+`[assembly:/_pro/characters/assets/individuals/colorado/ezraberg/geometry/male_reg_ezraberg.wl2?/shirt_s3_rig.weightedprim](bodypart).pc_weightedprim`
 
 This hashes to `00D6AAA15BD7069F`, so that will be the hash of our new `PRIM`. Technically you can hash any length of text you want, but it's nice to follow convention, no?
 

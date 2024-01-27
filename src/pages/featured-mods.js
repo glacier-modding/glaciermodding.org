@@ -50,7 +50,7 @@ export default function FeaturedMods() {
             <main>
                 <div className="container">
                     {Array.from(
-                        new Set(featuredModsData.map((mod) => mod.category)),
+                        new Set(featuredModsData.map((mod) => mod.category))
                     ).map((category) => (
                         <div key={category} className="margin-vert--md">
                             <h2>{category}</h2>

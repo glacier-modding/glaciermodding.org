@@ -12,10 +12,18 @@ export default function Rebone() {
         >
             <header className="hero hero--primary">
                 <div className="container">
-                <h1 className="hero__title" style={{ marginBottom: '0px' }}>Rebone</h1>
-                    <p className="hero__subtitle" style={{ fontSize: '18px', marginTop: '0px' }}>Author: 2kpr</p>
+                    <h1 className="hero__title" style={{ marginBottom: "0px" }}>
+                        Rebone
+                    </h1>
+                    <p
+                        className="hero__subtitle"
+                        style={{ fontSize: "18px", marginTop: "0px" }}
+                    >
+                        Author: 2kpr
+                    </p>
                     <p className="hero__subtitle">
-                        Rebone is a tool for porting Hitman WoA S1 weightedprims to S2 and S3 bonerigs.
+                        Rebone is a tool for porting Hitman WoA S1 weightedprims
+                        to S2 and S3 bonerigs.
                     </p>
                     <div className="dropdown dropdown--hoverable">
                         <button className="button button--secondary">
@@ -49,10 +57,7 @@ export default function Rebone() {
                         </ul>
                     </div>
                     <span className="margin-horiz--sm"></span>
-                    <a
-                        href="/docs/rebone"
-                        className="button button--info"
-                    >
+                    <a href="/docs/rebone" className="button button--info">
                         How to use
                     </a>
                     <div className="margin-vert--sm">
@@ -68,8 +73,8 @@ export default function Rebone() {
                 </div>
             </header>
             <main>
-               <div className="container margin-vert--lg">
-                    <img src="/img/rebone/gui.png"/>
+                <div className="container margin-vert--lg">
+                    <img src="/img/rebone/gui.png" />
                 </div>
             </main>
         </Layout>

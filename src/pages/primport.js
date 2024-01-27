@@ -12,10 +12,18 @@ export default function PrimPort() {
         >
             <header className="hero hero--primary">
                 <div className="container">
-                    <h1 className="hero__title" style={{ marginBottom: '0px' }}>PrimPort</h1>
-                    <p className="hero__subtitle" style={{ fontSize: '18px', marginTop: '0px' }}>Author: 2kpr</p>
+                    <h1 className="hero__title" style={{ marginBottom: "0px" }}>
+                        PrimPort
+                    </h1>
+                    <p
+                        className="hero__subtitle"
+                        style={{ fontSize: "18px", marginTop: "0px" }}
+                    >
+                        Author: 2kpr
+                    </p>
                     <p className="hero__subtitle">
-                        PrimPort is a tool for porting PRIM files between Hitman versions: HMA, Alpha, HM2016, and WoA.
+                        PrimPort is a tool for porting PRIM files between Hitman
+                        versions: HMA, Alpha, HM2016, and WoA.
                     </p>
                     <div className="dropdown dropdown--hoverable">
                         <button className="button button--secondary">
@@ -49,10 +57,7 @@ export default function PrimPort() {
                         </ul>
                     </div>
                     <span className="margin-horiz--sm"></span>
-                    <a
-                        href="/docs/primport"
-                        className="button button--info"
-                    >
+                    <a href="/docs/primport" className="button button--info">
                         How to use
                     </a>
                     <div className="margin-vert--sm">

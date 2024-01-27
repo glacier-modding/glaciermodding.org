@@ -7,10 +7,10 @@ description: Patching suits with new parts
 
 For this tutorial, we will go over patching new parts to an outfit, like a hat or sunglasses. In broad steps, this is what we will do:
 
--   Start with an outfit we want to modify
--   Find something interesting to add to it
--   Open the outfit's entity with QuickEntity Editor and add the new pieces
--   Package it all up in an SMF mod
+-   Start with an outfit we want to modify
+-   Find something interesting to add to it
+-   Open the outfit's entity with QuickEntity Editor and add the new pieces
+-   Package it all up in an SMF mod
 
 Before continuing, please make sure you have all the tools in the [requirements](.) section. Ideally, you should get your feet wet with [basic retexturing](basicretexture.md) first to acclimate yourself to these tools.
 
@@ -34,23 +34,23 @@ In the tree, expand the parent entity named `OUTFIT_Agent47_Sapienza_HeroA_V0`. 
 
 ```json
 {
-	"parent": "623a89a45e4ace1f",
-	"name": "Part_Glasses",
-	"factory": "[modules:/zbodypartentity.class].pc_entitytype",
-	"blueprint": "[modules:/zbodypartentity.class].pc_entityblueprint",
-	"properties": {
-		"m_pMeshResource": {
-			"type": "ZRuntimeResourceID",
-			"value": {
-				"resource": "[assembly:/_pro/characters/assets/hero/agent47/geometry/male_reg_agent47_sapienza.wl2?/glasses.weightedprim](bodypart).pc_weightedprim",
-				"flag": "5F"
-			}
-		},
-		"m_IsHiddenInVR": {
-			"type": "bool",
-			"value": true
-		}
-	}
+    "parent": "623a89a45e4ace1f",
+    "name": "Part_Glasses",
+    "factory": "[modules:/zbodypartentity.class].pc_entitytype",
+    "blueprint": "[modules:/zbodypartentity.class].pc_entityblueprint",
+    "properties": {
+        "m_pMeshResource": {
+            "type": "ZRuntimeResourceID",
+            "value": {
+                "resource": "[assembly:/_pro/characters/assets/hero/agent47/geometry/male_reg_agent47_sapienza.wl2?/glasses.weightedprim](bodypart).pc_weightedprim",
+                "flag": "5F"
+            }
+        },
+        "m_IsHiddenInVR": {
+            "type": "bool",
+            "value": true
+        }
+    }
 }
 ```
 
@@ -68,7 +68,7 @@ With the Part_Glasses entity you copied in your clipboard, right-click the root 
 
 There is one final step before we're done. The root entity has an array of body parts that it should render. We'll need to add the sunglasses to this array for the body part to show up in-game.
 
-Right-click Part_Glasses and click **Copy ID**. Now, click the root entity `OUTFIT_Agent47_Absolution_Gloves_HeroA_V0` and scroll down until you find `m_aBodyParts`. Here, you will find all the body part pieces the outfit is made of. 47's head, hands, jacket, pants, shoes, etc. Add a comma to the last body part, press enter to make a new line, and paste in the ID of the Part_Glasses entity that you just copied. Make sure it's enclosed in quotes like all the others. Finally, ensure it says *Valid entity* just above the editing panel and not *Invalid JSON*.
+Right-click Part_Glasses and click **Copy ID**. Now, click the root entity `OUTFIT_Agent47_Absolution_Gloves_HeroA_V0` and scroll down until you find `m_aBodyParts`. Here, you will find all the body part pieces the outfit is made of. 47's head, hands, jacket, pants, shoes, etc. Add a comma to the last body part, press enter to make a new line, and paste in the ID of the Part_Glasses entity that you just copied. Make sure it's enclosed in quotes like all the others. Finally, ensure it says _Valid entity_ just above the editing panel and not _Invalid JSON_.
 
 Now that the sunglasses body part is in the array, click **Save as** -> **Save as patch file**. Name it something like `absolution_glasses.entity.patch.json` and save it to your disk. Next, we will make an SMF mod to apply it to our game.
 
@@ -82,14 +82,14 @@ Make a new file called **manifest.json** in the folder and populate it with the 
 
 ```json
 {
-	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-	"id": "MyName.AbsoSuitGlasses",
-	"name": "Absolution Suit with Glasses",
-	"description": "Makes the Absolution Suit much cooler.",
-	"authors": ["My Name"],
-	"frameworkVersion": "2.33.4",
-	"version": "1.0.0",
-	"contentFolders": ["content"]
+    "$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
+    "id": "MyName.AbsoSuitGlasses",
+    "name": "Absolution Suit with Glasses",
+    "description": "Makes the Absolution Suit much cooler.",
+    "authors": ["My Name"],
+    "frameworkVersion": "2.33.4",
+    "version": "1.0.0",
+    "contentFolders": ["content"]
 }
 ```
 
@@ -123,7 +123,7 @@ And that is how to patch an outfit to add new body parts. Of course, as you can 
 
 ## Addendum
 
-If you have any doubts or difficulties with adding certain things to your outfits, the best question you can ask is, *"how are IOI doing it?"* You can learn a lot by opening `TEMP` files in QuickEntity Editor and studying the makeup of the outfit. Do not be afraid to open the RPKG Tool, search for an outfit, and study any `TEMP` files you find.
+If you have any doubts or difficulties with adding certain things to your outfits, the best question you can ask is, _"how are IOI doing it?"_ You can learn a lot by opening `TEMP` files in QuickEntity Editor and studying the makeup of the outfit. Do not be afraid to open the RPKG Tool, search for an outfit, and study any `TEMP` files you find.
 
 Something else you can do is open RPKG Tool and search for `PRIM` files named after articles of clothing, such as jacket, shirt, pants, shoes, etc. From there, you can select a `PRIM` that seems interesting, and in the 3D Viewer tab, you can see what the clothing looks like, and if you want to incorporate it into an outfit, you can see how IOI implemented the model by looking at the reverse hash depends in the Details tab. Under the reverse hash depends, you should see a list of `TEMP` outfit files. By opening any of them in QuickEntity Editor and looking in the tree, you can find the clothing's entity.
 
@@ -135,14 +135,14 @@ And one final note on `PRIM` files: any body parts that you put into your outfit
 
 ```json
 {
-	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-	"id": "MyName.AbsoSuitGlasses",
-	"name": "Absolution Suit with Glasses",
-	"description": "Makes the Absolution Suit much cooler.",
-	"authors": ["My Name"],
-	"frameworkVersion": "2.33.4",
-	"version": "1.0.0",
-	"contentFolders": ["content"],
+    "$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
+    "id": "MyName.AbsoSuitGlasses",
+    "name": "Absolution Suit with Glasses",
+    "description": "Makes the Absolution Suit much cooler.",
+    "authors": ["My Name"],
+    "frameworkVersion": "2.33.4",
+    "version": "1.0.0",
+    "contentFolders": ["content"],
     "dependencies": ["0049F083DC18CC1F", "00087BEFE0EFFF66"] // <----- Right here!
 }
 ```

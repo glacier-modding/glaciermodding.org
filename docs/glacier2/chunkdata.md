@@ -19,38 +19,38 @@ Note that while chunk0 can be accessed _from_ anywhere, it is a one-way street; 
 
 ### Hitman 3
 
-| chunk    | codename     | name         | location                    | parent
-| -------- | ------------ | ------------ | --------------------------- | ---------
-| Chunk 0  | Golden       | Gecko / Boot | Dubai                       | None
-| Chunk 1  |              | Base         |                             | Super
-| Chunk 2  |              | Season3      |                             | Base
-| Chunk 3  | Ancestral    | Bulldog      | Dartmoor                    | Season3
-| Chunk 4  | Edgy         | Fox          | Berlin                      | Season3
-| Chunk 5  | Elegant      | Llama        | Mendoza                     | Season3
-| Chunk 6  | Wet          | Rat          | Chongqing                   | Season3
-| Chunk 7  | Trapped      | Wolverine    | Romania                     | Season3
-| Chunk 8  |              | Legacy       |                             | Base
-| Chunk 9  |              | Season2      |                             | Legacy
-| Chunk 10 | Opulent      | Stingray     | Haven Island                | Season2
-| Chunk 11 | Caged        | Falcon       | Prison Sniper Map           | Season2
-| Chunk 12 | Greedy       | Raccoon      | New York                    | Season2
-| Chunk 13 | Salty        | Seagull      | Hantu Port Sniper Map       | Season2
-| Chunk 14 | Austria      | Hawk         | Himmelstein Sniper Map      | Season2
-| Chunk 15 | The Ark      | Magpie       | Isle of Sgàil               | Season2
-| Chunk 16 | Suburbia     | Skunk        | Whittleton Creek            | Season2
-| Chunk 17 | Mumbai       | Mongoose     | Mumbai                      | Season2
-| Chunk 18 | Colombia     | Hippo        | Santa Fortuna               | Season2
-| Chunk 19 | Miami        | Flamingo     | Miami                       | Season2
-| Chunk 20 | New Zealand  | Sheep        | Hawke’s Bay                 | Season2
-| Chunk 21 |              | Season1      |                             | Legacy
-| Chunk 22 | Hokkaido     | Snowcrane    | Hokkaido                    | Season1
-| Chunk 23 | Colorado     | Bull         | Colorado                    | Season1
-| Chunk 24 | Bangkok      | Tiger        | Bangkok                     | Season1
-| Chunk 25 | Marrakesh    | Spider       | Marrakesh                   | Season1
-| Chunk 26 | Coastal Town | Octopus      | Sapienza                    | Season1
-| Chunk 27 | Paris        | Peacock      | Paris                       | Season1
-| Chunk 28 | Rocky        | Dugong       | Ambrose Island              | Season3
-| Chunk 29 | Snug         | Vanilla      | Secret Location (Safehouse) | Season3
+| chunk    | codename     | name         | location                    | parent  |
+| -------- | ------------ | ------------ | --------------------------- | ------- |
+| Chunk 0  | Golden       | Gecko / Boot | Dubai                       | None    |
+| Chunk 1  |              | Base         |                             | Super   |
+| Chunk 2  |              | Season3      |                             | Base    |
+| Chunk 3  | Ancestral    | Bulldog      | Dartmoor                    | Season3 |
+| Chunk 4  | Edgy         | Fox          | Berlin                      | Season3 |
+| Chunk 5  | Elegant      | Llama        | Mendoza                     | Season3 |
+| Chunk 6  | Wet          | Rat          | Chongqing                   | Season3 |
+| Chunk 7  | Trapped      | Wolverine    | Romania                     | Season3 |
+| Chunk 8  |              | Legacy       |                             | Base    |
+| Chunk 9  |              | Season2      |                             | Legacy  |
+| Chunk 10 | Opulent      | Stingray     | Haven Island                | Season2 |
+| Chunk 11 | Caged        | Falcon       | Prison Sniper Map           | Season2 |
+| Chunk 12 | Greedy       | Raccoon      | New York                    | Season2 |
+| Chunk 13 | Salty        | Seagull      | Hantu Port Sniper Map       | Season2 |
+| Chunk 14 | Austria      | Hawk         | Himmelstein Sniper Map      | Season2 |
+| Chunk 15 | The Ark      | Magpie       | Isle of Sgàil               | Season2 |
+| Chunk 16 | Suburbia     | Skunk        | Whittleton Creek            | Season2 |
+| Chunk 17 | Mumbai       | Mongoose     | Mumbai                      | Season2 |
+| Chunk 18 | Colombia     | Hippo        | Santa Fortuna               | Season2 |
+| Chunk 19 | Miami        | Flamingo     | Miami                       | Season2 |
+| Chunk 20 | New Zealand  | Sheep        | Hawke’s Bay                 | Season2 |
+| Chunk 21 |              | Season1      |                             | Legacy  |
+| Chunk 22 | Hokkaido     | Snowcrane    | Hokkaido                    | Season1 |
+| Chunk 23 | Colorado     | Bull         | Colorado                    | Season1 |
+| Chunk 24 | Bangkok      | Tiger        | Bangkok                     | Season1 |
+| Chunk 25 | Marrakesh    | Spider       | Marrakesh                   | Season1 |
+| Chunk 26 | Coastal Town | Octopus      | Sapienza                    | Season1 |
+| Chunk 27 | Paris        | Peacock      | Paris                       | Season1 |
+| Chunk 28 | Rocky        | Dugong       | Ambrose Island              | Season3 |
+| Chunk 29 | Snug         | Vanilla      | Secret Location (Safehouse) | Season3 |
 
 ### Hitman 2
 

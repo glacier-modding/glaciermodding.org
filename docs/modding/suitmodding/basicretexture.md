@@ -7,12 +7,12 @@ description: Basic Retexture
 
 For this tutorial, we will go over a basic texture override for a suit. In broad steps, this is what we will do:
 
--   Extract the texture we're looking for with RPKG Tool
--   Convert the texture to a workable .tga with TonyTools
--   Make our changes to the texture
--   Come up with a new hash for our texture (so we don't overwrite stock assets; that's bad practice!)
--   Open the suit's outfit entity with QuickEntity Editor and override the suit's stock texture with our custom texture
--   Package it all up in an SMF mod
+-   Extract the texture we're looking for with RPKG Tool
+-   Convert the texture to a workable .tga with TonyTools
+-   Make our changes to the texture
+-   Come up with a new hash for our texture (so we don't overwrite stock assets; that's bad practice!)
+-   Open the suit's outfit entity with QuickEntity Editor and override the suit's stock texture with our custom texture
+-   Package it all up in an SMF mod
 
 Before continuing, please make sure you have all the tools in the [requirements](.)!
 
@@ -87,13 +87,13 @@ So we need to figure out a new `TEXT` hash and a new `TEXD` hash. RPKG Tool has 
 
 Anything you enter in the left field will be hashed, and the output will be shown in the right field, line by line. Now consider the `TEXT` and `TEXD` we've extracted. Their assembly paths are, respectively:
 
-- \[assembly:/_pro/characters/assets/hero/agent47/textures/male_reg_agent47_bangkok_shirt.texture?/diffuse_a.tex](ascolormap).pc_tex
-- \[assembly:/_pro/characters/assets/hero/agent47/textures/male_reg_agent47_bangkok_shirt.texture?/diffuse_a.tex](ascolormap).pc_mipblock1
+-   \[assembly:/\_pro/characters/assets/hero/agent47/textures/male_reg_agent47_bangkok_shirt.texture?/diffuse_a.tex](ascolormap).pc_tex
+-   \[assembly:/\_pro/characters/assets/hero/agent47/textures/male_reg_agent47_bangkok_shirt.texture?/diffuse_a.tex](ascolormap).pc_mipblock1
 
-We can use these assembly paths to come up with some of our own. You don't *have* to; you can type anything into the left field to make a hash, anything at all, but why deviate from the norm that IOI has set up? So let's tweak these paths to make our own assembly paths. Here's an example:
+We can use these assembly paths to come up with some of our own. You don't _have_ to; you can type anything into the left field to make a hash, anything at all, but why deviate from the norm that IOI has set up? So let's tweak these paths to make our own assembly paths. Here's an example:
 
-- \[assembly:/_pro/characters/assets/hero/agent47/textures/my_cool_and_awesome_shirt.texture?/diffuse_a.tex](ascolormap).pc_tex
-- \[assembly:/_pro/characters/assets/hero/agent47/textures/my_cool_and_awesome_shirt.texture?/diffuse_a.tex](ascolormap).pc_mipblock1
+-   \[assembly:/\_pro/characters/assets/hero/agent47/textures/my_cool_and_awesome_shirt.texture?/diffuse_a.tex](ascolormap).pc_tex
+-   \[assembly:/\_pro/characters/assets/hero/agent47/textures/my_cool_and_awesome_shirt.texture?/diffuse_a.tex](ascolormap).pc_mipblock1
 
 Let's put these two lines into the hash calculator, and it will give us `001F1D36FD5588E7` and `00366C40059C0978`, respectively. With this, let's rename our .texture.tga and .meta files to `001F1D36FD5588E7~00366C40059C0978.texture.tga` and `001F1D36FD5588E7~00366C40059C0978.texture.tga.meta`.
 
@@ -137,74 +137,72 @@ If you've done it right, the entity should look like this:
 
 ```json
 {
-	"parent": "c3c9a53073fbca82",
-	"name": "male_reg_agent47_bangkok_shirt",
-	"factory": "[assembly:/_pro/characters/assets/hero/agent47/materials/male_reg_agent47_bangkok_shirt.mi].pc_entitytype",
-	"blueprint": "[assembly:/_pro/characters/assets/hero/agent47/materials/male_reg_agent47_bangkok_shirt.mi].pc_entityblueprint",
-	"properties": {
-		"m_mTransform": {
-			"type": "SMatrix43",
-			"value": {
-				"rotation": {
-					"x": 0,
-					"y": 0,
-					"z": 0
-				},
-				"position": {
-					"x": 0,
-					"y": 0,
-					"z": 0
-				}
-			}
-		},
-		"ConstantVector1D_01_Value_op": {
-			"type": "IRenderMaterialEntity.EModifierOperation",
-			"value": "eReplace"
-		},
-		"ConstantVector1D_01_Value": {
-			"type": "float32",
-			"value": 0.20999999344348907
-		},
-		"ConstantVector1D_05_Value_op": {
-			"type": "IRenderMaterialEntity.EModifierOperation",
-			"value": "eReplace"
-		},
-		"ConstantVector1D_05_Value": {
-			"type": "float32",
-			"value": 0.4699999988079071
-		},
-		"ConstantVector1D_04_Value_op": {
-			"type": "IRenderMaterialEntity.EModifierOperation",
-			"value": "eReplace"
-		},
-		"ConstantVector1D_06_Value_op": {
-			"type": "IRenderMaterialEntity.EModifierOperation",
-			"value": "eReplace"
-		},
-		"Texture2D_01": {
-			"type": "ZRuntimeResourceID",
-			"value": {
-				"resource": "001F1D36FD5588E7",
-				"flag": "5F"
-			}
-		},
-		"Texture2D_01_enab": {
-			"type": "bool",
-			"value": true
-		},
-		"Clients": {
-			"type": "TArray<SEntityTemplateReference>",
-			"value": [
-				"c3c9a53073fbca82"
-			],
-			"postInit": true
-		},
-		"m_eidParent": {
-			"type": "SEntityTemplateReference",
-			"value": "c3c9a53073fbca82",
-			"postInit": true
-		}
-	}
+    "parent": "c3c9a53073fbca82",
+    "name": "male_reg_agent47_bangkok_shirt",
+    "factory": "[assembly:/_pro/characters/assets/hero/agent47/materials/male_reg_agent47_bangkok_shirt.mi].pc_entitytype",
+    "blueprint": "[assembly:/_pro/characters/assets/hero/agent47/materials/male_reg_agent47_bangkok_shirt.mi].pc_entityblueprint",
+    "properties": {
+        "m_mTransform": {
+            "type": "SMatrix43",
+            "value": {
+                "rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "position": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ConstantVector1D_01_Value_op": {
+            "type": "IRenderMaterialEntity.EModifierOperation",
+            "value": "eReplace"
+        },
+        "ConstantVector1D_01_Value": {
+            "type": "float32",
+            "value": 0.20999999344348907
+        },
+        "ConstantVector1D_05_Value_op": {
+            "type": "IRenderMaterialEntity.EModifierOperation",
+            "value": "eReplace"
+        },
+        "ConstantVector1D_05_Value": {
+            "type": "float32",
+            "value": 0.4699999988079071
+        },
+        "ConstantVector1D_04_Value_op": {
+            "type": "IRenderMaterialEntity.EModifierOperation",
+            "value": "eReplace"
+        },
+        "ConstantVector1D_06_Value_op": {
+            "type": "IRenderMaterialEntity.EModifierOperation",
+            "value": "eReplace"
+        },
+        "Texture2D_01": {
+            "type": "ZRuntimeResourceID",
+            "value": {
+                "resource": "001F1D36FD5588E7",
+                "flag": "5F"
+            }
+        },
+        "Texture2D_01_enab": {
+            "type": "bool",
+            "value": true
+        },
+        "Clients": {
+            "type": "TArray<SEntityTemplateReference>",
+            "value": ["c3c9a53073fbca82"],
+            "postInit": true
+        },
+        "m_eidParent": {
+            "type": "SEntityTemplateReference",
+            "value": "c3c9a53073fbca82",
+            "postInit": true
+        }
+    }
 }
 ```
 
@@ -220,14 +218,14 @@ Make a new file called **manifest.json** in the folder and populate it with the 
 
 ```json
 {
-	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-	"id": "MyName.MyCoolShirt",
-	"name": "My Cool Shirt",
-	"description": "Makes the Casual Suit totally rad.",
-	"authors": ["My Name"],
-	"frameworkVersion": "2.33.4",
-	"version": "1.0.0",
-	"contentFolders": ["content"]
+    "$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
+    "id": "MyName.MyCoolShirt",
+    "name": "My Cool Shirt",
+    "description": "Makes the Casual Suit totally rad.",
+    "authors": ["My Name"],
+    "frameworkVersion": "2.33.4",
+    "version": "1.0.0",
+    "contentFolders": ["content"]
 }
 ```
 

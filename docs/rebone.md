@@ -13,6 +13,7 @@ Source code can be found [https://github.com/2kpr/rebone](https://github.com/2kp
 A tool for porting Hitman WoA S1 weightedprims to S2 and S3 bonerigs
 
 #### CLI Usage:
+
 ```
 Usage: rebone.exe [INPUT_PRIM] [FROM_BORG] [TO_BORG] [OUTPUT_PRIM]
 
@@ -27,9 +28,11 @@ Options:
 ```
 
 #### GUI Usage:
+
 ![rebone](/img/rebone/gui.png)
 
 #### Example Output:
+
 ```
 rebone.exe 001FA83D69D89B24.PRIM 00375A5DF0DE7051.BORG 0017416135CF879C.BORG output.prim
 

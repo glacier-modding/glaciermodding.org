@@ -4,7 +4,7 @@ const fetchVersion = async (repo) => {
     try {
         const fetch = (await import("node-fetch")).default
         const response = await fetch(
-            `https://api.github.com/repos/${repo}/releases/latest`,
+            `https://api.github.com/repos/${repo}/releases/latest`
         )
         const data = await response.json()
         return data.tag_name
@@ -14,7 +14,12 @@ const fetchVersion = async (repo) => {
     }
 }
 
-const repos = ["glacier-modding/G2WwiseDataTool", "glacier-modding/RPKG-Tool", "2kpr/rebone", "2kpr/primport"]
+const repos = [
+    "glacier-modding/G2WwiseDataTool",
+    "glacier-modding/RPKG-Tool",
+    "2kpr/rebone",
+    "2kpr/primport",
+]
 
 ;(async () => {
     const versions = {}
@@ -34,7 +39,7 @@ const repos = ["glacier-modding/G2WwiseDataTool", "glacier-modding/RPKG-Tool", "
         fs.writeFileSync("./tool-versions.json", JSON.stringify(versions))
     } else {
         console.log(
-            "One or more versions couldn't be fetched. File will not be changed.",
+            "One or more versions couldn't be fetched. File will not be changed."
         )
     }
 })()
