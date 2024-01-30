@@ -1,0 +1,19 @@
+{
+  "name": "hitman-wasm-xtea",
+  "collaborators": [
+    "A.W. Stanley <aws@reversing.space>"
+  ],
+  "description": "Simple `packagedefinition.txt`/`thumbs.dat` processor code (WASM).\n",
+  "version": "0.1.1",
+  "license": "Zlib",
+  "files": [
+    "hitwasm_xtea_bg.wasm",
+    "hitwasm_xtea.js",
+    "hitwasm_xtea.d.ts"
+  ],
+  "module": "hitwasm_xtea.js",
+  "types": "hitwasm_xtea.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
