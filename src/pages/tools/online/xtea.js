@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
 import Layout from "@theme/Layout"
-import Admonition from "@theme/Admonition"
 import init, * as xtea_wasm from "../../../../static/tools/hitwasm-xtea/hitwasm_xtea";
 
 // Thumbs and PackageDefinitions Header
@@ -187,9 +186,12 @@ function autopatch() {
 }
 
 export default function Xtea() {
-    useEffect(async () => {
-        await init();
-        xtea_wasm.initSync();
+    useEffect(() => {
+        async function initWasm () {
+            await init();
+            xtea_wasm.initSync();
+        }
+        initWasm();
     }, []);
     return (
         <Layout
