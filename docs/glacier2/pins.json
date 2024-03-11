@@ -1860,7 +1860,10 @@
         "hash": "0044A6484C4B73EB",
         "path": "[modules:/zdifficultycondition.class].pc_entitytype",
         "in": ["Get"],
-        "out": ["OnTrue"]
+        "out": [
+            "OnTrue",
+            "OnFalse"
+        ]
     },
     {
         "hash": "0087BD665458EF0B",
@@ -3968,7 +3971,17 @@
             "RecordTargetPositionForSearch",
             "ForceSearch"
         ],
-        "out": ["OnTargetDead"]
+        "out": [
+            "OnTargetDead",
+            "OnTargetUnconscious",
+            "OnTargetInRange",
+            "OnTargetOutOfRange",
+            "OnAllEscortsDied",
+            "OnTimeToSearch",
+            "OnSearchStarted",
+            "OnStartIntermediateFailed",
+            "OnStartIntermediateOnActorFailed"
+        ]
     },
     {
         "hash": "00E1C9FDCDBC46E7",
@@ -4734,7 +4747,14 @@
         "hash": "00F3078196CE27DC",
         "path": "[modules:/zsecuritysystemrecorder.class].pc_entitytype",
         "in": ["Erase", "Destroy", "CantKeepRecordingsNotification"],
-        "out": ["OnEvent", "OnErased"]
+        "out": [
+            "OnEvent",
+            "OnErased",
+            "OnRecorded",
+            "OnDestroyed",
+            "OnHandleBreakRecorder",
+            "OnCameraDestroyed"
+        ]
     },
     {
         "hash": "004D749298A5174D",
@@ -9122,7 +9142,9 @@
             "SetHero",
             "GetHero"
         ],
-        "out": []
+        "out": [
+            "OnGetHealth"
+        ]
     },
     {
         "hash": "00EECFE1C931DB91",
