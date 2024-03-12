@@ -1853,7 +1853,7 @@
     {
         "hash": "00A382D991592FB3",
         "path": "[modules:/zdynamicobjectentity.class].pc_entitytype",
-        "in": ["GetData", "3286244325"],
+        "in": ["GetData", "NotifyDataChanged"],
         "out": ["Data"]
     },
     {
@@ -3613,17 +3613,17 @@
         "hash": "000AE6A4A1FBD997",
         "path": "[modules:/zherocontaineritemaction.class].pc_entitytype",
         "in": [
-            "11826585",
+            "GetContainerItem",
             "2073148177",
-            "849479552",
-            "775194024",
+            "SetContainerItem",
+            "FindEquippedContainerItem",
             "PlaceIntoContainerItem",
-            "122140494",
+            "PlaceIntoContainerItemInstant",
             "EquipContainedItem",
             "SetHero",
             "GetHero"
         ],
-        "out": ["OnContainerItemSet", "ContainerItem"]
+        "out": ["OnContainerItemSet", "ContainerItem", "NoContainerItem", "OnItemPlaced"]
     },
     {
         "hash": "0022BA8DF620D6C3",
