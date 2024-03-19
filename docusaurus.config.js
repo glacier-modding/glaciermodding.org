@@ -100,6 +100,9 @@ module.exports = {
                             label: "Discord Server",
                             href: "https://discord.gg/6UDtuYhZP6",
                         },
+                        {
+                            html: "<a href='mailto:contact@glaciermodding.org'>contact@glaciermodding.org</a>"
+                        }
                     ],
                 },
             ],
