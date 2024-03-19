@@ -156,5 +156,116 @@
         "description": "Bonfires where you can change your outfits have been set up in all WoA locations. Not including sniper maps.",
         "installLink": "",
         "nexusLink": "https://www.nexusmods.com/hitman3/mods/717"
+    },
+    {
+        "name": "Simple Health Bar",
+        "author": "Notex",
+        "category": "User Interface",
+        "imageURL": [
+            "/img/featured-mods/simple-health-bar/simple-health-bar-1.jpg"
+        ],
+        "description": "Adds a simple health bar to the left of the minimap.",
+        "installLink": "",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/732"
+    },
+    {
+        "name": "Simple HUD Toggle",
+        "author": "Notex",
+        "category": "User Interface",
+        "imageURL": [
+            "/img/featured-mods/simple-hud-toggle/simple-hud-toggle-1.jpg"
+        ],
+        "description": "Adds a keybind (defaults to Ctrl + F2) which allows you to toggle the in-game HUD easily.",
+        "installLink": "",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/743"
+    },
+    {
+        "name": "Burn's Better Launcher (Steam Only)",
+        "author": "Burn The Witch",
+        "category": "Utilities",
+        "imageURL": [
+            "/img/featured-mods/burns-better-launcher/burns-better-launcher-1.jpg"
+        ],
+        "description": "A replacement launcher with Quality-of-Life features. Select between Retail or Peacock servers directly from the launcher, and open SMF. Also allows users to deploy mods and launch the game on their server of choice, making mod testing much more convenient. Also cleans up instances of Peacock when closing the game for a smoother experience.",
+        "installLink": "",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/735"
+    },
+    {
+        "name": "The Killers' Tourist Outfit",
+        "author": "Dribbleondo",
+        "category": "Apparel",
+        "imageURL": [
+            "/img/featured-mods/the-killers-tourist-outfit/the-killers-tourist-outfit-1.jpg",
+            "/img/featured-mods/the-killers-tourist-outfit/the-killers-tourist-outfit-2.jpg",
+            "/img/featured-mods/the-killers-tourist-outfit/the-killers-tourist-outfit-3.jpg",
+            "/img/featured-mods/the-killers-tourist-outfit/the-killers-tourist-outfit-4.jpg",
+            "/img/featured-mods/the-killers-tourist-outfit/the-killers-tourist-outfit-5.jpg"
+        ],
+        "description": "Custom suit based on the outfit The Killer wears in the movie of the same name when incognito.",
+        "installLink": "",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/736"
+    },
+    {
+        "name": "If You Know You Know replaces Lucky Ducky suit",
+        "author": "Dribbleondo",
+        "category": "Apparel",
+        "imageURL": [
+            "/img/featured-mods/if-you-know-you-know-replaces-lucky-ducky-suit/if-you-know-you-know-replaces-lucky-ducky-suit-1.jpg",
+            "/img/featured-mods/if-you-know-you-know-replaces-lucky-ducky-suit/if-you-know-you-know-replaces-lucky-ducky-suit-2.jpg",
+            "/img/featured-mods/if-you-know-you-know-replaces-lucky-ducky-suit/if-you-know-you-know-replaces-lucky-ducky-suit-3.jpg",
+            "/img/featured-mods/if-you-know-you-know-replaces-lucky-ducky-suit/if-you-know-you-know-replaces-lucky-ducky-suit-4.jpg",
+            "/img/featured-mods/if-you-know-you-know-replaces-lucky-ducky-suit/if-you-know-you-know-replaces-lucky-ducky-suit-5.jpg"
+        ],
+        "description": "Replaces the Lucky Ducky hoodie with a shirt IO used to sell showcasing many of their easter eggs in WoA.",
+        "installLink": "",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/741"
+    },
+    {
+        "name": "Simple Key Event Helper (SKEH)",
+        "author": "Notex",
+        "category": "Utilities",
+        "imageURL": [
+            "/img/featured-mods/simple-key-event-helper/simple-key-event-helper-1.jpg"
+        ],
+        "description": "Adds a helper entitytemplate for mod developers who wish to add custom key bindings into their mod.",
+        "installLink": "",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/744"
+    },
+    {
+        "name": "Ryan Gosling (Drive) replaces Signature",
+        "author": "k0v3rt",
+        "category": "Apparel",
+        "imageURL": [
+            "/img/featured-mods/ryan-gosling-drive-replaces-signature/ryan-gosling-drive-replaces-signature-1.jpg",
+            "/img/featured-mods/ryan-gosling-drive-replaces-signature/ryan-gosling-drive-replaces-signature-2.jpg",
+            "/img/featured-mods/ryan-gosling-drive-replaces-signature/ryan-gosling-drive-replaces-signature-3.jpg",
+            "/img/featured-mods/ryan-gosling-drive-replaces-signature/ryan-gosling-drive-replaces-signature-4.jpg",
+            "/img/featured-mods/ryan-gosling-drive-replaces-signature/ryan-gosling-drive-replaces-signature-5.jpg"
+        ],
+        "description": "Replaces the Signature Suit with The Driver we all know and love.",
+        "installLink": "",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/737"
+    },
+    {
+        "name": "Keyboard Keypad Input",
+        "author": "Notex",
+        "category": "Miscellaneous",
+        "imageURL": [
+            "/img/featured-mods/keyboard-keypad-input/keyboard-keypad-input-1.jpg"
+        ],
+        "description": "You can now use your keyboard to enter in values into the keypads found in the Hitman 3 maps.",
+        "installLink": "",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/745"
+    },
+    {
+        "name": "Throwable Lock-On - Instinct Adjustments",
+        "author": "Cyb",
+        "category": "Gameplay",
+        "imageURL": [
+            "/img/featured-mods/throwable-lock-on-instinct-adjustments/throwable-lock-on-instinct-adjustments-1.jpg"
+        ],
+        "description": "Allows player to enable/disable melee lock on based on instinct usage.",
+        "installLink": "",
+        "nexusLink": "https://www.nexusmods.com/hitman3/mods/738"
     }
 ]
