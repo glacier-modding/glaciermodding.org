@@ -34,6 +34,10 @@ module.exports = {
                             to: "/g2wwisedatatool",
                         },
                         {
+                            label: "G2GFxDataTool",
+                            to: "/g2gfxdatatool",
+                        },
+                        {
                             label: "Rebone",
                             to: "/rebone",
                         },
