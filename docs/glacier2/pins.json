@@ -10101,7 +10101,7 @@
     {
         "hash": "005E4B62996F3BEF",
         "path": "[modules:/zevergreenvitalinfoentity.class].pc_entitytype",
-        "in": ["3002902989", "896875408", "108534979"],
+        "in": ["SetIsAlerted", "SetIsNearby", "SetIsActive"],
         "out": []
     },
     {
