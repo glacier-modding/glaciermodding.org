@@ -2700,7 +2700,7 @@
     {
         "hash": "00162172DC4A2054",
         "path": "[modules:/zchallengestateentity.class].pc_entitytype",
-        "in": ["1310963990", "GetState"],
+        "in": ["SetChallengeId", "GetState"],
         "out": ["OnCompleted"]
     },
     {
