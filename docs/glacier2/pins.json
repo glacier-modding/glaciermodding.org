@@ -4214,9 +4214,9 @@
         "in": [
             "GiveOutfit",
             "RecordOutfit",
-            "1518297259",
+            "SetCharSet",
             "SetVariation",
-            "1032324463",
+            "SetOutfitRepositoryId",
             "SetHero",
             "GetHero"
         ],
