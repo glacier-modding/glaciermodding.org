@@ -3582,14 +3582,14 @@
         "hash": "0008CC3B3C305EE9",
         "path": "[modules:/zcontractprogressiondatavalue_guids.class].pc_entitytype",
         "in": [
-            "3455200369",
+            "GetNext",
             "12136272",
             "1480579839",
-            "298129268",
-            "2489615589",
+            "PushRepositoryId",
+            "RemoveRepositoryId",
             "Clear"
         ],
-        "out": ["OnRepositoryId"]
+        "out": ["OnRepositoryId", "OnDone", "NoValue"]
     },
     {
         "hash": "00D784DBE72CFFD5",
