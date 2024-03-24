@@ -7,14 +7,14 @@ const PinList = ({ pins, title }) => {
         return <></>
     }
 
-    const sortedPins = pins.sort()
+    const sortedPins = pins.sort((a, b) => a.pin.localeCompare(b.pin))
 
     return (
         <div>
             {title && <h4>{title}</h4>}
             <div className="pin-list">
-                {sortedPins.map((pin, i) => (
-                    <code key={i}>{pin}</code>
+                {sortedPins.map((pinObj, i) => (
+                    <code key={i} title={pinObj.description}>{pinObj.pin}</code>
                 ))}
             </div>
         </div>
@@ -85,15 +85,15 @@ export const PinSearch = () => {
                     let input = false
                     let output = false
 
-                    for (const pin of entity.in) {
-                        if (pin.toLowerCase() === searchLower) {
+                    for (const pinObj of entity.in) {
+                        if (pinObj.pin.toLowerCase() === searchLower) {
                             input = true
                             break
                         }
                     }
 
-                    for (const pin of entity.out) {
-                        if (pin.toLowerCase() === searchLower) {
+                    for (const pinObj of entity.out) {
+                        if (pinObj.pin.toLowerCase() === searchLower) {
                             output = true
                             break
                         }
