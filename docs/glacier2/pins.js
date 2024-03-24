@@ -14,7 +14,7 @@ const PinList = ({ pins, title }) => {
             {title && <h4>{title}</h4>}
             <div className="pin-list">
                 {sortedPins.map((pinObj, i) => (
-                    <code key={i} title={pinObj.description}>{pinObj.pin}</code>
+                    <code key={i} title={pinObj.description || "No description found"}>{pinObj.pin}</code>
                 ))}
             </div>
         </div>
