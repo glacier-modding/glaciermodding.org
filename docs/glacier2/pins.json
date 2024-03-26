@@ -4357,39 +4357,39 @@
         "in": [
             {
                 "pin": "LockDoor",
-                "description": ""
+                "description": "Lock door"
             },
             {
                 "pin": "UnlockDoor",
-                "description": ""
+                "description": "Unlock door"
             },
             {
                 "pin": "OpenDoorIn",
-                "description": ""
+                "description": "Open door inwards"
             },
             {
                 "pin": "OpenDoorOut",
-                "description": ""
+                "description": "Open door outwards"
             },
             {
                 "pin": "CloseDoor",
-                "description": ""
+                "description": "Close door"
             },
             {
                 "pin": "BurstOpen",
-                "description": ""
+                "description": "Burst up door inwards, will set the door as broken"
             },
             {
                 "pin": "BurstOpenIn",
-                "description": ""
+                "description": "Burst up door inwards, will set the door as broken"
             },
             {
                 "pin": "BurstOpenOut",
-                "description": ""
+                "description": "Burst up door outwards, will set the door as broken"
             },
             {
                 "pin": "DoorBroken",
-                "description": ""
+                "description": "Door is broken by damage or simulation"
             },
             {
                 "pin": "1441384330",
@@ -4415,7 +4415,35 @@
         "out": [
             {
                 "pin": "DoorOpen",
+                "description": "Fired when door is opened by Hitman"
+            },
+            {
+                "pin": "DoorOpenByAnyIn",
                 "description": ""
+            },
+            {
+                "pin": "DoorOpenByAnyOut",
+                "description": ""
+            },
+            {
+                "pin": "DoorOpenByAny",
+                "description": "Fired when door is opening no matter who is triggering it. DoorOpen might be called after"
+            },
+            {
+                "pin": "DoorCloseByAny",
+                "description": "Fired when door is closing no matter who is triggering it. DoorClose might be called after"
+            },
+            {
+                "pin": "DoorOpenByHitmanFirst",
+                "description": "Fired when door is opened for the first time by Hitman."
+            },
+            {
+                "pin": "DoorClosed",
+                "description": "Fired when door is closed"
+            },
+            {
+                "pin": "DoorClose",
+                "description": "Fired when door is closed by Hitman"
             }
         ]
     },
