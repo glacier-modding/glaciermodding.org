@@ -17005,11 +17005,11 @@
                 "description": ""
             },
             {
-                "pin": "972063061",
+                "pin": "SetFloat",
                 "description": ""
             },
             {
-                "pin": "86648262",
+                "pin": "SetString",
                 "description": ""
             }
         ],
