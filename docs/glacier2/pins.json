@@ -18964,11 +18964,11 @@
         "path": "[modules:/zspatialtransformrestoreentity.class].pc_entitytype",
         "in": [
             {
-                "pin": "1682723569",
+                "pin": "StoreTransforms",
                 "description": ""
             },
             {
-                "pin": "797352682",
+                "pin": "RestoreTransforms",
                 "description": ""
             }
         ],
