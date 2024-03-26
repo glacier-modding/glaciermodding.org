@@ -9764,6 +9764,10 @@
             {
                 "pin": "IsPerceivedAsWeapon",
                 "description": ""
+            },
+            {
+                "pin": "IsPerceptibleOnRelease",
+                "description": ""
             }
         ]
     },
