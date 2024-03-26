@@ -22554,7 +22554,7 @@
         "path": "[modules:/zevergreenmenuentrypromptobjectmanipulatoraction.class].pc_entitytype",
         "in": [
             {
-                "pin": "1888879131",
+                "pin": "SmoothResetPose",
                 "description": ""
             },
             {
