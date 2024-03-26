@@ -12116,7 +12116,7 @@
                 "description": ""
             },
             {
-                "pin": "718216109",
+                "pin": "AddPlayer",
                 "description": ""
             },
             {
@@ -12135,6 +12135,14 @@
         "out": [
             {
                 "pin": "OnActorAdded",
+                "description": ""
+            },
+            {
+                "pin": "OnPlayerRemoved",
+                "description": ""
+            },
+            {
+                "pin": "OnPlayerAdded",
                 "description": ""
             }
         ]
