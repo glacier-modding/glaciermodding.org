@@ -5272,6 +5272,18 @@
             {
                 "pin": "Output2",
                 "description": "Action2"
+            },
+            {
+                "pin": "Output3",
+                "description": "Action3"
+            },
+            {
+                "pin": "Output4",
+                "description": "Action4"
+            },
+            {
+                "pin": "Output5",
+                "description": "Action5"
             }
         ]
     },
