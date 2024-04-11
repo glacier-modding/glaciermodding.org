@@ -28100,9 +28100,18 @@
         "hash": "003A127760339D92",
         "path": "[modules:/zoverrideglowentity.class].pc_entitytype",
         "in": [
-            "SetItem",
-            "SetOverride",
-            "RemoveOverride"
+            {
+                "pin": "SetItem",
+                "description": "Sets target item."
+            },
+            {
+                "pin": "SetOverride",
+                "description": "Sets the override."
+            },
+            {
+                "pin": "RemoveOverride",
+                "description": "Removes the override."
+            }
         ],
         "out": []
     }
