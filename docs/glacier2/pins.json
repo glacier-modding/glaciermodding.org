@@ -28095,5 +28095,15 @@
         "path": "[modules:/ztimeofdayconfig.class].pc_entitytype",
         "in": [],
         "out": []
+    },
+    {
+        "hash": "003A127760339D92",
+        "path": "[modules:/zoverrideglowentity.class].pc_entitytype",
+        "in": [
+            "SetItem",
+            "SetOverride",
+            "RemoveOverride"
+        ],
+        "out": []
     }
 ]
