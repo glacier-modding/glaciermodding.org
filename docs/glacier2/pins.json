@@ -7133,6 +7133,10 @@
             {
                 "pin": "OnTrue",
                 "description": ""
+            },
+            {
+                "pin": "OnFalse",
+                "description": ""
             }
         ]
     },
