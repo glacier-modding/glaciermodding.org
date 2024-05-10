@@ -8592,6 +8592,18 @@
             {
                 "pin": "OnTargetDead",
                 "description": ""
+            },{
+                "pin": "OnTargetInRange",
+                "description": ""
+            },{
+                "pin": "OnTargetOutOfRange",
+                "description": ""
+            },{
+                "pin": "OnAllEscortsDied",
+                "description": ""
+            },{
+                "pin": "OnLostSightTimeout",
+                "description": ""
             }
         ]
     },
