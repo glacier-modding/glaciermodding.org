@@ -9144,6 +9144,10 @@
             {
                 "pin": "OnActorDead",
                 "description": ""
+            },
+            {
+                "pin": "OnActorPacified",
+                "description": ""
             }
         ]
     },
