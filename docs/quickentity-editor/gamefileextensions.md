@@ -4,6 +4,10 @@ title: Game File Extensions
 description: Make properties human readable and much more cool stuff.
 ---
 
+:::info
+QuickEntity Editor is now deprecated in favour of [GlacierKit](https://github.com/atampy25/glacierkit/releases/latest).
+:::
+
 If you're spending any length of time in QuickEntity Editor, whether it be designing outfits or editing levels, it's prudent to take the time to install the game file extensions. This will make your life considerably easier because it will allow QNE to:
 
 -   Add auto-complete for all properties (and their types and post-init) and pins of all entities

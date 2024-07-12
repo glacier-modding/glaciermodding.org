@@ -4,6 +4,10 @@ title: Templates
 description: Templates you can copy and paste into QNE!
 ---
 
+:::info
+QuickEntity Editor is now deprecated in favour of [GlacierKit](https://github.com/atampy25/glacierkit/releases/latest).
+:::
+
 ### How to use
 
 1. Hover your mouse over the template you wish to use and click the copy button at the very right hand side.
