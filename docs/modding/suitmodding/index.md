@@ -15,8 +15,9 @@ This is a list of tools that are essential for any kind of Hitman modding. The t
 
 -   [RPKG Tool](../../../rpkg)
 -   [Simple Mod Framework](https://github.com/atampy25/simple-mod-framework/releases/latest)
--   [QuickEntity Editor](https://github.com/atampy25/quickentity-editor-next/releases/latest)
-    -   When you first start QuickEntity Editor you will need to set up the paths to your game installation. Start QNE, go to Settings and set your **Retail** and **Runtime** paths accordingly, or you will not be able to load entities directly from the game.
+    -   It is prudent to enable developer mode in SMF by going to **More information** and clicking **Enable developer mode**.
+-   [GlacierKit](https://github.com/atampy25/glacierkit/releases/latest)
+    -   GlacierKit should automatically detect your Hitman installation. Double-check this in the settings (the gear button), if you have multiple installations you can select which one to work with here.
 -   [TonyTools](https://github.com/AnthonyFuller/TonyTools/releases/latest)
--   A program to read and edit JSON files ([VSCode](https://code.visualstudio.com/Download) is recommended, but any basic code editor will suffice)
+-   A program to read and edit JSON files ([VSCode](https://code.visualstudio.com/Download) is recommended, but any basic code editor will suffice. GlacierKit can also handle JSON files if you can't bother downloading anything else.)
 -   A program to extract and archive ZIP files (such as [7-Zip](https://www.7-zip.org/))
