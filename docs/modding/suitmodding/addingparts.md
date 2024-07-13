@@ -14,6 +14,8 @@ For this tutorial, we will go over patching new parts to an outfit, like a hat o
 
 Before continuing, please make sure you have all the tools in the [requirements](.) section. Ideally, you should get your feet wet with [basic retexturing](basicretexture.md) first to acclimate yourself to these tools.
 
+And make sure you have enabled the **developer mode** in Simple Mod Framework. To do this, open Simple Mod Framework, click **More information**, and then **Enable developer mode**. This will come with a few benefits, such as being able to edit the mod manifest directly in SMF, and access to SMF's internal documentation. You can consult the docs by clicking the book icon on the left in SMF.
+
 ## Find a Suit to Modify
 
 We will once again consult [HMBM47's Outfit Spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRDiyiqdRebu0Olvvkr20CDhh6ANxu7FOQZ_O-1YHFN9e6kh0WmpbwDYbfgzevSvc3fO4_4Exu1fmQH/pubhtml#) for this. Bookmark it, if you haven't! For this tutorial, we will be modifying the Absolution Suit with Gloves.

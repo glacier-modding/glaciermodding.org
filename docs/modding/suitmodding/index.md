@@ -15,6 +15,7 @@ This is a list of tools that are essential for any kind of Hitman modding. The t
 
 -   [RPKG Tool](../../../rpkg)
 -   [Simple Mod Framework](https://github.com/atampy25/simple-mod-framework/releases/latest)
+    -   It is prudent to enable developer mode in SMF by going to **More information** and clicking **Enable developer mode**.
 -   [GlacierKit](https://github.com/atampy25/glacierkit/releases/latest)
     -   GlacierKit should automatically detect your Hitman installation. Double-check this in the settings (the gear button), if you have multiple installations you can select which one to work with here.
 -   [TonyTools](https://github.com/AnthonyFuller/TonyTools/releases/latest)

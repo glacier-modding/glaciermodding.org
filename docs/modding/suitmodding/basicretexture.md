@@ -16,6 +16,8 @@ For this tutorial, we will go over a basic texture override for a suit. In broad
 
 Before continuing, please make sure you have all the tools in the [requirements](.)!
 
+And before we start, you should start Simple Mod Framework and enable the **developer mode**. To do this, open Simple Mod Framework, click **More information**, and then **Enable developer mode**. This will come with a few benefits, such as being able to edit the mod manifest directly in SMF, and access to SMF's internal documentation. You can consult the docs by clicking the book icon on the left in SMF.
+
 Hitman uses a physically based rendering pipeline, and the models use 3 textures: a **diffuse map**, a **specular map** and a **normal map**.
 
 The diffuse map can basically be said to be the base color of the model. The specular map is how it reflects light, and the normal map is, in essence, how shadows fall on the model. Normal maps are used to fake detail on low-polygon models in video games. In this example, we will be changing the **diffuse map**.
