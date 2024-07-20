@@ -1,3 +1,5 @@
+import {themes as prismThemes} from 'prism-react-renderer';
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
     title: "glaciermodding.org",
@@ -10,6 +12,9 @@ module.exports = {
     organizationName: "glacier-modding",
     projectName: "glaciermodding.org",
     themeConfig: {
+        prism: {
+            additionalLanguages: ['json']
+        },
         metadata: [
             { name: "keywords", content: "hitman, glacier, modding, 007" },
         ],
@@ -48,7 +53,7 @@ module.exports = {
                         {
                             to: "/tools/online/xtea",
                             label: "Online XTEA Tool",
-                        },
+                        }
                     ],
                 },
                 {
