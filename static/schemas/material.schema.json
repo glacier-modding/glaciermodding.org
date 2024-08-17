@@ -1,0 +1,558 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$ref": "#/$defs/Material",
+    "$defs": {
+        "Material": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "$schema": {
+                    "type": "string",
+                    "description": "Link to the schema file"
+                },
+                "MATI": {
+                    "type": "string",
+                    "description": "Path or hash to Material Instance"
+                },
+                "MATT": {
+                    "type": "string",
+                    "description": "Path or hash to Material EntityType"
+                },
+                "MATB": {
+                    "type": "string",
+                    "description": "Path or hash to Material EntityBlueprint"
+                },
+                "MATE": {
+                    "type": "string",
+                    "description": "Material Effect path or hash"
+                },
+                "ERES": {
+                    "type": "string",
+                    "description": "EntityResource Hash/Path (Can be blank if no ERES is required)"
+                },
+                "TYPE": {
+                    "type": "string",
+                    "description": "Type of material",
+                    "default": "Standard",
+                    "examples": [
+                        "Standard",
+                        "StandardLinked",
+                        "StandardWeighted",
+                        "SpriteParticle_AO",
+                        "SpriteParticleVelocity"
+                    ]
+                },
+                "Material": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "Instance": {
+                            "type": "array",
+                            "description": "Material Instance",
+                            "items": {
+                                "$ref": "#/$defs/Instance"
+                            }
+                        }
+                    }
+                },
+                "Overrides": {
+                    "type": "object",
+                    "description": "Properties and default values for use in the generated MATT/MATB files",
+                    "additionalProperties": true,
+                    "properties": {
+                        "Texture": {
+                            "type": "object",
+                            "description": "Texture names (excluding map from the start)"
+                        },
+                        "Color": {
+                            "type": "object",
+                            "description": "Color properties"
+                        }
+                    },
+                    "patternProperties": {
+                        ".*": {
+                            "type": "number",
+                            "description": "Float properties"
+                        }
+                    }
+                },
+                "Flags": {
+                    "type": "object",
+                    "description": "",
+                    "properties": {
+                        "Class": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "description": "Material class flags",
+                            "properties": {
+                                "REFLECTION2D": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "REFRACTION2D": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "LIGHTING": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "EMISSIVE": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "DISCARD": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "LM_SKIN": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "PRIMCLASS_STANDARD": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "PRIMCLASS_LINKED": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "PRIMCLASS_WEIGHTED": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "DOFOVERRIDE": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "USES_DEFAULT_VS": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "USES_SPRITE_SA_VS": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "USES_SPRITE_AO_VS": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "ALPHA": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "USES_SIMPLE_SHADER": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "DISABLE_INSTANCING": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "LM_HAIR": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "SAMPLE_LIGHTING": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "HORIZONMAPPING": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "UNKNOWN_3": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "UNKNOWN_4": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "UNKNOWN_5": {
+                                    "type": "boolean",
+                                    "description": ""
+                                }
+                            },
+                            "required": [
+                                "REFLECTION2D",
+                                "REFRACTION2D",
+                                "LIGHTING",
+                                "EMISSIVE",
+                                "DISCARD",
+                                "LM_SKIN",
+                                "PRIMCLASS_STANDARD",
+                                "PRIMCLASS_LINKED",
+                                "PRIMCLASS_WEIGHTED",
+                                "DOFOVERRIDE",
+                                "USES_DEFAULT_VS",
+                                "USES_SPRITE_SA_VS",
+                                "USES_SPRITE_AO_VS",
+                                "ALPHA",
+                                "USES_SIMPLE_SHADER",
+                                "DISABLE_INSTANCING",
+                                "LM_HAIR",
+                                "SAMPLE_LIGHTING",
+                                "HORIZONMAPPING",
+                                "UNKNOWN_3",
+                                "UNKNOWN_4",
+                                "UNKNOWN_5"
+                            ]
+                        },
+                        "Instance": {
+                            "type": "object",
+                            "description": "Material Instance flags",
+                            "properties": {
+                                "OPAQUE_EMISSIVE": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "TRANS_EMISSIVE": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "TRANSADD_EMISSIVE": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "TRANSALL": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "OPAQUE_LIT": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "TRANS_LIT": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "DECAL": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "REFRACTIVE": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "LM_SKIN": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "LM_HAIR": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "FORCE_EMISSIVE": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "DISABLE_SHADER_LOD": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "DISCARD": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "DECAL_EMISSIVE": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "DECAL_ALL": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "WATER_CLIPPING": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "SAMPLE_LIGHTING": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "EXCLUDE_GLOBAL_SHADOWS": {
+                                    "type": "boolean",
+                                    "description": ""
+                                },
+                                "ALL": {
+                                    "type": "boolean",
+                                    "description": ""
+                                }
+                            },
+                            "required": [
+                                "OPAQUE_EMISSIVE",
+                                "TRANS_EMISSIVE",
+                                "TRANSADD_EMISSIVE",
+                                "TRANSALL",
+                                "OPAQUE_LIT",
+                                "TRANS_LIT",
+                                "DECAL",
+                                "REFRACTIVE",
+                                "LM_SKIN",
+                                "LM_HAIR",
+                                "FORCE_EMISSIVE",
+                                "DISABLE_SHADER_LOD",
+                                "DISCARD",
+                                "DECAL_EMISSIVE",
+                                "DECAL_ALL",
+                                "WATER_CLIPPING",
+                                "SAMPLE_LIGHTING",
+                                "EXCLUDE_GLOBAL_SHADOWS",
+                                "ALL"
+                            ]
+                        }
+                    }
+                }
+            },
+            "required": [
+                "MATI",
+                "MATE",
+                "ERES",
+                "TYPE"
+            ]
+        },
+        "Instance": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Name": {
+                    "type": "string",
+                    "description": "Name of material"
+                },
+                "Tags": {
+                    "type": "string",
+                    "description": "Material Tags"
+                },
+                "Binder": {
+                    "type": "array",
+                    "description": "Binder",
+                    "items": {
+                        "$ref": "#/$defs/Binder"
+                    }
+                }
+            },
+            "required": [
+                "Name",
+                "Tags",
+                "Binder"
+            ]
+        },
+        "Binder": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Render State": {
+                    "type": "array",
+                    "description": "Render State (RSTA)",
+                    "items": {
+                        "$ref": "#/$defs/RenderTypes"
+                    }
+                },
+                "Float Value": {
+                    "type": "array",
+                    "description": "Float Value (FLTV)",
+                    "items": {
+                        "$ref": "#/$defs/FloatTypes"
+                    }
+                },
+                "Texture": {
+                    "type": "array",
+                    "description": "Texture (TEXT)",
+                    "items": {
+                        "$ref": "#/$defs/TextureTypes"
+                    }
+                },
+                "Color": {
+                    "type": "array",
+                    "description": "Color (COLO)",
+                    "items": {
+                        "$ref": "#/$defs/ColorTypes"
+                    }
+                }
+            },
+            "examples": [
+                "Render State",
+                "Float Value",
+                "Texture",
+                "Color"
+            ]
+        },
+        "RenderTypes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Alpha Reference": {
+                    "type": "integer",
+                    "description": "Alpha Reference (AREF)"
+                },
+                "Alpha Test Enabled": {
+                    "type": "integer",
+                    "description": "Alpha Test Enabled (ATST)"
+                },
+                "Blend Enabled": {
+                    "type": "integer",
+                    "description": "Blend Enabled (BENA)"
+                },
+                "Blend Mode": {
+                    "type": "string",
+                    "description": "Blend Mode (BMOD)",
+                    "examples": [
+                        "ADD",
+                        "TRANS",
+                        "TRANS_PREMULTIPLIED_ALPHA",
+                        "TRANS_ON_OPAQUE",
+                        "OPAQUE"
+                    ]
+                },
+                "Culling Mode": {
+                    "type": "string",
+                    "description": "Culling Mode (CULL)",
+                    "examples": [
+                        "DontCare",
+                        "OneSided",
+                        "TwoSided"
+                    ]
+                },
+                "Decal Blend Diffuse": {
+                    "type": "integer",
+                    "description": "Decal Blend Diffuse (DBDE)"
+                },
+                "Decal Blend Emission": {
+                    "type": "integer",
+                    "description": "Decal Blend Emission (DBEE)"
+                },
+                "Decal Blend Normal": {
+                    "type": "integer",
+                    "description": "Decal Blend Normal (DBNE)"
+                },
+                "Decal Blend Roughness": {
+                    "type": "integer",
+                    "description": "Decal Blend Roughness (DBRE)"
+                },
+                "Decal Blend Specular": {
+                    "type": "integer",
+                    "description": "Decal Blend Specular (DBSE)"
+                },
+                "Enabled": {
+                    "type": "integer",
+                    "description": "Enabled (ENAB)"
+                },
+                "Fog Enabled": {
+                    "type": "integer",
+                    "description": "Fog Enabled (FENA)"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "Name (NAME)"
+                },
+                "Opacity": {
+                    "type": "number",
+                    "description": "Opacity (OPAC)"
+                },
+                "Subsurface Value": {
+                    "type": "number",
+                    "description": "Subsurface Value (SSBW)"
+                },
+                "Subsurface Blue": {
+                    "type": "number",
+                    "description": "Subsurface Blue (SSVB)"
+                },
+                "Subsurface Green": {
+                    "type": "number",
+                    "description": "Subsurface Green (SSVG)"
+                },
+                "Subsurface Red": {
+                    "type": "number",
+                    "description": "Subsurface Red (SSVR)"
+                },
+                "Z Bias": {
+                    "type": "integer",
+                    "description": "Z Bias (ZBIA)"
+                },
+                "Z Offset": {
+                    "type": "number",
+                    "description": "Z Offset (ZOFF)"
+                }
+            }
+        },
+        "FloatTypes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Enabled": {
+                    "type": "integer",
+                    "description": "Enabled (ENAB)"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "Name (NAME)"
+                },
+                "Value": {
+                    "type": [
+                        "array",
+                        "number"
+                    ],
+                    "description": "Value (VALU)"
+                }
+            }
+        },
+        "TextureTypes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Enabled": {
+                    "type": "integer",
+                    "description": "Enabled (ENAB)"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "Name (NAME)"
+                },
+                "Tiling U": {
+                    "type": "string",
+                    "description": "Tiling U (TILU)"
+                },
+                "Tiling V": {
+                    "type": "string",
+                    "description": "Tiling V (TILV)"
+                },
+                "Texture Id": {
+                    "type": "string",
+                    "description": "Texture Hash/Path (Can be blank if no Texture Id is required) (TXID)"
+                },
+                "Type": {
+                    "type": "string",
+                    "description": "Type (TYPE)",
+                    "examples": [
+                        "AsColorMap",
+                        "AsCompoundNormal",
+                        "AsHeightMap",
+                        "AsNormalMap"
+                    ]
+                }
+            }
+        },
+        "ColorTypes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Enabled": {
+                    "type": "integer",
+                    "description": "Enabled (ENAB)"
+                },
+                "Name": {
+                    "type": "string",
+                    "description": "Name (NAME)"
+                },
+                "Value": {
+                    "type": [
+                        "array",
+                        "number"
+                    ],
+                    "description": "Value (VALU)"
+                }
+            }
+        }
+    }
+}
