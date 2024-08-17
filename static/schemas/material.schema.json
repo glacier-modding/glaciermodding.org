@@ -71,7 +71,7 @@
                     },
                     "patternProperties": {
                         ".*": {
-                            "type": "number",
+                            "type": ["number", "array"],
                             "description": "Float properties"
                         }
                     }
