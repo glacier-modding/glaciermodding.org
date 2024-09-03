@@ -31,6 +31,10 @@ module.exports = {
                     position: "left",
                     items: [
                         {
+                            href: "https://github.com/atampy25/glacierkit/releases/latest",
+                            label: "GlacierKit",
+                        },
+                        {
                             label: "RPKG Tool",
                             to: "/rpkg",
                         },
