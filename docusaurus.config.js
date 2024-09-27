@@ -35,6 +35,10 @@ module.exports = {
                             label: "GlacierKit",
                         },
                         {
+                            href: "https://github.com/glacier-modding/NavKit/releases/latest",
+                            label: "NavKit",
+                        },
+                        {
                             label: "RPKG Tool",
                             to: "/rpkg",
                         },
