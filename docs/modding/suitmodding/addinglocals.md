@@ -1,4 +1,6 @@
-To improve clarity and structure in the article, I’ll organize the information in a more logical flow. The goal will be to avoid overwhelming the reader with too much technical detail upfront and to guide them step-by-step, with each section focusing on one aspect of the process. Here's a revised version:
+---
+sidebar_position: 4 
+description: Adding a name and description
 
 ---
 
