@@ -3,7 +3,7 @@ sidebar_position: 3
 description: Modifying an image in the menu
 ---
 To continue on the adding parts article, you'll likely also want to modify the image in the menu to reflect the changes you've made, change the suit's name and even add in your own custom suit's descritpion. I'll also mention a potential issue that arises when adding parts to your suit that dont come from a similar chunk which will have to be addressed in the manifest. If you haven't read the documentation on manifest and other things in SMF (the little book icon on the left that shows up when you enable developer mode), I suggest you read those or atleast skim through them and come back for more clarification. I also advise to go back and forth between reading those, the tutorial pages on this site and modding yourself over time, so things start making more sense and you can practice in the meanwhile.
-Here's another grat resource site for understanding the engine of hitman WOA. It's very abstract at the moment, tho.
+Here's another great resource site for understanding the engine of hitman WOA. It's very abstract at the moment, tho.
 https://hitman-resources.netlify.app/documentation
 
 
