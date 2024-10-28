@@ -44,9 +44,9 @@ If you're confused, just follow the steps in the program without changing anythi
 
 ### Find the Suit Name and Description:
 - Pay attention to the tabs on the left. Start with "Files" at the top and "Settings" at the bottom.
-- Copy one of the hashes above where your suit is located and navigate to the "game contents" tab.
-- Paste your hash in the search bar on top (For Blood Money, I use the S1 suits hash). If you don’t know for sure, take a guess or look it up.
-- You should get a file tree ending in a single file called `randomwords.sweetmenutext].pc_localized-textlist`. It has a language or translation icon.
+1. Copy one of the hashes above where your suit is located and navigate to the "game contents" tab.
+2. Paste your hash in the search bar on top (For Blood Money, I use the S1 suits hash). If you don’t know for sure, take a guess or look it up.
+3. You should get a file tree ending in a single file called `randomwords.sweetmenutext].pc_localized-textlist`. It has a language or translation icon.
 - Click it, and you will see a "Preview" text box on the right with some additional info about the file on top. Confirm it's a LOCR file and take note of the "HASH" code beside it. We will need it later.
 
 ### Modifying the Text:
