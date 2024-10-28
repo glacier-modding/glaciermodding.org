@@ -7,14 +7,16 @@ To continue on the adding/patching of parts article from before, you'll likely a
 - change the suit's name in the menu
 - and even add in your own custom description for your suit. 
 
-I'll also be mentioning a potential issue that arises when adding parts to your suit that don't come from a similar chunk which will have to be addressed in the manifest. 
+I'll also be mentioning a potential issue that arises when 
+- adding parts to your suit that don't come from a suit chunk (chunk0) which will have to be addressed in the manifest. 
 
+:::note
 If you haven't yet read the documentation on the manifest and other things in SMF (the little book icon on the left that shows up when you enable developer mode), I suggest you read those or atleast skim through them and come back for more clarification. I also advise to go back and forth between reading those, the tutorial pages on this site and modding yourself over time, so things start making more sense while you practice modding for the game.
 Below is another great resource site for understanding the engine of hitman WOA. It's very abstract at the moment without any practical examples, but it explains how systems functions in the engine. Not necessary for now but 
 definitely worthy of bookmarking.
 
 https://hitman-resources.netlify.app/documentation
-
+:::
 
 
 ---
@@ -75,19 +77,20 @@ Example of a full image code:
 :::info
 These are the 2 methods to find your suit's image. It's highly advised to use **GlacierKit** as much as possible because that's where you'll do most of your modding in the future. 
 
-While **RPKG** does have its usecases but they become deminishing the more advanced you get. This is one tiny example where I prefer to use **RPKG** alongside **GlacierKit** just because the images load up with each file in the repository. I still advise to try finding your suit using both methods to get familiar with each program.
+While **RPKG** does have its usecases, they become deminishing the more advanced you get with modding. This is one tiny example where I prefer to use **RPKG** alongside **GlacierKit** just because the images load up with each file in the repository. I still advise to try finding your suit using both methods to get familiar with each program and the game files in general.
 :::
 
 ## Step 2: Find Your Suit's image
 
-1. After opening the repository and locating the correct suit in one of the programs, locate the image code from your suit, which is displayed on the right.
+1. After opening the repository and locating the correct suit in one of the programs, locate the image code from your suit, which is displayed on the right. ("You should have already confirmed this in the Glacier method")
 2. I repeat, click on your suit, in either program, and look at the text box on the right-hand side. This code you see will be identical for each program.
-   There will be a line of code starting with **"Image":"...**. 
+   There will be a line of code starting with *"Image":"....* 
    For example:  
    ```json
    "Image": "images/unlockables_override/47_outfits_bloodmoney_gloves.jpg"
    ```
-4. Remember the **file path** ("images/unlockables_override/") and **file name** (47_outfits_bloodmoney_gloves.jpg).
+4. Remember the **file path** ("images/unlockables_override/") and 
+   **file name** (47_outfits_bloodmoney_gloves.jpg).
 
 :::warning
 Keep **RPKG** or **GlacierKit** open, you’ll need it in the next steps.
