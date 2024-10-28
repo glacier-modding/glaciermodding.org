@@ -1,129 +1,124 @@
----
-sidebar_position: 4
-description: Changing the suit's name and description
+To improve clarity and structure in the article, I’ll organize the information in a more logical flow. The goal will be to avoid overwhelming the reader with too much technical detail upfront and to guide them step-by-step, with each section focusing on one aspect of the process. Here's a revised version:
+
 ---
 
 # Part 2: Localisation Overrides
 
-Let's change the suit name and description.  
-You will need GlacierKit and a mod folder with a manifest (no content files are even needed, everything is done from the manifest).  
-If you're editing your manifest in GlacierKit, it will check and auto-suggest code you can use while keeping code clean. You can skip over the Visual studio Code part below.
+In this section, we'll focus on changing the **suit name and description** in the game by modifying the localisation files. You will need **GlacierKit** and a mod folder with a manifest file, but no content files are required. Everything will be handled through the manifest.
 
-Recommended but not necessary:  
-Have Visual Studio Code and a manifest "schema" that checks errors in your manifest:
+If you’re editing the manifest using **GlacierKit**, it will auto-suggest code to keep things clean and help reduce errors.
 
-```json
-"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-```
+### Prerequisites
 
-Copy that in your manifest as a line.  
-This only works in Visual Studio. It might be overkill to install Visual Studio for this tutorial, but you'll be grateful down the line for never having to work in Notepad again.  
-Also, read any of the info docs in SMF when developer mode is enabled—especially the manifest one. This is just more of a clarification.
+Before we begin, there are a few tools and optional recommendations that will make this process easier:
 
-### In short, this is what you will do:
-- Find the "Suit IDs" of the text in a specific LOCR file (most of this is already done for you).
-- Explain how to search for custom text if you can't find the text to modify (Skip this part if you're only looking to modify a suit's name and description).
-- Alter the text so it works in your manifest (simple copy-paste job, don’t worry).
-- Add a "localisation override line" in your manifest to replace the text you attach (Baby steps, follow along).
-- Write what you want to replace the text with (zero effort).
-- Save the manifest and deploy.
+1. **Required Tools**:
+   - **GlacierKit** for editing your mod.
+   - A mod folder that contains a **manifest** file.
 
-I will continue with Blood Money, but you can follow along with any reward suit, as long as you're somewhat familiar with the terms used. If you aren’t, follow along with your suit and experiment with other text later to better understand what's happening.
+2. **Recommended Tools** (optional but helpful):
+   - **Visual Studio Code (VS Code)**: This makes editing files easier and cleaner.
+   - **Manifest Schema**: Adding this to your manifest file will allow VS Code to check for errors automatically. Add this schema at the top of your manifest:
+     ```json
+     "$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json"
+     ```
+   - If you’re using GlacierKit, it will handle much of the code suggestions and format checks.
 
-### Step-by-step:
-1. Start by selecting the blue "Open project" button when opening GlacierKit and click your mod folder inside of the SMF folder in the Hitman game contents.
-2. Almost all localisation (text on screen) for reward suits (suits you can equip in the menu or that 47 can wear across maps) are in these templates seen as hash lines:
-   - `004B8C5124A49543` for S3 suits,
-   - `009F430D046716BE` for S2 suits,
-   - `00985A1100E5EDDC` for S1 suits.
+> **Note:** It might seem overkill to install Visual Studio Code for this tutorial, but you’ll appreciate the cleaner interface and error-checking features as you continue modding.
 
-This is easier for now and less prone to errors compared to advanced searches.  
-I give these to make it much easier and faster to find your Suit IDs for now.  
-After reading the advanced search section, you will never need help looking for any text (localisation) to replace again.  
-If you're confused, just follow the steps in the program without changing anything. Nothing will be changed in the game files except for your manifest, so no need to worry about accidentally changing anything. I'll add a clear warning (!!!) when changes are going to happen in case you want to follow along.
+---
 
-### Find the Suit Name and Description:
-- Pay attention to the tabs on the left. Start with "Files" at the top and "Settings" at the bottom.
-1. Copy one of the hashes above where your suit is located and navigate to the "game contents" tab.
-2. Paste your hash in the search bar on top (For Blood Money, I use the S1 suits hash). If you don’t know for sure, take a guess or look it up.
-3. You should get a file tree ending in a single file called `randomwords.sweetmenutext].pc_localized-textlist`. It has a language or translation icon.
-- Click it, and you will see a "Preview" text box on the right with some additional info about the file on top. Confirm it's a LOCR file and take note of the "HASH" code beside it. We will need it later.
+## Overview of the Process
 
-### Modifying the Text:
-1. Scroll inside the textbox to see what's inside.  
-To find the suit name you want to modify, click inside the textbox and press `Ctrl + F` to search.  
-Look up your suit (for example, Blood Money).
+Here’s a simple summary of what we’ll be doing:
 
-2. Notice that you see your suit in multiple arrays in multiple languages. What's important is the long string beside it.  
-For example:
-```json
-"989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_": "Blood Money Suit"
-```
-In German:
-```json
-"989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_": "Blood-Money-Anzug"
-```
-The "string" is the same before the `:` in every language.  
-All we need is the long string inside the quotation marks, for example:  
-`"989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_"` (without quotation marks).  
-Copy that string.
+1. **Identify the suit** you want to modify by locating the appropriate LOCR file.
+2. **Find the string** representing the suit's name and description.
+3. **Convert the string** into a decimal number using GlacierKit.
+4. **Modify the manifest** by adding a localisation override for the new name and description.
+5. **Save and deploy** your changes.
 
-3. Go to the "Text Tools" tab on the left.  
-Paste the string inside the "Localisation hash calculator" box. It will produce a hex and a decimal (numbers-only) code underneath.  
-Copy the **decimal number**. Now we have the decimal, and we're halfway there.
+---
 
-4. The magic happens in the manifest.  
-Add a comma and hit enter after another line in your manifest. Start typing `"lo` and GlacierKit or VS Code will auto-suggest what can be used once the quotation marks are placed.
+## Step 1: Find the LOCR File for Your Suit
 
-5. Add the localisation override line by manually typing or using auto-suggestions:
-```json
-"localisationOverrides": {}
-```
-Always hit enter inside `{}` brackets to keep the code visually readable.
+Most suit names and descriptions are stored in **LOCR files**. These files hold all the text for different items in the game, including reward suits.
 
-6. Add the LOCR file hash to it (where all the suits were) in quotation marks, followed by a colon and another `{}`:
-```json
-"localisationOverrides": {
-    "yourLOCRhash": {}
-}
-```
+Each season has its own LOCR file, and we’ve already narrowed down the ones you’ll need:
+- **Season 3 Suits**: `004B8C5124A49543`
+- **Season 2 Suits**: `009F430D046716BE`
+- **Season 1 Suits**: `00985A1100E5EDDC`
 
-7. Go inside that bracket and add the language to overwrite.  
-For globality, use `"english"`:
-```json
-"localisationOverrides": {
-    "yourLOCRhash": {
-        "english": {}
-    }
-}
-```
+> **Tip**: If you’re not sure which season your suit belongs to, either make an educated guess or do a quick online search.
 
-8. Inside those brackets, add your converted decimal in quotation marks followed by your new text:
-```json
-"localisationOverrides": {
-    "yourLOCRhash": {
-        "english": {
-            "yourconvertednamedecimal": "New Suit Name"
-        }
-    }
-}
-```
+### Finding the Suit
 
-If you're on track, repeat the steps for the suit description.  
-If you want to add another overwrite (e.g., another suit name or description), simply add a comma and repeat the process.  
-End result:
-```json
-"localisationOverrides": {
-    "yourLocrHASH": {
-        "english": {
-            "yourconverteddecimal": "New Suit Name",
-            "yourotherconverteddecimal": "New Suit Description"
-        }
-    }
-}
-```
+1. Open **GlacierKit** and click the **"Open Project"** button.
+2. Navigate to your mod folder inside the **SMF folder** in your game’s contents.
+3. Use the **"Game Contents"** tab to paste one of the hashes above in the search bar. This will bring up the relevant LOCR file. For example, if you’re modifying a suit from Season 1, use the hash `00985A1100E5EDDC`.
+4. When the search completes, you’ll see a file tree ending in a file with a **language icon** (e.g., `randomwords.sweetmenutext].pc_localized-textlist`). This is your LOCR file.
 
-For example:
+---
+
+## Step 2: Extracting the Suit’s Name and Description
+
+Now that you have the LOCR file, you need to find the specific string representing the suit you want to modify.
+
+### Finding the Suit in the LOCR File
+
+1. **Open** the LOCR file in GlacierKit, and a **preview text box** will appear on the right side.
+2. Scroll through the text or use `Ctrl + F` to search for the suit’s name (for example, "Blood Money Suit").
+   
+   You will see the suit's name appear multiple times in different languages, but the important part is the **string** associated with the name, which will look something like this:
+   ```json
+   "989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_": "Blood Money Suit"
+   ```
+   The string before the `:` is the same for each language. **Copy** this string (without the quotation marks), as it will be needed for the next step.
+
+---
+
+## Step 3: Convert the String to a Decimal Number
+
+Now that you have the string, the next step is to convert it into a decimal number.
+
+1. Go to the **Text Tools** tab in GlacierKit.
+2. Paste the string into the **Localisation Hash Calculator**. This will generate two codes: a **hex code** and a **decimal code**.
+3. **Copy** the **decimal number** (not the hex). We’ll use this in the manifest.
+
+---
+
+## Step 4: Modify the Manifest
+
+Now that you have the decimal number, we can begin modifying the manifest.
+
+1. **Open your manifest file** in GlacierKit or Visual Studio Code.
+2. In the manifest, add the following block of code to create a **localisation override**:
+   ```json
+   "localisationOverrides": {}
+   ```
+   Hit **Enter** to keep your code readable.
+
+3. **Insert the LOCR file hash** from the file you opened earlier. It will look something like this:
+   ```json
+   "localisationOverrides": {
+       "00985A1100E5EDDC": {}
+   }
+   ```
+
+4. Now, specify the **language** you want to override (e.g., `"english"`). Inside the language block, insert your **decimal number** and the **new suit name** in quotation marks:
+   ```json
+   "localisationOverrides": {
+       "00985A1100E5EDDC": {
+           "english": {
+               "1047194709": "New Suit Name"
+           }
+       }
+   }
+   ```
+
+5. If you also want to change the **suit description**, repeat the process by adding the decimal and the new text for the description.
+
+Here’s an example of both a name and description override:
 ```json
 "localisationOverrides": {
     "00985A1100E5EDDC": {
@@ -135,8 +130,12 @@ For example:
 }
 ```
 
-### Adding Another Language:
-To add another language, just add a comma after `"english"` and repeat for the new language. For example, French:
+---
+
+## Step 5: Add Multiple Languages or LOCR Files (Optional)
+
+If you want to add overrides for multiple languages, follow the same structure. For example, here’s how you can add French translations:
+
 ```json
 "localisationOverrides": {
     "00985A1100E5EDDC": {
@@ -152,37 +151,36 @@ To add another language, just add a comma after `"english"` and repeat for the n
 }
 ```
 
-### Adding Another LOCR File:
-If you need to make changes to another LOCR file, you can add a new entry within the same `"localisationOverrides"` object. Here’s how you can add another LOCR file:
+### Adding Another LOCR File
+
+If you want to modify another LOCR file, you can add additional entries in the `"localisationOverrides"` section. Simply separate them with a comma. Here’s an example of adding another LOCR file:
 
 ```json
 "localisationOverrides": {
-    "yourLocrHASH": {
+    "00985A1100E5EDDC": {
         "english": {
-            "yourconverteddecimal": "New Suit Name",
-            "yourotherconverteddecimal": "New Suit Description"
+            "1047194709": "Blood Money Suit with Drip",
+            "3718104824": "The Blood Money suit but with extra style."
         }
     },
-    "otherLocrHASH": {
+    "004B8C5124A49543": {
         "english": {
-            "someconverteddecimal": "More New Suit Name",
-            "someotherconverteddecimal": "More New Suit Description"
-        },
-        "spanish": {
-            "someconverteddecimal": "Más nombre de traje nuevo",
-            "someotherconverteddecimal": "Más descripción del traje nuevo"
+            "987654321": "Another Suit Name"
         }
     }
 }
 ```
 
-In this example:
-- `"yourLocrHASH"` refers to the first LOCR file you modified.
-- `"otherLocrHASH"` refers to another LOCR file, and within that, you can add different language overrides (e.g., Spanish, English).
+---
 
-The reason why `"spanish"` is used instead of `"español"` is because the manifest schema is coded in English. For all languages you can use in the manifest, see the manifest info in SMF (book icon on the
+## Step 6: Save and Deploy
 
- left).
-```
+After you’ve made all your changes, save the manifest file and deploy the mod as you normally would. Your suit names and descriptions will now be updated in-game.
 
 ---
+
+With these steps, you should be able to modify suit names, descriptions, and other localisation text easily. Don’t hesitate to experiment with other text in the game once you’re comfortable!
+
+---
+
+This version is more structured, gradually introducing the steps with clear explanations. Let me know if this feels clearer and easier to follow!
