@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+description: Modifying an image in the menu
+---
 To continue on the adding parts page, you'll likely also want to modify the image in the menu to show the difference, change the suit's name and even add in your own suit's descritpion of it. I'll also mention a potential issue that arises when adding parts to your suit that dont come from a similiar chunk which will have to be addressed in the manifest. If you haven't read the documentation on manifest and other things in SMF (the little book icon on the left that shows up when you enable developer mode), I Suggest you read that and come back for bettter clarification after. I also advise to go back and forth between reading that, the tutorial pages on this site and modding yourself over time, so things start making more sense and you can practice in the meanwhile.
 
 ---
@@ -54,7 +58,7 @@ To continue on the adding parts page, you'll likely also want to modify the imag
 
 ---
 
-That's it! You’ve successfully replaced the suit’s image in the game with your own custom picture. Now, when you deploy your mod and load up the game, your new image will appear in place of the default one.
+That's it! You’ve successfully replaced the suit’s image in the game with your own custom picture. Now, when you deploy your mod and load up the game, your new image will appear in place of the default one. Don't close RPKG yet if you already are moving on to the next article. It'll make things alot quicker
 
 --- 
 
