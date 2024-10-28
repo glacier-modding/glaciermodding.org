@@ -1,16 +1,20 @@
 ---
 sidebar_position: 3
 description: Modifying an image in the menu
+
 ---
-To continue on the adding/patching of parts article from before, you'll likely also want to;
+# Adding custom images to the menu
+
+
+To continue on the previous adding/patching of parts article from before, you'll likely also want to;
 - modify the image in the menu to reflect the changes you've made 
 - change the suit's name in the menu
 - and even add in your own custom description for your suit. 
 
-I'll also be mentioning a potential issue that arises when 
-- adding parts to your suit that don't come from a suit chunk (chunk0) which will have to be addressed in the manifest. 
+I'll also be mentioning a potential issue that arises when you you're trying to
+- add parts to your suit that don't come from a reward suit chunk (chunk0) that will have to be solved in the manifest. 
 
-:::note
+:::info
 If you haven't yet read the documentation on the manifest and other things in SMF (the little book icon on the left that shows up when you enable developer mode), I suggest you read those or atleast skim through them and come back for more clarification. I also advise to go back and forth between reading those, the tutorial pages on this site and modding yourself over time, so things start making more sense while you practice modding for the game.
 Below is another great resource site for understanding the engine of hitman WOA. It's very abstract at the moment without any practical examples, but it explains how systems functions in the engine. Not necessary for now but 
 definitely worthy of bookmarking.
@@ -20,8 +24,6 @@ https://hitman-resources.netlify.app/documentation
 
 
 ---
-
-# Adding custom images to the menu
 
 ## Step 1: Locating the Suit
 
@@ -56,10 +58,11 @@ You now know the exact name of the file. Next time you want to open the reposito
 
 5. You can then start searching for your suit below in the *Unmodified section*.
 :::note
-Note that **GlacierKit** unlike **RPKG** doesn't display the pictures when clicking on files you click but the **repository code** on the right is the exact same as in **RPKG**.
+**GlacierKit** unlike **RPKG** doesn't display the pictures when clicking on files in the repository you click but the **repository code** on the right is the exact same as in **RPKG**.
+So let's confirm wether you have found the right picture.
 :::
 
-6. Now you will have to double check if you have the right suit image selected, you can simply copy the "assembly path" after **image:** in **GlacierKit** on the right and paste that in the game contents tab on the left and hit enter on your keyboard.
+6. Double check if you have the right suit image selected, you can simply copy the "assembly path" after **image:** in **GlacierKit** on the right and paste that in the search bar in the **game contents** tab on the left and hit enter on your keyboard.
 If the image you found matches the suit you want to modify, you're all set for the next step.
 
 Example of a full image code: 
@@ -82,13 +85,20 @@ While **RPKG** does have its usecases, they become deminishing the more advanced
 
 ## Step 2: Find Your Suit's image
 
-1. After opening the repository and locating the correct suit in one of the programs, locate the image code from your suit, which is displayed on the right. ("You should have already confirmed this in the Glacier method")
-2. I repeat, click on your suit, in either program, and look at the text box on the right-hand side. This code you see will be identical for each program.
+1. After opening the repository and locating the correct suit in one of the programs, locate the image code from your suit, which is displayed on the right. 
+
+   (You should have already confirmed this with the Glacier method)
+
+2. I repeat, click on your suit, in either program, and look at the text box on the right-hand side. This code you see will be identical in each program.
    There will be a line of code starting with *"Image":"....* 
+
+:::example
    For example:  
    ```json
    "Image": "images/unlockables_override/47_outfits_bloodmoney_gloves.jpg"
    ```
+:::
+
 4. Remember the **file path** ("images/unlockables_override/") and 
    **file name** (47_outfits_bloodmoney_gloves.jpg).
 
@@ -134,16 +144,18 @@ You can do this from inside **GlacierKit** if you opened your project in there o
    ```json
    "blobsFolders": ["blobs"]
    ```
+:::example
 3. If you named your "blobs" folder something else (e.g., "MyCustomImages"), you’ll need to adjust this line accordingly like this:
    ```json
    "blobsFolders": ["MyCustomImages"]
    ```
  but make sure the internal folder structure and file names match exactly. You can do this for any image in the game, as long as you find the image path and the image's name. If there are multiple images with the same mapping, you can just add them in there alongside the bloodmoney image. Just follow the naming convention too.
-
+:::
 
 ---
-
+:::success
 That's it! You’ve successfully replaced the suit’s image in the game with your own custom picture. Now, when you deploy your mod and load up the game, your new image will appear in place of the default one. Don't close GlacierKit yet if you already are moving on to the next article. It'll make things alot quicker. 
+:::
 
 --- 
 
