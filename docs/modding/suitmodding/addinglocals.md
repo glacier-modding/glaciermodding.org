@@ -7,10 +7,10 @@ description: Changing the suit's name and description
 
 Let's change the suit name and description.  
 You will need GlacierKit and a mod folder with a manifest (no content files are even needed, everything is done from the manifest).  
-If you're editing your manifest in GlacierKit, it will check and auto-suggest code you can use while keeping code clean.
+If you're editing your manifest in GlacierKit, it will check and auto-suggest code you can use while keeping code clean. You can skip over the Visual studio Code part below.
 
 Recommended but not necessary:  
-Have Visual Studio Code and a manifest schema that checks errors in your manifest:
+Have Visual Studio Code and a manifest "schema" that checks errors in your manifest:
 
 ```json
 "$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
