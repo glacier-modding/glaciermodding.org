@@ -198,7 +198,7 @@ examples:
 | `images/characters/male_suits/caruso_idk.png`            | `blobs/images/characters/male_suits/caruso_idk.png`       |
 | `icons/equipment/distraction_device_old.jpg`               | `blobs/icons/equipment/distraction_device_old.jpg`          |
 
-- For multiple images that use the same ***assembly path***, simply place them within the same folders (e.g., images under `unlockables_override`).
+- For multiple images that use the same ***assembly path***, simply place them within the same folders (e.g., images under `unlockables_override`). Don't forget to rename them too.
 
 
 ### Renaming ***"blobs"***
@@ -222,10 +222,10 @@ You can then add them to the manifest by simply adding a comma and the name of t
 :::info challenge
 *Up for a challenge?*
 
-Reinforce your skills by replacing more images in the game using only these essential steps:
+Reinforce what you learned by replacing more images in the game using **only** these essential steps:
 
 - Locate image(s) in the **repository** 
-- Set up a new **blobs folder** and create **file paths**
+- Set up a new **blobs folder** and recreate **file paths**
 - Add your images and ensure **file names** match
 - Update the **manifest**, deploy, and test in-game
 
