@@ -87,7 +87,7 @@ The ***assembly path*** is the line after **image:** inside the quotation marks 
    images/unlockables_override/47_outfits_bloodmoney_gloves.jpg
    ```
 
-- Paste that in the search bar in the ***game contents*** tab on the left 
+- Paste that in the search bar in the *game contents* tab on the left 
 - and hit enter on your keyboard.
 
 
@@ -136,16 +136,17 @@ Keep **RPKG** and/or **GlacierKit** open, you’ll need it in the next steps.
 
 1. Open your mod folder and create a folder called ***blobs*** in the root directory (where your manifest is located).
 You can do this from inside **GlacierKit** if you opened your mod as a project in there or in **Explorer**.
-2. In ***blobs***, create folders that match your suit image's ***assembly path*** you found in **RPKG** or **GlacierKit**.
+2. In ***blobs***, create folders that match your suit image's **file path** you found.
 
-   - For example, if the **file path** was `"images/unlockables_override/"`, the folder structure of your **blobs folder** should look like this:  
+   - For example, if the **file path** of the ***assembly path*** was `"images/unlockables_override/"`, the folder structure of your **blobs folder** should look like this:  
      `blobs/images/unlockables_override/`
 
-3. Place your custom image inside the last folder (in this case, it's *unlockables_ooverride* ) so it matches your ***assembly path***.  
-   - Your image file must have the **exact same name** and **file type** as the original image file you will be overwriting.  
+3. Place your custom image inside the last folder (in this case, it's *unlockables_override* ) and adjust it so that it fully matches the **file name** of the image that you want replaced.  
+   - Your custom image file must have the **exact same name** and **file type** as the original image file you will be overwriting. 
    - For example:  
      `blobs/images/unlockables_override/47_outfits_bloodmoney_gloves.jpg`
    
+   You now have fully recreated the ***assembly path*** of the image in the game.
    Your result should look like this:
    ```
    📁YourModFolder
@@ -158,13 +159,13 @@ You can do this from inside **GlacierKit** if you opened your mod as a project i
    ├── manifest.json
    └── project.json
    ```
- If you want to have multiple images replaced but they use the same ***assembly path***, you can just add them in the same map alongside any other custom images. Just follow the same naming convention.
+ If you want to have multiple images replaced but they use the same ***assembly path***, you can just add them in the same map alongside any other custom images. Just follow the same naming convention by taking notice of the **file name**.
 
 :::warning
 Make sure the image that you're replacing is similar in aspect ratio with the image you're replacing by comparing your image's resolution and the one your replacing it to avoid weird strecthed images.
 
 example: The picture of the blood money suit is in Resolution: 696x520. This is an aspect ratio of approximately 4:3.
-You can only see your picture's **resolution** precisely when opening the image in **GlacierKit**.
+>You can only see your picture's **resolution** precisely when opening the image in **GlacierKit**.
 :::
 
 ---
@@ -181,7 +182,7 @@ You can only see your picture's **resolution** precisely when opening the image 
    ```json
    "blobsFolders": ["MyCustomImages"]
    ```
- Just make sure the internal contents of your **BlobsFolder** have the correct **folder paths** and **file name(s)** that match your image's ***assembly path***. 
+ Just make sure the internal contents of your **BlobsFolder** have the correct **file paths** and **file name(s)** that match your image's ***assembly path*** you want replaced. 
 
 
 :::note
@@ -208,14 +209,17 @@ That's it! You’ve successfully replaced the suit’s image in the game with yo
 - Change the file extension manually in regular **Windows Explorer** or **GlacierKit**, if needed, to `.jpg` or even `.png` in some cases. It shouldn't corrupt your image usually. 
    
    *But* in the very rare case it does, you can use an **image converter** (online, Photoshop, GIMP, etc...) that can **convert** and **export** your image to any other image type. 
+
+- Use an image that is similiar in aspect ratio to keep it from looking stretched.
 :::
 
 
 Now for a test, try replacing more images in the game using only the steps below.
 1. Open the ***repository*** and find an image you want to replace  
 2. Find the correct **image code** and note its ***assembly path***
-3. Set up a brand new ***blobsFolder*** in your mod folder that will hold your custom image. Remember the **File path**.
-4. Add your custom image and rename it correctly. Remember the **File name** 
+3. Set up a brand new ***blobsFolder*** in your mod folder that will hold your custom image. Remember the **File path** that you will recreate.
+4. Add your custom image and rename it correctly. Remember the **File name** and **File type** 
+4. Add your custom image and rename it correctly. Remember the **File name** and **File type** 
 >(optionally try replacing more images)
 5. Open your **manifest** and correctly add in your new ***blobsfolder***. Then save it
 6. Deploy and test your new images
