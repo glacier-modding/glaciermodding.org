@@ -111,8 +111,8 @@ There will be a line of code starting with *"Image":"....*
    :::
 
 It consists of a
-- **file path** `images/unlockables_override/` and 
-- **file name** `47_outfits_bloodmoney_gloves.jpg` of the image. 
+- **file path** `images/unlockables_override/`
+- **file name** `47_outfits_bloodmoney_gloves.jpg`
    
    These 2 together are called the ***assembly path*** of your file's image.
 
