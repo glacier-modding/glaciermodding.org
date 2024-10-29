@@ -17,7 +17,7 @@ I'll also be mentioning a potential issue that arises when you're trying to
 >First up, let's try changing just the image in the menu with your custom image. These are called **"blobs"**
 
 :::note Documentation
-If you haven’t yet reviewed the SMF manifest and other resources in developer mode (the book icon in SMF), consider skimming these and returning here for context. Familiarizing yourself with these references can be helpful as you get hands-on with modding. I also made a little tutorial on adding parts with screenshots but it's very rough to read. Use it in combination with the previous article. Here’s another excellent resource worth bookmarking for later:
+If you haven’t reviewed SMF’s manifest resources (found under SMF’s developer mode book icon), consider skimming these. Familiarizing yourself can help when starting modding. I also made a little tutorial on adding parts with screenshots (but it's very rough to read). Use it in combination with the previous article. Here’s another excellent resource worth bookmarking for later:
 
 - [Hitman Resources Documentation](https://hitman-resources.netlify.app/documentation) - An advanced look at WOA’s engine systems.
 - [Adding Suit Parts guide](https://www.nexusmods.com/hitman3/articles/63) - A guide on adding parts with screenshots. 
@@ -51,7 +51,7 @@ There are 2 methods for this part. I'll do **RPKG** first since it's a bit more 
 3. - Copy the following **repository's** file hash  ```00204D1AFD76AB13``` and paste it on the search bar and hit enter. 
    - Or simply type ***pro.repo*** on the search bar and hit enter.
 Both methods should bring you to a single file called **pro.repo**. 
-4. Open it by clicking on it (obviously) and then click on *"Open in editor"* in the new menu that popped up on the right. You are now in the ***repository***
+4. Open it by clicking on it (obviously) and then click on *"Open in editor"* in the new menu that popped up on the right. This is the ***repository*** but in **Glacierkit**
 
 :::tip
 You now know the exact name of the **repository** file. Next time you want to open the **repository** in **GlacierKit** just type ***pro.repo***.
@@ -94,8 +94,9 @@ While **RPKG** is helpful for viewing images in the **repository**, it’s best 
 ---
 ## STEP 2: **FIND THE IMAGE**
 In this step we will have to look for the correct Image code and remember its ***assembly path***.
-
-(You already did this step in the GlacierKit method but follow along)
+:::note
+You already did this step in the **GlacierKit** method but follow along
+:::
    ### 1. Open your file
 Click on your suit and you should see it's ***repository*** code on the right
 
@@ -124,29 +125,25 @@ Keep **RPKG** and/or **GlacierKit** open, you’ll need it in the next steps.
 ## STEP 3: **SET UP A BLOBSFOLDER**
 In this step, you’ll create a custom folder structure to replace the game’s default image.
 
-### 1. Make a blobs folder
+### 1. Make a blobsfolder
 
    Create a new folder called `blobs` in your mod's root directory, where the manifest file is located. You can do this in **GlacierKit** or **File Explorer**.
 
 ### 2. Recreate the file path
 
-    Create folders to match the **file path** of the image you want to replace. 
-    
+    Create folders that match the **file path** of the image you want to replace.  
     For example, if the **file path** is `images/unlockables_override/`, your `blobs` folder structure should look like this:
    ```
    blobs/images/unlockables_override/
    ```
-   
-
 ### 3. Add your custom image  
    - Place your image in the last folder you created (in this example, `unlockables_override`). 
-   - Ensure that the custom image has the same **file name** and **file type** as the original, for example:
+   - Make sure the custom image has the exact same **file name** and **file type** as the original, for example:
    ```
    blobs/images/unlockables_override/47_outfits_bloodmoney_gloves.jpg
    ```
 ### 4. Confirm the assembly path
-This fully recreates the ***assembly path*** of the image you're replacing. 
-   
+This fully recreates the ***assembly path*** of the image you're replacing.    
    Your final folder structure should look like this:
    ```
    📁YourModFolder
@@ -170,26 +167,30 @@ This fully recreates the ***assembly path*** of the image you're replacing.
 ### 1. Open your manifest
 Recommended to do so in **GlacierKit** (or in **VS code** with a ***"schema"***).
 
-### 2. Add your blobs folder:
-Add the following line that will do a blobs operation and have it refer to your ***`blobs`*** folder
+### 2. Add your blobsfolder:
+Add the following line that will make **SMF** do a blobs operation and have it refer to your ***`blobs`*** folder
    ```json
    "blobsFolders": ["blobs"]
    ```
  ### 3. Save & Deploy
- Simply click the little save icon on top or click **ctrl+S** on your keyboard. Deploy your mod in **SMF** and you should see your new images loaded in the game.
+ Simply click the little save icon on top or click **ctrl+S** on your keyboard. Deploy your mod in **SMF** and your new image will appear in place of the default one.
 
 :::success
 That's it! You’ve successfully replaced the suit’s image in the game with your own custom picture. Now, when you load up the game, your new image will appear in place of the default one. Don't close **GlacierKit** yet if you already are moving on to the next article or want to try the test below. It'll make things alot quicker. 
 :::
+With your final step complete, below are additional options and tips for managing **blobs** in your mod.
+
 ---
-## MORE INFO
+## More on Blobs
+These tips will help you customize and manage multiple images or settings for more dynamic mods.
 
 
-### - More Blobs images
+### More Blobs images
+
 - If you want to add more images, remember to recreate the **file paths** by making more folders. 
-Example;
+For multiple images, place each in its relevant folder based on the **file paths**. Refer to the table below for examples:
 
-| Assembly Path (in-game)                    | Your Blobs Folder Structure                      |
+| **Assembly Path** (in-game)                    | Your **BlobsFolder** Structure                      |
 |--------------------------------------------|---------------------------------------------|
 | `images/unlockables_override/absolution_suit.jpg`             | `blobs/images/unlockables_override/absolution_suit.jpg`        |
 | `images/characters/male_suits/caruso_idk.png`            | `blobs/images/characters/male_suits/caruso_idk.png`       |
@@ -197,32 +198,35 @@ Example;
 
 - For multiple images that use the same ***assembly path***, simply place them within the same folders (e.g., images under `unlockables_override`).
 
-### - More Blobs folders
-You can add more ***blobsfolders*** in your mod. This is useful if your mod will have multiple options that can be selected in your mod's settings.
+
+### Renaming ***"blobs"***
+You can name your `blobsfolder` whatever you like (e.g., "MyCustomImages"), just update the manifest.:
+   ```json
+   "blobsFolders": ["MyCustomImages"]
+   ```
+### Adding Multiple Blobsfolders
+You can add more **blobsfolders** in your mod. This is useful if your mod will have multiple options that can be selected in your mod's settings.
 The same rules apply inside; 
  - set **file paths** by making folders
  - and use correct **file name(s)**
 
-### - Renaming ***"blobs"***
-You can name your **blobs** folder anything (e.g., "MyCustomImages") but you’ll need to adjust this line accordingly in the manifest like this:
-   ```json
-   "blobsFolders": ["MyCustomImages"]
-   ```
-
-These can then be added to the manifest by simply adding a comma and the name of the new folder in quotation marks.
+You can then add them to the manifest by simply adding a comma and the name of the new folder in quotation marks.
 
    ```json
    "blobsFolders": ["blobs","MyCustomImages","MoreBlobs"]
    ```
 
 --- 
-:::info Challenge
-Test your skills by replacing more images in the game. Follow these key steps:
+:::info challenge
+*Up for a challenge?*
+
+This challenge will reinforce what you’ve learned and introduce new ways to manage blobs, as covered in 'More on Blobs'
+Reinforce your skills by replacing more images in the game using only these essential steps:
 
 - Locate image(s) in the **repository** and note the ***assembly path(s)***
 - Set up new **blobs folders** and create **file paths**
 - Add images and ensure **file names** and types match
 - Update the **manifest**, deploy, and test in-game
 
-Repeat steps you struggled with until they become familiar—if you can complete these steps without looking at the tutorial, the next article will be a breeze!
+Repeat steps you struggled with until they’re familiar—if you can complete these steps without looking at the tutorial, you’re ready for the next article!
 :::
