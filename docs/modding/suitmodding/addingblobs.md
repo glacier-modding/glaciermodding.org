@@ -3,7 +3,7 @@ sidebar_position: 3
 description: Modifying an image in the menu
 
 ---
-# Adding Blobs
+# Adding "Blobs"
 
 
 To continue on the previous adding/patching of parts article from before, you'll likely also want to;
@@ -14,16 +14,16 @@ To continue on the previous adding/patching of parts article from before, you'll
 I'll also be mentioning a potential issue that arises when you're trying to
 - add parts to your suit that don't come from a reward suit chunk (chunk0) which will have to be solved in the manifest. 
 
->First up, let's try changing just the image in the menu with your custom image. These are called **"blobs"**
+
 
 :::note Documentation
-If you haven’t reviewed SMF’s manifest resources (found under SMF’s developer mode book icon), consider skimming these. Familiarizing yourself can help when starting modding. I also made a little tutorial on adding parts with screenshots (but it's very rough to read). Use it in combination with the previous article. Here’s another excellent resource worth bookmarking for later:
+If you haven’t reviewed SMF’s documentation resources (the book icon on the left when you enable developer mode in SMF), consider skimming these then return here. I also made a little tutorial on adding parts with screenshots. Use it in combination with the previous article (because the code is unreadable). Here’s another excellent resource worth bookmarking for later:
 
 - [Hitman Resources Documentation](https://hitman-resources.netlify.app/documentation) - An advanced look at WOA’s engine systems.
 - [Adding Suit Parts guide](https://www.nexusmods.com/hitman3/articles/63) - A guide on adding parts with screenshots. 
 :::
 
-
+>First up, let's try changing just the image in the menu with your custom image. These are called **"blobs"**
 
 ---
 
@@ -82,7 +82,7 @@ To do so, simply
 - and hit enter on your keyboard.
 
 
->If the image you found matches the suit you want to modify, you're all set for the next step and you can go back to your ***repository*** file. (Where you saw your code).
+>If the image you found matches the suit you want to modify, you're all set for the next step and you can go back to your **repository** file. (Where you saw your code).
 
 >You can leave open your **GlacierKit** program
 
@@ -98,10 +98,10 @@ In this step we will have to look for the correct Image code and remember its **
 You already did this step in the **GlacierKit** method but follow along
 :::
    ### 1. Open your file
-Click on your suit and you should see it's ***repository*** code on the right
+Click on your suit and you should see its **repository** code on the right
 
    ### 2. Locate the assembly path
-There will be a line of code starting with *"Image":"....*
+There will be a line of code starting with `"Image":"....`
 
    :::example
    For example:  
@@ -114,7 +114,7 @@ It consists of a
 - **file path** `images/unlockables_override/`
 - **file name** `47_outfits_bloodmoney_gloves.jpg`
    
-   These 2 together are called the ***assembly path*** of your file's image.
+   These 2 together are called the **assembly path** of your file's image.
 
 :::warning
 Keep **RPKG** and/or **GlacierKit** open, you’ll need it in the next steps.
@@ -138,12 +138,13 @@ In this step, you’ll create a custom folder structure to replace the game’s 
    ```
 ### 3. Add your custom image  
    - Place your image in the last folder you created (in this example, `unlockables_override`). 
-   - Make sure the custom image has the exact same **file name** and **file type** as the original, for example:
+### 4. Recreate the file name
+   - Make sure the custom image has the exact same **file name** and **file type** as the original by changing it, for example:
    ```
    blobs/images/unlockables_override/47_outfits_bloodmoney_gloves.jpg
    ```
-### 4. Confirm the assembly path
-This fully recreates the ***assembly path*** of the image you're replacing.    
+### 5. Confirm the assembly path
+This fully recreates the **assembly path** of the image you're replacing.    
    Your final folder structure should look like this:
    ```
    📁YourModFolder
@@ -157,7 +158,7 @@ This fully recreates the ***assembly path*** of the image you're replacing.
    ```
 :::danger Important Tips
 - **Aspect Ratio**: Match the aspect ratio of your replacement image with the original to avoid distortion. *Example*: The Blood Money suit image has a 4:3 ratio (resolution 696x520), which you can check in **GlacierKit**.
-- **File Corruption**: If changing the file type manually corrupts your image, use an image converter tool (Photoshop, GIMP, etc.).
+- **File Corruption**: If changing the file type manually corrupts your image, use an image converter tool (Photoshop, GIMP, online, etc.).
 :::
 
 ---
@@ -198,11 +199,11 @@ examples:
 | `images/characters/male_suits/caruso_idk.png`            | `blobs/images/characters/male_suits/caruso_idk.png`       |
 | `icons/equipment/distraction_device_old.jpg`               | `blobs/icons/equipment/distraction_device_old.jpg`          |
 
-- For multiple images that use the same ***assembly path***, simply place them within the same folders (e.g., images under `unlockables_override`). Don't forget to rename them too.
+- For multiple images that use the same **assembly path**, simply place them within the same folders (e.g., images under `unlockables_override`). Don't forget to rename them too.
 
 
 ### Renaming ***"blobs"***
-You can name your `blobsfolder` whatever you like (e.g., "MyCustomImages"), just update the manifest.:
+You can name your `blobsfolder` whatever you like (e.g., "MyCustomImages"), just update the manifest too after.:
    ```json
    "blobsFolders": ["MyCustomImages"]
    ```
