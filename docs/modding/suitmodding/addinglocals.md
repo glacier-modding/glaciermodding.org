@@ -4,7 +4,7 @@ description: Adding a name and description
 
 ---
 
-# Part 2: Localisation Overrides
+# Localisation Overrides
 
 In this section, we'll focus on changing the **suit name and description** in the game by modifying the localisation files. You will need **GlacierKit** and a mod folder with a manifest file, but no content files are required. Everything will be handled through the manifest.
 
