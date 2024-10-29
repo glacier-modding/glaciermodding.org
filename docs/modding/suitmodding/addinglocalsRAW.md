@@ -1,9 +1,9 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 description: Changing the suit's name and description
 ---
-```
-# Part 2: Localisation Overrides
+
+# Localisation Overrides RAW
 Lets change the suit name and description.
 You will need GlacierKit and a mod folder with a manifest (no content files are even needed. Everything is done from the manifest). 
 If youre editing your manifest in GlacierKit, it will check and auto-suggest code you can use while keeping code clean.
@@ -60,7 +60,7 @@ Now stuff is going to get altered. (!!!)
 - Just start typing '"lo' and glacier or VS code will auto-suggest what can be used as soon as the quotation marks are placed.
 - add the localisation override line. by manually typing it in or using your mouse to click or navigating down and hitting enter on "localisationOverrides"
 
-
+```
 Your result should look like this;
 "localisationOverrides": {}
 
