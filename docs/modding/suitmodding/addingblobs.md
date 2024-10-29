@@ -182,13 +182,15 @@ With your final step complete, below are additional options and tips for managin
 
 ---
 ## More on Blobs
-These tips will help you customize and manage multiple images or settings for more dynamic mods.
+These tips will help you manage multiple images and **blobsfolders**.
 
 
 ### More Blobs images
 
 - If you want to add more images, remember to recreate the **file paths** by making more folders. 
-For multiple images, place each in its relevant folder based on the **file paths**. Refer to the table below for examples:
+And place each image in its relevant folder
+
+examples:
 
 | **Assembly Path** (in-game)                    | Your **BlobsFolder** Structure                      |
 |--------------------------------------------|---------------------------------------------|
@@ -205,8 +207,8 @@ You can name your `blobsfolder` whatever you like (e.g., "MyCustomImages"), just
    "blobsFolders": ["MyCustomImages"]
    ```
 ### Adding Multiple Blobsfolders
-You can add more **blobsfolders** in your mod. This is useful if your mod will have multiple options that can be selected in your mod's settings.
-The same rules apply inside; 
+You can even add more **blobsfolders** in your mod. This is useful if your mod will have multiple options that can be selected in your mod's settings.
+The same rules apply to them; 
  - set **file paths** by making folders
  - and use correct **file name(s)**
 
@@ -220,12 +222,11 @@ You can then add them to the manifest by simply adding a comma and the name of t
 :::info challenge
 *Up for a challenge?*
 
-This challenge will reinforce what you’ve learned and introduce new ways to manage blobs, as covered in 'More on Blobs'
 Reinforce your skills by replacing more images in the game using only these essential steps:
 
-- Locate image(s) in the **repository** and note the ***assembly path(s)***
-- Set up new **blobs folders** and create **file paths**
-- Add images and ensure **file names** and types match
+- Locate image(s) in the **repository** 
+- Set up a new **blobs folder** and create **file paths**
+- Add your images and ensure **file names** match
 - Update the **manifest**, deploy, and test in-game
 
 Repeat steps you struggled with until they’re familiar—if you can complete these steps without looking at the tutorial, you’re ready for the next article!
