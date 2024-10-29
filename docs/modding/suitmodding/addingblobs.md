@@ -16,20 +16,22 @@ I'll also be mentioning a potential issue that arises when you're trying to
 
 >First up, let's try changing just the image in the menu with your custom image. These are called **"blobs"**
 
-:::info Hold up
-If you haven't yet read the documentation on the manifest and other things in SMF (the little book icon on the left that shows up when you enable developer mode), I suggest you read those or atleast skim through them and come back for more clarification. I also advise to go back and forth between reading those, the documentation pages on this site and modding yourself over time, so things start making more sense while you practice modding for the game.
-Below is another great resource site for understanding the engine of hitman WOA. It's very abstract at the moment without any practical examples, but it explains how systems functions in the engine. Not necessary for now but 
-definitely worthy of bookmarking for later.
+:::note Documentation
+If you haven’t yet reviewed the SMF manifest and other resources in developer mode (the book icon in SMF), consider skimming these and returning here for context. Familiarizing yourself with these references can be helpful as you get hands-on with modding. I also made a little tutorial on adding parts with screenshots but it's very rough to read. Use it in combination with the previous article. Here’s another excellent resource worth bookmarking for later:
 
-https://hitman-resources.netlify.app/documentation
+- [Hitman Resources Documentation](https://hitman-resources.netlify.app/documentation) - An advanced look at WOA’s engine systems.
+- [Adding Suit Parts guide](https://www.nexusmods.com/hitman3/articles/63) - A guide on adding parts with screenshots. 
 :::
+
 
 
 ---
 
-## Step 1: Locating the Suit in the Repository
+## STEP 1: **LOCATE YOUR FILE**
+First, let's locate the suit within the **repository**, using either RPKG or GlacierKit.
 
 There are 2 methods for this part. I'll do **RPKG** first since it's a bit more easier to find and confirm your image directly. I still suggest you try the **GlacierKit** method too for reasons I will explain later on.
+
 
 ### Method 1: Using RPKG
 
@@ -45,44 +47,33 @@ There are 2 methods for this part. I'll do **RPKG** first since it's a bit more 
 ### Method 2: Using GlacierKit
 
 1. Open **GlacierKit**
-2. Select the *"game contents"* tab on the left. 
-3. Copy the following **repository's** file hash,  ```00204D1AFD76AB13```, and paste it on the search bar and hit enter.
-   
-   Or 
-   simply type ***pro.repo*** on the search bar and hit enter.
+2. Select the *"game contents"* tab on the left.
+3. - Copy the following **repository's** file hash  ```00204D1AFD76AB13``` and paste it on the search bar and hit enter. 
+   - Or simply type ***pro.repo*** on the search bar and hit enter.
+Both methods should bring you to a single file called **pro.repo**. 
+4. Open it by clicking on it (obviously) and then click on *"Open in editor"* in the new menu that popped up on the right. You are now in the ***repository***
 
-   You should now see a single file called **pro.repo**. 
-   
 :::tip
-You now know the exact name of the file. Next time you want to open the ***repository*** in **Glacier** just type ***pro.repo*** and it should lead you to the same file instead of having to copy and paste the hash you saw earlier each time. This is an important file you'll be using more.
-:::
-
-4. Open it by clicking on it (obviously) and then click on *"Open in editor"* in the new menu that popped up on the right.
+You now know the exact name of the **repository** file. Next time you want to open the **repository** in **GlacierKit** just type ***pro.repo***.
+::: 
 
 5. You can then start searching for your suit below in the *"Unmodified section"*.
-
-:::note
-**GlacierKit**, unlike **RPKG**, doesn't display the pictures when clicking on files in the ***repository*** 
-
-*BUT*
-
-the ***repository*** code lines you see on the right are the exact same in both programs for similar files. Feel free to verify it yourself.
-Let's double confirm wether you have found the right picture in **GlacierKit** anyway.
-:::
-
 6. Double check if you have the right suit selected by looking up the image in **GlacierKit**.
 To do so, simply 
 
-- find the correct image code line that starts with ***"Image":".....*** on the right.
+   - find the correct image code line on the right that starts with ***"Image":".....***
 
-Example of a full image code: 
+ 
+
+   - and copy the ***assembly path*** 
+
+   The **assembly path** is the line after **"image":"...**" inside the quotation.
+
+     Example of a full image code: 
    ```json
    "Image": "images/unlockables_override/47_outfits_bloodmoney_gloves.jpg"
    ```
-
-- copy the ***assembly path*** 
-
-The ***assembly path*** is the line after **image:** inside the quotation marks like so:
+   and its **assembly path**
    ```json
    images/unlockables_override/47_outfits_bloodmoney_gloves.jpg
    ```
@@ -91,40 +82,38 @@ The ***assembly path*** is the line after **image:** inside the quotation marks 
 - and hit enter on your keyboard.
 
 
-If the image you found matches the suit you want to modify, you're all set for the next step and you can go back to your ***repository*** file. (Where you saw your code).
+>If the image you found matches the suit you want to modify, you're all set for the next step and you can go back to your ***repository*** file. (Where you saw your code).
 
+>You can leave open your **GlacierKit** program
 
->You can leave open your **GlacierKit** program after finding your suit
-
-
-:::info Sticking to GlacierKit
-These are the 2 methods to find your suit's image. It's highly advised to use **GlacierKit** as much as possible because that's where you'll do most of your modding in the future. 
-
-While **RPKG** does have its usecases, they become deminishing in usecase the more advanced you get with modding. This is one tiny example where I prefer to use **RPKG** alongside **GlacierKit** just because the images load up with each file in the ***repository***.
-This is also a very rare case where **RPKG** looks more streamlined than **GlacierKit** but this couldn't be further from the truth as you will learn over time.
-However, I still advise to try finding your suit's image using both methods to get familiar with each program and the game files in general.
+:::info GlacierKit vs. RPKG
+While **RPKG** is helpful for viewing images in the **repository**, it’s best to work primarily in **GlacierKit**, as it will be your main modding tool. The **repository code lines** in both tools are identical, so practicing in **GlacierKit** is encouraged for efficient modding.
 :::
 
-## Step 2: Find Your Suit's image
 
-1. After opening the ***repository*** and locating the correct suit in one of the programs, locate the **image code** from your suit, which is displayed on the right. 
+---
+## STEP 2: **FIND THE IMAGE**
+In this step we will have to look for the correct Image code and remember its ***assembly path***.
 
-(You should have already found it with the Glacier method)
+(You already did this step in the GlacierKit method but follow along)
+   ### 1. Open your file
+Click on your suit and you should see it's ***repository*** code on the right
 
-2. Click on your suit and look at the text box of code on the right-hand side. This code you see will be identical in each program.
-   There will be a line of code starting with *"Image":"....* 
+   ### 2. Locate the assembly path
+There will be a line of code starting with *"Image":"....*
 
-:::example
+   :::example
    For example:  
    ```json
    "Image": "images/unlockables_override/47_outfits_bloodmoney_gloves.jpg"
    ```
-:::
+   :::
 
-4. Remember the **file path** `images/unlockables_override/` and 
-   **file name** `47_outfits_bloodmoney_gloves.jpg` of your image. 
+It consists of a
+- **file path** `images/unlockables_override/` and 
+- **file name** `47_outfits_bloodmoney_gloves.jpg` of the image. 
    
-   These 2 together are called the ***assembly path*** of your image.
+   These 2 together are called the ***assembly path*** of your file's image.
 
 :::warning
 Keep **RPKG** and/or **GlacierKit** open, you’ll need it in the next steps.
@@ -132,97 +121,108 @@ Keep **RPKG** and/or **GlacierKit** open, you’ll need it in the next steps.
 
 ---
 
-## Step 3: Set Up the Blobs Folder
+## STEP 3: **SET UP A BLOBSFOLDER**
+In this step, you’ll create a custom folder structure to replace the game’s default image.
 
-1. Open your mod folder and create a folder called ***blobs*** in the root directory (where your manifest is located).
-You can do this from inside **GlacierKit** if you opened your mod as a project in there or in **Explorer**.
-2. In ***blobs***, create folders that match your suit image's **file path** you found.
+### 1. Make a blobs folder
 
-   - For example, if the **file path** of the ***assembly path*** was `"images/unlockables_override/"`, the folder structure of your **blobs folder** should look like this:  
-     `blobs/images/unlockables_override/`
+   Create a new folder called `blobs` in your mod's root directory, where the manifest file is located. You can do this in **GlacierKit** or **File Explorer**.
 
-3. Place your custom image inside the last folder (in this case, it's *unlockables_override* ) and adjust it so that it fully matches the **file name** of the image that you want replaced.  
-   - Your custom image file must have the **exact same name** and **file type** as the original image file you will be overwriting. 
-   - For example:  
-     `blobs/images/unlockables_override/47_outfits_bloodmoney_gloves.jpg`
+### 2. Recreate the file path
+
+    Create folders to match the **file path** of the image you want to replace. 
+    
+    For example, if the **file path** is `images/unlockables_override/`, your `blobs` folder structure should look like this:
+   ```
+   blobs/images/unlockables_override/
+   ```
    
-   You now have fully recreated the ***assembly path*** of the image in the game.
-   Your result should look like this:
+
+### 3. Add your custom image  
+   - Place your image in the last folder you created (in this example, `unlockables_override`). 
+   - Ensure that the custom image has the same **file name** and **file type** as the original, for example:
+   ```
+   blobs/images/unlockables_override/47_outfits_bloodmoney_gloves.jpg
+   ```
+### 4. Confirm the assembly path
+This fully recreates the ***assembly path*** of the image you're replacing. 
+   
+   Your final folder structure should look like this:
    ```
    📁YourModFolder
-   ├ └── 📁blobs
-   ├     └── 📁images
-   ├          └── 📁unlockables_override
-   ├               └── 47_outfits_bloodmoney_gloves.jpg
-   ├   
-   ├📁content
+   ├── 📁blobs
+   │   └── 📁images
+   │       └── 📁unlockables_override
+   │           └── 47_outfits_bloodmoney_gloves.jpg
+   ├── 📁content
    ├── manifest.json
    └── project.json
    ```
- If you want to have multiple images replaced but they use the same ***assembly path***, you can just add them in the same map alongside any other custom images. Just follow the same naming convention by taking notice of the **file name**.
-
-:::warning
-Make sure the image that you're replacing is similar in aspect ratio with the image you're replacing by comparing your image's resolution and the one your replacing it to avoid weird strecthed images.
-
-example: The picture of the blood money suit is in Resolution: 696x520. This is an aspect ratio of approximately 4:3.
->You can only see your picture's **resolution** precisely when opening the image in **GlacierKit**.
+:::danger Important Tips
+- **Aspect Ratio**: Match the aspect ratio of your replacement image with the original to avoid distortion. *Example*: The Blood Money suit image has a 4:3 ratio (resolution 696x520), which you can check in **GlacierKit**.
+- **File Corruption**: If changing the file type manually corrupts your image, use an image converter tool (Photoshop, GIMP, etc.).
 :::
 
 ---
 
-## Step 4: Update the Manifest
+## STEP 4: **UPDATE MANIFEST**
 
-1. Open your mod’s **manifest** file. (Recommended to do so in **GlacierKit**)
-2. Add the following line that refers to the **blobs** folder:
+### 1. Open your manifest
+Recommended to do so in **GlacierKit** (or in **VS code** with a ***"schema"***).
+
+### 2. Add your blobs folder:
+Add the following line that will do a blobs operation and have it refer to your ***`blobs`*** folder
    ```json
    "blobsFolders": ["blobs"]
    ```
-:::example
-3. If you named your **blobs** folder something else (e.g., "MyCustomImages"), you’ll need to adjust this line accordingly like this:
+ ### 3. Save & Deploy
+ Simply click the little save icon on top or click **ctrl+S** on your keyboard. Deploy your mod in **SMF** and you should see your new images loaded in the game.
+
+:::success
+That's it! You’ve successfully replaced the suit’s image in the game with your own custom picture. Now, when you load up the game, your new image will appear in place of the default one. Don't close **GlacierKit** yet if you already are moving on to the next article or want to try the test below. It'll make things alot quicker. 
+:::
+---
+## MORE INFO
+
+
+### - More Blobs images
+- If you want to add more images, remember to recreate the **file paths** by making more folders. 
+Example;
+
+| Assembly Path (in-game)                    | Your Blobs Folder Structure                      |
+|--------------------------------------------|---------------------------------------------|
+| `images/unlockables_override/absolution_suit.jpg`             | `blobs/images/unlockables_override/absolution_suit.jpg`        |
+| `images/characters/male_suits/caruso_idk.png`            | `blobs/images/characters/male_suits/caruso_idk.png`       |
+| `icons/equipment/distraction_device_old.jpg`               | `blobs/icons/equipment/distraction_device_old.jpg`          |
+
+- For multiple images that use the same ***assembly path***, simply place them within the same folders (e.g., images under `unlockables_override`).
+
+### - More Blobs folders
+You can add more ***blobsfolders*** in your mod. This is useful if your mod will have multiple options that can be selected in your mod's settings.
+The same rules apply inside; 
+ - set **file paths** by making folders
+ - and use correct **file name(s)**
+
+### - Renaming ***"blobs"***
+You can name your **blobs** folder anything (e.g., "MyCustomImages") but you’ll need to adjust this line accordingly in the manifest like this:
    ```json
    "blobsFolders": ["MyCustomImages"]
    ```
- Just make sure the internal contents of your **BlobsFolder** have the correct **file paths** and **file name(s)** that match your image's ***assembly path*** you want replaced. 
 
-
-:::note
-To add more ***blobs*** folders, simply add a comma and the name of the new folder in quotation marks too.
+These can then be added to the manifest by simply adding a comma and the name of the new folder in quotation marks.
 
    ```json
    "blobsFolders": ["blobs","MyCustomImages","MoreBlobs"]
    ```
-This is useful if your mod will have multiple options that can be selected in your mod. These maps can have the same ***assembly paths*** inside as other **blobs folders**.
-:::
-
- 4. **Save & Deploy your mod!**
-
----
-:::success
-That's it! You’ve successfully replaced the suit’s image in the game with your own custom picture. Now, when you load up the game, your new image will appear in place of the default one. Don't close **GlacierKit** yet if you already are moving on to the next article or want to try the test below. It'll make things alot quicker. 
-:::
 
 --- 
+:::info Challenge
+Test your skills by replacing more images in the game. Follow these key steps:
 
-:::info Useful info
-- You can use any image you like, as long as it’s the same file type format (`.jpg` in this case) and the name of your custom image is identical to the one found in the code. Including the underscores. 
+- Locate image(s) in the **repository** and note the ***assembly path(s)***
+- Set up new **blobs folders** and create **file paths**
+- Add images and ensure **file names** and types match
+- Update the **manifest**, deploy, and test in-game
 
-- Change the file extension manually in regular **Windows Explorer** or **GlacierKit**, if needed, to `.jpg` or even `.png` in some cases. It shouldn't corrupt your image usually. 
-   
-   *But* in the very rare case it does, you can use an **image converter** (online, Photoshop, GIMP, etc...) that can **convert** and **export** your image to any other image type. 
-
-- Use an image that is similiar in aspect ratio to keep it from looking stretched.
+Repeat steps you struggled with until they become familiar—if you can complete these steps without looking at the tutorial, the next article will be a breeze!
 :::
-
-
-Now for a test, try replacing more images in the game using only the steps below.
-1. Open the ***repository*** and find an image you want to replace  
-2. Find the correct **image code** and note its ***assembly path***
-3. Set up a brand new ***blobsFolder*** in your mod folder that will hold your custom image. Remember the **File path** that you will recreate.
-4. Add your custom image and rename it correctly. Remember the **File name** and **File type** 
-4. Add your custom image and rename it correctly. Remember the **File name** and **File type** 
->(optionally try replacing more images)
-5. Open your **manifest** and correctly add in your new ***blobsfolder***. Then save it
-6. Deploy and test your new images
-7. Rehearse the steps above you couldn't complete without referring back to the tutorial and try the test here again.
-
-If you succeeded to add **blobs** by yourself, the next article will be a breeze as its very similiar in method.
