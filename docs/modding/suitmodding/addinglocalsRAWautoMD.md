@@ -3,28 +3,30 @@ sidebar_position: 5
 description: Changing the suit's name and description  
 ---
 
-# Localisation Overrides RAW  auto MD
+# Localisation Overrides AUTORAW MD
 
-Let's change the suit name and description.  
-You will need **GlacierKit** and a mod folder with a manifest (no content files are even needed. Everything is done from the manifest).  
-If you're editing your manifest in GlacierKit, it will check and auto-suggest code you can use while keeping code clean.  
+In this section, we'll focus on changing the **suit name** and **description** in the game. 
+You will need: 
+- **GlacierKit**
+- A mod folder with a **manifest file** 
+:::note 
+ Optionally install **Visual Studio code** to edit your manifest with this ***schema***
+    ```json
+     "$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json"
+     ```
+Paste that in your manifest and **Visual Studio Code*** will then know what the manifest can and can't contain.
 
-### Recommended but not necessary  
-- Have Visual Studio Code and a manifest schema that checks errors in your manifest:
-```json
-"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-```
-Copy that in your manifest as a line. That also only works in Visual Studio. Might be overkill to install Visual for this tutorial, but you’ll be grateful down the line for never having to work in notepad again.  
-Also read any of the info docs in SMF when developer mode is enabled, especially the manifest one. This is just more of a clarification.
-
+>It might seem overkill to install **Visual Studio Code** just for this tutorial, but you’ll appreciate the cleaner interface and error-checking features as you continue modding. Skip this if you had no idea what you just read.
+:::
 ---
 
 ### In short, this is what you will do:
-- Find the "Suit IDs" of the text in a specific LOCR file (The latter part is pretty much done for you)
-- Explain how to advance search for custom text if you can't find your text to modify (Skip this part if you're only looking to modify a suit's name and description.)
-- Alter them so they work in your manifest (simple copy-paste job, don’t worry)
+- Track down where your suit's name and description is (This part is pretty much done for you)
+- Modify them so they work in your manifest (simple copy-paste job, don’t worry)
 - Add a "localisation Override line" in your manifest that replaces the text you attach (Baby steps, follow along)
 - Write what you want to replace the text with (zero effort)
+- Explain how to advance search for custom text if you can't find your text to modify (Skip this part if you're only looking to modify a suit's name and description.)
+
 - Save the manifest and deploy  
 
 I will be continuing on bloodmoney but you can follow along with any reward suit as long as you're kind of familiar with the terms being used. If you aren’t, just follow along anyway but with your suit and experiment on other text later so you understand better what's being done here.
@@ -32,7 +34,7 @@ I will be continuing on bloodmoney but you can follow along with any reward suit
 ---
 
 ### To start  
-1. Select the blue button "Open project" when opening Glacierkit and click your mod folder inside of the SMF folder in Hitman game contents.  
+1. Select the blue button "Open project" when opening Glacierkit and click your mod folder inside of the SMF folder in Hitman game contents. You should know where that is now. 
 2. Almost all localisation (text on screen) for reward suits (suits you can equip in menu or 47 can wear across maps) are in these templates seen as hash lines:  
    - `004B8C5124A49543` for S3 suits,
    - `009F430D046716BE` for S2 suits,
