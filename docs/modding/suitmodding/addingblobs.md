@@ -103,12 +103,10 @@ Click on your suit and you should see its **repository** code on the right
    ### 2. Locate the assembly path
 There will be a line of code starting with `"Image":"....`
 
-   :::example
    For example:  
    ```json
    "Image": "images/unlockables_override/47_outfits_bloodmoney_gloves.jpg"
    ```
-   :::
 
 It consists of a
 - **file path** `images/unlockables_override/`
