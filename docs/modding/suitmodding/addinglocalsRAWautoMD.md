@@ -9,106 +9,177 @@ In this section, we'll focus on changing the **suit name** and **description** i
 You will need: 
 - **GlacierKit**
 - A mod folder with a **manifest file** 
-:::note 
- Optionally install **Visual Studio code** to edit your manifest with this ***schema***
+:::note VS Code 
+ Optionally install **Visual Studio code** to edit your manifest with this ***"schema"***
     ```json
      "$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json"
      ```
-Paste that in your manifest and **Visual Studio Code*** will then know what the manifest can and can't contain.
+Paste that in your manifest and **Visual Studio Code** will then know what the manifest can and can't contain.
 
 >It might seem overkill to install **Visual Studio Code** just for this tutorial, but you’ll appreciate the cleaner interface and error-checking features as you continue modding. Skip this if you had no idea what you just read.
 :::
 ---
 
-### In short, this is what you will do:
-- Track down where your suit's name and description is (This part is pretty much done for you)
-- Modify them so they work in your manifest (simple copy-paste job, don’t worry)
-- Add a "localisation Override line" in your manifest that replaces the text you attach (Baby steps, follow along)
-- Write what you want to replace the text with (zero effort)
-- Explain how to advance search for custom text if you can't find your text to modify (Skip this part if you're only looking to modify a suit's name and description.)
+In short, this is what you will do:
 
-- Save the manifest and deploy  
-
-I will be continuing on bloodmoney but you can follow along with any reward suit as long as you're kind of familiar with the terms being used. If you aren’t, just follow along anyway but with your suit and experiment on other text later so you understand better what's being done here.
+1. **Identify the suit** you want to modify by locating the appropriate ***LOCR file***.
+2. **Find the ***string***** representing the suit's name and description.
+3. **Convert the string** into a **decimal number** using **Text Tools** w/GlacierKit.
+4. **Modify the manifest** by adding a **localisation override** for the new name and description.
+5. **Save and deploy** your changes.
+6. Learn how to **Advance search** to find any other text in-game. 
+>(Advance search is not necessary for suits)
 
 ---
 
-### To start  
-1. Select the blue button "Open project" when opening Glacierkit and click your mod folder inside of the SMF folder in Hitman game contents. You should know where that is now. 
-2. Almost all localisation (text on screen) for reward suits (suits you can equip in menu or 47 can wear across maps) are in these templates seen as hash lines:  
+## 1. **LOCATE YOUR LOCR FILE** 
+Start by opening your project/mod in **Glacierkit**. 
+Select the blue button that says *Open project* and click on your mod folder. You should know where that is by now. 
+### 1. Get your LOCR file
+Almost all **localisation** (text on screen) for reward suits are in these templates seen as **HASH** lines:  
    - `004B8C5124A49543` for S3 suits,
    - `009F430D046716BE` for S2 suits,
-   - `00985A1100E5EDDC` for S1 suits.  
+   - `00985A1100E5EDDC` for S1 suits. 
 
-> This is easier for now and less prone to errors compared to advanced searches.  
-> I give these to make it much easier and much faster to find your Suit IDs for now.  
-> After reading the advanced search section, you will never need help looking for any text (localisation) to replace again.  
+### 2. Go to your LOCR file  
+- Simply copy and paste one of the **HASH** lines where your suit is located inside the *game contents* tab on the search bar, then hit enter. 
+- You should get a file tree ending in a single file called something like this `randomwords.sweetmenutext].pc_localized-textlist`. It has a language or translation icon. 
+- Open it by clicking on it.
+>This is called a **LOCR file**. This one holds the names and descriptions of suits.
 
-If you're already confused, just read and try to follow along the steps in the program without changing anything. Nothing will be changed in the game files except for your manifest so no need to be worried about accidentally changing anything. I'll add a clear warning (!!!) when stuff is going to get changed in case you want to join back in.
+### 3. Confirm your LOCR file
+You will see a *Preview* text box with code on the right and some additional info about the file you clicked on top. Confirm it’s a **LOCR file** and take note of the ***HASH*** code beside it. We will need it for later.
 
-- Just take a note first of all the tabs on the left you can click. Starting with "Files" on top until "Settings" on the bottom. Good. I'm just telling to start paying attention.
-- Copy one of the hashes above where your suit is located and navigate to the "game contents" tab.
-- Paste your hash in the search bar on top. (Blood money suit was released in Season 1, so I pick the S1 suits hash. If you don't know for sure, take a guess or look it up.)  
-- You should get a file tree ending in a single file called `randomwords.sweetmenutext].pc_localized-textlist`. It has a language or translation icon.  
-- Click it and you will see a "Preview" text box on the right and some additional info about the file on top. Confirm it’s a LOCR file and take note of the "HASH" code beside it. We will need it for later.
+:::info LOCR files
+To speed up the process of finding the names and descriptions of suits, I have given their files for now.  
+Later I will explain how to locate any *other text in-game* in the **advanced search** section.  
+>After reading that, you will never struggle looking for *any other text* by finding their respective **LOCR files**.  
+:::
+
 
 ---
 
-### Inside the Textbox
+## 2. GET YOUR STRING
 
-The textbox holds every name and description of suits in one season of the game. Scroll it, see what's inside.  
+The textbox you see holds every name and description of suits from a single season of the game.
+ Every line of code in the text box consists of a 
+ - **string** attached to 
+ - the actual **text you see in-game**. 
+ 
+ *Scroll it, and see what's inside.*
 
-1. To find the Suit name you want to modify, click inside of the textbox with your mouse and hit `Ctrl + F` on your keyboard to start search mode. Look up your suit (example: blood money).  
+### 1. Find your Suit
+  To find the Suit name you want to modify, click inside of the textbox with your mouse and hit `Ctrl + F` on your keyboard to start search mode. Look up your suit (example: blood money). 
 
-> Note: If you start search mode before you clicked the textbox, you will look for letters anywhere else in the program except for the box of code where your suit's name is, so just a single mouse click inside the code looking box and hit ctrl+f.
+You'll notice that every suit and description is attached to a **string** at the start
+ 
+ Example:
+ ```json
+ "989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_": "Blood Money Suit"
+ ```
+ - The **string** is: `989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_`
+ - and the **text you see in-game** is: `Blood Money Suit`
 
-2. Now you may notice that you see your suit in multiple arrays in multiple languages. What's important is the long string beside it. No worries, the "string" of your suit is the same in each language array.  
-   - **Example**:
+### 2. Copy the string
+Looking further, you will also see your suit in multiple arrays in different languages. But the **string** of specifically your suit' name is the same in each language array!  
+   - Example in English:
      ```json
      "989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_": "Blood Money Suit"
      ```
    - And in German:
      ```json
      "989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_": "Blood-Money-Anzug"
-     ```
-   - Notice, the "string" is the same before `:` for every language.  
+     ``` 
 
-All we need is the long "string" inside the quotation marks.  
-Copy `"989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_"` (without the quotation marks). If you haven't caught on on what a string is by now, re-read this short section and compare it to what you're looking at.
+All we need is the long **string** inside the quotation marks.  
+So copy it like so:
+```json
+989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_
+``` 
 
+:::warning Search Mode
+If you start search mode without clicking the textbox, you will look for letters anywhere else in the program except for the box of code where your suit's name is.
+:::
 ---
 
-### Go to Text Tools
+## 3. CONVERT TO DECIMAL
+We first have to convert our **string** into a ***decimal*** before we can use it in the manifest later. That's what the **Text Tools** tab is for.
 
-- Now go to the **Text Tools** tab on the left. Paste the string inside the "Localisation hash calculator" box. It will produce a hex and a decimal (numbers-only) code underneath. Copy the decimal number (not the hex) you get below by clicking the copy icon or copy it manually, same same. Now we have the decimal. We're halfway there. The magic happens in the manifest.  
 
-All we need is that decimal number you just copied and the HASH line from the LOCR file earlier (you should still see it on your screen up top, hopefully).
+### 1. Go to Text Tools 
+- Go to the *Text Tools* tab on the left
+- Look for the **"Localisation hash calculator"** box. 
+>Here you will convert your **string** and get two converted codes below it.
+### 2. Convert your string
+- Paste your **string** inside the box that says *Localisation hash calculator*
+>It now produced *a hex* and a **decimal** form (meaning numbers-only) of your **string**
+### 3. Get your decimal
+- Copy **only** the converted **decimal number** which is below the *hex*. 
+:::tip clipboard
+We have all we need for the next step:
+ - a **decimal number** from a **string**
+ - the **HASH** from the **LOCR file** where we will alter the text
 
+To keep track of copied code without going back every time for each individual copied code, let's use **Windows clipboard**.
+
+To do so, 
+- click the **windows button + V** and you should see a new window appear.
+- Now copy both your LOCR **HASH** and **decimal** they will appear right below each other.
+- You can close **Windows clipboard** and open it again with the same shortcut. The copied code won't dissapear
+
+>It seems overkill for 2 lines of codes but it'll pay off and it beats using notepad 💀 
+:::
 ---
 
-### Now Stuff Is Going to Get Altered (!!!)
+## 4. UPDATE MANIFEST
+Here we will be adding a **Localisation Override** line to your manifest. It will contain:
+- **HASH** of your LOCR file
+- **decimal** form of your **string**
+- *Your new text*
 
-1. Add a comma and hit enter after another line in your manifest.  
-2. Just start typing `"lo` and glacier or VS code will auto-suggest what can be used as soon as the quotation marks are placed.
-3. Add the localisation override line by manually typing it in or using your mouse to click or navigating down and hitting enter on `"localisationOverrides"`.
+
+### 1. Add the localisation override line 
+Open your manifest and add the line by:
+
+
+- Either 
+    - copying: `"localisationOverrides": {}` and 
+    - pasting it in your manifest
+- Or
+    - manually start typing it in starting with `"` and then continue typing
+    - navigate the *suggestions menu* to find `localisationOverrides`.
+    - and hit enter or click it with your mouse to get the result below
 
    ```json
    "localisationOverrides": {}
    ```
-   
-   Every time you go inside a `{}` bracket from now on, hit enter. Keeps code visually readable.
+:::info "suggestions"
+The suggestions function is only supported in **GlacierKit** or in **VS Code** with a ***schema***.
+:::
 
-4. Now go inside the `{}` and add the LOCR file hash to it (where all the suits were) in quotation marks and add a `:` after that and then another `{}`.
+
+### 2. Add your LOCR HASH 
+- Go inside the `{}` and hit enter
+- add the **HASH** from the **LOCR file** to it in quotation marks
+- add a `:` after that and then another `{}`.
+Result:
 
    ```json
    "localisationOverrides": {
        "yourLOCRhash": {}
    }
-   ```
+    ```
 
-5. Now go inside that bracket and add a language you want to overwrite. For the sake of globality, let’s use english.  
-   So type `"english"` in quotation marks and add a `:` and after that add yet another `{}` bracket. This is the last one. Use auto suggestion to quick this up. No need to manually add each bracket and quotation mark manually.
+### 3. Set your language
 
+Now go inside that bracket and specify a **language you want to overwrite**. Let’s use English. 
+
+   So type: 
+   - `"english"` in quotation marks 
+   - add a `:` 
+   - add yet another `{}` bracket. This is the last one.
+
+   Your result:
    ```json
    "localisationOverrides": {
        "yourLOCRhash": {
@@ -117,11 +188,23 @@ All we need is that decimal number you just copied and the HASH line from the LO
    }
    ```
 
-Now go inside those brackets and add your converted decimal in quotation marks with a `:`. (I'm changing the name of the suit so I converted the name string to a decimal in text tools). And now you add your own text here also in quotation marks.
 
----
+### 4. Add your decimal
 
-### Example
+
+Now go inside those brackets and **add your converted decimal** in quotation marks with a `:`. 
+```json
+"localisationOverrides": {
+    "yourLOCRhash": {
+        "english": {
+            "yourconvertednamedecimal": 
+        }
+    }
+}
+```
+
+### 5. Place your new text
+After your **decimal**, you can place any text you want to be reflected in the game but it has to be in quotes
 
 ```json
 "localisationOverrides": {
@@ -131,14 +214,16 @@ Now go inside those brackets and add your converted decimal in quotation marks w
         }
     }
 }
-```
+````
 
-If you are on track and know what's happening, you should have figured out how to do the same for the description of your suit. If you want to add another overwrite for the description or maybe another suit name change from the same LOCR file, simply add a comma after the previous one and repeat the decimal step and your new text.
+Now try the same for the description as well.
 
----
+To add **another string** from the **same LOCR** file:
+- add a comma and hit enter
+- **convert the string** for the descrption
+- add your **newly converted decimal** 
 
-### End Result Should Be This:
-
+Example:
 ```json
 "localisationOverrides": {
         "yourLocrHASH": {
@@ -149,52 +234,57 @@ If you are on track and know what's happening, you should have figured out how t
         }
     }
 ```
+:::info Structure
+>If you're on track, you should have noticed that the *LocalisationOverrides* code in the manifest is set up just like our **LOCR file** where we got the strings from using the exact same coding grammar(what do i call that)
+    
+    *Even better if you have also have noticed how similar this method is to the previous ***blobs*** article.*
+:::
+
+### 6. Save & Deploy!
+Click the little save icon (it's a floppy disk) on top or click **ctrl+S** on your keyboard. Deploy your mod in **SMF** and your new suit name and description will appear in place of the default one.
+
+:::success
+*Looking good, man!* 
+
+You’ve successfully replaced the suit name and description in the game with your own custom text. Now, when you load up the game, your new text will appear in place of the default one. 
+>Don't close **GlacierKit** just yet if you already are moving on to the next topic below.
+::: 
 
 ---
+## More on LocalisationOverrides
 
-### Mine Looks Like This:
+### Adding More Languages
+
+To add more language support for your new suit, simply:
+- add a comma after your english bracket 
+- add another language bracket holding the **same decimal** of your string.
 
 ```json
 "localisationOverrides": {
-        "00985A1100E5EDDC": {
+        "yourLocrHASH": {
             "english": {
-                "1047194709": "Blood Money Suit with Drip",
-                "3718104824": "The blood money suit but with extra style. No other suit can compete compared to this one"
-            }
-        }
-    }
-```
-
----
-
-
-
-### Adding French
-
-Simply add a comma after your english bracket and use another language.
-
-```json
-"localisationOverrides": {
-        "00985A1100E5EDDC": {
-            "english": {
-                "1047194709": "Blood Money Suit with Drip",
-                "3718104824": "The blood money suit but with extra style. No other suit can compete compared to this one"
+                "yourconverteddecimal": "New Suit Name",
+                "yourotherconverteddecimal": "New Suit Description/or Other New Suit name"
             },
             "french": {
-                "1047194709": "Costume d'argent du sang avec goutte à goutte",
-                "3718104824": "Le costume de l'argent du sang mais avec un style supplémentaire. Aucune autre combinaison ne peut rivaliser avec celle-ci"
+                "yourconverteddecimal": "Niveua Costume nome",
+                "yourotherconverteddecimal": "Le costume de l'argent du sang mais avec un style supplémentaire. Aucune autre combinaison ne peut rivaliser avec celle-ci"
             }
         }
     }
 ```
-
-[If you are catching on, you should have noticed that the game file uses the exact same coding grammar (idk what to call it; "the bracket system")?]
-No need to convert any strings again either since they’re the same in each `{array}` in the game file. Unless you add new suit names or descriptions with different strings attached to them, you have to convert them to decimal again. If you didn't understand this sentence, you were not paying attention or expected this tutorial to do everything for you.  
-
+:::info Same STRINGS
+No need to convert any strings again either since they’re the same in each `{array}`, remember? Unless you add **new suit names or descriptions** with **different strings** attached to them, you will have to **convert those to decimal again** and just add them inside your **current LOCR array**. 
+>If you didn't understand this sentence, you were not paying attention and expected this tutorial to do everything for you. Not looking good, man!  
+:::
 ---
+### Adding more LOCR files
+If you want to make changes to another LOCR file too, just do the same as you did with the language bracket: 
+- add a comma after your previous **LOCR bracket** 
+- Repeat the steps with your **new LOCR file**
+- Repeat the **string** conversion to get **new decimals**
 
-If you want to make changes to another LOCR file, just add a comma after the first LOCR bracket ends and repeat the same steps inside of it. You can't use a double localisationOverrides line in your manifest. Example:
-
+example:
 ```json
 "localisationOverrides": {
         "yourLocrHASH": {
@@ -205,19 +295,29 @@ If you want to make changes to another LOCR file, just add a comma after the fir
         },
         "otherLocrHASH": {
             "english": {
-                "someconverteddecimal": "More New Suit Name",
+                "somenewconverteddecimal": "More New Suit Name",
                 "someotherconverteddecimal": "More New Suit Description/or Other More New Suit name"
             },
             "spanish": {
-                "someconverteddecimal": "Más nombre de traje nuevo",
+                "somenewconverteddecimal": "Más nombre de traje nuevo",
                 "someotherconverteddecimal": "Más descripción del traje nuevo/u otro nombre del traje más nuevo"
             }
         }
     }
 ```
+:::note language codes
+- The reason why "spanish" is used here and not "Español" is because the manifest schema is coded in English. 
+- As for why it doesn't use the same language codes as the actual **LOCR files**, i have no clue either. To see how all languages have to be written down in the manifest, see the **manifest info in SMF**. 
+>It's the book icon on the left after enabling developer mode. This info will be hammered in, many times.
+:::
 
-The reason why "spanish" is used here and not "español" is because the manifest schema is coded in English. For all languages to use in the manifest, see the manifest info in SMF. It's the book icon on the left.
+Let's take a look at a manifest from a mod that has covered every angle of this article for a proper example of everything this article has covered.
+To close this article and see every technique applied here, lets take an example of another mod's manifest that has covered every single aspect of this article:
 
+
+INSERT BIG MANIFESTO HERE
+
+Now to test this with any text in this 
 ---
 
 If the text you are looking for isn’t there (warning, advanced searches are Case sensitive), go to the next article. It's a very short one.  
