@@ -8,7 +8,7 @@ description: Adding a name and description
 
 In this section, we'll focus on changing the **suit name** and **description** in the game. 
 You will need 
-- **GlacierKit** 
+- **GlacierKit**
 - A mod folder with a **manifest file**
 
 ### Prerequisites
