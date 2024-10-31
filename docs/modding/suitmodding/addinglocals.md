@@ -4,7 +4,7 @@ description: Adding a name and description
 
 ---
 
-# Localisation Overrides
+# Localisation Overrides AI
 
 In this section, we'll focus on changing the **suit name** and **description** in the game. 
 You will need 
@@ -183,7 +183,3 @@ After you’ve made all your changes, save the manifest file and deploy the mod 
 ---
 
 With these steps, you should be able to modify suit names, descriptions, and other localisation text easily. Don’t hesitate to experiment with other text in the game once you’re comfortable!
-
----
-
-This version is more structured, gradually introducing the steps with clear explanations. Let me know if this feels clearer and easier to follow!
