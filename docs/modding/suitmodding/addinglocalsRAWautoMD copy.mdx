@@ -11,10 +11,12 @@ import Tooltip from './tooltip';
 
 In this tutorial, you’ll learn how to modify suit names and descriptions in the game using ***localisation overrides***. 
 
-:::info Tooltips
-Throughout the tutorial, you’ll encounter highlighted words with <Tooltip text={<strong>tooltips</strong>} tooltip="This is a tooltip" /> to help explain key terms. By the end, there’s a [glossary](#glossary) that lists all these together. Each glossary entry links back to the exact part of the tutorial where the term will be first introduced. By then you should know every single term introduced. If you don't, click on an entry to go back and read the relevant part again.
-:::
+:::info tooltips
+*To assist you*, I’ve added <Tooltip text={<strong>tooltips</strong>} tooltip="This is a tooltip" /> throughout the tutorial to explain any tricky terms as you encounter them. In case you don’t understand a term while reading the tutorial, click on it to jump to the section where it’s explained in context.
 
+ By the end, you’ll find a [**glossary**](#glossary) collecting all these new terms. Each one links back to the part of the tutorial where it was first introduced
+> But by then you will know every single term introduced. If you don't, click on an entry to go back and read the relevant part again in the tutorial.
+:::
 
 
 You will need: 
@@ -29,10 +31,10 @@ You will need:
 
 In short, this is what you will do:
 
-1. **Locate the Suit's** <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." /> by identifying the relevant <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." />.
-2. **Extract the** <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> for the suit’s name and description.
-3. **Convert the** <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> into a <Tooltip text={<strong>decimal number</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." /> using <Tooltip text={<strong>Text Tools</strong>} tooltip="A tab in GlacierKit that provides tools for converting text and hashes for game modifications." />.
-4. **Add** <Tooltip text={<strong>localisation override</strong>} tooltip="A way to replace or modify in-game text, like names or descriptions, with your own custom text. It allows you to customize how text appears without altering the core game files." /> **code** to the <Tooltip text={<strong>manifest</strong>} tooltip="A file in your mod folder that holds important information and can execute code" />.
+1. Locate the Suit's <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." /> by identifying the relevant <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." />.
+2. **Extract** <Tooltip text={<strong> the strings</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> for the suit’s name and description.
+3. Convert <Tooltip text={<strong>each string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> into a <Tooltip text={<strong>decimal number</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." /> using <Tooltip text={<strong>Text Tools</strong>} tooltip="A tab in GlacierKit that provides tools for converting text and hashes for game modifications." />.
+4. <Tooltip text={<strong>Add localisation override code</strong>} tooltip="A way to replace or modify in-game text, like names or descriptions, with your own custom text. It allows you to customize how text appears without altering the core game files." /> to the <Tooltip text={<strong>manifest</strong>} tooltip="A file in your mod folder that holds important information and can execute code" />.
 5. **Save and Deploy** changes.
 
 Start by opening your project/mod folder in  <Tooltip text={<strong>GlacierKit</strong>} tooltip="A modding tool used for editing and managing game files in Hitman: World of Assassination." />. 
@@ -64,7 +66,7 @@ A <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’
     - named like `randomwords.sweetmenutext].pc_localized-textlist` 
     - having a language or translation icon.
 :::
-- <Tooltip text={<strong>Open it</strong>} tooltip="-_-" />
+- <Tooltip text={<strong>Open it</strong>} tooltip="By clicking it" />
 
 
 ### 3. Confirm your LOCR
@@ -74,12 +76,13 @@ Confirm you have the right file by checking:
 - `LOCR` type of file 
 - `HASH` code.
 
+<span id="advanced-search-tooltip">
 :::info advanced SEARCH
 To speed up the process of finding the names and descriptions of suits, I have given the relevant file's <Tooltip text={<strong>HASHES</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." /> for now.  
-Later I will explain how to locate any *other text in-game* in the [**advanced search section**](#advanced-search).  
+Later I will explain how to locate any *other text in-game* in the  [**advanced search section**](#advanced-search).   
 >After reading that, you will never struggle looking for *any other text* by finding their respective <Tooltip text={<strong>LOCR Files</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." />.  
 :::
-
+</span>
 ## Pt. 2: **GET YOUR STRING**
 *Every line of code in the text box consists of a* <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> *attached to the actual text you see in-game*. 
 
@@ -98,7 +101,7 @@ To find the suit name you want to modify easily instead scrolling you will have 
 - type in your suit's name 
 :::warning Search Mode
 If you don’t click inside the text box first, the search won’t work properly and may look for text elsewhere in  <Tooltip text={<strong>GlacierKit</strong>} tooltip="A modding tool used for editing and managing game files in Hitman: World of Assassination." />.
->This is a handy feauture too so don't forget about it either
+>This feature is useful for other situations but doesn’t apply here.
 :::
 
  
@@ -344,7 +347,7 @@ example of every technique applied from this tutorial:
 ```
 
 ### Advanced Search
-([Return to ending of Part 1](#3-confirm-your-locr))
+([Return to tutorial](#advanced-search-tooltip))
 
 If the text you are looking for isn’t there (warning, advanced searches are Case sensitive), 
 Let's find the text we want to modify by looking up the words used in the text we want replaced. Open GlacierKit and click on "Advanced search" on the left. It’s a magnifying icon. Enable only chunk0. That’s where the suits are and so is the text usually. No need to look over the whole game. Only select chunk0 and the checkbox "localisation". Type what needs to be replaced. Example: "blood money" is wrong and will only give us a single dialogue line from some random conversation. I have to look up "Blood Money". You can search multiple times so don't try waiting for one search result if youre  not sure it'll return something you need, like a locr file in this case. You can see that in the bar below where it’s doing a search task. Type in as many as you want. This might take a while, hence why we only search in one chunk and perform multiple searches. Im trying "Blood money", "BLOOD MONEY", "blood money", "Blood Money" and "bloodmoney". 
