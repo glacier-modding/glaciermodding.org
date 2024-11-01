@@ -1,45 +1,31 @@
-strong:hover {
-    color: #1aaa8b; /* Change to your desired color */
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  
-  em {
-    font-style: italic;
-  }
-  .tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: default; /* Changes the cursor to a help icon */
-    strong:hover {
-        color: #1aaa8b; /* Change to your desired color */
-        text-decoration: underline;
-        cursor: pointer;
-      }
-      
-      em {
-        font-style: italic;
-      }
-  }
-  
-  .tooltip .tooltip-text {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%; /* Adjust based on where you want the text to appear */
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .tooltip:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-  }  
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-bottom: 1px underline rgba(212, 255, 242, 0.2); /* Dotted underline for subtle interactivity */
+  color: #dbfff7; /* Change to your desired color */
+
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 160px;
+  background-color: rgba(3, 121, 90, 0.9); /* Dark background with subtle opacity */
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Adjusts position above the text */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-size: 0.9em; /* Slightly smaller font for tooltip text */
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
