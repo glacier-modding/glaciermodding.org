@@ -2,34 +2,46 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
-  border-bottom: 1px solid transparent; /* Initially transparent */
-}
-.tooltip:hover {
-  border-bottom-color: #1aaa8b; /* Use the original color you had for the underline */
-  border-bottom: 2px solid #1aaa8b; /* Restore original sharp look with a solid underline */
-  color: rgba(127, 255, 212, 0.663);
+  border-bottom: 1px solid transparent; /* Use the original color you want */
 }
 
+.tooltip:hover {
+  border-bottom-color: #1aaa8b; /* Your original underline color */
+  border-bottom: 2px solid #1aaa8b; /* Restore original sharp look */
+  color: rgba(127, 255, 212, 0.663); /* Your original hover color */
+}
 
 .tooltip .tooltip-text {
   visibility: hidden;
   width: 160px;
-  background-color: rgba(3, 121, 90, 0.9); /* Dark background with subtle opacity */
+  background-color: rgba(3, 121, 90, 0.9); /* Your original tooltip background */
   color: #fff;
   text-align: center;
   border-radius: 4px;
   padding: 5px;
   position: absolute;
   z-index: 1;
-  bottom: 125%; /* Adjusts position above the text */
+  bottom: 125%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.2s;
-  font-size: 0.9em; /* Slightly smaller font for tooltip text */
+  font-size: 0.9em;
 }
 
 .tooltip:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
+}
+
+.icon-alert {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url('./exclam white.png'); /* Your image path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 4px;
+  vertical-align: middle;
 }

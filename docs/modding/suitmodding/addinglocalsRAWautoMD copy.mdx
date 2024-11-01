@@ -12,7 +12,11 @@ import Tooltip from './tooltip';
 In this tutorial, you’ll learn how to modify suit names and descriptions in the game using ***localisation overrides***. 
 
 :::info tooltips
-*To assist you*, I’ve added <Tooltip text={<strong>tooltips</strong>} tooltip="This is a tooltip" /> throughout the tutorial to explain any tricky terms as you encounter them. In case you don’t understand a term while reading the tutorial, click on it to jump to the section where it’s explained in context.
+*To assist you*, I’ve added <Tooltip
+  text={<><strong>tooltips</strong><span className="icon-alert"></span></>}
+  tooltip="This is a tooltip"
+/>
+ throughout the tutorial to explain any tricky terms as you encounter them. In case you don’t understand a term while reading the tutorial, click on it to jump to the section where it’s explained in context.
 
  By the end, you’ll find a [**glossary**](#glossary) collecting all these new terms. Each one links back to the part of the tutorial where it was first introduced
 > But by then you will know every single term introduced. If you don't, click on an entry to go back and read the relevant part again in the tutorial.
