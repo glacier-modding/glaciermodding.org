@@ -115,7 +115,7 @@ It consists of a
    These 2 together are called the **assembly path** of your file's image.
 
 :::warning
-Keep **RPKG** and/or **GlacierKit** open, you’ll need it in the next steps.
+Keep **RPKG** and/or **GlacierKit** open, you’ll need to view the **assembly paths**.
 :::
 
 ---
@@ -154,7 +154,7 @@ This fully recreates the **assembly path** above of the image you're replacing.
    ├── manifest.json
    └── project.json
    ```
-:::danger Important Tips
+:::danger Important
 - **Aspect Ratio**: Match the aspect ratio of your replacement image with the original to avoid distortion. 
 >*Example*: The Blood Money suit image has a 4:3 ratio (resolution 696x520), which you can check in **GlacierKit**.
 - **File Corruption**: If changing the **file type** manually corrupts your image, use an image converter tool (Photoshop, GIMP, online, etc.).
