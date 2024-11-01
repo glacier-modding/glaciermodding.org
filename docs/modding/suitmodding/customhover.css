@@ -2,10 +2,14 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
-  border-bottom: 1px underline rgba(212, 255, 242, 0.2); /* Dotted underline for subtle interactivity */
-  color: #dbfff7; /* Change to your desired color */
-
+  border-bottom: 1px solid transparent; /* Initially transparent */
 }
+.tooltip:hover {
+  border-bottom-color: #1aaa8b; /* Use the original color you had for the underline */
+  border-bottom: 2px solid #1aaa8b; /* Restore original sharp look with a solid underline */
+  color: rgba(127, 255, 212, 0.663);
+}
+
 
 .tooltip .tooltip-text {
   visibility: hidden;
