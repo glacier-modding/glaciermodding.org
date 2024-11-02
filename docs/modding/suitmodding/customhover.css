@@ -14,20 +14,20 @@
 .tooltip .tooltip-text {
   visibility: hidden;
   width: 160px;
-  background-color: rgba(3, 121, 90, 0.9);
+  background-color: #333; /* Subtle grey background for a modern look */
   color: #fff;
   text-align: center;
-  border-radius: 8px; /* Rounded corners for a softer look */
-  padding: 8px; /* More padding for a spacious feel */
+  border-radius: 8px; /* Rounded corners for a softer appearance */
+  padding: 8px;
   position: absolute;
   z-index: 1;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth animation */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   font-size: 0.9em;
   left: 50%;
-  transform: translateX(-50%) scale(0.95); /* Initial scale for animation effect */
-  border: 2px solid #fff; /* White border for a refined look */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for a floating effect */
+  transform: translateX(-50%) scale(0.95);
+  border: 2px solid rgba(3, 121, 90, 0.9); /* Border color matches the original background color */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for a hovering effect */
 }
 
 .tooltip .tooltip-text.top {
@@ -41,13 +41,13 @@
 .tooltip .tooltip-text.left {
   right: 125%;
   top: 50%;
-  transform: translateY(-50%) scale(0.95); /* Adjusted for animation */
+  transform: translateY(-50%) scale(0.95);
 }
 
 .tooltip .tooltip-text.right {
   left: 125%;
   top: 50%;
-  transform: translateY(-50%) scale(0.95); /* Adjusted for animation */
+  transform: translateY(-50%) scale(0.95);
 }
 
 .tooltip:hover .tooltip-text {
