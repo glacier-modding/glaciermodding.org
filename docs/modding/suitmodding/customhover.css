@@ -38,18 +38,6 @@
   top: 125%;
 }
 
-.tooltip .tooltip-text.left {
-  right: 125%;
-  top: 50%;
-  transform: translateY(-50%) scale(0.95);
-}
-
-.tooltip .tooltip-text.right {
-  left: 125%;
-  top: 50%;
-  transform: translateY(-50%) scale(0.95);
-}
-
 .tooltip:hover .tooltip-text {
   visibility: visible;
   opacity: 1;

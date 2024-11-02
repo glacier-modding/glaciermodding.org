@@ -2,39 +2,31 @@ import React, { useState, useRef, useEffect } from 'react';
 import './customhover.css'; // Import your CSS
 
 const Tooltip = ({ text, tooltip }) => {
-  const [position, setPosition] = useState('top');
+  const [position, setPosition] = useState('bottom'); // Default position set to 'bottom'
   const tooltipRef = useRef(null);
 
   useEffect(() => {
     const adjustTooltipPosition = () => {
       if (tooltipRef.current) {
         const rect = tooltipRef.current.getBoundingClientRect();
-        const navBarHeight = 60; // Height of the navigation bar
-        const availableSpaceAbove = rect.top - navBarHeight;
-        const availableSpaceBelow = window.innerHeight - rect.bottom;
+        const navBarHeight = 60; // The height of your navigation bar
 
-        // Compare the available space above and below
-        if (availableSpaceAbove < tooltipRef.current.offsetHeight && availableSpaceBelow > availableSpaceAbove) {
-          // Switch to bottom if there's more space below than above
-          setPosition('bottom');
+        // Check if there's enough space above to show the tooltip
+        if (rect.top > navBarHeight + 10) { // Add a buffer to switch to top
+          setPosition('top'); // Switch to top if there's enough space
         } else {
-          // Keep at the top if there's more space above or equal
-          setPosition('top');
+          setPosition('bottom'); // Keep at bottom if near the top bar
         }
       }
     };
 
-    // Initial adjustment and event listeners for scroll/resize
-    adjustTooltipPosition();
-    window.addEventListener('resize', adjustTooltipPosition);
-    window.addEventListener('scroll', adjustTooltipPosition);
 
-    // Cleanup event listeners on unmount
+
     return () => {
       window.removeEventListener('resize', adjustTooltipPosition);
       window.removeEventListener('scroll', adjustTooltipPosition);
     };
-  }, []);
+  }, [tooltipRef]);
 
   return (
     <span className="tooltip">
