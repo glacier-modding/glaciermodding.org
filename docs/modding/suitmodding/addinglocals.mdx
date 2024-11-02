@@ -25,9 +25,9 @@ In this tutorial, you’ll learn how to modify suit names and descriptions in th
  <Tooltip
   text={<><strong>Key terms</strong><span className="icon-alert"></span></>}
   tooltip="These will need the most attention"
-/> are marked with an exclamation icon when they are most crucial for understanding the content, but stay highlighted throughout the tutorial if you need a reminder of what the term briefly means. *<Tooltip text={<italics>Almost anything</italics>} tooltip="I did say almost" />* in **bold** can be hovered over to get a brief overview of their terms as well. 
+/> are marked with an exclamation icon when they are most crucial for understanding the content, but stay highlighted throughout the tutorial if you need a reminder of what the term briefly means. *<Tooltip text={<italics>Almost anything</italics>} tooltip="almost" />* in **bold** can be hovered over to get a brief overview of their terms as well. 
 
- By the end, you’ll find a [**glossary**](#glossary) collecting all these new terms. Each one links back to the part of the tutorial where it's used in practice if you're lacking context.
+ By the end, you’ll find a [**glossary**](#quickreference) collecting all these new terms. Each one links back to the part of the tutorial where it's used in practice if you're lacking context.
 > But by then you will know every single term introduced.
 :::
 </details>
@@ -140,7 +140,7 @@ Like so:
 Try pasting your copied <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> in <Tooltip text={<strong>the search box</strong>} tooltip= "The one that appears when you search inside the box of strings and names" />.
 
 You will see your <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> attached to multiple languages of your suit's name. 
-This shows that a <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> is always the same in each language `{array}`. 
+This shows that a specific <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> will always be the same in every other language `{array}` of a <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." />. 
 >This is relevant for later!
 
 [[Return to Adding More Languages]](#5-optionally-add-more-languages)
@@ -164,13 +164,17 @@ That's what the <Tooltip text={<><strong>Text Tools tab</strong><span className=
 - Paste your <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> inside that box
 - Copy *only* the converted <Tooltip text={<strong>decimal number</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." />. 
 
-We have all we need for the next part:
- - a <Tooltip text={<strong>decimal form</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." /> of our <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." />
- - the <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." /> from the <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." />
+>*We now have everything needed for the next part:*
+ >- a <Tooltip text={<strong>decimal form</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." /> of our <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." />
+ >- the <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." /> from the <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." />
 
 :::tip windows clipboard
 Easily manage multiple copied items using <Tooltip text={<strong>Windows clipboard</strong>} tooltip="A built-in tool that stores multiple copied items." />. Press `Windows + V` to activate it. 
-- Now copy both your LOCR's <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." /> and <Tooltip text={<strong>decimal</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." />.
+
+Now copy both your: 
+- LOCR's <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." /> and 
+- <Tooltip text={<strong>decimal</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." />.
+>Make it a habit to paste using `Windows + V` instead of `Ctrl + V` from now on. 
 
  *It might seem overkill for 2 lines of codes but it'll pay off and it beats* *<Tooltip text={<italic>using notepad</italic>} tooltip="💀" />*  
  
@@ -188,6 +192,10 @@ Easily manage multiple copied items using <Tooltip text={<strong>Windows clipboa
 
 - Open your <Tooltip text={<strong>manifest file</strong>} tooltip="A file in your mod folder that holds important information and can execute code" />
 - Add this line: `"localisationOverrides": {}`
+
+<details>
+
+<summary>How-to Manifest</summary>
 
 Theres *2 methods* to doing this:
 - *Method 1*: 
@@ -207,7 +215,7 @@ Theres *2 methods* to doing this:
    "localisationOverrides": {}
    ```
 :::tip using "suggestions"
-Now you know how to use the *suggestions feauture*. It will auto-complete most of the tedious functions in the following steps like:
+*Now you know how to use the* <Tooltip text={<strong>suggestions feauture</strong>} tooltip="This feauture is only supported in Glacierkit or in VS code with a schema." />. It will auto-complete most of the tedious functions in the following steps like:
 - adding "quotes", 
 - adding one of these `:`
 - adding brackets
@@ -215,7 +223,7 @@ Now you know how to use the *suggestions feauture*. It will auto-complete most o
 
 >Suggestions will show up as soon as you type a **quote** `"`
 :::
-
+</details>
 ### 2. Insert LOCR HASH 
 - Place your <Tooltip text={<strong>LOCR HASH</strong>} tooltip="the code that appeared on top when you clicked the file" /> inside the curly brackets in "quotes" and add another `:` and `{}` after that
 
@@ -240,18 +248,6 @@ Result:
    }
    ```
 
-<details>
-<summary>**Syntax**</summary>
-:::info Syntax
-If you're paying attention, you might notice that we're setting up the <Tooltip text={<strong>localisation override code</strong>} tooltip="A way to replace or modify in-game text, like names or descriptions, with your own custom text. It allows you to customize how text appears without altering the core game files." /> in the <Tooltip text={<strong>manifest file</strong>} tooltip="A file in your mod folder that holds important information and can execute code" /> 
-just like our <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." /> 
-where we got the <Tooltip text={<strong>strings</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> from. 
-Both will be using the same <Tooltip text={<strong>'Syntax'</strong>} tooltip="A set of rules that define how code is written and organized." />.
-
-
-> *Even better too if you have noticed how similar this method is to [the previous *blobs article*](addingblobs.md#step-3-set-up-a-blobsfolder) where we 'recreated'* <Tooltip text={<strong>an assembly path</strong>} tooltip="Big thumb if you connected that HASH lines are 'coded' assembly paths = filePaths + fileNames." />
-:::
-</details>
 
 ### 4. Add your decimal and text
 - Inside the language brackets, paste your <Tooltip text={<strong>decimal number</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." /> in "quotes"
@@ -268,6 +264,18 @@ Result:
 }
 ````
 
+<details>
+<summary>**Syntax**</summary>
+:::info Syntax
+If you're paying attention, you might notice that we're setting up the <Tooltip text={<strong>localisation override code</strong>} tooltip="A way to replace or modify in-game text, like names or descriptions, with your own custom text. It allows you to customize how text appears without altering the core game files." /> in the <Tooltip text={<strong>manifest file</strong>} tooltip="A file in your mod folder that holds important information and can execute code" /> 
+just like our <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." /> 
+where we got the <Tooltip text={<strong>strings</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> from. 
+Both will be using the same <Tooltip text={<strong>'Syntax'</strong>} tooltip="A set of rules that define how code is written and organized." />.
+
+
+> *Even better too if you have noticed how similar this method is to [the previous *blobs article*](addingblobs.md#step-3-set-up-a-blobsfolder) where we 'recreated'* <Tooltip text={<strong>an assembly path</strong>} tooltip="Big thumb if you connected that HASH lines are 'coded' assembly paths = filePaths + fileNames." />
+:::
+</details>
 
 ### 5. (Optionally) Add more languages
 #### Same Strings:
@@ -329,10 +337,10 @@ Example:
         }
     }
 ```
-This recreates how the <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." /> is internally set up by using the same <Tooltip text={<strong>syntax</strong>} tooltip="A set of rules that define how code is written and organized." />.
+>*This recreates how the* <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." /> *is internally set up by using the same* <Tooltip text={<strong>syntax</strong>} tooltip="A set of rules that define how code is written and organized." />.
 
 ### 7. Save & Deploy! 
-You're all done. Next up is to save the changes you made in your <Tooltip text={<strong>manifest</strong>} tooltip="A file in your mod folder that holds important information and can execute code" /> and deploy your mod.
+You're all done. Next up is to save the changes you made in your <Tooltip text={<strong>manifest</strong>} tooltip="A file in your mod folder that holds important information and can execute code" /> and <Tooltip text={<strong>deploy your mod</strong>} tooltip="Using Simple Mod Framework" />.
 
 - Click the <Tooltip text={<strong>little save icon</strong>} tooltip="it's a floppy disk" /> on top or click `ctrl+S` on your keyboard. 
 - Deploy your mod in <Tooltip text={<strong>SMF</strong>} tooltip="Simple Mod Framework" /> 
@@ -396,9 +404,11 @@ Start with:
     - Tick the **"localisation"** option.
 
     :::note
-    >This will refine your search to only localisation-related text files.
+        - *Chunk0 holds most of the text data, making the search more efficient.*
+
+        - The latter will refine your search to only localisation-related text files.
     
-    > *Chunk0 holds most of the text data, making the search more efficient.*
+
     :::
 
 
@@ -422,11 +432,11 @@ You can continue to input new searches while others are still in progress.
 #### 6. **Focus on the Right File**: 
    - Your goal is to locate a <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." />.
    - Look inside the <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." />. You can use `ctrl+f` to find and confirm your text
-   or [follow the search section](#1-find-your-suit) if you don't know how to do that.
+   - or [follow the search section](#1-find-your-suit) if you don't know how to do that.
 
       > *Ignore `Line` or `dlge` files as they are irrelevant for* <Tooltip text={<strong>localisation Overrides</strong>} tooltip="A way to replace or modify in-game text, like names or descriptions, with your own custom text. It allows you to customize how text appears without altering the core game files." />
 :::info Following References 
-You *can* track `Line` or `dlge` (dialogue) files via <Tooltip text={<strong>Reference Button</strong>} tooltip="A tab when you click on a file that displays what file is using it or what file it uses" /> to their respective <Tooltip text={<strong>LOCR Files</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." /> too, but using my search method, it'll be highly unlikely you haven't located your <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." />
+You *can* track `Line` or `dlge` (dialogue) files via the <Tooltip text={<strong>Reference list</strong>} tooltip="A tab that helps you trace how your file connects to others, showing which files use it or by which ones it's getting.. used" /> to their respective <Tooltip text={<strong>LOCR Files</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." /> too, but using my search method, it'll be highly unlikely you haven't located your <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." />
 :::
 
 [**Continue with you LOCR file**](#pt-2-get-your-string)
@@ -449,13 +459,14 @@ These are all the language codes for the <Tooltip text={<strong>manifest</strong
 [Return to Adding languages](#5-optionally-add-more-languages)
 
 ---
+
 <details>
-<summary>the Glossary</summary>
+<summary>**Glossary**</summary>
 ### Glossary 
 [Return to Intro](#)
 
 This is the Glossary containing the most important keywords
-- **localisation override**: A way to replace or modify in-game text, like names or descriptions, with your own custom text. It allows you to customize how text appears without altering the core game files.
+- [**localisation override**](#pt-4-update-manifest): A way to replace or modify in-game text, like names or descriptions, with your own custom text. It allows you to customize how text appears without altering the core game files.
 
 - [**LOCR File**](#1-identify-your-locr): A file holding the game’s text, like names and descriptions, organized for different languages.
 
@@ -483,10 +494,11 @@ This is the Glossary containing the most important keywords
 
 
 ---
-fallen but not forgotten 
+*Fallen but not forgotten*
 - **manifest info in SMF**: The book icon on the left after enabling developer mode.
 - **VS Code**: VS Code makes editing files smoother with features like helpful suggestions and quick fixes, making it easier to catch errors and stay organized as your mod grows.
 - **schema**: A structure used to validate and provide auto-completion for your manifest, helping you write error-free code.
+- **suggestions feauture**: A feauture that autocompletes tedious writing, error checks and suggests availabe code  based on syntax rules. It's only supported in Glacierkit or in VS code with a schema.".
 - **localisation**: The process of adapting content for different languages and regions, such as translating text.
 
 - **GlacierKit**: A modding tool used for editing and managing game files in *Hitman: World of Assassination*.
@@ -501,7 +513,7 @@ fallen but not forgotten
 <div id="quickreference"></div>
 <details>
 
-<summary>Quick Reference Guide</summary>
+<summary>**Quick Reference Guide**</summary>
 ## Quick Reference Guide
 
 ### Advanced Search Setup
