@@ -14,10 +14,10 @@
 .tooltip .tooltip-text {
   visibility: hidden;
   width: 160px;
-  background-color: #333; /* Subtle grey background for a modern look */
+  background-color: #333; /* Subtle grey background */
   color: #fff;
   text-align: center;
-  border-radius: 8px; /* Rounded corners for a softer appearance */
+  border-radius: 8px; /* Rounded corners */
   padding: 8px;
   position: absolute;
   z-index: 1;
@@ -26,8 +26,8 @@
   font-size: 0.9em;
   left: 50%;
   transform: translateX(-50%) scale(0.95);
-  border: 2px solid rgba(3, 121, 90, 0.9); /* Border color matches the original background color */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for a hovering effect */
+  border: 3px solid rgba(3, 121, 90, 0.9); /* Original border color retained */
+  box-shadow: 0 0 4px rgba(3, 121, 90, 0.4); /* More subtle glow */
 }
 
 .tooltip .tooltip-text.top {
