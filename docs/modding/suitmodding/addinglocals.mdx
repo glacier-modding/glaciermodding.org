@@ -45,9 +45,9 @@ You will need:
 In brief, this is what you will do:
 
 1. <Tooltip text={<strong>Locate the Suit's</strong>} tooltip="This is done for you" /> <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." /> by identifying the relevant <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." />.
-2. **Identify** <Tooltip text={<strong>the strings</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> for the suit’s name and description.
-3. <Tooltip text={<strong>Convert</strong>} tooltip= "Using Text Tools to convert a string to it's hex or decimal form" /> <Tooltip text={<strong>each string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> into a <Tooltip text={<strong>decimal number</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." /> using <Tooltip text={<strong>Text Tools</strong>} tooltip="A tab in GlacierKit that provides tools for converting text and hashes for game modifications." />.
-4. <Tooltip text={<strong>Add localisation override code</strong>} tooltip="A way to replace or modify in-game text, like names or descriptions, with your own custom text. It allows you to customize how text appears without altering the core game files." /> to the <Tooltip text={<strong>manifest</strong>} tooltip="A file in your mod folder that holds important information and can execute code" />.
+2. **Identify** <Tooltip text={<strong>the strings</strong>} tooltip= "A key that links to text in the LOCR File" /> for the suit’s name and description.
+3. <Tooltip text={<strong>Convert</strong>} tooltip= "Using Text Tools to convert a string to it's hex or decimal form" /> <Tooltip text={<strong>each string</strong>} tooltip= "A key that links to text in the LOCR File" /> into a <Tooltip text={<strong>decimal number</strong>} tooltip="a string converted into a numeral form" /> using <Tooltip text={<strong>Text Tools</strong>} tooltip="A tab in GlacierKit that provides tools for converting text and hashes for game modifications." />.
+4. <Tooltip text={<strong>Add localisation override code</strong>} tooltip="A way to replace or modify in-game text, like names or descriptions, with your own custom text." /> to the <Tooltip text={<strong>manifest</strong>} tooltip="A file in your mod folder that holds important information and can execute code" />.
 5. **Save and Deploy** changes.
 
 Start by opening your project/mod folder in  <Tooltip text={<strong>GlacierKit</strong>} tooltip="A modding tool used for editing and managing game files in Hitman: World of Assassination." />. 
@@ -107,7 +107,7 @@ If you want to locate any *other text in-game*, you can go to the [**advanced se
 </details>
 
 ## Pt. 2: **GET YOUR STRING**
-*Every line of code in the* <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." /> *consists of a* <Tooltip text={<><strong>string</strong><span className="icon-alert"></span></>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> *attached to the actual text you see in-game*. 
+*Every line of code in the* <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." /> *consists of a* <Tooltip text={<><strong>string</strong><span className="icon-alert"></span></>} tooltip= "A key that links to text in the LOCR File" /> *attached to the actual text you see in-game*. 
 
 Lets break a line down to understand the parts better.
 
@@ -115,7 +115,7 @@ Lets break a line down to understand the parts better.
  ```json
  "989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_": "Blood Money Suit"
  ```
-    - The <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> is: `989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_`
+    - The <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" /> is: `989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_`
     - the text you see in-game is: `Blood Money Suit`
 
 ### 1. Find your Suit
@@ -129,7 +129,7 @@ If you don’t click inside the text box first, the search won’t work properly
 [[Return to Advanced Search]](#6-focus-on-the-right-file)
  
 ### 2. Copy the string
-*You will only need the* <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> *for the next part so copy it without the quotation marks!*
+*You will only need the* <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" /> *for the next part so copy it without the quotation marks!*
 
 Like so:
 `989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_`
@@ -137,10 +137,10 @@ Like so:
 <details>
 <summary>Multi-language</summary>
 :::info multi-language
-Try pasting your copied <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> in <Tooltip text={<strong>the search box</strong>} tooltip= "The one that appears when you search inside the box of strings and names" />.
+Try pasting your copied <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" /> in <Tooltip text={<strong>the search box</strong>} tooltip= "The one that appears when you search inside the box of strings and names" />.
 
-You will see your <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> attached to multiple languages of your suit's name. 
-This shows that a specific <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> will always be the same in every other language `{array}` of a <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." />. 
+You will see your <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" /> attached to multiple languages of your suit's name. 
+This shows that a specific <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" /> will always be the same in every other language `{array}` of a <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." />. 
 >This is relevant for later!
 
 [[Return to Adding More Languages]](#5-optionally-add-more-languages)
@@ -151,9 +151,9 @@ This shows that a specific <Tooltip text={<strong>string</strong>} tooltip= "An 
 ---
 
 ## Pt. 3: **CONVERT TO DECIMAL**
-We need to convert the <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> to a <Tooltip text={<><strong>decimal number</strong><span className="icon-alert"></span></>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." /> so we can use it in our <Tooltip text={<strong>manifest file</strong>} tooltip="A file in your mod folder that holds important information and can execute code" />.
+We need to convert the <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" /> to a <Tooltip text={<><strong>decimal number</strong><span className="icon-alert"></span></>} tooltip="a string converted into a numeral form" /> so we can use it in our <Tooltip text={<strong>manifest file</strong>} tooltip="A file in your mod folder that holds important information and can execute code" />.
 That's what the <Tooltip text={<><strong>Text Tools tab</strong><span className="icon-alert"></span></>} tooltip="A tab in GlacierKit that provides tools for converting text and hashes for game modifications." /> is for.
->Converting the <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> to a <Tooltip text={<strong>decimal</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." /> allows us to use it as a *"key"* in the localisation override manifest.
+>Converting the <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" /> to a <Tooltip text={<strong>decimal</strong>} tooltip="a string converted into a numeral form" /> allows us to use it as a *"key"* in the localisation override manifest.
 
 
 ### 1. Go to Text Tools 
@@ -161,11 +161,11 @@ That's what the <Tooltip text={<><strong>Text Tools tab</strong><span className=
 - Locate the <Tooltip text={<><strong>Localisation Hash Calculator</strong><span className="icon-alert"></span></>} tooltip= "A tool that converts your string into a format the manifest can use, generating both hex and decimal codes." /> box. 
 
 ### 2. Convert your string
-- Paste your <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> inside that box
-- Copy *only* the converted <Tooltip text={<strong>decimal number</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." />. 
+- Paste your <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" /> inside that box
+- Copy *only* the converted <Tooltip text={<strong>decimal number</strong>} tooltip="a string converted into a numeral form" />. 
 
 >*We now have everything needed for the next part:*
- >- a <Tooltip text={<strong>decimal form</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." /> of our <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." />
+ >- a <Tooltip text={<strong>decimal form</strong>} tooltip="a string converted into a numeral form" /> of our <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" />
  >- the <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." /> from the <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." />
 
 :::tip windows clipboard
@@ -173,7 +173,7 @@ Easily manage multiple copied items using <Tooltip text={<strong>Windows clipboa
 
 Now copy both your: 
 - LOCR's <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." /> and 
-- <Tooltip text={<strong>decimal</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." />.
+- <Tooltip text={<strong>decimal</strong>} tooltip="a string converted into a numeral form" />.
 >Make it a habit to paste using `Windows + V` instead of `Ctrl + V` from now on. 
 
  *It might seem overkill for 2 lines of codes but it'll pay off and it beats* *<Tooltip text={<italic>using notepad</italic>} tooltip="💀" />*  
@@ -185,7 +185,7 @@ Now copy both your:
 ## Pt. 4: **UPDATE MANIFEST**
 *Here we will be adding a* <Tooltip text={<><strong>localisation override code</strong><span className="icon-alert"></span></>} tooltip="A way to replace or modify in-game text, like names or descriptions, with your own custom text. It allows you to customize how text appears without altering the core game files." /> *line to your* <Tooltip text={<strong>manifest file</strong>} tooltip="A file in your mod folder that holds important information" />. *It will contain:*
 - <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." /> of your <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." />
-- <Tooltip text={<strong>decimal form</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." /> of your <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." />
+- <Tooltip text={<strong>decimal form</strong>} tooltip="a string converted into a numeral form" /> of your <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" />
 - *Your new text*
 
 ### 1. Add the localisation override line 
@@ -250,7 +250,7 @@ Result:
 
 
 ### 4. Add your decimal and text
-- Inside the language brackets, paste your <Tooltip text={<strong>decimal number</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." /> in "quotes"
+- Inside the language brackets, paste your <Tooltip text={<strong>decimal number</strong>} tooltip="a string converted into a numeral form" /> in "quotes"
 - Add your new text... Also in "quotes".
 
 Result:
@@ -269,7 +269,7 @@ Result:
 :::info Syntax
 If you're paying attention, you might notice that we're setting up the <Tooltip text={<strong>localisation override code</strong>} tooltip="A way to replace or modify in-game text, like names or descriptions, with your own custom text. It allows you to customize how text appears without altering the core game files." /> in the <Tooltip text={<strong>manifest file</strong>} tooltip="A file in your mod folder that holds important information and can execute code" /> 
 just like our <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." /> 
-where we got the <Tooltip text={<strong>strings</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> from. 
+where we got the <Tooltip text={<strong>strings</strong>} tooltip= "A key that links to text in the LOCR File" /> from. 
 Both will be using the same <Tooltip text={<strong>'Syntax'</strong>} tooltip="A set of rules that define how code is written and organized." />.
 
 
@@ -279,13 +279,13 @@ Both will be using the same <Tooltip text={<strong>'Syntax'</strong>} tooltip="A
 
 ### 5. (Optionally) Add more languages
 #### Same Strings:
-*In [Part 2](#2-copy-the-string) of the tutorial we demonstrated that* <Tooltip text={<strong>strings</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> *are the same in each* <Tooltip text={<strong>language array</strong>} tooltip="A single language array with multiple entries of strings each attached to text you see in-game" />
+*In [Part 2](#2-copy-the-string) of the tutorial we demonstrated that* <Tooltip text={<strong>strings</strong>} tooltip= "A key that links to text in the LOCR File" /> *are the same in each* <Tooltip text={<strong>language array</strong>} tooltip="A single language array with multiple entries of strings each attached to text you see in-game" />
 >*This will make adding languages for each entry very easy.*
     
 
 To support more languages, simply:
 - make another <Tooltip text={<strong>language bracket</strong>} tooltip="A single language array that can contain multiple entries of strings each attached to text you see in-game" /> 
-- add the <Tooltip text={<strong>same decimal</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." /> with your text
+- add the <Tooltip text={<strong>same decimal</strong>} tooltip="a string converted into a numeral form" /> with your text
 
 
 Example of a new language line:
@@ -316,10 +316,10 @@ Or *[click here](#all-languages)*
 ### 6. Add the description
 *Now try the same for the description as well.*
 
-To add *another* <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> from the same <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." /> :
+To add *another* <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" /> from the same <Tooltip text={<strong>LOCR File</strong>} tooltip="A file holding the game’s text, like names and descriptions, organized for different languages." /> :
 
-- convert the <Tooltip text={<strong>string</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> from the <Tooltip text={<strong>suit's description</strong>} tooltip="Usually right below the string of your suit's name" /> in <Tooltip text={<strong>Text Tools</strong>} tooltip="A tab in GlacierKit that provides tools for converting text and hashes for game modifications." />
-- add your new <Tooltip text={<strong>converted decimal</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." /> in the <Tooltip text={<strong>manifest</strong>} tooltip="A file in your mod folder that holds important information and can execute code" /> with the new text 
+- convert the <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" /> from the <Tooltip text={<strong>suit's description</strong>} tooltip="Usually right below the string of your suit's name" /> in <Tooltip text={<strong>Text Tools</strong>} tooltip="A tab in GlacierKit that provides tools for converting text and hashes for game modifications." />
+- add your new <Tooltip text={<strong>converted decimal</strong>} tooltip="a string converted into a numeral form" /> in the <Tooltip text={<strong>manifest</strong>} tooltip="A file in your mod folder that holds important information and can execute code" /> with the new text 
 - *(Optionally)* add another language for the new description as well
 
 Example:
@@ -361,7 +361,7 @@ If you need to modify another <Tooltip text={<strong>LOCR File</strong>} tooltip
 1. **Insert a Comma**: After your previous <Tooltip text={<strong>LOCR Array</strong>} tooltip="an array in the manifest resembling the game's LOCR file syntax" />  in the <Tooltip text={<strong>manifest</strong>} tooltip="A file in your mod folder that holds important information and can execute code" />.
 2. **Repeat [the steps from start](#1-identify-your-locr)** (or continue here)
 2. **Add a New** <Tooltip text={<strong>LOCR Array</strong>} tooltip="an array in the manifest resembling the game's LOCR file syntax" />: Use the same structure, making sure to follow the <Tooltip text={<strong>syntax rules</strong>} tooltip="A set of rules that define how code is written and organized." />.
-3. <Tooltip text={<strong>Repeat the Conversion</strong>} tooltip="Using the Localisation Hash calculator" />: Use <Tooltip text={<strong>Text Tools</strong>} tooltip="A tab in GlacierKit that provides tools for converting text and hashes for game modifications." /> again to convert any new <Tooltip text={<strong>strings</strong>} tooltip= "An identifier or 'key' used by LOCR files to display unique pieces of text, like names or descriptions." /> into <Tooltip text={<strong>decimals</strong>} tooltip="A numeric representation derived from a string, used for reference in the manifest file." />.
+3. <Tooltip text={<strong>Repeat the Conversion</strong>} tooltip="Using the Localisation Hash calculator" />: Use <Tooltip text={<strong>Text Tools</strong>} tooltip="A tab in GlacierKit that provides tools for converting text and hashes for game modifications." /> again to convert any new <Tooltip text={<strong>strings</strong>} tooltip= "A key that links to text in the LOCR File" /> into <Tooltip text={<strong>decimals</strong>} tooltip="a string converted into a numeral form" />.
 4. **Update the** <Tooltip text={<strong>manifest</strong>} tooltip="A file in your mod folder that holds important information and can execute code" />: Add the new language entries, keeping everything consistent.
 
 Example of every aspect from this tutorial applied:

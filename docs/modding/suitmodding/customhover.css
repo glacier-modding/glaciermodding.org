@@ -43,3 +43,15 @@
   opacity: 1;
   transform: translateX(-50%) scale(1); /* Tooltip scales up smoothly */
 }
+
+.icon-alert {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url('./exclam white.png'); /* Your image path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 4px;
+  vertical-align: middle;
+}
