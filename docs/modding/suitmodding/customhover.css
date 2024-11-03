@@ -1,3 +1,18 @@
+/* Tippy.js customization */
+.tippy-tooltip {
+  background-color: rgba(3, 121, 90, 0.9); /* Your original background color */
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9em;
+  line-height: 1.5;
+  max-width: 250px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Ensure the main text has the expected styling */
 .tooltip {
   position: relative;
   display: inline-block;
@@ -11,16 +26,7 @@
   color: rgba(127, 255, 212, 0.663);
 }
 
-.tooltip-text {
-  /* Your custom styling for the tooltip text */
-  background-color: rgba(3, 121, 90, 0.9);
-  color: #fff;
-  border-radius: 4px;
-  padding: 5px;
-  font-size: 0.9em;
-}
-
-
+/* Custom icon styling */
 .icon-alert {
   content: "";
   display: inline-block;
@@ -32,8 +38,9 @@
   margin-left: 4px;
   vertical-align: middle;
 }
+
 .darker {
-  background-color: #0d797d44; /* Subtle grey background */
-  padding: 5px; /* Optional: Add some padding */
-  border-radius: 4px; /* Optional: Add rounded corners for a smoother look */
+  background-color: #0d797d44;
+  padding: 5px;
+  border-radius: 4px;
 }

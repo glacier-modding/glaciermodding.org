@@ -5,7 +5,7 @@ import './customhover.css'; // Import your custom CSS
 
 const Tooltip = ({ text, tooltip }) => {
   return (
-    <Tippy content={<span className="tooltip-text">{tooltip}</span>} arrow={true}>
+    <Tippy content={tooltip} arrow={true} className="tippy-tooltip">
       <span className="tooltip">{text}</span>
     </Tippy>
   );
