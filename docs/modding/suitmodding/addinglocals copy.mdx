@@ -10,6 +10,20 @@ import Tooltip from './tooltip';
 # Adding Shorter locals AI
 *Welcome, we're gonna replace text in-game with our own custom text*. 
 >Start by opening Glacierkit and your mod folder *as a project*.
+<details>
+<summary>**About Tooltips**</summary>
+:::info tooltips
+*To assist you*, I’ve added <Tooltip
+  text={<strong>tooltips</strong>}
+  tooltip="This is a tooltip"
+/>
+ throughout the tutorial to explain any tricky terms as you encounter them. 
+
+<Tooltip text={<><strong>Key terms</strong><span className="icon-alert"></span></>} tooltip="These will need the most attention" /> are marked with an exclamation icon when they're necessary. <Tooltip text={<italics>Hover over almost any</italics>} tooltip="almost" /> **bold** term for a quick explanation. Highlighted terms become easier to understand over the course of the tutorial.
+
+    >Explore the tooltips as needed for clarification
+:::
+</details>
 ### **1. Finding Your File**
 *Let's find the text by locating where it's stored:*
 ####  Identify your LOCR
@@ -28,7 +42,7 @@ import Tooltip from './tooltip';
 
 Start with:
 
-1. Clicking on the *Advanced Search Tab*
+1. Clicking on the ***Advanced Search Tab***
 
 2. **Set Your Search Parameters**:
    - Check only the `chunk0` box.
@@ -36,25 +50,22 @@ Start with:
 
     :::note Faster Search
     - *`Chunk0` holds all of the text data*
-    - *ticking 'localisation' will refine your search to only localisation-related text files.*
+    - *ticking 'localisation' will refine your search to only* <Tooltip text={<italic>localisation-related</italic>} tooltip="The process of adapting content for different languages and regions, such as translating text." /> *text files*.
     :::
 
 
 3. **Try Multiple Case Variations**:
 
-    *Advanced search is* ***case sensitive*** *so try multiple type of search operations at the* ***same time*** *if you're unsure about your text format*.
+*Advanced search is* ***case sensitive!***
+>You can run multiple searches simultaneously.   
+   >Example:
+    > - "Blood Money"
+    > - "blood money"
+    > - "BLOOD MONEY"
+    > - "bloodmoney" 
 
-   Examples of text I would search:
-     - "Blood Money"
-     - "blood money"
-     - "BLOOD MONEY"
-     - "bloodmoney"
+*Watch the task bar at the bottom, which shows the status of your searches.*
 
-:::tip advanced multiple search   
-
-You can continue to input new searches while others are still in progress.
->Watch the task bar at the bottom, which shows the status of your searches.
-:::
 
 
 4. **Focus on the Right File**: 
@@ -72,9 +83,9 @@ You ***can*** track LOCR files down via `Line` or `dlge` (dialogue) files throug
 - Open your LOCR file
 ---
 
-### **2. A LOCR?**
-*Whats in a locr?*
-*Inside the LOCR file is your text.* 
+### **2. INSIDE THE LOCR**
+*What's in a locr?*
+>*Inside the LOCR file is every text you see in game, each attached to a long* <Tooltip text={<><strong>string</strong><span className="icon-alert"></span></>} tooltip= "A key that links to text in the LOCR File" /> 
 
 Lets visualise a Locr to understand the parts better
 
@@ -82,20 +93,24 @@ Simplified version of a LOCR file and explain what
 ```json
      "en": {
         "string1": "text you see in game",
-        "string2": "More text you see in game"
+        "string2": "More text you see in game",
+        "string3": "Too much text you see in game"
      },
      "fr": {
         "string1": "text tu vieux en jeu",
-        "string2":"Plus de text tu vieux en jeu"
+        "string2":"Plus de text tu vieux en jeu",
+        "string3": "Trop de texte que vous voyez dans le jeu"
      }
      ```
-     We can learn that:
+     We see:
+
+    1. Language arrays (need tooltip) that hold:
+        - **"Strings"** each attached to text you see in game split by a `:`
+        - Every essential part is in `"quotes"`
+        - Each line is seperated by `,commas` at the end
+    2. Same **"strings"** are used in different arrays for `{multiple languages}`    
      
-    1. A <Tooltip text={<><strong>string</strong><span className="icon-alert"></span></>} tooltip= "A key that links to text in the LOCR File" /> is attached to each entry in the file
-    2. Same **"strings"** are used in different arrays for `{multiple languages}`
-    3. Every essential part is in `"quotes"`
-     
-     These are the rules of the files or the <Tooltip text={<><strong>syntax</strong><span className="icon-alert"></span></>} tooltip="A set of rules that define how code is written and organized." />
+     These make the rules of the LOCR files which is known as the <Tooltip text={<><strong>syntax</strong><span className="icon-alert"></span></>} tooltip="A set of rules that define how code is written and organized." />
   > We will recreate this structure in the manifest to replace the text. Just how we did with blobsfolders 
   
 - **Search Your Text**: Use `Ctrl + F` in the "Preview Box" to locate your text.
@@ -115,7 +130,7 @@ To further clarify what a string is. It's the long piece of code before the text
 
 ---
 
-### **3. Replacing Your Text in the Manifest**
+### **3. MANIFESTING OUR TEXT**
 *Now, let's update the manifest:*
 - **Open Your Manifest**: Navigate to your manifest file.
 - Add this line: `"localisationOverrides": {}`
@@ -149,9 +164,10 @@ blbabka learn how to type code with suggestions
 >We cant use string in manifest so go to:
 - **Text Tools**: Open Text Tools and:
   - **Paste Your String**: Use the Localisation Hash Calculator in Text tools to convert the string.
-  :::tip 
+:::tip 
 *Use Windows Clipboard (`Windows + V`) to copy and paste the codes youre copying.*
 :::
+
   - **Copy the Decimal**: You'll use this in your manifest.
 - **Add Arrays and New Text**: Update your manifest with arrays, pasting the new decimal and your custom text.
 Result:
@@ -165,10 +181,7 @@ Result:
 }
 ````
 >This recreates syntax like locr (remember simpliefied locr?)
-- optional Add a language collapbsile comes here 
-
-//More language throughout instad of at end supports retaining attenation end engagement instead of lazy copy pasting 
-
+ADD A COLLAPSIBLE HERE WITH SIMPLIFIED LOCR
 <details>
 
 
@@ -199,8 +212,6 @@ Example of a new language line:
         }
     }
 ```
-<details>
-<summary>Language Codes</summary>
 
 :::info language codes
 - The reason why `french` is used here and not `français` is because the manifest's <Tooltip text={<strong>schema</strong>} tooltip="A structure used to validate and provide auto-completion for your manifest, helping you write error-free code." /> is coded in English. 
@@ -224,7 +235,7 @@ These are all the language codes for the <Tooltip text={<strong>manifest</strong
 
 </details>
 :::
-</details>
+
 </details>
 
 
