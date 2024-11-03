@@ -8,7 +8,8 @@ import Tooltip from './tooltip';
 
 
 # Adding Shorter locals AI
-
+*Welcome, we're gonna replace text in-game with our own custom text*. 
+>Start by opening Glacierkit and your mod folder *as a project*.
 ### **1. Finding Your File**
 *Let's find the text by locating where it's stored:*
 ####  Identify your LOCR
@@ -16,36 +17,34 @@ import Tooltip from './tooltip';
 - Season 1 suits: `00985A1100E5EDDC`,
 - Season 2 suits: `009F430D046716BE` ,
 - Season 3 suits: `004B8C5124A49543` 
-- **Copy the Hash**: Once located, copy the hash of your LOCR file.
+- **Copy the Hash**: Know when your suit was released.
+- **Go to your File**: Go to the <Tooltip text={<strong>game contents tab</strong>} tooltip="A tab in Glacierkit where you search game files" /> and paste your HASH
+> It will lead you straight to your <Tooltip text={<><strong>LOCR File</strong><span className="icon-alert"></span></>} tooltip="A file that holds game text in different languages." />
+
 <details>
-
 <summary>**Advanced search guide**</summary>
-## Advanced Search Guide
 
-*When you need to find text for something other than suits, use the* <Tooltip text={<strong>Advanced Search Tab</strong>} tooltip="A tab in GlacierKit for performing extended searches that go beyond the 'game contents' tab search abilities. It has a magnifying glass icon and, is like all other tabs, on the left side." />. 
+*If you need to find text for something other than suits, we use the* <Tooltip text={<><strong>Advanced Search Tab</strong><span className="icon-alert"></span></>} tooltip="A tab in GlacierKit for performing extended searches that go beyond the 'game contents' tab search abilities. It has a magnifying glass icon and, is like all other tabs, on the left side." />. 
 
 Start with:
 
-1. Clicking on the <Tooltip text={<strong>Advanced Search Tab</strong>} tooltip="A tab in GlacierKit for performing extended searches. Located on the left." />
+1. Clicking on the *Advanced Search Tab*
 
 2. **Set Your Search Parameters**:
    - Check only the `chunk0` box.
-    - Tick the **"localisation"** option.
+    - Tick the **localisation** option.
 
-    :::note
-        - *`Chunk0` holds most of the text data, making the search more efficient.*
-
-        - The latter will refine your search to only localisation-related text files.
-    
-
+    :::note Faster Search
+    - *`Chunk0` holds all of the text data*
+    - *ticking 'localisation' will refine your search to only localisation-related text files.*
     :::
 
 
 3. **Try Multiple Case Variations**:
 
-    *Advanced search is* ***case sensitive*** *so try multiple type of search operations at the* ***same time***
+    *Advanced search is* ***case sensitive*** *so try multiple type of search operations at the* ***same time*** *if you're unsure about your text format*.
 
-    Search using different case-sensitive variations of your text. Examples:
+   Examples of text I would search:
      - "Blood Money"
      - "blood money"
      - "BLOOD MONEY"
@@ -58,27 +57,28 @@ You can continue to input new searches while others are still in progress.
 :::
 
 
-#### 6. **Focus on the Right File**: 
+4. **Focus on the Right File**: 
    - Your goal is to locate a <Tooltip text={<strong>LOCR File</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." />.
-   - Look inside the <Tooltip text={<strong>LOCR File</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." />. You can use `ctrl+f` to find and confirm your text
-   - or [follow the search section](#1-find-your-suit) if you don't know how to do that.
+   - Look inside the LOCR File. You can use `ctrl+f` to find and confirm your text
 
-      > *Ignore `Line` or `dlge` files as they are irrelevant for* <Tooltip text={<strong>localisation Overrides</strong>} tooltip="A way to replace or modify in-game text, like names or descriptions, with your own custom text. It allows you to customize how text appears without altering the core game files." />
-:::info Following References 
-You *can* track `Line` or `dlge` (dialogue) files via the <Tooltip text={<strong>Reference list</strong>} tooltip="A tab that helps you trace how your file connects to others, showing which files use it or by which ones it's getting.. used" /> to their respective <Tooltip text={<strong>LOCR Files</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." /> too, but using my search method, it'll be highly unlikely you haven't located your <Tooltip text={<strong>LOCR File</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." />
+
+      > *Ignore `Line` or `dlge` files as they are irrelevant for the tutorial.*
+5. **END**
+:::note
+You ***can*** track LOCR files down via `Line` or `dlge` (dialogue) files through the <Tooltip text={<strong>Reference list</strong>} tooltip="A tab that helps you trace how your file connects to others, showing which files use it or by which ones it's getting.. used" /> too, but using my search method, it'll be highly unlikely you won't have located your LOCR File.
 :::
 </details>
 
+- Open your LOCR file
 ---
 
-### **2. Finding Your Text**
+### **2. A LOCR?**
 *Whats in a locr?*
+*Inside the LOCR file is your text.* 
 
-*Inside the LOCR file is your text. Let's find it:*
-- **Search Your Text**: Use `Ctrl + F` in the "Preview Box" to locate your text.
-Whats all that code?
-Lets visualise a Locr: Boom!  
->- Simplified version of a LOCR file and explain what 
+Lets visualise a Locr to understand the parts better
+
+Simplified version of a LOCR file and explain what 
 ```json
      "en": {
         "string1": "text you see in game",
@@ -89,22 +89,28 @@ Lets visualise a Locr: Boom!
         "string2":"Plus de text tu vieux en jeu"
      }
      ```
-     Rules of sytnatx (tooltip what syntax is here)
-     - **strings** attached to text you see in game with a `:`
-     - Same string used in different arrays for multiple languages
-     - Its all in quotes (how to explain why?) 
-  >- We will recreate this in the manifest btw. Easy just like blobsfolders 
+     We can learn that:
+     
+    1. A <Tooltip text={<><strong>string</strong><span className="icon-alert"></span></>} tooltip= "A key that links to text in the LOCR File" /> is attached to each entry in the file
+    2. Same **"strings"** are used in different arrays for `{multiple languages}`
+    3. Every essential part is in `"quotes"`
+     
+     These are the rules of the files or the <Tooltip text={<><strong>syntax</strong><span className="icon-alert"></span></>} tooltip="A set of rules that define how code is written and organized." />
+  > We will recreate this structure in the manifest to replace the text. Just how we did with blobsfolders 
   
-
-- **Copy the String**: Be sure to copy the string no quotes, as you’ll need it for the next steps.
+- **Search Your Text**: Use `Ctrl + F` in the "Preview Box" to locate your text.
+- **Copy the String**: Be sure to copy the string without quotes, as you’ll need it for the next steps.
 <details>
-<summary> String?</summary>
-How to copy a string -_-
->to understand the lorem ipsum this isnt necessary
-Example of a line: 
->Example of just the string using string1
-Example of language usage
->Example using string1 again 
+<summary>String?</summary>
+
+To further clarify what a string is. It's the long piece of code before the text you see in-game
+
+    Example of a suit's name *line*:
+ ```json
+ "989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_": "Blood Money Suit"
+ ```
+ - The first part is the "string": `989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_`
+ - The second part will be the text you see in game: `Blood Money Suit`
 </details>
 
 ---
@@ -117,7 +123,7 @@ Example of language usage
 Suggestions 
 blbabka learn how to type code with suggestions
 :::
-- Add opur LOCR HASH and language: 
+- Add your LOCR HASH and a language array: 
 ```json
    "localisationOverrides": {
        "yourLOCRhash": {
@@ -126,7 +132,7 @@ blbabka learn how to type code with suggestions
    }
    ``` 
 :::danger  
-   *We can't use string in manifest to do this?!*
+   The next logical step would be to add our string and new text.
  ```json
    "localisationOverrides": {
        "yourLOCRhash": {
@@ -136,7 +142,9 @@ blbabka learn how to type code with suggestions
        }
    }
    ``` 
-  > NO! That would be too easy. We first change string to number code. Then do manifest like that
+  > But we can't do that!
+  
+   We first need to convert the string to decimal (meaning containing numbers only) code. Then we can finish the manifest like you just saw.
 :::
 >We cant use string in manifest so go to:
 - **Text Tools**: Open Text Tools and:
