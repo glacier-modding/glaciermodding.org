@@ -85,8 +85,8 @@ Lets visualise a Locr: Boom!
         "string2": "More text you see in game"
      },
      "fr": {
-     "string1": "francais text tu vieux en jeu",
-     "string2":"Psus text tu vieux en jeu"
+        "string1": "text tu vieux en jeu",
+        "string2":"Plus de text tu vieux en jeu"
      }
      ```
      Rules of sytnatx (tooltip what syntax is here)
@@ -125,15 +125,27 @@ blbabka learn how to type code with suggestions
        }
    }
    ``` 
-   >Syntax important like LOCR File rememember? 
-:::tip 
-*Use Windows Clipboard (`Windows + V`) to paste the codes you copied.*
+:::danger  
+   *We can't use string in manifest to do this?!*
+ ```json
+   "localisationOverrides": {
+       "yourLOCRhash": {
+           "english": {
+            "string_you_copied": "Your new text"
+           }
+       }
+   }
+   ``` 
+  > NO! That would be too easy. We first change string to number code. Then do manifest like that
 :::
 >We cant use string in manifest so go to:
 - **Text Tools**: Open Text Tools and:
   - **Paste Your String**: Use the Localisation Hash Calculator in Text tools to convert the string.
+  :::tip 
+*Use Windows Clipboard (`Windows + V`) to copy and paste the codes youre copying.*
+:::
   - **Copy the Decimal**: You'll use this in your manifest.
-- **Add Arrays and New Text**: Update your manifest with arrays, pasting the decimal and your custom text.
+- **Add Arrays and New Text**: Update your manifest with arrays, pasting the new decimal and your custom text.
 Result:
 ```json
 "localisationOverrides": {
@@ -145,7 +157,9 @@ Result:
 }
 ````
 >This recreates syntax like locr (remember simpliefied locr?)
-- optional Add a language collapbsile comes here //More language throughout instad of at end supports retaining attenation end engagement instead of lazy copy pasting 
+- optional Add a language collapbsile comes here 
+
+//More language throughout instad of at end supports retaining attenation end engagement instead of lazy copy pasting 
 
 <details>
 
@@ -214,7 +228,7 @@ These are all the language codes for the <Tooltip text={<strong>manifest</strong
 
 
 - **Repeat for Description**: Convert and replace the description string, emphasizing syntax as needed.
-Like this with more languages by adding language array xD
+Full example with added language. Tutorial good as done
 ```json
 "localisationOverrides": {
         "yourLocrHASH": {
