@@ -78,6 +78,11 @@
   padding: 5px 9px;
   z-index: 1;
 }
+.tooltip:hover {
+  border-bottom-color: #1aaa8b;
+  border-bottom: 2px solid #1aaa8b;
+  color: rgba(127, 255, 212, 0.663);
+}
 
 /* Custom icon styling */
 .icon-alert {
