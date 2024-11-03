@@ -9,7 +9,8 @@ import Tooltip from './tooltip';
 
 # Adding Localisation Overrides
 
-*In this tutorial, you’ll learn how to modify suit names and descriptions in the game using* <Tooltip text={<><strong>Localisation Overrides</strong><span className="icon-alert"></span></>} tooltip="A way to replace or modify in-game text, like names or descriptions, with your own custom text." />. 
+*In this tutorial, you’ll learn how to modify suit names and descriptions in the game using* 
+> <Tooltip text={<><strong>Localisation Overrides</strong><span className="icon-alert"></span></>} tooltip="A way to replace or modify in-game text, like names or descriptions, with your own custom text." />. 
 
 You'll learn how to:
 - locate the necessary files, 
@@ -123,6 +124,7 @@ Simplified version of a LOCR file
      "string2":"Psus text tu vieux en jeu"
      }
      ```
+    [[Return to 'Syntax']](#syntax)
     
     Example of a suit's name *line*:
  ```json
@@ -212,25 +214,22 @@ Now copy both your:
 Theres *2 methods* to doing this:
 - *Method 1*: 
     - just copying: `"localisationOverrides": {}`
-    - pasting it in your manifest.
-
- Or
-
+>Or
 - *Method 2*:
-    - manually start typing it in, starting with `"` and then continue typing
+    - manually typing it in, starting with `"`
     - navigate the *suggestions menu* to find `localisationOverrides`.
     
 
 >Either method should result in:
-
-   ```json
-   "localisationOverrides": {}
-   ```
+    >  ```json
+    > "localisationOverrides": {}
+    >  ```
 :::tip using "suggestions"
-*Now you know how to use the* <Tooltip text={<strong>suggestions feauture</strong>} tooltip="This feauture is only supported in Glacierkit or in VS code with a schema." />. It will auto-complete most of the tedious functions in the following steps like:
+*Now you know how to use the* <Tooltip text={<strong>suggestions feauture</strong>} tooltip="This feauture is only supported in Glacierkit or in VS code with a schema." />. It will auto-complete most of the tedious functions in the steps to follow like:
 - adding "quotes", 
 - adding one of these `:`
-- adding brackets
+- adding `{brackets}`
+- adding spacing to keep code readable 
 - and more
 
 >Suggestions will show up as soon as you type a **quote** `"`
@@ -275,7 +274,7 @@ Result:
     }
 }
 ````
-
+<div id="syntax">
 <details>
 <summary>**Syntax**</summary>
 :::info Syntax
@@ -283,10 +282,13 @@ If you're paying attention, you might notice that we're setting up the localisat
 where we got the <Tooltip text={<strong>strings</strong>} tooltip= "A key that links to text in the LOCR File" /> from. 
 Both will be using the same <Tooltip text={<strong>'Syntax'</strong>} tooltip="A set of rules that define how code is written and organized." />.
 
+> This was visually represented as a *simplified LOCR file* at the [beginning of Part 2](#pt-2-get-your-string).
 
-> *Even better too if you have noticed how similar this method is to [the previous *blobs article*](addingblobs.md#step-3-set-up-a-blobsfolder) where we 'recreated'* <Tooltip text={<strong>an assembly path</strong>} tooltip="Big thumb if you connected that HASH lines are 'coded' assembly paths = filePaths + fileNames." />
+
+*Even better too if you have noticed how similar this method is to [the previous *blobs article*](addingblobs.md#step-3-set-up-a-blobsfolder) where we 'recreated'* <Tooltip text={<strong>an assembly path</strong>} tooltip="Bonus points if you connected that HASH lines are 'coded' assembly paths = filePaths + fileNames." />
 :::
 </details>
+</div>
 
 ### 5. (Optionally) Add more languages
 #### Same Strings:
