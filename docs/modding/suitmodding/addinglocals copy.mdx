@@ -92,13 +92,16 @@ You ***can*** track LOCR files down via `Line` or `dlge` (dialogue) files throug
 
 ### **2. GETTING THE STRING**
 
-*Once you’ve opened the LOCR file, it’s time to extract the text we’ll be modifying by finding its <Tooltip text={<><strong>"string"</strong><span className="icon-alert"></span></>} tooltip="A unique identifier for text inside a LOCR file." /> .* 
+*Once you’ve opened the LOCR file, it’s time to extract the text we’ll be modifying by finding its* <Tooltip text={<><strong>"string"</strong><span className="icon-alert"></span></>} tooltip="A unique identifier for text inside a LOCR file." /> . 
 
 
 1. **Search for Your Text**: 
 
-Use `Ctrl + F` in the "Preview Box" to quickly locate the text you want to modify.
-
+Use `Ctrl + F` inside the "Preview Box" to quickly locate the text you want to modify.
+:::warning Search mode
+If you don’t click inside the *Preview* box first, the search won’t work properly and may look for text elsewhere in Glacierkit.
+>This feature is useful for other situations but doesn’t apply here.
+:::
 2. **Copy the String**: 
 
 Copy only the string (without "quotes") that appears before the text you want to change.
@@ -159,9 +162,20 @@ Looking carefully at the Syntax of a LOCR file, we can see:
 </details>
 - **Open Your Manifest**: Navigate to your manifest file.
 - Add this line: `"localisationOverrides": {}`
- :::tip 
-Suggestions 
-blbabka learn how to type code with suggestions
+>Either copy it or type it in manually
+
+:::tip using "suggestions"
+*Learn to use the* <Tooltip text={<><strong>suggestions feauture</strong><span className="icon-alert"></span></>} tooltip="This feauture is only supported in Glacierkit or in VS code with a schema." />. 
+>Suggestions will show up as soon as you type a **quote** `"`
+
+It will auto-complete most of the tedious functions in the steps to follow like:
+- adding "quotes", 
+- adding one of these `:`
+- adding `{brackets}`
+- adding spacing to keep code readable 
+- and more
+
+
 :::
 - Add your LOCR HASH and a language array: 
 ```json
@@ -173,7 +187,7 @@ blbabka learn how to type code with suggestions
    ``` 
 
 :::danger HOLD IT
-  - The next logical step would be to add our string and new text.
+  - The next logical step would be to add our string and new text, like so:
  ```json
    "localisationOverrides": {
        "yourLOCRhash": {
@@ -198,7 +212,7 @@ To do that, you first have to:
   - **Paste Your String**: 
   >Use the <Tooltip text={<><strong>Localisation Hash Calculator</strong><span className="icon-alert"></span></>} tooltip= "A tool that converts your string into a format the manifest can use, generating both hex and decimal codes." /> box to convert the string.
 
-  - **Copy the** <Tooltip text={<strong>Decimal number</strong>} tooltip="A string converted into a numeral form" />: You'll have to use this in your manifest instead of the long string.
+  - **Copy the** <Tooltip text={<strong>Decimal number</strong>} tooltip="A string converted into a numeral form" />: You'll have to use this instead of the long string.
 - **Add decimal and New Text**: Return to your manifest and paste the new decimal with your custom text.
 :::tip Clipboard 
 Use <Tooltip text={<strong>Windows clipboard</strong>} tooltip="A built-in tool that stores multiple copied items." /> (`Windows + V`) to keep track of multiple copied code simultaneously.
