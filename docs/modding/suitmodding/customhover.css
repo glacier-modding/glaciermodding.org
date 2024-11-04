@@ -93,8 +93,8 @@
   background-image: url('./exclam white.png'); /* Your image path */
   background-size: contain;
   background-repeat: no-repeat;
-  margin-left: 4px;
-  vertical-align: middle;
+  margin-left: 3px;
+  vertical-align: text-top;
 }
 
 
