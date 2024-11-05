@@ -156,10 +156,9 @@ Ensure you copy the string **without quotes**, or the process will fail later on
 ---
 
 ### **3. Manifest your Text**
-*Now that we have the associated string, we will structure the manifest using* <Tooltip text={<strong>localisation Overrides</strong>} tooltip="A way to replace or modify in-game text, without altering the core game files." /><><span className="icon-alert"></span></>
+*Now that we have the associated string, we will* <Tooltip text={<strong>structure the manifest</strong>} tooltip="If you're curious,  
+Check out the LOCR breakdown to see how it all fits together." /> *using* <Tooltip text={<strong>localisation Overrides</strong>} tooltip="A way to replace or modify in-game text, without altering the core game files." /><><span className="icon-alert"></span></>
 
->If you're curious about the details,  
-Check out the LOCR breakdown to see how it all fits together.
 <details>
 <summary>***LOCR*** *breakdown*</summary>
 
@@ -205,10 +204,10 @@ Looking carefully at the Syntax of a LOCR file, we can learn that:
 Navigate to your manifest file from the 'Files' Tab in GlacierKit 
 
 2. Add this line: `"localisationOverrides": {}`  
-Either copy it or type it in manually with *suggestions*
+Either copy it or type it in manually using *suggestions*
 
 :::tip using "suggestions"
-*Learn to type with the* <Tooltip text={<strong>suggestions feature</strong>} tooltip="A helpful tool that suggests and completes code as you type, reducing errors and keeping everything organized." /><><span className="icon-alert"></span></>. 
+Type smarter with the <Tooltip text={<strong>suggestions feature</strong>} tooltip="A tool that helps complete and format your code efficiently as you type, reducing mistakes." /><><span className="icon-alert"></span></>. 
 >*Suggestions will show up as soon as you type a **quote** `"`*
 
 It will auto-complete most of the tedious functions in the steps to follow like:
@@ -216,8 +215,8 @@ It will auto-complete most of the tedious functions in the steps to follow like:
 - adding these `:`
 - adding `{brackets}`
 - and more
-:::schema
-This feature is built-in Glacierkit or can be used in VS code with a *'schema'*.
+
+*This feature is built-in Glacierkit or in in VS code with a* <Tooltip text={<strong>'schema'</strong>} tooltip="A guideline that defines and validates code formats ensuring error-free code" />.
 :::
 
 
@@ -254,15 +253,16 @@ To do that, you first have to:
 1. **Convert Your String**:
     - **Open the** <Tooltip text={<strong>Text Tools tab</strong>} tooltip="A tab in GlacierKit that provides tools for converting text and hashes for game modifications." /><><span className="icon-alert"></span></>
  
-    - Paste your string inside the <Tooltip text={<strong>Localisation Hash Calculator</strong>} tooltip= "A tool that converts your string into a format the manifest can use, generating both hex and decimal codes." /><><span className="icon-alert"></span></> box.
+    - Paste your string inside the <Tooltip text={<strong>'Localisation Hash Calculator'</strong>} tooltip= "A tool that converts your string into a format the manifest can use, generating both hex and decimal codes." /><><span className="icon-alert"></span></> box.
 
-2. **Copy only the Decimal number**: 
-  >*Ignore the hex code as it's not needed*
+2. **Copy only the Decimal number**:  
+Once pasting your string in the box you will see 2 codes below it.  
+    >*Ignore the hex code as it's not needed*
 
 :::tip Windows Clipboard 
 Try using <Tooltip text={<strong>Windows clipboard</strong>} tooltip="A built-in Windows tool that can store multiple copied items." /> (`Windows + V`) to manage multiple copied items.  
 
->*It’s a handy alternative to `Ctrl + V` for pasting.* 
+*It’s a handy alternative to `Ctrl + V` for pasting.* 
 :::
 
 3. **Add decimal and New Text**:  
@@ -494,6 +494,46 @@ Track LOCR files down via `Line` or `dlge` (dialogue) files through the <Tooltip
 
 
 <details>
+<summary>***LOCR*** *Explained*</summary>
+
+*A closer look at a simplified LOCR file to understand how one is internally set up:*
+
+```json
+"en": {
+   "string1": "text you see in game",
+   "string2": "More text you see in game",
+   "string3": "Too much text you see in game"
+},
+"fr": {
+   "string1": "text tu vieux en jeu",
+   "string2": "Plus de text tu vieux en jeu",
+   "string3": "Trop de texte que vous voyez dans le jeu"
+}
+```
+
+*Notice the deliberate structure and repeated elements in the LOCR file.  
+This format follows a set of guidelines known as the* <Tooltip text={<strong>"Syntax"</strong>} tooltip="A set of rules that define how code is written and organized" /><><span className="icon-alert"></span></>
+
+<details>
+<summary>More on ***Syntax***</summary>
+
+Looking carefully at the Syntax of a LOCR file, we can learn that:
+- **Unique "Strings"** are attached to the text you see in-game, separated by a `:` in each entry
+- `{Language arrays}` are expressed using <Tooltip text={<strong>language codes</strong>} tooltip="The language identifiers in each language array of a LOCR file" /> (e.g., `"en"` and `"fr"`)
+- Every essential part is enclosed in `"quotes"`.
+- Both entries and language arrays are separated by `commas`, except for the last one.
+- The **same "strings"** are reused across different language arrays  
+*(Functioning as tags that map the same text.)*
+
+
+</details>
+
+
+</details>
+
+
+
+<details>
 <summary>**Glossary**</summary>
 
 
@@ -525,7 +565,7 @@ Track LOCR files down via `Line` or `dlge` (dialogue) files through the <Tooltip
 
 >Using Text Tool's Localisation Hash Calculator to convert a string to its hex or decimal form.
 <div class="darker">
-- [**Decimal forn/number**](#4-converting-the-string) 
+- [**Decimal form/number**](#4-converting-the-string) 
 
 >A numeric representation derived from a string, used for reference in the manifest file.
 </div>
@@ -595,7 +635,9 @@ Track LOCR files down via `Line` or `dlge` (dialogue) files through the <Tooltip
 
 >A built-in tool that stores multiple copied items.
 </div>
-- **using notepad**: 💀
+- **using notepad**: 
+
+>💀
 <div class="darker">
 - **save icon**:  
 
