@@ -177,7 +177,8 @@ Let's take a closer look at a simplified LOCR file to understand how it's set up
 
 *Notice the patterns and how specific each piece is written down. This is called the* <Tooltip text={<><strong>"Syntax"</strong><span className="icon-alert"></span></>} tooltip="A set of rules that define how code is written and organized." /> *of a file.*
 
-
+>*We will recreate this structure in the manifest to replace the text,  
+similar to how we handled [blobsfolders](addingblobs.md#step-3-set-up-a-blobsfolder).*
 <details>
 <summary>Syntax Breakdown</summary>
 
@@ -186,11 +187,12 @@ Looking carefully at the Syntax of a LOCR file, we can see:
 - Every essential part is enclosed in `"quotes"`.
 - Entries and language arrays are separated by `commas`, except for the last one in each section.
 - `{Language arrays}` are expressed using <Tooltip text={<strong>language codes</strong>} tooltip="The language identifiers in each language array of a LOCR file" /> (e.g., `"en"` and `"fr"`)
-- The **same "strings"** are reused across different language arrays to ensure consistent translation.
+- The **same "strings"** are reused across different language arrays  
+*(Functioning as tags that map the same text.)*
 
 
 </details>
->*We will recreate this structure in the manifest to replace the text, similar to how we handled blobsfolders.*
+
 
 </details>
 
@@ -351,6 +353,8 @@ Example of a new language line:
 To see how all languages have to be written down in the manifest, see the
     - <Tooltip text={<><strong>documentation in SMF</strong><span className="icon-alert"></span></>} tooltip="It's the book icon on the left after enabling developer mode in SMF." />. 
     - Or *expand* the tab below
+
+:::
 <details>
 <summary>All languages Codes</summary>
 
@@ -366,8 +370,6 @@ To see how all languages have to be written down in the manifest, see the
 - `"japanese"`
 
 </details>
-:::
-
 </details>
 
 
@@ -467,9 +469,8 @@ Example of every aspect from this tutorial applied:
    - Check only the `chunk0` box.
     - Tick the **localisation** option.
 
-3. **Try Multiple Case Variations**:
-
-    *Advanced search is* ***case sensitive!*** 
+3. **Try Multiple Case Variations**:  
+    >*Advanced search is* ***case sensitive!*** 
 
 4. **Focus on the Right File**: 
    - Locate a <Tooltip text={<strong>LOCR File</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." />.
@@ -688,3 +689,4 @@ You’ve successfully replaced the suit name and description in the game with yo
 
 
 </details>
+
