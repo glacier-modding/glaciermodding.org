@@ -24,7 +24,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
      inkscape:zoom="1.712572"
-     inkscape:cx="437.64582"
+     inkscape:cx="437.06192"
      inkscape:cy="217.5091"
      inkscape:window-width="2560"
      inkscape:window-height="1377"
@@ -34,6 +34,25 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Colored triangle"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-fill;fill-rule:evenodd;stroke:context-stroke;stroke-width:2"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path1" />
+    </marker>
     <marker
        style="overflow:visible"
        id="marker7"
@@ -213,9 +232,9 @@
        transform="translate(133.50274,-86.201252)"><tspan
          x="62.822266"
          y="176.46159"
-         id="tspan2"><tspan
+         id="tspan6"><tspan
            style="font-weight:normal;-inkscape-font-specification:Arial"
-           id="tspan1">Image</tspan></tspan></text>
+           id="tspan5">Image</tspan></tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#e70000;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
        id="rect8"
@@ -247,9 +266,9 @@
        transform="translate(128.08666,-27.225631)"><tspan
          x="62.822266"
          y="176.46159"
-         id="tspan4"><tspan
+         id="tspan9"><tspan
            style="font-weight:normal;-inkscape-font-specification:Arial"
-           id="tspan3">Name, Desc LINEs</tspan></tspan></text>
+           id="tspan7">Name, Desc LINEs</tspan></tspan></text>
     <rect
        style="fill:none;fill-opacity:1;stroke:#00e791;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
        id="rect11"
@@ -268,8 +287,8 @@
 or
 globaldata</tspan></text>
     <path
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker7)"
-       d="M 251.68673,331.01663 H 189.30224"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker7);marker-end:url(#marker1)"
+       d="M 252.4435,331.01663 H 196.13639"
        id="path12"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />

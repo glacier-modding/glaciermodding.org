@@ -14,7 +14,7 @@ For this tutorial, we will create an entirely new outfit. In broad steps, this i
 -   Replace that existing suit's name and description
 -   (Advanced, optional) Patch the repository and unlockables to add the suit to Peacock
 
-A lot of this won't make sense right now, but don't worry, we will cover each step in detail. Again, before continuing, please make sure you have all the tools in the [requirements](.). While it's exciting to make entirely new outfits we definitely recommend beginners try the first two tutorials before continuing to get accustomed to the tools, as this tutorial will go into more advanced concepts.
+A lot of this won't make sense right now, but don't worry, we will cover each step in detail. Again, before continuing, please make sure you have all the tools in the [requirements](.). While it's exciting to make entirely new outfits we definitely recommend beginners try the first two tutorials to get accustomed to the tools before continuing, as this tutorial will go into more advanced concepts.
 
 For the purposes of this tutorial we will be making an outfit we can call "Street Smart". When we are done it will look like this:
 
@@ -43,11 +43,11 @@ We can make changes to the repository through mods, but the drawback is these ch
 
 ### Localization
 
-Repository entries and outfit bricks point to localized lines, in the files as `LINE` files. These files don't actually contain the text itself but reference entries in `LOCR` files which for Hitman 3 are localized text lists with entries in English, French, Italian, German, Spanish, Russian, Chinese, Traditional Chinese and Japanese.
+Repository entries and outfit bricks point to localized lines, `LINE` files. These files don't actually contain the text itself but reference entries in `LOCR` files which for Hitman 3 are localized text lists with entries in English, French, Italian, German, Spanish, Russian, Chinese, Traditional Chinese and Japanese.
 
 ### Blobs
 
-Blobs is cached offline content, this includes a lot of things but most important for us is inventory images for outfits.
+Blobs are online resources cached to disk, for playing offline. This includes a lot of things but most important for us is inventory images for outfits.
 
 ### Outfit bricks
 
@@ -71,26 +71,73 @@ As we mentioned the outfit brick references a character set. Often this is short
 
 The character set will decide what **variations** are available for any given outfit. Since we don't want all NPCs on the map with a particular outfit to all look the same, we make slight variations, with different heads, hair, skin tone and so on. When the charset and outfits are set up all the level designers have to do when placing NPCs is place "guard, variation 3", or "waiter, variation 4".
 
-Each variation has three entries. Actor, HeroA, and Nude.
+Every charset has three categories; Actor, HeroA, and Nude.
 
 Actor is what the NPC variation looks like when fully clothed. HeroA is what 47 looks like when wearing that variation. And Nude is the NPC when 47 has taken their clothes, or they are otherwise undressed.
 
-When it comes to 47's starter outfits, their charset will only have one single variation, which is HeroA. The Actor and Nude entries point to nothing, since no NPCs are supposed to wear that outfit.
+Note that the charset doesn't necessarily need to have outfits for all categories. For instance, when it comes to 47's starter outfits, their charset will only have one single variation, which is HeroA. The Actor and Nude entries point to nothing, since no NPCs are supposed to wear that outfit.
 
-Each variation points to an outfit entity, which leads us to...
+And female NPCs only have Actor entries, because 47 can't wear their clothes and hence they will never be nude either. This applies to most unique male NPCs and targets as well.
+
+Charset variations point to an outfit entity, which leads us to...
 
 ### Outfit
 
-This part is what you can actually see with your eyes in the game. It contains the models that the outfit is made of. Head, hairs, top, hands, legs, feet. Any eventual materials to overwrite with new textures, wet logic for the Chongqing rain. This is the bit that we patched in the [Patching suits with new parts](addingparts.md) tutorial.
+This part is what you can actually see with your eyes in the game. It contains the models that the outfit is made of. Head, hairs, top, hands, legs, and feet, as well as any eventual materials to overwrite with new textures, or wet logic for the Chongqing rain. This is the part that we patched in the [Patching suits with new parts](addingparts.md) tutorial.
+
+As a fun example, the Paris CICADA bodyguards have 8 variations. With Actor, HeroA and Nude, that means a grand total of **24** outfit entities, for **one** charset!
 
 ### Unlockables
 
-Unlockables, to keep it simple, is a list of things that you can own through DLC, or unlock through challenges and mastery. All the weapons, items, starting locations, stashes or outfits you can pick in pre-planning before going into a mission. But it also includes things you can pick in your Freelancer hideout.
+Unlockables, to keep it simple, is a list of things that you can own through DLC, or unlock through challenges and mastery. All the weapons, items, starting locations, stashes or outfits you can pick in pre-planning before going into a mission. But it also includes things you can unlock for your Freelancer hideout. You can think of it like your player inventory.
 
 ### In summary
 
 ![Outfit hierarchy diagram](/img/suitmodding/newoutfit/diagram.svg)
 
-This is a diagram of what we've just covered. To start, we only need to concern ourselves with making a charset, outfit, patching an existing suit's entry in globaldata and altering its name and description with a localization override.
+This is a diagram of what we've just covered. To start, we only need to concern ourselves with making a charset, outfit, patching an existing suit's entry in globaldata, altering its name and description with a localization override and changing its image.
 
-The other parts come into play for the extra credit portion of the tutorial which concerns making an addon version for Peacock.
+The other parts come into play for the extra credit portion of the tutorial which concerns making an addon version for Peacock. But the upside is, that part is not terribly difficult when everything else is already in place!
+
+Everything click so far? If not, don't worry, you should get the hang of things after actually working with it.
+
+## Foundations
+
+Let's begin by making our mod folder and selecting it with GlacierKit.
+
+Go into `/Simple Mod Framework/mods/` and create a new folder. Name it `MyName.StreetSmart`. Enter the folder and make two folders: `content` and `blobs`. Enter the `content` folder and make a `chunk0` subfolder.
+
+In the `blobs` folder make a subfolder called `images`, and in that folder make a subfolder called `unlockables_override`.
+
+This should be the structure of your mod:
+
+```
+📁MyName.StreetSmart
+├── 📁blobs
+│   └── 📁images
+│       └── 📁unlockables_override
+└── 📁content
+    └── 📁chunk0
+```
+
+Now that the folder hierarchy is set up, select the `MyName.StreetSmart` folder in GlacierKit by clicking **Select a project** and navigating to the `/Simple Mod Framework/mods/` folder.
+
+Right click the **MyName.StreetSmart** folder and click **New File**. Call it **manifest.json** and hit enter. Click the file to open it.
+
+Feel free to paste the following into your manifest to get started.
+
+```json
+{
+    "$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
+    "id": "MyName.StreetSmart",
+    "name": "Street Smart",
+    "description": "A Street Smart outfit for 47.",
+    "authors": ["My Name"],
+    "frameworkVersion": "2.33.22",
+    "version": "1.0.0",
+    "contentFolders": ["content"],
+    "blobsFolders": ["blobs"]
+}
+```
+
+### The charset
