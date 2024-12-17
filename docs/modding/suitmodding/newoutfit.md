@@ -141,3 +141,29 @@ Feel free to paste the following into your manifest to get started.
 ```
 
 ### The charset
+
+Let us begin by making the suit's charset. We can use IOI's work as a base for this. In the game files tab search for `signaturesuit`.
+
+![Searching for the signature suit charset](/img/suitmodding/newoutfit/search_charset.png)
+
+Under the `/_pro/characters/templates/hero/agent47/agent47_outfits.template?/` folders, find and click the charset for the signature suit. Click **Open in editor**.
+
+With the entity now open, first go into the **Metadata** tab. We should make up a new factory and blueprint path here before continuing. Let us again borrow IOI's design conventions.
+
+If you go back to the other tab, the resource overview for the signature suit charset's factory, we see its path is `[assembly:/_pro/characters/templates/hero/agent47/agent47_outfits.template?/charset_agent47_signaturesuit.entitytemplate].pc_entitytype`. Let's copy this and use it to derive a path for ourselves by simply changing `signaturesuit` to `street_smart`, which is the name of our suit.
+
+When we enter `[assembly:/_pro/characters/templates/hero/agent47/agent47_outfits.template?/charset_agent47_street_smart.entitytemplate].pc_entitytype` into the factory hash field and press enter, GlacierKit will automatically hash the path, and save the path into our project so we can find it later. Let's do the same for the blueprint hash field. The path is the same, but change the ending filetype `.pc_entitytype` to `.pc_entityblueprint`.
+
+![Entering new paths hashes them automatically in GlacierKit](/img/suitmodding/newoutfit/charset_paths.png)
+
+Now we go back to the **Tree** tab. Let's click the root entity, `CHARSET_Agent47_SignatureSuit` and change its name to `CHARSET_Agent47_Street_Smart`.
+
+If you expand the Actor, HeroA and Nude folders you can see there is one entry in each. Computers begin counting at zero, so they're all called variation 0. You may notice from examining that only the HeroA variation has an `m_Outfit` property. As we previously explained, this is because NPCs aren't supposed to ever wear this.
+
+Go into the HeroA variation and in the `m_Outfit` property, change the resource path. As it is now, it points to the signature suit outfit entity, whose factory path is `[assembly:/_pro/characters/templates/hero/agent47/agent47_outfits.template?/outfit_agent47_signaturesuit_heroa_v0.entitytemplate].pc_entitytemplate`.
+
+Let's tweak that path and make it our own - `[assembly:/_pro/characters/templates/hero/agent47/agent47_outfits.template?/outfit_agent47_street_smart_heroa_v0.entitytemplate].pc_entitytemplate`. This is our outfit's factory path. We will be using it again later when making the outfit entity.
+
+For now we can save our changes so click the **Save** button on the charset tab we have open. Navigate to the `/content/chunk0/` path and save the file as `charset_street_smart`.
+
+You can now close the tab and that's our charset done.
