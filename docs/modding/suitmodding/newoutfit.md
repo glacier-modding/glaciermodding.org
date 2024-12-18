@@ -389,3 +389,208 @@ Save your manifest. Why don't we try deploying the mod in SMF and booting up the
 
 ![The new inventory image, name and description.](/img/suitmodding/newoutfit/finished_01.jpg)
 ![Wearing the finished outfit.](/img/suitmodding/newoutfit/finished_02.jpg)
+
+For completion's sake, in your manifest, you should probably not stop with just English localization. If you have the means, you should translate to as many languages as you can. Intellisense will tell you which languages are valid. The more translations you provide, the bigger the potential audience of your mod, which is always cool.
+
+## Extra Credit: Peacock Addon
+
+Your mod is finished now, if your goal was just to replace a suit with your own. But we can go the extra mile too, and add our suit to the game without replacing any others. This will only work if the mod user is playing on Peacock, however. Doing this will require modifying the repository and unlockables which won't do anything if we play on IOI's servers, as we mentioned earlier.
+
+The worst of the work is already done, the only things we have to do for Peacock support is:
+
+1. Add our suit to the repository
+2. Add our suit to unlockables
+3. Add our suit to globaldata with a patch
+4. Make a little patch to unlockables starting package to include our suit
+5. Fix localization in the manifest
+
+So let us do this now! First, in your mod files, under `content/chunk0`, delete the `street_smart_replace_black_streak.entity.patch.json` file. We won't need it.
+
+### Repository entry
+
+In the game content tab search for `pro.repo`. Open it in the editor. Under **Unmodified** let's search for a reference to see what a typical entry looks like. Search for `hitmansuit` and choose it in the list.
+
+![HitmanSuit repo entry](/img/suitmodding/newoutfit/repo_hitmansuit.png)
+
+The `"ImageTransparent"` property is a holdover from older games in the trilogy, it's not used in World of Assassination. But this entry is a good basis.
+
+Under **Modified** click the *New item* button. A new Unknown entry has been created, click it to open the editor. Feel free to copy and paste this repository entry:
+
+```json
+{
+	"CommonName": "CHAR_Global_Hero_Street_Smart_M",
+	"Description": "UI_TOKEN_OUTFIT_HERO_STREET_SMART_DESC",
+	"HeroDisguiseAvailable": true,
+	"Image": "images/unlockables_override/47_Outfits_street_smart.jpg",
+	"IsHitmanSuit": true,
+	"Name": "UI_TOKEN_OUTFIT_HERO_STREET_SMART_NAME",
+	"Category": "",
+	"ImageTransparent": "",
+	"TokenID": "TOKEN_OUTFIT_HERO_STREET_SMART"
+}
+```
+
+When writing your own just stick to naming the values something that makes sense to you. We will be using the Name and Description in our manifest later to make localized lines. You can save your changes under `content/chunk0`, name the file `street_smart` and it will be saved as `street_smart.repository.json`.
+
+You can now go into your blobs folder in your mod and rename the `47_Outfits_BlackSpecialSuit.jpg` file to `47_Outfits_street_smart.jpg`.
+
+### Unlockables entry
+
+In the game content tab search for `config.unlockables`. Open it in the editor. Under **Unmodified** search for `hitmansuit` again and choose the entry in the list.
+
+![HitmanSuit unlockables entry](/img/suitmodding/newoutfit/unlockables_hitmansuit.png)
+
+A lot of these values are not functional and are left over from early development or earlier entries in the trilogy. The ones we really have to care about as far as outfits are concerned are `Id`, `Subtype`, and `RepositoryId`.
+
+Select this whole entry and copy it. Under **Modified** click the *New item* button. A new Unknown entry has been created, click it to open the editor. Paste in the HitmanSuit entry you copied.
+
+Change the `Id` to `"TOKEN_OUTFIT_HERO_STREET_SMART"`.
+
+The `Subtype` is what category the outfit should be added to. The choices of subtype that are in the game are `classic`, `formal`, `coats`, `casual`, `tactical`, `themed`, `sins`, `deluxe`, `evergreen` (meaning Freelancer).
+
+:::info Custom subtypes
+
+You can even write in your own subtype and the game with handle that just fine. If that's something you want to do, you will have to add localized lines for the subtype or you will have a broken string in the game. If you for example choose to write in a subtype called `groovy` the manifest localization entry might look like this:
+
+```json
+"localisation": {
+	"english": {
+		"UI_ITEM_SUBTYPE_GROOVY": "Groovy suit",
+		"UI_ITEM_SUBTYPE_IN_PLURAL_GROOVY": "Groovy suits"
+	},
+	(more languages here...)
+}
+```
+
+:::
+
+Write in `casual` instead of `classic` as a `Subtype`.
+
+Finally we will need to specify the [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) of our outfit's entry in the repository. Go back to your repository patch and under **Modified**, select and copy the ID that your entry has automatically generated. It is a long string of numbers and letters separated by dashes. Paste this into the `RepositoryId` property under `Properties`.
+
+Finally it will look something like this. Note: **do not use the same** `RepositoryId` **as in this screenshot,** the ID in your repository **will** be different.
+
+![Unlockables entry.](/img/suitmodding/newoutfit/unlockables_entry.png)
+
+Save the unlockables entry to your `content/chunk0` folder, name the file `street_smart` and it will be saved as `street_smart.unlockables.json`.
+
+### Globaldata entry
+
+We have basically done this once before. We're just making bigger changes this time.
+
+Go to the game content tab again and search for `globaldata`. Click globaldata.brick in the results and open it in editor.
+
+In the entity tree, go into the `Scene/[GlobalData.brick]/Gameplay/Outfits/MainGameOutfits/_Hitman` folders. Scroll all the way down in this folder and find `HitmanSuit (2662d409d1c5bc39)`, it's the last in the list. Right click HitmanSuit, select **Clipboard** and click **Copy**.
+
+Now scroll all the way back up in the tree, right click the `_Hitman` folder, select **Clipboard** and click **Paste**. Scroll all the way back down and we have created another `HitmanSuit` entity. You can tell what entities are modded because their IDs start with `cafe`. Expand this entity, and click it to select it.
+
+Change the entity name from `HitmanSuit` to `CHAR_Global_Hero_Street_Smart_M`.
+
+Like last time, change the `m_eSoundFootwearType` value to `EFWT_SNEAKERS`.
+
+Change the `m_sId` value to your repository entry's GUID.
+
+Change `m_sCommonName` to `CHAR_Global_Hero_Street_Smart_M`.
+
+Change `m_sTitle` to `Street Smart`.
+
+Like last time change `m_eOutfitAICategory` to `OAC_Fallback`.
+
+Now navigate into the charset entity. Change the entity name from `CHARSET_Agent47_SignatureSuit` to `CHARSET_Agent47_Street_Smart`, and change the factory and blueprint paths to your custom charset paths. Remember that you can find your saved custom paths in the Settings screen in GlacierKit!
+
+Go back to the `CHAR_Global_Hero_Street_Smart_M` entity. We still have two properties to change which is `m_rNameTextResource` and `m_rDescriptionTextResource`. As you've probably gathered these are the paths for the name and description `LINE`s. We can use these to make up our own paths again. These are the paths for the name and description of the signature suit:
+
+- `[assembly:/localization/hitman6/conversations/ui/pro/online/repository/outfits_hero.sweetmenutext?/4fc9396e-2619-4e66-a51e-2bd366230da7_hitman6_hero_hitmansuit_m_name_.sweetline].pc_sweetline`
+- `[assembly:/localization/hitman6/conversations/ui/pro/online/repository/outfits_hero.sweetmenutext?/4fc9396e-2619-4e66-a51e-2bd366230da7_hitman6_hero_hitmansuit_m_description_.sweetline].pc_sweetline`
+
+That is a lot. Let's break it down.
+
+- `[assembly:/localization/hitman6/conversations/ui/pro/online/repository/outfits_hero.sweetmenutext?/` Repository GUID `_hitman6_hero_` Name of the suit `_m_name_.sweetline].pc_sweetline`
+- `[assembly:/localization/hitman6/conversations/ui/pro/online/repository/outfits_hero.sweetmenutext?/` Repository GUID `_hitman6_hero_` Name of the suit `_m_description_.sweetline].pc_sweetline`
+
+With that in mind, our paths basically write themselves. In my case they would be:
+
+- `[assembly:/localization/hitman6/conversations/ui/pro/online/repository/outfits_hero.sweetmenutext?/12450eab-18a1-491c-9ae7-7952c7a4332c_hitman6_hero_street_smart_m_name_.sweetline].pc_sweetline`
+- `[assembly:/localization/hitman6/conversations/ui/pro/online/repository/outfits_hero.sweetmenutext?/12450eab-18a1-491c-9ae7-7952c7a4332c_hitman6_hero_street_smart_m_description_.sweetline].pc_sweetline`
+
+Again, when you are coming up with your own paths you should use the randomly generated GUID you got when you made the repository entry.
+
+You should save these paths in your project in GlacierKit. Click Settings, and under **Custom paths** click *Add an entry*, save both the name and description paths so you can get to them easily later.
+
+Fill in these paths in `m_rNameTextResource` and `m_rDescriptionTextResource` respectively.
+
+Save your globaldata changes to `content/chunk0`. Call it `street_smart_globaldata`.
+
+At this point you can delete the old globaldata patch `street_smart_globaldata.entity.patch.json` from your project.
+
+### Patch unlockables starting package
+
+So we've added the suit to the repository, unlockables, *and* globaldata. We're done, right?
+
+Not quite - just because the suit is *in* unlockables doesn't mean it's *unlocked*. Unlocking an item can happen in two ways, either put it in the starting package, where you can find things like the signature suit, the coin, ICA 19 among other things, or you can make a challenge with a Peacock plugin that drops the item token. We will not be covering JavaScript coding a Peacock plugin in this tutorial.
+
+This part can't be done in GlacierKit unfortunately so open a text editor like VSCode. Make a new file and paste in the following:
+
+```json
+{
+	"file": "0057C2C3941115CA",
+	"type": "ORES",
+	"patch": [
+		{
+			"op": "add",
+			"path": "/PACKAGE_STARTING_PACKAGE/Properties/Unlocks/-",
+			"value": "TOKEN_OUTFIT_HERO_STREET_SMART"
+		}
+	]
+}
+```
+
+Save this file to your mod folder under `content/chunk0`. Name it `unlockables_street_smart.JSON.patch.json`. This filename *is* case sensitive, it *must* be called `.JSON.patch.json` as the extension.
+
+This file simply patches the starting package to include our new outfit token, so when you deploy and run Peacock you will have the suit in your inventory.
+
+### Manifest localization
+
+Open the manifest again. You can remove the `localisationOverrides` object, since we're not overriding The Black Streak suit anymore.
+
+Make an object called `localisedLines`, and another called `localisation`. Use Intellisense for assistance if you're unsure.
+
+Under `localisedLines` make two keys, one called `"0"` and another called `"1"`. The values are `"UI_TOKEN_OUTFIT_HERO_STREET_SMART_NAME"` and `"UI_TOKEN_OUTFIT_HERO_STREET_SMART_DESC"` respectively.
+
+Under `localisation` make an object called `english`. Under `english` make two keys, one called `"UI_TOKEN_OUTFIT_HERO_STREET_SMART_NAME"` and one called `"UI_TOKEN_OUTFIT_HERO_STREET_SMART_DESC"`. The values are `"Street Smart Suit"` and `"A comfortable and savvy suit for when you're out on the town."` respectively.
+
+Your manifest should look like this:
+
+![The manifest with localised lines.](/img/suitmodding/newoutfit/manifest_localised.png)
+
+Now we need to replace `"0"` and `"1"` with our `LINE`s we came up with earlier. You saved the paths in the GlacierKit settings, right?
+
+Copy the path to your name `.sweetline`. Go into GlacierKit's text tools and paste it into the **hash calculator** - *not* the localisation hash calculator. Copy the resulting *Hex*, and replace the `"0"` in the manifest with the resulting hash.
+
+Do the same with the path to your description `.sweetline`, replacing `"1"` in the manifest. Your resulting manifest should look something like this. **Note that your** `localisedLines` **hashes will be different.**
+
+```json
+{
+    "$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
+    "id": "MyName.StreetSmart",
+    "name": "Street Smart",
+    "description": "A Street Smart outfit for 47.",
+    "authors": ["My Name"],
+    "frameworkVersion": "2.33.22",
+    "version": "1.0.0",
+    "contentFolders": ["content"],
+    "blobsFolders": ["blobs"],
+    "localisedLines": {
+		"00FA39746422A77A": "UI_TOKEN_OUTFIT_HERO_STREET_SMART_NAME",
+		"0094E475D38D6641": "UI_TOKEN_OUTFIT_HERO_STREET_SMART_DESC"
+	},
+	"localisation": {
+		"english": {
+			"UI_TOKEN_OUTFIT_HERO_STREET_SMART_NAME": "Street Smart Suit",
+			"UI_TOKEN_OUTFIT_HERO_STREET_SMART_DESC": "A comfortable and savvy suit for when you're out on the town."
+		}
+	}
+}
+```
+
+You are now done converting your mod to Peacock addon! Deploy the mod, run Peacock and the game, and look in your inventory. If you have done everything correctly, you will find your custom suit in the Casual category, and it hasn't replaced any other suit.
