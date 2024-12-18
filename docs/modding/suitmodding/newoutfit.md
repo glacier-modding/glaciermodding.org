@@ -59,7 +59,7 @@ The outfits' entry in the outfit brick also dictates things like:
 -   Any sound effects that should be used when moving ("foley")
 -   Professions, which control enforcers and trespassing areas for the player
 -   Voice variations for NPCs
--   Outfit AI Category, which mainly dictates how NPCs adress the player
+-   Outfit AI Category, which mainly dictates how NPCs address the player
 -   Which character set to use
 -   Name and description, which is for the disguise bags in the level
 
@@ -192,15 +192,19 @@ At this point, our outfit is just the stock signature suit. So let's clean out a
 
 ### Hat
 
-Let's give his cold head a nice warm beanie. In the game content tab, switch the filter from **All** to **Templates**. Then search for `beanie`. You will find a factory - `TEMP` - without a path called hat_beanie_cuffed. Let's click that to open its resource overview. We see the beanies partition is super (chunk0) which is perfect, it means we won't have to add it to dependencies in our manifest.
+Let's give his cold head a nice warm beanie. In the game content tab, switch the filter from **All** to **Templates**. Then search for `beanie`. You will find a factory - `TEMP` - without a path called hat_beanie_cuffed. Let's click that to open its resource overview.
+
+![hat_beanie_cuffed resource overview.](/img/suitmodding/newoutfit/beanie_overview.png)
+
+We see the beanies partition is super (chunk0) which is perfect, it means we won't have to add it to dependencies in our manifest.
 
 :::caution Chunks
 
-We briefly mentioned this toward the end in the [Patching suits with new parts](addingparts.md) tutorial, but any parts you want to use in an outfit has to be in **chunk0** if it's a starter suit you can wear on any level. Any part that isn't in chunk0 will need to be added to the `dependencies` array in your manifest.
+We briefly mentioned this toward the end in the [Patching suits with new parts](addingparts.md) tutorial, but any parts you want to use in an outfit has to be in **chunk0** if it's a starter suit you can wear on any level. Any part that isn't in chunk0 will need to be added to the `dependencies` array in your manifest. Please see [Chunk data](../../glacier2/chunkdata.md) for more information.
 
 :::
 
-The positioning and scaling for *hats* to look good on 47's head can be very specific, so it would be prudent to copy it from some other outfit. Click **Reverse dependencies** in the beanie's resource overview and you'll see a list of outfits that uses the beanie. Let's click the first `m_heroa` outfit in the list, which happens to be `outfit_flamingo_worker_journalist_m_heroa_v4`. Open this outfit in the editor.
+The positioning and scaling for *hats* to look good on 47's head can be very specific, so it would be prudent to copy it from some other HeroA outfit. Click **Reverse dependencies** in the beanie's resource overview and you'll see a list of outfits that uses the beanie. Let's click the first HeroA outfit in the list, which happens to be `outfit_flamingo_worker_journalist_m_heroa_v4`. Open this outfit in the editor.
 
 Expand the `Head_Attacher` entity, there's our beanie. We don't want the headphones though, so right click them and delete them.
 
@@ -212,7 +216,7 @@ Tab back to our custom outfit, right click the root outfit entity, select Clipbo
 
 Compare for yourself first. Do you see it?
 
-In `Head_Attacher`, the properties `m_linkedEntity` and `m_eidParent`, and in `hat_beanie_cuffed`, the property `m_rLinkedProxyEntity`, have all had their values nulled. Why is that?
+In `Head_Attacher`, the properties `m_linkedEntity` and `m_eidParent`, and in `hat_beanie_cuffed`, the property `m_rLinkedProxyEntity` have all had their values nulled. Why is that?
 
 Well, these values all pointed to the root entity of the journalist outfit, whose ID was `1351129995b8231f`. This ID doesn't exist in our custom outfit, so GlacierKit nulls these values when pasting the entity. These properties are essential for the attacher and the hat to work, so we will need to supply the ID of our root entity into these values ourselves. As you copy and paste entities back and forth when making mods, take great care that you are hooking up property values correctly after pasting.
 
@@ -226,9 +230,9 @@ Paste the ID into the values of `m_linkedEntity` and `m_eidParent` on `Head_Atta
 
 That's all we need to do for the hat. Save your changes and let's look for a jacket then.
 
-### Jacket
+### Jacket, shirt and hands
 
-Back to the game content tab, again with the filter on **Templates**, search for jacket_bomber. Click the first jacket_bomber_open `TEMP` in the list. This one is also in chunk0, great! You will find that plenty of clothing templates are in chunk0 in fact, IOI did this to make assembling NPCs and outfits easier for themselves.
+Back to the game content tab, again with the filter on **Templates**, search for `jacket_bomber`. Click the first jacket_bomber_open `TEMP` in the list. This one is also in chunk0, great! You will find that plenty of clothing templates are in chunk0 in fact, IOI did this to make assembling NPCs and outfits easier for themselves.
 
 Again go into **Reverse references** to see the outfits that make use of the template. Let's click `outfit_raccoon_civilian_bankcustomer_m_actor_v8.entitytemplate` and open that outfit in the editor.
 
@@ -241,3 +245,83 @@ We will also need an undershirt, which the bankcustomer outfit also has. So tab 
 Now your tree should look something like this.
 
 ![The tree with some new parts in it.](/img/suitmodding/newoutfit/tops.png)
+
+Let's recolor the jacket so it's not a boring beige. Click Jacket_Bomber_Open and mouse over the Diffuse_Color_01_Value property's value. A color wheel will appear and we can adjust the color to something like a dark off-blue.
+
+![Adjusting the jacket color to HTML code #5e69aa.](/img/suitmodding/newoutfit/jacket_color.png)
+
+### Jeans
+
+Let's find a pair of jeans and shoes as well. Again in the game content tab with the filter on **Templates** search for `jeans`.
+
+The second `pants_jeans_skinny (00468CE157B575D3)` in the list will do. The first one, if you examine reverse references, you will notice is for female models, so that won't work.
+
+Let's go into the reverse reference `outfit_fox_worker_tech_m_actor_v1.entitytemplate` and open it in the editor. You know the deal by now. Copy the `Pants_Jeans_Skinny` entity from here, and paste it into our outfit. Do the same for `Shoes_Sneakers_Skate`.
+
+With that, we are basically done.
+
+### Finishing touches
+
+![The finished outfit tree with all parts in place.](/img/suitmodding/newoutfit/finished_outfit.png)
+
+So all our parts are in place. But, they won't all render just yet. Click the root `OUTFIT_Agent47_Street_Smart_HeroA_V0` entity and scroll down in it. At the bottom you will find an array property called `m_aBodyParts`. You will notice that only the `Head_47` entity is currently in there.
+
+`m_aBodyParts` controls what body parts should be rendered in the outfit. So what we need to do, is right click every new part that we've added, copy their ID and add them to this array. So let us do this now.
+
+:::info Bone attachers
+
+Any models that use *bone attachments* (see the entity `Head_Attacher`) like watches, jewelry, and hats such as the **beanie** in this case, do *not* need to be added to `m_aBodyParts`. They will always render regardless. Attachers themselves don't need to be added to the array either.
+
+:::
+
+When you have added all the parts to your `m_aBodyParts` array it should look something like this. Note that your entity IDs will be different.
+
+![m_aBodyParts now supplied with all the new body parts we have added.](/img/suitmodding/newoutfit/bodypartsarray.png)
+
+Save your work now and we will move on to replacing an existing suit with this new outfit.
+
+## Replacement
+
+### Globaldata
+
+Assuming you have saved your outfit, you can close all open tabs in GlacierKit. Now go to the game content tab again and search for `globaldata`. Click globaldata.brick in the results and open it in editor.
+
+In the entity tree, go into the `Scene/[GlobalData.brick]/Gameplay/Outfits/MainGameOutfits/_Hitman` folders. In the `_Hitman` folder you will find all starter suits available, but they all have developer names, which are not always intuitive. Note that there's plenty of suits here that are unused, such as the elusive targets outfits, (all beginning with `CHAR_ET_Hero`) which were originally planned to be unlockable. It's a treasure trove of interesting stuff.
+
+Today we will be replacing The Black Streak, which all PC players have unlocked. And unless you are some sort of wizard, somehow modding the game for consoles, you also have it. In the list, it is called `CHAR_Global_Hero_BlackSpecialSuit_M_PRO183133`, so find that entity, expand and select it.
+
+We can double check that this is the suit we're looking for. Find the `m_rNameTextResource` property, and on that line scroll all the way to the right in the window.
+
+![Finding the name and description LINEs.](/img/suitmodding/newoutfit/finding_line.png)
+
+GlacierKit will render out the line for us at the end. And we can confirm that this is indeed The Black Streak we are looking for.
+
+![Seeing what the LINEs translate to.](/img/suitmodding/newoutfit/translated_lines.png)
+
+In this entity let's change some properties. Right now, `m_eSoundFootwearType` is set to `EFWT_LEATHER`, meaning leather shoes. `m_eOutfitAICategory` is set to `OAC_47STARTCLASSY` meaning NPCs will address us as if we are wearing a nice suit.
+
+These are both wrong of course, we are wearing casual street clothes with sneakers, not leather loafers. So let's change them.
+
+Begin by removing the value in `m_eSoundFootwearType`, and with the text pointer inside the double quotes, press **CTRL + Space**. This is an editor feature called *Intellisense* which will show you the possible choices for this property value. Intellisense is incredibly helpful and if you are ever in doubt of what properties or values you can use, remember to use **CTRL + Space** and you can get a helping hand.
+
+![Intellisense in action.](/img/suitmodding/newoutfit/intellisense_efwt.png)
+
+Since we are wearing sneakers, `EFWT_SNEAKERS` is the most fitting option. So choose that with your arrow keys and hit Enter, or scroll in the list and click it.
+
+Let's move on to `m_eOutfitAICategory`. Let's remove the current value and use Intellisense again with **CTRL + Space**. For most casually styled suits, IOI tends to use `OAC_Fallback`, so we can do the same here. Select it with the arrow keys and hit Enter, or just scroll in the list and click it.
+
+![Intellisense for the OAC.](/img/suitmodding/newoutfit/intellisense_oac.png)
+
+And now finally, it's time to change what charset the globaldata entry points to. Go into the subentity `CHARSET_Agent47_Global_Hero_BlackSpecialSuit` in the tree. We will need to replace the factory and blueprint paths with our own charset that we made up earlier.
+
+If you need to find your paths again, click Settings in GlacierKit and you will find them under the header **Project paths**.
+
+![The project paths in GlacierKit settings.](/img/suitmodding/newoutfit/project_paths.png)
+
+You will need to copy your charset factory path and blueprint path and replace the corresponding factory and blueprint in this entity. It should look like this when you've done it.
+
+![The factory and blueprint replaced for the charset.](/img/suitmodding/newoutfit/charset_replacement.png)
+
+Our work in globaldata is now finished, so click the **Save** button on the tab we have open. Navigate to the `/content/chunk0/` path in the mod folder and save the file as `street_smart_replace_black_streak`.
+
+Strictly speaking, ***this is all you need for your mod to be functional.*** If you deploy your mod now, go into a level and pick The Black Streak, you will be using the modded outfit we built. These next finalizing steps will be all about tweaking the inventory image, name and description of The Black Streak so it makes it clear to the user that this outfit is modded.
