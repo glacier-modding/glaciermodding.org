@@ -18,7 +18,7 @@ A lot of this won't make sense right now, but don't worry, we will cover each st
 
 For the purposes of this tutorial we will be making an outfit we can call "Street Smart". When we are done it will look like this:
 
-![Agent 47 in his new street smart outfit, featuring X, Y, Z.](/img/suitmodding/newoutfit/street_smart.jpg)
+![Agent 47 in his new street smart outfit, featuring slim jeans, black skater shoes, dark blue bomber jacket, and a gray beanie.](/img/suitmodding/newoutfit/street_smart.jpg)
 
 ## The theory
 
@@ -192,7 +192,7 @@ At this point, our outfit is just the stock signature suit. So let's clean out a
 
 ### Hat
 
-Let's give his cold head a nice warm beanie. In the game content tab, switch the filter from **All** to **Templates**. Then search for `beanie`. You will find a factory - `TEMP` - without a path called hat_beanie_cuffed. Let's click that to open its resource overview.
+Let's give his cold head a nice warm beanie. In the game content tab, switch the filter from **All** to **Templates**. Then search for `beanie`. You will find a factory - `TEMP` - without a path called hat_beanie_cuffed (005E3BF131F1E044). Let's click that to open its resource overview.
 
 ![hat_beanie_cuffed resource overview.](/img/suitmodding/newoutfit/beanie_overview.png)
 
@@ -218,7 +218,7 @@ Compare for yourself first. Do you see it?
 
 In `Head_Attacher`, the properties `m_linkedEntity` and `m_eidParent`, and in `hat_beanie_cuffed`, the property `m_rLinkedProxyEntity` have all had their values nulled. Why is that?
 
-Well, these values all pointed to the root entity of the journalist outfit, whose ID was `1351129995b8231f`. This ID doesn't exist in our custom outfit, so GlacierKit nulls these values when pasting the entity. These properties are essential for the attacher and the hat to work, so we will need to supply the ID of our root entity into these values ourselves. As you copy and paste entities back and forth when making mods, take great care that you are hooking up property values correctly after pasting.
+Well, these values all pointed to the root entity of the journalist outfit, whose ID was `1351129995b8231f`. This entity doesn't exist in our custom outfit, so GlacierKit nulls these values when pasting the entity. These properties are essential for the attacher and the hat to work, so we will need to supply the ID of our root entity into these values ourselves. As you copy and paste entities back and forth when making mods, take great care that you are hooking up property values correctly after pasting.
 
 Right click the root `OUTFIT_Agent47_Street_Smart_HeroA_V0` entity and click **Copy ID**.
 
@@ -232,7 +232,7 @@ That's all we need to do for the hat. Save your changes and let's look for a jac
 
 ### Jacket, shirt and hands
 
-Back to the game content tab, again with the filter on **Templates**, search for `jacket_bomber`. Click the first jacket_bomber_open `TEMP` in the list. This one is also in chunk0, great! You will find that plenty of clothing templates are in chunk0 in fact, IOI did this to make assembling NPCs and outfits easier for themselves.
+Back to the game content tab, again with the filter on **Templates**, search for `jacket_bomber`. Click the first jacket_bomber_open `TEMP` in the list (00ED542C09DFC9F4). This one is also in chunk0, great! You will find that plenty of clothing templates are in chunk0 in fact, IOI did this to make assembling NPCs and outfits easier for themselves.
 
 Again go into **Reverse references** to see the outfits that make use of the template. Let's click `outfit_raccoon_civilian_bankcustomer_m_actor_v8.entitytemplate` and open that outfit in the editor.
 
@@ -246,7 +246,7 @@ Now your tree should look something like this.
 
 ![The tree with some new parts in it.](/img/suitmodding/newoutfit/tops.png)
 
-Let's recolor the jacket so it's not a boring beige. Click Jacket_Bomber_Open and mouse over the Diffuse_Color_01_Value property's value. A color wheel will appear and we can adjust the color to something like a dark off-blue.
+Let's recolor the jacket so it's not a boring beige. Click Jacket_Bomber_Open and mouse over the Diffuse_Color_01_Value property's value. A color wheel will appear and we can adjust the color to something like a light off-blue.
 
 ![Adjusting the jacket color to HTML code #5e69aa.](/img/suitmodding/newoutfit/jacket_color.png)
 
@@ -314,7 +314,7 @@ Let's move on to `m_eOutfitAICategory`. Let's remove the current value and use I
 
 And now finally, it's time to change what charset the globaldata entry points to. Go into the subentity `CHARSET_Agent47_Global_Hero_BlackSpecialSuit` in the tree. We will need to replace the factory and blueprint paths with our own charset that we made up earlier.
 
-If you need to find your paths again, click Settings in GlacierKit and you will find them under the header **Project paths**.
+If you need to find your paths again, click Settings in GlacierKit and you will find them under the header **Custom paths**.
 
 ![The project paths in GlacierKit settings.](/img/suitmodding/newoutfit/project_paths.png)
 
@@ -325,3 +325,67 @@ You will need to copy your charset factory path and blueprint path and replace t
 Our work in globaldata is now finished, so click the **Save** button on the tab we have open. Navigate to the `/content/chunk0/` path in the mod folder and save the file as `street_smart_replace_black_streak`.
 
 Strictly speaking, ***this is all you need for your mod to be functional.*** If you deploy your mod now, go into a level and pick The Black Streak, you will be using the modded outfit we built. These next finalizing steps will be all about tweaking the inventory image, name and description of The Black Streak so it makes it clear to the user that this outfit is modded.
+
+### Inventory image
+
+For this part we will be using the `blobs` folder we created earlier. As explained, blobs is the term for online resources, in this case the inventory image for The Black Streak.
+
+First we will need to know what the inventory image is called, we have to look in the repository for this. Go to the game content tab, set the filter to **All** and search for `pro.repo`. There is only one result, click it and open it in the editor.
+
+Under the **Unmodified** header, search for BlackSpecialSuit. Click it in the list to see the repository entry.
+
+Here you will see the `Image` path is `"images/unlockables_override/47_Outfits_BlackSpecialSuit.jpg"`. In the game content tab, search for `47_Outfits_BlackSpecialSuit.jpg`. Under the `assembly:/_pro/online/default/cloudstorage/resources/images/unlockables_override/` folders you will find the image, click it to open.
+
+In the overview click **Extract image**. Navigate to `blobs/images/unlockables_override` in your mod folder. Save the file as `47_Outfits_BlackSpecialSuit`. Note that it will be saved as a PNG file, you will have to convert this PNG file to a JPG, and you should edit it in some way to reflect the new outfit you have made. We will not be covering creative editing in this tutorial. A tip from the author though, is take the outfit into the shortcut stairway room in Dubai, because it has neutral lighting, take an angled front-on screenshot with freecam, preferably with NVIDIA Ansel if you can, and painstakingly edit it onto an existing unlockables_override image in Photoshop.
+
+Or if you like, you can right click and save the following prepared image. Just save it into the `blobs/images/unlockables_override` folder in your mod and delete the PNG you extracted. You're welcome.
+
+![47_Outfits_BlackSpecialSuit.jpg](/img/suitmodding/newoutfit/47_Outfits_BlackSpecialSuit.jpg)
+
+### Localization strings
+
+Overriding localization strings is done in the manifest. Let's prepare our manifest now.
+
+Go to the project files tab in GlacierKit.
+
+![The project files tab.](/img/suitmodding/newoutfit/project_files.png)
+
+
+:::info JavaScript Object Notation
+
+The manifest is a **JSON**-file, and is structured with **J**ava**S**cript **O**bject **N**otation. We will be using terms such as `object`, `keys` and `values`. If you are completely unfamiliar, it may be best to read a [crash course](https://www.freecodecamp.org/news/what-is-json-a-json-file-example/) on JSON. JSON is used everywhere in GlacierKit either way so it is good to know.
+
+:::
+
+Open the manifest.json file, and add a comma after the last property (blobsFolders). Hit enter to make a new line and add a double quote, the editor will automatically it a pair of double quotes.
+
+![Intellisense is available for the manifest too!](/img/suitmodding/newoutfit/intellisense_manifest.png)
+
+Hey, look at that! It's our old friend Intellisense! That's right, it's available for the manifest as well, thanks to the `"$schema"` key at the top of the file. This will help. Choose the `localisationOverrides` property. Inside this new property, make a new object which you can call `Placeholder` for now. And inside Placeholder, make a new object called `english`.
+
+Inside the `english` object, make two keys, called 1 and 2 respectively. In the value for 1 you can write `"Street Smart Suit"`. In the value for 2 you can write a description of the suit, such as `"A comfortable and savvy suit for when you're out on the town."`
+
+Your manifest should look like this when you've done this.
+
+![The manifest updated with localizationOverrides.](/img/suitmodding/newoutfit/localizationOverrides.png)
+
+If we deploy now this will not work, we need to supply some IDs in the manifest to make these replacements. Go to the game content tab and search for `BlackSpecialSuit`. Under the localization folder you can find two `.sweetline` files for BlackSpecialSuit, one for the name and one for the description. Click either of them, doesn't matter.
+
+In the asset overview, click the only dependency, the `LOCR` file (004B8C5124A49543). Copy this hash, and replace `Placeholder` in your manifest with `004B8C5124A49543`.
+
+Going back to the `LOCR` file's overview, click in the Preview textbox and press **CTRL + F** to open the search bar. Search for `BlackSpecialSuit`.
+
+![LOCR file search results.](/img/suitmodding/newoutfit/locr_search.png)
+
+There is the name and the description lines. But we actually can't use these as-is, we will need to hash them. First copy the whole name key, `CHAR_GLOBAL_HERO_BLACKSPECIALSUIT_M_PRO183133_NAME_A9374970-9A06-4469-993A-329FCB4DEBB4`. Open the GlacierKit text tools on the left, and in the **Localisation hash calculator**, paste the line into the text box. Copy the decimal that you get as a result. Take this to your manifest, and replace `"1"` under `localizationOverrides` with this number.
+
+Now repeat this process for the description line, replacing `"2"` with the localization decimal hash you generate in GlacierKit.
+
+When you are done, your manifest should look like this:
+
+![Manifest prepared for action.](/img/suitmodding/newoutfit/manifest_done.png)
+
+Save your manifest. Why don't we try deploying the mod in SMF and booting up the game? Give it a try, and if you've done everything right so far, your results should speak for themselves!
+
+![The new inventory image, name and description.](/img/suitmodding/newoutfit/finished_01.jpg)
+![Wearing the finished outfit.](/img/suitmodding/newoutfit/finished_02.jpg)
