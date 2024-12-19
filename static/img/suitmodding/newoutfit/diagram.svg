@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="580"
+   height="500"
+   viewBox="0 0 580 500"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="diagram.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="false"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="1.712572"
+     inkscape:cx="437.06192"
+     inkscape:cy="217.5091"
+     inkscape:window-width="2560"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Colored triangle"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-fill;fill-rule:evenodd;stroke:context-stroke;stroke-width:2"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Colored triangle"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-fill;fill-rule:evenodd;stroke:context-stroke;stroke-width:2"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ColoredTriangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Colored triangle"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-fill;fill-rule:evenodd;stroke:context-stroke;stroke-width:2"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5" />
+    </marker>
+    <rect
+       x="60.121681"
+       y="164.15245"
+       width="173.6098"
+       height="48.637764"
+       id="rect2" />
+    <rect
+       x="60.121681"
+       y="164.15245"
+       width="155.53143"
+       height="62.182527"
+       id="rect4" />
+    <rect
+       x="60.121681"
+       y="164.15245"
+       width="123.99992"
+       height="49.336352"
+       id="rect6" />
+    <rect
+       x="60.121681"
+       y="164.15245"
+       width="44.003281"
+       height="18.388748"
+       id="rect7" />
+    <rect
+       x="60.121681"
+       y="164.15245"
+       width="182.39162"
+       height="58.095108"
+       id="rect9" />
+    <rect
+       x="60.121681"
+       y="164.15245"
+       width="111.73766"
+       height="19.556581"
+       id="rect10" />
+    <rect
+       x="60.121681"
+       y="164.15245"
+       width="101.22715"
+       height="66.269943"
+       id="rect12" />
+    <rect
+       x="60.121681"
+       y="164.15245"
+       width="182.39162"
+       height="58.095108"
+       id="rect14" />
+    <rect
+       x="60.121681"
+       y="164.15245"
+       width="182.39162"
+       height="58.095108"
+       id="rect16" />
+    <rect
+       x="60.121681"
+       y="164.15245"
+       width="103.56282"
+       height="35.906258"
+       id="rect17" />
+  </defs>
+  <g
+     inkscape:label="Lager 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       id="rect19"
+       width="585.0849"
+       height="505.67215"
+       x="-2.3356681"
+       y="-1.7517512" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#ffb916;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1"
+       width="177.57898"
+       height="464.73425"
+       x="10.879039"
+       y="13.523801" />
+    <text
+       xml:space="preserve"
+       id="text2"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:18.6667px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       x="100.29418"
+       y="230.95528"><tspan
+         style="text-align:center;text-anchor:middle"
+         id="tspan19">Repository
+(all gameplay stuff)</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#9bc0ff;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3"
+       width="151.94968"
+       height="42.663685"
+       x="411.43494"
+       y="12.564983" />
+    <text
+       xml:space="preserve"
+       id="text3"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       x="485.66592"
+       y="28.134106"><tspan
+         style="text-align:center;text-anchor:middle"
+         id="tspan17">Unlockables
+(&quot;player inventory&quot;)</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ColoredTriangle)"
+       d="M 412.05083,29.935666 H 196.73687"
+       id="path4"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#e70000;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5"
+       width="121.78131"
+       height="41.691166"
+       x="304.3269"
+       y="68.068893" />
+    <text
+       xml:space="preserve"
+       id="text5"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       x="366.2464"
+       y="83.225166"><tspan
+         style="text-align:center;text-anchor:middle"
+         id="tspan18">Blobs
+(offline images)</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker7)"
+       d="M 296.6917,94.53023 H 189.30224"
+       id="path6"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       id="text7"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect7);shape-padding:2.7021;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       x="118.63247"
+       y="0"
+       transform="translate(133.50274,-86.201252)"><tspan
+         x="62.822266"
+         y="176.46159"
+         id="tspan6"><tspan
+           style="font-weight:normal;-inkscape-font-specification:Arial"
+           id="tspan5">Image</tspan></tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#e70000;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8"
+       width="149.10716"
+       height="39.237247"
+       x="304.38602"
+       y="132.94279" />
+    <text
+       xml:space="preserve"
+       id="text8"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       x="378.83075"
+       y="147.61687"><tspan
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="tspan8">LOCR
+(localized text lists)</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker7)"
+       d="M 296.6917,154.08977 H 189.30224"
+       id="path9"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       id="text9"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect10);shape-padding:2.7021;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       x="92.845932"
+       y="0"
+       transform="translate(128.08666,-27.225631)"><tspan
+         x="62.822266"
+         y="176.46159"
+         id="tspan9"><tspan
+           style="font-weight:normal;-inkscape-font-specification:Arial"
+           id="tspan7">Name, Desc LINEs</tspan></tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#00e791;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       id="rect11"
+       width="95.955261"
+       height="263.44595"
+       x="260.30798"
+       y="213.23909" />
+    <text
+       xml:space="preserve"
+       id="text11"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       x="308.46896"
+       y="328.04724"><tspan
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="tspan11">Outfit brick
+or
+globaldata</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker7);marker-end:url(#marker1)"
+       d="M 252.4435,331.01663 H 196.13639"
+       id="path12"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker7)"
+       d="m 337.07459,180.77051 v 32.92013"
+       id="path13"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#e9ddaf;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       id="rect13"
+       width="173.36765"
+       height="71.088631"
+       x="402.32416"
+       y="220.51389" />
+    <text
+       xml:space="preserve"
+       id="text13"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       x="490.94284"
+       y="249.36189"><tspan
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="tspan13">Charset
+(Actor, HeroA, Nude)</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker7)"
+       d="M 393.50074,256.4187 H 355.7186"
+       id="path14"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.03636;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker7)"
+       d="M 445.09924,382.35977 V 291.53745"
+       id="path15"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#1c2224;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       id="rect15"
+       width="105.48453"
+       height="71.523804"
+       x="388.67645"
+       y="390.21616" />
+    <text
+       xml:space="preserve"
+       id="text15"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       x="438.97421"
+       y="430.37616"><tspan
+         style="font-size:16px;text-align:center;text-anchor:middle"
+         id="tspan15">Outfit</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text16"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.6667px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;white-space:pre;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       x="447.2485"
+       y="329.66632"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;text-anchor:start"
+         id="tspan16">1 outfit per variation
+and type</tspan></text>
+  </g>
+</svg>
