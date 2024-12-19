@@ -401,8 +401,7 @@ The worst of the work is already done, the only things we have to do for Peacock
 1. Add our suit to the repository
 2. Add our suit to unlockables
 3. Add our suit to globaldata with a patch
-4. Make a little patch to unlockables starting package to include our suit
-5. Fix localization in the manifest
+4. Add localization lines to the manifest
 
 So let us do this now! First, in your mod files, under `content/chunk0`, delete the `street_smart_replace_black_streak.entity.patch.json` file. We won't need it.
 
@@ -523,31 +522,9 @@ Save your globaldata changes to `content/chunk0`. Call it `street_smart_globalda
 
 At this point you can delete the old globaldata patch `street_smart_globaldata.entity.patch.json` from your project.
 
-### Patch unlockables starting package
+So we've added the suit to the repository, unlockables, and globaldata. When you run Peacock and the game, you will find the suit in your inventory, under the subtype you specified.
 
-So we've added the suit to the repository, unlockables, *and* globaldata. We're done, right?
-
-Not quite - just because the suit is *in* unlockables doesn't mean it's *unlocked*. Unlocking an item can happen in two ways, either put it in the starting package, where you can find things like the signature suit, the coin, ICA 19 among other things, or you can make a challenge with a Peacock plugin that drops the item token. We will not be covering JavaScript coding a Peacock plugin in this tutorial.
-
-This part can't be done in GlacierKit unfortunately so open a text editor like VSCode. Make a new file and paste in the following:
-
-```json
-{
-	"file": "0057C2C3941115CA",
-	"type": "ORES",
-	"patch": [
-		{
-			"op": "add",
-			"path": "/PACKAGE_STARTING_PACKAGE/Properties/Unlocks/-",
-			"value": "TOKEN_OUTFIT_HERO_STREET_SMART"
-		}
-	]
-}
-```
-
-Save this file to your mod folder under `content/chunk0`. Name it `unlockables_street_smart.JSON.patch.json`. This filename *is* case sensitive, it *must* be called `.JSON.patch.json` as the extension.
-
-This file simply patches the starting package to include our new outfit token, so when you deploy and run Peacock you will have the suit in your inventory.
+We will not cover it here, but you can also write a TypeScript plugin to drop the outfit as part of a challenge. If the suit is tied to a challenge, Peacock will not automatically add it to inventory.
 
 ### Manifest localization
 
