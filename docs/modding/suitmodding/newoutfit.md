@@ -594,3 +594,78 @@ Do the same with the path to your description `.sweetline`, replacing `"1"` in t
 ```
 
 You are now done converting your mod to Peacock addon! Deploy the mod, run Peacock and the game, and look in your inventory. If you have done everything correctly, you will find your custom suit in the Casual category, and it hasn't replaced any other suit.
+
+## Addendum: Chongqing rain effects
+
+If you use the suit now and go into Chongqing, you will notice that you don't get wet in the rain. This is controlled by a logic entity in the outfit. Let's set that up now.
+
+We will be learning about ConstantVectors, which are material parameters that control aspects of the material such as roughness values, specular values, albedo map brightness, and many other things.
+
+:::note
+
+ConstantVectors are defined in the material instance (`MATI`)'s material class (`MATE`). The easiest way to find the human readable meanings of ConstantVectors in GlacierKit is to look at a material template/blueprint entity (`MATT`/`MATB`).
+
+As an example, in the `Jacket_Bomber_Open` template IOI have put in an entity called `base_male_jacket_bomber` that points to the `MATT`/`MATB`, in order to override colors, specular and textures. The human readable meanings are displayed right next to the ConstantVector property.
+
+:::
+
+To make things look wet, what we do depends a little on what the material of that thing is. For fabrics we want to make the albedo darker, turn up the minimum roughness and turn up the bumpmap scaling. This will make the clothing look darker and shiny with rain.
+
+Open your outfit file in GlacierKit.
+Copy the following textbox (it is an entity) and paste it into the root `OUTFIT_Agent47_Street_Smart_HeroA_V0` entity by selecting Clipboard and clicking Paste.
+
+```json
+{"rootEntity":"cafe1c73325d6168","data":{"cafe1c73325d6168":{"parent":"8d2dd8c9d88913be","name":"FX_Hitman_Wet_Logic_Character","factory":"0067CFB703A80787","blueprint":"00AA88C960CD2080","properties":{"HeadMaterialToOverride":{"type":"ZRuntimeResourceID","value":{"resource":"009F7978C601815A","flag":"5F"}},"HeadMaterialOverride":{"type":"TArray<SEntityTemplateReference>","value":[],"postInit":true}},"events":{"HitmanWetness":{"T":["cafeb592e0ab9249","cafedc850188fd63","cafe57b613171dc2","cafee50db419698b"]}}},"cafe57b613171dc2":{"parent":"cafe1c73325d6168","name":"Lerp roughness fabric","factory":"[modules:/zmathlerp.class].pc_entitytype","blueprint":"[modules:/zmathlerp.class].pc_entityblueprint","properties":{"m_A":{"type":"float32","value":1.0},"m_fT":{"type":"float32","value":0.0},"m_B":{"type":"float32","value":2.0}},"events":{"Lerp":{"ConstantVector1D_14_Value":[]}}},"cafedc850188fd63":{"parent":"cafe1c73325d6168","name":"Lerp bumpmap","factory":"[modules:/zmathlerp.class].pc_entitytype","blueprint":"[modules:/zmathlerp.class].pc_entityblueprint","properties":{"m_fT":{"type":"float32","value":0.0},"m_B":{"type":"float32","value":0.30000001192092896}},"events":{"Lerp":{"ConstantVector1D_06_Value":[]}}},"cafee50db419698b":{"parent":"cafe1c73325d6168","name":"Lerp roughness other","factory":"[modules:/zmathlerp.class].pc_entitytype","blueprint":"[modules:/zmathlerp.class].pc_entityblueprint","properties":{"m_B":{"type":"float32","value":0.4000000059604645},"m_A":{"type":"float32","value":0.0},"m_fT":{"type":"float32","value":0.0}},"events":{"Lerp":{"ConstantVector1D_04_Value":[]}}},"cafeb592e0ab9249":{"parent":"cafe1c73325d6168","name":"Lerp albedo","factory":"[modules:/zmathlerp.class].pc_entitytype","blueprint":"[modules:/zmathlerp.class].pc_entityblueprint","properties":{"m_fT":{"type":"float32","value":0.0},"m_B":{"type":"float32","value":0.20000000298023224}},"events":{"Lerp":{"ConstantVector1D_01_Value":[]}}}}}
+```
+
+You should now have an `FX_Hitman_Wet_Logic_Character` entity in the tree.
+
+![Wet logic in the entity tree](/img/suitmodding/newoutfit/wet_logic.png)
+
+Click `FX_Hitman_Wet_Logic_Character`. In the `HeadMaterialOverride` property we will have to insert the root entity's ID. Right click `OUTFIT_Agent47_Street_Smart_HeroA_V0` in the tree and click Copy ID. Click in the value array, make a new line and double quotes. Paste in the ID. It should look something like this.
+
+![Specifying the root entity ID in the array.](/img/suitmodding/newoutfit/headmaterialoverride.png)
+
+Now expand the `FX_Hitman_Wet_Logic_Character` entity and we will look at its child entities. These are all `zmathlerp` entities, *lerp* being short for [linear interpolation](https://en.wikipedia.org/wiki/Linear_interpolation). Basically they do math, to make a value go from A to B over time, amount of time represented by T. Click the `Lerp albedo` entity.
+
+This will make the `ConstantVector1D_01_Value` go from A to B when it is triggered. `ConstantVector1D_01_Value` is a value that controls the brightness of the albedo (or diffuse) texture. It will, in effect, make a texture darker over time.
+
+You might notice that it has an `m_B` (after) property, but not an `m_A` (before) property. If A is not specified it will use the referenced entity's standard `ConstantVector1D_01_Value` value as A.
+
+Under the `events` and `Lerp` property we find an array called `ConstantVector1D_01_Value`. This is an array of entity IDs whose `ConstantVector1D_01_Value` that the `zmathlerp` entity should modify. Right now it is empty, so let's fill it up.
+
+Like I mentioned only things made of fabric should be darker in the rain. So right click and copy the IDs of `hat_beanie_cuffed`, `Jacket_Bomber_Open`, `Pants_Jeans_Skinny`, and `TShirt_CrewNeck_Cut_Jacket`, and put them into this array, separated by commas.
+
+It should look something like this when you are done.
+
+![Supplying the Lerp albedo entity](/img/suitmodding/newoutfit/lerp_albedo.png)
+
+With the `Lerp albedo` supplied let's continue with `Lerp bumpmap`. The property for this lerp is `ConstantVector1D_06_Value` which controls how strong the normal map is.
+
+We will be using the same entities as we specified in the albedo lerp for this one, so you can copy the array and paste it in for this. Just take care not to replace `ConstantVector1D_06_Value`.
+
+`Lerp bumpmap` should look something like this.
+
+![Supplying the Lerp bumpmap entity](/img/suitmodding/newoutfit/lerp_bumpmap.png)
+
+Finally we need to hook up the specular and roughness values. You'll notice we have two lerps for this, one for fabrics and one for other. This is because things made of fabric use `ConstantVector1D_14_Value` for minimum specular roughness, and other things, like shoes, use `ConstantVector1D_04_Value`.
+
+Click `Lerp roughness fabric`. The same deal here, put in `hat_beanie_cuffed`, `Jacket_Bomber_Open`, `Pants_Jeans_Skinny`, and `TShirt_CrewNeck_Cut_Jacket` in the `ConstantVector1D_14_Value` array.
+
+`Lerp roughness fabric` should look something like this.
+
+![Supplying the Lerp roughness fabric entity](/img/suitmodding/newoutfit/lerp_roughness_fabric.png)
+
+Moving on to `Lerp roughness other`, supply the `Shoes_Sneakers_Skate` ID in the `ConstantVector1D_04_Value` array.
+
+`Lerp roughness other` should look something like this.
+
+![Supplying the Lerp roughness other entity](/img/suitmodding/newoutfit/lerp_roughness_other.png)
+
+Save your work, deploy your mod, go to Chongqing and check it out!
+
+![Getting soggy in the rain.](/img/suitmodding/newoutfit/wet_01.jpg)
+
+![Boy is that soggy.](/img/suitmodding/newoutfit/wet_02.jpg)
+
+If you find that the effect is *way* too dramatic, you can experiment by tweaking the `m_B` values of the lerps, making more lerps for finer control over each part, among other things. Get creative in making the outfit look its best.
