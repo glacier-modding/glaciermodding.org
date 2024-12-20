@@ -63,7 +63,9 @@ The outfits' entry in the outfit brick also dictates things like:
 -   Which character set to use
 -   Name and description, which is for the disguise bags in the level
 
-There is also a brick called `globaldata`. This is a brick that the game always loads, and it includes important basic gameplay elements. This includes 47's starter outfits, any outfit you can go into a level with.
+There is also a brick called `globaldata`. This is a brick that the game always loads, and it includes important basic gameplay elements. This includes 47's starter outfits and any outfit you can go into a level with.
+
+In previous tutorials we directed you to HMBM47's [Hitman 3 Outfits Spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRDiyiqdRebu0Olvvkr20CDhh6ANxu7FOQZ_O-1YHFN9e6kh0WmpbwDYbfgzevSvc3fO4_4Exu1fmQH/pubhtml#) of game outfits, which, while a really good resource, is also a little outdated. If you cannot find an outfit you are looking for in the spreadsheet, try looking in `globaldata`.
 
 ### Character set
 
@@ -394,7 +396,7 @@ For completion's sake, in your manifest, you should probably not stop with just 
 
 ## Extra Credit: Peacock Addon
 
-Your mod is finished now, if your goal was just to replace a suit with your own. But we can go the extra mile too, and add our suit to the game without replacing any others. This will only work if the mod user is playing on Peacock, however. Doing this will require modifying the repository and unlockables which won't do anything if we play on IOI's servers, as we mentioned earlier.
+Your mod is finished now, if your goal was just to replace a suit with your own. But we can go the extra mile too, and add our suit to the game without replacing any others. However note that this will only work if the mod user is playing on Peacock, or offline with a special optional patch. Doing this will require modifying the repository and unlockables which won't do anything if we play on IOI's servers, as we mentioned earlier.
 
 The worst of the work is already done, the only things we have to do for Peacock support is:
 
@@ -525,6 +527,30 @@ At this point you can delete the old globaldata patch `street_smart_globaldata.e
 So we've added the suit to the repository, unlockables, and globaldata. When you run Peacock and the game, you will find the suit in your inventory, under the subtype you specified.
 
 We will not cover it here, but you can also write a TypeScript plugin to drop the outfit as part of a challenge. If the suit is tied to a challenge, Peacock will not automatically add it to inventory.
+
+### Patch unlockables starting package for offline
+
+There is one last thing you can do if you also want to allow people playing the game *offline* to use the outfit. To do this, we add our outfit token to the starting package in unlockables. The starting package includes things like the signature suit, the coin, the ICA19, among other things.
+
+This part can't be done in GlacierKit unfortunately so open a text editor like VSCode. Make a new file and paste in the following:
+
+```json
+{
+	"file": "0057C2C3941115CA",
+	"type": "ORES",
+	"patch": [
+		{
+			"op": "add",
+			"path": "/PACKAGE_STARTING_PACKAGE/Properties/Unlocks/-",
+			"value": "TOKEN_OUTFIT_HERO_STREET_SMART"
+		}
+	]
+}
+```
+
+Save this file to your mod folder under `content/chunk0`. Name it `unlockables_street_smart.JSON.patch.json`. This filename *is* case sensitive, it *must* be called `.JSON.patch.json` as the extension.
+
+This file simply patches the starting package to include our new outfit token, so when you deploy and run the game offline you will have the suit in your inventory.
 
 ### Manifest localization
 
