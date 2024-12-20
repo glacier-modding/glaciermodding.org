@@ -93,7 +93,7 @@ Paste the following info into it. If GlacierKit asks for permission to access yo
     "name": "Absolution Suit with Glasses",
     "description": "Makes the Absolution Suit much cooler.",
     "authors": ["My Name"],
-    "frameworkVersion": "2.33.18",
+    "frameworkVersion": "2.33.22",
     "version": "1.0.0",
     "contentFolders": ["content"]
 }
@@ -105,7 +105,7 @@ If you edit the manifest with GlacierKit or Visual Studio Code, they will use th
 
 :::
 
-`frameworkVersion` is the version of the framework you are currently using. At the time of writing, the latest version is 2.33.18.
+`frameworkVersion` is the version of the framework you are currently using. At the time of writing, the latest version is 2.33.22.
 
 `contentFolders` in the manifest tells Simple Mod Framework what folders will be used for mod content.
 
@@ -147,7 +147,7 @@ And one final note on `PRIM` files: any body parts that you put into your outfit
     "name": "Absolution Suit with Glasses",
     "description": "Makes the Absolution Suit much cooler.",
     "authors": ["My Name"],
-    "frameworkVersion": "2.33.4",
+    "frameworkVersion": "2.33.22",
     "version": "1.0.0",
     "contentFolders": ["content"],
     "dependencies": ["0049F083DC18CC1F", "00087BEFE0EFFF66"] // <----- Right here!
