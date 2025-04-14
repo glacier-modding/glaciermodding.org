@@ -17,9 +17,15 @@ export default function MaterialOverrides() {
         const text = await file.text();
         try {
             const jsonData = JSON.parse(text);
+            
+            if (jsonData.MATI.startsWith("[") && jsonData.MATI.endsWith(".pc_mi")) {
+                jsonData.MATT = jsonData.MATI.replace(".pc_mi", ".pc_entitytype");
+                jsonData.MATB = jsonData.MATI.replace(".pc_mi", ".pc_entityblueprint");
+            }
+            
             const modified = appendOverrides(jsonData);
             const materialName = jsonData.Material.Instance[0].Name.replace("mi", "material");
-            const blob = new Blob([JSON.stringify(modified, null, 2)], { type: "application/json" });
+            const blob = new Blob([JSON.stringify(modified, null, 2)], { type: "application/json" });        
 
             const a = document.createElement("a");
             a.href = URL.createObjectURL(blob);
