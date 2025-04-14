@@ -61,6 +61,10 @@ module.exports = {
                         {
                             to: "/tools/online/xtea",
                             label: "Online XTEA Tool",
+                        },
+                        {
+                            label: "Material Overrides",
+                            to: "/material-overrides",
                         }
                     ],
                 },
