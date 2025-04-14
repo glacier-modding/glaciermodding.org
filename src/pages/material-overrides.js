@@ -14,25 +14,33 @@ export default function MaterialOverrides() {
             return;
         }
 
+        let pathWarning = false;
+
         const text = await file.text();
         try {
             const jsonData = JSON.parse(text);
-            
+
             if (jsonData.MATI.startsWith("[") && jsonData.MATI.endsWith(".pc_mi")) {
                 jsonData.MATT = jsonData.MATI.replace(".pc_mi", ".pc_entitytype");
                 jsonData.MATB = jsonData.MATI.replace(".pc_mi", ".pc_entityblueprint");
+            } else {
+                pathWarning = true;
             }
-            
+
             const modified = appendOverrides(jsonData);
             const materialName = jsonData.Material.Instance[0].Name.replace("mi", "material");
-            const blob = new Blob([JSON.stringify(modified, null, 2)], { type: "application/json" });        
+            const blob = new Blob([JSON.stringify(modified, null, 2)], { type: "application/json" });
 
             const a = document.createElement("a");
             a.href = URL.createObjectURL(blob);
             a.download = `${materialName}.json`;
             a.click();
 
-            setMessage(`Generated ${materialName}.json`);
+            let message = `Generated ${materialName}.json`;
+            if (pathWarning) {
+                message += "\nMATT and MATB could not be set due to MATI not being a path. Please set these manually.";
+            }
+            setMessage(message);
         } catch (err) {
             setMessage("Failed to process file: " + err.message);
             console.error(err);
@@ -64,7 +72,13 @@ export default function MaterialOverrides() {
                     >
                         <h2>Drop your material.json file here</h2>
                         <p>and overrides will be automatically added into it.</p>
-                        {message && <p><strong>{message}</strong></p>}
+                        {message && (
+                            <div>
+                                {message.split("\n").map((line, index) => (
+                                    <p key={index}><strong>{line}</strong></p>
+                                ))}
+                            </div>
+                        )}
                     </div>
                     <p style={{ textAlign: "center", marginTop: "2rem" }}>
                         Adapted from code originally created by{" "}
