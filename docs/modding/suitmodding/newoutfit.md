@@ -672,3 +672,7 @@ Save your work, deploy your mod, go to Chongqing and check it out!
 ![Boy is that soggy.](/img/suitmodding/newoutfit/wet_02.jpg)
 
 If you find that the effect is *way* too dramatic, you can experiment by tweaking the `m_B` values of the lerps, making more lerps for finer control over each part, among other things. Get creative in making the outfit look its best.
+
+### Final Tips
+
+You can use the [Outfit Helper](https://www.nexusmods.com/hitman3/mods/893) mod in conjunction with the [ZHMModSDK](https://github.com/OrfeasZ/ZHMModSDK)'s Editor to tweak material values directly in-engine to see their effects. This will help you determine the best material values for your outfit, including lerp values!
