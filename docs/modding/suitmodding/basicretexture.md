@@ -11,10 +11,12 @@ For this tutorial, we will go over a basic texture override for a suit. In broad
 -   Convert the texture to a workable .tga with TonyTools
 -   Make our changes to the texture
 -   Come up with a new hash for our texture (so we don't overwrite stock assets; that's bad practice!)
--   Open the suit's outfit entity with QuickEntity Editor and override the suit's stock texture with our custom texture
+-   Open the suit's outfit entity with GlacierKit and override the suit's stock texture with our custom texture
 -   Package it all up in an SMF mod
 
 Before continuing, please make sure you have all the tools in the [requirements](.)!
+
+And before we start, you should start Simple Mod Framework and enable the **developer mode**. To do this, open Simple Mod Framework, click **More information**, and then **Enable developer mode**. This will come with a few benefits, such as being able to edit the mod manifest directly in SMF, and access to SMF's internal documentation. You can consult the docs by clicking the book icon on the left in SMF.
 
 Hitman uses a physically based rendering pipeline, and the models use 3 textures: a **diffuse map**, a **specular map** and a **normal map**.
 
@@ -61,7 +63,7 @@ We will also need to export this `TEXD` file. Glacier 2's textures always come i
 
 For this step we will be using `HMTextureTools.exe` from TonyTools to convert our `TEXT` and `TEXD` to a format we can actually work with: TARGA.
 
-HMTextureTools is a **command-line interface program**, meaning it does **not have a user interface** and simply running the .exe will do nothing. You will need to open the Command Prompt in the TonyTools folder or create a `.BAT` file in the TonyTools folder. This is an example of the command you should run:
+HMTextureTools is a **command-line interface program**, meaning it does **not have a user interface** and simply running the .exe will do nothing. You will need to open the Command Prompt in the TonyTools folder or create a `.BAT` file in the TonyTools folder. This is an **example** of the command you should run:
 
 ```batch
 HMTextureTools.exe convert H3 "c:\path\to\00E99B14303AC484.TEXT" --texd "c:\path\to\0091D8EF5EAF2E40.TEXD" "c:\path\to\00E99B14303AC484~0091D8EF5EAF2E40.texture.tga"
@@ -101,15 +103,15 @@ This means that Simple Mod Framework, when applying the mod, will use this infor
 
 ## Patch the Texture Change in the Outfit
 
-Now that we have an entirely new texture, it's time to use it. Open QuickEntity Editor.
+Now that we have an entirely new texture, it's time to use it. Open GlacierKit.
 
-:::caution QuickEntity Editor
+Let us first set up our mod project. Navigate to your Simple Mod Framework folder and open the `Mods` folder. Create a new folder in here called **MyName.MyCoolShirt**. *(Good convention suggests that you name your mod folders with your username, a period, and the mod's name, no spaces.)* Go into this folder and create a folder called **content**. In the content folder, create a new folder called **chunk0**. All the game's assets are segmented into chunks, it's not important to know right now but if you are curious you can [see this article](../../glacier2/chunkdata.md).
 
-In case you missed it from the [requirements](.), if this is your first time starting QuickEntity Editor, don't forget to set the paths to your Hitman Retail and Runtime folders in the settings. If you don't do this, the **Load entity from game** option we will be using will not work.
+To recap, that folder structure is MyName.MyCoolShirt ➡ content ➡ chunk0.
 
-:::
+With GlacierKit started, we will need to select this mod folder. Click the big button labeled **Select a project**. Navigate to the **MyName.MyCoolShirt** folder you just made and select it.
 
-Starting in the **Tree View**, click **Load** and choose **Load entity from game**. Remember the hash for the Casual Suit's `TEMP`? That's right, `00B2741A27743D8D`—enter that here and click **Load**. After a brief extraction process, the outfit will be open in QuickEntity.
+Go to the **Game content** tab, second from the top that looks like a box. Remember the hash for the Casual Suit's `TEMP`? That's right, `00B2741A27743D8D`—enter that into the search box and hit enter. In the tree you will find `outfit_agent47_bangkok_gloves_heroa_v0.entitytemplate`, buried in a bunch of folders. Click it and you will see a bunch of information about it. Click the **Open in editor** button.
 
 Expand the root OUTFIT entity in the tree. What you see in the tree is what makes up the outfit. Model parts, material overrides, cloth collisions, and things like that.
 
@@ -137,84 +139,86 @@ If you've done it right, the entity should look like this:
 
 ```json
 {
-    "parent": "c3c9a53073fbca82",
-    "name": "male_reg_agent47_bangkok_shirt",
-    "factory": "[assembly:/_pro/characters/assets/hero/agent47/materials/male_reg_agent47_bangkok_shirt.mi].pc_entitytype",
-    "blueprint": "[assembly:/_pro/characters/assets/hero/agent47/materials/male_reg_agent47_bangkok_shirt.mi].pc_entityblueprint",
-    "properties": {
-        "m_mTransform": {
-            "type": "SMatrix43",
-            "value": {
-                "rotation": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0
-                },
-                "position": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0
-                }
-            }
-        },
-        "ConstantVector1D_01_Value_op": {
-            "type": "IRenderMaterialEntity.EModifierOperation",
-            "value": "eReplace"
-        },
-        "ConstantVector1D_01_Value": {
-            "type": "float32",
-            "value": 0.20999999344348907
-        },
-        "ConstantVector1D_05_Value_op": {
-            "type": "IRenderMaterialEntity.EModifierOperation",
-            "value": "eReplace"
-        },
-        "ConstantVector1D_05_Value": {
-            "type": "float32",
-            "value": 0.4699999988079071
-        },
-        "ConstantVector1D_04_Value_op": {
-            "type": "IRenderMaterialEntity.EModifierOperation",
-            "value": "eReplace"
-        },
-        "ConstantVector1D_06_Value_op": {
-            "type": "IRenderMaterialEntity.EModifierOperation",
-            "value": "eReplace"
-        },
-        "Texture2D_01": {
-            "type": "ZRuntimeResourceID",
-            "value": {
-                "resource": "001F1D36FD5588E7",
-                "flag": "5F"
-            }
-        },
-        "Texture2D_01_enab": {
-            "type": "bool",
-            "value": true
-        },
-        "Clients": {
-            "type": "TArray<SEntityTemplateReference>",
-            "value": ["c3c9a53073fbca82"],
-            "postInit": true
-        },
-        "m_eidParent": {
-            "type": "SEntityTemplateReference",
-            "value": "c3c9a53073fbca82",
-            "postInit": true
-        }
-    }
+	"parent": "c3c9a53073fbca82",
+	"name": "male_reg_agent47_bangkok_shirt",
+	"factory": "[assembly:/_pro/characters/assets/hero/agent47/materials/male_reg_agent47_bangkok_shirt.mi].pc_entitytype",
+	"blueprint": "[assembly:/_pro/characters/assets/hero/agent47/materials/male_reg_agent47_bangkok_shirt.mi].pc_entityblueprint",
+	"properties": {
+		"m_mTransform": {
+			"type": "SMatrix43",
+			"value": {
+				"rotation": {
+					"x": -0.0,
+					"y": 0.0,
+					"z": -0.0
+				},
+				"position": {
+					"x": 0.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			}
+		},
+		"ConstantVector1D_01_Value_op": {
+			"type": "IRenderMaterialEntity.EModifierOperation",
+			"value": "eReplace"
+		},
+		"ConstantVector1D_01_Value": {
+			"type": "float32",
+			"value": 0.20999999344348907
+		},
+		"ConstantVector1D_05_Value_op": {
+			"type": "IRenderMaterialEntity.EModifierOperation",
+			"value": "eReplace"
+		},
+		"ConstantVector1D_05_Value": {
+			"type": "float32",
+			"value": 0.4699999988079071
+		},
+		"ConstantVector1D_04_Value_op": {
+			"type": "IRenderMaterialEntity.EModifierOperation",
+			"value": "eReplace"
+		},
+		"ConstantVector1D_06_Value_op": {
+			"type": "IRenderMaterialEntity.EModifierOperation",
+			"value": "eReplace"
+		},
+		"Texture2D_01": {
+			"type": "ZRuntimeResourceID",
+			"value": {
+				"resource": "001F1D36FD5588E7",
+				"flag": "5F"
+			}
+		},
+		"Texture2D_01_enab": {
+			"type": "bool",
+			"value": true
+		},
+		"Clients": {
+			"type": "TArray<SEntityTemplateReference>",
+			"value": [
+				"c3c9a53073fbca82"
+			],
+			"postInit": true
+		},
+		"m_eidParent": {
+			"type": "SEntityTemplateReference",
+			"value": "c3c9a53073fbca82",
+			"postInit": true
+		}
+	}
 }
 ```
 
-These are all the changes we need to make. Click **Save as** and choose **Save as patch file**. Name it something like `myawesomeshirt.entity.patch.json`. The name isn't too important, **but** the `.entity.patch.json` **ending is**. Simple Mod Framework needs that ending to recognize it as an entity patch file.
+These are all the changes we need to make. If you look at the open tab at the top of the window now, you have a diskette save button. Click the button, go into your **content** folder and then **chunk0** folder, and we will save our file. You can call it `myawesomeshirt`. This will make a patch file for the entity.
 
 We have our new texture, its meta file, and our entity patch. The last step is getting it into the game.
 
 ## Making Our SMF Mod
 
-Navigate to your Simple Mod Framework folder and open the `Mods` folder. Create a new folder in here called **My Cool Shirt**. Enter the folder.
+In GlacierKit, click the **Files** tab to the left, at the very top. Right click the **MyName.MyCoolShirt** folder and click **New File**. Call it **manifest.json** and hit enter. Click the file to open it.
 
-Make a new file called **manifest.json** in the folder and populate it with the following info:
+Paste the following info into it. If GlacierKit asks for permission to access your clipboard, click **Allow**.
 
 ```json
 {
@@ -223,7 +227,7 @@ Make a new file called **manifest.json** in the folder and populate it with the 
     "name": "My Cool Shirt",
     "description": "Makes the Casual Suit totally rad.",
     "authors": ["My Name"],
-    "frameworkVersion": "2.33.4",
+    "frameworkVersion": "2.33.22",
     "version": "1.0.0",
     "contentFolders": ["content"]
 }
@@ -231,30 +235,31 @@ Make a new file called **manifest.json** in the folder and populate it with the 
 
 :::tip VSCode Schema
 
-If you edit the manifest with Visual Studio Code, VSCode will use the schema you imported with the first line to help you validate your manifest. That is, if you make any errors or write anything invalid, VSCode can point it out to you. This is why we first recommend VSCode as an editor.
+If you edit the manifest with GlacierKit or Visual Studio Code, they will use the schema you imported with the first line to help you validate your manifest. That is, if you make any errors or write anything invalid, the editor can point it out to you. This is why we first recommend VSCode or GlacierKit as editors.
 
 :::
 
-`frameworkVersion` is the version of the framework you are currently using. At the time of writing, the latest version is 2.33.4.
+`frameworkVersion` is the version of the framework you are currently using. At the time of writing, the latest version is 2.33.22.
 
 `contentFolders` in the manifest tells Simple Mod Framework what folders will be used for mod content.
 
-Make a new folder called **content**. Inside the content folder, make a new folder called **chunk0**. If you want to know more about chunks, [please see this article](../../glacier2/chunkdata.md). Enter the chunk0 folder and move your mod files there. So when all is said and done, this should be the tree structure of your mod:
+Enter the chunk0 folder and move the textures you created earlier there. So when all is said and done, this should be the tree structure of your mod:
 
 ```
-📁My Cool Shirt
+📁MyName.MyCoolShirt
 ├── 📁content
 │   └── 📁chunk0
 │       ├── 001F1D36FD5588E7~00366C40059C0978.texture.tga
 │       ├── 001F1D36FD5588E7~00366C40059C0978.texture.tga.meta
 │       └── myawesomeshirt.entity.patch.json
-└── manifest.json
+├── manifest.json
+└── project.json
 ```
 
 That's all we need. Start Simple Mod Framework and click **Enable/disable mods**. Find your mod in the list under Available mods and click **Enable**, then **Apply** and watch it work for a minute. When it's done, close Simple Mod Framework and start up the game.
 
 Go into pre-planning at any level you like and choose the Casual Suit with Gloves. Start the level, and if you did everything right, the fruits of your labor should be before your eyes!
 
-![The end result](/img/suitmodding/basicretexture/endresult.jpg)
+![Agent 47 wearing a very dashing, modded, floral patterned shirt.](/img/suitmodding/basicretexture/endresult.jpg)
 
 You can now zip up your SMF mod and release it into the world. You're a mod author now.

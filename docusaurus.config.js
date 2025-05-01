@@ -1,3 +1,5 @@
+import {themes as prismThemes} from 'prism-react-renderer';
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
     title: "glaciermodding.org",
@@ -10,6 +12,9 @@ module.exports = {
     organizationName: "glacier-modding",
     projectName: "glaciermodding.org",
     themeConfig: {
+        prism: {
+            additionalLanguages: ['json']
+        },
         metadata: [
             { name: "keywords", content: "hitman, glacier, modding, 007" },
         ],
@@ -25,6 +30,14 @@ module.exports = {
                     label: "Tools",
                     position: "left",
                     items: [
+                        {
+                            href: "https://github.com/atampy25/glacierkit/releases/latest",
+                            label: "GlacierKit",
+                        },
+                        {
+                            href: "https://github.com/glacier-modding/NavKit/releases/latest",
+                            label: "NavKit",
+                        },
                         {
                             label: "RPKG Tool",
                             to: "/rpkg",
@@ -49,6 +62,10 @@ module.exports = {
                             to: "/tools/online/xtea",
                             label: "Online XTEA Tool",
                         },
+                        {
+                            label: "Material Overrides",
+                            to: "/material-overrides",
+                        }
                     ],
                 },
                 {
