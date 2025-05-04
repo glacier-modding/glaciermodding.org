@@ -29,7 +29,7 @@
 		},
 		"abcd85cba5ab5afa": {
 			"parent": "abcd6b299c3d3e26",
-			"name": "Envionment",
+			"name": "Environment",
 			"factory": "[modules:/zentity.class].pc_entitytype",
 			"blueprint": "[modules:/zentity.class].pc_entityblueprint"
 		},

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 7
 description: Creating a Scene and Scenario
 ---
 
@@ -78,3 +78,10 @@ In GlacierKit, navigate to the `content/chunk12/scenario_bank.entity.json` file 
 In the `Factory hash` text field, enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scenario_bank.brick].entitytype` and press enter.
 
 In the `Factory blueprint` text field enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scenario_bank.brick].entityblueprint` and press enter.
+
+Press the save button.
+
+## Next Steps
+Now we have a scenario file and a scene file pointing to it, but the scenario doesn't have anything in it.
+
+Let's update the scenario file to add an existing scenario brick as an external scene and modify it.

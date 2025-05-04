@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 6
 description: Mission Contracts
 ---
 
@@ -73,4 +73,4 @@ In the `content/chunk0/` folder, create a new folder named `Mission Contracts`. 
 * If you go back and press the Play button, the game will crash, as we haven't actually created this scene.
 
 ## Next Steps
-Now that we have the menus set up for our new mission, lets modify an existing scene from the game for a simple example mission. 
+Now that we have the menus set up for our new mission, lets make a new scene file and a new scenario file for it.

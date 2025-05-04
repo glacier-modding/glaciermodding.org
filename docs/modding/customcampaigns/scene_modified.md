@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 8
 description: Modifying Existing Mission
 ---
 
@@ -18,13 +18,22 @@ Since it starts on the `Metadata` tab, you can see the IOI string at the top, as
 
 Switch back to the `scenario_bank.entity.json` file. In the `External scenes` section of the `Metadata` tab click the `Add an entry` button. Paste the `[assembly:/_pro/scenes/missions/greedy/mission_raccoon/scenario_raccoon.brick].pc_entitytype` value and press the `Continue` button.
 
+Switch to the `Tree` tab.  
+
+You will see a node called `Scenario_Empty`. Click on that and rename it to `Scenario_Bank`.
+
+Expand the `Scenario_Bank` node and you will see the scenario template structure.
+
 Press the save button.
 
 Let's deploy the mod and see what happens.
 
 ## Adding new entities to the mission
-If you switch to the `Tree` tab and expand the `Scenario_Empty` node, you will see the scenario template structure.
 ![scenario_tree_view.png](resources/scenario_tree_view.png)
 This is where you can add any new entities for your mission.
 
 ## Removing entities from the original scenario
+To remove entities from the original scenario, let's switch back to the `[assembly:/_pro/scenes/missions/greedy/mission_raccoon/scenario_raccoon.brick].pc_entitytype` file in GlacierKit.
+
+Switch to the `Tree` tab. Here you can see the scenario structure for the Golden Handshake mission. Let's try deleting an NPC.
+
