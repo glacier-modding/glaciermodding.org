@@ -1,0 +1,744 @@
+---
+sidebar_position: 5   
+description: Changing tmore
+---
+
+import './customhover.css';
+import Tooltip from './tooltip';
+
+
+# Adding Shorter locals AI
+*Welcome! Welcome! What a delight to see so many dedicated modders and game enthusiasts gathered here today.*  
+
+This guide is for *all the curious modders* out there, ready to shape their own in-game stories. So let’s proudly open... the gateway to ***custom game text***! 
+
+Or, if that’s a bit too grand, just call it *replacing stuff*. Now please, dive in, explore, and mod to your heart’s content! Thank you.
+
+
+
+<details>
+<summary>**Tooltips**</summary>
+:::info tooltips
+*To assist you*, I’ve added <Tooltip
+  text={<strong>tooltips</strong>}
+  tooltip="This is a tooltip"
+/>
+ throughout the tutorial to explain any tricky terms as you encounter them. 
+
+<Tooltip text={<strong>Key terms</strong>} tooltip="These will need the most attention" /><><span className="icon-alert"></span></> are marked with an exclamation icon when they're first introduced. Not everything in **bold** is <Tooltip text={<italics>a tooltip</italics>} tooltip="like this one" />. Hover over any tooltip for more help.
+
+    >*Key terms will become clearer as you progress through the tutorial and fully mastered at the end.*
+:::
+</details>
+
+>Let's start by opening Glacierkit and your mod folder *as a project*.  
+
+
+---
+
+### **1. Finding Your LOCR**
+**Introduction**:  
+*All the text you see in-game are held inside* <Tooltip text={<strong>LOCR Files</strong>} tooltip="A file that holds game text in different languages." /><><span className="icon-alert"></span></>.  
+*Let's locate one by using their 'unique identifiers' called a* <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a game file." /><><span className="icon-alert"></span></>. 
+<details>
+
+<summary>**Help:** HASH?</summary>
+
+>Hashes are a file's <Tooltip
+  text={<strong>assembly path</strong>}
+  tooltip="The full file path used by the game engine to locate specific files. (filePaths + fileNames)"
+/> converted into code. 
+
+They are like shortcuts to files, making them easier to work with since they’re much shorter than full file paths.
+
+</details>
+ 
+####  1. Identify your LOCR
+ Below are some of the <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." /> for the suits: 
+    >- Season 1 suits: `00985A1100E5EDDC`,
+    >- Season 2 suits: `009F430D046716BE` ,
+    >- Season 3 suits: `004B8C5124A49543` 
+2. **Copy the Hash**:  
+Know when your suit was released.
+
+3. **Go to your File**:  
+Go to the <Tooltip text={<strong>game contents tab</strong>} tooltip="A tab in Glacierkit where you search game files" /> and paste your <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a game file." />
+> It will lead you straight to your *LOCR File* named like  
+>`randomwords.sweetmenutext].pc_localized-textlist` 
+
+
+*If you need to find text for something other than suits, use the Advanced Search Guide, below*
+
+<details>
+<summary>**Advanced search guide**</summary>
+
+*This guide will teach you how to find ***any text*** with their respective LOCR files*
+
+
+1. Click on the <Tooltip text={<strong>Advanced Search Tab</strong>} tooltip="A tab in GlacierKit for performing extended searches. It has a magnifying glass icon and, is like all other tabs, on the left side." /><><span className="icon-alert"></span></>
+
+2. **Set Your Search Parameters**:
+   - Check only the `chunk0` box.
+    - Tick the **localisation** option.
+>
+    :::info Faster Search
+    - *`Chunk0` holds all of the text data*
+    - *ticking 'localisation' will refine your search to only* <Tooltip text={<italic>localisation-related</italic>} tooltip="The process of adapting content for different languages and regions, such as translating text." /> *text files*.
+    :::
+
+
+3. **Try Multiple Case Variations**:
+
+*Advanced search is* ***case sensitive!***
+>You can run multiple searches simultaneously.   
+   >Example:
+    > - "Blood Money"
+    > - "blood money"
+    > - "BLOOD MONEY"
+    > - "bloodmoney" 
+
+*Watch the task bar at the bottom, which shows the status of your searches.*
+
+
+
+4. **Focus on the Right File**: 
+   - Your goal is to locate a <Tooltip text={<strong>LOCR File</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." />.
+   - You can use `ctrl+f` to find and confirm your text inside of it.
+
+
+> *Ignore `Line` or `dlge` files as they are irrelevant for the tutorial.*
+5. **END**
+:::note References
+You ***can*** track LOCR files down via `Line` or `dlge` (dialogue) files through the <Tooltip text={<strong>Reference list</strong>} tooltip="A tab that helps you trace how your file connects to others, showing which files it's using or by which ones it's getting.. used" /> too, but using my search method, it'll be highly unlikely you won't have located your LOCR File.
+:::
+</details>
+
+- **Open your ***LOCR file*****:  
+by clicking on it
+
+---
+
+### **2. Get the string**
+
+*Once you’ve opened the LOCR file, it’s time to extract the text we’ll be modifying by finding its* <Tooltip text={<strong>string</strong>} tooltip="A unique identifier for text inside a LOCR file." />.<><span className="icon-alert"></span></>
+
+
+1. **Search for Your Text**: 
+
+>Use `Ctrl + F` inside the "Preview Box" to quickly locate the text you want to modify.
+:::warning Search mode
+If you don’t click inside the *Preview* box first, the search won’t work properly and may look for text elsewhere in Glacierkit.
+>*This feature is useful for other situations but doesn’t apply here.*
+:::
+2. **Copy the String**: 
+
+>Copy **only the string** (without "quotes") attached before the text you want to change.
+
+
+<details>
+<summary>**Help:** String?</summary>
+
+The <Tooltip text={<strong>string</strong>} tooltip="A unique identifier for text inside a LOCR file." /> is the long piece of code that comes *before* each entry of text you see in-game.
+
+Example of a Suit's Name line in a LOCR File:
+```json
+"989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_": "Blood Money Suit"
+```
+- The **string**: `989928F2-06D6-42F3-871A-353F07DEF969_LEGACY_HERO_BLOODMONEYSUIT_M_HPA2293_NAME_`
+- The **text**: `Blood Money Suit`
+>Each text you see in game are hold by these "strings". Similar to the HASHes for game files, they are their 'unique identifiers'. Think of them as tags.
+:::danger no quotes
+Ensure you copy the string **without quotes**, or the process will fail later on!
+>You won't even realize until you test it in-game
+:::
+
+</details>
+
+---
+
+### **3. Manifest your Text**
+*Now that we have the associated string, we will* <Tooltip text={<strong>structure the manifest</strong>} tooltip="If you're curious,  
+Check out the LOCR breakdown to see how it all fits together." /> *using* <Tooltip text={<strong>localisation Overrides</strong>} tooltip="A way to replace or modify in-game text, without altering the core game files." /><><span className="icon-alert"></span></>
+
+<details>
+<summary>***LOCR*** *breakdown*</summary>
+
+Let's take a closer look at a simplified LOCR file to understand how it's set up:
+
+```json
+"en": {
+   "string1": "text you see in game",
+   "string2": "More text you see in game",
+   "string3": "Too much text you see in game"
+},
+"fr": {
+   "string1": "text tu vieux en jeu",
+   "string2": "Plus de text tu vieux en jeu",
+   "string3": "Trop de texte que vous voyez dans le jeu"
+}
+```
+
+*Notice the deliberate structure and repeated elements in the LOCR file.  
+This format follows a set of guidelines known as the* <Tooltip text={<strong>"Syntax"</strong>} tooltip="A set of rules that define how code is written and organized" /><><span className="icon-alert"></span></>
+
+>*We will recreate this structure in the manifest to replace the text,  
+similar to how we handled [blobsfolders](addingblobs.md#step-3-set-up-a-blobsfolder).*
+<details>
+<summary>More on ***Syntax***</summary>
+
+Looking carefully at the Syntax of a LOCR file, we can learn that:
+- **Unique "Strings"** are attached to the text you see in-game, separated by a `:` in each entry
+- `{Language arrays}` are expressed using <Tooltip text={<strong>language codes</strong>} tooltip="The language identifiers in each language array of a LOCR file" /> (e.g., `"en"` and `"fr"`)
+- Every essential part is enclosed in `"quotes"`.
+- Both entries and language arrays are separated by `commas`, except for the last one.
+- The **same "strings"** are reused across different language arrays  
+*(Functioning as tags that map the same text.)*
+
+
+</details>
+
+
+</details>
+
+
+1. **Open Your Manifest**:  
+Navigate to your manifest file from the 'Files' Tab in GlacierKit 
+
+2. Add this line: `"localisationOverrides": {}`  
+Either copy it or type it in manually using *suggestions*
+
+:::tip using "suggestions"
+Type smarter with the <Tooltip text={<strong>suggestions feature</strong>} tooltip="A tool that helps complete and format your code efficiently as you type, reducing mistakes." /><><span className="icon-alert"></span></>. 
+>*Suggestions will show up as soon as you type a **quote** `"`*
+
+It will auto-complete most of the tedious functions in the steps to follow like:
+- adding `"quotes"`, 
+- adding these `:`
+- adding `{brackets}`
+- and more
+
+*This feature is built-in Glacierkit or in in VS code with a* <Tooltip text={<strong>'schema'</strong>} tooltip="A guideline that defines and validates code formats ensuring error-free code" />.
+:::
+
+
+3. Add your <Tooltip text={<strong>LOCR HASH</strong>} tooltip="The code that appeared on top when you clicked on the LOCR File" /> and a <Tooltip text={<><strong>language bracket</strong><span className="icon-alert"></span></>} tooltip="A single language array that can contain multiple entries of strings" />: 
+```json
+   "localisationOverrides": {
+       "yourLOCRhash": {
+           "english": {}
+       }
+   }
+   ``` 
+
+:::danger HOLD IT
+  - The next logical step would be to add our string and new text, like so:
+ ```json
+   "localisationOverrides": {
+       "yourLOCRhash": {
+           "english": {
+            "string_you_copied": "Your new text"
+           }
+       }
+   }
+   ``` 
+  > **But we can't do that!**
+  
+   *We first need to "convert" the string*
+:::
+
+---
+### 4. **Converting the String**
+*We'll have to convert the string into a* <Tooltip text={<strong>decimal number</strong>} tooltip="A string converted into a numeral form" /><><span className="icon-alert"></span></> *before using it in the manifest.*
+
+To do that, you first have to:
+1. **Convert Your String**:
+    - **Open the** <Tooltip text={<strong>Text Tools tab</strong>} tooltip="A tab in GlacierKit that provides tools for converting text and hashes for game modifications." /><><span className="icon-alert"></span></>
+ 
+    - Paste your string inside the <Tooltip text={<strong>'Localisation Hash Calculator'</strong>} tooltip= "A tool that converts your string into a format the manifest can use, generating both hex and decimal codes." /><><span className="icon-alert"></span></> box.
+
+2. **Copy only the Decimal number**:  
+Once pasting your string in the box you will see 2 codes below it.  
+    >*Ignore the hex code as it's not needed*
+
+:::tip Windows Clipboard 
+Try using <Tooltip text={<strong>Windows clipboard</strong>} tooltip="A built-in Windows tool that can store multiple copied items." /> (`Windows + V`) to manage multiple copied items.  
+
+*It’s a handy alternative to `Ctrl + V` for pasting.* 
+:::
+
+3. **Add decimal and New Text**:  
+Return to your manifest and paste the <Tooltip text={<strong>new decimal</strong>} tooltip="A string converted into a numeral form" /> with your custom text.
+
+
+Result:
+```json
+"localisationOverrides": {
+    "yourLOCRhash": {
+        "english": {
+            "yourconvertednamedecimal": "Your new text"
+        }
+    }
+}
+````
+
+### 5. **Save & Deploy!**
+Next up you can: 
+- **Save** the manifest
+- **and deploy** your mod in SMF!
+>In that order
+
+:::tip Succes
+*<Tooltip text={<italic>Looking good, man!</italic>} tooltip="Looking good."/>*
+
+You’ve successfully replaced the suit's name in the game with your own custom text.  
+Now, when you load up the game, your new text will appear in place of the default one. 
+>*The basics are covered.  
+The steps below are optional but recommended for a more complete mod.*
+:::
+
+---
+
+## Beyond Basics
+
+<details>
+
+<summary>The Description</summary>
+
+**4. (Optionally) Change the Description**
+
+*To replace the description of your suit as well:*
+
+- Head back to your <Tooltip text={<strong>LOCR File</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." />
+- Find and convert <Tooltip text={<strong>the string of suit's description</strong>} tooltip="Usually right below the string of your suit's name" /> using Text Tools
+- add the new <Tooltip text={<strong>decimal</strong>} tooltip="A string converted into a numeral form" /> to your manifest. 
+>Full example of a suit mod:
+```json
+"localisationOverrides": {
+        "yourLocrHASH": {
+            "english": {
+                "yourconverteddecimal": "New Suit Name",
+                "yourotherconverteddecimal": "New Suit Description"
+            }
+        }
+    }
+```
+</details>
+
+<details>
+
+
+<summary>More language Support</summary>
+
+**5. (Optionally) Add more languages**
+#### Same Strings:
+To have your mod support more languages for users, you will need to make new <Tooltip text={<><strong>language arrays</strong><span className="icon-alert"></span></>} tooltip="A single language array consisting of strings holding text" />
+
+    
+
+To add more languages:
+- make another <Tooltip text={<strong>language bracket</strong>} tooltip="A single language array that can contain multiple entries of strings" /> 
+- add the same<Tooltip text={<strong> decimal</strong>} tooltip="A string converted into a numeral form" /> with your text
+
+
+Example of a new language line:
+```json
+"localisationOverrides": {
+        "yourLocrHASH": {
+            "english": {
+                "yourconverteddecimal": "New Suit Name",
+                "yourotherconverteddecimal": "New Suit Description"
+            },
+            "french": {
+                "yourconverteddecimal": "Niveua Costume nome"
+            }
+        }
+    }
+```
+>***Strings*** *are the same in each language array, making adding languages very easy in the manifest as well.*
+
+:::warning language codes
+- The reason why `french` is used here and not `français` is because the<Tooltip text={<strong> manifest's schema</strong>} tooltip="A structure used to validate and provide auto-completion for your manifest, helping you write error-free code." /> is coded in English. 
+- As for why it doesn't use the same <Tooltip text={<strong>language codes</strong>} tooltip="The language identifiers in each language array of a LOCR file" /> as the actual <Tooltip text={<strong>LOCR Files</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." /> like `en` or `fr`, is because the manifest's schema is coded like that. 
+
+To see how all languages have to be written down in the manifest, see the
+    - <Tooltip text={<><strong>documentation in SMF</strong><span className="icon-alert"></span></>} tooltip="It's the book icon on the left after enabling developer mode in SMF." />. 
+    - Or *expand* the tab below
+
+:::
+<details>
+<summary>All languages Codes</summary>
+
+*All language codes for* <Tooltip text={<strong>'localisationOverrides'</strong>} tooltip="A way to replace or modify in-game text, like names or descriptions, with your own custom text. It allows you to customize how text appears without altering the core game files." />;
+- `"english"`
+- `"french"`
+- `"italian"`
+- `"german"`
+- `"spanish"`
+- `"russian"`
+- `"chineseSimplified"`
+- `"chineseTraditional"`
+- `"japanese"`
+
+</details>
+</details>
+
+
+
+
+
+<details>
+<summary>More LOCR files</summary>
+
+*If you need to modify more text that are in different* <Tooltip text={<strong>LOCR Files</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." />: 
+
+1. **Insert a Comma** after your previous <Tooltip text={<><strong>LOCR Array</strong><span className="icon-alert"></span></>} tooltip="an array in the manifest resembling the game's LOCR file" />  in the manifest
+2. **Repeat [the steps from start](#1-finding-your-locr)** (or continue here)
+2. **Add a New LOCR Array**: Add your LOCR's <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." /> and make new <Tooltip text={<strong>language arrays</strong>} tooltip="A single language array that can contain multiple entries of strings" /> as needed
+3. **Repeat the Conversion**: Use <Tooltip text={<strong>Text Tools</strong>} tooltip="Using the 'Localisation HASH calculator'" /> again to convert any new <Tooltip text={<strong>strings</strong>} tooltip= "A key that links to text in the LOCR File" /> into <Tooltip text={<strong>decimals</strong>} tooltip="A string converted into a numeral form" />.
+4. **Update the** <Tooltip text={<strong>manifest</strong>} tooltip="A file in your mod folder that holds important information and can execute code" />: Add the new decimals and your new text.
+
+
+Example of every aspect from this tutorial applied:
+```json
+"localisationOverrides": {
+    "yourLocrHASH": {
+        "english": {
+            "yourconverteddecimal": "New Suit Name",
+            "yourotherconverteddecimal": "New Suit Description/or Other New Suit name"
+        }
+    },
+    "otherLocrHASH": {
+        "english": {
+            "somenewconverteddecimal": "More New Suit Name",
+            "someotherconverteddecimal": "More New Suit Description/or Other More New Suit name"
+        },
+        "spanish": {
+            "somenewconverteddecimal": "Más nombre de traje nuevo",
+            "someotherconverteddecimal": "Más descripción del traje nuevo/u otro nombre del traje más nuevo"
+        }
+    }
+}
+```
+
+>*Remember the* <Tooltip text={<strong>syntax rules</strong>} tooltip="A set of rules that define how code is written and organized." /> *and to keep your manifest clean and organized to avoid errors.*
+
+
+</details>
+
+---
+## More Resources
+
+<div id="quickreference"></div>
+<details>
+
+<summary>**Quick Reference Guide**</summary>
+
+*If you ever need a quick reminder, here is the tutorial covered in bullet points.*
+
+####  Search Methods
+- **Hashes for Suit LOCR Files**:
+  - **Season 1**: `00985A1100E5EDDC`
+  - **Season 2**: `009F430D046716BE`
+  - **Season 3**: `004B8C5124A49543`
+- **Search Parameters**: Use <Tooltip text={<strong>Advanced Search</strong>} tooltip="On the left with a magnifying glass icon" /> in GlacierKit for *other text*, 
+    - check `chunk0` 
+    - enable **localisation**.
+
+#### Step-by-Step Overview
+
+1. **Locate LOCR File**: Use provided hashes or <Tooltip text={<strong>Advanced Search</strong>} tooltip="On the left with a magnifying glass icon" />.
+2. **Extract String**: Identify and copy the <Tooltip text={<strong>string</strong>} tooltip="long line of code before your text without the quotes" /> associated with your text.
+3. **Convert to Decimal**: Use <Tooltip text={<strong>Text Tools</strong>} tooltip="Use Localisation Hash Calculator" /> to convert the string to a <Tooltip text={<strong>decimal</strong>} tooltip="numbers only code" />.
+4. **Update Manifest**:
+   ```json
+   "localisationOverrides": {
+       "yourLOCRhash": {
+           "english": {
+               "yourconverteddecimal": "Your new text",
+               "yourotherconverteddecimal": "More of your new text"
+           }
+       }
+   }
+   ```
+5. **Add Translations**: Extend the `{language array},` as needed.
+6. **Add More LOCR files**: Extend the `{LOCR array},` as needed.
+
+</details>
+
+<details>
+
+<summary>**Advanced search guide**</summary>
+
+
+*A more concise version of the Advanced search guide from the tutorial*
+
+
+1. Click on the <Tooltip text={<><strong>Advanced Search Tab</strong><span className="icon-alert"></span></>} tooltip="A tab in GlacierKit for performing extended searches. It has a magnifying glass icon and, is like all other tabs, on the left side." />
+
+2. **Set Your Search Parameters**:
+   - Check only the `chunk0` box.
+    - Tick the **localisation** option.
+
+3. **Try Multiple Case Variations**:  
+    >*Advanced search is* ***case sensitive!*** 
+
+4. **Focus on the Right File**: 
+   - Locate a <Tooltip text={<strong>LOCR File</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." />.
+   - Use `ctrl+f` to confirm your text
+
+
+      > *Ignore `Line` or `dlge` files as they are irrelevant for the tutorial.*
+:::note
+Track LOCR files down via `Line` or `dlge` (dialogue) files through the <Tooltip text={<strong>Reference list</strong>} tooltip="A tab that helps you trace how your file connects to others, showing which files it's using or by which ones it's getting.. used" />.
+:::
+</details>
+
+
+<details>
+<summary>***LOCR*** *Explained*</summary>
+
+*A closer look at a simplified LOCR file to understand how one is internally set up:*
+
+```json
+"en": {
+   "string1": "text you see in game",
+   "string2": "More text you see in game",
+   "string3": "Too much text you see in game"
+},
+"fr": {
+   "string1": "text tu vieux en jeu",
+   "string2": "Plus de text tu vieux en jeu",
+   "string3": "Trop de texte que vous voyez dans le jeu"
+}
+```
+
+*Notice the deliberate structure and repeated elements in the LOCR file.  
+This format follows a set of guidelines known as the* <Tooltip text={<strong>"Syntax"</strong>} tooltip="A set of rules that define how code is written and organized" /><><span className="icon-alert"></span></>
+
+<details>
+<summary>More on ***Syntax***</summary>
+
+Looking carefully at the Syntax of a LOCR file, we can learn that:
+- **Unique "Strings"** are attached to the text you see in-game, separated by a `:` in each entry
+- `{Language arrays}` are expressed using <Tooltip text={<strong>language codes</strong>} tooltip="The language identifiers in each language array of a LOCR file" /> (e.g., `"en"` and `"fr"`)
+- Every essential part is enclosed in `"quotes"`.
+- Both entries and language arrays are separated by `commas`, except for the last one.
+- The **same "strings"** are reused across different language arrays  
+*(Functioning as tags that map the same text.)*
+
+
+</details>
+
+
+</details>
+
+
+
+<details>
+<summary>**Glossary**</summary>
+
+
+- [**localisation override**](#3-manifesting-our-text) 
+
+>A way to replace or modify in-game text, like names or descriptions, with your own custom text. It allows you to customize how text appears without altering the core game files.
+<div class="darker">
+- [**LOCR File**](#1-finding-your-locr) 
+
+>A file holding the game’s text, like names and descriptions, organized for different languages.
+</div>
+- [**HASH**](#1-finding-your-locr)
+
+>A unique identifier that acts as the address or coordinates for a file. Basically an assembly path thats coded
+<div class="darker">
+- [**String**](#2-getting-the-string) 
+
+>An identifier or 'key' used by LOCR files to attached to unique pieces of text, like names or descriptions.
+</div>
+- [**Text Tools**](#4-converting-the-string) 
+
+>A tab in GlacierKit that provides tools for converting text and hashes for game modifications.
+<div class="darker">
+- [**Localisation Hash Calculator**](#4-converting-the-string) 
+
+>A tool that converts your string into a format the manifest can use, generating both hex and decimal codes.
+</div>
+- [**Convert**](#4-converting-the-string) 
+
+>Using Text Tool's Localisation Hash Calculator to convert a string to its hex or decimal form.
+<div class="darker">
+- [**Decimal form/number**](#4-converting-the-string) 
+
+>A numeric representation derived from a string, used for reference in the manifest file.
+</div>
+- [**manifest file**](#3-manifesting-our-text) 
+
+>A file in your mod folder that holds important information and can execute code.
+<div class="darker">
+- [**Syntax**](#3-manifesting-our-text) 
+
+>A set of rules that define how code is written and organized.
+
+</div>
+- [**language array**](#5-optionally-add-more-languages) 
+
+>A single language array with multiple entries of strings each attached to text you see in-game.
+<div class="darker">
+
+- [**language codes**](#5-optionally-add-more-languages) 
+
+>The language identifiers in each language array of a LOCR file.
+</div>
+
+
+
+---
+*Fallen but not forgotten*
+<div class="darker">
+- **manifest info in SMF** 
+
+> 
+>The book icon on the left after enabling developer mode.
+</div>
+- **VS Code** 
+
+> 
+>VS Code makes editing files smoother with features like helpful suggestions and quick fixes, making it easier to catch errors and stay organized as your mod grows.
+<div class="darker">
+- **schema** 
+
+> 
+>A structure used to validate and provide auto-completion for your manifest, helping you write error-free code.
+</div>
+- **suggestions feature** 
+
+> 
+>A feature that autocompletes tedious writing, error checks and suggests available code  based on syntax rules. It's only supported in Glacierkit or in VS code with a schema.".
+<div class="darker">
+- **localisation** 
+
+> 
+>The process of adapting content for different languages and regions, such as translating text.
+</div>
+
+- **GlacierKit**
+
+>A modding tool used for editing and managing game files in *Hitman: World of Assassination*.
+<div class="darker">
+- **game contents**
+
+> A place in GlacierKit.
+</div>
+- **additional info on top**:  
+
+>The file's properties are displayed on top after clicking it.
+<div class="darker">
+- **Windows clipboard**:  
+
+>A built-in tool that stores multiple copied items.
+</div>
+- **using notepad**: 
+
+>💀
+<div class="darker">
+- **save icon**:  
+
+>It’s a floppy disk.
+</div>
+---
+</details>
+
+
+
+
+<details>
+
+<summary>**All Admonitions**</summary>
+
+
+*A collection of the most 'useful admonitions' throughout the tutorial*
+
+:::info HASH
+You can interpret <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." /> lines as a file's specific address or coordinates. They are the file's *unique identifiers* and can bring us straight to the file.
+>You will constantly have to use these throughout modding.
+:::
+
+:::tip LOCR FILE
+
+A <Tooltip text={<strong>LOCR File</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." /> can be identified with 2 attributes:
+    - named like `randomwords.sweetmenutext].pc_localized-textlist` 
+    - having a language or translation icon.
+:::
+
+
+:::warning Search Mode
+If you don’t click inside *Preview* box first, the search won’t work properly and may look for text elsewhere in  <Tooltip text={<strong>GlacierKit</strong>} tooltip="A modding tool used for editing and managing game files in Hitman: World of Assassination." />.
+>This feature is useful for other situations but doesn’t apply here.
+:::
+
+:::info multi-language
+Try pasting your copied <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" /> in <Tooltip text={<strong>the search box</strong>} tooltip= "The one that appears when you search inside the 'Preview box'" />.
+
+You will see your <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" /> attached to multiple languages of your suit's name. 
+This shows that a specific <Tooltip text={<strong>string</strong>} tooltip= "A key that links to text in the LOCR File" /> will always be the same in every other language `{array}` of a <Tooltip text={<strong>LOCR File</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." />. 
+
+:::
+
+:::tip windows clipboard
+Easily manage multiple copied items using <Tooltip text={<strong>Windows clipboard</strong>} tooltip="A built-in tool that stores multiple copied items." />. Press `Windows + V` to activate it. 
+
+Now copy both your: 
+- LOCR's <Tooltip text={<strong>HASH</strong>} tooltip="A unique identifier that acts as the address or coordinates for a file." /> and 
+- <Tooltip text={<strong>decimal</strong>} tooltip="A string converted into a numeral form" />.
+>Make it a habit to paste using `Windows + V` instead of `Ctrl + V` from now on. 
+
+ *It might seem overkill for 2 lines of codes but it'll pay off and it beats* *<Tooltip text={<italic>using notepad</italic>} tooltip="💀" />*  
+ 
+:::
+
+:::tip using "suggestions"
+*Now you know how to use the* <Tooltip text={<strong>suggestions feature</strong>} tooltip="This feature is only supported in Glacierkit or in VS code with a schema." />. It will auto-complete most of the tedious functions in the steps to follow like:
+- adding "quotes", 
+- adding one of these `:`
+- adding `{brackets}`
+- adding spacing to keep code readable 
+- and more
+
+>Suggestions will show up as soon as you type a **quote** `"`
+:::
+
+:::info Syntax
+If you're paying attention, you might notice that we're setting up the localisation override code in the manifest just like our <Tooltip text={<strong>LOCR File</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." /> 
+where we got the <Tooltip text={<strong>strings</strong>} tooltip= "A key that links to text in the LOCR File" /> from. 
+Both will be using the same <Tooltip text={<strong>'Syntax'</strong>} tooltip="A set of rules that define how code is written and organized." />.
+
+
+*Even better too if you have noticed how similar this method is to [the previous *blobs article*](addingblobs.md#step-3-set-up-a-blobsfolder) where we 'recreated'* <Tooltip text={<strong>an assembly path</strong>} tooltip="Bonus points if you connected that HASH lines are 'coded' assembly paths = filePaths + fileNames." />
+:::
+
+:::info language codes
+- The reason why `french` is used here and not `français` is because the manifest's <Tooltip text={<strong>schema</strong>} tooltip="A structure used to validate and provide auto-completion for your manifest, helping you write error-free code." /> is coded in English. 
+- As for why it doesn't use the same <Tooltip text={<strong>language codes</strong>} tooltip="The language identifiers in each language array of a LOCR file" /> as the actual <Tooltip text={<strong>LOCR Files</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." /> like `en` or `fr`, is because the manifest's <Tooltip text={<strong>schema</strong>} tooltip="A structure used to validate and provide auto-completion for your manifest, helping you write error-free code." /> is coded like that. 
+
+To see how all languages have to be written down in the <Tooltip text={<strong>manifest</strong>} tooltip="A file in your mod folder that holds important information and can execute code" />, see the <Tooltip text={<strong>manifest documentation in SMF</strong>} tooltip="It's the book icon on the left after enabling developer mode." />. 
+:::
+
+:::tip advanced multiple search   
+
+You can continue to input new searches while others are still in progress.
+>Watch the task bar at the bottom, which shows the status of your searches.
+:::
+
+:::info Following References 
+You *can* track `Line` or `dlge` (dialogue) files via the <Tooltip text={<strong>Reference list</strong>} tooltip="A tab that helps you trace how your file connects to others, showing which files use it or by which ones it's getting.. used" /> to their respective <Tooltip text={<strong>LOCR Files</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." /> too, but using my search method, it'll be highly unlikely you haven't located your <Tooltip text={<strong>LOCR File</strong>} tooltip="A file that holds game text in different languages, linked by unique 'strings'." />
+:::
+
+:::tip Succes
+*<Tooltip text={<italic>Looking good, man!</italic>} tooltip="Looking good!"/>*
+
+You’ve successfully replaced the suit name and description in the game with your own custom text. Now, when you load up the game, your new text will appear in place of the default one. 
+>The steps below are optional but recommended for a more complete mod.
+:::
+
+
+</details>
+
