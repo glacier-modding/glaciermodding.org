@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 description: Unlockables File
 ---
 
@@ -47,20 +47,6 @@ Note, the `STARTING_LOCATION_BANK_CEO_OFFICE` text matches what we set in the ma
 Set the `RepositoryId` to the value copied from the repositories file in the previous step.  
 
 ![unlockables_ceo_office.png](resources/unlockables_ceo_office.png)
-
-## Updating the Starting Package
-Now that we have an unlockable entry for the starting location, we will need to add it to the starting package so that it is unlocked by default when you launch the mod.
-
-In the full unlockables list, search for `starting package` and you should see the starting package entry:
-![unlockables_starting_package.png](resources/unlockables_starting_package.png)
-
-On the right panel of the editor, add the following line to the `Unlocks` list:
-```json
-        "STARTING_LOCATION_BANK_CEO_OFFICE"
-```
-
-Your `changes.unlockables.json` file should now look like this:  
-![unlockables_starting_package_updated.png](resources/unlockables_starting_package_updated.png)
 
 Click the save button.
 

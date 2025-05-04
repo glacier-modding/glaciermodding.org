@@ -29,11 +29,6 @@ in the `authors` field to your name, and the URL in the `updateCheck` field to y
       "type": "entity",
       "partition": "greedy",
       "path": "[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.entity].entitytemplate"
-    },
-    {
-      "type": "entity",
-      "partition": "greedy",
-      "path": "[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/outfits_bank.brick].pc_entitytype"
     }
   ],
   "localisation": {
@@ -69,4 +64,4 @@ in the `authors` field to your name, and the URL in the `updateCheck` field to y
 
 
 ## Next Steps
-Next, lets set up a new Campaign Menu for our mod.
+Next, lets update the `storyconfig.json` file to add our mod's campaign to the Campaign Menu.

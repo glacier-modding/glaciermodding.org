@@ -1,11 +1,11 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 description: Repository File
 ---
 
 # Repository File
 
-For this tutorial, we will go over creating a repository changes file.
+For this tutorial, we will go over creating a repository file.
 
 ## Repository File brief overview
 
@@ -13,11 +13,11 @@ The repository stores metadata about various things in Hitman: World of Assassin
 
 For our purposes we will just be adding a new starting location for now. 
 
-## Creating a repository changes file
-In GlacierKit, right-click on the `content/chunk0` folder and create a new file named `changes.repository.json`. (The exact filename doesn't really matter, as long as it ends with `.repository.json` but for this tutorial we'll use `changes.repository.json`).
+## Creating a repository file
+In GlacierKit, right-click on the `content/chunk0` folder and create a new file named `hitman_campaign_demo.repository.json`. (The exact filename doesn't really matter, as long as it ends with `.repository.json` but for this tutorial we'll use `hitman_campaign_demo.repository.json`).
 
-## Modifying the repository changes file
-In GlacierKit, click on the `changes.repository.json` file. You will see the repository editor:  
+## Modifying the repository file
+In GlacierKit, click on the `hitman_campaign_demo.repository.json` file. You will see the repository editor:  
 ![repository.png](resources/repository.png)
 Click on the `New item` button.
 
@@ -35,6 +35,9 @@ You should now see your custom starting location's repository entry.
 Note the new starting location's repository entry's new UUID, just above the Editor text area. We will need that for the next step, so highlight and copy it now.
 
 Click the save icon.
+
+## Create the starting location image
+In the `blobs/images/` folder, create a new folder named `entrances`. In that folder create a new image named `bank_entrance_ceo.jpg`.
 
 ## Next Steps
 Now that we have a repostitory entry for our new starting location, we need to set it as unlocked to be able to use it.

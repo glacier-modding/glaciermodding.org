@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 description:  Menu Map Setup and Main Menu Files
 ---
 
@@ -16,7 +16,9 @@ Click on this new file. Let's give this file a Factory and Blueprint hash. For t
 And for the Blueprint hash, let's use:
 `[assembly:/_pro/scenes/bricks/menumapsetup_hitman_campaign_demo.brick].pc_entityblueprint`
 
-Switch to the Tree tab. Right-click on the root `Scene` node, and click `Create entity` and give the new entity the name `scene_Bank`.
+Let's also make sure the `Entity Type` dropdown is set to `Brick`. 
+
+Switch to the Tree tab. Right-click on the root `Scene` node, and click `Create entity` and give the new entity the name `MenuMapSetup_HitmanCampaignDemo`. Then right-click on that node and click `Create entity` and give that new entity the name `Scene_Bank`.
 
 Copy this json snippet:
 ```json
@@ -37,7 +39,7 @@ Delete the `factory` and `blueprint` lines and paste this in under the name line
 The whole entity json should now look something like this:
 ```json
 {
-	"parent": "fffffffffffffffe",
+	"parent": "[SOME ENTITY ID]",
 	"name": "Scene_Bank",
 	"factory": "[assembly:/templates/ui/mapexportentities.template?/menumap.entitytemplate].pc_entitytype",
 	"blueprint": "[assembly:/templates/ui/mapexportentities.template?/menumap.entitytemplate].pc_entityblueprint",
@@ -71,7 +73,7 @@ Going back to the `menumapsetup_hitman_demo_campaign.brick` file, in the `resour
 The `Scene_Bank` node should now look like this:
 ```json
 {
-	"parent": "fffffffffffffffe",
+	"parent": "[SOME ENTITY VALUE]",
 	"name": "Scene_Bank",
 	"factory": "[assembly:/templates/ui/mapexportentities.template?/menumap.entitytemplate].pc_entitytype",
 	"blueprint": "[assembly:/templates/ui/mapexportentities.template?/menumap.entitytemplate].pc_entityblueprint",

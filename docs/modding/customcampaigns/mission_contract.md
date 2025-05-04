@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 description: Mission Contracts
 ---
 
@@ -66,9 +66,9 @@ In the `content/chunk0/` folder, create a new folder named `Mission Contracts`. 
 ![resources/mission_briefing_tab.png](resources/mission_briefing_tab.png)
 * If you click on the briefing tile, you will see our custom briefing.
 ![resources/mission_briefing.png](resources/mission_briefing.png)
-* If you click the Planning tab, you will see that it works though the new location will be blank, since we haven't actually created it yet.
+* If you click the Planning tab, you will see that it shows our new starting location.
 ![resources/objectives.png](resources/objectives.png)
-* If you click the new location, it will bring up an empty menu.
+* If you click the new location, it will show our new starting location as the only option.
 ![resources/starting_locations.png](resources/starting_locations.png)
 * If you go back and press the Play button, the game will crash, as we haven't actually created this scene.
 

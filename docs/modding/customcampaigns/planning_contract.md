@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 description: Planning Contract
 ---
 
@@ -34,7 +34,9 @@ Change the id for that last remaining entrance to the one we generated earlier.
 
 Change the `isDefaultSpawn` and `isPreferredSpawn` values from false to true.
 
-For now just leave the world transform the same, and we'll come back and edit that later.
+The world transform here isn't actually used by the game, so we can just leave that the same.
+
+
 
 The first part of your planning contract file should now look like this:
 
