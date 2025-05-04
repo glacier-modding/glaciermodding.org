@@ -8,7 +8,7 @@ description: Campaign Menu
 For this tutorial, we will go over creating a new campaign category for our example campaign.
 
 ## Creating the `CampaignMenu.JSON.patch.json` file
-In the root folder for your mod, create a new folder named `content`. In that folder create another folder named `chunk0`. In the `chunk0` folder, create a file called `CampaignMenu.JSON.patch.json` and set the contents to this:
+In the root folder for your mod, create a new folder named `content`. In that folder create another folder named `chunk0`. In the `chunk0` folder, create a file named `CampaignMenu.JSON.patch.json` and set the contents to this:
 
 ```json
 {
@@ -50,6 +50,6 @@ In the root folder for your mod, create a new folder named `content`. In that fo
 * Create a background image and put it in your `blobs/images/campaign_demo` folder.
 
 
-## Next steps
+## Next Steps
 
 Now that we have a campaign menu set up, we need to set up the Offline Dashboard. 

@@ -1,9 +1,9 @@
 ---
 sidebar_position: 0
-description: Manifest File
+description: Creating a Campaign Mod
 ---
 
-# Creating a campaign Mod
+# Creating a Campaign Mod
 
 First we will need to set up a GitHub repository using the Simple Mod Framework smf-mod template.  
 Note: Custom campaign mods only work in Offline mode or can be set up to work with [Peacock](https://thepeacockproject.org/).
@@ -47,6 +47,6 @@ To get this mod on your local computer, you will need to clone this repository. 
       4. Run `git clone [URL from clipboard]`.
 
 
-## Next steps
+## Next Steps
 
 Now you should have a local copy of your mod, ready to be deployed using `Simple Mod Framework`. It won't do anything yet though, so lets get some things setup in the `manifest.json` file.

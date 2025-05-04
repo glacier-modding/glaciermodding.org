@@ -133,5 +133,5 @@ Let's deploy our mod and see what happens.
 * You should see a `Hitman Campaign Demo` tile.
 * If you try to click it, it will take you to the wrong campaign, since we haven't created a mission contract yet.
 ![resources/campaign_demo.png](resources/campaign_demo.png)
-## Next steps
+## Next Steps
 Now that we have a campaign with a tile button, let's create a mission contract so the campaign menu will work.

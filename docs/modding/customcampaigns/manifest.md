@@ -3,7 +3,7 @@ sidebar_position: 1
 description: Manifest File
 ---
 
-# Manifest
+# Manifest File
 
 For this tutorial, we will go over what to put in the Simple Mod Framework manifest file for the `Hitman Campaign Demo` mod.
 
@@ -68,5 +68,5 @@ in the `authors` field to your name, and the URL in the `updateCheck` field to y
 * The value of the `localisation` field is an object that defines a map from languages to a map from keys to text for each language.
 
 
-## Next steps
+## Next Steps
 Next, lets set up a new Campaign Menu for our mod.

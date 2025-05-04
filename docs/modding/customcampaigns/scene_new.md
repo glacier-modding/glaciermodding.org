@@ -1,8 +1,8 @@
 ---
 sidebar_position: 13
-description: New Scene
+description: Creating a New Mission
 ---
 
-# New Scene
+# Creating a New Mission
 
 For this tutorial, we will go over creating a new custom scene file from a template.

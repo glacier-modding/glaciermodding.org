@@ -1,9 +1,9 @@
 ---
-sidebar_position: 5
+sidebar_position: 8
 description: Mission Contracts
 ---
 
-# Mission Contracts
+# Mission Contract
 
 For this tutorial, we will go over creating a custom mission contract.
 
