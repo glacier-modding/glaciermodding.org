@@ -7,8 +7,8 @@ description: Campaign Menu
 
 For this tutorial, we will go over creating a new campaign category for our example campaign.
 
-## Creating the `CampaignMenu.JSON.patch.json` file
-In the root folder for your mod, create a new folder named `content`. In that folder create another folder named `chunk0`. In the `chunk0` folder, create a file named `storyconfig.json.patch.json` and set the contents to this:
+## Creating the `storyconfig.JSON.patch.json` file
+In the root folder for your mod, create a new folder named `content`. In that folder create another folder named `chunk0`. In the `chunk0` folder, create a file named `storyconfig.JSON.patch.json` and set the contents to this:
 
 ```json
 {
@@ -37,6 +37,8 @@ In the root folder for your mod, create a new folder named `content`. In that fo
 	]
 }
 ```
+
+> **_Note:_** The extension on this file is case-sensitive, so the file must end in `.JSON.patch.json`.
 
 ### Explanation:
 * This is a json patch file for `0093B70B9E704CE0`, which is the `[assembly:/_pro/online/default/cloudstorage/resources/storyconfig.json].pc_json` file, which is where the campaigns are defined.
