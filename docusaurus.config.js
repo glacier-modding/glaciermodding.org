@@ -50,14 +50,14 @@ module.exports = {
                             label: "G2GFxDataTool",
                             to: "/g2gfxdatatool",
                         },
-                        // {
-                        //     label: "Rebone",
-                        //     to: "/rebone",
-                        // },
-                        // {
-                        //     label: "PrimPort",
-                        //     to: "/primport",
-                        // },
+                        {
+                            label: "Rebone",
+                            to: "/rebone",
+                        },
+                        {
+                            label: "PrimPort",
+                            to: "/primport",
+                        },
                         {
                             to: "/tools/online/xtea",
                             label: "Online XTEA Tool",
@@ -159,10 +159,6 @@ module.exports = {
                     // Please change this to your repo.
                     editUrl:
                         "https://github.com/glacier-modding/glaciermodding.org/blob/main/",
-                    exclude:
-                        [
-                            "rebone"
-                        ]
                 },
                 theme: {
                     customCss: require.resolve("./src/css/custom.css"),
