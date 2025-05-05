@@ -18,7 +18,7 @@ In GlacierKit, right-click on the `content/chunk0` folder and create a new file 
 
 ## Modifying the repository file
 In GlacierKit, click on the `hitman_campaign_demo.repository.json` file. You will see the repository editor:  
-![repository.png](resources/repository.png)
+![repository.jpg](resources/repository.jpg)
 Click on the `New item` button.
 
 ```json
@@ -30,7 +30,7 @@ Click on the `New item` button.
 }
 ```
 You should now see your custom starting location's repository entry.  
-![repository_ceo_office.png](resources/repository_ceo_office.png)
+![repository_ceo_office.jpg](resources/repository_ceo_office.jpg)
 
 Note the new starting location's repository entry's new UUID, just above the Editor text area. We will need that for the next step, so highlight and copy it now.
 

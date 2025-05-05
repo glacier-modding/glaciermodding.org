@@ -61,15 +61,15 @@ In the `content/chunk0/` folder, create a new folder named `Mission Contracts`. 
 ## Deploying mod
 * Let's deploy the mod again and see the difference.
 * Now when you click on the Hitman Campaign Demo tile, you will see the new mission.  
-![resources/mission_list.png](resources/mission_list.png)
+![resources/mission_list.jpg](resources/mission_list.jpg)
 * If you click on that mission, you will see the mission menu on the Objectives tab.
-![resources/mission_briefing_tab.png](resources/mission_briefing_tab.png)
+![resources/mission_briefing_tab.jpg](resources/mission_briefing_tab.jpg)
 * If you click on the briefing tile, you will see our custom briefing.
-![resources/mission_briefing.png](resources/mission_briefing.png)
+![resources/mission_briefing.jpg](resources/mission_briefing.jpg)
 * If you click the Planning tab, you will see that it shows our new starting location.
-![resources/objectives.png](resources/objectives.png)
+![resources/objectives.jpg](resources/objectives.jpg)
 * If you click the new location, it will show our new starting location as the only option.
-![resources/starting_locations.png](resources/starting_locations.png)
+![resources/starting_locations.jpg](resources/starting_locations.jpg)
 * If you go back and press the Play button, the game will crash, as we haven't actually created this scene.
 
 ## Next Steps

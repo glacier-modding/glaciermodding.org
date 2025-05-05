@@ -16,7 +16,7 @@ In this example we will be creating a custom campaign called `Hitman Campaign De
 
 To start off with, create an account on [github.com](https://github.com) if you don't have one already. Then go to the
 [smf mod template](https://github.com/atampy25/smf-mod) and click the `Use this template` button: 
-![resources/use_this_template.png](resources/use_this_template.png)  
+![resources/use_this_template.jpg](resources/use_this_template.jpg)  
 Click the `Create a new repository` link. Enter `HitmanCampaignDemo`
 (or your desired campaign name). In the description we'll put `A custom Hitman: World of Assassination campaign`. Set it
 to Public or Private and click the `Create repository` button.  
@@ -42,7 +42,7 @@ To get this mod on your local computer, you will need to clone this repository. 
             1. Fedora-like: run `sudo dnf install git-all`.
             2. Debian-based: run `$ sudo apt install git-all`.
       2. Go to your mod repo's page on GitHub and click the green `Code` button near the top right of the page, and click the copy icon next to the url:
-         ![resources/copy_to_clipboard.png](resources/copy_to_clipboard.png)
+         ![resources/copy_to_clipboard.jpg](resources/copy_to_clipboard.jpg)
       3. Open a new terminal and `cd` to `[HITMAN DIRECTORY]\Simple Mod Framework\Mods`.
       4. Run `git clone [URL from clipboard]`.
 

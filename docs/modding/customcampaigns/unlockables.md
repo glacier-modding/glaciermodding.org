@@ -15,7 +15,7 @@ In GlacierKit, right-click on the `content/chunk0` folder and create a new file 
 
 ## Modifying the Unlockables file
 In GlacierKit, click on the `changes.unlockables.json` file. You should see the Unlockables entries.  
-![unlockables.png](resources/unlockables.png)
+![unlockables.jpg](resources/unlockables.jpg)
 
 ## Adding a new entry for the starting location 
 Click the `New Item` button. In the editor for your new entry, set the contents to:
@@ -46,7 +46,7 @@ Note, the `STARTING_LOCATION_BANK_CEO_OFFICE` text matches what we set in the ma
 
 Set the `RepositoryId` to the value copied from the repositories file in the previous step.  
 
-![unlockables_ceo_office.png](resources/unlockables_ceo_office.png)
+![unlockables_ceo_office.jpg](resources/unlockables_ceo_office.jpg)
 
 Click the save button.
 
