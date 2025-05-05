@@ -7,7 +7,7 @@ sidebar_position: 5
 :::info
 PrimPort can be downloaded from [here](/primport)
 
-Source code can be found [https://github.com/2kpr/primport](https://github.com/2kpr/primport)
+Source code can be found [here](/files/primport-src.7z)
 :::
 
 A tool for porting PRIM files between Hitman versions: HMA, Alpha, HM2016, and WoA

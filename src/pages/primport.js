@@ -62,7 +62,7 @@ export default function PrimPort() {
                     </a>
                     <div className="margin-vert--sm">
                         <a
-                            href="https://github.com/2kpr/primport"
+                            href="/files/primport-src.7z"
                             className="button button--info"
                             target="_blank"
                         >

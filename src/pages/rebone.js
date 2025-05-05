@@ -62,7 +62,7 @@ export default function Rebone() {
                     </a>
                     <div className="margin-vert--sm">
                         <a
-                            href="https://github.com/2kpr/rebone"
+                            href="/files/rebone-src.7z"
                             className="button button--info"
                             target="_blank"
                         >
