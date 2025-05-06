@@ -33,7 +33,7 @@ export default function PrimPort() {
                             <li>
                                 <a
                                     className="dropdown__link"
-                                    href={`https://github.com/2kpr/primport/releases/download/${primportVersion}/primport-windows-x64.zip`}
+                                    href={`https://github.com/glacier-modding/primport/releases/download/${primportVersion}/primport-windows-x64.zip`}
                                 >
                                     Windows
                                 </a>
@@ -41,7 +41,7 @@ export default function PrimPort() {
                             <li>
                                 <a
                                     className="dropdown__link"
-                                    href={`https://github.com/2kpr/primport/releases/download/${primportVersion}/primport-linux-x64.zip`}
+                                    href={`https://github.com/glacier-modding/primport/releases/download/${primportVersion}/primport-linux-x64.zip`}
                                 >
                                     Linux
                                 </a>
@@ -49,7 +49,7 @@ export default function PrimPort() {
                             <li>
                                 <a
                                     className="dropdown__link"
-                                    href={`https://github.com/2kpr/primport/releases/download/${primportVersion}/primport-macos-x64.zip`}
+                                    href={`https://github.com/glacier-modding/primport/releases/download/${primportVersion}/primport-macos-x64.zip`}
                                 >
                                     MacOS
                                 </a>
@@ -62,7 +62,7 @@ export default function PrimPort() {
                     </a>
                     <div className="margin-vert--sm">
                         <a
-                            href="/files/primport-src.7z"
+                            href="https://github.com/glacier-modding/primport"
                             className="button button--info"
                             target="_blank"
                         >

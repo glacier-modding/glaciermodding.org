@@ -33,7 +33,7 @@ export default function Rebone() {
                             <li>
                                 <a
                                     className="dropdown__link"
-                                    href={`https://github.com/2kpr/rebone/releases/download/${reboneVersion}/rebone-windows-x64.zip`}
+                                    href={`https://github.com/glacier-modding/rebone/releases/download/${reboneVersion}/rebone-windows-x64.zip`}
                                 >
                                     Windows
                                 </a>
@@ -41,7 +41,7 @@ export default function Rebone() {
                             <li>
                                 <a
                                     className="dropdown__link"
-                                    href={`https://github.com/2kpr/rebone/releases/download/${reboneVersion}/rebone-linux-x64.zip`}
+                                    href={`https://github.com/glacier-modding/rebone/releases/download/${reboneVersion}/rebone-linux-x64.zip`}
                                 >
                                     Linux
                                 </a>
@@ -49,7 +49,7 @@ export default function Rebone() {
                             <li>
                                 <a
                                     className="dropdown__link"
-                                    href={`https://github.com/2kpr/rebone/releases/download/${reboneVersion}/rebone-macos-x64.zip`}
+                                    href={`https://github.com/glacier-modding/rebone/releases/download/${reboneVersion}/rebone-macos-x64.zip`}
                                 >
                                     MacOS
                                 </a>
@@ -62,7 +62,7 @@ export default function Rebone() {
                     </a>
                     <div className="margin-vert--sm">
                         <a
-                            href="/files/rebone-src.7z"
+                            href="https://github.com/glacier-modding/rebone"
                             className="button button--info"
                             target="_blank"
                         >
