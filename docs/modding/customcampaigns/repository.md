@@ -38,6 +38,8 @@ Click the save icon.
 
 ## Create the starting location image
 In the `blobs/images/` folder, create a new folder named `entrances`. In that folder create a new image named `bank_entrance_ceo.jpg`.
+![bank.jpg](resources/bank.jpg)
+> Here is an example you can use for the `bank_entrance_ceo.jpg` file
 
 ## Next Steps
 Now that we have a repostitory entry for our new starting location, we need to set it as unlocked to be able to use it.

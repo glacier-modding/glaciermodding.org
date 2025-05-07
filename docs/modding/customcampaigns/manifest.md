@@ -39,8 +39,6 @@ in the `authors` field to your name, and the URL in the `updateCheck` field to y
       "UI_BANK_TITLE": "Bank mission",
       "UI_STARTING_LOCATION_BANK_CEO_OFFICE_DEFAULT_NAME": "CEO's Office",
       "UI_STARTING_LOCATION_BANK_CEO_OFFICE_DESC": "47 has made his way to the CEO's office.",
-      "NPC_TARGET_MCTARGETFACE_NAME": "Target McTargetface",
-      "NPC_TARGET_MCTARGETFACE_DESC": "Target McTargetface is the new CEO of the Milton-Fitzpatrick Bank."
     }
   },
   "updateCheck": "https://github.com/HitmanModder/HitmanCampaignDemo/releases/latest/download/updates.json"

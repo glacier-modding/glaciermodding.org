@@ -175,9 +175,120 @@ Click the `Save Airg` button and in your new `Bank` folder, save the file as `ba
 
 Now we have a new NAVP file and a new AIRG file for our custom scene that uses the new level geometry properly. Let's make the custom scene use these files.
 
-## Using the NAVP and AIRG files in your custom scene
-In GlacierKit, go to the `scenario_raccoon.brick` file and click the `Open in editor` button, and in the `Tree` view, search for `navp`. You will see a node called `PathfinderConfiguration`. Let's use a property override to change the `resource` field.
+## Using the NAVP file in your custom scene
+In GlacierKit, go to the `scenario_raccoon.brick` file and click the `Open in editor` button, and in the `Tree` view, search for `navp`. You will see a node called `PathfinderConfiguration`. If you click that node, you will see that the `resource` field is set to:
+`[assembly:/_pro/scenes/missions/greedy/mission_raccoon/scene_raccoon_basic.navp].pc_navp`
 
 ![navp_original_node.jpg](resources/navp_original_node.jpg)
 
-First, we will need to choose a new IOI string for our NAVP.
+Let's use a property override to change the `resource` field. We will need to choose a new IOI string for our NAVP. The naming convention for NAVP files is generally to name it the same string as the scene, but ending in `.navp].pc_navp`, so we'll do the same. Since the IOI string for our scene is:
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.entity].pc_entitytemplate`
+let's use:
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.navp].pc_navp`
+
+Let's add this to our project's `Custom paths` so we don't lose it. In GlacierKit, go to the `Settings` tab, scroll down to `Custom paths` and click the `Add an entry` button. Paste in:  
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.navp].pc_navp`  
+and click the `Continue` button. 
+
+For the property override, we will need the entity id of this `PathfinderConfiguration` node. It is shown above the node's text area in the right panel, under the word `Editor`: `3f33852272bbd53f`.
+
+Back in our `scenario_bank.entity.json` file, on the `Overrides` tab, go to the `Property overrides` tab. Add this object at the end of the list:
+
+```json
+    {
+  "entities": [
+    {
+      "ref": "3f33852272bbd53f",
+      "externalScene": "[assembly:/_pro/scenes/missions/greedy/mission_raccoon/scenario_raccoon.brick].pc_entitytype"
+    }
+  ],
+  "properties": {
+    "m_NavpowerResourceID": {
+      "type": "ZRuntimeResourceID",
+      "value": {
+        "resource": "[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.navp].pc_navp",
+        "flag": "5F"
+      }
+    }
+  }
+}
+```
+
+Press the save button.
+
+This will override the NAVP that the scenario uses with our custom NAVP, but we don't actually have it in the mod folder yet.
+
+The name of the file that we will need in our mod folder will actually need to use the hashed IOI string, in hexadecimal format. Let's copy our NAVP's IOI String and use GlacierKit to convert it for us.
+
+In GlacierKit, go to the `Text tools` tab on the left sidebar and enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.navp].pc_navp` into the `Hash calculator`. Click the copy icon next to the `Hex` field, to copy the value `00DCA47815BC371B`.
+
+Let's save another copy of our NAVP file, this time to the actual mod. In NavKit, click the `Save Navp` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/content/chunk12/`, and use our hashed value `00DCA47815BC371B` for the name.
+
+Now the game will be able to find and load our NAVP file.
+
+## Using the AIRG file in your custom scene
+Let's do the same thing for the AIRG file.
+
+In GlacierKit, go to the `scenario_raccoon.brick` file and click the `Open in editor` button, and in the `Tree` view, search for `airg`. You will see a node called `AI Reasoning Grid`. If you click that node, you will see that the `resource` field is set to:
+`[assembly:/_pro/scenes/missions/greedy/mission_raccoon/scene_raccoon_basic_scene.airg].pc_airg`
+
+![airg_original_node.jpg](resources/airg_original_node.jpg)
+
+Let's use a property override to change the `resource` field. We will need to choose a new IOI string for our AIRG. The naming convention for AIRG files is generally to name it the same string as the scene, but ending in `.airg].pc_airg`, so we'll do the same. Since the IOI string for our scene is:
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.entity].pc_entitytemplate`
+let's use:
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.airg].pc_airg`
+
+Let's add this to our project's `Custom paths` so we don't lose it. In GlacierKit, go to the `Settings` tab, scroll down to `Custom paths` and click the `Add an entry` button. Paste in:  
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.airg].pc_airg`  
+and click the `Continue` button.
+
+For the property override, we will need the entity id of this `AI Reasoning Grid` node. It is shown above the node's text area in the right panel, under the word `Editor`: `4247b786624f801f`.
+
+Back in our `scenario_bank.entity.json` file, on the `Overrides` tab, go to the `Property overrides` tab. Add this object at the end of the list:
+
+```json
+    {
+  "entities": [
+    {
+      "ref": "4247b786624f801f",
+      "externalScene": "[assembly:/_pro/scenes/missions/greedy/mission_raccoon/scenario_raccoon.brick].pc_entitytype"
+    }
+  ],
+  "properties": {
+    "m_pGrid": {
+      "type": "ZRuntimeResourceID",
+      "value": {
+        "resource": "[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.airg].pc_airg",
+        "flag": "5F"
+      }
+    }
+  }
+}
+```
+
+Press the save button.
+
+This will override the AIRG that the scenario uses with our custom AIRG, but we don't actually have it in the mod folder yet.
+
+As before, the name of the file that we will need in our mod folder will actually need to use the hashed IOI string, in hexadecimal format. Let's copy our AIRG's IOI String and use GlacierKit to convert it for us.
+
+In GlacierKit, go to the `Text tools` tab on the left sidebar and enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.airg].pc_airg` into the `Hash calculator`. Click the copy icon next to the `Hex` field, to copy the value `0065C805E39F128A`.
+
+Let's save another copy of our AIRG file, this time to the actual mod. In NavKit, click the `Save Airg` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/content/chunk12/`, and use our hashed value `0065C805E39F128A` for the name.
+
+Now the game will be able to find and load our AIRG file.
+
+## Testing the custom NAVP and AIRG
+We now have our custom mission using custom NAVP and AIRG files. Let's try it out.
+
+Redeploy, relaunch and start the custom mission.
+
+Just as before, teleport the guard into the room and lure him with a distraction to the other side of the chair to see how his pathfinding reacts to the new chair.
+
+![navkit_guard_walking_around.jpg](resources/navkit_guard_walking_around.jpg)
+
+We can see that the guard avoids the new chair now.
+
+## Next Steps
+Now that we can have NPCs use our custom level geometry, let's add a new NPC that will be our target.

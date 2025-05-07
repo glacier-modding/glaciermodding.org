@@ -56,21 +56,28 @@ In the `content/chunk0/` folder, create a new folder named `Mission Contracts`. 
 * In this example, we are creating a custom mission for the New York location, so the `Location` field is set to `LOCATION_GREEDY_RACCOON`, the `CodeName_Hint` field is set to `New York`, and the `Entitlements` field list is set to `H2_LEGACY_EXPANSION`.
 
 ## Create the mission tile image
-* In the `blobs/images/campaign_demo` folder, create a new image file for named `bank.jpg` with a resolution of 693 by 517.
+In the `blobs/images/campaign_demo` folder, create a new image file for named `bank.jpg` with a resolution of 693 by 517.
+![bank.jpg](resources/bank.jpg)
+> Here is an example you can use for the `bank.jpg` file 
 
 ## Deploying mod
-* Let's deploy the mod again and see the difference.
-* Now when you click on the Hitman Campaign Demo tile, you will see the new mission.  
+Let's deploy the mod again and see the difference.
+Now when you click on the Hitman Campaign Demo tile, you will see the new mission.  
 ![resources/mission_list.jpg](resources/mission_list.jpg)
-* If you click on that mission, you will see the mission menu on the Objectives tab.
+
+If you click on that mission, you will see the mission menu on the Objectives tab.
 ![resources/mission_briefing_tab.jpg](resources/mission_briefing_tab.jpg)
-* If you click on the briefing tile, you will see our custom briefing.
+
+If you click on the briefing tile, you will see our custom briefing.
 ![resources/mission_briefing.jpg](resources/mission_briefing.jpg)
-* If you click the Planning tab, you will see that it shows our new starting location.
+
+If you click the Planning tab, you will see that it shows our new starting location.
 ![resources/objectives.jpg](resources/objectives.jpg)
-* If you click the new location, it will show our new starting location as the only option.
+
+If you click the new location, it will show our new starting location as the only option.
 ![resources/starting_locations.jpg](resources/starting_locations.jpg)
-* If you go back and press the Play button, the game will crash, as we haven't actually created this scene.
+
+If you go back and press the Play button, the game will crash, as we haven't actually created this scene.
 
 ## Next Steps
 Now that we have the menus set up for our new mission, lets make a new scene file and a new scenario file for it.

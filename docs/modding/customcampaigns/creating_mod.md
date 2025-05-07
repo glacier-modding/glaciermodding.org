@@ -32,7 +32,7 @@ To get this mod on your local computer, you will need to clone this repository. 
          2. Click the Download button to download the installer. Run the installer and follow the prompts, granting it access to your GitHub account so you can use it to clone and update your repos.
       2. Open it and click the `Clone a repository from the internet` button.
       3. Choose the `HitmanCampaignDemo` mod from your repositories list.
-      4. For the local path, set it to `[HITMAN DIRECTORY]\Simple Mod Framework\Mods\HitmanCampaignDemo` (or whatever the name of your repo is).
+      4. For the local path, set it to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo` (or whatever the name of your repo is).
       5. Press the `Clone` button
    2. GitHub command line interface:
       1. Download and install the `git` command line executable. 
@@ -43,7 +43,7 @@ To get this mod on your local computer, you will need to clone this repository. 
             2. Debian-based: run `$ sudo apt install git-all`.
       2. Go to your mod repo's page on GitHub and click the green `Code` button near the top right of the page, and click the copy icon next to the url:
          ![resources/copy_to_clipboard.jpg](resources/copy_to_clipboard.jpg)
-      3. Open a new terminal and `cd` to `[HITMAN DIRECTORY]\Simple Mod Framework\Mods`.
+      3. Open a new terminal and `cd` to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods`.
       4. Run `git clone [URL from clipboard]`.
 
 
