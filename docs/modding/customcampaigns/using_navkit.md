@@ -176,7 +176,7 @@ Click the `Save Airg` button and in your new `Bank` folder, save the file as `ba
 Now we have a new NAVP file and a new AIRG file for our custom scene that uses the new level geometry properly. Let's make the custom scene use these files.
 
 ## Using the NAVP file in your custom scene
-In GlacierKit, go to the `scenario_raccoon.brick` file and click the `Open in editor` button, and in the `Tree` view, search for `navp`. You will see a node called `PathfinderConfiguration`. If you click that node, you will see that the `resource` field is set to:
+In GlacierKit, go to the `scenario_raccoon.brick` file and click the `Open in editor` button, and in the `Tree` view, search for `navp`. You will see a node named `PathfinderConfiguration`. If you click that node, you will see that the `resource` field is set to:
 `[assembly:/_pro/scenes/missions/greedy/mission_raccoon/scene_raccoon_basic.navp].pc_navp`
 
 ![navp_original_node.jpg](resources/navp_original_node.jpg)
@@ -222,14 +222,14 @@ The name of the file that we will need in our mod folder will actually need to u
 
 In GlacierKit, go to the `Text tools` tab on the left sidebar and enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.navp].pc_navp` into the `Hash calculator`. Click the copy icon next to the `Hex` field, to copy the value `00DCA47815BC371B`.
 
-Let's save another copy of our NAVP file, this time to the actual mod. In NavKit, click the `Save Navp` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/content/chunk12/`, and use our hashed value `00DCA47815BC371B` for the name.
+Let's save another copy of our NAVP file, this time to the actual mod. In NavKit, click the `Save Navp` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/content/bank/chunk12/`, and use our hashed value `00DCA47815BC371B` for the name.
 
 Now the game will be able to find and load our NAVP file.
 
 ## Using the AIRG file in your custom scene
 Let's do the same thing for the AIRG file.
 
-In GlacierKit, go to the `scenario_raccoon.brick` file and click the `Open in editor` button, and in the `Tree` view, search for `airg`. You will see a node called `AI Reasoning Grid`. If you click that node, you will see that the `resource` field is set to:
+In GlacierKit, go to the `scenario_raccoon.brick` file and click the `Open in editor` button, and in the `Tree` view, search for `airg`. You will see a node named `AI Reasoning Grid`. If you click that node, you will see that the `resource` field is set to:
 `[assembly:/_pro/scenes/missions/greedy/mission_raccoon/scene_raccoon_basic_scene.airg].pc_airg`
 
 ![airg_original_node.jpg](resources/airg_original_node.jpg)
@@ -275,7 +275,7 @@ As before, the name of the file that we will need in our mod folder will actuall
 
 In GlacierKit, go to the `Text tools` tab on the left sidebar and enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.airg].pc_airg` into the `Hash calculator`. Click the copy icon next to the `Hex` field, to copy the value `0065C805E39F128A`.
 
-Let's save another copy of our AIRG file, this time to the actual mod. In NavKit, click the `Save Airg` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/content/chunk12/`, and use our hashed value `0065C805E39F128A` for the name.
+Let's save another copy of our AIRG file, this time to the actual mod. In NavKit, click the `Save Airg` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/content/bank/chunk12/`, and use our hashed value `0065C805E39F128A` for the name.
 
 Now the game will be able to find and load our AIRG file.
 

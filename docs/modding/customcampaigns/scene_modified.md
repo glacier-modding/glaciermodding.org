@@ -41,7 +41,7 @@ In the `Property overrides` section, set the contents to:
 ```
 Switch to the `Tree` tab.  
 
-You will see a node called `Scenario_Empty`. Click on that and rename it to `Scenario_Bank`.
+You will see a node named `Scenario_Empty`. Click on that and rename it to `Scenario_Bank`.
 
 ## Adding new entities to the mission
 Expand the `Scenario_Bank` node and you will see the scenario template structure.

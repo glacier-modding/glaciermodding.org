@@ -48,9 +48,9 @@ In the root folder for your mod, create a new folder named `content`. In that fo
 * Replace `[INSERT GENERATED UUID HERE]` with a new UUID. You can generate one using GlacierKit: ![resources/randomUuid.jpg](resources/randomUuid.jpg)
 
 ## Creating the Background Image for the custom campaign mod
-Create another folder in your content folder named `blobs`. In that folder, create another folder called `images`, and in that folder, another folder called `campaign_demo`. This structure will make it more organized for when you want to add more images later. 
+Create another folder in your content folder named `blobs`. In that folder, create another folder named `images`, and in that folder, another folder named `campaign_demo`. This structure will make it more organized for when you want to add more images later. 
 
-Create a background image and put it in your `blobs/images/campaign_demo` folder.
+Create a background image and put it in your `blobs/images/campaign_demo/bank` folder.
 
 ![campaign_demo_tile_template.jpg](resources/campaign_demo_tile_template.jpg)
 > Here is an example you can use for the `campaign_demo_tile.jpg` file

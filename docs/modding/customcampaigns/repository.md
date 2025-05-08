@@ -23,7 +23,7 @@ Click on the `New item` button.
 
 ```json
 {
-    "Image": "images/entrances/bank_entrance_ceo.jpg",
+    "Image": "images/entrances/bank/bank_entrance_ceo.jpg",
     "Name_LOC": "UI_STARTING_LOCATION_BANK_CEO_OFFICE_DEFAULT_NAME",
     "Name": "Bank CEO Office Starting Location",
     "Description": "UI_STARTING_LOCATION_BANK_CEO_OFFICE_DESC"
@@ -37,8 +37,8 @@ Note the new starting location's repository entry's new UUID, just above the Edi
 Click the save icon.
 
 ## Create the starting location image
-In the `blobs/images/` folder, create a new folder named `entrances`. In that folder create a new image named `bank_entrance_ceo.jpg`.
-![bank_template.jpg](resources/bank_template.jpg)
+In the `blobs/images/` folder, create a new folder named `entrances`. In that folder create a new folder named `bank`. Inside that folder create a new image named `bank_entrance_ceo.jpg`.
+![bank_tile_template.jpg](resources/bank_tile_template.jpg)
 > Here is an example you can use for the `bank_entrance_ceo.jpg` file
 
 ## Next Steps

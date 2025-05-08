@@ -34,7 +34,7 @@ In the `content/chunk0/` folder, create a new folder named `Mission Contracts`. 
 		"Description": "UI_BANK_DESC",
 		"CodeName_Hint": "New York",
 		"ScenePath": "assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.entity",
-		"TileImage": "images/campaign_demo/bank.jpg",
+		"TileImage": "images/campaign_demo/bank/tile.jpg",
 		"Location": "LOCATION_GREEDY_RACCOON",
 		"LastUpdate": "2025-05-02T19:44:00.000Z",
 		"CreationTimestamp": "2025-05-02T19:44:00.000Z",
@@ -56,9 +56,9 @@ In the `content/chunk0/` folder, create a new folder named `Mission Contracts`. 
 * In this example, we are creating a custom mission for the New York location, so the `Location` field is set to `LOCATION_GREEDY_RACCOON`, the `CodeName_Hint` field is set to `New York`, and the `Entitlements` field list is set to `H2_LEGACY_EXPANSION`.
 
 ## Create the mission tile image
-In the `blobs/images/campaign_demo` folder, create a new image file for named `bank.jpg` with a resolution of 693 by 517.
-![bank_template.jpg](resources/bank_template.jpg)
-> Here is an example you can use for the `bank.jpg` file 
+In the `blobs/images/campaign_demo/bank/` folder, create a new image file for named `tile.jpg` with a resolution of 693 by 517.
+![bank_tile_template.jpg](resources/bank_tile_template.jpg)
+> Here is an example you can use for the `tile.jpg` file 
 
 ## Deploying mod
 Let's deploy the mod again and see the difference.

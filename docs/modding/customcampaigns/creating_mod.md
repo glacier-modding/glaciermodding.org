@@ -12,7 +12,7 @@ Note: Custom campaign mods only work in Offline mode or can be set up to work wi
 
 For this tutorial, we will go over creating a GitHub repository for a custom campaign mod.  
 
-In this example we will be creating a custom campaign called `Hitman Campaign Demo`.
+In this example we will be creating a custom campaign named `Hitman Campaign Demo`.
 
 To start off with, create an account on [github.com](https://github.com) if you don't have one already. Then go to the
 [smf mod template](https://github.com/atampy25/smf-mod) and click the `Use this template` button: 

@@ -65,15 +65,15 @@ Now let's create our NPC repository entry. Click the `New item` button and set t
 	"CharacterSetIndex": 0.0,
 	"Description": "Target McTargetface",
 	"Description_LOC": "actor_description",
-	"Image": "images/campaign_demo/target_mc_targetface.jpg",
+	"Image": "images/campaign_demo/bank/target_mc_targetface.jpg",
 	"Name": "Target McTargetface",
 	"Outfit": "[NEW TARGET'S OUTFIT UUID]",
 	"OutfitVariationIndex": 0.0,
-	"Tile": "images/campaign_demo/target_mc_targetface.jpg"
+	"Tile": "images/campaign_demo/bank/target_mc_targetface.jpg"
 }
 ```
 
-We can see that we will need a new image file. Let's create a new file in our `images/campaign_demo` folder named `target_mc_targetface.jpg` and make it a template picture for the target.
+We can see that we will need a new image file. In our `images/campaign_demo/bank` folder let's create a new file named `target_mc_targetface.jpg` and make it a template picture for the target.
 ![target_mc_targetface_template.jpg](resources/target_mc_targetface_template.jpg)
 
 Copy the id of the new outfit repository entry from under the `Editor` header text and paste it into the `Outfit` field of the new NPC entry.
@@ -93,7 +93,7 @@ Open the `content/chunk0/Mission Contracts/mission_bank.contract.json` file. Und
     "ForceShowOnLoadingScreen": true,
     "IsHidden": false,
     "BriefingName": "$($repository [NEW NPC'S UUID]).Name",
-    "Image": "images/campaign_demo/target_mc_targetface.jpg",
+    "Image": "images/campaign_demo/bank/target_mc_targetface.jpg",
     "HUDTemplate": { "display": "Eliminate Target McTargetface" },
     "BriefingText": "Eliminate Target McTargetface",
     "SuccessEvent": {
@@ -111,7 +111,7 @@ Click the save button.
 Our new NPC will need a new outfit, and we will need to make a new outfits brick for our NPC's outfit.
 
 ## Adding a new Outfit
-In GlacierKit, right-click our `content/chunk12` folder and click `New folder` and name it `Outfits`.
+In GlacierKit, right-click our `content/bank/chunk12` folder and click `New folder` and name it `Outfits`.
 
 Right-click that new `Outfits` folder and click `New File` and name it `outfit_target_mctargetface_v0.entity.json`. Click on that new file.
 
@@ -449,8 +449,8 @@ Let's redeploy, relaunch, and start the mission and see what happens.
 ## Updating the menu pictures
 Now that we have the mission fully setup, let's replace our template screenshots with some more bespoke ones.  
 
-![bank.jpg](resources/bank.jpg)
-> Updated `bank.jpg`
+![bank_tile.jpg](resources/bank_tile.jpg)
+> Updated bank `tile.jpg`
 
 ![bank_entrance_ceo.jpg](resources/bank_entrance_ceo.jpg)
 > Updated `bank_entrance_ceo.jpg`

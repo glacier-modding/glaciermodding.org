@@ -14,7 +14,7 @@ Let's use the Raccoon scene's planning contract as an example and modify it to f
 
 We created a hash for this planning contract in the previous step. We will need to use that hashed value in hexadecimal format when naming our new planning contact file. Copy that value from the `menumapsetup_s2` if you don't still have it on your clipboard.
 
-In the `content/chunk0` folder, create a new folder called `Planning Contracts`, and in that folder create a new folder called `bank`
+In the `content/chunk0` folder, create a new folder named `Planning Contracts`, and in that folder create a new folder named `bank`
 
 In GlacierKit, go to the `Game content` tab and enter `(planning_contract) greedy` and press enter. You will see the `(planning_contract) greedy raccoon` file. Click it and click the `Extract file` button.
 
