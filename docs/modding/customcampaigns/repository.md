@@ -38,7 +38,7 @@ Click the save icon.
 
 ## Create the starting location image
 In the `blobs/images/` folder, create a new folder named `entrances`. In that folder create a new image named `bank_entrance_ceo.jpg`.
-![bank.jpg](resources/bank.jpg)
+![bank_template.jpg](resources/bank_template.jpg)
 > Here is an example you can use for the `bank_entrance_ceo.jpg` file
 
 ## Next Steps

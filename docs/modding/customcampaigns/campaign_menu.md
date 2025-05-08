@@ -52,7 +52,7 @@ Create another folder in your content folder named `blobs`. In that folder, crea
 
 Create a background image and put it in your `blobs/images/campaign_demo` folder.
 
-![campaign_demo_tile.jpg](resources/campaign_demo_tile.jpg)
+![campaign_demo_tile_template.jpg](resources/campaign_demo_tile_template.jpg)
 > Here is an example you can use for the `campaign_demo_tile.jpg` file
 
 ## Next Steps

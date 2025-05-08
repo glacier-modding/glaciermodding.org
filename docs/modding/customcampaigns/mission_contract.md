@@ -57,7 +57,7 @@ In the `content/chunk0/` folder, create a new folder named `Mission Contracts`. 
 
 ## Create the mission tile image
 In the `blobs/images/campaign_demo` folder, create a new image file for named `bank.jpg` with a resolution of 693 by 517.
-![bank.jpg](resources/bank.jpg)
+![bank_template.jpg](resources/bank_template.jpg)
 > Here is an example you can use for the `bank.jpg` file 
 
 ## Deploying mod
