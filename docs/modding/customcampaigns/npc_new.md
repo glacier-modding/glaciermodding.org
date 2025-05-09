@@ -31,14 +31,6 @@ In full, it should now look like this:
   },
 ```
 
-Add the following object to the `packagedefinition` array:  
-```json
-    {
-      "type": "entity",
-      "partition": "greedy",
-      "path": "[assembly:/_pro/scenes/missions/hitman_campaign_demo/outfits_bank.brick].pc_entitytype"
-    }
-```
 Press the save button.
 
 ## Adding Repository entries for the NPC and Outfit 
@@ -111,7 +103,7 @@ Click the save button.
 Our new NPC will need a new outfit, and we will need to make a new outfits brick for our NPC's outfit.
 
 ## Adding a new Outfit
-In GlacierKit, right-click our `content/bank/chunk12` folder and click `New folder` and name it `Outfits`.
+In GlacierKit, right-click our `content/chunk12` folder and click `New folder` and name it `Outfits`.
 
 Right-click that new `Outfits` folder and click `New File` and name it `outfit_target_mctargetface_v0.entity.json`. Click on that new file.
 

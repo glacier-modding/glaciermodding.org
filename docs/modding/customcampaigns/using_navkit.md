@@ -222,7 +222,7 @@ The name of the file that we will need in our mod folder will actually need to u
 
 In GlacierKit, go to the `Text tools` tab on the left sidebar and enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.navp].pc_navp` into the `Hash calculator`. Click the copy icon next to the `Hex` field, to copy the value `00DCA47815BC371B`.
 
-Let's save another copy of our NAVP file, this time to the actual mod. In NavKit, click the `Save Navp` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/content/bank/chunk12/`, and use our hashed value `00DCA47815BC371B` for the name.
+Let's save another copy of our NAVP file, this time to the actual mod. In NavKit, click the `Save Navp` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/content/chunk12/`, and use our hashed value `00DCA47815BC371B` for the name.
 
 Now the game will be able to find and load our NAVP file.
 
@@ -275,7 +275,7 @@ As before, the name of the file that we will need in our mod folder will actuall
 
 In GlacierKit, go to the `Text tools` tab on the left sidebar and enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.airg].pc_airg` into the `Hash calculator`. Click the copy icon next to the `Hex` field, to copy the value `0065C805E39F128A`.
 
-Let's save another copy of our AIRG file, this time to the actual mod. In NavKit, click the `Save Airg` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/content/bank/chunk12/`, and use our hashed value `0065C805E39F128A` for the name.
+Let's save another copy of our AIRG file, this time to the actual mod. In NavKit, click the `Save Airg` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/content/chunk12/`, and use our hashed value `0065C805E39F128A` for the name.
 
 Now the game will be able to find and load our AIRG file.
 

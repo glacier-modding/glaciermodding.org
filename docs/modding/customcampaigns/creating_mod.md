@@ -26,7 +26,7 @@ You should now have a new repository for your mod owned by your GitHub user acco
 
 To get this mod on your local computer, you will need to clone this repository. To clone the repository:
 1. You will first need to have `git` installed, and then run the clone command. For this, you have a few options.
-   1. Github Desktop
+   1. GitHub Desktop
       1. Download and install GitHub desktop.
          1. Go to the [Download GitHub Desktop](https://desktop.github.com/download/) page.
          2. Click the Download button to download the installer. Run the installer and follow the prompts, granting it access to your GitHub account so you can use it to clone and update your repos.
@@ -46,6 +46,8 @@ To get this mod on your local computer, you will need to clone this repository. 
       3. Open a new terminal and `cd` to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods`.
       4. Run `git clone [URL from clipboard]`.
 
+## A note on Hitman Modding and GitHub
+> Hitman modding involves a lot of details, and if any of them are incorrect, the mod may not deploy, or the mission may crash on loading, or crash during gameplay. For this reason it is generally good practice to make small changes, save, deploy, and launch the mission frequently, and if it works well, to commit your changes to your GitHub repository. This can save you some time and frustration later, because if something breaks down the line, you can switch back to a previous commit to see the last time it worked, and what is different since then to narrow down the issue. 
 
 ## Next Steps
 
