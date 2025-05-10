@@ -538,9 +538,9 @@ Right-click the `Geometry` node and click `Create Entity` and name it `Floor`. C
 					"z": 0
 				},
 				"position": {
-					"x": 0.0,
+					"x": -10.0,
 					"y": 10.0,
-					"z": 10.0
+					"z": 0.0
 				}
 			}
 		},
@@ -581,8 +581,7 @@ Next, click on the `000_Outside` entity and copy the entity id underneath the `E
 
 Next, right-click on the `Gameplay > Exit locations` node and click `Create Entity` and set the name to `Exit`. Click on the new `Exit` node and in the contents, replace everything after the `parent` field with:
 ```json
-
-	"name": "Exit_MainEntrance",
+	"name": "Exit",
 	"factory": "[assembly:/_pro/design/levelflow.template?/exit_pushbutton.entitytemplate].pc_entitytype",
 	"blueprint": "[assembly:/_pro/design/levelflow.template?/exit_pushbutton.entitytemplate].pc_entityblueprint",
 	"properties": {
@@ -603,15 +602,7 @@ Next, right-click on the `Gameplay > Exit locations` node and click `Create Enti
 		},
 		"m_sId": {
 			"type": "ZGuid",
-			"value": "[NEW EXIT'S UUID]"
-		},
-		"Manual_Exit_Trigger_Needed": {
-			"type": "bool",
-			"value": true
-		},
-		"name_metricvalue": {
-			"type": "ZString",
-			"value": "Exit_Modtown_ExitName"
+			"value": "[EXIT UUID]"
 		},
 		"Show3dExitSpatial": {
 			"type": "bool",
@@ -668,9 +659,15 @@ Next, right-click on the `Gameplay > Exit locations` node and click `Create Enti
 		}
 	},
 	"events": {
+		"ExitActivated": {
+			"Manual_Exit_Trigger": [
+				"cafee7b919fd9a7c"
+			]
+		}
 	}
 }
 ```
+Replace `[EXIT UUID]` with the exit's UUID from the planning contract. 
 
 Now right-click the `Scenario_Modtown > NPCs` node and click `Create Entity` and set the name to `Super Targetman`. Click on the new `Super Targetman` node and in the contents, replace everything after the `parent` field with:
 ```json
@@ -761,6 +758,89 @@ Where `001421449C722898` is the hash of our planning contract for this mission.
 
 Press the save button.
 
+## Adding lighting and a sky
+Our scenario will also need lighting, a sky, and physics, otherwise everything will be dark and grey.
+
+Download the [tod_day_sunny_clear.entity.json](resources/tod_day_sunny_clear.entity.json) file and save it to your `content/chunk0` folder. This is a basic "time of day" brick that we can drop into any custom scene, that sets up a sunny clear day and blue sky.
+
+In GlacierKit, go to the `scenario_modtown.entity.json` file and in the `External scenes` section click the `Add an entry` button, enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/tod_day_sunny_clear.brick].pc_entitytype`, and press `Continue`.
+
+We will also need to set an override on this brick so that it's parent is our `000_Outside` room. Switch to the `Overrides` tab and on the `Property overrides` tab, paste this snippet into the array:
+```json
+    {
+        "entities": [
+            {
+                "ref": "cafe9e975eba0134",
+                "externalScene": "[assembly:/_pro/scenes/missions/hitman_campaign_demo/tod_day_sunny_clear.brick].pc_entitytype"
+            }
+        ],
+        "properties": {
+            "m_eidParent": {
+                "type": "SEntityTemplateReference",
+                "value": "[ENTITY ID OF THE 000_Outside ENTITY]"
+            }
+        }
+    }
+```
+Replace `[ENTITY ID OF THE 000_Outside ENTITY]` with the entity id of the `000_Outside` entity from `scenario_modtown.entity.json`.
+
+Press the save button.
+
+## Adding Physics
+We will also need the Scenario to have some physics entities defined. In GlacierKit, on the `scenario_modtown.entity.json` file, switch to the `Tree` view. Right-click on the `Physics` node and click `Create Entity`, name it `VolumeBox_WorldBounds` and click on the new entity, and in the contents, replace everything after the `parent` field with:
+```json
+	"name": "VolumeBox_WorldBounds",
+	"factory": "[modules:/zboxvolumeentity.class].pc_entitytype",
+	"blueprint": "[modules:/zboxvolumeentity.class].pc_entityblueprint",
+	"properties": {
+		"m_mTransform": {
+			"type": "SMatrix43",
+			"value": {
+				"rotation": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				},
+				"position": {
+					"x": 0,
+					"y": 0,
+					"z": 0
+				}
+			}
+		},
+		"m_vGlobalSize": {
+			"type": "SVector3",
+			"value": {
+				"x": 200,
+				"y": 200,
+				"z": 200
+			}
+		},
+		"m_eidParent": {
+			"type": "SEntityTemplateReference",
+			"value": "fffffffffffffffe",
+			"postInit": true
+		}
+	}
+}
+```
+Then right-click on the `Physics` node again and click `Create Entity`, name it `FX_Logic_PhysicsWorld`, and click on it, and in the contents, replace everything after the `parent` field with:
+```json
+	"name": "FX_Logic_PhysicsWorld",
+	"factory": "[assembly:/_pro/effects/templates/logic/fx_logic_physicsworld.template?/fx_logic_physicsworld.entitytemplate].pc_entitytype",
+	"blueprint": "[assembly:/_pro/effects/templates/logic/fx_logic_physicsworld.template?/fx_logic_physicsworld.entitytemplate].pc_entityblueprint",
+	"properties": {
+		"m_WorldBounds": {
+			"type": "SEntityTemplateReference",
+			"value": null
+		}
+	}
+}
+```
+Replace the `null` value for the `m_WorldBounds` property with the entity id of the `VolumeBox_WorldBounds` entity, for instance `"cafe047b052d1376"`
+
+Press the save button.
+
 ## Updating the Charset
 For simplicity, let's copy our entire outfit folder from `content/chunk12/Outfits` to `content/chunk2`. This cannot be done from GlacierKit, so in GlacierKit right-click on the `chunk12` folder and click `Show in Explorer`. Copy the outfit folder, then go to the `content/chunk2` folder and paste it.
 
@@ -820,3 +900,77 @@ Press the save button.
 
 ## Deploying
 If all went well, we should be able to deploy the mod now and see our new mission.
+![modtown_initial.jpg](resources/modtown_initial.jpg)
+The lighting is nice, there is a sky, and there is a floor we can walk on that reflects the sky properly. But the NPC isn't where we expected him. Let's see if we can fix that by making a NAVP and AIRG.
+
+Open NavKit and click the `Extract from game and build obj` button on the `Extract menu` on the right sidebar.
+
+Once that's done, click the `Build Navp from Obj and Scene` button on the left sidebar.
+
+Once that's done, click the `Build Airg from Navp` button on the `Airg menu` on the right sidebar.
+![navkit_modtown.jpg](resources/navkit_modtown.jpg)
+Let's make some new IOI strings for the NAVP and AIRG. For the NAVP, let's use:  
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scene_modtown.navp].pc_navp`
+In GlacierKit, go to the `Settings` tab and on the `Custom paths` section, scroll down and press the `Add an entry` button. Paste in that IOI string and press `Continue`.
+
+On the `Text tools` tab, paste that IOI string into the `Hash calculator` field and copy the value in the `Hex` text field.
+
+Back in NavKit, click the `Save Navp` button, and navigate to the `content/chunk2` folder and name it the hex value you copied.
+
+For the AIRG, let's use:  
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scene_modtown.airg].pc_airg`  
+
+In GlacierKit, go to the `Settings` tab and on the `Custom paths` section, scroll down and press the `Add an entry` button. Paste in that IOI string and press `Continue`.
+
+On the `Text tools` tab, paste that IOI string into the `Hash calculator` field and copy the value in the `Hex` text field.
+
+Back in NavKit, click the `Save Airg` button, and navigate to the `content/chunk2` folder and name it the hex value you copied.
+
+Now that we have our NAVP and AIRG files, we need to tell the scenario to use them. In GlaicerKit, go to the `scenario_modtown.entity.json` file on the `Tree` view, expand the `Scenario_Modtown > AI` node. Right-click on the `Pathfinding` node and click `Create Entity`, name it `Pathfinder_Configuration`, click on the new node and in the contents, replace everything after the `parent` field with:
+```json
+"name": "Pathfinder_Configuration",
+"factory": "[modules:/zpathfinderconfiguration.class].pc_entitytype",
+"blueprint": "[modules:/zpathfinderconfiguration.class].pc_entityblueprint",
+"properties": {
+    "m_NavpowerResourceID": {
+        "type": "ZRuntimeResourceID",
+        "value": {
+            "resource": "[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scene_modtown.navp].pc_navp",
+            "flag": "5F"
+        }
+    }
+}
+```
+Right-click on the `AI Reasoning Grid` node and click `Create Entity`, name it `AI Reasoning Grid`, click on the new node and in the contents, replace everything after the `parent` field with:
+```json
+	"name": "AI Reasoning Grid",
+	"factory": "[modules:/zreasoninggridconfigentity.class].pc_entitytype",
+	"blueprint": "[modules:/zreasoninggridconfigentity.class].pc_entityblueprint",
+	"properties": {
+		"m_pGrid": {
+			"type": "ZRuntimeResourceID",
+			"value": {
+				"resource": "[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scene_modtown.airg].pc_airg",
+				"flag": "5F"
+			}
+		}
+	}
+}
+```
+
+Deploy the mod, relaunch Hitman and start the mission.
+![modtown_with_navp_and_airg.jpg](resources/modtown_with_navp_and_airg.jpg)
+Now our NPC is in the right spot, and reacts properly when distracted or panicking.
+![modtown_super_targetman_panic.jpg](resources/modtown_super_targetman_panic.jpg)
+If we take out the target, the exit appears and functions properly.
+![modtown_exit.jpg](resources/modtown_exit.jpg)
+
+Let's take some new screenshots for our location (Modtown), parent location (Modlandia) and mission (Modtown Throwdown) to replace our template images.
+
+In all, we will need 6 new images:
+* A background image (fullscreen) for Modtown 
+* A tile image (tile sized) for the Modtown Throwdown mission
+* A tile image (tile sized) for the Main entrance of the Modtown Throwdown mission
+* A target image (tile sized) for Super Targetman
+* A background image (fullscreen) for Modlandia
+* A tile image (tile sized) for the Modlandia
