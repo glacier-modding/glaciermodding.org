@@ -965,10 +965,162 @@ Now our NPC is in the right spot, and reacts properly when distracted or panicki
 If we take out the target, the exit appears and functions properly.
 ![modtown_exit.jpg](resources/modtown_exit.jpg)
 
+## Finding and adding geometry from in-game
+Let's add a building for our NPC. We can build one with a few walls, and a door.
+
+Since we're in chunk2, we can use anything from chunk0, chunk1, or chunk2. Dubai is in chunk0 and conveniently has plenty of examples of walls and doors.  
+Let's use these entities:  
+`penthouse_wall_interior_6x4_a`  
+`penthouse_wall_door_interior_6x2_a`  
+`penthouse_wall_corner_edge_interior_6m_a`  
+`[assembly:/_pro/environment/templates/architecture/doors/doors_gecko_a.template?/gecko_singledoor_penthouse_staff_bathroom_a.entitytemplate].pc_entitytype`  
+![dubai_penthouse_wall.jpg](resources/dubai_penthouse_wall.jpg)
+![dubai_penthouse_corner.jpg](resources/dubai_penthouse_corner.jpg)
+
+In GlacierKit, if the `Game content` tab, search for `scenario_gecko.brick` and click on it, click on the `Open in Editor` button and in the `Tree` view, search for `penthouse_wall_interior_6x4_a`. Right-click on one of the entities and click `Clipboard > Copy`.  
+![dubai_scenario_copying_a_wall.jpg](resources/dubai_scenario_copying_a_wall.jpg)
+Switch back to the `scenario_modland.entity.json` file and on the tree view, right-click in the `Environment > 000_Outside > Geometry` node and click `Clipboard > paste`. Click on the new node and set the `m_eidParent` value to the entity id of the `000_Outside` node. Set the `position` object to:
+```json
+"position": {
+    "x": 18.0,
+    "y": 0.0,
+    "z": 0.0
+}
+```
+And the `rotation` object to:
+```json
+"rotation": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+},
+```
+Right-click this new node, and click `Clipboard > Copy`, and paste in five copies of this node.
+
+Switch back to `scenario_gecko.brick` and search for `penthouse_wall_door_interior_6x2_a`, and similarly copy and paste one of these entities into the `scenario_modland.entity.json` file. Set the `rotation` to all zeros like before and the `position` object to:
+```json
+"position": {
+    "x": 15.0,
+    "y": 0.0,
+    "z": 0.0
+}
+```
+Click on the new node and set the `m_eidParent` value to the entity id of the `000_Outside` node. Right-click this new node, and click `Clipboard > Copy`, and paste in one more copy of this node.
+
+Do the same thing for `penthouse_wall_corner_edge_interior_6m_a`, and paste in one of these. Set the `rotation` to all zeros like before and the `position` object to:
+```json
+"position": {
+    "x": 15.0,
+    "y": 6.0,
+    "z": 0.0
+}
+``` 
+Right-click this new node and click `Clipboard > Copy`, and paste in 3 copies of this node.
+
+Do the same thing for `[assembly:/_pro/environment/templates/architecture/doors/doors_gecko_a.template?/gecko_singledoor_penthouse_staff_bathroom_a.entitytemplate].pc_entitytype`. Set the `rotation` to all zeros like before and the `position` object to:
+```json
+"position": {
+    "x": 18.0,
+    "y": 6.0,
+    "z": 0.0
+}
+``` 
+Click on this new entity and set the `m_bIsLocked` value to `false`.
+
+The positions of these won't be perfect at the moment, but once we get into the mission, we can modify these.
+
+Press the save button, redeploy, relaunch hitman, and start the mission.
+
+We can see that the door is rotated improperly, as are some of the walls. With GlacierKit open to `scenario_modtown.entity.json` we can change the transform of objects in our scenario and have the changes mirrored to GlacierKit, which makes editing the scenario relatively easy. First click the `Rebuild entity tree`.
+
+Next, click on the door and press the `Tab` key to switch the gizmo from `translate` mode to `rotate` mode. Rotate the door so that it fits in the doorframe of the wall.
+![modtown_rotate_gizmo.jpg](resources/modtown_rotate_gizmo.jpg)
+
+If you move past the walls, we can see that they are actually only one-sided, which is why we make two copies for each wall, so that for each wall we can have one facing each direction.
+
+Click on the wall with the doorframe and rotate that 180 degrees.
+![modtown_rotated_wall.jpg](resources/modtown_rotated_wall.jpg)
+
+Select another wall and move it and rotate it so that it connects with our first wall. Also make sure to move another copy to that same spot and rotate it 180 degrees away from that.
+![modtown_translated_walls.jpg](resources/modtown_translated_walls.jpg)
+
+With the corner pieces, move those so that they fit into the outer corners of the house.
+![modtown_corners_placed.jpg](resources/modtown_corners_placed.jpg)
+
+Press the save button in GlacierKit to save the scenario. Close the game, redeploy, relaunch, and start the mission.
+
+## Regenerating the NAVP and AIRG
+Now that we've modified the geometry, the old NAVP and AIRG don't accurately represent the scenario. If we were to throw a coin behind the house for instance, Super Targetman would just walk right through the walls.
+![modtown_need_new_navp.jpg](resources/modtown_need_new_navp.jpg)
+
+Let's open NavKit up, and follow the same steps as before:  
+1. Click the `Extract from game and build obj` button
+2. Click the `Build Navp from Obj and Scene` button
+3. Save the NAVP file to `content/chunk2/0051279576303266.navp`
+4. Click the `Build Airg from Navp` button
+5. Save the AIRG file to `content/chunk2/00D89D1CB094AD54.airg`  
+
+![modtown_new_navp_and_airg.jpg](resources/modtown_new_navp_and_airg.jpg)  
+Redeploy, relaunch, and start the mission, and now Super Targetman will walk around the house if you throw a coin behind the house, or walk through the door if you lure him into the house.
+![modtown_avoiding_house.jpg](resources/modtown_avoiding_house.jpg)
+
+## Creating new geometry
+Reusing in-game assets is useful, but sometimes you need to create your own 3D assets. For this will use blender, with the [Glacier 2 Blender Add-on](../../blender).
+
+> If you'd like an example you can refer to [modland.blend](resources/modland.blend). Note, this reference example is called Modland.
+
+After installing the add-on, open Blender. 
+
+![blender_new_scene.jpg](resources/blender_new_scene.jpg)
+
+The default scene includes a light and a camera. We won't need those so click on them in the object panel and press delete. Click on the `Collection` node and press the `F2` key and rename it to `Modtown`.
+
+Our geometry so far isn't that interesting; it's just a small cube. Let's make some changes to make it more interesting.
+
+Click the cube and press `S` to enter scale mode, then press `Z` to limit the scale to the Z-axis. Hold `Ctrl` to enable snapping, and then decrease the scale to 0.1. You can also just manually type in the scale there if you'd like instead.
+
+Click the cube and press `S` to enter scale mode, then press `X` to limit the scale to the X-axis. Hold `Ctrl` to enable snapping, and then increase the scale to 10, which you can see on the cube transform properties on the right sidebar.
+
+Click the cube and press `S` to enter scale mode, then press `Y` to limit the scale to the Y-axis. Hold `Ctrl` to enable snapping, and then increase the scale to 10, which you can see on the cube transform properties on the right sidebar.
+![blender_scaled_cube.jpg](resources/blender_scaled_cube.jpg)
+
+Let's extrude some of the faces. With the cube selected, switch from `Object Mode` to `Edit Mode` mode from the dropdown menu on the top left of the window. Then switch the select mode to `Face Select`, which is the button with the white square right next to the `Edit Mode` dropdown.
+![blender_edit_mode.jpg](resources/blender_edit_mode.jpg)
+
+Now select one of the side faces of the cube by clicking on it. Press the `E` key to extrude, and then drag the cursor out somewhat, until it makes a new cuboid to the side of the original one. 
+![blender_extrude.jpg](resources/blender_extrude.jpg)
+Select multiple faces by holding `Ctrl` and clicking on them, or dragging a box around them, and then extrude some more. Keep going at this until you have created some geometry that you would like for your mission.
+
+If you want to move a face, select it and then press the `G` key, and then either the `X`, `Y`, or `Z` keys to lock the movement to that axis.
+![blender_move.jpg](resources/blender_move.jpg)
+
+You can also select Vertices or Edges by clicking one of those buttons on the top left of the window, next to the `Face Select` button we clicked earlier.
+![modtown.jpg](resources/modtown.jpg)
+
+Now that we have geometry we are happy with, we will need to make the geometry collideable. 
+
+Select the `Cube` object and on the right panel, select the `Physics` tab, and click the `Add Triangle Mesh Collider` button.
+![blender_physics_panel.jpg](resources/blender_physics_panel.jpg)
+
+In the object panel, select the `Modtown` Collection and switch to the `Collection` properties tab on the right sidebar.
+![blender_collection_properties.jpg](resources/blender_collection_properties.jpg)
+
+Change the `Physics Data Type` dropdown to `TRIANGLE_MESH`, and the `Physics Collision Type` to `STATIC`.
+![blender_physics_type.jpg](resources/blender_physics_type.jpg)
+
+Let's save our scene so we can reload it later if we want.
+
+Now click `File > Export > Glacier RenderPrimitive (prims, materials, textures, geomentities, and collision)`, and put it somewhere you can find easily.  
+![blender_export.jpg](resources/blender_export.jpg)
+
+You'll wind up with a folder of files like this:  
+![blender_export_results.jpg](resources/blender_export_results.jpg)
+## Updating the images
+
 Let's take some new screenshots for our location (Modtown), parent location (Modlandia) and mission (Modtown Throwdown) to replace our template images.
 
 In all, we will need 6 new images:
-* A background image (fullscreen) for Modtown 
+* A background image (fullscreen) for Modtown
 * A tile image (tile sized) for the Modtown Throwdown mission
 * A tile image (tile sized) for the Main entrance of the Modtown Throwdown mission
 * A target image (tile sized) for Super Targetman
