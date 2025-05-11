@@ -18,8 +18,8 @@ const repos = [
     "glacier-modding/G2WwiseDataTool",
     "glacier-modding/G2GFxDataTool",
     "glacier-modding/RPKG-Tool",
-    "2kpr/rebone",
-    "2kpr/primport",
+    "glacier-modding/rebone",
+    "glacier-modding/primport",
 ]
 
 ;(async () => {

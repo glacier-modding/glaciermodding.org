@@ -7,7 +7,7 @@ sidebar_position: 4
 :::info
 Rebone can be downloaded from [here](/rebone)
 
-Source code can be found [here](/files/rebone-src.7z)
+Source code can be found [https://github.com/glacier-modding/primport](https://github.com/glacier-modding/primport)
 :::
 
 A tool for porting Hitman WoA S1 weightedprims to S2 and S3 bonerigs
