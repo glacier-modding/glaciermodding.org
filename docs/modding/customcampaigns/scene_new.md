@@ -1139,9 +1139,13 @@ Right-click the `Modtown` collection and click `Duplicate Collection` to create 
 Select the new collection and on the right panel, select the `Physics` tab, and click the `Add Triangle Mesh Collider` button.  
 ![blender_physics_panel.jpg](resources/blender_physics_panel.jpg)
 
-Drag that new triangle mesh collider object to the original collection and delete the temporary duplicate collection.
+Drag that new triangle mesh collider object over the original collection and hold the `Shift` and `Alt` keys to remove the parent and keep the transforms, and then release the mouse button.
+![blender_collider_remove_parent.jpg](resources/blender_collider_remove_parent.jpg)
 
-In the object panel, select the `Modtown` Collection and switch to the `Collection` properties tab on the right sidebar.  
+Drag the `TriangleMeshCollider` object to the original collection to assign the collection as its parent. Right-click the temporary duplicate collection and click `Delete Hierarchy`. Click on the `TriangleMeshCollider` object and in the `Physics` tab of the properties panel on the right sidebar, change the `Collision Layer` to `STATIC_COLLIDABLES_ONLY`.  
+![blender_collision_layer.jpg](resources/blender_collision_layer.jpg)
+
+In the object panel, select the `Modtown` Collection and switch to the `Collection` properties panel on the right sidebar.  
 ![blender_collection_properties.jpg](resources/blender_collection_properties.jpg)
 
 Change the `Physics Data Type` dropdown to `TRIANGLE_MESH`, and the `Physics Collision Type` to `STATIC`.  
@@ -1356,7 +1360,29 @@ Set the `m_eidParent` value to the entity id of the `000_Outside` node.
 Click the save button, redeploy, relaunch, and start the mission.
 
 ![new_geometry_in_game.jpg](resources/new_geometry_in_game.jpg)
-We can see our new geometry in the game! Things don't quite line up with the floor in this instance, so in GlacierKit let's select our `modtown` node in the `scenario_modtown.entity.json` file and it will select the geometry in game. Move 
+We can see our new geometry in the game! Using this example geometry, things don't quite line up with the house and SuperTargetman in this instance, so let's move the house to be on our new geometry. With GlacierKit opened to the `scenario_modtown.entity.json` file enable the ZHMModSDK Editor by pressing the tilde key and click the `Rebuild entity tree` button. Click on the house to select it in the ZHMModSDK Editor Tree as well as in GlacierKit, and you can see that it selected on of the components of the house.
+
+![modtown_select_house.jpg](resources/modtown_select_house.jpg)
+We want to move the whole house, so select the `House` node and with the gizmo in translate mode, drag it with the arrows to move it over our new geometry.
+![modtown_move_house.jpg](resources/modtown_move_house.jpg)
+
+Let's also move the Super Targetman's starting location. Click on him and change his position to be over the new geometry as well.
+![modtown_npc_moved.jpg](resources/modtown_npc_moved.jpg)
+
+After taking out the target, we may need to move the exit as well.  
+![modtown_move_exit.jpg](resources/modtown_move_exit.jpg)
+
+Click the `Exit` node in GlacierKit, and use the Gizmo in ZHMModSDK to move it to a suitable location.  
+![modtown_exit_moved.jpg](resources/modtown_exit_moved.jpg)
+In GlacierKit, press the save button.
+
+## Regenerating the NAVP and AIRG again
+Let's open NavKit, and just as before, build the obj, navp, and airg, and replace the original NAVP and AIRG files in our mod. You don't need to redeploy to do this, as it operates directly on what is in game at the moment of generation.
+![navkit_regenerated.jpg](resources/navkit_regenerated.jpg)
+
+Redeploy, relaunch, and start the mission.
+
+![modtown_move_exit.jpg](resources/modtown_move_exit.jpg)
 
 ## Updating the images
 
@@ -1369,3 +1395,29 @@ In all, we will need 6 new images:
 * A target image (tile sized) for Super Targetman
 * A background image (fullscreen) for Modlandia
 * A tile image (tile sized) for the Modlandia
+
+Here are some examples:  
+![modtown_background.jpg](resources/modtown_background.jpg)
+> Modtown background  
+
+![modtown_tile.jpg](resources/modtown_tile.jpg)
+> Modtown tile  
+
+![modtown_entrance_outside.jpg](resources/modtown_entrance_outside.jpg)
+> Modtown entrance  
+
+![modtown_super_targetman.jpg](resources/modtown_super_targetman.jpg)
+> Modtown Super Targetman  
+
+![modlandia_background.jpg](resources/modlandia_background.jpg)
+> Modlandia background  
+
+![modlandia_tile.jpg](resources/modlandia_tile.jpg)
+> Modlandia tile  
+
+That's it for this guide. After following this guide, you should now be able to:  
+1. Create a custom campaign
+2. Modify and existing mission
+3. Create a new mission from scratch
+4. Create new NPCs
+5. Use NavKit
