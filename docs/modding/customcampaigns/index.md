@@ -17,5 +17,10 @@ This is a list of tools that are essential for any kind of Hitman modding. The t
 -   A program to read and edit JSON files ([VSCode](https://code.visualstudio.com/Download) or [WebStorm](https://www.jetbrains.com/webstorm/) is recommended, but any basic code editor will suffice)
 -   A program to extract and archive ZIP files (such as [7-Zip](https://www.7-zip.org/))
 
+## Example Mod
+If you'd like to follow along with an example that uses this guide, it is available here:
+
+### [Hitman Campaign Demo](https://github.com/dbierek/HitmanCampaignDemo)
+
 ## Next Steps
 Let's get modding!
