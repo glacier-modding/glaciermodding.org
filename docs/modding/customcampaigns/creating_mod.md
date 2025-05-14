@@ -24,30 +24,32 @@ You should now have a new repository for your mod owned by your GitHub user acco
 
 ## Cloning the mod repository to your computer
 
-To get this mod on your local computer, you will need to clone this repository. To clone the repository:
-1. You will first need to have `git` installed, and then run the clone command. For this, you have a few options.
-   1. GitHub Desktop
-      1. Download and install GitHub desktop.
-         1. Go to the [Download GitHub Desktop](https://desktop.github.com/download/) page.
-         2. Click the Download button to download the installer. Run the installer and follow the prompts, granting it access to your GitHub account so you can use it to clone and update your repos.
-      2. Open it and click the `Clone a repository from the internet` button.
-      3. Choose the `HitmanCampaignDemo` mod from your repositories list.
-      4. For the local path, set it to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo` (or whatever the name of your repo is).
-      5. Press the `Clone` button
-   2. GitHub command line interface:
-      1. Download and install the `git` command line executable. 
-         1. On windows: Go to the [git Download for Windows](https://git-scm.com/download/win) page and use the installer, or run the `winget` command on that page.
-         2. On Mac: Open a terminal and run `git --version`, and it will prompt you to install it if you don't have it already.
-         3. On Linux: You probably don't need these instructions but anyway:
-            1. Fedora-like: run `sudo dnf install git-all`.
-            2. Debian-based: run `$ sudo apt install git-all`.
-      2. Go to your mod repo's page on GitHub and click the green `Code` button near the top right of the page, and click the copy icon next to the url:
-         ![resources/copy_to_clipboard.jpg](resources/copy_to_clipboard.jpg)
-      3. Open a new terminal and `cd` to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods`.
-      4. Run `git clone [URL from clipboard]`.
+To get this mod on your local computer, you will need to clone this repository. To clone the repository you will first need to have `git` installed, and then run the clone command. For this, you have a few options:
+1. GitHub Desktop
+   1. Download and install GitHub desktop.
+      1. Go to the [Download GitHub Desktop](https://desktop.github.com/download/) page.
+      2. Click the Download button to download the installer. Run the installer and follow the prompts, granting it access to your GitHub account so you can use it to clone and update your repos.
+   2. Open it and click the `Clone a repository from the internet` button.
+   3. Choose the `HitmanCampaignDemo` mod from your repositories list.
+   4. For the local path, set it to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo` (or whatever the name of your repo is).
+   5. Press the `Clone` button
+2. GitHub command line interface:
+   1. Download and install the `git` command line executable. 
+      1. On windows: Go to the [git Download for Windows](https://git-scm.com/download/win) page and use the installer, or run the `winget` command on that page.
+      2. On Mac: Open a terminal and run `git --version`, and it will prompt you to install it if you don't have it already.
+      3. On Linux: You probably don't need these instructions but anyway:
+         1. Fedora-like: run `sudo dnf install git-all`.
+         2. Debian-based: run `$ sudo apt install git-all`.
+   2. Go to your mod repo's page on GitHub and click the green `Code` button near the top right of the page, and click the copy icon next to the url:  
+      ![resources/copy_to_clipboard.jpg](resources/copy_to_clipboard.jpg)
+   3. Open a new terminal in the `[HITMAN DIRECTORY]/Simple Mod Framework/Mods` directory.
+   4. Run `git clone [URL from clipboard]`.
+
+To be able to commit to your repo from your local computer you will need to set up a GitHub [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 
 ## A note on Hitman Modding and GitHub
-> Hitman modding involves a lot of details, and if any of them are incorrect, the mod may not deploy, or the mission may crash on loading, or crash during gameplay. For this reason it is generally good practice to make small changes, save, deploy, and launch the mission frequently, and if it works well, to commit your changes to your GitHub repository. This can save you some time and frustration later, because if something breaks down the line, you can switch back to a previous commit to see the last time it worked, and what is different since then to narrow down the issue. 
+> Hitman modding involves a lot of details, and if any of them are incorrect, the mod may not deploy, or the mission may crash on loading, or crash during gameplay. For this reason it is generally good practice to make small changes, save, deploy, and launch the mission frequently, and if it works well, to commit your changes to your GitHub repository. This can save you some time and frustration later, because if something breaks down the line, you can switch back to a previous commit to see the last time it worked, and what is different since then to narrow down the issue.   
+> Check the `README.md` file in your new mod's folder for recommendations on how to make commits to your repo.
 
 ## Next Steps
 
