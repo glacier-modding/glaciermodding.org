@@ -55,7 +55,7 @@ Expand the `Gameplay` node.
 
 Right-click on the `Starting Locations` node and click `Create entity` and name it `CEO Office`.
 
-Righ-click on the `CEO Office` node and click `Create entity` and name it `HeroSpawn_Location_Default`.
+Right-click on the `CEO Office` node and click `Create entity` and name it `HeroSpawn_Location_Default`.
 
 Click on the `HeroSpawn_Location_Default` entity. Replace the two lines that start with `"factory"` and `"blueprint"` with:
 ```json

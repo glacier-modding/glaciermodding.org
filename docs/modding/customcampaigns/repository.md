@@ -14,12 +14,12 @@ The repository stores metadata about various things in Hitman: World of Assassin
 For our purposes we will just be adding a new starting location for now. 
 
 ## Creating a repository file
-In GlacierKit, right-click on the `content/chunk0` folder and create a new file named `hitman_campaign_demo.repository.json`. (The exact filename doesn't really matter, as long as it ends with `.repository.json` but for this tutorial we'll use `hitman_campaign_demo.repository.json`).
+In GlacierKit, switch back to the `Files` tab, right-click on the `content/chunk0` folder and create a new file named `hitman_campaign_demo.repository.json`. (The exact filename doesn't really matter, as long as it ends with `.repository.json`, but for this tutorial we'll use `hitman_campaign_demo.repository.json`).
 
 ## Modifying the repository file
 In GlacierKit, click on the `hitman_campaign_demo.repository.json` file. You will see the repository editor:  
 ![repository.jpg](resources/repository.jpg)
-Click on the `New item` button.
+Click on the `New item` button, click on the new item that appears, and replace the contents in the text area with this:
 
 ```json
 {
@@ -32,7 +32,7 @@ Click on the `New item` button.
 You should now see your custom starting location's repository entry.  
 ![repository_ceo_office.jpg](resources/repository_ceo_office.jpg)
 
-Note the new starting location's repository entry's new UUID, just above the Editor text area. We will need that for the next step, so highlight and copy it now.
+Note the new starting location's repository entry's new UUID, just above the Editor text area. We will need that for the next step, so let's keep this file open so we can access it easily later.
 
 Click the save icon.
 
@@ -42,4 +42,4 @@ In the `blobs/images/` folder, create a new folder named `entrances`. In that fo
 > Here is an example you can use for the `bank_entrance_ceo.jpg` file
 
 ## Next Steps
-Now that we have a repostitory entry for our new starting location, we need to set it as unlocked to be able to use it.
+Now that we have a repository entry for our new starting location, we need to set it as unlocked to be able to use it.

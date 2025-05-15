@@ -220,7 +220,7 @@ Replace `[BANK MISSION UUID]` with the UUID for the Bank mission from the `missi
 
 Replace `[MODTOWN MISSION UUID]` with the UUID for the Modtown mission from the `mission_modtown.contract.json` file.
 
-And that's all there is to it! Redploy the mod in SMF and the next time you restart the Peacock server, it will run your plugin.
+And that's all there is to it! Redeploy the mod in SMF and the next time you restart the Peacock server, it will run your plugin.
 
 ## Wrapping up
 

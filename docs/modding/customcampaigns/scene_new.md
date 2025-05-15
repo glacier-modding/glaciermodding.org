@@ -926,7 +926,7 @@ On the `Text tools` tab, paste that IOI string into the `Hash calculator` field 
 
 Back in NavKit, click the `Save Airg` button, and navigate to the `content/chunk2` folder and name it the hex value you copied.
 
-Now that we have our NAVP and AIRG files, we need to tell the scenario to use them. In GlaicerKit, go to the `scenario_modtown.entity.json` file on the `Tree` view, expand the `Scenario_Modtown > AI` node. Right-click on the `Pathfinding` node and click `Create Entity`, name it `Pathfinder_Configuration`, click on the new node and in the contents, replace everything after the `parent` field with:
+Now that we have our NAVP and AIRG files, we need to tell the scenario to use them. In GlacierKit, go to the `scenario_modtown.entity.json` file on the `Tree` view, expand the `Scenario_Modtown > AI` node. Right-click on the `Pathfinding` node and click `Create Entity`, name it `Pathfinder_Configuration`, click on the new node and in the contents, replace everything after the `parent` field with:
 ```json
 "name": "Pathfinder_Configuration",
 "factory": "[modules:/zpathfinderconfiguration.class].pc_entitytype",

@@ -9,7 +9,7 @@ For this tutorial, we will go over creating a custom mission contract.
 
 ## Creating the `mission_bank.contract.json` file
 
-In the `content/chunk0/` folder, create a new folder named `Mission Contracts`. In that folder create a new file named `mission_bank.contract.json` and set its contents to:
+In GlacierKit, in the `content/chunk0/` folder, create a new folder named `Mission Contracts`. In that folder create a new file named `mission_bank.contract.json`, click it, and set its contents to:
 
 ```json
 {
@@ -48,21 +48,28 @@ In the `content/chunk0/` folder, create a new folder named `Mission Contracts`. 
 }
 ```
 
-## Explanation:
+In the `Entrances` field enter a new UUID for the new entrance, for instance:
+`"Entrances": ["8e2bdc62-905d-43c1-8d91-3dceb8506a77"],`    
 
-* In the `Entrances` field enter a new UUID for the new entrance, for instance:
-`"Entrances": ["8e2bdc62-905d-43c1-8d91-3dceb8506a77"],`
-* In the `Id` field enter the same UUID for this mission that you created for the `CampaignMenu.JSON.patch.json` file.
-* In this example, we are creating a custom mission for the New York location, so the `Location` field is set to `LOCATION_GREEDY_RACCOON`, the `CodeName_Hint` field is set to `New York`, and the `Entitlements` field list is set to `H2_LEGACY_EXPANSION`.
+In the `Id` field enter the same UUID for this mission that you created for the `storyconfig.JSON.patch.json` file.
+
+In this example, we are creating a custom mission for the New York location, so the `Location` field is set to `LOCATION_GREEDY_RACCOON`, the `CodeName_Hint` field is set to `New York`, and the `Entitlements` field list is set to `H2_LEGACY_EXPANSION`.
+
+Set the `CreatorUserId` to your personal `CreatorUserId` if there is one that you use, or a new UUID generated with GlacierKit. It's not really used anywhere currently, but maybe down the line it will be.    
+
+Press the save button.
 
 ## Create the mission tile image
-In the `blobs/images/campaign_demo/bank/` folder, create a new image file for named `tile.jpg` with a resolution of 693 by 517.
+In the `blobs/images/campaign_demo` folder, create a new folder named `bank`, and in that folder, create a new image file for named `tile.jpg` with a resolution of 693 by 517.
 ![bank_tile_template.jpg](resources/bank_tile_template.jpg)
 > Here is an example you can use for the `tile.jpg` file 
 
 ## Deploying mod
-Let's deploy the mod again and see the difference.
-Now when you click on the Hitman Campaign Demo tile, you will see the new mission.  
+Let's deploy the mod and see what it looks like.
+
+Go to the `Campaigns` tab and you will see the new `Hitman Campaign Demo` campaign.
+
+When you click on the `Hitman Campaign Demo` tile, you will see the new bank mission.  
 ![resources/mission_list.jpg](resources/mission_list.jpg)
 
 If you click on that mission, you will see the mission menu on the Objectives tab.

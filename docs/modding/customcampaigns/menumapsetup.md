@@ -11,9 +11,11 @@ For this tutorial, we will go over patching the MenuMapSetup files. MenuMapSetup
 
 In GlacierKit, on the `Files` tab, right-click on the `content/chunk0` folder and click `New File`. Name it `menumapsetup_hitman_campaign_demo.entity.json` or something similar.
 
-Click on this new file. Let's give this file a Factory and Blueprint hash. For the Factory hash, let's use:  
-`[assembly:/_pro/scenes/bricks/menumapsetup_hitman_campaign_demo.brick].pc_entitytype`
-And for the Blueprint hash, let's use:
+Click on this new file and switch to the `Metadata` tab. Let's give this file a `Factory hash` and `Blueprint hash`. For the `Factory hash`, let's use:  
+`[assembly:/_pro/scenes/bricks/menumapsetup_hitman_campaign_demo.brick].pc_entitytype`  
+You will notice that it converted the text (an IOI String) into a hexadecimal value (a "hash"). This is the format that the game uses. Since we started with an IOI string, GlacierKit added this IOI string to the "Custom Paths" for this project behind the scenes. You will notice that under the `Factory hash` text box, the IOI string you entered is shown.  
+
+For the Blueprint hash, let's use:  
 `[assembly:/_pro/scenes/bricks/menumapsetup_hitman_campaign_demo.brick].pc_entityblueprint`
 
 Let's also make sure the `Entity Type` dropdown is set to `Brick`. 
@@ -56,7 +58,7 @@ The whole entity json should now look something like this:
 ```
 Now that we have a menumap entity, we need to set the `resource` field of the `m_pMetaDataResource` property. This value is a hexadecimal representation of the hashed value of an IOI string for a planning contract. We will need to set this to the hashed value of our new planning contract.
 
-Let's use the IOI string `(planning_contract) greedy bank`. So we don't forget this IOI string, let's add it to the custom hashes list for our project.
+Let's use the IOI string `(planning_contract) greedy bank`. So we don't forget this IOI string, let's add it to the custom paths list for our project manually.
 
 In GlacierKit, click on the `Settings` button on the left sidebar. Scroll to the bottom of the `Custom paths` section and click the `Add an entry` button. Enter `(planning_contract) greedy bank` and press the `Continue` button.
 
@@ -89,11 +91,11 @@ The `Scene_Bank` node should now look like this:
 }
 ```
 
-Click the save icon on the `menumapsetup_hitman_demo_campaign.brick` file.
+Click the save icon on the `menumapsetup_hitman_demo_campaign.brick` file or press `Ctrl + S`.
 
 ## Patching the `mainmenu` entity
 
-Now we have a menumapsetup brick, but the game is never told to use it yet. To get the game to use it, we can patch the `mainmenu` entity.
+Now we have a menumapsetup brick, but the game has not been told to use it yet. To get the game to use it, we can patch the `mainmenu` entity.
 
 In GlacierKit, on the `Game content` tab, search for `mainmenu`, and click on the `mainmenu.entity.entitytemplate` file.
 

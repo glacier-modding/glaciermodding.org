@@ -84,7 +84,7 @@ While in `Object Mode`, click on the cube, and then switch to `Edit Mode` using 
 Press the `U` key to bring up the `UV Mapping` popup and click `Project from View`, and the UV mapping will be much better.
 ![blender_top_view.jpg](resources/blender_top_view.jpg)
 
-Holding down the middle mouse button, drag the mouse around and you can see that all the faces that are not facing upwards have UV maps that don't look that great. You can click the red `X` circle or green `Y` circle on the top right of the 3D view to switch to a Front, Side, or Back view, then press `Alt + A` to deselect all the faces, then click on a face that has a bad UV mapping, press the `U` key and click `Project from View` again to UV map just this face. Repeat for all the faces that don't look properly UV mapped. 
+Holding down the middle mouse button, drag the mouse around, and you can see that all the faces that are not facing upwards have UV maps that don't look that great. You can click the red `X` circle or green `Y` circle on the top right of the 3D view to switch to a Front, Side, or Back view, then press `Alt + A` to deselect all the faces, then click on a face that has a bad UV mapping, press the `U` key and click `Project from View` again to UV map just this face. Repeat for all the faces that don't look properly UV mapped. 
 
 ![blender_uv_map_side_faces.jpg](resources/blender_uv_map_side_faces.jpg)
 
@@ -122,7 +122,7 @@ In the new `Geometry` folder, create a new file named `modtown.entity.json`. In 
 and the `Blueprint hash` field to:  
 `[assembly:/_pro/environment/geometry/modtown/modtown.entitytemplate].pc_entityblueprint`  
 
-And in the `Tree` view, right-click on the `Scene` node and click `Create Entity` and name it `modtown` and in it's contents, replace everything after the `parent` field with:  
+And in the `Tree` view, right-click on the `Scene` node and click `Create Entity` and name it `modtown` and in its contents, replace everything after the `parent` field with:  
 ```json
 	"name": "modtown",
 	"factory": "[modules:/zspatialentity.class].pc_entitytype",

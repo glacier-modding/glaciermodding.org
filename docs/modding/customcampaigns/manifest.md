@@ -7,7 +7,7 @@ description: Manifest File
 
 For this tutorial, we will go over what to put in the Simple Mod Framework manifest file for the `Hitman Campaign Demo` mod.
 
-The `manifest.json` is what Simple Mod Framework uses to know how to display and deploy your mod. The [Simple Mod Framework Documenation](https://github.com/atampy25/simple-mod-framework/blob/main/docs/Index.md) explains more about the `manifest.json` file and how to customize it in detail, but for this tutorial, let's go over a few parts that are especially relevant at the moment.
+The `manifest.json` is what Simple Mod Framework uses to know how to display and deploy your mod. The [Simple Mod Framework Documentation](https://github.com/atampy25/simple-mod-framework/blob/main/docs/Index.md) explains more about the `manifest.json` file and how to customize it in detail, but for this tutorial, let's go over a few parts that are especially relevant at the moment.
 
 ## Editing the `manifest.json` file
 Using either GlacierKit or a text editor or an IDE like WebStorm, Edit the `manifest.json` file and replace the contents with this:
