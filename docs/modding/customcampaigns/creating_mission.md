@@ -41,14 +41,11 @@ In GlacierKit, right-click the `content/chunk12` folder and click `New File` and
 
 Right click [Scenario brick](resources/empty_scenario_brick.entity.json) and press `Save link as...` and save it into your `content/chunk12` folder with a name of `scenario_bank.entity.json`.
 
-
 ## Setting the factory and blueprint hashes for the scene
 Now we have our scene and scenario files, but the game doesn't know to tie them to the IOI strings that we created. We can fix that by setting the `Factory hash` and `Blueprint hash` for these files.
 
 In GlacierKit, click on the `scene_bank.entity.json` file, switch to the `Metadata` tab, and in the `Factory hash` text field enter:  
-
 `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.entity].pc_entitytemplate`  
-
 and press enter. It will automatically be converted to a hashed hexadecimal value that the game uses for this IOI string.
 
 > **_NOTE:_**  **It is important to use `pc_entitytemplate` here and for the rest of the IOI strings in the scene and scenario, instead of `entitytemplate`.  
@@ -65,15 +62,16 @@ To set the scenario for the scene we first need to choose the IOI string for the
 
 For the bank mission's scene as we specified in the `manifest.json`, we are using:  
 `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.entity].pc_entitytemplate`  
+
 So our IOI string for the scenario will be:  
 `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scenario_bank.brick].pc_entitytype`
+> _NOTE:_ The scene ends in `.entity].pc_entitytemplate` while the scenario ends in `.brick].pc_entitytype`. This is because the scenario has an entity type of `Brick`, as we will soon see.
 
-We need to add it to the `externalScenes` field of the `content/chunk12/scene_bank.entity.json` file. To do that we can use  GlacierKit.
-* Open the mod folder
-* Navigate to the `content/chunk12/scene_bank.entity.json` file and click on it
-* Go to the Metadata tab on the right panel
-* Click the `Add an entry` button under the `External scenes` section
-* Enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scenario_bank.brick].pc_entitytype` and click the `Continue` button
+We need to add it to the `externalScenes` field of the `content/chunk12/scene_bank.entity.json` file.  
+
+In GlacierKit, while still on the `Metadata` tab for `scene_bank.entity.json`, click the `Add an entry` button under the `External scenes` section. Enter:  
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scenario_bank.brick].pc_entitytype`
+and click the `Continue` button.
 
 ![resources/externalScenes.jpg](resources/externalScenes.jpg)
 
@@ -84,11 +82,15 @@ The scenario will also need Factory and Blueprint hashes in order for the game t
 
 In GlacierKit, navigate to the `content/chunk12/scenario_bank.entity.json` file and open it.
 
-In the `Factory hash` text field, enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scenario_bank.brick].pc_entitytype` and press enter.
+In the `Factory hash` text field, enter:  
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scenario_bank.brick].pc_entitytype`  
+and press enter.
 
-In the `Factory blueprint` text field enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scenario_bank.brick].pc_entityblueprint` and press enter.
+In the `Factory blueprint` text field enter:  
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scenario_bank.brick].pc_entityblueprint`  
+and press enter.
 
-For the scenario, we want the `Entity Type` to be `Brick`. The template file we based the scenario off of already has it set to `Brick` so we can just leave that.
+For the scenario, we want the `Entity Type` to be `Brick`. The template file we used for the scenario already has it set to `Brick` so we can just leave that as is.
 
 Press the save button.
 

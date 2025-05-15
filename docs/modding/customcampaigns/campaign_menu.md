@@ -12,7 +12,7 @@ Open WebStorm and when prompted, open your mod's folder.
 
 In the root folder for your mod, create a new folder named `content`. In that folder create another folder named `chunk0`.
 
-In the `chunk0` folder, create a file named `storyconfig.JSON.patch.json` and set the contents to this:
+In the `chunk0` folder, create a folder named `Story Config`. In that folder create a file named `storyconfig.JSON.patch.json` and set the contents to this:
 
 ```json
 {

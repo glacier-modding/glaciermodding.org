@@ -79,15 +79,15 @@ Go in to free cam mode on ZHMModSDK and select a guard.
 
 Click the `Move to Hitman` button.
 
-Move 47 out of the guard's vision by selecting him and dragging him away using the gizmo.
+Move 47 out of the guard's vision by selecting him and dragging 47 away using the gizmo.
 
 Throw a coin to lure the guard.
 
 ![walk_on_chair.jpg](resources/walk_on_chair.jpg)
 
-That's not very polite!
+He's walking on the couch. That's not very polite!
 
-Let's take a look at the original New York navp and see why this is happening.
+Let's take a look at the original New York NAVP and see why this is happening.
 
 First we need to extract the original NAVP and AIRG.
 
