@@ -44,7 +44,7 @@ In GlacierKit, in the `content/chunk0/` folder, create a new folder named `Missi
 		"Entitlements": ["H2_LEGACY_EXPANSION"]
 	},
 	"UserData": {},
-	"SMF": { "destinations": { "addToDestinations": true, "peacockIntegration": true, "narrativeContext": "Mission" } }
+	"SMF": {}
 }
 ```
 
@@ -85,6 +85,47 @@ If you click the new location, it will show our new starting location as the onl
 ![resources/starting_locations.jpg](resources/starting_locations.jpg)
 
 If you go back and press the Play button, the game will crash, as we haven't actually created this scene.
+
+## Committing and merging into the `next-release` branch
+Now seems like a good time to make another commit if you haven't yet. This time let's commit to our `more-setup` branch and merge it into our `next-release` branch, but let's not make a new release.
+
+In WebStorm opened to your mod folder, open the `Commit` tab. Select every file, right-click one and press `Add to VCS`.
+
+Press the `Terminal` button and in the terminal enter:
+```batch
+git commit -am "Added menu items, repository, unlockables, and planning and mission contracts"
+```
+and press enter. Then enter:
+```batch
+git push -u origin head
+```
+Click the `Create a pull request for 'more-setup'` link and create a new pull request with the base branch set to `next-release`.
+
+We only have one commit, but just to build some muscle memory, let's change the merge button dropdown to `Squash and Merge`, and click that button.
+
+For the commit message, use your original commit message but add `feat: ` at the beginning, so it says:
+`feat: Added menu items, repository, unlockables, and planning and mission contracts`
+and continue with the merge. Also delete the branch when prompted.
+
+Back in WebStorm, on the terminal enter:
+```batch
+git pull
+```
+It will say that your `more-setup` branch is not on the remote. This time, since the `next-release` branch still exists on the remote, and has our changes, let's check out that branch instead of `main`. Enter:
+```batch
+git checkout next-release
+```
+Let's also delete our local copy of the `more-setup` branch. Enter:
+```batch
+git branch -D more-setup
+```
+> Note: We need to capitalize the `-D` flag this time to force the branch deletion, because we merged the `more-setup` into the `next-release` branch, but not into the `main` branch.
+
+The next step we'll be taking is creating a new scenario and scene, so let's check out a new branch. Enter:
+```batch
+git checkout -b create-scenario-and-scene
+```
+This creates a new branch based on our `next-release` branch.
 
 ## Next Steps
 Now that we have the menus set up for our new mission, lets make a new scene file and a new scenario file for it.

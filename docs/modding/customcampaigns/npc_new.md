@@ -6,7 +6,7 @@ description: Creating a new NPC
 # Creating a new NPC
 For this tutorial, we will go over how to create a new NPC that will be used as a target.
 
-Building off our Bank mission, let's make a new target named `Target McTargetface`. First we'll need to update the `manifest.json` file to add some localisation strings.
+Building off our Bank mission, let's make a new target named `Target McTargetface`. First we'll need to update the `manifest.json` file to add some `localisation` strings.
 
 ## Updating the Manifest file 
 Our new NPC needs to have a name and description added to the manifest file so that the menus will be able to display them, and we need to add a new entry to the `packagedefinition`.
@@ -34,9 +34,9 @@ In full, it should now look like this:
 Press the save button.
 
 ## Adding Repository entries for the NPC and Outfit 
-In GlacierKit, open the `HitmanCampaignDemo.repository.json` file.
+In GlacierKit, open the `campaign_demo.repository.json` file.
 
-Let's create our outfit repository entry. Click the `New item` button and set the `Editor` text to be:
+Let's create our outfit repository entry. Click the `New item` button, select the new item, and set the `Editor` text to be:
 ```json
 {
   "CommonName": "Outfit Target McTargetface",
@@ -65,12 +65,12 @@ Now let's create our NPC repository entry. Click the `New item` button and set t
 }
 ```
 
-We can see that we will need a new image file. In our `images/campaign_demo/bank` folder let's create a new file named `target_mc_targetface.jpg` and make it a template picture for the target.
-![target_mc_targetface_template.jpg](resources/target_mc_targetface_template.jpg)
-
 Copy the id of the new outfit repository entry from under the `Editor` header text and paste it into the `Outfit` field of the new NPC entry.
 
-We will also need this repository entry's id, so select the UUID under the `Editor` header text and copy it.
+We can see that we will need a new image file. In our `images/campaign_demo/bank` folder let's create a new file named `target_mc_targetface.jpg` and make it a placeholder picture for the target.
+![target_mc_targetface_template.jpg](resources/target_mc_targetface_template.jpg)
+
+We will also need this repository entry's id UUID under the `Editor` header text in a moment.
 
 Click the save button.
 
@@ -395,7 +395,11 @@ Replace everything beneath the `parent` field with:
 }
 ```
 
-This will create our new target NPC and place him roughly in the center of the CEO's Office. Since the `m_aEnforcedOutfits` array is empty, he will not be an enforcer for Agent 47. We could make the NPC an enforcer for Agent 47 in his own suit, but it might be better to just give our new CEO the CEO profession. This way, any zones that the CEO enforces will also be enforced by our NPC. 
+This will create our new target NPC and place him roughly in the center of the CEO's Office.
+
+## Adding a profession to an NPC
+
+Since the `m_aEnforcedOutfits` array is empty, he will not be an enforcer for Agent 47. We could make the NPC an enforcer for Agent 47 in his own suit, but it might be better to just give our new CEO the CEO profession. This way, any zones that the CEO enforces will also be enforced by our NPC. 
 
 Switch to the `outfits_bank.entity.json` file. Right-click on the `Target McTargetface` node and click `Create Entity` and set the name to `Prof_Greedy_Unique_CEO`. Replace everything in the entity contents after the `parent` field with:
 ```json

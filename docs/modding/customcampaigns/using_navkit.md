@@ -121,14 +121,16 @@ The first step to generating a new NAVP file and a new AIRG file is the extract 
 For this we will need to set a couple of settings.
 
 1. Set your `Hitman 3` directory by pressing the `Set Hitman Directory` button on the top right.
-2. Set the `Output` directory to a directory of your choice by pressing the `Set Output Directory. It should be on a drive that has a decent amount of space. I recommend a drive with at least 1 GB of free space, since there will need to be a lot of ALOC (collision) files extracted, and the OBJ files can get pretty large as well.
-3. Set the `blender.exe` path by pressing the `Set Blender Executable`.
+2. Set the `Output` directory to a directory of your choice by pressing the `Set Output Directory` button. It should be on a drive that has a decent amount of space. I recommend a drive with at least 1 GB of free space, since there will need to be a lot of ALOC (collision) files extracted, and while they are small, the OBJ files can get pretty large.
+3. Set the `blender.exe` path by pressing the `Set Blender Executable` button.
 
 Now that the settings are configured. Make sure Hitman is running and your custom mission is loaded.
 
 Press the `Extract from game` button on the `Extract menu` on the right sidebar.
 
-This will take a minute or two. Once it is done, you should see some red boxes appear in NavKit. These are `Pathfinding Boxes` with an `Exclude` type. They tell NPCs to avoid that region, even if it is within a valid NAVP area.
+This may take a few minutes, as it walks the entity tree to gather all the entities with collision and extracts all the ALOC files the scenario uses from the RPKG files. Once you have the ALOC files extracted, the next time you export, it will be faster.
+
+Once it is done, you should see some red boxes appear in NavKit. These are `Pathfinding Boxes` with an `Exclude` type. They tell NPCs to avoid that region, even if it is within a valid NAVP area.
 ![navkit_extracted_scene.jpg](resources/navkit_extracted_scene.jpg)
 
 Now that you have the scene extracted, let's save it so we can load it later if we want.
@@ -140,9 +142,9 @@ You can save the file anywhere, but I like to keep all my outputs in the output 
 ## Building an OBJ (3D mesh) of the scene
 Now that we have the scene extracted, you can close Hitman if you want.
 
-Click the `Build obj from NavKit Scene` button on the `Obj menu` of the right sidebar.
+Click the `Build obj from NavKit Scene` button (not the `Build obj from Navp` button) on the `Obj menu` of the right sidebar.
 
-This will take a minute or two, and when it's done, you will see a 3d representation of your custom mission comprised of the collision files for all the entities in the level. These are lower fidelity models of the 3D models of the level geometry that are used to calculate collisions efficiently.
+This may take a few minutes as well, and when it's done, you will see a 3d representation of your custom mission comprised of the collision files for all the entities in the level. These are lower fidelity models of the 3D models of the level geometry that are used to calculate collisions efficiently.
 
 ![navkit_obj_built.jpg](resources/navkit_obj_built.jpg)
 
@@ -160,7 +162,9 @@ Now that we have the `NavKit Scene` file and the `OBJ` file loaded for our custo
 After a minute, the new navp should be loaded.
 ![navkit_generated_navp.jpg](resources/navkit_generated_navp.jpg)
 
-You can see that the new navp has been generated and there are now cutouts for both the chairs. In this case, it also generated some sloped ares on the chairs, but since they are not connected to anything, they shouldn't cause any issues. If you'd like you can lower the `Max Climb` or `Max Slope` values using the sliders on the `Navp menu`, the left sidebar, and regenerate the Navp.
+You can see that the new navp has been generated and there are now cutouts for both the chairs. In this case, it also generated some sloped ares on the chairs, but since they are not connected to anything, they shouldn't cause any issues.
+
+> If you'd like to experiment with the settings, you can lower the `Max Climb` or `Max Slope` values using the sliders on the `Navp menu` (the left sidebar) and regenerate the NAVP, but for the tutorial we'll proceed with this version.
 
 Once you are satisfied with the NAVP, click the `Save Navp` and save it to your `Bank` folder as `bank.navp`.
 
@@ -169,7 +173,9 @@ The AIRG waypoints and connections still go through the new chair, so let's buil
 ## Building an AIRG from a NAVP file
 Now that we have the NAVP loaded, click the `Build Airg from Navp` button on the `Airg menu` on the bottom of the right sidebar.
 
-This may take a few minutes. When it's done, you should see that the airg waypoints and connections no longer go through the new chair.
+This may take a few minutes. When it's done, you should see that the airg waypoints and connections mostly no longer go through the new chair.
+
+> The AIRG will connect over small gaps like corners or small obstacles. This is OK because it's just used for the initial pathfinding calculation. If the NPC determines it can walk from one AIRG waypoint to another, it will perform the pathfinding calculation using the NAVP to determine the actual path it will walk.
 
 Click the `Save Airg` button and in your new `Bank` folder, save the file as `bank.airg`.
 
@@ -195,7 +201,7 @@ For the property override, we will need the entity id of this `PathfinderConfigu
 Back in our `scenario_bank.entity.json` file, on the `Overrides` tab, go to the `Property overrides` tab. Add this object at the end of the list:
 
 ```json
-    {
+{
   "entities": [
     {
       "ref": "3f33852272bbd53f",
@@ -220,7 +226,9 @@ This will override the NAVP that the scenario uses with our custom NAVP, but we 
 
 The name of the file that we will need in our mod folder will actually need to use the hashed IOI string, in hexadecimal format. Let's copy our NAVP's IOI String and use GlacierKit to convert it for us.
 
-In GlacierKit, go to the `Text tools` tab on the left sidebar and enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.navp].pc_navp` into the `Hash calculator`. Click the copy icon next to the `Hex` field, to copy the value `00DCA47815BC371B`.
+In GlacierKit, go to the `Text tools` tab on the left sidebar and enter:  
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.navp].pc_navp`  
+into the `Hash calculator`. Click the copy icon next to the `Hex` field, to copy the value `00DCA47815BC371B`.
 
 Let's save another copy of our NAVP file, this time to the actual mod. In NavKit, click the `Save Navp` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/content/chunk12/`, and use our hashed value `00DCA47815BC371B` for the name.
 
@@ -248,7 +256,7 @@ For the property override, we will need the entity id of this `AI Reasoning Grid
 Back in our `scenario_bank.entity.json` file, on the `Overrides` tab, go to the `Property overrides` tab. Add this object at the end of the list:
 
 ```json
-    {
+{
   "entities": [
     {
       "ref": "4247b786624f801f",
@@ -273,7 +281,9 @@ This will override the AIRG that the scenario uses with our custom AIRG, but we 
 
 As before, the name of the file that we will need in our mod folder will actually need to use the hashed IOI string, in hexadecimal format. Let's copy our AIRG's IOI String and use GlacierKit to convert it for us.
 
-In GlacierKit, go to the `Text tools` tab on the left sidebar and enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.airg].pc_airg` into the `Hash calculator`. Click the copy icon next to the `Hex` field, to copy the value `0065C805E39F128A`.
+In GlacierKit, go to the `Text tools` tab on the left sidebar and enter:  
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.airg].pc_airg`  
+into the `Hash calculator`. Click the copy icon next to the `Hex` field, to copy the value `0065C805E39F128A`.
 
 Let's save another copy of our AIRG file, this time to the actual mod. In NavKit, click the `Save Airg` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/content/chunk12/`, and use our hashed value `0065C805E39F128A` for the name.
 
@@ -289,6 +299,48 @@ Just as before, teleport the guard into the room and lure him with a distraction
 ![navkit_guard_walking_around.jpg](resources/navkit_guard_walking_around.jpg)
 
 We can see that the guard avoids the new chair now.
+
+## Making a new release
+Since we've made a lot of changes, let's commit our changes to the `create-scenario-and-scene` branch, merge that into the `next-release` branch, and make a new release from both of our new feature commits.
+
+In WebStorm, click the terminal button, and on the terminal, enter:
+```batch
+git commit -am "Created scenario, scene, and added navp and airg"
+```
+Press enter and then enter:
+```batch
+git push -u origin head
+```
+As before, click the new pull request link, create the pull request based on the `next-release` branch, `Squash & Merge` with the message being `feat: Created scenario, scene, and added navp and airg`, and delete the branch when prompted.
+
+Now go back to the repo's main page on GitHub, and click the `New Pull Request` button on the yellow bar on top for the `next-release` branch. Create the PR.
+
+This time, just use a regular `Create a Merge commit`, which will include both of your `feat:` commits rather than squashing them. The message here isn't as important, but you don't need to include `feat:`.
+
+Go ahead and delete the `next-release` branch when prompted as well.
+
+The GitHub actions workflow will run and create a new release for your mod.
+
+Back in WebStorm, let's clean up those branches. Enter:
+```batch
+git checkout main
+```
+Then:
+```batch
+git pull
+```
+Then:
+```batch
+git branch -D create-scenario-and-scene
+```
+Then:
+```batch
+git branch -d next-release
+```
+Next we will be adding an NPC so enter:  
+```batch
+git checkout -b Add-NPC
+```
 
 ## Next Steps
 Now that we can have NPCs use our custom level geometry, let's add a new NPC that will be our target.
