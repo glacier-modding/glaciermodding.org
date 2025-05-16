@@ -94,56 +94,62 @@ Open the `content/chunk0/Mission Contracts/mission_bank.contract.json` file. Und
     }
 }
 ```
-Replace the `[NEW GENERATED UUID]` value with your copied UUID from the repository entry.
+Let's generate a new UUID for the new mission contract objective using GlacierKit. Go to the `Text tools` section and click the copy button next to the `Random UUID` text field, and paste it into the `Id` field.
 
-Let's also generate a new UUID for the new mission contract objective using GlacierKit. Go to the `Text tools` section and click the copy button next to the `Random UUID` text field, and paste it into the `Id` field.
+Replace the `[NEW NPC'S UUID]` value in the `BriefingName` and `SuccessEvent` fields with your new NPC's UUID from the repository entry.
 
 Click the save button.
 
 Our new NPC will need a new outfit, and we will need to make a new outfits brick for our NPC's outfit.
 
-## Adding a new Outfit
-In GlacierKit, right-click our `content/chunk12` folder and click `New folder` and name it `Outfits`.
+## Creating a new Outfit file
+In GlacierKit, right-click your `content/chunk12` folder and click `New folder` and name it `Outfits`.
 
 Right-click that new `Outfits` folder and click `New File` and name it `outfit_target_mctargetface_v0.entity.json`. Click on that new file.
 
 Switch to the `Metadata` tab and change the `Entity type` dropdown to `Template`.
 Let's set the `Factory hash` to:
-`[assembly:/_pro/characters/templates/hitman_campaign_demo/outfit_target_mctargetface_actor_v0.entitytemplate].pc_entitytemplate`
-and set the `Factory blueprint` to:
+`[assembly:/_pro/characters/templates/hitman_campaign_demo/outfit_target_mctargetface_actor_v0.entitytemplate].pc_entitytemplate`  
+and set the `Blueprint hash` to:  
 `[assembly:/_pro/characters/templates/hitman_campaign_demo/outfit_target_mctargetface_actor_v0.entitytemplate].pc_entityblueprint`
 
 Switch to the `Tree` view.
 
+## Copying an existing outfit
+
 Let's copy an outfit from the New York outfits and modify it. For this example, we'll use the Mateo NPC outfit.
 
-Go to the `Game content` tab and search for `outfit_` and check the `Separete tree by partition` checkbox. Scroll down to the `greedy > assembly > _pro > characters > templates > raccoon > char_raccoon_unique.template?` folder and expand it. Click on the `outfit_raccoon_unique_headofsecurity_m_actor_v0.entitytemplate` node and click the `Open in editor` button. Switch to the `Tree` view.
+Go to the `Game content` tab and search for `outfit_` and check the `Separete tree by partition` checkbox. Scroll down to the `greedy > assembly > _pro > characters > templates > raccoon > char_raccoon_unique.template?` folder and expand it. Click on the `outfit_raccoon_unique_headofsecurity_m_actor_v0.entitytemplate` node and click the `Open in editor` button.
 
-Right-click on the `OUTFIT_Raccoon_Unique_HeadOfSecurity_M_Actor_v0` node and click `Clipboard > Copy`.
+On the `Tree` tab, right-click on the root `OUTFIT_Raccoon_Unique_HeadOfSecurity_M_Actor_v0` node and click `Clipboard > Copy`.
 
 Switch back to the `outfit_target_mctargetface_v0.entity.json` file. Right-click on the `Scene` and click `Clipboard > Paste`.
 
 Now it is a child node of the `Scene` node, but we actually want it at the root. Drag the `OUTFIT_Raccoon_Unique_Lieutenant_M_Actor_v0` node to the root of the tree. It will now be on the same level as the `Scene` node.
 
-We also need to set this node to be the root entity. Copy the entity id from under the `Editor` panel header text.
+We also need to set this node to be the root entity. Click on the new entity, and copy the entity id from under the `Editor` panel header text.
 
 Switch to the `Metadata` tab. Replace the value into the `Root entity` text field with the id you copied.
 
 Switch back to the `Tree` tab and delete the `Scene` node.
 
-Let's delete Mateo's badge. Expand the `OUTFIT_Raccoon_Unique_Lieutenant_M_Actor_v0` node. Right-click the `Spine2_Attacher_01` node and click `Delete.
-
-Let's also delete Mateo's walkie-talkie. Right-click the `Pelvis_Attacher` node and click `Delete.
-
 Click on the `OUTFIT_Raccoon_Unique_Lieutenant_M_Actor_v0` node and change the name field to `OUTFIT_TargetMcTargetface_Actor_v0`.
 
-Click through the different outfit piece entities, you will notice several outfit parts have a `SColorRGB` fields with a color square. Let's change some of them. In this example I chose to make all the customizable colors white.
+## Modifying an existing outfit
+
+Let's delete Mateo's badge. Expand the `OUTFIT_Raccoon_Unique_Lieutenant_M_Actor_v0` node. If we expand the `Spine2_Attacher_01` node, we can see that the badge is a child node of that. Right-click the `Spine2_Attacher_01` node and click `Delete`.
+
+Let's also delete Mateo's walkie-talkie. As with the Spine attacher, the Pelvis Attacher has the walkie-talkie as a child node. Right-click the `Pelvis_Attacher` node and click `Delete`.
+
+Let's also delete Mateo's goatee. Right-click the `Beard_Goatee` node and click `Delete`.
+
+Click through the different outfit piece entities, you will notice several outfit parts have a `SColorRGB` fields with a color square. Let's change some of them. In the provided example mod, all the customizable colors were set to white (`#ffffff`).
 
 Let's also switch out his head. Click on the `Head_HeadOfSecurity` node and change the name to `Head_TargetMcTargetface`.
 
-Switch to the `Game content` tab and search for `head_`. Expand the `greedy` node and click on `head_itlazy` and click on the `Open in editor` button. On the `Metadata` tab, copy the `Factory hash`. Switch back to the `outfit_target_mctargetface_v0.entity.json` file. On the `Head_HeadOfSecurity` node, replace the `factory` field.
+Switch to the `Game content` tab and search for `head_`. Expand the `greedy` node and click on `head_itlazy (006D0B626E560A34.TEMP)` and click on the `Open in editor` button. On the `Metadata` tab, copy the `Factory hash`. Switch back to the `outfit_target_mctargetface_v0.entity.json` file. On the `Head_TargetMcTargetface` node, replace the `factory` field with the copied factory hash.
 
-Switch back to the `head_itlazy` file and copy the `Blueprint hash`. Switch back to the `outfit_target_mctargetface_v0.entity.json` file. On the `Head_HeadOfSecurity` node, replace the `blueprint` field.
+Switch back to the `head_itlazy` file and copy the `Blueprint hash`. Switch back to the `outfit_target_mctargetface_v0.entity.json` file. On the `Head_TargetMcTargetface` node, replace the `blueprint` field with the copied blueprint hash.
 
 Click the save button.
 
@@ -151,20 +157,22 @@ We now have a custom outfit for our new NPC. It has Mateo's suit, but it's all w
 
 Let's create a Character set for this outfit.
 
-## Adding a Character set
-Right-click that new `Outfits` folder and click `New File` and name it `charset_target_mctargetface.entity.json`. Click on that new file.
+## Creating a new Character set file
+Back on the `Files` tab, right-click the `conent/chunk12/Outfits` folder and click `New File` and name it `charset_target_mctargetface.entity.json`. Click on that new file.
 
 Switch to the `Metadata` tab and change the `Entity type` dropdown to `Template`.
-Let's set the `Factory hash` to:
-`[assembly:/_pro/characters/templates/hitman_campaign_demo/charset_target_mctargetface.entitytemplate].pc_entitytemplate`
-and set the `Factory blueprint` to:
+
+Let's set the `Factory hash` to:  
+`[assembly:/_pro/characters/templates/hitman_campaign_demo/charset_target_mctargetface.entitytemplate].pc_entitytemplate`  
+and set the `Factory blueprint` to:  
 `[assembly:/_pro/characters/templates/hitman_campaign_demo/charset_target_mctargetface.entitytemplate].pc_entityblueprint`
 
 Switch to the `Tree` view.
 
+## Copying an existing character set
 Let's copy the charset for Fabien and modify it.
 
-Go to the `Game content` tab and search for `charset_` and check the `Separete tree by partition` checkbox. Scroll down to the `greedy > assembly > _pro > characters > templates > raccoon > char_raccoon_unique.template?` folder and expand it. Click on the `charset_raccoon_unique_headofsecurity_m.entitytemplate].pc_entitytype` node and click the `Open in editor` button. Switch to the `Tree` view.
+Go to the `Game content` tab and search for `charset_` and check the `Separete tree by partition` checkbox. Scroll down to the `greedy > assembly > _pro > characters > templates > raccoon > char_raccoon_unique.template?` folder and expand it. Click on the `charset_raccoon_unique_headofsecurity_m.entitytemplate` node and click the `Open in editor` button. Switch to the `Tree` view.
 
 Right-click on the `CHARSET_Raccoon_Unique_HeadOfSecurity_M` node and click `Clipboard > Copy`.
 
@@ -172,17 +180,20 @@ Switch back to the `charset_target_mctargetface.entity.json` file. Right-click o
 
 Now it is a child node of the `Scene` node, but we actually want it at the root. Drag the `CHARSET_Raccoon_Unique_HeadOfSecurity_M` node to the root of the tree. It will now be on the same level as the `Scene` node.
 
-We also need to set this node to be the root entity. Copy the entity id from under the `Editor` panel header text.
+We also need to set this node to be the root entity. Click the new entity, and copy the entity id from under the `Editor` panel header text.
 
 Switch to the `Metadata` tab. Replace the value into the `Root entity` text field with the id you copied.
 
 Switch back to the `Tree` tab and delete the `Scene` node.
 
-Expand the `CHARSET_Raccoon_Unique_HeadOfSecurity_M` node.
-
 Click on the `CHARSET_Raccoon_Unique_HeadOfSecurity_M` node and change the name field to `CHARSET_TargetMcTargetface`.
 
-Click on the `Actor > 0` node and change the `m_Outfit > value > resource` field to `[assembly:/_pro/characters/templates/hitman_campaign_demo/outfit_target_mctargetface_actor_v0.entitytemplate].pc_entitytemplate`.
+## Modifying an existing character set
+
+Expand the `CHARSET_TargetMcTargetface` node.
+
+Click on the `Actor > 0` node and change the `m_Outfit > value > resource` field to:  
+`[assembly:/_pro/characters/templates/hitman_campaign_demo/outfit_target_mctargetface_actor_v0.entitytemplate].pc_entitytemplate`
 
 Click the save button.
 
@@ -191,16 +202,18 @@ We now have a custom charset for our new NPC with the Actor v0 outfit pointing t
 We need to add an outfits brick that uses this charset.
 
 ## Adding a new Outfits brick
-Right-click that new `Outfits` folder and click `New File` and name it `outfits_bank.entity.json`. Click on that new file.
+Back on the `Files` tab, right-click the `content/chunk12/Outfits` folder and click `New File` and name it `outfits_bank.entity.json`. Click on that new file.
 
 Switch to the `Metadata` tab and change the Entity type from `Scene` to `Brick`.
 
 Let's set the `Factory hash` to:  
 `[assembly:/_pro/scenes/missions/hitman_campaign_demo/outfits_bank.brick].pc_entitytype`  
 and set the `Factory blueprint` to:  
-`[assembly:/_pro/scenes/missions/hitman_campaign_demo/outfits_bank.brick].pc_entitytype`
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/outfits_bank.brick].pc_entityblueprint`
 
-In the `External scenes` section click the `Add an entry` button and enter `[assembly:/_pro/scenes/bricks/globaldata.brick].pc_entitytype`, and press `Continue`.
+In the `External scenes` section, click the `Add an entry` button, enter:  
+`[assembly:/_pro/scenes/bricks/globaldata.brick].pc_entitytype`  
+and press `Continue`.
 
 Switch to the `Tree` tab.
 
@@ -289,7 +302,7 @@ Right-click on the `Scene` node and click `Create Entity` and name it `Target Mc
 }
 ```
 
-Replace `[TARGET NPC'S UUID]` with your new target's UUID.
+Replace `[TARGET OUTFIT UUID]` with your new target's outfit's UUID.
 
 Right-click the `Target McTargetface` node in the `Tree` view and click `Create Entity` and name it `CHARSET_TargetMcTargetface`.
 
@@ -317,16 +330,14 @@ Now that we have an outfits brick that points to our custom charset, which point
 ## Adding the outfits brick
 Open the `scenario_bank.entity.json` file and go to the `Metadata` tab.
 
-In the `External scenes` section, click the `Add an entry` button.
-
-Enter:  
+In the `External scenes` section, click the `Add an entry` button. Enter:  
 `[assembly:/_pro/scenes/missions/hitman_campaign_demo/outfits_bank.brick].pc_entitytype`  
 and press the `Continue` button.
 
-Press the save button. While we're on this file, let's create an NPC that uses our new charset and outfit.
+Press the save button. While we're on the scenario file, let's create an NPC that uses our new charset and outfit.
 
 ## Creating a new NPC entity
-Open the `scenario_bank.entity.json` file and right-click on the `Scene > Scenario_Bank > NPCs` node and click `Create Entity` and set the name to `CHAR_TargetMcTargetface`.
+On the `Tree` tab, right-click on the `Scene > Scenario_Bank > NPCs` node and click `Create Entity` and set the name to `CHAR_TargetMcTargetface`.
 
 Replace everything beneath the `parent` field with:
 ```json
@@ -395,6 +406,10 @@ Replace everything beneath the `parent` field with:
 }
 ```
 
+Replace `[GENERATED NPC UUID]` with the new NPC's UUID.
+
+Replace `[GENERATED NPC OUTFIT ID]` with the new NPC's outfit's UUID.
+
 This will create our new target NPC and place him roughly in the center of the CEO's Office.
 
 ## Adding a profession to an NPC
@@ -443,7 +458,7 @@ Let's redeploy, relaunch, and start the mission and see what happens.
 > Our target has a new outfit and is an enforcer for the CEO's office
 
 ## Updating the menu pictures
-Now that we have the mission fully setup, let's replace our template screenshots with some more bespoke ones.  
+Now that we have the mission fully setup, let's replace our template screenshots with some bespoke ones.  
 
 ![bank_tile.jpg](resources/bank_tile.jpg)
 > Updated bank `tile.jpg`
@@ -456,6 +471,10 @@ Now that we have the mission fully setup, let's replace our template screenshots
 
 ![target_mc_targetface.jpg](resources/target_mc_targetface.jpg)
 > Updated `target_mc_targetface.jpg`
+
+## Making a new release
+
+Now would be a good time to make a new GitHub release. Follow a similar procedure as we did on the [Committing to GitHub](http://localhost:3000/docs/modding/customcampaigns/github_commit) page.
 
 ## Next Steps
 Now let's make a whole new mission from scratch.
