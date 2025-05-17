@@ -6,13 +6,13 @@ description: Details about the Glacier 2 Blender Add-on
 
 ### Collection Properties - Global Prim Properties Panel
 
-![Screnshot of Global Prim Properties Panel](/img/blender/ui_overview/blender_global_prim_properties.png)
+![Screenshot of Global Prim Properties Panel](/img/blender/ui_overview/blender_global_prim_properties.png)
 
 Flags are greyed out in the initial release of the Add-on.
 
 ### Object Properties - Prim Properties Panel
 
-![Screnshot of Prim Properties Panel](/img/blender/ui_overview/blender_prim_properties.png)
+![Screenshot of Prim Properties Panel](/img/blender/ui_overview/blender_prim_properties.png)
 
 ### 3D Viewport Sidebar - Glacier Panel
 
