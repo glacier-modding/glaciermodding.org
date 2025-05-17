@@ -12,29 +12,27 @@ The mission will take place in:
 
 And the name of the mission will be `Modtown Throwdown`.
 
-For this new mission let's make it relatively simple, just a grassy field with a few small buildings and a few NPCs. Since we've already covered creating a mission in detail before, this time around will be a little more abbreviated, though there's still a lot to cover, so this page will be a bit of a doozy!
+For this new mission we'll start it off relatively simple, just a flat floor with a small buildings and one NPCs. Since we've already covered creating and editing a mission in detail before, this time around will be a little more abbreviated. There are a lot of new things to cover since this will be a new location / destination as well, so this page will be a bit of a doozy!
 
-> Remember to make small, incremental changes, and to save, deploy, launch the mission, and commit your changes if they are successful. Keep in mind that sometimes the mod will crash on deployment or mission launching if there is a resource that is being referenced but has not been created yet. If you have created all the required resources, double check all the factory and blueprint hashes, and be wary of whether it includes the square brackets (`[` and `]`) and subsequent extension, and whether that extension includes the `pc_` or not. Also make sure everything is in the correct chunk folder. 
+> Remember to make small, incremental changes, and to save, deploy, launch the mission, and commit your changes if they are successful. Keep in mind that sometimes the mod will crash on deployment or mission launching if there is a resource that is being referenced but has not been created yet. If you have created all the required resources, double check all the factory and blueprint hashes, and be wary of whether it includes the square brackets (`[` and `]`) and subsequent extension, and whether that extension includes the `pc_` or not. Also make sure everything is in the correct chunk folder.   
 
 ## Adding a new Location and Parent Location
 Since we are making a new mission from scratch, not based on any existing mission, let's also make a new Location and Parent Location for it, so that it will show up in the Destinations tab. This mainly involves updating the manifest and unlockables, and adding some new images.
 
 ## Updating the Manifest
-Let's open the `manifest.json` file and add a few new entries to the `localisation > english` object:
+Let's open the `manifest.json` file and add some new entries to the end of the `localisation > english` object:
 ```json
       "UI_LOCATION_PARENT_MODLANDIA_COUNTRY": "Modlandia",
       "UI_LOCATION_MODTOWN_COUNTRY": "Modlandia",
       "UI_LOCATION_PARENT_MODLANDIA_CITY": "Modtown",
       "UI_LOCATION_MODTOWN_CITY": "Modtown",
-      "UI_LOCATION_MODTOWN_TITLE": "Modtown Throwdown"
+      "UI_LOCATION_MODTOWN_TITLE": "Modtown Throwdown",
       "UI_MODTOWN_DESC": "I need to take out Super Targetman.",
       "UI_MODTOWN_TITLE": "Modtown Throwdown mission",
       "UI_STARTING_LOCATION_MODTOWN_OUTSIDE_DEFAULT_NAME": "Outside",
       "UI_STARTING_LOCATION_MODTOWN_OUTSIDE_DESC": "47 has made his way outside in Modtown.",
-      "UI_MODTOWN_DESC": "I need to take out Super Targetman.",
-      "UI_MODTOWN_TITLE": "Modtown Throwdown",
       "NPC_SUPER_TARGETMAN_NAME": "Super Targetman",
-      "NPC_SUPER_TARGETMAN_DESC": "Super Targetman is the villian of Modlandia.",
+      "NPC_SUPER_TARGETMAN_DESC": "Super Targetman is the villian of Modlandia."
 ```
 
 Let's create a new packagedefinition entry:
@@ -61,6 +59,12 @@ In the new item, replace the contents with:
 }
 ```
 
+We will need to add a new image: `images/entrances/modtown/modtown_entrance_outside.jpg`, which should have a resolution of 693 x 517.
+
+For now let's reuse the `bank_entrance_ceo.jpg` file from the bank mission:  
+![bank_tile_template.jpg](resources/bank_tile_template.jpg)
+and rename it to `modtown_entrance_outside.jpg`.
+
 Click on the `New item` button again. In the new item, replace the contents with:
 ```json
 {
@@ -75,7 +79,7 @@ Click on the `New item` button again. In the new item, replace the contents with
 	"TokenID": ""
 }
 ```
-Copy the new outfit's repository entry UUID from under the `Editor` header text.
+We will need this new outfit's repository entry UUID from under the `Editor` header text.
 
 Click on the `New item` button again. In the new item, replace the contents with:
 ```json
@@ -90,7 +94,13 @@ Click on the `New item` button again. In the new item, replace the contents with
 	"Tile": "images/campaign_demo/modtown/super_targetman.jpg"
 }
 ```
-Replace `[NEW OUTFIT REPOSITORY ENTRY UUID]` with the UUID you copied from the new outfit repository entry.
+Replace `[NEW OUTFIT REPOSITORY ENTRY UUID]` with the UUID of the new outfit repository entry.
+
+We will need to add a new image: `images/campaign_demo/modtown/super_targetman.jpg`, which should have a resolution of 693 x 517.
+
+For now let's reuse the `target_mc_targetface.jpg` file from the bank mission:  
+![target_mc_targetface_template.jpg](resources/target_mc_targetface_template.jpg)
+and rename it to `super_targetman.jpg`.
 
 ## Updating the Unlockables
 In GlacierKit, open the `hitman_campaign_demo.unlockables.json` file and click the `New item` button. In the new Item, replace the contents with:
@@ -134,7 +144,13 @@ In GlacierKit, open the `hitman_campaign_demo.unlockables.json` file and click t
 ```
 Replace `[NEW GENERATED UUID]` with a newly generated UUID using GlacierKit.
 
-We will also need to add new two new images: `images/locations/LOCATION_MODLANDIA/tile.jpg`, which should have a resolution of 693 x 517, and `images/locations/LOCATION_MODLANDIA/background.jpg`, which should be big enough to fit fullscreen (something like 1920 x 1080).
+We will also need to add new two new images: `images/locations/modlandia/tile.jpg`, which should have a resolution of 693 x 517, and `images/locations/modlandia/background.jpg`, which should be big enough to fit fullscreen (something like 1920 x 1080).
+
+For now let's reuse the `tile.jpg` file from the bank mission:  
+![bank_tile.jpg](resources/bank_tile.jpg)
+
+And the `campaign_demo_tile.jpg` file from the campaign folder:  
+![campaign_demo_tile_template.jpg](resources/campaign_demo_tile_template.jpg)
 
 Now that we have our new parent location, let's add the sublocation.
 
@@ -168,7 +184,7 @@ In GlacierKit, on the `hitman_campaign_demo.unlockables.json` file, click the `N
     "ProgressionKey": "LOCATION_MODTOWN",
     "CreateContractId": "[ANOTHER NEW GENERATED UUID]",
     "HideProgression": false,
-    "RequiredResources": ["[assembly:/_pro/scenes/missions/hitman_campaign_demo/modtown/scene_modtown.entity].entitytemplate"],
+    "RequiredResources": ["[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scene_modtown.entity].entitytemplate"],
     "Entitlements": ["H1_LEGACY_EXPANSION"]
   },
   "Rarity": null
@@ -178,7 +194,13 @@ Replace `[NEW GENERATED UUID]` with a newly generated UUID using GlacierKit.
 
 Replace `[ANOTHER NEW GENERATED UUID]` with a different newly generated UUID using GlacierKit.
 
-We will also need two more new images here: `images/locations/LOCATION_MODLANDIA/tile.jpg`, which should have a resolution of 693 x 517, and `images/locations/LOCATION_MODLANDIA/background.jpg`, which should be big enough to fit fullscreen (something like 1920 x 1080).
+We will also need two more new images here: `images/locations/modtown/tile.jpg`, which should have a resolution of 693 x 517, and `images/locations/modtown/background.jpg`, which should be big enough to fit fullscreen (something like 1920 x 1080).
+
+For now let's also reuse the `tile.jpg` file from the bank mission:  
+![bank_tile.jpg](resources/bank_tile.jpg)
+
+And the `campaign_demo_tile.jpg` file from the campaign folder:  
+![campaign_demo_tile_template.jpg](resources/campaign_demo_tile_template.jpg)
 
 Let's also create a new unlockable for the starting location. Click the `New item`. On the new item, set the contents to:
 ```json
@@ -202,6 +224,8 @@ Let's also create a new unlockable for the starting location. Click the `New ite
 }
 ```
 
+Replace `[NEW GENERATED UUID]` with a new UUID generated with GlacierKit.
+
 The next steps are similar to what we did for the bank mission, so let's just quickly go through them.
 
 ## Update the Story Config
@@ -218,7 +242,7 @@ Replace `[NEW GENERATED UUID]` with a new UUID generated with GlacierKit.
 Click the save button.
 
 ## Update the Menu Map Setup file
-In GlacierKit, open the `menumapsetup_hitman_campaign_demo.entity.json` file. On the `Tree` tab, expand the `Scene > MenuMapSetup_HitmanCampaignDemo` node. Right-click on the `MenuMapSetup_HitmanCampaignDemo` node and click `Create Entity`. Replace everything under the `parent` field with:
+In GlacierKit, open the `menumapsetup_hitman_campaign_demo.entity.json` file. On the `Tree` tab, expand the `Scene > MenuMapSetup_HitmanCampaignDemo` node. Right-click on the `MenuMapSetup_HitmanCampaignDemo` node and click `Create Entity`, and name it `Scene_Modtown`. Replace everything under the `parent` field with:
 ```json
 	"name": "Scene_Modtown",
 	"factory": "[assembly:/templates/ui/mapexportentities.template?/menumap.entitytemplate].pc_entitytype",
@@ -343,13 +367,7 @@ Right-click on the `content/chunk0/Mission Contracts` folder, click `New file`, 
         ]
     },
     "UserData": {},
-    "SMF": {
-        "destinations": {
-            "addToDestinations": true,
-            "peacockIntegration": true,
-            "narrativeContext": "Mission"
-        }
-    }
+    "SMF": {}
 }
 ```
 Replace `[NEW GENERATED UUID]` and `[ANOTHER NEW GENERATED UUID]` with newly generated UUIDs using GlacierKit.
@@ -360,8 +378,8 @@ Replace `[ENTRANCE UUID]` with the new starting location's repository entry UUID
 
 Click the save button.
 
-## Creating a scene and scenario
-In the `content` folder, create a new folder named `modtown`. In that folder create a new folder named `chunk2`.
+## Creating a new Scene and Scenario
+In the `content` folder, create a new folder named `chunk2`.
 
 In GlacierKit, right-click on the new `chunk2` folder, and click `Create file` and name it `scene_modtown.entity.json` and click on it.
 
@@ -377,9 +395,9 @@ Press the save button.
 
 Download the [empty_scenario_brick.entity.json](resources/empty_scenario_brick.entity.json) template again and save it as `content/chunk2/scenario_modtown.entity.json` and click it.
 In the `Metadata` tab, in the `Factory hash` field, enter:  
-`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scenario_modtown.entity].pc_entitytype`  
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scenario_modtown.brick].pc_entitytype`  
 In the `Blueprint hash`, enter:
-`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scenario_modtown.entity].pc_entityblueprint`  
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scenario_modtown.brick].pc_entityblueprint`  
 In the `External scenes` section, click `Add an entry`, enter:  
 `[assembly:/_pro/scenes/missions/hitman_campaign_demo/outfits_modtown.brick].pc_entitytype`  
 and press `Continue`.
@@ -389,6 +407,8 @@ We will also need a few more external scenes to make the mission load properly. 
 `[assembly:/_pro/scenes/bricks/globaldata.brick].pc_entitytype`  
 `[assembly:/_pro/scenes/bricks/ui_hitman_s2.brick].pc_entitytype`  
 `[assembly:/_pro/scenes/bricks/ui_hitman_s3.brick].pc_entitytype`  
+
+## Creating a new Starting Location
 
 Switch to the `Tree` tab and rename the `Scenario_Empty` node to `Scenario_Modtown`. Expand the `Scenario_Modtown > Gameplay` node and right-click on the `Starting locations` node and click `Create Entity` and name it `Outside` and click on the `Outside` node. Replace everything in the contents after the `parent` field with:
 ```json
@@ -463,9 +483,13 @@ Right-click on the `Gameplay > Hero` node and click `Create Entity` and set the 
 }
 ```
 
+## Creating a new Outside Room
+
 Expand the `Environment` node. We have an empty `000_Outside` node, but let's replace it with a more filled out one. First let's delete that node by right-clicking it and pressing `Delete`. The `XXX_Room_Folder_Structure` node has some useful categories, so let's copy it. Right-click that node and press `Clipboard > Copy`. Then right-click the `Environment` node and press `Clipboard > Paste`.
 
-Next let's make our new `000_Outside` node a `zroomentity`. Click the `000_Outside` node and in the contents, replace everything after the `parent` field with:
+Click the new `XXX_Room_Folder_Structure` node and in the contents, change the name to `000_Outside`.
+
+Next let's make our new `000_Outside` node a `zroomentity`. In the contents for `000_Outside` replace everything after the `parent` field with:
 ```json
   "name": "000_Outside",
   "factory": "[modules:/zroomentity.class].pc_entitytype",
@@ -522,9 +546,8 @@ Next let's make our new `000_Outside` node a `zroomentity`. Click the `000_Outsi
   }
 }
 ```
-Right-click the `Geometry` node and click `Create Entity` and name it `Floor`. Click it and in the contents, replace everything after the `parent` field with:
+Right-click the `000_Outside > Geometry` node and click `Create Entity` and name it `Floor`. Click it and in the contents, replace everything after the `parent` field with:
 ```json
-{
 	"name": "Floor",
 	"factory": "0065E6850BB157E2",
 	"blueprint": "00B6E9D9DA6DE143",
@@ -578,6 +601,8 @@ Next, click on the `000_Outside` entity and copy the entity id underneath the `E
 }
 ```
 ![autocomplete.jpg](resources/autocomplete.jpg)
+
+## Creating a new Exit
 
 Next, right-click on the `Gameplay > Exit locations` node and click `Create Entity` and set the name to `Exit`. Click on the new `Exit` node and in the contents, replace everything after the `parent` field with:
 ```json
@@ -661,13 +686,16 @@ Next, right-click on the `Gameplay > Exit locations` node and click `Create Enti
 	"events": {
 		"ExitActivated": {
 			"Manual_Exit_Trigger": [
-				"cafee7b919fd9a7c"
 			]
 		}
 	}
 }
 ```
 Replace `[EXIT UUID]` with the exit's UUID from the planning contract. 
+
+In the `events > ExitActivated > Manual_Exit_Trigger` array, add this new `Exit` entity's id.
+
+## Creating a new NPC
 
 Now right-click the `Scenario_Modtown > NPCs` node and click `Create Entity` and set the name to `Super Targetman`. Click on the new `Super Targetman` node and in the contents, replace everything after the `parent` field with:
 ```json
@@ -684,8 +712,8 @@ Now right-click the `Scenario_Modtown > NPCs` node and click `Create Entity` and
 					"z": 0.0
 				},
 				"position": {
-					"x": 0.0,
-					"y": 5.0,
+					"x": 10.0,
+					"y": 0.0,
 					"z": 0.0
 				}
 			}
@@ -738,7 +766,9 @@ Now right-click the `Scenario_Modtown > NPCs` node and click `Create Entity` and
 
 Replace `[SUPER TARGETMAN'S REPOSITORY ENTRY UUID]` and `[SUPER TARGETMAN'S OUTFIT'S REPOSITORY ENTRY UUID]` with the repository entries for Super Targetman and his outfit respectively.
 
-Right-click on the `Gameplay` node and click `Create entity` and name it `Map`, and click on that new node, and in the contents, replace everything after the `parent` field with:
+## Adding a MapMarkup entity
+
+Right-click on the `Gameplay` node and click `Create Entity` and name it `Map`. Right-click on that new node, and click `Create Entity`, name it `Modtown` and in the contents, replace everything after the `parent` field with:
 ```json
 	"name": "Modtown",
 	"factory": "[assembly:/templates/ui/mapmarkup.template?/menumap.entitytemplate].pc_entitytype",
@@ -761,7 +791,13 @@ Press the save button.
 ## Adding lighting and a sky
 Our scenario will also need lighting, a sky, and physics, otherwise everything will be dark and grey.
 
-Download the [tod_day_sunny_clear.entity.json](resources/tod_day_sunny_clear.entity.json) file and save it to your `content/chunk0` folder. This is a basic "time of day" brick that we can drop into any custom scene, that sets up a sunny clear day and blue sky.
+Download the [tod_day_sunny_clear.entity.json](resources/tod_day_sunny_clear.entity.json) file and save it to your `content/chunk2` folder as `tod_day_sunny_clear.entity.json`. This is a basic "time of day" brick that we can drop into any custom scene, that sets up a sunny clear day and blue sky.
+
+Let's add some IOI strings for the time of day brick as well. In GlacierKit, on the `Settings` tab, in the `Custom paths` section, click the `Add an entry` button and enter:    
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/tod_day_sunny_clear.brick].pc_entitytype`  
+and press `Continue`. Click the `Add an entry` button again and enter:  
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/tod_day_sunny_clear.brick].pc_entityblueprint`  
+and press `Continue`.
 
 In GlacierKit, go to the `scenario_modtown.entity.json` file and in the `External scenes` section click the `Add an entry` button, enter `[assembly:/_pro/scenes/missions/hitman_campaign_demo/tod_day_sunny_clear.brick].pc_entitytype`, and press `Continue`.
 
@@ -844,23 +880,23 @@ Press the save button.
 ## Updating the Charset
 For simplicity, let's copy our entire outfit folder from `content/chunk12/Outfits` to `content/chunk2`. This cannot be done from GlacierKit, so in GlacierKit right-click on the `chunk12` folder and click `Show in Explorer`. Copy the outfit folder, then go to the `content/chunk2` folder and paste it.
 
-In GlacierKit, the new folder should have appeared. Let's modify the files to fit our new mission and NPCs. Before we get started, so we don't get our two `Outfits` folders confused, let's collapse the `chunk12/Outfits` folder by click the arrow next to it.
+In GlacierKit, the new folder should have appeared. Let's modify the files to fit our new mission and NPCs.
 
 First rename the `chunk2/Outfits/charset_target_mctargetface.entity.json` file to `charset_super_targetman.entity.json`, then click on that file.
 
 Rename the `CHARSET_TargetMcTargetface` to `CHARSET_SuperTargetman`. Expand the `CHARSET_SuperTargetman > Actor > 0` node and click on the `0` node. Replace the `properties > m_Outfit > value > resource` value with:  
-`[assembly:/_pro/characters/templates/hitman_campaign_demo/outfit_super_targetman_actor_v0.entitytemplate].pc_entitytemplate`.  
+`[assembly:/_pro/characters/templates/hitman_campaign_demo/outfit_super_targetman_actor_v0.entitytemplate].pc_entitytemplate`  
 
 Next expand the `HeroA` node and click on `Var0`. Replace the `properties > m_Outfit > value > resource` value with:  
-`[assembly:/_pro/characters/templates/hitman_campaign_demo/outfit_super_targetman_actor_v0.entitytemplate].pc_entitytemplate`.  
+`[assembly:/_pro/characters/templates/hitman_campaign_demo/outfit_super_targetman_actor_v0.entitytemplate].pc_entitytemplate`  
 
 Next expand the `Nude` node and click on `Var0`. Replace the `properties > m_Outfit > value > resource` value with:  
-`[assembly:/_pro/characters/templates/hitman_campaign_demo/outfit_super_targetman_actor_v0.entitytemplate].pc_entitytemplate`.
+`[assembly:/_pro/characters/templates/hitman_campaign_demo/outfit_super_targetman_actor_v0.entitytemplate].pc_entitytemplate`
 
 Next, switch to the `Metadata` tab. In the `Factory hash` text field enter:  
 `[assembly:/_pro/characters/templates/hitman_campaign_demo/charset_super_targetman.entitytemplate].pc_entitytemplate`  
 In the `Blueprint hash` text field enter:  
-`[assembly:/_pro/characters/templates/hitman_campaign_demo/charset_super_targetman.entitytemplate].pc_entitytemplate`  
+`[assembly:/_pro/characters/templates/hitman_campaign_demo/charset_super_targetman.entitytemplate].pc_entityblueprint`  
 Press the save button.
 
 ## Updating the Outfit
@@ -873,6 +909,12 @@ We can see that the `Belt_StrapBuckle` resource is in the `super` / `chunk0` par
 Let's find Super Targetman a new head! In the `Game content` tab search for `head_` and set the dropdown to `Templates`, and make sure the `Separate tree by partition` checkbox is checked. Expand the `super (chunk0)` node and scroll down until you see the nodes with the icons of stacks of boxes in a triangle shape, and that end in `.TEMP`. Choose whichever head you'd like. In this example, `head_hippowhisperer` is used.
 ![hippo_whisperer.jpg](resources/hippo_whisperer.jpg)  
 Click on the head you'd like and click `Open in editor`, and switch to the `Metadata` tab. Copy the `Factory hash` value and switch back to the `outfit_super_targetman_v0.entity.json` file and paste it into the `Head_SuperTargetman` node's `factory` field. Switch back to the `head_hippowhisperer` resource and copy the `Blueprint hash` value and switch back to the `outfit_super_targetman_v0.entity.json` file and paste it into the `Head_SuperTargetman` node's `blueprint` field.  
+
+Next, switch to the `Metadata` tab. In the `Factory hash` text field enter:  
+`[assembly:/_pro/characters/templates/hitman_campaign_demo/outfit_super_targetman_actor_v0.entitytemplate].pc_entitytemplate
+`  
+In the `Blueprint hash` text field enter:  
+`[assembly:/_pro/characters/templates/hitman_campaign_demo/outfit_super_targetman_actor_v0.entitytemplate].pc_entityblueprint`  
 
 Press the save button.
 
@@ -898,8 +940,28 @@ Delete the `Prof_Greedy_Unique_CEO` node.
 
 Press the save button.
 
-## Deploying
+## Fixing game crashes
 If all went well, we should be able to deploy the mod now and see our new mission.
+
+If the game crashes when you start a mission, there may be an issue with the IOI strings. One useful trick to find these issues is to check the `project.json` file. Open it in WebStorm, format the file by going to the `Code` menu and pressing `Reformat Code`. Then select all the lines in the custom paths section, go to the `Edit` menu and press `Sort Lines`. After sorting, make sure to adjust the commas at the end of the lines to make the json valid.  
+
+Double check that all the IOI strings are present and are what you expect, for instance, that there is a blueprint for each entity that needs one, and that there were no copy-paste errors. If you see anything amiss, fix the IOI string in the file that references it.  
+
+For instance, if you don't see the `[assembly:/_pro/characters/templates/hitman_campaign_demo/charset_super_targetman.entitytemplate].pc_entityblueprint` IOI string, then open the `charset_super_targetman.entity.json` file, go to the Metadata tab, and set the `Blueprint hash` to that IOI string.  
+![webstorm_sort_lines.jpg](resources/webstorm_sort_lines.jpg)  
+
+In this screenshot, we can see that there is a typo for the `scenario_modtown` IOI string. It should be `scenario_modtown.brick`, but it says `scenario_modtown.entity`. In this instance, the fix would be to open the `scenario_modtown.entity.json` file and in the Metadata tab, replace the hash with the correct IOI string.  
+
+Also be sure that any Hex hashes you use match the IOI string that you are expecting.  
+
+Also make sure that you are not referencing anything that is not in an accessible chunk. For instance, if you left the `Prof_Greedy_Unique_CEO` profession in the `Super Targetman` outfit in the `outfits_modtown.entity.json` file, the game will crash because the `[assembly:/_pro/design/actor/profession.template?/prof_greedy_unique_ceo.entitytemplate].pc_entitytype` resource is not accessible in `chunk2`, since it is in `chunk12`. In this instance, the fix would be to delete the `Prof_Greedy_Unique_CEO` node from the `Super Targetman` outfit node.
+
+Also make sure to check each entry in your Unlockables and Repository files to make sure all the IOI strings and hashes are correct.  
+
+Sometimes (usually) if it crashes, there's more than one issue, so don't get discouraged, and just keep going through every file, double-checking all the hashes and paths on the `Metadata` tabs and in entity properties on the `Tree` tab, and making sure the files are in the correct chunk folder.
+
+## Deploying and generating the NAVP and AIRG
+
 ![modtown_initial.jpg](resources/modtown_initial.jpg)
 The lighting is nice, there is a sky, and there is a floor we can walk on that reflects the sky properly. But the NPC isn't where we expected him. Let's see if we can fix that by making a NAVP and AIRG.
 
@@ -910,7 +972,7 @@ Once that's done, click the `Build Navp from Obj and Scene` button on the left s
 Once that's done, click the `Build Airg from Navp` button on the `Airg menu` on the right sidebar.
 ![navkit_modtown.jpg](resources/navkit_modtown.jpg)
 Let's make some new IOI strings for the NAVP and AIRG. For the NAVP, let's use:  
-`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scene_modtown.navp].pc_navp`
+`[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scene_modtown.navp].pc_navp`  
 In GlacierKit, go to the `Settings` tab and on the `Custom paths` section, scroll down and press the `Add an entry` button. Paste in that IOI string and press `Continue`.
 
 On the `Text tools` tab, paste that IOI string into the `Hash calculator` field and copy the value in the `Hex` text field.
@@ -928,15 +990,16 @@ Back in NavKit, click the `Save Airg` button, and navigate to the `content/chunk
 
 Now that we have our NAVP and AIRG files, we need to tell the scenario to use them. In GlacierKit, go to the `scenario_modtown.entity.json` file on the `Tree` view, expand the `Scenario_Modtown > AI` node. Right-click on the `Pathfinding` node and click `Create Entity`, name it `Pathfinder_Configuration`, click on the new node and in the contents, replace everything after the `parent` field with:
 ```json
-"name": "Pathfinder_Configuration",
-"factory": "[modules:/zpathfinderconfiguration.class].pc_entitytype",
-"blueprint": "[modules:/zpathfinderconfiguration.class].pc_entityblueprint",
-"properties": {
-    "m_NavpowerResourceID": {
-        "type": "ZRuntimeResourceID",
-        "value": {
-            "resource": "[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scene_modtown.navp].pc_navp",
-            "flag": "5F"
+    "name": "Pathfinder_Configuration",
+    "factory": "[modules:/zpathfinderconfiguration.class].pc_entitytype",
+    "blueprint": "[modules:/zpathfinderconfiguration.class].pc_entityblueprint",
+    "properties": {
+        "m_NavpowerResourceID": {
+            "type": "ZRuntimeResourceID",
+            "value": {
+                "resource": "[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scene_modtown.navp].pc_navp",
+                "flag": "5F"
+            }
         }
     }
 }
@@ -1028,7 +1091,7 @@ And the `rotation` object to:
     "z": 0.0
 },
 ```
-Right-click this new node, and click `Clipboard > Copy`, and paste in five copies of this node.
+Right-click this new node, and click `Clipboard > Copy`, and paste five more copies of this node into the `House` node.
 
 Switch back to `scenario_gecko.brick` and search for `penthouse_wall_door_interior_6x2_a`, and similarly copy and paste one of these entities into the `scenario_modland.entity.json` file and set the `m_eidParent` value to the entity id of the `House` entity. Set the `rotation` to all zeros like before and the `position` object to:
 ```json
@@ -1050,7 +1113,7 @@ Do the same thing for `penthouse_wall_corner_edge_interior_6m_a`, and paste in o
 ``` 
 Right-click this new node and click `Clipboard > Copy`, and paste in 3 copies of this node.
 
-Do the same thing for `[assembly:/_pro/environment/templates/architecture/doors/doors_gecko_a.template?/gecko_singledoor_penthouse_staff_bathroom_a.entitytemplate].pc_entitytype`. Set the `rotation` to all zeros like before and the `position` object to:
+Do the same thing for `gecko_singledoor_penthouse_staff_bathroom_a`. Set the `rotation` to all zeros like before and the `position` object to:
 ```json
 "position": {
     "x": 8.0,

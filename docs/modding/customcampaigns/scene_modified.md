@@ -67,9 +67,9 @@ Let's add our starting location.
 
 Expand the `Gameplay` node.
 
-Right-click on the `Starting Locations` node and click `Create entity` and name it `CEO Office`.
+Right-click on the `Starting Locations` node and click `Create Entity` and name it `CEO Office`.
 
-Right-click on the `CEO Office` node and click `Create entity` and name it `HeroSpawn_Location_Default`.
+Right-click on the `CEO Office` node and click `Create Entity` and name it `HeroSpawn_Location_Default`.
 
 Click on the `HeroSpawn_Location_Default` entity. Replace the two lines that start with `"factory"` and `"blueprint"` with:
 ```json
@@ -324,7 +324,7 @@ Click on the couch in Hitman and the `chair_leather_modern_d_black` node will be
 
 In GlacierKit, right-click the `chair_leather_modern_d_black` node and click `Clipboard > Copy`. Switch back to the `scenario_bank.entity.json` file.
 
-On the `Tree` tab, expand the nodes `Scene > Scenario_Bank > Environment`. Right-click on the `Environment` node and click `Create entity` and name it `Props`. Right-click on the `Props` node and click `Clipboard > Paste`.
+On the `Tree` tab, expand the nodes `Scene > Scenario_Bank > Environment`. Right-click on the `Environment` node and click `Create Entity` and name it `Props`. Right-click on the `Props` node and click `Clipboard > Paste`.
 
 The `m_eidParent` node has a null `value`, so the entity won't actually be placed properly. Let's fix that.
 

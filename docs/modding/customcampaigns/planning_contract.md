@@ -39,8 +39,6 @@ Change the `isDefaultSpawn` and `isPreferredSpawn` values for that entrance from
 
 The world transform here isn't actually used by the game, so we can just leave that the same.
 
-
-
 The first part of your planning contract file should now look like this:
 
 ```json

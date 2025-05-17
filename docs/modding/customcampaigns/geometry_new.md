@@ -10,7 +10,7 @@ For this tutorial we will be adding new custom geometry to our Modtown mission.
 ## Creating new geometry
 Reusing in-game assets is useful, but sometimes you need to create your own 3D assets. For this will use blender, with the [Glacier 2 Blender Add-on](../../blender).
 
-> If you'd like an example you can refer to [modland.blend](resources/modland.blend). Note, this reference example is called Modland.
+> If you'd like an example you can refer to you can load this blender file: [modland.blend](resources/modland.blend). Note, this reference example is called `Modland`, not `Modtown`.
 
 After installing the add-on, open Blender. 
 
@@ -24,17 +24,17 @@ Click the cube and press `S` to enter scale mode, then press `Z` to limit the sc
 
 Click the cube and press `S` to enter scale mode, then press `X` to limit the scale to the X-axis. Hold `Ctrl` to enable snapping, and then increase the scale to 10, which you can see on the cube transform properties on the right sidebar.
 
-Click the cube and press `S` to enter scale mode, then press `Y` to limit the scale to the Y-axis. Hold `Ctrl` to enable snapping, and then increase the scale to 10, which you can see on the cube transform properties on the right sidebar.
+Click the cube and press `S` to enter scale mode, then press `Y` to limit the scale to the Y-axis. Hold `Ctrl` to enable snapping, and then increase the scale to 10, which you can see on the cube transform properties on the right sidebar.  
 ![blender_scaled_cube.jpg](resources/blender_scaled_cube.jpg)
 
-Let's extrude some of the faces. With the cube selected, switch from `Object Mode` to `Edit Mode` mode from the dropdown menu on the top left of the window. Then switch the select mode to `Face Select`, which is the button with the white square right next to the `Edit Mode` dropdown.
+Let's extrude some of the faces. With the cube selected, switch from `Object Mode` to `Edit Mode` mode from the dropdown menu on the top left of the window. Then switch the select mode to `Face Select`, which is the button with the white square right next to the `Edit Mode` dropdown.  
 ![blender_edit_mode.jpg](resources/blender_edit_mode.jpg)
 
-Now select one of the side faces of the cube by clicking on it. Press the `E` key to extrude, and then drag the cursor out somewhat, until it makes a new cuboid to the side of the original one. 
+Now select one of the side faces of the cube by clicking on it. Press the `E` key to extrude, and then drag the cursor out somewhat, until it makes a new cuboid to the side of the original one.  
 ![blender_extrude.jpg](resources/blender_extrude.jpg)
 Select multiple faces by holding `Ctrl` and clicking on them, or dragging a box around them, and then extrude some more. Keep going at this until you have created some geometry that you would like for your mission.
 
-If you want to move a face, select it and then press the `G` key, and then either the `X`, `Y`, or `Z` keys to lock the movement to that axis.
+If you want to move a face, select it and then press the `G` key, and then either the `X`, `Y`, or `Z` keys to lock the movement to that axis.  
 ![blender_move.jpg](resources/blender_move.jpg)
 
 You can also select Vertices or Edges by clicking one of those buttons on the top left of the window, next to the `Face Select` button we clicked earlier.
@@ -49,7 +49,7 @@ Right-click the `Modtown` collection and click `Duplicate Collection` to create 
 Select the new collection and on the right panel, select the `Physics` tab, and click the `Add Triangle Mesh Collider` button.  
 ![blender_physics_panel.jpg](resources/blender_physics_panel.jpg)
 
-Drag that new triangle mesh collider object over the original collection and hold the `Shift` and `Alt` keys to remove the parent and keep the transforms, and then release the mouse button.
+Drag that new triangle mesh collider object over the original collection and hold the `Shift` and `Alt` keys to remove the parent and keep the transforms, and then release the mouse button.  
 ![blender_collider_remove_parent.jpg](resources/blender_collider_remove_parent.jpg)
 
 Drag the `TriangleMeshCollider` object to the original collection to assign the collection as its parent. Right-click the temporary duplicate collection and click `Delete Hierarchy`. Click on the `TriangleMeshCollider` object and in the `Physics` tab of the properties panel on the right sidebar, change the `Collision Layer` to `STATIC_COLLIDABLES_ONLY`.  
@@ -64,7 +64,7 @@ Change the `Physics Data Type` dropdown to `TRIANGLE_MESH`, and the `Physics Col
 ## Texturing the new geometry
 On the object panel, select the `Cube` object. On the properties panel, switch to the `Materials` tab and click the yellow button next to the `Base Color` section, and choose `Image Texture`.
 
-![blender_add_image_texture.jpg](resources/blender_add_image_texture.jpg)
+![blender_base_color_image_texture.jpg](resources/blender_base_color_image_texture.jpg)
 
 Now let's extract a texture to use using GlacierKit. This will help us UV map the texture to the model. Let's use the `concrete_bare_weathered_b_light`. In GlacierKit, on the `Game contents` section search for `concrete_bare_weathered_b_light` and click the `concrete_bare_weathered_b_light.mi` resource. On the resource panel on the right, you can see details about that material. What we want is the diffuse colormap `.TEXT` file, which is the top item in the `References` list.  
 ![glacierkit_extract_texture_pc_mi.jpg](resources/glacierkit_extract_texture_pc_mi.jpg)
@@ -73,11 +73,14 @@ Click on that. You will see the texture that we want to use. Click the `Extract 
 
 In Blender, click the `Open Image` button with the folder icon next to the `Base Color` section and choose the `009D04612645C6E5.jpg` that you extracted.
 
-Now the mesh has the texture, but we can't see it because the `Shading` mode is set to `Solid`. With your mouse over the 3D area and hold the `Z` key and the `Shading` popup menu will appear. Move the mouse over `Material Preview` and let go of the `Z` key.
+![blender_add_image_texture.jpg](resources/blender_add_image_texture.jpg)
+
+Now the mesh has the texture, but we can't see it because the `Shading` mode is set to `Solid`.  
 ![blender_texture_set.jpg](resources/blender_texture_set.jpg)
+With your mouse over the 3D area and hold the `Z` key and the `Shading` popup menu will appear. Move the mouse over `Material Preview` and let go of the `Z` key.  
+![blender_material_preview.jpg](resources/blender_material_preview.jpg)
 
 Now that the shading mode is set to `Material Preview`, we can see the texture on the material, and we can see that the UV mapping doesn't look perfect.
-![blender_material_preview.jpg](resources/blender_material_preview.jpg)
 
 While in `Object Mode`, click on the cube, and then switch to `Edit Mode` using the dropdown on the top left, and then click on the `Face Select` button. Press the `A` key to select all the faces, then click the blue `Z` circle in the 3D view on the top right to get a top view. 
 
@@ -221,7 +224,7 @@ Right-click on the `modland_geomentity` node and click `Create New` and name it 
 		"Clients": {
 			"type": "TArray<SEntityTemplateReference>",
 			"value": [
-              null
+				null
 			],
 			"postInit": true
 		},
@@ -240,6 +243,7 @@ Add the `modland_geomentity` entity id to the `Clients` value array, and to the 
 
 In the `scenario_modtown.entity.json` file, right-click on the `000_Outside > Geometry` node and click `Create Entity`, set the name to `modtown`, click on it and in the contents, replace everything after the `parent` field with:  
 ```json
+	"name": "modtown",
 	"factory": "[assembly:/_pro/environment/geometry/modtown/modtown.entitytemplate].pc_entitytype",
 	"blueprint": "[assembly:/_pro/environment/geometry/modtown/modtown.entitytemplate].pc_entityblueprint",
 	"properties": {
@@ -270,10 +274,10 @@ Set the `m_eidParent` value to the entity id of the `000_Outside` node.
 Click the save button, redeploy, relaunch, and start the mission.
 
 ![new_geometry_in_game.jpg](resources/new_geometry_in_game.jpg)
-We can see our new geometry in the game! Using this example geometry, things don't quite line up with the house and SuperTargetman in this instance, so let's move the house to be on our new geometry. With GlacierKit opened to the `scenario_modtown.entity.json` file enable the ZHMModSDK Editor by pressing the tilde key and click the `Rebuild entity tree` button. Click on the house to select it in the ZHMModSDK Editor Tree as well as in GlacierKit, and you can see that it selected on of the components of the house.
+We can see our new geometry in the game! Using this example geometry, things don't quite line up with the house and SuperTargetman in this instance, so let's move the house to be on our new geometry. With GlacierKit opened to the `scenario_modtown.entity.json` file enable the ZHMModSDK Editor by pressing the tilde key and click the `Rebuild entity tree` button. Click on the house to select it in the ZHMModSDK Editor Tree as well as in GlacierKit, and you can see that it selected one of the components of the house.
 
 ![modtown_select_house.jpg](resources/modtown_select_house.jpg)
-We want to move the whole house, so select the `House` node and with the gizmo in translate mode, drag it with the arrows to move it over our new geometry.
+We want to move the whole house, so select the `House` node, and with the gizmo in translate mode, drag it with the arrows to move it over our new geometry.
 ![modtown_move_house.jpg](resources/modtown_move_house.jpg)
 
 Let's also move the Super Targetman's starting location. Click on him and change his position to be over the new geometry as well.
@@ -284,15 +288,23 @@ After taking out the target, we may need to move the exit as well.
 
 Click the `Exit` node in GlacierKit, and use the Gizmo in ZHMModSDK to move it to a suitable location.  
 ![modtown_exit_moved.jpg](resources/modtown_exit_moved.jpg)
+
+Let's also delete the original `Floor` entity, now that we have custom geometry for our floor.
+
 In GlacierKit, press the save button.
 
 ## Regenerating the NAVP and AIRG again
-Let's open NavKit, and just as before, build the obj, navp, and airg, and replace the original NAVP and AIRG files in our mod. You don't need to redeploy to do this, as it operates directly on what is in game at the moment of generation.
+Let's open NavKit, and just as before, extract the scene, build the obj, navp, and airg, and replace the original NAVP and AIRG files in our mod. You don't need to redeploy to do this, as it operates directly on what is in game at the moment of generation.
 ![navkit_regenerated.jpg](resources/navkit_regenerated.jpg)
 
 Redeploy, relaunch, and start the mission.
 
 ![modtown_move_exit.jpg](resources/modtown_move_exit.jpg)
+
+> Note: If you later decide to modify the blender geometry, you'll need to:  
+> 1. Recreate the Triangle Mesh in blender the same way as before  
+> 2. Copy the new ALOC file into your `content/chunk2/Geometry` folder  
+> 3. Delete that ALOC file from the aloc folder in your NavKit output folder  
 
 ## Updating the images
 
@@ -326,4 +338,4 @@ Here are some examples:
 > Modlandia tile  
 
 ## Next Steps
-We can use our campaign offline, and it can't work in the official online server, but we can make it work with Peacock by making a plugin. It's not as hard as it sounds. In the next step we'll make the Peacock plugin. 
+We can use our campaign in offline mode only, as it can't work in online mode with the official online server, but we can make it work in online mode with the Peacock server by making a plugin. It's not as hard as it sounds. In the next step we'll make the Peacock plugin. 

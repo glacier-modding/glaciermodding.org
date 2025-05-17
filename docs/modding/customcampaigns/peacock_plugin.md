@@ -31,7 +31,7 @@ Next we'll create our main function. This is what the Peacock server will run fo
 ```js
 module.exports = function hitmanCampaignDemoPlugin(controller) {
     log(LogLevel.INFO, "Loading HitmanCampaignDemo Plugin...");
-    log(LogLevel.INFO, "Done Loading HitmanCampaignDemo plugin.");
+    log(LogLevel.INFO, "Done loading HitmanCampaignDemo Plugin.");
 }
 ```
 
@@ -49,9 +49,10 @@ Replace `[BANK ENTRANCE REPOSITORY UUID]` with the repository entry uuid for the
 
 Now we need to add the Modlandia Parent Location and Modtown Location:
 ```js
+    const locations = controller.configManager.getVersionedConfig("LocationsData", "h3", false)
     locations.parents["LOCATION_PARENT_MODLANDIA"] = {
         "Id": "LOCATION_PARENT_MODLANDIA",
-        "Guid": "[MODLANDIA UNLOCKABLE UUID]",
+        "Guid": "[LOCATION_PARENT_MODLANDIA UNLOCKABLE UUID]",
         "DisplayNameLocKey": "",
         "GameAsset": "",
         "Type": "location",
@@ -85,7 +86,7 @@ Now we need to add the Modlandia Parent Location and Modtown Location:
     }
     locations.children["LOCATION_MODTOWN"] = {
         "Id": "LOCATION_MODTOWN",
-        "Guid": "[MODTOWN UNLOCKABLE UUID]",
+        "Guid": "[LOCATION_MODTOWN UNLOCKABLE UUID]",
         "Type": "location",
         "Subtype": "sublocation",
         "RMTPrice": -1,
@@ -119,7 +120,7 @@ Now we need to add the Modlandia Parent Location and Modtown Location:
 ```
 Note that these are basically just the Unlockables for the parent location and location, but we've made sure the `Id` field is set as well.
 
-Replace `[MODLANDIA UNLOCKABLE UUID]` with the UUID from the Modlandia Unlockable, `[MODTOWN UNLOCKABLE UUID]` with the UUID from the Modtown Unlockable, and `[YOUR CREATOR ID FROM THE MODTOWN UNLOCKABLE]` with your Creator ID from the Modtown Unlockable. 
+Replace `[LOCATION_PARENT_MODLANDIA UNLOCKABLE UUID]` with the UUID from the Modlandia Unlockable, `[LOCATION_MODTOWN UNLOCKABLE UUID]` with the UUID from the Modtown Unlockable, and `[YOUR CREATOR ID FROM THE MODTOWN UNLOCKABLE]` with your Creator ID from the Modtown Unlockable. 
 
 Next we'll need to specify that our Modtown Throwdown mission takes place at this location:
 ```js

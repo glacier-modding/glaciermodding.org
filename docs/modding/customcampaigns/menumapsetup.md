@@ -20,7 +20,7 @@ For the Blueprint hash, let's use:
 
 Let's also make sure the `Entity Type` dropdown is set to `Brick`. 
 
-Switch to the Tree tab. Right-click on the root `Scene` node, and click `Create entity` and give the new entity the name `MenuMapSetup_HitmanCampaignDemo`. Then right-click on that node and click `Create entity` and give that new entity the name `Scene_Bank`.
+Switch to the Tree tab. Right-click on the root `Scene` node, and click `Create Entity` and give the new entity the name `MenuMapSetup_HitmanCampaignDemo`. Then right-click on that node and click `Create Entity` and give that new entity the name `Scene_Bank`.
 
 Copy this json snippet:
 ```json
