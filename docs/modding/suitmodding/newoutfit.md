@@ -676,3 +676,7 @@ If you find that the effect is *way* too dramatic, you can experiment by tweakin
 ### Final Tips
 
 You can use the [Outfit Helper](https://www.nexusmods.com/hitman3/mods/893) mod in conjunction with the [ZHMModSDK](https://github.com/OrfeasZ/ZHMModSDK)'s Editor to tweak material values directly in-engine to see their effects. This will help you determine the best material values for your outfit, including lerp values!
+
+## Finished Project Repository
+
+If you want to download the finished project files to keep as a reference you are welcome to do so. You can find the finished mod on [GitHub](https://github.com/JojjeE/street-smart-tutorial-outfit).
