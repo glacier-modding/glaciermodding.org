@@ -530,27 +530,21 @@ We will not cover it here, but you can also write a TypeScript plugin to drop th
 
 ### Patch unlockables starting package for offline
 
-There is one last thing you can do if you also want to allow people playing the game *offline* to use the outfit. To do this, we add our outfit token to the starting package in unlockables. The starting package includes things like the signature suit, the coin, the ICA19, among other things.
+There is one last thing you can do if you also want to allow people playing the game *offline* to use the outfit. To do this, we add our outfit token to the starting package in unlockables. The starting package includes things like the signature suit, the coin, the ICA19, among other things. Everything the player should have access to while playing without a connection to a server.
 
-This part can't be done in GlacierKit unfortunately so open a text editor like VSCode. Make a new file and paste in the following:
+Once again, in the game content tab search for `config.unlockables`. Open it in the editor. Under **Unmodified** search for `package_starting_package` and choose the entry in the list.
 
-```json
-{
-	"file": "0057C2C3941115CA",
-	"type": "ORES",
-	"patch": [
-		{
-			"op": "add",
-			"path": "/PACKAGE_STARTING_PACKAGE/Properties/Unlocks/-",
-			"value": "TOKEN_OUTFIT_HERO_STREET_SMART"
-		}
-	]
-}
-```
+You will notice you have two editors. The one on the left is before your changes, the right is after your changes, so in the right side editor make a comma at the last entry under `Unlocks`. Make a new line and type `"TOKEN_OUTFIT_HERO_STREET_SMART"`.
 
-Save this file to your mod folder under `content/chunk0`. Name it `unlockables_street_smart.JSON.patch.json`. This filename *is* case sensitive, it *must* be called `.JSON.patch.json` as the extension.
+![The starting package with our new token added to it.](/img/suitmodding/newoutfit/starting_package.png)
 
-This file simply patches the starting package to include our new outfit token, so when you deploy and run the game offline you will have the suit in your inventory.
+Save this patch to your mod folder under `content/chunk0`. Name it `unlockables_street_smart`.
+
+Now go into your mod files in GlacierKit. Under `content/chunk0`, right click the `unlockables_street_smart.unlockables.json` patch we just made, and choose **Convert to JSON.patch.json** in the context menu.
+
+We have to convert this patch because otherwise we would replace the starting package entirely, rather than amending our line to it, and that is definitely not something we want to do.
+
+With this conversion, our patch will update the starting package to include our new outfit token, so when you deploy and run the game offline you will have the suit in your inventory.
 
 ### Manifest localization
 
