@@ -8592,16 +8592,20 @@
             {
                 "pin": "OnTargetDead",
                 "description": ""
-            },{
+            },
+            {
                 "pin": "OnTargetInRange",
                 "description": ""
-            },{
+            },
+            {
                 "pin": "OnTargetOutOfRange",
                 "description": ""
-            },{
+            },
+            {
                 "pin": "OnAllEscortsDied",
                 "description": ""
-            },{
+            },
+            {
                 "pin": "OnLostSightTimeout",
                 "description": ""
             }
@@ -28238,5 +28242,35 @@
             }
         ],
         "out": []
+    },
+    {
+        "hash": "006BD3709D460844",
+        "path": "[modules:/zformattedtextlineentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0010E73461C2E8B9",
+        "path": "[modules:/zpairvalueentity_zstring_zvariant.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "Get",
+                "description": ""
+            },
+            {
+                "pin": "SetLeft",
+                "description": "Sets the string value."
+            },
+            {
+                "pin": "SetRight",
+                "description": "Sets the variant value"
+            }
+        ],
+        "out": [
+            {
+                "pin": "Value",
+                "description": ""
+            }
+        ]
     }
 ]
