@@ -11306,7 +11306,7 @@
         "path": "[modules:/zguidconverter.class].pc_entitytype",
         "in": [
             {
-                "pin": "2338152588",
+                "pin": "Guid",
                 "description": ""
             }
         ],
