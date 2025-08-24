@@ -1,0 +1,114 @@
+/* Base Tippy.js styles with your custom adjustments */
+.tippy-box[data-animation=fade][data-state=hidden] {
+  opacity: 0;
+}
+[data-tippy-root] {
+  max-width: calc(100vw - 10px);
+}
+.tippy-box {
+  position: relative;
+  background-color: rgba(61, 61, 61, 0.953); /* Custom green background */
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.9em;
+  line-height: 1.4;
+  white-space: normal;
+  outline: 0;
+  transition-property: transform, visibility, opacity;
+  padding: 5px; /* Add padding for block effect */
+  max-width: 150px; /* Set max width */
+  text-align: center; /* Center text */
+  border: 3px solid #159c7f; /* Add green border */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+.tippy-box[data-placement^=top] > .tippy-arrow {
+  bottom: 0;
+}
+.tippy-box[data-placement^=top] > .tippy-arrow:before {
+  bottom: -7px;
+  left: 0;
+  border-width: 8px 8px 0;
+  border-top-color: rgba(3, 121, 90, 0.9); /* Match arrow color */
+  transform-origin: center top;
+}
+.tippy-box[data-placement^=bottom] > .tippy-arrow {
+  top: 0;
+}
+.tippy-box[data-placement^=bottom] > .tippy-arrow:before {
+  top: -7px;
+  left: 0;
+  border-width: 0 8px 8px;
+  border-bottom-color: rgba(3, 121, 90, 0.9); /* Match arrow color */
+  transform-origin: center bottom;
+}
+.tippy-box[data-placement^=left] > .tippy-arrow {
+  right: 0;
+}
+.tippy-box[data-placement^=left] > .tippy-arrow:before {
+  border-width: 8px 0 8px 8px;
+  border-left-color: rgba(3, 121, 90, 0.9); /* Match arrow color */
+  right: -7px;
+  transform-origin: center left;
+}
+.tippy-box[data-placement^=right] > .tippy-arrow {
+  left: 0;
+}
+.tippy-box[data-placement^=right] > .tippy-arrow:before {
+  left: -7px;
+  border-width: 8px 8px 8px 0;
+  border-right-color: rgba(3, 121, 90, 0.9); /* Match arrow color */
+  transform-origin: center right;
+}
+.tippy-box[data-inertia][data-state=visible] {
+  transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+}
+.tippy-arrow {
+  width: 16px;
+  height: 16px;
+  color: rgba(3, 121, 90, 0.9); /* Match arrow color */
+}
+.tippy-arrow:before {
+  content: "";
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+}
+.tippy-content {
+  position: relative;
+  padding: 5px 9px;
+  z-index: 1;
+}
+.tooltip:hover {
+  border-bottom-color: #1aaa8b;
+  border-bottom: 2px solid #1aaa8b;
+  color: rgba(127, 255, 212, 0.663);
+}
+
+/* Custom icon styling */
+.icon-alert {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-image: url('./exclam white.png'); /* Your image path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 3px;
+  margin-right: 1px;
+  vertical-align: text-top;
+}
+
+
+.darker {
+  background-color: #0d797d44;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.darkest {
+  background-color: #0f957362;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+

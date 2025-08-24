@@ -1,0 +1,92 @@
+---
+sidebar_position: 6  
+description: Changing tsdvmore
+---
+
+import './customhover.css';
+import Tooltip from './tooltip';
+
+# Adding Shorter locals CONDENSED
+---
+
+### Part 1: Setting Up & Finding Your LOCR
+
+1. **LOCR Introduction**: 
+   - *All game text is stored in LOCR files.* These files contain game text in various languages, linked to identifiers called **HASHES**.
+
+2. **Introducing Hashes for Suits**: 
+   - Example hashes for common suits:
+     - *Season 1 suits*: `00985A1100E5EDDC`
+     - *Season 2 suits*: `009F430D046716BE`
+     - *Season 3 suits*: `004B8C5124A49543`
+   - **Copy the HASH** that matches your suit.
+
+   *Insert* **Help: Hash** *admonition here.*
+
+3. **Navigate to the LOCR File and Open It**:
+   - *Paste your HASH into the search bar in GlacierKit and open the LOCR file.*
+
+4. **LOCR Breakdown**: 
+   - *Before diving deeper, let's understand how a LOCR file is organized.*  
+   
+   *Insert* **LOCR Breakdown** *collapsible here.*  
+   - *This breakdown will help you understand why we structure the manifest in the next part.*
+
+5. **Confirm Your Text Using Ctrl + F**:
+   - Use `Ctrl + F` inside the LOCR file to find and confirm the text you want to change.
+   - *This ensures you're editing the correct piece of text.* 
+
+6. **Notice and Copy the String**:
+   - *Each piece of text is linked to a string.*
+   - **Copy the string** (without quotes) that appears before the text you want to modify.
+
+   *Add a short collapsible explanation for strings if needed.*
+
+7. **Advanced Search (Optional)**:
+   - *For finding additional text, see the Advanced Search guide.*  
+
+   *Insert* **Advanced Search** *collapsible here.*
+
+---
+
+### Part 2: Modifying the Manifest
+
+1. **Open Your Manifest File**:
+   - *Navigate to your manifest file in GlacierKit.*
+
+2. **Add This Line**:
+   ```json
+   "localisationOverrides": {}
+   ```
+
+3. **Add Your LOCR Hash and Language**:
+   - *Insert the LOCR hash and specify the language.* 
+   - *(This recreates the LOCR file’s structure.)*
+
+4. **Explain the Detour to Text Tools**:
+   - *Before using our string in the manifest, we need to convert it.*
+
+5. **Convert the String Using Text Tools**:
+   - *Open the Text Tools tab and paste your string into the Localisation Hash Calculator.*
+   - *Copy the decimal number (ignore the hex code).*
+
+6. **Finish Your Manifest**:
+   - *Return to the manifest and paste the decimal number with your custom text.*
+   - **Example**:
+     ```json
+     "localisationOverrides": {
+         "yourLOCRhash": {
+             "english": {
+                 "yourconverteddecimal": "Your new text"
+             }
+         }
+     }
+     ```
+
+---
+
+### Extras and Optional Chapters
+
+*Include optional content, like adding more languages or advanced techniques, in collapsible sections.*
+
+---
