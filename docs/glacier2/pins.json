@@ -3856,6 +3856,22 @@
             {
                 "pin": "Stadia",
                 "description": ""
+            },
+            {
+                "pin": "Durango",
+                "description": ""
+            },
+            {
+                "pin": "Unknown",
+                "description": ""
+            },
+            {
+                "pin": "PS5",
+                "description": ""
+            },
+            {
+                "pin": "Scarlett",
+                "description": ""
             }
         ]
     },
