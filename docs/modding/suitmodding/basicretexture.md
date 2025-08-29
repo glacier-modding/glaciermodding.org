@@ -26,13 +26,13 @@ The diffuse map can basically be said to be the base color of the model. The spe
 
 Begin by opening GlacierKit. Go to the **Game content** tab, 2nd from the top that looks like an archive box.
 
-Now we need to find the suit that we're looking for. Please refer to [HMBM47's outfit spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRDiyiqdRebu0Olvvkr20CDhh6ANxu7FOQZ_O-1YHFN9e6kh0WmpbwDYbfgzevSvc3fO4_4Exu1fmQH/pubhtml#) and you may want to bookmark it in your browser if you plan to spend any length of time modding suits.
+Now we need to find the suit that we're looking for. You can find all of 47's outfits in GlacierKit by opening the **Game content** tab and searching for `agent47_outfits.template?`. This folder contains all of 47's outfits.
 
-Click the tab **chunk0 47 Base Suits** in the spreadsheet and find the **Casual Suit with Gloves** toward the top of the spreadsheet. This is the suit we will be working on for the purposes of this tutorial. More specifically, find its template hash, - `TEMP` -, which the spreadsheet tells us is `00B2741A27743D8D`.
+For this tutorial we will be focusing on the Casual Suit with Gloves which in the files is called `outfit_agent47_bangkok_gloves_heroa_v0.entitytemplate`. Scroll past all the charsets in the list to find it.
 
 :::caution Actor and HeroA
 
-Looking at the spreadsheet, you will find two versions of the suit: one marked in blue called Actor and one marked in red called HeroA. You will always want to edit the HeroA version; this is the suit you actually wear for gameplay. The Actor version of an outfit is used for NPCs, cutscenes and things of that nature.
+In the list, you will find two versions of the suit: one called *actor* and one called *heroa*. You will always want to edit the HeroA version; this is the suit you actually wear for gameplay. The Actor version of an outfit is used for NPCs, cutscenes and things of that nature.
 
 :::
 

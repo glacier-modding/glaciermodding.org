@@ -65,8 +65,6 @@ The outfits' entry in the outfit brick also dictates things like:
 
 There is also a brick called `globaldata`. This is a brick that the game always loads, and it includes important basic gameplay elements. This includes 47's starter outfits and any outfit you can go into a level with.
 
-In previous tutorials we directed you to HMBM47's [Hitman 3 Outfits Spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRDiyiqdRebu0Olvvkr20CDhh6ANxu7FOQZ_O-1YHFN9e6kh0WmpbwDYbfgzevSvc3fO4_4Exu1fmQH/pubhtml#) of game outfits, which, while a really good resource, is also a little outdated. If you cannot find an outfit you are looking for in the spreadsheet, try looking in `globaldata`.
-
 ### Character set
 
 As we mentioned the outfit brick references a character set. Often this is shortened to `CHARSET` in the files.
@@ -135,7 +133,7 @@ Feel free to paste the following into your manifest to get started.
     "name": "Street Smart",
     "description": "A Street Smart outfit for 47.",
     "authors": ["My Name"],
-    "frameworkVersion": "2.33.22",
+    "frameworkVersion": "2.33.27",
     "version": "1.0.0",
     "contentFolders": ["content"],
     "blobsFolders": ["blobs"]
@@ -583,7 +581,7 @@ Do the same with the path to your description `.sweetline`, replacing `"1"` in t
     "name": "Street Smart",
     "description": "A Street Smart outfit for 47.",
     "authors": ["My Name"],
-    "frameworkVersion": "2.33.22",
+    "frameworkVersion": "2.33.27",
     "version": "1.0.0",
     "contentFolders": ["content"],
     "blobsFolders": ["blobs"],
