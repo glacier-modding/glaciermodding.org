@@ -144,7 +144,7 @@ Feel free to paste the following into your manifest to get started.
 
 ## The charset
 
-We carry on by making the suit's charset. We can use IOI's work as a base for this. In the game files tab search for `signaturesuit`.
+We carry on by making the suit's charset. We can use IOI's work as a base for this. In the game files tab search for `signaturesuit`. Under the `characters` folder you can minimize `assets` as we don't want anything in there.
 
 ![Searching for the signature suit charset](/img/suitmodding/newoutfit/search_charset.png)
 
@@ -194,7 +194,15 @@ At this point, our outfit is just the stock signature suit. So let's clean out a
 
 ### Hat
 
-Let's give his cold head a nice warm beanie. In the game content tab, switch the filter from **All** to **Templates**. Then search for `beanie`. You will find a factory - `TEMP` - without a path called hat_beanie_cuffed (005E3BF131F1E044). Let's click that to open its resource overview.
+Let's give his cold head a nice warm beanie. In the game content tab, switch the filter from **All** to **Templates**. Then search for `beanie`. You will get quite a few results. But we want to focus on the `assembly:/_pro/characters/templates/_part_library/male_apparel` folders. You can close any other folders you find.
+
+:::info Parts library
+
+The `_part_library` folder in particular under `templates` is a great resource for clothing. You can find this easily by just searching `library` later on when you want to make your own outfits.
+
+:::
+
+Click `hat_beanie_cuffed.entitytemplate` under the `male_apparel_headwear_prim.template?` folder to open its resource overview.
 
 ![hat_beanie_cuffed resource overview.](/img/suitmodding/newoutfit/beanie_overview.png)
 
@@ -206,7 +214,7 @@ We briefly mentioned this toward the end in the [Patching suits with new parts](
 
 :::
 
-The positioning and scaling for *hats* to look good on 47's head can be very specific, so it would be prudent to copy it from some other HeroA outfit. Click **Reverse dependencies** in the beanie's resource overview and you'll see a list of outfits that uses the beanie. Let's click the first HeroA outfit in the list, which happens to be `outfit_flamingo_worker_journalist_m_heroa_v4`. Open this outfit in the editor.
+The positioning and scaling for *hats* to look good on 47's head can be very specific, so it would be prudent to copy it from some other *HeroA* outfit. Click **Reverse dependencies** in the beanie's resource overview and you'll see a list of outfits that uses the beanie. Let's click the first HeroA outfit in the list, which happens to be `outfit_flamingo_worker_journalist_m_heroa_v4`. Open this outfit in the editor.
 
 Expand the `Head_Attacher` entity, there's our beanie. We don't want the headphones though, so right click them and delete them.
 
@@ -220,7 +228,7 @@ Compare for yourself first. Do you see it?
 
 In `Head_Attacher`, the properties `m_linkedEntity` and `m_eidParent`, and in `hat_beanie_cuffed`, the property `m_rLinkedProxyEntity` have all had their values nulled. Why is that?
 
-Well, these values all pointed to the root entity of the journalist outfit, whose ID was `1351129995b8231f`. This entity doesn't exist in our custom outfit, so GlacierKit nulls these values when pasting the entity. These properties are essential for the attacher and the hat to work, so we will need to supply the ID of our root entity into these values ourselves. As you copy and paste entities back and forth when making mods, take great care that you are hooking up property values correctly after pasting.
+Well, these values all pointed to the root entity of the journalist outfit, whose ID was `1351129995b8231f`. This entity doesn't exist in our custom outfit, so GlacierKit nulls these values when pasting the entity. These properties are *essential* for the attacher and the hat to work, so we will need to supply the ID of our root entity into these values ourselves. As you copy and paste entities back and forth when making mods, *take great care* that you are hooking up property values correctly after pasting. Always compare with the source to see how it's hooked up.
 
 Right click the root `OUTFIT_Agent47_Street_Smart_HeroA_V0` entity and click **Copy ID**.
 
@@ -234,7 +242,9 @@ That's all we need to do for the hat. Save your changes and let's look for a jac
 
 ### Jacket, shirt and hands
 
-Back to the game content tab, again with the filter on **Templates**, search for `jacket_bomber`. Click the first jacket_bomber_open `TEMP` in the list (00ED542C09DFC9F4). This one is also in chunk0, great! You will find that plenty of clothing templates are in chunk0 in fact, IOI did this to make assembling NPCs and outfits easier for themselves.
+Back to the game content tab, again with the filter on **Templates**, search for `jacket_bomber`. You will get quite a few results here, but like before we want to focus on the `assembly:/_pro/characters/templates/_part_library/male_apparel` folders. You can close any other folders you find.
+
+Click `jacket_bomber_open.entitytemplate` under the `male_reg_apparel_torso_l02.template?` folder under `male_apparel`. This one is also in chunk0, great!
 
 Again go into **Reverse references** to see the outfits that make use of the template. Let's click `outfit_raccoon_civilian_bankcustomer_m_actor_v8.entitytemplate` and open that outfit in the editor.
 
@@ -254,11 +264,11 @@ Let's recolor the jacket so it's not a boring beige. Click Jacket_Bomber_Open an
 
 ### Jeans
 
-Let's find a pair of jeans and shoes as well. Again in the game content tab with the filter on **Templates** search for `jeans`.
+Let's find a pair of jeans and shoes as well. Again in the game content tab with the filter on **Templates** search for `jeans`. Once again you can close the `assets` folder and focus on `male_apparel` under `templates/_part_library`.
 
-The second `pants_jeans_skinny (00468CE157B575D3)` in the list will do. The first one, if you examine reverse references, you will notice is for female models, so that won't work.
+`pants_jeans_skinny.entitytemplate` will do.
 
-Let's go into the reverse reference `outfit_fox_worker_tech_m_actor_v1.entitytemplate` and open it in the editor. You know the deal by now. Copy the `Pants_Jeans_Skinny` entity from here, and paste it into our outfit. Do the same for `Shoes_Sneakers_Skate`.
+Let's go into the reverse reference `outfit_fox_worker_tech_m_actor_v1.entitytemplate` and open it in the editor. You know the deal by now. Copy the `Pants_Jeans_Skinny` entity from here, and paste it into our outfit. This outfit has a pair of sneakers as well we can use. So do the same for `Shoes_Sneakers_Skate`.
 
 With that, we are basically done.
 
@@ -612,7 +622,7 @@ Open your outfit file in GlacierKit.
 Copy the following textbox (it is an entity) and paste it into the root `OUTFIT_Agent47_Street_Smart_HeroA_V0` entity by selecting Clipboard and clicking Paste.
 
 ```json
-{"rootEntity":"cafe1c73325d6168","data":{"cafe1c73325d6168":{"parent":"8d2dd8c9d88913be","name":"FX_Hitman_Wet_Logic_Character","factory":"0067CFB703A80787","blueprint":"00AA88C960CD2080","properties":{"HeadMaterialToOverride":{"type":"ZRuntimeResourceID","value":{"resource":"009F7978C601815A","flag":"5F"}},"HeadMaterialOverride":{"type":"TArray<SEntityTemplateReference>","value":[],"postInit":true}},"events":{"HitmanWetness":{"T":["cafeb592e0ab9249","cafedc850188fd63","cafe57b613171dc2","cafee50db419698b"]}}},"cafe57b613171dc2":{"parent":"cafe1c73325d6168","name":"Lerp roughness fabric","factory":"[modules:/zmathlerp.class].pc_entitytype","blueprint":"[modules:/zmathlerp.class].pc_entityblueprint","properties":{"m_A":{"type":"float32","value":1.0},"m_fT":{"type":"float32","value":0.0},"m_B":{"type":"float32","value":2.0}},"events":{"Lerp":{"ConstantVector1D_14_Value":[]}}},"cafedc850188fd63":{"parent":"cafe1c73325d6168","name":"Lerp bumpmap","factory":"[modules:/zmathlerp.class].pc_entitytype","blueprint":"[modules:/zmathlerp.class].pc_entityblueprint","properties":{"m_fT":{"type":"float32","value":0.0},"m_B":{"type":"float32","value":0.30000001192092896}},"events":{"Lerp":{"ConstantVector1D_06_Value":[]}}},"cafee50db419698b":{"parent":"cafe1c73325d6168","name":"Lerp roughness other","factory":"[modules:/zmathlerp.class].pc_entitytype","blueprint":"[modules:/zmathlerp.class].pc_entityblueprint","properties":{"m_B":{"type":"float32","value":0.4000000059604645},"m_A":{"type":"float32","value":0.0},"m_fT":{"type":"float32","value":0.0}},"events":{"Lerp":{"ConstantVector1D_04_Value":[]}}},"cafeb592e0ab9249":{"parent":"cafe1c73325d6168","name":"Lerp albedo","factory":"[modules:/zmathlerp.class].pc_entitytype","blueprint":"[modules:/zmathlerp.class].pc_entityblueprint","properties":{"m_fT":{"type":"float32","value":0.0},"m_B":{"type":"float32","value":0.20000000298023224}},"events":{"Lerp":{"ConstantVector1D_01_Value":[]}}}}}
+{"rootEntity":"cafe1c73325d6168","data":{"cafe1c73325d6168":{"parent":"8d2dd8c9d88913be","name":"FX_Hitman_Wet_Logic_Character","factory":"[assembly:/_pro/effects/templates/water/fx_water_hitman_wet_logic.template?/fx_hitman_wet_logic_character.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/effects/templates/water/fx_water_hitman_wet_logic.template?/fx_hitman_wet_logic_character.entitytemplate].pc_entityblueprint","properties":{"HeadMaterialToOverride":{"type":"ZRuntimeResourceID","value":{"resource":"[assembly:/_pro/characters/assets/_sourcefiles/male_reg_heads_unique/materials/male_reg_head_47_s3.mi].pc_mi","flag":"5F"}},"HeadMaterialOverride":{"type":"TArray<SEntityTemplateReference>","value":[],"postInit":true}},"events":{"HitmanWetness":{"T":["cafeb592e0ab9249","cafedc850188fd63","cafe57b613171dc2","cafee50db419698b"]}}},"cafe57b613171dc2":{"parent":"cafe1c73325d6168","name":"Lerp roughness fabric","factory":"[modules:/zmathlerp.class].pc_entitytype","blueprint":"[modules:/zmathlerp.class].pc_entityblueprint","properties":{"m_A":{"type":"float32","value":1.0},"m_fT":{"type":"float32","value":0.0},"m_B":{"type":"float32","value":2.0}},"events":{"Lerp":{"ConstantVector1D_14_Value":[]}}},"cafedc850188fd63":{"parent":"cafe1c73325d6168","name":"Lerp bumpmap","factory":"[modules:/zmathlerp.class].pc_entitytype","blueprint":"[modules:/zmathlerp.class].pc_entityblueprint","properties":{"m_fT":{"type":"float32","value":0.0},"m_B":{"type":"float32","value":0.30000001192092896}},"events":{"Lerp":{"ConstantVector1D_06_Value":[]}}},"cafee50db419698b":{"parent":"cafe1c73325d6168","name":"Lerp roughness other","factory":"[modules:/zmathlerp.class].pc_entitytype","blueprint":"[modules:/zmathlerp.class].pc_entityblueprint","properties":{"m_B":{"type":"float32","value":0.4000000059604645},"m_A":{"type":"float32","value":0.0},"m_fT":{"type":"float32","value":0.0}},"events":{"Lerp":{"ConstantVector1D_04_Value":[]}}},"cafeb592e0ab9249":{"parent":"cafe1c73325d6168","name":"Lerp albedo","factory":"[modules:/zmathlerp.class].pc_entitytype","blueprint":"[modules:/zmathlerp.class].pc_entityblueprint","properties":{"m_fT":{"type":"float32","value":0.0},"m_B":{"type":"float32","value":0.20000000298023224}},"events":{"Lerp":{"ConstantVector1D_01_Value":[]}}}}}
 ```
 
 You should now have an `FX_Hitman_Wet_Logic_Character` entity in the tree.
