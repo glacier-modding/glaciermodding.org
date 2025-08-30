@@ -21,3 +21,5 @@ This is a list of tools that are essential for any kind of Hitman modding. The t
 -   [TonyTools](https://github.com/AnthonyFuller/TonyTools/releases/latest)
 -   A program to read and edit JSON files ([VSCode](https://code.visualstudio.com/Download) is recommended, but any basic code editor will suffice. GlacierKit can also handle JSON files if you can't bother downloading anything else.)
 -   A program to extract and archive ZIP files (such as [7-Zip](https://www.7-zip.org/))
+
+And before you continue on, if you are using Windows, please make sure to [enable file extensions in Windows File Explorer](https://www.google.com/search?q=windows%20file%20explorer%20show%20file%20extensions) as this is *essential* for the work ahead!

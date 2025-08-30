@@ -7,7 +7,7 @@ description: Basic Retexture
 
 For this tutorial, we will go over a basic texture override for a suit. In broad steps, this is what we will do:
 
--   Extract the texture we're looking for with RPKG Tool
+-   Extract the texture we're looking for with GlacierKit
 -   Convert the texture to a workable .tga with TonyTools
 -   Make our changes to the texture
 -   Come up with a new hash for our texture (so we don't overwrite stock assets; that's bad practice!)
@@ -24,70 +24,69 @@ The diffuse map can basically be said to be the base color of the model. The spe
 
 ## Extract Texture
 
-Begin by opening RPKG Tool and importing your `Runtime` folder. You do this by clicking **Import** -> **Import RPKGs Folder**, and there navigate to your Hitman: World of Assassination install directory and find the `Runtime` folder. Give it a second for the RPKGs to load, and you will now be in the resource view and should see the list of opened file archives.
+Begin by opening GlacierKit. Go to the **Game content** tab, 2nd from the top that looks like an archive box.
 
-Now we need to find the suit that we're looking for. Please refer to [HMBM47's outfit spreadsheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vRDiyiqdRebu0Olvvkr20CDhh6ANxu7FOQZ_O-1YHFN9e6kh0WmpbwDYbfgzevSvc3fO4_4Exu1fmQH/pubhtml#) and you may want to bookmark it in your browser if you plan to spend any length of time modding suits.
+Now we need to find the suit that we're looking for. You can find all of 47's outfits in GlacierKit by opening the **Game content** tab and searching for `agent47_outfits.template?`. This folder contains all of 47's outfits.
 
-Click the tab **chunk0 47 Base Suits** in the spreadsheet and find the **Casual Suit with Gloves** toward the top of the spreadsheet. This is the suit we will be working on for the purposes of this tutorial. More specifically, find its template hash, - `TEMP` -, which the spreadsheet tells us is `00B2741A27743D8D`.
+For this tutorial we will be focusing on the Casual Suit with Gloves which in the files is called `outfit_agent47_bangkok_gloves_heroa_v0.entitytemplate`. Scroll past all the charsets in the list to find it.
 
 :::caution Actor and HeroA
 
-Looking at the spreadsheet, you will find two versions of the suit: one marked in blue called Actor and one marked in red called HeroA. You will always want to edit the HeroA version; this is the suit you actually wear for gameplay. The Actor version is used for cutscenes and things of that nature.
+In the list, you will find two versions of the suit: one called *actor* and one called *heroa*. You will always want to edit the HeroA version; this is the suit you actually wear for gameplay. The Actor version of an outfit is used for NPCs, cutscenes and things of that nature.
 
 :::
 
-In RPKG Tool, click **Search** and paste the `TEMP` hash into the **Search string** box. Wait for a moment, and the tool will search the archives. Expand the last patch of chunk0 in the results, and you will find the `TEMP` file. Click it.
+In GlacierKit paste the `TEMP` hash into the **Search game files...** box. Wait for a moment, and you will find the `outfit_agent47_bangkok_gloves_heroa_v0.entitytemplate` file. Click it.
 
-The `Details` screen on the right side will show information about the file you've selected. Under `Depends on 60 other hash files/resources:`, you will find everything the template file makes use of, including the texture we're looking for.
+The `References` tab on the right side will show information about the file you've selected. You will find everything the template file makes use of, including the texture we're looking for.
 
 :::info Assembly Paths
 
-What you are seeing is a list of obfuscated hashes and their decoded **assembly paths**—basically, where they are in IOI's internal filing system. Not all hashes have been decoded to assembly paths, so you'll sometimes just see a hash and a filetype. So you have no way of knowing what the file is until you search for it and examine it yourself.
+What you are seeing is a list of obfuscated hashes and their decoded **assembly paths**—basically, where they are in IOI's internal filing system.
 
 :::
 
-The file we are looking for **does** have a decoded path, so we can find it simply by reading the list. The file in question is `00E99B14303AC484.TEXT 5F [assembly:/_pro/characters/assets/hero/agent47/textures/male_reg_agent47_bangkok_shirt.texture?/diffuse_a.tex](ascolormap).pc_tex`, and this is the diffuse texture we want. Copy the hash and search for it, just like you searched for the `TEMP` file.
+The file we are looking for is `00E99B14303AC484.TEXT 5F [assembly:/_pro/characters/assets/hero/agent47/textures/male_reg_agent47_bangkok_shirt.texture?/diffuse_a.tex](ascolormap).pc_tex`, and this is the diffuse texture we want. You should find this a little more than halfway down the list. Click it when you find it.
 
-Find `00E99B14303AC484.TEXT` in the search results, right-click it, and choose **EXTRACT 00E99B14303AC484.TEXT**. Place it somewhere that's easy to get to. RPKG tool will also export a meta file along with it; you can delete that later as we won't need it.
+![The shirt diffuse texture opened](/img/suitmodding/basicretexture/shirt_texture.png)
 
-We're not completely done yet; look in the `Details` screen, specifically what the `TEXT` depends on.
+Click **Extract file**. Place it somewhere that's easy to get to. GlacierKit will also export a meta file along with it; you can delete that as we won't need it.
 
-```
-Depends on 1 other hash files/resources:
-  - 0091D8EF5EAF2E40.TEXD 9F [assembly:/_pro/characters/assets/hero/agent47/textures/male_reg_agent47_bangkok_shirt.texture?/diffuse_a.tex](ascolormap).pc_mipblock1
-```
+We're not completely done yet; look in the `References` tab, and you will find a `TEXD` file as well.
 
-We will also need to export this `TEXD` file. Glacier 2's textures always come in pairs: the `TEXT` contains a scaled down version of the texture for fast streaming and the `TEXD` contains the full sized texture, both files have their own [mipmaps](https://en.wikipedia.org/wiki/Mipmap). HMTextureTools will still need both files as the `TEXT` file contains important metadata which the `TEXD` lacks. Extract this TEXD right next to its TEXT in the folder.
+We will also need to export this `TEXD` file. Glacier 2's textures always come in pairs: the `TEXT` contains a scaled down version of the texture for fast streaming, and the `TEXD` contains the full sized texture, both files have their own [mipmaps](https://en.wikipedia.org/wiki/Mipmap). HMTextureTools will still need both files as the `TEXT` file contains important metadata which the `TEXD` lacks. Extract this TEXD right next to its TEXT in the folder.
 
 ## Convert the Texture to .tga
 
-For this step we will be using `HMTextureTools.exe` from TonyTools to convert our `TEXT` and `TEXD` to a format we can actually work with: TARGA.
+For this step we will be using `HMTextureTools.exe` from TonyTools, to convert our `TEXT` and `TEXD` to a format we can actually work with: TARGA.
 
 HMTextureTools is a **command-line interface program**, meaning it does **not have a user interface** and simply running the .exe will do nothing. You will need to open the Command Prompt in the TonyTools folder or create a `.BAT` file in the TonyTools folder. This is an **example** of the command you should run:
 
 ```batch
-HMTextureTools.exe convert H3 "c:\path\to\00E99B14303AC484.TEXT" --texd "c:\path\to\0091D8EF5EAF2E40.TEXD" "c:\path\to\00E99B14303AC484~0091D8EF5EAF2E40.texture.tga"
+HMTextureTools.exe convert H3 "c:\My Extracted Files\00E99B14303AC484.TEXT" --texd "c:\My Extracted Files\0091D8EF5EAF2E40.TEXD" "c:\My Extracted Files\00E99B14303AC484~0091D8EF5EAF2E40.texture.tga"
 ```
 
-Here, we specify to HMTextureTools that we are **converting** a Hitman 3 asset. We specify first the path to the .TEXT file (of course, you should change the paths to where the file is on your system!) Second, we flag that we also have a TEXD and give the path to that file. And finally, we specify the output, which is a TGA file.
+Please make sure to change the paths to where the files are on your system.
+
+Here, we specify to HMTextureTools that we are **converting** a Hitman 3 asset. We specify first the path to the .TEXT file. Second, we flag that we also have a TEXD and give the path to that file. And finally, we specify the output, which is a TGA file.
 
 You will notice that we name the TGA file according to this format: `TEXT hash`~`TEXD hash`.texture.tga
 
-This is by design; Simple Mod Framework has the capability to convert the .tga **back** to a `TEXT` and `TEXD`, using the information in the filename, which includes the .texture.tga ending. This saves us the trouble of having to do that ourselves as mod creators.
+This will let Simple Mod Framework convert the .tga **back** to a `TEXT` and `TEXD` pair, using the information in the filename, which includes the .texture.tga ending. This saves us the trouble of having to do it ourselves as mod creators.
 
-HMTextureTools will also produce a .tonymeta file. Rename the extension to .meta and we will be ready to move on.
+HMTextureTools will also produce a .tonymeta file. Rename this extension to .meta and we will be ready to move on.
 
 ## Edit the .tga
 
-Open the .tga in your favorite image editing program and get creative. Save it when you're done.
+Open the .tga in your favorite image editing program and get creative. Edit it to your hearts content and save it when you're done.
 
 ## Make up New Hashes
 
 Now we have the suit's diffuse texture and we've made our changes to it. Is it time to bring it back into the game? Not quite; simply **replacing** stock assets is a dirty way of doing things, and the consequences of doing so can be difficult to anticipate. If it happens that another item in the game uses the texture, things can look really crazy in ways that you didn't intend. The correct procedure is to introduce it to the game as a new texture and edit the outfit to use our new texture.
 
-So we need to figure out a new `TEXT` hash and a new `TEXD` hash. RPKG Tool has something that will help us do that, so open RPKG Tool, click `Utilities`, and choose `Hash Calculator`.
+So we need to figure out a new `TEXT` hash and a new `TEXD` hash. GlacierKit has something that will help us do that, so open GlacierKit, and click the `Text tools` tab, the 2nd from the bottom.
 
-Anything you enter in the left field will be hashed, and the output will be shown in the right field, line by line. Now consider the `TEXT` and `TEXD` we've extracted. Their assembly paths are, respectively:
+Anything you enter in the **Hash calculator** field will be hashed, and the output will be shown in the **Hex** and **Decimal** field. We want the hex number though. Now consider the `TEXT` and `TEXD` we've extracted. Their assembly paths are, respectively:
 
 -   \[assembly:/\_pro/characters/assets/hero/agent47/textures/male_reg_agent47_bangkok_shirt.texture?/diffuse_a.tex](ascolormap).pc_tex
 -   \[assembly:/\_pro/characters/assets/hero/agent47/textures/male_reg_agent47_bangkok_shirt.texture?/diffuse_a.tex](ascolormap).pc_mipblock1
@@ -103,15 +102,15 @@ This means that Simple Mod Framework, when applying the mod, will use this infor
 
 ## Patch the Texture Change in the Outfit
 
-Now that we have an entirely new texture, it's time to use it. Open GlacierKit.
+Now that we have an entirely new texture, it's time to use it.
 
 Let us first set up our mod project. Navigate to your Simple Mod Framework folder and open the `Mods` folder. Create a new folder in here called **MyName.MyCoolShirt**. *(Good convention suggests that you name your mod folders with your username, a period, and the mod's name, no spaces.)* Go into this folder and create a folder called **content**. In the content folder, create a new folder called **chunk0**. All the game's assets are segmented into chunks, it's not important to know right now but if you are curious you can [see this article](../../glacier2/chunkdata.md).
 
 To recap, that folder structure is MyName.MyCoolShirt ➡ content ➡ chunk0.
 
-With GlacierKit started, we will need to select this mod folder. Click the big button labeled **Select a project**. Navigate to the **MyName.MyCoolShirt** folder you just made and select it.
+Open GlacierKit. We will need to select this mod folder. In the **Files** tab at the top, click the big button labeled **Select a project**. Navigate to the **MyName.MyCoolShirt** folder you just made and select it.
 
-Go to the **Game content** tab, second from the top that looks like a box. Remember the hash for the Casual Suit's `TEMP`? That's right, `00B2741A27743D8D`—enter that into the search box and hit enter. In the tree you will find `outfit_agent47_bangkok_gloves_heroa_v0.entitytemplate`, buried in a bunch of folders. Click it and you will see a bunch of information about it. Click the **Open in editor** button.
+Go to the **Game content** tab, second from the top that looks like a box. Remember what the Casual Suit was called? That's right, `bangkok_gloves`—enter that into the search box and hit enter. In the tree you will find `outfit_agent47_bangkok_gloves_heroa_v0.entitytemplate`. Click it and you will see a bunch of information about it. Click the **Open in editor** button.
 
 Expand the root OUTFIT entity in the tree. What you see in the tree is what makes up the outfit. Model parts, material overrides, cloth collisions, and things like that.
 
@@ -227,7 +226,7 @@ Paste the following info into it. If GlacierKit asks for permission to access yo
     "name": "My Cool Shirt",
     "description": "Makes the Casual Suit totally rad.",
     "authors": ["My Name"],
-    "frameworkVersion": "2.33.22",
+    "frameworkVersion": "2.33.27",
     "version": "1.0.0",
     "contentFolders": ["content"]
 }
@@ -239,7 +238,7 @@ If you edit the manifest with GlacierKit or Visual Studio Code, they will use th
 
 :::
 
-`frameworkVersion` is the version of the framework you are currently using. At the time of writing, the latest version is 2.33.22.
+`frameworkVersion` is the version of the framework you are currently using. At the time of writing, the latest version is 2.33.27.
 
 `contentFolders` in the manifest tells Simple Mod Framework what folders will be used for mod content.
 
