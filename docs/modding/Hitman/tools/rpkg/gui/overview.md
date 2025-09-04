@@ -10,9 +10,9 @@ The RPKG tool has two panels.
 
 The left panel includes the tabs Resource View, the Dependency View and the Search
 
--   The Resource View shows an overview of the currently loaded RPKG(s) and its content in a file tree structure. The content of RPKG's are sorted into categories according to [File Formats](../../glacier2/fileformats.md).
+-   The Resource View shows an overview of the currently loaded RPKG(s) and its content in a file tree structure. The content of RPKG's are sorted into categories according to [File Formats](/docs/glacier2/fileformats.md).
 -   The Dependency View shows an overview of the currently loaded RPKG(s) and its content. Files can be expanded upon to show the dependencies.
--   The Search includes a search field which can be used to search a file containing the string in the filename. The content of RPKG's are sorted into categories according to [File Formats](../../glacier2/fileformats.md).
+-   The Search includes a search field which can be used to search a file containing the string in the filename. The content of RPKG's are sorted into categories according to [File Formats](/docs/glacier2/fileformats.md).
 
 In all three views the items can be collapsed or expanded upon and right-clicking on a file will present you with the option to extract it or it's dependencies among other options.
 

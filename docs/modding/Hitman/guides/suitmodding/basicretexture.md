@@ -104,7 +104,7 @@ This means that Simple Mod Framework, when applying the mod, will use this infor
 
 Now that we have an entirely new texture, it's time to use it.
 
-Let us first set up our mod project. Navigate to your Simple Mod Framework folder and open the `Mods` folder. Create a new folder in here called **MyName.MyCoolShirt**. *(Good convention suggests that you name your mod folders with your username, a period, and the mod's name, no spaces.)* Go into this folder and create a folder called **content**. In the content folder, create a new folder called **chunk0**. All the game's assets are segmented into chunks, it's not important to know right now but if you are curious you can [see this article](../../glacier2/chunkdata.md).
+Let us first set up our mod project. Navigate to your Simple Mod Framework folder and open the `Mods` folder. Create a new folder in here called **MyName.MyCoolShirt**. *(Good convention suggests that you name your mod folders with your username, a period, and the mod's name, no spaces.)* Go into this folder and create a folder called **content**. In the content folder, create a new folder called **chunk0**. All the game's assets are segmented into chunks, it's not important to know right now but if you are curious you can [see this article](/docs/modding/Hitman/guides/locating_locations.md).
 
 To recap, that folder structure is MyName.MyCoolShirt ➡ content ➡ chunk0.
 
