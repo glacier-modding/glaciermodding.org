@@ -7634,6 +7634,11 @@ __metadata:
     react-dom: "npm:^18.2.0"
     react-responsive-carousel: "npm:^3.2.23"
     url-loader: "npm:^4.1.1"
+  dependenciesMeta:
+    langium@3.3.1:
+      unplugged: true
+    vscode-jsonrpc@8.2.0:
+      unplugged: true
   languageName: unknown
   linkType: soft
 
@@ -8288,12 +8293,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"image-size@npm:^2.0.2":
+"image-size@npm:2.0.2":
   version: 2.0.2
   resolution: "image-size@npm:2.0.2"
   bin:
     image-size: bin/image-size.js
   checksum: 10/d15203279fe7ada01252d8c56ba97516385d6d5ac2cbf3d734580fc88db4f5272b9b3f7f378ad63abc7d06b5500c43b90d9f84626e2bda1cab403c16eb469592
+  languageName: node
+  linkType: hard
+
+"image-size@patch:image-size@npm%3A2.0.2#~/.yarn/patches/image-size-npm-2.0.2-43abbcfb5c.patch":
+  version: 2.0.2
+  resolution: "image-size@patch:image-size@npm%3A2.0.2#~/.yarn/patches/image-size-npm-2.0.2-43abbcfb5c.patch::version=2.0.2&hash=21c9f4"
+  bin:
+    image-size: bin/image-size.js
+  checksum: 10/95197e223cb890fa0d4c7a4a625eb956d563a0d66854ea4e51395df2406d8f8516967181011bd6b523bd89dd2d55cf343fea5e4be4f92f8dc89709daa2414964
   languageName: node
   linkType: hard
 

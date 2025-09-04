@@ -53,5 +53,16 @@
     "prettier": {
         "semi": false,
         "tabWidth": 4
+    },
+    "dependenciesMeta": {
+        "langium@3.3.1": {
+            "unplugged": true
+        },
+        "vscode-jsonrpc@8.2.0": {
+            "unplugged": true
+        }
+    },
+    "resolutions": {
+        "image-size@npm:^2.0.2": "patch:image-size@npm%3A2.0.2#~/.yarn/patches/image-size-npm-2.0.2-43abbcfb5c.patch"
     }
 }
