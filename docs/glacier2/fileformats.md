@@ -30,7 +30,7 @@ Most of the information comes from [this](https://www.youtube.com/watch?v=qw7BhS
 
 | **Format**         | **Type**       | **Description**                                            | **Derived From**                        |
 | ------------------ | -------------- | ---------------------------------------------------------- | --------------------------------------- |
-| `.wl2`             | Source         | Source file created by artists in AutoDesk maya            | -                                       |
+| `.wl2`             | Source         | Source file created by artists in AutoDesk Maya            | -                                       |
 | `.prim`            | Intermediate   | Intermediate format generated from `.wl2`                  | `.wl2`                                  |
 | `.weightedprim`    | Intermediate   | Alternative intermediate format for weighted primitives    | `.wl2`                                  |
 | `.linkedprim`      | Intermediate   | Alternative intermediate format for linked primitives      | `.wl2`                                  |
@@ -57,7 +57,7 @@ Most of the information comes from [this](https://www.youtube.com/watch?v=qw7BhS
 
 | **Format**   | **Type**       | **Description**                 | **Derived From** |
 | ------------ | -------------- | ------------------------------- | ---------------- |
-| `.tex`       | Source         | Render texture source Resources | -                |
+| `.tex`       | Source         | Render texture source resources | -                |
 | `.tex`       | Derived (TEXT) | Render texture data             | `.tex`           |
 | `.mipblock1` | Derived (TEXD) | Render texture mipmap data      | `.tex`           |
 
@@ -357,7 +357,7 @@ Most of the information comes from [this](https://www.youtube.com/watch?v=qw7BhS
 | `.sweet`                          | Source         | Sweet source file                    | -                     |
 | `.sweetswitchgroup`               | Intermediate   | Intermediate format for sweet data   | -                     |
 | `.dialogsoundtemplatelist`        | Derived (DITL) | Dialog template definitions          | `.sweet`              |
-| `.cascadinglanguagedependencies`  | Derived (CLNG) | language dependency definitions      | `.sweet`              |
+| `.cascadinglanguagedependencies`  | Derived (CLNG) | Language dependency definitions      | `.sweet`              |
 | `.entityblueprint`                | Derived (DSWB) | Audio switch definition              | `.sweetswitchgroup`   |
 
 ---
@@ -368,7 +368,7 @@ Most of the information comes from [this](https://www.youtube.com/watch?v=qw7BhS
 
 | **Format**     | **Type**       | **Description**             | **Derived From** |
 | -------------- | -------------- | --------------------------- | ---------------- |
-| `.ini`         | Source         | Initialization              | -                |
+| `.ini`         | Source         | Initialization data         | -                |
 | `.resourceidx` | Derived (GIDX) | Global resource definitions | `.ini`           |
 
 
