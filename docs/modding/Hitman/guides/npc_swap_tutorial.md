@@ -7,8 +7,8 @@ description: An introductory modding guide that will show you how to swap 47's S
 
 ## Recommended Reading
 
--   [Glacier 2 Modding Basics](../glacier2/modding_basics.md)
--   [Chunk Data](../glacier2/chunkdata.md)
+-   [Glacier 2 Modding Basics](/docs/glacier2/glacier_game_overview.md)
+-   [Chunk Data](/docs/modding/Hitman/guides/locating_locations.md)
 
 ## Requirements
 
@@ -26,9 +26,9 @@ Every outfit in the game has its own TEMP/TBLU combo. TEMP files are **Templates
 
 ## Chunk Basics
 
-You will notice from [Glacier 2 Modding Basics](../glacier2/modding_basics.md) that the game's data is split into "chunks" numbered chunk0 to chunk27. Also, all chunks will have additional patch chunks (e.g., chunk0patch2). Generally, these chunk files correspond to a location in the game and hold the content that is specific to that level. However, some chunk files contain assets used in most levels and will therefore always be loaded (e.g., chunk0).
+You will notice from [Glacier 2 Modding Basics](/docs/glacier2/glacier_game_overview.md) that the game's data is split into "chunks" numbered chunk0 to chunk27. Also, all chunks will have additional patch chunks (e.g., chunk0patch2). Generally, these chunk files correspond to a location in the game and hold the content that is specific to that level. However, some chunk files contain assets used in most levels and will therefore always be loaded (e.g., chunk0).
 
-For example, if we look at the [Chunk Data](../glacier2/chunkdata.md), we can see that the content for the Paris level is located in `chunk27`. We can also see that Season 1 is `chunk21`, and Legacy is `chunk8`. Finally, we have `chunk1` (Base) and `chunk0` (Dubai/Boot). When the game loads a level, it will only load the content needed for that specific level, but the chunks will also be accessed in a specific order. To visualize the relationship between chunks, we can use the [Hitman 3 Chunk Hierarchy flowchart](/img/chunkdata/chunk_data_diagram.svg) (which was created by Oakheart, based on an earlier chart by invalid). So, if we follow along with the flowchart (starting with chunk27), we can see that the chunks for Paris would be accessed in the following order:
+For example, if we look at the [Chunk Data](/docs/modding/Hitman/guides/locating_locations.md), we can see that the content for the Paris level is located in `chunk27`. We can also see that Season 1 is `chunk21`, and Legacy is `chunk8`. Finally, we have `chunk1` (Base) and `chunk0` (Dubai/Boot). When the game loads a level, it will only load the content needed for that specific level, but the chunks will also be accessed in a specific order. To visualize the relationship between chunks, we can use the [Hitman 3 Chunk Hierarchy flowchart](/img/chunkdata/chunk_data_diagram.svg) (which was created by Oakheart, based on an earlier chart by invalid). So, if we follow along with the flowchart (starting with chunk27), we can see that the chunks for Paris would be accessed in the following order:
 
 > chunk27 (Paris) -> chunk21 (Season 1) -> chunk8 (Legacy) -> chunk1 (Base) -> chunk0 (Boot).
 

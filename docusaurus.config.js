@@ -62,8 +62,8 @@ module.exports = {
                             to: "/primport",
                         },
                         {
-                            to: "/tools/online/xtea",
                             label: "Online XTEA Tool",
+                            to: "/tools/online/xtea",
                         },
                         {
                             label: "Material Overrides",
