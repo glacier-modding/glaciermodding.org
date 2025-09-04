@@ -7,7 +7,7 @@ description: A walkthrough of the ini file format
 
 ## ini-File (thumbs.dat) file format
 
-The Glacier 2 engine, utilizes INI files for configuration purposes. These files control various aspects of how the engine should behave. While they are usually XTEA encrypted it's easy to decrypt and edit using the [online XTEA tool](/tools/online/xtea/)
+The Glacier 2 engine utilizes INI files for configuration purposes. These files control various aspects of how the engine should behave. While they are usually XTEA encrypted, it's easy to decrypt and edit them using the [online XTEA tool](/tools/online/xtea/)
 
 ## File Structure
 
@@ -53,9 +53,9 @@ This section contains general application settings.
 - `SCENE_FILE`: Specifies the ResourceID of the initial scene to load.
 - `GAME_VERSION`: Defines the game version (often left blank).
 - `PROJECT_PATH`: Specifies the project directory. This is usually the path the LAUNCHER.exe is located in.
-- `RUNTIME_PATH`: Sets the runtime directory. This paths is relative _from_ the PROJECT_PATH variable.
-- `BOOT_MOVIE`: ResourceID to the boot/loading screen video.
-- `BOOT_MOVIE_BENCHMARK`: ResourceID to the video played during benchmarks.
+- `RUNTIME_PATH`: Sets the runtime directory. This path is relative to the PROJECT_PATH variable.
+- `BOOT_MOVIE`: ResourceID of the boot/loading screen video.
+- `BOOT_MOVIE_BENCHMARK`: ResourceID of the video played during benchmarks.
 - `BOOT_MOVIE_LOOPED`: If set to `true`, the boot movie will loop.
 - `BENCHMARK_SCENE_01`, `BENCHMARK_SCENE_02`: Define scenes used for benchmarking. 
 - `ForceVSync`: Enables (`1`) or disables (`0`) V-Sync.
@@ -99,4 +99,4 @@ The `!include` directive allows you to include the contents of another INI file.
 
 This line includes all the configurations from `another_file.ini` into the current INI file.
 
-> **Note**: the position of the `!include` directive is important. All variables in the included file will be placed in the extract location the `!include` is in
+> **Note**: the position of the `!include` directive is important. All variables in the included file will be placed at the exact location where the `!include` directive appears.
