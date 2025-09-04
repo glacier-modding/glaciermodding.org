@@ -11,6 +11,9 @@ module.exports = {
     favicon: "img/favicon.ico",
     organizationName: "glacier-modding",
     projectName: "glaciermodding.org",
+    markdown: {
+        mermaid: true,
+    },
     themeConfig: {
         prism: {
             additionalLanguages: ['json']
@@ -133,6 +136,7 @@ module.exports = {
         },
     },
     themes: [
+        '@docusaurus/theme-mermaid',
         [
             require.resolve("@easyops-cn/docusaurus-search-local"),
             {

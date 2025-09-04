@@ -1,22 +1,59 @@
----
-sidebar_position: 4
-description: The Runtime chunk files and their descriptions
----
 
-# Chunk Data
+To learn more about how the Glacier 2 resource archives are used, read [these docs](../../glacier2/chunkdata.md")
 
-### Information
+Hitman 3 contains only chunk partitions, these can be found from `chunk0` to `chunk29` inside of the `runtime` folder.
 
-The game's data is split into `chunk` files, which have an `.rpkg` extension. These chunks contain all the assets the game uses, and are numbered from `chunk0` through `chunk28`. Each of these "base" chunks will also be accompanied by two "patch" chunks, which follow the format `chunkXpatchX.rpkg`. Generally, these chunk files correspond to a location in the game and hold the content that is specific to that location (e.g., chunk27 = Paris). When the game loads a level, it will only load the content needed for that level, but the chunks will also be accessed in a specific order. However, some chunks contain assets used in most levels and will therefore always be loaded (e.g., chunk0).
-
-To visualize the relationship between chunks, we can use the `Hitman 3 Chunk Hierarchy flowchart`. After locating the chunk on the flowchart, all we need to do is follow the arrows. Using chunk27 (Paris) as an example, we can see the chunks are accessed in the following order:
+To visualize the relationship between partitions, we can use the `Hitman 3 Chunk Hierarchy flowchart`. After locating the partition on the flowchart, all we need to do is follow the arrows. Using chunk27 (Paris) as an example, we can see the chunks are accessed in the following order:
 
 > chunk27 (Paris) -> chunk21 (Season 1) -> chunk8 (Legacy) -> chunk1 (Base) -> chunk0 (Boot).
 
-Note that while chunk0 can be accessed _from_ anywhere, it is a one-way street; chunks higher in the hierarchy cannot access chunks lower in the hierarchy. The lower the chunk _number_, the higher it is in the chunk _hierarchy_. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1, because chunk1 (Level 1) is lower in the hierarchy than chunk0 (Level 0). Furthermore, chunks cannot access adjacent chunks. So, as we can see from the flowchart, chunk12 can not access chunk11, but it can access chunk9.
+Note that while chunk0 can be accessed _from_ anywhere, it is a one-way street; parititons higher in the hierarchy cannot access parititons lower in the hierarchy. The lower the parititon _number_, the higher it is in the parititon _hierarchy_. Therefore, while chunk1 can access chunk0, chunk0 can not access chunk1, because chunk1 (Level 1) is lower in the hierarchy than chunk0 (Level 0). Furthermore, parititons cannot access adjacent parititons. So, as we can see from the flowchart, chunk12 can not access chunk11, but it can access chunk9.
 
-![Chunk Diagram](/img/chunkdata/chunk_data_diagram.svg)
+```mermaid
+graph TB
+    subgraph Hitman 3 Chunk Hierarchy
+            %%level 0
+            c0[Chunk 0<br/>super]
 
+            %%level 1
+            c1[Chunk 1<br/>base] ---> c0
+        
+            %%level 2
+            c2[Chunk 2<br/>season3]   ---> c1
+            c8[Chunk 8<br/>legacy]    ---> c1
+            c9[Chunk 9<br/>season2]   ---> c8
+            c21[Chunk 21<br/>season1] ---> c8
+
+            %%level 3
+            c3[Chunk 3<br/>ancestral]  ---> c2
+            c4[Chunk 4<br/>edgy]       ---> c2
+            c5[Chunk 5<br/>elegant]    ---> c2
+            c6[Chunk 6<br/>wet]        ---> c2
+            c7[Chunk 7<br/>trapped]    ---> c2
+            c28[Chunk 28<br/>dugong]   ---> c2
+            c29[Chunk 29<br/>snug]     ---> c2
+
+            c10[Chunk 10<br/>opulent]  ---> c9
+            c11[Chunk 11<br/>caged]    ---> c9
+            c12[Chunk 12<br/>greedy]   ---> c9
+            c13[Chunk 13<br/>salty]    ---> c9
+            c14[Chunk 14<br/>hawk]     ---> c9
+            c15[Chunk 15<br/>theark]   ---> c9
+            c16[Chunk 16<br/>skunk]    ---> c9
+            c17[Chunk 17<br/>mongoose] ---> c9
+            c18[Chunk 18<br/>colombia] ---> c9
+            c19[Chunk 19<br/>miami]    ---> c9
+            c20[Chunk 20<br/>sheep]    ---> c9
+
+            c22[Chunk 22<br/>hokkaido]    ---> c21
+            c24[Chunk 24<br/>colorado]    ---> c21
+            c25[Chunk 25<br/>bangkok]     ---> c21
+            c26[Chunk 26<br/>marrakesh]   ---> c21
+            c23[Chunk 23<br/>coastaltown] ---> c21
+            c27[Chunk 27<br/>paris]       ---> c21
+
+    end
+```
 ### Hitman 3
 
 | chunk    | codename     | name         | location                    | parent  |

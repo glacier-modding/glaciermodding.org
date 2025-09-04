@@ -18,10 +18,11 @@
     "dependencies": {
         "@docusaurus/core": "latest",
         "@docusaurus/plugin-client-redirects": "latest",
-        "@docusaurus/plugin-content-docs": "^3.5.2",
+        "@docusaurus/plugin-content-docs": "^3.8.1",
         "@docusaurus/preset-classic": "latest",
         "@docusaurus/theme-common": "latest",
-        "@easyops-cn/docusaurus-search-local": "^0.44.5",
+        "@docusaurus/theme-mermaid": "latest",
+        "@easyops-cn/docusaurus-search-local": "^0.52.1",
         "@mdx-js/react": "^3.0.0",
         "@svgr/webpack": "^6.2.1",
         "clsx": "^1.2.1",

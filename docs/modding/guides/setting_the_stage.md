@@ -1,9 +1,7 @@
 ---
-sidebar_position: 3
-description: A walkthrough of Glacier 2 and modding.
+sidebar_position: 0
+description: Hitman 3 modding basics
 ---
-
-# Glacier 2 Modding Basics
 
 ## Background
 
