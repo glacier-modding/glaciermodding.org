@@ -208,7 +208,7 @@ We see the beanies partition is super (chunk0) which is perfect, it means we won
 
 :::caution Chunks
 
-We briefly mentioned this toward the end in the [Patching suits with new parts](addingparts.md) tutorial, but any parts you want to use in an outfit has to be in **chunk0** if it's a starter suit you can wear on any level. Any part that isn't in chunk0 will need to be added to the `dependencies` array in your manifest. Please see [Chunk data](/docs/modding/Hitman/guides/locating_locations.md) for more information.
+We briefly mentioned this toward the end in the [Patching suits with new parts](addingparts.md) tutorial, but any parts you want to use in an outfit has to be in **chunk0** if it's a starter suit you can wear on any level. Any part that isn't in chunk0 will need to be added to the `dependencies` array in your manifest. Please see [Chunk data](/docs/modding/hitman/guides/locating_locations.md) for more information.
 
 :::
 

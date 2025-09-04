@@ -30,7 +30,7 @@ For each mission, it is best practice to create both a Scene and Scenario `entit
 
 For the Bank mission, we will need to have Simple Mod Framework (SMF) put these files in the proper chunk for the mission's location. We do that by placing them in a folder name that matches the chunk.
 
-To find the correct chunk for the Bank mission, let's look at the [Chunk Data](/docs/modding/Hitman/guides/locating_locations.md) page.
+To find the correct chunk for the Bank mission, let's look at the [Chunk Data](/docs/modding/hitman/guides/locating_locations.md) page.
 
 Scrolling down to the `Hitman 3` table, we can see that the `New York` location is in `Chunk 12`.
 ![resources/chunk_data.jpg](resources/chunk_data.jpg)

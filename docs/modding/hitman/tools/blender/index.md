@@ -8,7 +8,7 @@ The Glacier 2 [Blender](https://www.blender.org/) Add-on allows importing and ex
 
 ![lod_slider](/img/blender/lod_slider.gif)
 
-### [Installation](/docs/blender/installation)
+### [Installation](/docs/modding/hitman/tools/blender/installation)
 
 ### Supported Titles and Features
 

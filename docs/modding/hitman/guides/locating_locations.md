@@ -1,5 +1,9 @@
+---
+title: Partition Overview
+---
 
-To learn more about how the Glacier 2 resource archives are used, read [these docs](/docs/modding/Hitman/guides/locating_locations.md")
+
+To learn more about how the Glacier 2 resource archives are used, read [these docs](/docs/glacier2/resource_management.md")
 
 Hitman 3 contains only chunk partitions, these can be found from `chunk0` to `chunk29` inside of the `runtime` folder.
 
