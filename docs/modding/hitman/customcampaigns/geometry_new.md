@@ -8,7 +8,7 @@ description: Creating New Geometry
 For this tutorial we will be adding new custom geometry to our Modtown mission.
 
 ## Creating new geometry
-Reusing in-game assets is useful, but sometimes you need to create your own 3D assets. For this will use blender, with the [Glacier 2 Blender Add-on](../../blender).
+Reusing in-game assets is useful, but sometimes you need to create your own 3D assets. For this will use blender, with the [Glacier 2 Blender Add-on](/docs/modding/hitman/tools/blender).
 
 > If you'd like an example you can refer to you can load this blender file: [modland.blend](resources/modland.blend). Note, this reference example is called `Modland`, not `Modtown`.
 

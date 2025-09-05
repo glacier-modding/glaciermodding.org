@@ -1,5 +1,6 @@
 ---
-sidebar_position: 2
+sidebar_position: 6
+title: "ResourcePackage (.rpkg)"
 description: Details about RPKG and RPK2, the file format used by Glacier 2.
 ---
 
@@ -19,8 +20,7 @@ Hitman 3 introduced a new kind of resource package file (RPK2), It is structural
 | unsigned int | 8    | chunk number                           | not in GKPR        |
 | unsigned int | 8    | chunk type (0x00 standard, 0x01 addon) | not in GKPR        |
 | unsigned int | 8    | chunk patch number                     | not in GKPR        |
-| ?            | 8    | unknown (always seems to be 0x78)      | not in GKPR        |
-| ?            | 8    | unknown (always seems to be 0x78)      | not in GKPR        |
+| unsigned char[]            | 16    | language_code (default: xx)      | not in GKPR        |
 | unsigned int | 32   | resource count                         |
 | unsigned int | 32   | resource data table size               |
 | unsigned int | 32   | patch deletion entry count             | only in patch file |

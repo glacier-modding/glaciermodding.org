@@ -94,4 +94,4 @@ The following JSON will be returned if number_of_results is greater than 500:
 
 #### List of Types:
 
-Same as [Glacier 2 File Formats](../glacier2/fileformats.md) but with an added `any` type which will return all types.
+Same as [Glacier 2 File Formats](/docs/glacier2/fileformats.md) but with an added `any` type which will return all types.
