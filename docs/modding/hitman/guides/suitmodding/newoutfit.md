@@ -142,7 +142,7 @@ Feel free to paste the following into your manifest to get started.
 
 ## The charset
 
-We carry on by making the suit's charset. We can use IOI's work as a base for this. In the game files tab search for `signaturesuit`. Under the `characters` folder you can minimize `assets` as we don't want anything in there.
+We carry on by making the suit's charset. We can use IOI's work as a base for this. In the game files tab, switch the filter from **All** to **Templates**. Then search for `signaturesuit`. Under the `characters` folder you can minimize `assets` as we don't want anything in there.
 
 ![Searching for the signature suit charset](/img/suitmodding/newoutfit/search_charset.png)
 
