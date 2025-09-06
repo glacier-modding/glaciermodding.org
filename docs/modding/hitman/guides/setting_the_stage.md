@@ -3,6 +3,8 @@ sidebar_position: 0
 description: Hitman 3 modding basics
 ---
 
+# Setting the Stage
+
 ## Background
 
 The Glacier 2 Engine is IO Interactive's proprietary custom game engine designed to run Hitman games. What is known about the engine is a result of reverse-engineering the files provided to the community via the games themselves.
