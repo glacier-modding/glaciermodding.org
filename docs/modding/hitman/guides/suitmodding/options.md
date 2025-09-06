@@ -21,6 +21,12 @@ In your mod folder `MyName.StreetSmart`, create a new folder called `patches`. I
 
 That's `patches` ➡ `gloves` ➡ `leather` ➡ `chunk0`.
 
+:::caution Alphabetical order
+
+Simple Mod Framework will apply all content folders, even those by way of options, in **alphabetical order**. This means that any patches you make to custom entities will need to be in a folder that is alphabetically *after* the base content folder. This is also good to know for patches that depend on other patches. In our case `content` comes before `patches`, if we don't take care to order the content folders properly Simple Mod Framework will error out as it cannot patch an entity that doesn't yet exist according to it.
+
+:::
+
 Next, we can prepare our manifest. Open your `manifest.json`, and make a new array called `options`.
 
 ![A new options array in our manifest](/img/suitmodding/options/new_options_array.png)
