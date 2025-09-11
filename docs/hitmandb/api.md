@@ -41,8 +41,8 @@ The following JSON will be returned if number_of_results is greater than 500:
 
 ```json
 {
-    "search_term": "azalea",
-    "number_of_results": 3,
+    "search_term": "azalea_green_a",
+    "number_of_results": 5,
     "resource_type": "any",
     "page_number": 0
 }
@@ -70,22 +70,22 @@ The following JSON will be returned if number_of_results is greater than 500:
 
 ```json
 {
-    "number_of_results": 3,
+    "number_of_results": 5,
     "page_number": 0,
     "results": [
         {
-            "hash": "00800A1DAA3DB1B2",
-            "string": "azalea_green_a",
-            "type": "TEMP"
+            "hash": "006729ECDD022710",
+            "string": "[[assembly:/_pro/speedtree/colorado/bush_azalea_green_a/azalea_green_a.srt].fxd](dx11,speedtree).pc_mate",
+            "type": "MATE"
         },
         {
             "hash": "00A48D280A10793D",
-            "string": "azalea_green_a",
+            "string": "[assembly:/_pro/environment/templates/foliage/trees_colorado_a.template?/azalea_green_a.entitytemplate].pc_entityblueprint",
             "type": "TBLU"
         },
         {
-            "hash": "00200F50F4F10A24",
-            "string": "azalea_green_b",
+            "hash": "00800A1DAA3DB1B2",
+            "string": "[assembly:/_pro/environment/templates/foliage/trees_colorado_a.template?/azalea_green_a.entitytemplate].pc_entitytype",
             "type": "TEMP"
         }
     ]
