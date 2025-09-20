@@ -28288,5 +28288,16 @@
                 "description": ""
             }
         ]
+    },
+    {
+        "hash": "005355E237E105A3",
+        "path": "[modules:/zlerpmultispatialentity.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "T",
+                "description": "Set the interpolant T and calculate"
+            }
+        ],
+        "out": []
     }
 ]
