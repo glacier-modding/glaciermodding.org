@@ -115,7 +115,7 @@ When creating suit swaps or modifications, we'll ultimately want to place our mo
 
 That will leave us with 3 folders: `chunk1`, `chunk1patch2`, and `chunk8`. First, it's important to mention that outfits can only read from the same chunk they reside in. Therefore, if we're swapping an outfit that's located in chunk1, we will only ever need the depends from chunk1 and its patches. So, we can safely delete `chunk8`. Next, we'd usually start by transferring the depends from the patchX chunks to their base chunks. For example, we'd move the depends from `chunk1patch2` to `chunk1`, and replace anything if it asks. However, in this case, we can see `chunk1patch2` only contains a TBLU file and a TEMP file. If we were to restore `chunk8`, we would see that it contains the same TEMP/TBLU pair, which matches what we saw in RPKG Tool. Namely, that `chunk1patch2` and `chunk8` contained duplicate TEMP/TBLU pairs. We also know from earlier that TBLU and TEMP files contain outfit templates, but we've already converted Caruso's TEMP/TBLU pair to a QuickEntity JSON, so we no longer need them. Therefore, that only leaves `chunk1`.
 
-If we examine the contents of `chunk1`, we can see it contains 5 different folders with various file types. If we check the [Glacier 2 Engine file formats](https://wiki.glaciermodding.org/glacier2/fileformats), we can see this chunk appears to include important assets, like meshes (PRIM), bone rigs (BORG), textures (TEXT/TEXD), etc. So, these must be the depends we're looking for. We'll want to move these 5 folders (BORG - TEXT) to the same location as the `00873434CB4F9FCD.entity.json` file we extracted. The chunkX.meta files can be ignored. Once this is done, you can delete the `ALLDEPENDS` folder and its remaining content.
+If we examine the contents of `chunk1`, we can see it contains 5 different folders with various file types. If we check the [Glacier 2 Engine file formats](/docs/glacier2/fileformats), we can see this chunk appears to include important assets, like meshes (PRIM), bone rigs (BORG), textures (TEXT/TEXD), etc. So, these must be the depends we're looking for. We'll want to move these 5 folders (BORG - TEXT) to the same location as the `00873434CB4F9FCD.entity.json` file we extracted. The chunkX.meta files can be ignored. Once this is done, you can delete the `ALLDEPENDS` folder and its remaining content.
 
 You should now have the `00873434CB4F9FCD.entity.json` file and 5 folders (BORG - TEXT) in the output folder.
 
@@ -226,7 +226,7 @@ Of course, you are free to release whatever you'd like as long as it doesn't bre
 
 `2kpr` - Compiled a list of the NPCs by their names, their outfits, their pieces, etc.
 
-[All contributors to wiki.glaciermodding.org](https://github.com/glacier-modding/wiki.glaciermodding.org/graphs/contributors)
+[All contributors to glaciermodding.org](https://github.com/glacier-modding/glaciermodding.org/graphs/contributors)
 
 ## Suit Codenames
 

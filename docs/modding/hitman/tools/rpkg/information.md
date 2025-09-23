@@ -9,4 +9,4 @@ The RPKG tool allows for easy (un)packing of files from the Glacier Engine RPKG 
 
 The latest version can be found at https://glaciermodding.org/rpkg/
 
-The wiki is currently a work in progress at the moment, please feel free to contribute @ https://github.com/glacier-modding/wiki.glaciermodding.org
+The wiki is currently a work in progress at the moment, please feel free to contribute @ https://github.com/glacier-modding/glaciermodding.org
