@@ -81,6 +81,15 @@ export default function MaterialOverrides() {
                         )}
                     </div>
                     <p style={{ textAlign: "center", marginTop: "2rem" }}>
+                        What is this tool used for? Click{" "}
+                        <a
+                            href="docs/modding/hitman/guides/suitmodding/usingbodyparts#what-if-my-material-instance-doesnt-have-a-material-entity"
+                            style={{ fontWeight: "bold", textDecoration: "none" }}
+                        >
+                            here
+                        </a> for more information.
+                    </p>
+                    <p style={{ textAlign: "center", marginTop: "2rem" }}>
                         Adapted from code originally created by{" "}
                         <a
                             href="https://github.com/scrungofan"
