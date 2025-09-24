@@ -83,7 +83,7 @@ export default function MaterialOverrides() {
                     <p style={{ textAlign: "center", marginTop: "2rem" }}>
                         What is this tool used for? Click{" "}
                         <a
-                            href="docs/modding/hitman/guides/suitmodding/usingbodyparts#what-if-my-material-instance-doesnt-have-a-material-entity"
+                            href="/docs/modding/hitman/guides/suitmodding/usingbodyparts#what-if-my-material-instance-doesnt-have-a-material-entity"
                             style={{ fontWeight: "bold", textDecoration: "none" }}
                         >
                             here
