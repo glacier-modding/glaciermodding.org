@@ -28299,5 +28299,1212 @@
             }
         ],
         "out": []
+    },
+    {
+        "hash": "002BF757A4CCADFA",
+        "path": "[modules:/zaccidentsituation.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00A8C8B25789C0F5",
+        "path": "[modules:/zactoraistateiconsentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00450A87F7F52F8E",
+        "path": "[modules:/zanimlayerreload.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "005FCE1562C6AA56",
+        "path": "[modules:/zaudiodistancecullingaspect.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00E1473D5F55209D",
+        "path": "[modules:/zaudioemitter.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00127528CFD8B8E6",
+        "path": "[modules:/zaudioemitterproxy.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00A7792A4CA762F1",
+        "path": "[modules:/zaudioevent.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "Break",
+                "description": ""
+            },
+            {
+                "pin": "Send",
+                "description": ""
+            },
+            {
+                "pin": "Stop",
+                "description": ""
+            },
+            {
+                "pin": "Enable",
+                "description": ""
+            }
+        ],
+        "out": [
+            {
+                "pin": "MainEventEnded",
+                "description": ""
+            },
+            {
+                "pin": "Duration",
+                "description": ""
+            },
+            {
+                "pin": "StopEventEnded",
+                "description": ""
+            },
+            {
+                "pin": "Marker",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "hash": "00374E0B56D879F2",
+        "path": "[modules:/zaudioeventsaveaspect.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00AC8D274BB7E628",
+        "path": "[modules:/zaudioglobalevents.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "009A25EC092B7072",
+        "path": "[modules:/zaudioglobalparam.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "SetValue",
+                "description": ""
+            },
+            {
+                "pin": "Send",
+                "description": ""
+            },
+            {
+                "pin": "Reset",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "00EBD3190B4A9CA8",
+        "path": "[modules:/zaudiolevelmeter.class].pc_entitytype",
+        "in": [],
+        "out": [
+            {
+                "pin": "Output",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "hash": "00A892846481490A",
+        "path": "[modules:/zaudioparam.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "SetValue",
+                "description": ""
+            },
+            {
+                "pin": "Send",
+                "description": ""
+            },
+            {
+                "pin": "Reset",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "0018644A73453C67",
+        "path": "[modules:/zaudioruntimeevent.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0040F6F738D39B45",
+        "path": "[modules:/zaudiostate.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "SetToDefault",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "0092F489B7FAA100",
+        "path": "[modules:/zaudioswitch.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "SetToDefault",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "00CD333C5C016E8C",
+        "path": "[modules:/zaudiovolumetricgeomspline.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "007CB00A925BF12E",
+        "path": "[modules:/zaudiovolumetricgeomsplinepoint.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0097F6C43394A0A4",
+        "path": "[modules:/zboneentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "004B634445A406D2",
+        "path": "[modules:/zcharactersubcontrollerinventorymanager.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0012931D6CA1DB82",
+        "path": "[modules:/zcharactersubcontrollerpickup.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0096DF94A1264460",
+        "path": "[modules:/zclosecombatdef.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00414F697889F911",
+        "path": "[modules:/zdebuggamecontrollerentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00DDA251A66851B8",
+        "path": "[modules:/zdialogtext.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "001DA3B5DA5F640B",
+        "path": "[modules:/zdifficultyhubentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00261182C1177CFE",
+        "path": "[modules:/zdifficultylevelentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00DAE04BB92CAE8B",
+        "path": "[modules:/zentityrefcompare.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0010A0D7766B8E98",
+        "path": "[modules:/zfocusconfig.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00FBA26172853106",
+        "path": "[modules:/zgamechatcontroller.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00595A7C925581E1",
+        "path": "[modules:/zheroreloadcontroller.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0033815867DB89CD",
+        "path": "[modules:/zhm5doorevent.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "009E606F1F55B748",
+        "path": "[modules:/zhm5hitmanfocusmodifier.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00BB80D58C1247EF",
+        "path": "[modules:/zhm5osd.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00CDB24C611BF2C5",
+        "path": "[modules:/zhm5osddisguiseheat.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00D57143BED489AF",
+        "path": "[modules:/zhm5osdhitindicator.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0003C5341BB1612B",
+        "path": "[modules:/zhm5osdshootingballet.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "002E78AC8BC19C98",
+        "path": "[modules:/zhm5osdthreat.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "007C8161E2476CFC",
+        "path": "[modules:/zhm5sbcamhitmanprofile.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0038302E5274D55B",
+        "path": "[modules:/zhm5sbcamprofiles.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "003D1769CF811B92",
+        "path": "[modules:/zhm5sbcamtargetprofile.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0077B3F8001313B7",
+        "path": "[modules:/zhm5sbconfiguration.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00B9142F55BEA3B9",
+        "path": "[modules:/zhm5sbsoundcontroller.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00E77690D07E5ADF",
+        "path": "[modules:/zhm5soundglobalentities.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00D16BE208055B7B",
+        "path": "[modules:/zhm5soundphysicsimpactmatrix.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "008FA1D2A5A414BB",
+        "path": "[modules:/zhm5soundphysicsimpactmatrixcell.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00D082A055F883FE",
+        "path": "[modules:/zhudplayernamescontroller.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0097E25455B97E23",
+        "path": "[modules:/zhumanikentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "002385820EAB4BE1",
+        "path": "[modules:/zingameinventorycontroller.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00A53B4335C2185E",
+        "path": "[modules:/zingameinventorypagecontroller.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00037F00D4D27FEE",
+        "path": "[modules:/zinventorycontroller.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00CB080C0159719E",
+        "path": "[modules:/zinvestigatecurioussituation.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "006289F949EA3BB3",
+        "path": "[modules:/zinvestigatestandingsituation.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00C3968DD2EE32A0",
+        "path": "[modules:/zitemcontainerentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00C234FAF69329C3",
+        "path": "[modules:/zlistenerdistancemeasurer.class].pc_entitytype",
+        "in": [],
+        "out": [
+            {
+                "pin": "Distance",
+                "description": ""
+            },
+            {
+                "pin": "AngleLookAt",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "hash": "00C1A0A016355A05",
+        "path": "[modules:/zminimapnavdirectionprovider.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "006FAB1AD15B0A2D",
+        "path": "[modules:/zmusicevent.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "Break",
+                "description": ""
+            },
+            {
+                "pin": "Send",
+                "description": ""
+            },
+            {
+                "pin": "Stop",
+                "description": ""
+            },
+            {
+                "pin": "Enable",
+                "description": ""
+            }
+        ],
+        "out": [
+            {
+                "pin": "SyncExit",
+                "description": ""
+            },
+            {
+                "pin": "SyncEntry",
+                "description": ""
+            },
+            {
+                "pin": "MainEventEnded",
+                "description": ""
+            },
+            {
+                "pin": "MusicStarted",
+                "description": ""
+            },
+            {
+                "pin": "SyncBar",
+                "description": ""
+            },
+            {
+                "pin": "SyncUserCue",
+                "description": ""
+            },
+            {
+                "pin": "SyncBeat",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "hash": "0004954930F7E749",
+        "path": "[modules:/zmusictrigger.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "Send",
+                "description": ""
+            },
+            {
+                "pin": "SetTriggerName",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "00F0B0DDC449C658",
+        "path": "[modules:/zrazerchromaentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00C7AEC83F2C92BB",
+        "path": "[modules:/zsharedsoundsensordef.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00EADEB0DEE60D1B",
+        "path": "[modules:/zshattersystem.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00AC2BCE0246392C",
+        "path": "[modules:/zsocialsensordef.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00D78FA89C45B479",
+        "path": "[modules:/zsoundambiencetransition.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00AAF1756BF768CD",
+        "path": "[modules:/zsoundgateentitytemp.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00CE2776653354E4",
+        "path": "[modules:/zspeakentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00189FB0C183A4DE",
+        "path": "[modules:/zsubactioninfo.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00454E5FA724BA7C",
+        "path": "[modules:/zsurveypagecontroller.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00D945C282485543",
+        "path": "[modules:/ztriggersphereentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00E89169947A0ED0",
+        "path": "[modules:/zuiactoriconaspect.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00BF1BA705095F1A",
+        "path": "[modules:/zuicontrolsmainmovieentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "008ED0C9A2A5E9A2",
+        "path": "[modules:/zuiversusmodeherotracker.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00464DC4D617D7A7",
+        "path": "[modules:/zvault.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "003A61CB3DD953F0",
+        "path": "[modules:/zvaultaction.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "000D977315DD2E23",
+        "path": "[modules:/zvaultactionattachdata.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00FCDAF1A149C072",
+        "path": "[modules:/zvaultactionentitydata.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00852110A6B07D04",
+        "path": "[modules:/zvaultactionspawnitemdata.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "009ABC3F08C66B37",
+        "path": "[modules:/zvaultcapacitydata.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00A73F1E25345A30",
+        "path": "[modules:/zvaultcollector.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00514877D5374A2B",
+        "path": "[modules:/zvaultcommand.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00226DC63CD2C5CF",
+        "path": "[modules:/zvaultentitydata.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00400B94CB44F1FA",
+        "path": "[modules:/zvaultevent.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "005F9497459F33CE",
+        "path": "[modules:/zvaultitemgetrepositoryid.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00C9C61C712EC976",
+        "path": "[modules:/zvaultkeywordholderdata.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "006AECF186197D10",
+        "path": "[modules:/zvaultquantity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0023B41B4A463E82",
+        "path": "[modules:/zvaultquery.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "007F909BA57F7D79",
+        "path": "[modules:/zvaultrepositoryiddata.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0035F9BCC38E5B33",
+        "path": "[modules:/zvaultslot.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0044EC7EAFA47F77",
+        "path": "[modules:/zvaultvalue.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00A0470E684ED8BA",
+        "path": "[modules:/zaudiosubtitlesaspect.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "004EC3BEF0DE77BF",
+        "path": "[modules:/zheroreachablecondition.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00A4B44A43C40459",
+        "path": "[modules:/zleadescortbehaviorentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00E15561962C78DF",
+        "path": "[modules:/zsubtitleplayerentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00BC3C82FF380E68",
+        "path": "[modules:/zoutputsignaldataentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "004CAE55C1F56A57",
+        "path": "[modules:/zupdateablefloatadapter.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "008486FB355E090B",
+        "path": "[modules:/zvrhandposeentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00D755D33AADDA8B",
+        "path": "[modules:/zuivrlaserpointercontroller.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00F2E1293770F104",
+        "path": "[modules:/zheroisiteminhandcondition.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00593FDB6B18E4F8",
+        "path": "[modules:/zvrinterpolatedalignproximitylistener.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0038706908F9CFED",
+        "path": "[modules:/zvrhandinholster.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0090551F2C98B119",
+        "path": "[modules:/zinputcancoverentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "000552563B359148",
+        "path": "[modules:/zvrfadeblackentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0016F53890B545CF",
+        "path": "[modules:/zvrfademanagerentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "005690D5364CA0FC",
+        "path": "[modules:/zvrsinglehandthrow.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "000F9EF68353A946",
+        "path": "[modules:/zvrhandalignpose.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "006D51B6360DED4C",
+        "path": "[modules:/zinputcontrollertypecondition.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00CFF577E7F33E42",
+        "path": "[modules:/zmanualreloadsettings.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00FC0C3BDD95CC53",
+        "path": "[modules:/zsignalbranchconditionalboolentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00EE9D18F67D3B21",
+        "path": "[modules:/zfiberwirecondition.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00335AD3A69F974E",
+        "path": "[modules:/zevergreengearpersistencehelper.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00CC857730091486",
+        "path": "[modules:/zinputcanthrowentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00AEFC2E1363A1A0",
+        "path": "[modules:/zvrprimehandentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "004EF135D678696A",
+        "path": "[modules:/zoverlaycontrollergamerunanaloginputentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00185F50BD152972",
+        "path": "[modules:/zinputcanstartclosecombatentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00DA1C634AD949E0",
+        "path": "[modules:/zoverlaycontrollerinputanalogentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00E0227434DDAFAA",
+        "path": "[modules:/zvrinterpolatedalign.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "004099BABF8AA1F1",
+        "path": "[modules:/zispsvr1condition.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "003DB816A8725C30",
+        "path": "[modules:/zoverlaycontrollerinputdigitalentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0046445D1CB61430",
+        "path": "[modules:/zphysicsmodifierentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "008CC9F07831CB6F",
+        "path": "[modules:/ztraceentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00775D98545AD954",
+        "path": "[modules:/zhm5reload.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00A60BEA631F09E6",
+        "path": "[modules:/zinputcanaimentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "005B4367429445DF",
+        "path": "[modules:/zhudinputgamestateentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0086D199858194CB",
+        "path": "[modules:/zvrdoorinteractionfork.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "007696C3183117E1",
+        "path": "[modules:/zinputcanswapcamerashoulderentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "004C2AA54C76A23E",
+        "path": "[modules:/zoverlaycontrollergameinputentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0088ABEDD1DB265C",
+        "path": "[modules:/zinputcansneakentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "009533F8DEA514A1",
+        "path": "[modules:/zhm5vrthirdpersonlimitentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00250E32380F702F",
+        "path": "[modules:/zcheckinputflag.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00ED0BF58659C2AC",
+        "path": "[modules:/zvrmotionspeedthreshold.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00C0200B1762C6E3",
+        "path": "[modules:/zsignalforkentity_entityref.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00169F1D14D09E49",
+        "path": "[modules:/zvrinputaxisentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "000355B74DF594EE",
+        "path": "[modules:/zinputcanmovefocusedinteractionentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "000198A1FE15B43E",
+        "path": "[modules:/zvrfxeventreceiverentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00C2D041AF850E39",
+        "path": "[modules:/zinputcaninstinctentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00DF701AED303E96",
+        "path": "[modules:/zvrconfigbyagilityledgeinfo.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00DA39AE37E8E4C7",
+        "path": "[modules:/zoverlaycontrollergameinputpromptsentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00BA1CF3B535282C",
+        "path": "[modules:/zlocaltoglobaltransformentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00126B9217BB6F8F",
+        "path": "[modules:/zmirrorspatialentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00E4914F041B5E18",
+        "path": "[modules:/zhandattacher.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0097CBDD03200F60",
+        "path": "[modules:/zoverlaycontrollertextlabelentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00DF446608430D18",
+        "path": "[modules:/zinputcanmoveentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0070D6EDAA8CF31D",
+        "path": "[modules:/zhm5vrclosecombatconfigentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0056AADD4AFDB84A",
+        "path": "[modules:/zdelayitemdroppedevententity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00519AD76BCBDF7A",
+        "path": "[modules:/zdebughm5gametimemultiplierfadeentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "004F802761F1AA6B",
+        "path": "[modules:/zinputcantriggerphotomodeactionentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0017E43EA2C26ED3",
+        "path": "[modules:/zitemphysicssleepingcondition.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00B58742545C9F07",
+        "path": "[modules:/zinputcanpausemenuentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "002247716AC122C5",
+        "path": "[modules:/zinputcanshootentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00A84D97606E8BF8",
+        "path": "[modules:/zvrmotionmovebetweenboxes.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00517395A945750D",
+        "path": "[modules:/zvrtakedisguise.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0022E747D6721247",
+        "path": "[modules:/zvrmotioninputregistry.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0071B10B348547F7",
+        "path": "[modules:/zinputcanplaceitementity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "003A256567031782",
+        "path": "[modules:/zhm5crippleboxcondition.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00DF67FE8847C45E",
+        "path": "[modules:/zinputcanexitphotomodeentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "008F5105E796F7E8",
+        "path": "[modules:/zthirdpersoncondition.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "001AAC666ED0F2D1",
+        "path": "[modules:/zinputcanreloadentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "002CCADEDD33CC00",
+        "path": "[modules:/zoverlaycontrollerhudpromptentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "000D22B6EF2DA335",
+        "path": "[modules:/ztrajectorytrackvroverride.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00BCE719C57E2DD1",
+        "path": "[modules:/zvrmotioninputledgekillentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00ED0DE4098AE0EA",
+        "path": "[modules:/zoverlaycontrollersuppressorentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0057C84D702F0B66",
+        "path": "[modules:/zvrmotiondumpbody.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0074993A266E66FF",
+        "path": "[modules:/zvrquickgrab.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "008818F1968F1D7B",
+        "path": "[modules:/zhm5vritemgripstategetrtcpentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00FD45AA1CE60950",
+        "path": "[modules:/zvrtwohandweaponwielding.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00FA529C0701753B",
+        "path": "[modules:/zinputcannotebookmenuentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00D4F24D42B4C3D3",
+        "path": "[modules:/zvrholsterattacher.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00C8FF31817E451C",
+        "path": "[modules:/zdooractionentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "005258622E8ADDD4",
+        "path": "[modules:/zinputcanzoomentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00963E30CC4D6CE5",
+        "path": "[modules:/zoverlaycontrollerentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00D35358E4526B06",
+        "path": "[modules:/zinputcanholsteritementity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0054F409400C1EB0",
+        "path": "[modules:/zvrdragbody.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00D4369D6664B47A",
+        "path": "[modules:/zvrquestitemdrophandler.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00573E80483B890F",
+        "path": "[modules:/zinputcanprecisionshootentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "008E0349D945502B",
+        "path": "[modules:/zglobaltolocaltransformentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00683BABB1951464",
+        "path": "[modules:/zinputcanskipsequenceentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00F089F4F38F411B",
+        "path": "[modules:/zoverlaycontrollerhudpromptsentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00B497A84E72605D",
+        "path": "[modules:/zvrmotiondropitem.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00826396A59D6844",
+        "path": "[modules:/zvrcameraroot.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "009601AD20932254",
+        "path": "[modules:/zvrhmdrumbleentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0010333DB536B996",
+        "path": "[modules:/zmultimenucondition.class].pc_entitytype",
+        "in": [],
+        "out": []
     }
 ]
