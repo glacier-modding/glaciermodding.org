@@ -57,7 +57,7 @@ export default function PrimPort() {
                         </ul>
                     </div>
                     <span className="margin-horiz--sm"></span>
-                    <a href="/docs/primport" className="button button--info">
+                    <a href="/docs/modding/hitman/tools/primport" className="button button--info">
                         How to use
                     </a>
                     <div className="margin-vert--sm">

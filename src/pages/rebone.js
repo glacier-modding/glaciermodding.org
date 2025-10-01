@@ -57,7 +57,7 @@ export default function Rebone() {
                         </ul>
                     </div>
                     <span className="margin-horiz--sm"></span>
-                    <a href="/docs/rebone" className="button button--info">
+                    <a href="/docs/modding/hitman/tools/rebone" className="button button--info">
                         How to use
                     </a>
                     <div className="margin-vert--sm">
