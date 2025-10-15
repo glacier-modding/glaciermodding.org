@@ -8209,11 +8209,15 @@
                 "description": "A signal is fired with the content of the 'Value' property every time the property changes (if 'Forward on Set' is enabled), or a 'Get' signal is sent"
             },
             {
-                "pin": "Z",
+                "pin": "X",
                 "description": ""
             },
             {
-                "pin": "X",
+                "pin": "Y",
+                "description": ""
+            },
+            {
+                "pin": "Z",
                 "description": ""
             }
         ]
@@ -11576,6 +11580,10 @@
             {
                 "pin": "GetHero",
                 "description": ""
+            },
+            {
+                "pin": "EquipContainedItemLeft",
+                "description": ""
             }
         ],
         "out": [
@@ -13055,6 +13063,14 @@
             },
             {
                 "pin": "OnEvent",
+                "description": ""
+            },
+            {
+                "pin": "OnEnter",
+                "description": ""
+            },
+            {
+                "pin": "OnHandleDisableCamera",
                 "description": ""
             }
         ]
