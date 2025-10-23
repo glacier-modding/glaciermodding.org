@@ -21833,15 +21833,15 @@
                 "description": ""
             },
             {
-                "pin": "3233457466",
+                "pin": "SetHeroVulnerable",
                 "description": ""
             },
             {
-                "pin": "1931428642",
+                "pin": "SetHeroHidden",
                 "description": ""
             },
             {
-                "pin": "452666406",
+                "pin": "SetHeroVisible",
                 "description": ""
             },
             {
