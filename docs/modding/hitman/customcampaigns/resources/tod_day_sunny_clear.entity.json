@@ -567,14 +567,14 @@
 				"BillboardTexture": {
 					"type": "ZRuntimeResourceID",
 					"value": {
-						"resource": "002ECE146DEB1151",
+						"resource": "[assembly:/_pro/effects/textures/lut/lut_neutral.texture?/diffuse_b_high_contrast_color_boost.tex](ascolormap).pc_tex",
 						"flag": "5F"
 					}
 				},
 				"ColorCorrectionTextureHDR": {
 					"type": "ZRuntimeResourceID",
 					"value": {
-						"resource": "00F3D677AE94EA21",
+						"resource": "[assembly:/_pro/effects/textures/lut/cubelut/defaultlighting.cube](ascolormap).pc_tex",
 						"flag": "5F"
 					}
 				},

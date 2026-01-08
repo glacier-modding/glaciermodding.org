@@ -549,8 +549,8 @@ Next let's make our new `000_Outside` node a `zroomentity`. In the contents for 
 Right-click the `000_Outside > Geometry` node and click `Create Entity` and name it `Floor`. Click it and in the contents, replace everything after the `parent` field with:
 ```json
 	"name": "Floor",
-	"factory": "0065E6850BB157E2",
-	"blueprint": "00B6E9D9DA6DE143",
+	"factory": "[assembly:/_pro/environment/templates/kits/skyscraper/skyscraper_staff_kit_a.template?/skyscraper_staff_ceiling_floor_zmapped_a.entitytemplate].pc_entitytype",
+	"blueprint": "[assembly:/_pro/environment/templates/kits/skyscraper/skyscraper_staff_kit_a.template?/skyscraper_staff_ceiling_floor_zmapped_a.entitytemplate].pc_entityblueprint",
 	"properties": {
 		"m_mTransform": {
 			"type": "SMatrix43",
