@@ -29522,5 +29522,180 @@
         "path": "[modules:/zmultimenucondition.class].pc_entitytype",
         "in": [],
         "out": []
+    },
+    {
+        "hash": "006C28B536626B8B",
+        "path": "[modules:/zvrshakeinventoryitemdroppedentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "0017A2094B9B4EF8",
+        "path": "[modules:/zsignalbranchconditionalvoidentity.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "In",
+                "description": ""
+            }
+        ],
+        "out": [
+            {
+                "pin": "OutTrue",
+                "description": ""
+            },
+            {
+                "pin": "OutFalse",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "hash": "00D3828637D9A8AE",
+        "path": "[modules:/zvrinventoryshake.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00C4AF9DA4DD31F3",
+        "path": "[modules:/zvrinventoryinhandentity.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "GrabInventoryLH",
+                "description": ""
+            },
+            {
+                "pin": "GrabInventoryRH",
+                "description": ""
+            },
+            {
+                "pin": "ReleaseInventory",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "0097EE770AFBE749",
+        "path": "[modules:/zsignallogicalparentinputpin.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "In",
+                "description": ""
+            },
+            {
+                "pin": "InValue",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "00FFD30B5BA22228",
+        "path": "[modules:/zdisablevrheadcollisionaspect.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00713347AC8D186A",
+        "path": "[modules:/zhm5variantconverterentity_svector3.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "Variant",
+                "description": ""
+            }
+        ],
+        "out": [
+            {
+                "pin": "Value",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "hash": "006CD388951F96E7",
+        "path": "[modules:/zgeteuleranglesentity_axisangle.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "Calculate",
+                "description": ""
+            },
+            {
+                "pin": "Direction",
+                "description": ""
+            },
+            {
+                "pin": "Reference",
+                "description": ""
+            }
+        ],
+        "out": [
+            {
+                "pin": "EulerAngles",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "hash": "001AAC30B81556A0",
+        "path": "[modules:/zheroclothaction.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "Reset",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "002590BB7E8ABFFC",
+        "path": "[modules:/zactorproviderfilterqueue.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "AddToBack",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "00F2A648779CD652",
+        "path": "[modules:/zvaluevector3_entityproperty.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "000AADB642C71D51",
+        "path": "[modules:/zcurrentonlineenvironmententity.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "Get",
+                "description": ""
+            }
+        ],
+        "out": [
+            {
+                "pin": "Default",
+                "description": ""
+            },
+            {
+                "pin": "Netflix",
+                "description": ""
+            }
+        ]
+    },
+    {
+        "hash": "00F9B44346DB66C2",
+        "path": "[modules:/zsetgeomentityresourceentity.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "Set",
+                "description": ""
+            },
+            {
+                "pin": "Restore",
+                "description": ""
+            }
+        ],
+        "out": []
     }
 ]
