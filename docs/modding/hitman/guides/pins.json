@@ -29600,6 +29600,10 @@
         "path": "[modules:/zhm5variantconverterentity_svector3.class].pc_entitytype",
         "in": [
             {
+                "pin": "Get",
+                "description": ""
+            },
+            {
                 "pin": "Variant",
                 "description": ""
             }
@@ -29640,7 +29644,27 @@
         "path": "[modules:/zheroclothaction.class].pc_entitytype",
         "in": [
             {
+                "pin": "BlendIn",
+                "description": ""
+            },
+            {
+                "pin": "BlendOut",
+                "description": ""
+            },
+            {
                 "pin": "Reset",
+                "description": ""
+            },
+            {
+                "pin": "1902686892",
+                "description": ""
+            },
+            {
+                "pin": "1208304824",
+                "description": ""
+            },
+            {
+                "pin": "493616836",
                 "description": ""
             }
         ],
@@ -29652,6 +29676,22 @@
         "in": [
             {
                 "pin": "AddToBack",
+                "description": ""
+            },
+            {
+                "pin": "AddToFront",
+                "description": ""
+            },
+            {
+                "pin": "1865160710",
+                "description": ""
+            },
+            {
+                "pin": "2438762569",
+                "description": ""
+            },
+            {
+                "pin": "611376642",
                 "description": ""
             }
         ],
