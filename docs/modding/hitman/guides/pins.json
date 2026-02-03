@@ -2371,6 +2371,10 @@
                 "description": "Fired when Hitman raises his weapon."
             },
             {
+                "pin": "WeaponAimStop",
+                "description": "Fired when Hitman raises his weapon."
+            },
+            {
                 "pin": "WeaponEquip",
                 "description": "Fired when player directly draws Hitman's weapon"
             },
@@ -29314,7 +29318,16 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "Position",
+                "description": ""
+            },
+            {
+                "pin": "Rotation",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00126B9217BB6F8F",
@@ -29598,7 +29611,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "Position",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00683BABB1951464",
