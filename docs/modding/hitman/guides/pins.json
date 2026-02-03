@@ -2372,7 +2372,7 @@
             },
             {
                 "pin": "WeaponAimStop",
-                "description": "Fired when Hitman raises his weapon."
+                "description": "Fired when Hitman lowers his weapon."
             },
             {
                 "pin": "WeaponEquip",
