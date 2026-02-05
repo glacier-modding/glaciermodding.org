@@ -4040,6 +4040,10 @@
             {
                 "pin": "OnHitInfo",
                 "description": "Fires when a hit has occurred with information about the shot"
+            },
+            {
+                "pin": "OnHit_AfterInfo",
+                "description": "Fires after a hit has occurred"
             }
         ]
     },
@@ -7462,11 +7466,11 @@
             },
             {
                 "pin": "SwitchToChannelA",
-                "description": "Change the currently active channel"
+                "description": "Change the currently active channel to A"
             },
             {
                 "pin": "SwitchToChannelB",
-                "description": "Change the currently active channel"
+                "description": "Change the currently active channel to B"
             },
             {
                 "pin": "Set",
@@ -14310,6 +14314,10 @@
         "out": [
             {
                 "pin": "ChannelA",
+                "description": "A signal is fired on Set input"
+            },
+            {
+                "pin": "ChannelB",
                 "description": "A signal is fired on Set input"
             }
         ]
@@ -31034,22 +31042,31 @@
         "in": [
             {
                 "pin": "Set",
-                "description": ""
+                "description": "Forward the value to active channel"
             },
             {
                 "pin": "SwitchToChannelA",
-                "description": ""
+                "description": "Change the currently active channel to A"
             },
             {
                 "pin": "Switch",
-                "description": ""
+                "description": "Change the currently active channel"
             },
             {
                 "pin": "SwitchToChannelB",
-                "description": ""
+                "description": "Change the currently active channel to B"
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "ChannelA",
+                "description": "A signal is fired with the value provided to the Set input"
+            },
+            {
+                "pin": "ChannelB",
+                "description": "A signal is fired with the value provided to the Set input"
+            }
+        ]
     },
     {
         "hash": "005F509431649342",
@@ -31057,22 +31074,31 @@
         "in": [
             {
                 "pin": "Set",
-                "description": ""
+                "description": "Forward the value to active channel"
             },
             {
                 "pin": "SwitchToChannelA",
-                "description": ""
+                "description": "Change the currently active channel to A"
             },
             {
                 "pin": "Switch",
-                "description": ""
+                "description": "Change the currently active channel"
             },
             {
                 "pin": "SwitchToChannelB",
-                "description": ""
+                "description": "Change the currently active channel to B"
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "ChannelA",
+                "description": "A signal is fired with the value provided to the Set input"
+            },
+            {
+                "pin": "ChannelB",
+                "description": "A signal is fired with the value provided to the Set input"
+            }
+        ]
     },
     {
         "hash": "001C6864D53CB258",
@@ -31158,15 +31184,15 @@
         "path": "[modules:/ztestvalue.class].pc_entitytype",
         "in": [
             {
-                "pin": "1500625261",
+                "pin": "InputFloat",
                 "description": ""
             },
             {
-                "pin": "2238259681",
+                "pin": "InputInt",
                 "description": ""
             },
             {
-                "pin": "1048272797",
+                "pin": "InputBool",
                 "description": ""
             }
         ],
