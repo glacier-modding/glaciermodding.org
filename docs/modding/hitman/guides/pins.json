@@ -5985,6 +5985,22 @@
             {
                 "pin": "IsWalking",
                 "description": ""
+            },
+            {
+                "pin": "IsRunning",
+                "description": ""
+            },
+            {
+                "pin": "IsCrouchWalking",
+                "description": ""
+            },
+            {
+                "pin": "IsCrouchWalkingSlowly",
+                "description": ""
+            },
+            {
+                "pin": "IsWalkingSlowly",
+                "description": ""
             }
         ]
     },
@@ -6139,6 +6155,14 @@
         "out": [
             {
                 "pin": "Discharge_Shot",
+                "description": ""
+            },
+            {
+                "pin": "Discharge_ShotSilenced",
+                "description": ""
+            },
+            {
+                "pin": "Discharge_ShotSuperSilenced",
                 "description": ""
             }
         ]
