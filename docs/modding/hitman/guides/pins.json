@@ -29281,8 +29281,22 @@
     {
         "hash": "00250E32380F702F",
         "path": "[modules:/zcheckinputflag.class].pc_entitytype",
-        "in": [],
-        "out": []
+        "in": [
+            {
+                "pin": "Enable",
+                "description": ""
+            },
+            {
+                "pin": "Disable",
+                "description": ""
+            }
+        ],
+        "out": [
+            {
+                "pin": "Trigger",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00ED0BF58659C2AC",
