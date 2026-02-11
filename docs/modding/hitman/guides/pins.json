@@ -22883,7 +22883,7 @@
         "path": "[modules:/zevergreenmenucursoranchoredspatialentity.class].pc_entitytype",
         "in": [
             {
-                "pin": "3228163031",
+                "pin": "SetCursorAnchorEnabled",
                 "description": ""
             },
             {
@@ -29228,8 +29228,118 @@
     {
         "hash": "00775D98545AD954",
         "path": "[modules:/zhm5reload.class].pc_entitytype",
-        "in": [],
-        "out": []
+        "in": [
+            {
+                "pin": "SlideGrabbed",
+                "description": ""
+            },
+            {
+                "pin": "SlideReleased",
+                "description": ""
+            },
+            {
+                "pin": "SlideRacked",
+                "description": ""
+            },
+            {
+                "pin": "SlideRackedBackAndForth",
+                "description": ""
+            },
+            {
+                "pin": "ClipItemDartSpawned",
+                "description": ""
+            },
+            {
+                "pin": "ClipInserted",
+                "description": ""
+            },
+            {
+                "pin": "ClipDropped",
+                "description": ""
+            },
+            {
+                "pin": "ClipAligned",
+                "description": ""
+            },
+            {
+                "pin": "ClipPoseInvalid",
+                "description": ""
+            },
+            {
+                "pin": "ClipGrabbed",
+                "description": ""
+            },
+            {
+                "pin": "ClipItemShellSpawned",
+                "description": ""
+            },
+            {
+                "pin": "ClipItemSmgSpawned",
+                "description": ""
+            },
+            {
+                "pin": "ClipItemPistolSpawned",
+                "description": ""
+            },
+            {
+                "pin": "ClipItemAssaultRifleSpawned",
+                "description": ""
+            },
+            {
+                "pin": "ClipItemSniperStealthSpawned",
+                "description": ""
+            },
+            {
+                "pin": "PressCheckFraction",
+                "description": ""
+            },
+            {
+                "pin": "PressCheckReleased",
+                "description": ""
+            },
+            {
+                "pin": "PressCheckSlideGrabbed",
+                "description": ""
+            }
+        ],
+        "out": [
+            {
+                "pin": "ClipGrab",
+                "description": ""
+            },
+            {
+                "pin": "ClipInsert",
+                "description": ""
+            },
+            {
+                "pin": "Abort",
+                "description": ""
+            },
+            {
+                "pin": "SlideDone",
+                "description": ""
+            },
+            {
+                "pin": "AnimPlayerSet",
+                "description": ""
+            },
+            {
+                "pin": "ShotgunSlideStart",
+                "description": ""
+            },
+            {
+                "pin": "SlideStart",
+                "description": ""
+            },
+            {
+                "pin": "PressCheckDisable",
+                "description": ""
+            },
+            {
+                "pin": "PressCheckEnable",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00A60BEA631F09E6",
