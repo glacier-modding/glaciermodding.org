@@ -11251,7 +11251,7 @@
                 "description": ""
             },
             {
-                "pin": "863436738",
+                "pin": "SetZoomIn",
                 "description": ""
             }
         ],
@@ -18729,7 +18729,7 @@
                 "description": ""
             },
             {
-                "pin": "863436738",
+                "pin": "SetZoomIn",
                 "description": ""
             }
         ],
