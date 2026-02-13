@@ -11643,6 +11643,10 @@
         "in": [],
         "out": [
             {
+                "pin": "OnTrue",
+                "description": ""
+            },
+            {
                 "pin": "OnFalse",
                 "description": ""
             },
@@ -13441,6 +13445,18 @@
             {
                 "pin": "OnMenuOpening",
                 "description": ""
+            },
+            {
+                "pin": "OnMenuOpened",
+                "description": ""
+            },
+            {
+                "pin": "OnMenuClosing",
+                "description": ""
+            },
+            {
+                "pin": "OnMenuClosed",
+                "description": ""
             }
         ]
     },
@@ -13651,6 +13667,10 @@
             {
                 "pin": "AreAllEntitlementsAvailable",
                 "description": ""
+            },
+            {
+                "pin": "EntitlementsMissing",
+                "description": ""
             }
         ]
     },
@@ -13661,6 +13681,10 @@
         "out": [
             {
                 "pin": "OnTrue",
+                "description": ""
+            },
+            {
+                "pin": "OnFalse",
                 "description": ""
             }
         ]
@@ -13782,6 +13806,10 @@
         "in": [],
         "out": [
             {
+                "pin": "CrimeSector",
+                "description": ""
+            },
+            {
                 "pin": "CrimeSectorIndex",
                 "description": ""
             },
@@ -13790,7 +13818,19 @@
                 "description": ""
             },
             {
+                "pin": "LeaderCodenameIndex",
+                "description": ""
+            },
+            {
                 "pin": "DifficultyRank",
+                "description": ""
+            },
+            {
+                "pin": "RandomSeed",
+                "description": ""
+            },
+            {
+                "pin": "DynamicSeed",
                 "description": ""
             }
         ]
@@ -13818,6 +13858,14 @@
         "out": [
             {
                 "pin": "Title",
+                "description": ""
+            },
+            {
+                "pin": "Description",
+                "description": ""
+            },
+            {
+                "pin": "ImageRID",
                 "description": ""
             }
         ]
@@ -13881,11 +13929,11 @@
         "path": "[modules:/zevergreencampaignmanager.class].pc_entitytype",
         "in": [
             {
-                "pin": "40894957",
+                "pin": "Generate",
                 "description": ""
             },
             {
-                "pin": "3714858457",
+                "pin": "SafehouseReturn",
                 "description": ""
             }
         ],
@@ -14510,6 +14558,22 @@
         "out": [
             {
                 "pin": "IsInCampaign",
+                "description": ""
+            },
+            {
+                "pin": "IsVisited",
+                "description": ""
+            },
+            {
+                "pin": "IsThisTerritorySelectedToTravelNext",
+                "description": ""
+            },
+            {
+                "pin": "IsAnotherTerritorySelectedToTravelNext",
+                "description": ""
+            },
+            {
+                "pin": "IIsHotMissionInCampaign",
                 "description": ""
             }
         ]
@@ -18733,7 +18797,16 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OnClosing",
+                "description": ""
+            },
+            {
+                "pin": "OnOpening",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00F1F4C8BE037464",
@@ -18752,11 +18825,11 @@
         "path": "[modules:/zevergreencampaigninfodataprovider.class].pc_entitytype",
         "in": [
             {
-                "pin": "4097207359",
+                "pin": "Difficulty",
                 "description": ""
             },
             {
-                "pin": "3523896948",
+                "pin": "Hardcore",
                 "description": ""
             }
         ],
