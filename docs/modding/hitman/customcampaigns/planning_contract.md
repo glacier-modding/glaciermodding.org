@@ -16,7 +16,7 @@ We created a hash for this planning contract in the previous step. We will need 
 
 In the `content/chunk0` folder, create a new folder named `Planning Contracts`, and in that folder create a new folder named `bank`
 
-In GlacierKit, go to the `Game content` tab and enter `(planning_contract) greedy` and press enter. You will see the `(planning_contract) greedy raccoon` file. Click it and click the `Extract file` button.
+In GlacierKit, go to the `Game content` tab and enter `scene_raccoon_basic.worldmapmetadata.json` and press enter. You will see the `scene_raccoon_basic.worldmapmetadata.json` file. Click it and click the `Extract file` button.
 
 Navigate to the `content/chunk0/Planning Contracts/bank` folder. For the file name, use the hashed value we copied from our `menumapsetup...` file (`0027913897DEC7E8`). You should now have a new file with the name: `0027913897DEC7E8.JSON`. It will also have created a file named `0027913897DEC7E8.JSON.meta`. We don't actually need that file, so we can delete it. 
 
