@@ -12754,6 +12754,18 @@
             {
                 "pin": "OnHearGunshot",
                 "description": ""
+            },
+            {
+                "pin": "OnHearBulletImpact",
+                "description": ""
+            },
+            {
+                "pin": "OnHearAccident",
+                "description": ""
+            },
+            {
+                "pin": "OnHearExplosion",
+                "description": ""
             }
         ]
     },
@@ -12764,6 +12776,42 @@
         "out": [
             {
                 "pin": "OnSeeCombat",
+                "description": ""
+            },
+            {
+                "pin": "OnSeeDead",
+                "description": ""
+            },
+            {
+                "pin": "OnSeeActorScared",
+                "description": ""
+            },
+            {
+                "pin": "OnSeeActorGettingHelp",
+                "description": ""
+            },
+            {
+                "pin": "OnSeeActorAgitatedBystander",
+                "description": ""
+            },
+            {
+                "pin": "OnSeeDeadByAccident",
+                "description": ""
+            },
+            {
+                "pin": "OnSeeGettingHelp",
+                "description": ""
+            },
+            {
+                "pin": "OnSeeAgitatedBystander",
+                "description": ""
+            },
+            {
+                "pin": "OnSeeScared",
+                "description": ""
+            },
+            {
+                "pin": "OnSeeUnconscious",
                 "description": ""
             }
         ]
