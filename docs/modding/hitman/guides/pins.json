@@ -14848,11 +14848,11 @@
                 "description": "Activate force Hitman into locomotion"
             },
             {
-                "pin": "3006714190",
+                "pin": "ForceSneak",
                 "description": ""
             },
             {
-                "pin": "2629619511",
+                "pin": "ForceStand",
                 "description": ""
             }
         ],
@@ -34490,11 +34490,11 @@
                 "description": ""
             },
             {
-                "pin": "2159018935",
+                "pin": "Cured",
                 "description": ""
             },
             {
-                "pin": "792233903",
+                "pin": "Infected",
                 "description": ""
             }
         ],
