@@ -184,32 +184,12 @@
                 "description": "Fired when the sequence starts playing"
             },
             {
-                "pin": "Event_Track_KillActor_Fired",
-                "description": ""
-            },
-            {
                 "pin": "OnUnpause",
                 "description": "Fired when the sequence is unpaused"
             },
             {
-                "pin": "Event_Track_Delgado_Intro_Fired",
-                "description": ""
-            },
-            {
                 "pin": "OnPause",
                 "description": "Fired when the sequence is paused"
-            },
-            {
-                "pin": "Event_Track_Exit_end_Fired",
-                "description": ""
-            },
-            {
-                "pin": "Event_Track_FadeFromBlack_Fired",
-                "description": ""
-            },
-            {
-                "pin": "Audio_Events_BoatAudio_Fired",
-                "description": ""
             }
         ]
     },
