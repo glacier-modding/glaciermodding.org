@@ -23030,11 +23030,11 @@
                 "description": ""
             },
             {
-                "pin": "3893289496",
+                "pin": "SetYawDeg",
                 "description": ""
             },
             {
-                "pin": "1462664823",
+                "pin": "SetPitchDeg",
                 "description": ""
             }
         ],
@@ -27493,7 +27493,7 @@
                 "description": ""
             },
             {
-                "pin": "1149171786",
+                "pin": "BlendSustainDuration",
                 "description": ""
             }
         ],
