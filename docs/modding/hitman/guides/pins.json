@@ -688,7 +688,7 @@
                 "description": ""
             },
             {
-                "pin": "3578208778",
+                "pin": "MakeBodyKnown",
                 "description": ""
             }
         ],
@@ -2617,7 +2617,7 @@
                 "description": ""
             },
             {
-                "pin": "3578208778",
+                "pin": "MakeBodyKnown",
                 "description": ""
             },
             {
@@ -35021,7 +35021,7 @@
         "path": "[modules:/zspatialreferenceentity.class].pc_entitytype",
         "in": [
             {
-                "pin": "608865813",
+                "pin": "SetReference",
                 "description": ""
             }
         ],
