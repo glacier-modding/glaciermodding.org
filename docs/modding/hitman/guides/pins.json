@@ -31485,7 +31485,7 @@
         "path": "[modules:/zrandomlevelloaderentity.class].pc_entitytype",
         "in": [
             {
-                "pin": "701952100",
+                "pin": "LoadRandomizedScene",
                 "description": ""
             }
         ],
