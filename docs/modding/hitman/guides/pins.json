@@ -1921,15 +1921,15 @@
                 "description": ""
             },
             {
-                "pin": "2902484004",
+                "pin": "QueryEquippedIsFirearmLeft",
                 "description": ""
             },
             {
-                "pin": "970872431",
+                "pin": "HolsterEquippedLeft",
                 "description": ""
             },
             {
-                "pin": "3453709841",
+                "pin": "QueryEquippedFirearmBulletsLeft",
                 "description": ""
             }
         ],
@@ -18918,7 +18918,7 @@
                 "description": ""
             },
             {
-                "pin": "1071164747",
+                "pin": "SetIcon",
                 "description": ""
             }
         ],
@@ -30015,7 +30015,7 @@
         "path": "[modules:/zvrtakedisguise.class].pc_entitytype",
         "in": [
             {
-                "pin": "649289358",
+                "pin": "SetClothBundleItem",
                 "description": ""
             }
         ],
@@ -32230,11 +32230,11 @@
         "path": "[modules:/zat2controller.class].pc_entitytype",
         "in": [
             {
-                "pin": "1741973026",
+                "pin": "CalcFootsteps",
                 "description": ""
             },
             {
-                "pin": "1775711535",
+                "pin": "PreviewEvent",
                 "description": ""
             }
         ],
@@ -32314,7 +32314,7 @@
         "path": "[modules:/zactoraccessoryitemcondition.class].pc_entitytype",
         "in": [
             {
-                "pin": "3496008848",
+                "pin": "ForceEvaluate",
                 "description": ""
             }
         ],
@@ -32331,11 +32331,11 @@
         "path": "[modules:/zactordebugentity.class].pc_entitytype",
         "in": [
             {
-                "pin": "3391665795",
+                "pin": "InjectAIEvent",
                 "description": ""
             },
             {
-                "pin": "1987564964",
+                "pin": "PlayDialog",
                 "description": ""
             }
         ],
@@ -33292,7 +33292,7 @@
         "path": "[modules:/zlogicmultiplegate.class].pc_entitytype",
         "in": [
             {
-                "pin": "2408469153",
+                "pin": "Port0In",
                 "description": ""
             },
             {
@@ -33308,15 +33308,15 @@
                 "description": ""
             },
             {
-                "pin": "2349500111",
+                "pin": "Port2In",
                 "description": ""
             },
             {
-                "pin": "2387359894",
+                "pin": "Port1In",
                 "description": ""
             },
             {
-                "pin": "2378755320",
+                "pin": "Port3In",
                 "description": ""
             }
         ],
@@ -33740,7 +33740,7 @@
         "path": "[modules:/zuiperformancetestmetricscollectorentity.class].pc_entitytype",
         "in": [
             {
-                "pin": "201379431",
+                "pin": "RunAllTests",
                 "description": ""
             }
         ],
@@ -34195,7 +34195,7 @@
                 "description": ""
             },
             {
-                "pin": "1567507039",
+                "pin": "Debug_Evaluate",
                 "description": ""
             }
         ],
