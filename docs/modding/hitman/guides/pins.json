@@ -197,20 +197,7 @@
         "hash": "0058172A1EF91B9F",
         "path": "[modules:/zeventtrack.class].pc_entitytype",
         "in": [],
-        "out": [
-            {
-                "pin": "audiotest_Fired",
-                "description": ""
-            },
-            {
-                "pin": "Event_Fired",
-                "description": ""
-            },
-            {
-                "pin": "VO_Start_Fired",
-                "description": ""
-            }
-        ]
+        "out": []
     },
     {
         "hash": "007DE6F6A2403038",
