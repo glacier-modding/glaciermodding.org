@@ -17088,7 +17088,87 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OwnedByHitman",
+                "description": ""
+            },{
+                "pin": "OwnedByNPC",
+                "description": ""
+            },{
+                "pin": "AddedToPhysicsWorld",
+                "description": ""
+            },{
+                "pin": "OnVisible",
+                "description": ""
+            },{
+                "pin": "OnInvisible",
+                "description": ""
+            },{
+                "pin": "OnPutInContainer",
+                "description": ""
+            },{
+                "pin": "OnRemovedFromContainer",
+                "description": ""
+            },{
+                "pin": "ThrowImpact",
+                "description": ""
+            },{
+                "pin": "OnHolster",
+                "description": ""
+            },{
+                "pin": "OnRelease",
+                "description": ""
+            },{
+                "pin": "OnDrop",
+                "description": ""
+            },{
+                "pin": "OnHide",
+                "description": ""
+            },{
+                "pin": "OnShot",
+                "description": ""
+            },{
+                "pin": "OnPlaced",
+                "description": ""
+            },{
+                "pin": "OnDestroyed",
+                "description": ""
+            },{
+                "pin": "OnThrown",
+                "description": ""
+            },{
+                "pin": "OnAttachToHitman",
+                "description": ""
+            },{
+                "pin": "OnAttachToNPC",
+                "description": ""
+            },{
+                "pin": "OnAttach",
+                "description": ""
+            },{
+                "pin": "OnTurnOn",
+                "description": ""
+            },{
+                "pin": "OnUsed",
+                "description": ""
+            },{
+                "pin": "ReportOwner",
+                "description": ""
+            },{
+                "pin": "OnDropByHero",
+                "description": ""
+            },{
+                "pin": "OnTurnOff",
+                "description": ""
+            },{
+                "pin": "ReportOwnerPosition",
+                "description": ""
+            },{
+                "pin": "DeadlyThrowImpact",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00C078AD07A6C65C",
