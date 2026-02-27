@@ -1919,6 +1919,18 @@
             {
                 "pin": "GetHero",
                 "description": ""
+            },
+            {
+                "pin": "2902484004",
+                "description": ""
+            },
+            {
+                "pin": "970872431",
+                "description": ""
+            },
+            {
+                "pin": "3453709841",
+                "description": ""
             }
         ],
         "out": [
@@ -16795,7 +16807,12 @@
     {
         "hash": "00F01617FA98A427",
         "path": "[modules:/zactorstatecondition.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "ForceUpdate",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
@@ -18894,6 +18911,14 @@
             },
             {
                 "pin": "Hide",
+                "description": ""
+            },
+            {
+                "pin": "Refresh",
+                "description": ""
+            },
+            {
+                "pin": "1071164747",
                 "description": ""
             }
         ],
@@ -29458,7 +29483,12 @@
     {
         "hash": "006D51B6360DED4C",
         "path": "[modules:/zinputcontrollertypecondition.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "Get",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
@@ -29983,7 +30013,12 @@
     {
         "hash": "00517395A945750D",
         "path": "[modules:/zvrtakedisguise.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "649289358",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
@@ -30251,7 +30286,12 @@
     {
         "hash": "0010333DB536B996",
         "path": "[modules:/zmultimenucondition.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "Get",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
@@ -32106,13 +32146,35 @@
     {
         "hash": "006F9043450BD569",
         "path": "[modules:/zleadescortsituationentity.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "AddActor",
+                "description": ""
+            },
+            {
+                "pin": "PickupOnTarget",
+                "description": ""
+            },
+            {
+                "pin": "LeaveTarget",
+                "description": ""
+            },
+            {
+                "pin": "RemoveActor",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
         "hash": "00AD97167A60AB5A",
         "path": "[modules:/zsmugglesituationentity.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "Reset",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
@@ -32166,7 +32228,16 @@
     {
         "hash": "006B1913207491BD",
         "path": "[modules:/zat2controller.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "1741973026",
+                "description": ""
+            },
+            {
+                "pin": "1775711535",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
@@ -32241,7 +32312,12 @@
     {
         "hash": "00BC35FE9C48A868",
         "path": "[modules:/zactoraccessoryitemcondition.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "3496008848",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
@@ -32253,7 +32329,16 @@
     {
         "hash": "004FFA017DF0C0D3",
         "path": "[modules:/zactordebugentity.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "3391665795",
+                "description": ""
+            },
+            {
+                "pin": "1987564964",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
@@ -32527,7 +32612,12 @@
     {
         "hash": "003D868B47A951CE",
         "path": "[modules:/zchannelkeywordcondition.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "Get",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
@@ -32750,13 +32840,23 @@
     {
         "hash": "00C01A55162C0AC8",
         "path": "[modules:/zevergreencampaigndefinitionpollstring.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "Get",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
         "hash": "001363AA4EF61081",
         "path": "[modules:/zevergreencampaignstatuspollint.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "Get",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
@@ -33042,7 +33142,12 @@
     {
         "hash": "00E8432F2095E7D7",
         "path": "[modules:/zhm5ledgemount.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "Activate",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
@@ -33121,7 +33226,12 @@
     {
         "hash": "00F1EB42902458C4",
         "path": "[modules:/zinputlistenerbase.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "Get",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
@@ -33180,7 +33290,36 @@
     {
         "hash": "008E05043A383D0A",
         "path": "[modules:/zlogicmultiplegate.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "2408469153",
+                "description": ""
+            },
+            {
+                "pin": "Enable",
+                "description": ""
+            },
+            {
+                "pin": "Reset",
+                "description": ""
+            },
+            {
+                "pin": "Disable",
+                "description": ""
+            },
+            {
+                "pin": "2349500111",
+                "description": ""
+            },
+            {
+                "pin": "2387359894",
+                "description": ""
+            },
+            {
+                "pin": "2378755320",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
@@ -33599,7 +33738,12 @@
     {
         "hash": "000A671BFD50B91B",
         "path": "[modules:/zuiperformancetestmetricscollectorentity.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "201379431",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
@@ -34045,7 +34189,16 @@
     {
         "hash": "00576C26443849B7",
         "path": "[modules:/zcausalnodeentity.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "GetNode",
+                "description": ""
+            },
+            {
+                "pin": "1567507039",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
