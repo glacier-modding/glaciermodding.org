@@ -896,11 +896,11 @@
                 "description": ""
             },
             {
-                "pin": "2948097658",
+                "pin": "EquipInstantLeft",
                 "description": ""
             },
             {
-                "pin": "2602720443",
+                "pin": "HolsterInstant",
                 "description": ""
             },
             {
@@ -916,11 +916,11 @@
                 "description": ""
             },
             {
-                "pin": "2174621043",
+                "pin": "EquipLeft",
                 "description": ""
             },
             {
-                "pin": "3052362485",
+                "pin": "HolsterInstantLeft",
                 "description": ""
             }
         ],
@@ -2681,7 +2681,7 @@
         "path": "[modules:/zvipcontrollerentity.class].pc_entitytype",
         "in": [
             {
-                "pin": "2897666998",
+                "pin": "SetVIP",
                 "description": ""
             },
             {
@@ -9285,11 +9285,11 @@
                 "description": ""
             },
             {
-                "pin": "2594753190",
+                "pin": "PickupItemsLeft",
                 "description": ""
             },
             {
-                "pin": "3371586958",
+                "pin": "PickupItemsRight",
                 "description": ""
             }
         ],
@@ -10206,7 +10206,7 @@
         "path": "[modules:/zevergreenentranceselector.class].pc_entitytype",
         "in": [
             {
-                "pin": "432477219",
+                "pin": "SelectEntrance",
                 "description": ""
             }
         ],
@@ -13163,11 +13163,11 @@
         "path": "[modules:/zhm5vrheadcolliderentity.class].pc_entitytype",
         "in": [
             {
-                "pin": "3927419347",
+                "pin": "EnableFade",
                 "description": ""
             },
             {
-                "pin": "207969372",
+                "pin": "DisableFade",
                 "description": ""
             }
         ],
@@ -14092,7 +14092,7 @@
                 "description": ""
             },
             {
-                "pin": "329316886",
+                "pin": "SetEntranceId",
                 "description": ""
             },
             {
@@ -16771,7 +16771,7 @@
         "path": "[modules:/zuispatialcontrolsmanagerentity.class].pc_entitytype",
         "in": [
             {
-                "pin": "4200118478",
+                "pin": "SetEvergreenMenuMode",
                 "description": ""
             }
         ],
@@ -20287,7 +20287,7 @@
                 "description": ""
             },
             {
-                "pin": "2883747353",
+                "pin": "ReleaseFocus",
                 "description": ""
             },
             {
@@ -20299,7 +20299,7 @@
                 "description": ""
             },
             {
-                "pin": "2857294841",
+                "pin": "AllowGrabEquip",
                 "description": ""
             }
         ],
@@ -21898,7 +21898,7 @@
         "path": "[modules:/zcpdmanager.class].pc_entitytype",
         "in": [
             {
-                "pin": "4115961312",
+                "pin": "Save",
                 "description": ""
             }
         ],
@@ -23207,7 +23207,7 @@
         "path": "[modules:/zevergreencampaignprogresshelperentity.class].pc_entitytype",
         "in": [
             {
-                "pin": "4229299879",
+                "pin": "MissionEnded",
                 "description": ""
             },
             {
@@ -24851,7 +24851,7 @@
         "path": "[modules:/zhudactoroverheadanchoredspatialentity.class].pc_entitytype",
         "in": [
             {
-                "pin": "2665491478",
+                "pin": "SetOverheadAnchorEnabled",
                 "description": ""
             },
             {
@@ -29317,7 +29317,7 @@
         "path": "[modules:/zupdateablefloatadapter.class].pc_entitytype",
         "in": [
             {
-                "pin": "68874754",
+                "pin": "TriggerOnItemUsed",
                 "description": ""
             },
             {
@@ -29329,7 +29329,7 @@
                 "description": ""
             },
             {
-                "pin": "630619980",
+                "pin": "SetExclusiveUpdateableIndex",
                 "description": ""
             },
             {
@@ -29349,15 +29349,15 @@
                 "description": ""
             },
             {
-                "pin": "602912280",
+                "pin": "SetExecutionSourceRightHand",
                 "description": ""
             },
             {
-                "pin": "323680345",
+                "pin": "SetExecutionSourceLeftHand",
                 "description": ""
             },
             {
-                "pin": "1462091900",
+                "pin": "SetExecutionSourceUnknown",
                 "description": ""
             }
         ],
@@ -29576,7 +29576,7 @@
                 "description": ""
             },
             {
-                "pin": "2100217375",
+                "pin": "SetHand",
                 "description": ""
             }
         ],
@@ -30070,19 +30070,19 @@
         "path": "[modules:/zvrquickgrab.class].pc_entitytype",
         "in": [
             {
-                "pin": "1950884192",
+                "pin": "LeaveQuickGrabArea",
                 "description": ""
             },
             {
-                "pin": "3073696682",
+                "pin": "LeaveQuickGrabAreaLeft",
                 "description": ""
             },
             {
-                "pin": "4083595802",
+                "pin": "EnterQuickGrabAreaLeft",
                 "description": ""
             },
             {
-                "pin": "4091522437",
+                "pin": "EnterQuickGrabArea",
                 "description": ""
             }
         ],
@@ -30116,19 +30116,19 @@
         "path": "[modules:/zvrholsterattacher.class].pc_entitytype",
         "in": [
             {
-                "pin": "2010784112",
+                "pin": "SetAttachPointLeft",
                 "description": ""
             },
             {
-                "pin": "1392510129",
+                "pin": "ClearAttachPointLeft",
                 "description": ""
             },
             {
-                "pin": "160720132",
+                "pin": "SetAttachPoint",
                 "description": ""
             },
             {
-                "pin": "1215904237",
+                "pin": "ClearAttachPoint",
                 "description": ""
             }
         ],
