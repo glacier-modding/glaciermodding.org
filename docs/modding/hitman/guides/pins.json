@@ -358,7 +358,7 @@
                 "description": ""
             },
             {
-                "pin": "Out06",
+                "pin": "Out04",
                 "description": ""
             },
             {
@@ -366,7 +366,7 @@
                 "description": ""
             },
             {
-                "pin": "Out04",
+                "pin": "Out06",
                 "description": ""
             }
         ]
@@ -4609,11 +4609,23 @@
                 "description": ""
             },
             {
+                "pin": "Out02",
+                "description": ""
+            },
+            {
                 "pin": "Out03",
                 "description": ""
             },
             {
-                "pin": "Out02",
+                "pin": "Out04",
+                "description": ""
+            },
+            {
+                "pin": "Out05",
+                "description": ""
+            },
+            {
+                "pin": "Out06",
                 "description": ""
             }
         ]
@@ -7144,11 +7156,11 @@
         ],
         "out": [
             {
-                "pin": "Out02",
+                "pin": "Out01",
                 "description": ""
             },
             {
-                "pin": "Out01",
+                "pin": "Out02",
                 "description": ""
             },
             {
@@ -7462,15 +7474,27 @@
         ],
         "out": [
             {
-                "pin": "Out02",
-                "description": ""
-            },
-            {
                 "pin": "Out01",
                 "description": ""
             },
             {
+                "pin": "Out02",
+                "description": ""
+            },
+            {
                 "pin": "Out03",
+                "description": ""
+            },
+            {
+                "pin": "Out04",
+                "description": ""
+            },
+            {
+                "pin": "Out05",
+                "description": ""
+            },
+            {
+                "pin": "Out06",
                 "description": ""
             }
         ]
@@ -9254,6 +9278,26 @@
             {
                 "pin": "Out01",
                 "description": ""
+            },
+            {
+                "pin": "Out02",
+                "description": ""
+            },
+            {
+                "pin": "Out03",
+                "description": ""
+            },
+            {
+                "pin": "Out04",
+                "description": ""
+            },
+            {
+                "pin": "Out05",
+                "description": ""
+            },
+            {
+                "pin": "Out06",
+                "description": ""
             }
         ]
     },
@@ -10241,6 +10285,22 @@
             },
             {
                 "pin": "Out02",
+                "description": ""
+            },
+            {
+                "pin": "Out03",
+                "description": ""
+            },
+            {
+                "pin": "Out04",
+                "description": ""
+            },
+            {
+                "pin": "Out05",
+                "description": ""
+            },
+            {
+                "pin": "Out06",
                 "description": ""
             }
         ]
@@ -33868,7 +33928,32 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "Out01",
+                "description": ""
+            },
+            {
+                "pin": "Out02",
+                "description": ""
+            },
+            {
+                "pin": "Out03",
+                "description": ""
+            },
+            {
+                "pin": "Out04",
+                "description": ""
+            },
+            {
+                "pin": "Out05",
+                "description": ""
+            },
+            {
+                "pin": "Out06",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00169F1D14D09E49",
@@ -35761,7 +35846,32 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "Out01",
+                "description": ""
+            },
+            {
+                "pin": "Out02",
+                "description": ""
+            },
+            {
+                "pin": "Out03",
+                "description": ""
+            },
+            {
+                "pin": "Out04",
+                "description": ""
+            },
+            {
+                "pin": "Out05",
+                "description": ""
+            },
+            {
+                "pin": "Out06",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "007C3A038C2110FD",
