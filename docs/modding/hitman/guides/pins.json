@@ -1429,6 +1429,18 @@
             {
                 "pin": "SoundTensionUpToRed",
                 "description": ""
+            },
+            {
+                "pin": "HasNoUnconsciousWitness",
+                "description": ""
+            },
+            {
+                "pin": "NPCHasQuestionMark",
+                "description": ""
+            },
+            {
+                "pin": "NPCHasExclamationMark",
+                "description": ""
             }
         ]
     },
@@ -1641,6 +1653,14 @@
             },
             {
                 "pin": "OnPause",
+                "description": ""
+            },
+            {
+                "pin": "OnUnpause",
+                "description": ""
+            },
+            {
+                "pin": "OnStop",
                 "description": ""
             }
         ]
@@ -2236,6 +2256,14 @@
             {
                 "pin": "EquippedIsNotFirearm",
                 "description": ""
+            },
+            {
+                "pin": "EquippedIsFirearm",
+                "description": ""
+            },
+            {
+                "pin": "EquippedBulletCount",
+                "description": ""
             }
         ]
     },
@@ -2477,6 +2505,10 @@
             },
             {
                 "pin": "OnValue",
+                "description": ""
+            },
+            {
+                "pin": "OnGetCondition",
                 "description": ""
             }
         ]
@@ -3466,6 +3498,10 @@
             {
                 "pin": "OnEffectActivated",
                 "description": ""
+            },
+            {
+                "pin": "OnEffectDeactivated",
+                "description": ""
             }
         ]
     },
@@ -3752,6 +3788,18 @@
             },
             {
                 "pin": "ItemPullOut",
+                "description": ""
+            },
+            {
+                "pin": "ItemSlitThroat",
+                "description": ""
+            },
+            {
+                "pin": "ItemSoundGeneric02",
+                "description": ""
+            },
+            {
+                "pin": "ItemSoundGeneric03",
                 "description": ""
             }
         ]
@@ -4211,6 +4259,14 @@
             {
                 "pin": "OnEffectActivated",
                 "description": ""
+            },
+            {
+                "pin": "OnCollision",
+                "description": ""
+            },
+            {
+                "pin": "OnEffectDeactivated",
+                "description": ""
             }
         ]
     },
@@ -4411,6 +4467,10 @@
             {
                 "pin": "OnNotCurrent",
                 "description": "Fires if false"
+            },
+            {
+                "pin": "OnNext",
+                "description": ""
             }
         ]
     },
@@ -4806,6 +4866,22 @@
         "out": [
             {
                 "pin": "NumOccupiedSpots",
+                "description": ""
+            },
+            {
+                "pin": "NumOccupiedSpotsFemale",
+                "description": ""
+            },
+            {
+                "pin": "NumOccupiedSpotsMale",
+                "description": ""
+            },
+            {
+                "pin": "NumOccupiedSpotsMalePercent",
+                "description": ""
+            },
+            {
+                "pin": "CurrentGait",
                 "description": ""
             }
         ]
@@ -5925,6 +6001,18 @@
             {
                 "pin": "OnSetZoomLevel",
                 "description": ""
+            },
+            {
+                "pin": "OnEnterScopeMode",
+                "description": ""
+            },
+            {
+                "pin": "OnExitScopeMode",
+                "description": ""
+            },
+            {
+                "pin": "OnSetAmmoScopeType",
+                "description": ""
             }
         ]
     },
@@ -6198,6 +6286,106 @@
             },
             {
                 "pin": "OnInvisible",
+                "description": ""
+            },
+            {
+                "pin": "OnRemovedFromContainer",
+                "description": ""
+            },
+            {
+                "pin": "AddedToPhysicsWorld",
+                "description": ""
+            },
+            {
+                "pin": "DeadlyThrowImpact",
+                "description": ""
+            },
+            {
+                "pin": "OnThrown",
+                "description": ""
+            },
+            {
+                "pin": "OnVisible",
+                "description": ""
+            },
+            {
+                "pin": "OnPlaced",
+                "description": ""
+            },
+            {
+                "pin": "OnAttach",
+                "description": ""
+            },
+            {
+                "pin": "OnHolster",
+                "description": ""
+            },
+            {
+                "pin": "OnDropByHero",
+                "description": ""
+            },
+            {
+                "pin": "OnHide",
+                "description": ""
+            },
+            {
+                "pin": "OnPutInContainer",
+                "description": ""
+            },
+            {
+                "pin": "OnContainerDestroyed",
+                "description": ""
+            },
+            {
+                "pin": "OnShot",
+                "description": ""
+            },
+            {
+                "pin": "OnTurnOn",
+                "description": ""
+            },
+            {
+                "pin": "OnTurnOff",
+                "description": ""
+            },
+            {
+                "pin": "OnAttachToNPC",
+                "description": ""
+            },
+            {
+                "pin": "OnAttachToHitman",
+                "description": ""
+            },
+            {
+                "pin": "ThrowImpact",
+                "description": ""
+            },
+            {
+                "pin": "OnUsed",
+                "description": ""
+            },
+            {
+                "pin": "ReportItemUsed",
+                "description": ""
+            },
+            {
+                "pin": "OnEject",
+                "description": ""
+            },
+            {
+                "pin": "OnConsumed",
+                "description": ""
+            },
+            {
+                "pin": "ReportOwner",
+                "description": ""
+            },
+            {
+                "pin": "ReportOwnerPosition",
+                "description": ""
+            },
+            {
+                "pin": "reportSetpieceUsed",
                 "description": ""
             }
         ]
@@ -6798,6 +6986,34 @@
             {
                 "pin": "Fiberwire",
                 "description": ""
+            },
+            {
+                "pin": "HaveUnhiddenPacified",
+                "description": ""
+            },
+            {
+                "pin": "TargetPacified",
+                "description": ""
+            },
+            {
+                "pin": "ProjectileMultiKillTargets",
+                "description": ""
+            },
+            {
+                "pin": "TakeOutNonLethal",
+                "description": ""
+            },
+            {
+                "pin": "Recovered",
+                "description": ""
+            },
+            {
+                "pin": "ProjectileHeadShot",
+                "description": ""
+            },
+            {
+                "pin": "ProjectileCrowdHeadShot",
+                "description": ""
             }
         ]
     },
@@ -7083,6 +7299,10 @@
             },
             {
                 "pin": "Discharge_ShotSuperSilenced",
+                "description": ""
+            },
+            {
+                "pin": "Discharge_ShotCompletelySilenced",
                 "description": ""
             }
         ]
@@ -8015,6 +8235,10 @@
             {
                 "pin": "OnShotVolumeIntersection",
                 "description": ""
+            },
+            {
+                "pin": "OnPointInsideVolume",
+                "description": ""
             }
         ]
     },
@@ -8573,6 +8797,14 @@
             {
                 "pin": "NavigatedBetweenEntries",
                 "description": ""
+            },
+            {
+                "pin": "ChangedEntryValue",
+                "description": ""
+            },
+            {
+                "pin": "OnClosed",
+                "description": ""
             }
         ]
     },
@@ -8677,6 +8909,14 @@
             {
                 "pin": "OnDone",
                 "description": "Fires when done enter/exit window"
+            },
+            {
+                "pin": "Done",
+                "description": ""
+            },
+            {
+                "pin": "ActorBeingPushed",
+                "description": ""
             }
         ]
     },
@@ -8696,6 +8936,10 @@
             },
             {
                 "pin": "GetFalse",
+                "description": ""
+            },
+            {
+                "pin": "GetValue",
                 "description": ""
             }
         ]
@@ -8912,6 +9156,10 @@
             {
                 "pin": "OutRGBA",
                 "description": "Fires when a signal is recieved on the 'In' pin and the value can be converted to a SColorRGBA. Expects values in the range (0, 1)"
+            },
+            {
+                "pin": "Out1",
+                "description": ""
             }
         ]
     },
@@ -8979,6 +9227,30 @@
         "out": [
             {
                 "pin": "OnPlay",
+                "description": ""
+            },
+            {
+                "pin": "OnAbort",
+                "description": ""
+            },
+            {
+                "pin": "OnPause",
+                "description": ""
+            },
+            {
+                "pin": "OnResume",
+                "description": ""
+            },
+            {
+                "pin": "OnEnd",
+                "description": ""
+            },
+            {
+                "pin": "OnStop",
+                "description": ""
+            },
+            {
+                "pin": "OnNext",
                 "description": ""
             }
         ]
@@ -9245,6 +9517,14 @@
         "out": [
             {
                 "pin": "GetValue",
+                "description": ""
+            },
+            {
+                "pin": "GetDelayValue",
+                "description": ""
+            },
+            {
+                "pin": "Changed",
                 "description": ""
             }
         ]
@@ -9731,6 +10011,10 @@
             {
                 "pin": "WithinProximityChanged",
                 "description": ""
+            },
+            {
+                "pin": "DistanceChanged",
+                "description": ""
             }
         ]
     },
@@ -9988,6 +10272,10 @@
             {
                 "pin": "OnTrue",
                 "description": ""
+            },
+            {
+                "pin": "OnFalse",
+                "description": ""
             }
         ]
     },
@@ -10201,6 +10489,10 @@
         "out": [
             {
                 "pin": "OnPressed",
+                "description": ""
+            },
+            {
+                "pin": "OnReleased",
                 "description": ""
             }
         ]
@@ -10476,6 +10768,10 @@
             {
                 "pin": "OnPassedFilter",
                 "description": ""
+            },
+            {
+                "pin": "OnActor",
+                "description": ""
             }
         ]
     },
@@ -10651,6 +10947,14 @@
             },
             {
                 "pin": "OnActorPacified",
+                "description": ""
+            },
+            {
+                "pin": "OnActorRevived",
+                "description": ""
+            },
+            {
+                "pin": "OnActorBodybagged",
                 "description": ""
             }
         ]
@@ -11006,6 +11310,14 @@
         "out": [
             {
                 "pin": "OnTrue",
+                "description": ""
+            },
+            {
+                "pin": "OnValue",
+                "description": ""
+            },
+            {
+                "pin": "OnFalse",
                 "description": ""
             }
         ]
@@ -11801,6 +12113,10 @@
             {
                 "pin": "IsPerceptibleOnRelease",
                 "description": ""
+            },
+            {
+                "pin": "IsCheckedWhenFrisked",
+                "description": ""
             }
         ]
     },
@@ -11872,6 +12188,14 @@
             },
             {
                 "pin": "OnPressed",
+                "description": ""
+            },
+            {
+                "pin": "OnReleasedIActor",
+                "description": ""
+            },
+            {
+                "pin": "OnReleased",
                 "description": ""
             }
         ]
@@ -11964,6 +12288,10 @@
             },
             {
                 "pin": "OnLeft",
+                "description": ""
+            },
+            {
+                "pin": "InLoop",
                 "description": ""
             }
         ]
@@ -12774,6 +13102,22 @@
             {
                 "pin": "OnActorInvestigating",
                 "description": "Actor has arrived at perceptible and is investigating"
+            },
+            {
+                "pin": "OnEnabled",
+                "description": ""
+            },
+            {
+                "pin": "OnActorWillReact",
+                "description": ""
+            },
+            {
+                "pin": "OnDisabled",
+                "description": ""
+            },
+            {
+                "pin": "OnWillReact",
+                "description": ""
             }
         ]
     },
@@ -12871,6 +13215,18 @@
             {
                 "pin": "OnCaptured",
                 "description": ""
+            },
+            {
+                "pin": "OnEnabled",
+                "description": ""
+            },
+            {
+                "pin": "OnDisabled",
+                "description": ""
+            },
+            {
+                "pin": "OnCleared",
+                "description": ""
             }
         ]
     },
@@ -12885,6 +13241,10 @@
             },
             {
                 "pin": "OnTrue",
+                "description": ""
+            },
+            {
+                "pin": "OnFalse",
                 "description": ""
             }
         ]
@@ -12957,6 +13317,18 @@
         "out": [
             {
                 "pin": "OnEnded",
+                "description": ""
+            },
+            {
+                "pin": "OnFailed",
+                "description": ""
+            },
+            {
+                "pin": "OnFailedAcknowledge",
+                "description": ""
+            },
+            {
+                "pin": "nAcknowledge",
                 "description": ""
             }
         ]
@@ -13099,6 +13471,18 @@
             {
                 "pin": "NPC_HitHMAt",
                 "description": ""
+            },
+            {
+                "pin": "HM_HitNPCKilled_IActor",
+                "description": ""
+            },
+            {
+                "pin": "HM_HitNPCHeadShot_IActor",
+                "description": ""
+            },
+            {
+                "pin": "HM_HitNPCCloseCombatShot",
+                "description": ""
             }
         ]
     },
@@ -13171,6 +13555,10 @@
             {
                 "pin": "IsTarget",
                 "description": ""
+            },
+            {
+                "pin": "IsNotTarget",
+                "description": ""
             }
         ]
     },
@@ -13221,6 +13609,10 @@
             },
             {
                 "pin": "ShotInterval",
+                "description": ""
+            },
+            {
+                "pin": "HM_WeaponPickedUp",
                 "description": ""
             }
         ]
@@ -14765,6 +15157,18 @@
             {
                 "pin": "OnPlayerAdded",
                 "description": ""
+            },
+            {
+                "pin": "OnActorRemoved",
+                "description": ""
+            },
+            {
+                "pin": "OnSpreadingActorDied",
+                "description": ""
+            },
+            {
+                "pin": "OnPlayerInRangeToSpreadToNPC",
+                "description": ""
             }
         ]
     },
@@ -14914,6 +15318,26 @@
         "out": [
             {
                 "pin": "OnFailed",
+                "description": ""
+            },
+            {
+                "pin": "OnFailedResponse",
+                "description": ""
+            },
+            {
+                "pin": "OnFailedGreeting",
+                "description": ""
+            },
+            {
+                "pin": "OnGreeting",
+                "description": ""
+            },
+            {
+                "pin": "OnResponding",
+                "description": ""
+            },
+            {
+                "pin": "OnEnded",
                 "description": ""
             }
         ]
@@ -15082,6 +15506,14 @@
             {
                 "pin": "OnStartIntermediateOnActorFailed",
                 "description": ""
+            },
+            {
+                "pin": "OnFoundTargetDead",
+                "description": ""
+            },
+            {
+                "pin": "OnFoundTargetUnconscious",
+                "description": ""
             }
         ]
     },
@@ -15184,6 +15616,46 @@
             {
                 "pin": "OnAdded",
                 "description": ""
+            },
+            {
+                "pin": "OnActorNotRemoved",
+                "description": ""
+            },
+            {
+                "pin": "OnNotAdded",
+                "description": ""
+            },
+            {
+                "pin": "OnRemoved",
+                "description": ""
+            },
+            {
+                "pin": "OnActorNotAdded",
+                "description": ""
+            },
+            {
+                "pin": "OnNotRemoved",
+                "description": ""
+            },
+            {
+                "pin": "OnActorRemoved",
+                "description": ""
+            },
+            {
+                "pin": "OnContained",
+                "description": ""
+            },
+            {
+                "pin": "OnActorContained",
+                "description": ""
+            },
+            {
+                "pin": "OnNotContained",
+                "description": ""
+            },
+            {
+                "pin": "OnActorNotContained",
+                "description": ""
             }
         ]
     },
@@ -15253,6 +15725,18 @@
             },
             {
                 "pin": "OnSeeUnconscious",
+                "description": ""
+            },
+            {
+                "pin": "OnSeeActorCombat",
+                "description": ""
+            },
+            {
+                "pin": "OnSeePlayerIllegalInteraction",
+                "description": ""
+            },
+            {
+                "pin": "OnSeePlayerSevereIllegalInteraction",
                 "description": ""
             }
         ]
@@ -15566,6 +16050,14 @@
             {
                 "pin": "ToBlack",
                 "description": ""
+            },
+            {
+                "pin": "ToGame",
+                "description": ""
+            },
+            {
+                "pin": "ShowHint",
+                "description": ""
             }
         ]
     },
@@ -15589,6 +16081,22 @@
         "out": [
             {
                 "pin": "ToBlack",
+                "description": ""
+            },
+            {
+                "pin": "FadeHero",
+                "description": ""
+            },
+            {
+                "pin": "ToGame",
+                "description": ""
+            },
+            {
+                "pin": "HeroOpacity",
+                "description": ""
+            },
+            {
+                "pin": "ShowRecenterHint",
                 "description": ""
             }
         ]
@@ -16926,6 +17434,10 @@
             {
                 "pin": "OnSpeedChanged",
                 "description": ""
+            },
+            {
+                "pin": "OnVelocityChanged",
+                "description": ""
             }
         ]
     },
@@ -17041,6 +17553,46 @@
         "out": [
             {
                 "pin": "OnTargetDead",
+                "description": ""
+            },
+            {
+                "pin": "OnTargetOutOfRange",
+                "description": ""
+            },
+            {
+                "pin": "OnStartIntermediateFailed",
+                "description": ""
+            },
+            {
+                "pin": "OnTargetUnconscious",
+                "description": ""
+            },
+            {
+                "pin": "OnFoundTargetDead",
+                "description": ""
+            },
+            {
+                "pin": "OnTargetInRange",
+                "description": ""
+            },
+            {
+                "pin": "OnAllEscortsDied",
+                "description": ""
+            },
+            {
+                "pin": "OnFoundTargetUnconscious",
+                "description": ""
+            },
+            {
+                "pin": "OnTimeToSearch",
+                "description": ""
+            },
+            {
+                "pin": "OnSearchStarted",
+                "description": ""
+            },
+            {
+                "pin": "OnStartIntermediateOnActorFailed",
                 "description": ""
             }
         ]
@@ -17551,6 +18103,14 @@
             {
                 "pin": "OnTerminate",
                 "description": "Fired when act has is terminated for any reason"
+            },
+            {
+                "pin": "OnDramaResuming",
+                "description": ""
+            },
+            {
+                "pin": "OnDramaNewBehavior",
+                "description": ""
             }
         ]
     },
@@ -17611,6 +18171,14 @@
             {
                 "pin": "GhostPosition",
                 "description": ""
+            },
+            {
+                "pin": "RequestFailed",
+                "description": ""
+            },
+            {
+                "pin": "RequestSucceeded",
+                "description": ""
             }
         ]
     },
@@ -17626,6 +18194,10 @@
         "out": [
             {
                 "pin": "TargetPosition",
+                "description": ""
+            },
+            {
+                "pin": "RequestFailed",
                 "description": ""
             }
         ]
@@ -17857,6 +18429,10 @@
             {
                 "pin": "TellActiveReceiverCount",
                 "description": ""
+            },
+            {
+                "pin": "TellReceiverCount",
+                "description": ""
             }
         ]
     },
@@ -17919,6 +18495,22 @@
         "out": [
             {
                 "pin": "OnTargetDead",
+                "description": ""
+            },
+            {
+                "pin": "OnTargetOutOfRange",
+                "description": ""
+            },
+            {
+                "pin": "OnTargetInRange",
+                "description": ""
+            },
+            {
+                "pin": "OnLostSightTimeout",
+                "description": ""
+            },
+            {
+                "pin": "OnAllEscortsDied",
                 "description": ""
             }
         ]
@@ -18625,7 +19217,16 @@
         "hash": "0053239555AFC099",
         "path": "[modules:/zthreatcondition.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "OnTrue",
+                "description": ""
+            },
+            {
+                "pin": "OnFalse",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "003B302EFAC73E3F",
@@ -19563,6 +20164,26 @@
             {
                 "pin": "ImpactBack",
                 "description": "Fired when weapon melee impacts when attack from behind"
+            },
+            {
+                "pin": "OnFireProjectilesLocal",
+                "description": ""
+            },
+            {
+                "pin": "EjectCartridgeHitman",
+                "description": ""
+            },
+            {
+                "pin": "OnFireProjectilesRemote",
+                "description": ""
+            },
+            {
+                "pin": "DeadlyThrowImpact",
+                "description": ""
+            },
+            {
+                "pin": "EjectCartridgeNPC",
+                "description": ""
             }
         ]
     },
@@ -20046,7 +20667,12 @@
         "hash": "00D7DFB605FC74B0",
         "path": "[modules:/zthrowtargetgeneric.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "OnHitByItem",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "008D6EEE8883C9B1",
@@ -20276,6 +20902,38 @@
             },
             {
                 "pin": "OnEject",
+                "description": ""
+            },
+            {
+                "pin": "OnStopPriming",
+                "description": ""
+            },
+            {
+                "pin": "OnContainerDestroyed",
+                "description": ""
+            },
+            {
+                "pin": "OnRequestPutInContainer",
+                "description": ""
+            },
+            {
+                "pin": "OnConsumed",
+                "description": ""
+            },
+            {
+                "pin": "OnStartPriming",
+                "description": ""
+            },
+            {
+                "pin": "OnItemPrimed",
+                "description": ""
+            },
+            {
+                "pin": "OnItemPrimedAndReady",
+                "description": ""
+            },
+            {
+                "pin": "OnVRQuickDeath",
                 "description": ""
             }
         ]
@@ -21747,7 +22405,20 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "Toggled",
+                "description": ""
+            },
+            {
+                "pin": "ToggledOn",
+                "description": ""
+            },
+            {
+                "pin": "ToggledOff",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00297E85CF28E866",
@@ -22489,7 +23160,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "SelectionChanged",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00FDF454C47B24EB",
@@ -23069,7 +23745,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "KeywordCount",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "002B2D7802B9FA69",
@@ -23235,7 +23916,24 @@
         "hash": "00637DA6149E017E",
         "path": "[modules:/zhurtactoraspect.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "OnHit",
+                "description": ""
+            },
+            {
+                "pin": "OnPacify",
+                "description": ""
+            },
+            {
+                "pin": "OnKill",
+                "description": ""
+            },
+            {
+                "pin": "OnBloodyKill",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00ACD467FB86A902",
@@ -23900,7 +24598,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "ValueChanged",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "009E43B59C0D91EF",
@@ -24285,7 +24988,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OnResize",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "001907CB6B73E2E2",
@@ -25844,7 +26552,16 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OnModifierActivated",
+                "description": ""
+            },
+            {
+                "pin": "OnModifierDeactivated",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "002BE1B98CF1603B",
@@ -25916,7 +26633,36 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OnInitialFracture",
+                "description": ""
+            },
+            {
+                "pin": "OnFracture",
+                "description": ""
+            },
+            {
+                "pin": "OnSleep",
+                "description": ""
+            },
+            {
+                "pin": "OnInitialDetach",
+                "description": ""
+            },
+            {
+                "pin": "OnDetach",
+                "description": ""
+            },
+            {
+                "pin": "OnAnchorsLost",
+                "description": ""
+            },
+            {
+                "pin": "OnWake",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "004DE492781C537C",
@@ -26064,7 +26810,16 @@
         "hash": "00A0D458D38C25D0",
         "path": "[modules:/zgeomcollectionentity.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "OnSelected",
+                "description": ""
+            },
+            {
+                "pin": "OnSelectedSkin",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00D6B87701E3ADC2",
@@ -27625,7 +28380,16 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "StateOut",
+                "description": ""
+            },
+            {
+                "pin": "StateOutSent",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "009262742F8FF0A5",
@@ -27718,7 +28482,16 @@
         "hash": "0021646D7874F2A5",
         "path": "[modules:/zactorspreadtransitionoperatormaterial.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "OnTransitionBegin",
+                "description": ""
+            },
+            {
+                "pin": "OnTransitionEnd",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00E3E3755A3339FC",
@@ -30083,7 +30856,16 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "IntegerValue",
+                "description": ""
+            },
+            {
+                "pin": "FloatValue",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "002D1D2139E021FA",
@@ -30865,6 +31647,22 @@
             {
                 "pin": "WeaponSwapped",
                 "description": "Fired when hitman swaps in this weapon for another"
+            },
+            {
+                "pin": "ImpactAlt",
+                "description": ""
+            },
+            {
+                "pin": "HitTarget",
+                "description": ""
+            },
+            {
+                "pin": "CloseCombatEnded",
+                "description": ""
+            },
+            {
+                "pin": "OnReadyInRangeVR",
+                "description": ""
             }
         ]
     },
@@ -31259,6 +32057,14 @@
             {
                 "pin": "SetAlignToVelocity",
                 "description": ""
+            },
+            {
+                "pin": "SetParticleColor",
+                "description": ""
+            },
+            {
+                "pin": "SetParticleAlpha",
+                "description": ""
             }
         ],
         "out": []
@@ -31281,6 +32087,14 @@
         "out": [
             {
                 "pin": "OnTumble",
+                "description": ""
+            },
+            {
+                "pin": "OnSit",
+                "description": ""
+            },
+            {
+                "pin": "OnRise",
                 "description": ""
             }
         ]
@@ -32266,7 +33080,20 @@
         "hash": "00D6018692F93299",
         "path": "[modules:/zvaluebool_frame.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "GetValue",
+                "description": ""
+            },
+            {
+                "pin": "GetTrue",
+                "description": ""
+            },
+            {
+                "pin": "GetFalse",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00B321E34460F66E",
@@ -34713,7 +35540,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "KillType",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00F91C28E732A3C6",
@@ -34905,7 +35737,16 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "Inside",
+                "description": ""
+            },
+            {
+                "pin": "Outside",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "000C3C0AC5A78333",
@@ -35014,7 +35855,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "FoundNode",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "003E3A6661A4ED70",
@@ -35330,7 +36176,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "PositionOutput",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "000AD0E13781BB1F",
@@ -35909,7 +36760,36 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OnInteractionEnd",
+                "description": ""
+            },
+            {
+                "pin": "OnInteractionBegin",
+                "description": ""
+            },
+            {
+                "pin": "OnInteractionInterrupted",
+                "description": ""
+            },
+            {
+                "pin": "OnInteractorSet",
+                "description": ""
+            },
+            {
+                "pin": "OnResponderSet",
+                "description": ""
+            },
+            {
+                "pin": "OnInteractedWith",
+                "description": ""
+            },
+            {
+                "pin": "OnResponding",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "000B8A5B68A84568",
@@ -36133,7 +37013,20 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OutputBool",
+                "description": ""
+            },
+            {
+                "pin": "OutputInt",
+                "description": ""
+            },
+            {
+                "pin": "OutputFloat",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "001B219DBDF23FE8",
@@ -36521,7 +37414,24 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OnTargetOutOfRange",
+                "description": ""
+            },
+            {
+                "pin": "OnTargetDead",
+                "description": ""
+            },
+            {
+                "pin": "OnTargetInRange",
+                "description": ""
+            },
+            {
+                "pin": "OnAllEscortsDied",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00AD97167A60AB5A",
@@ -36587,7 +37497,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OnInvestigatorAssigned",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "000FB4DA5C7977F9",
@@ -36806,7 +37721,32 @@
         "hash": "00479601629EED2C",
         "path": "[modules:/zactorspreadevaluatoroutbreak.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "OnActorEnteredStage1",
+                "description": ""
+            },
+            {
+                "pin": "OnActorEnteredStage2",
+                "description": ""
+            },
+            {
+                "pin": "OnActorEnteredStage3Signal",
+                "description": ""
+            },
+            {
+                "pin": "OnActorEnteredStage3",
+                "description": ""
+            },
+            {
+                "pin": "OnActorEnteredStage1Signal",
+                "description": ""
+            },
+            {
+                "pin": "OnActorEnteredStage2Signal",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "001A0B4A07BA15B5",
@@ -37153,7 +38093,16 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OnTrue",
+                "description": ""
+            },
+            {
+                "pin": "OnFalse",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "0010277BC1E4F893",
@@ -37987,7 +38936,12 @@
         "hash": "000A790BE22D9BAB",
         "path": "[modules:/zpinsignalsyncbase.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "Out",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "009FC9B065A6B4DC",
@@ -38083,7 +39037,12 @@
         "hash": "003DD559542C9B5F",
         "path": "[modules:/zscaieventemitter.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "OnBodyFound",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "001B0EA1B47C1D9D",
@@ -38101,7 +39060,20 @@
         "hash": "00690FBEA8CC6D8E",
         "path": "[modules:/zscenestructurecondition.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "OnValue",
+                "description": ""
+            },
+            {
+                "pin": "OnTrue",
+                "description": ""
+            },
+            {
+                "pin": "OnFalse",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00B8E99CC60D3AFE",
@@ -38239,7 +39211,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OutputTargetLocation",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "000F7AA9D42DF494",
@@ -38470,7 +39447,16 @@
         "hash": "00F767FF84D1C891",
         "path": "[modules:/zentityimpl.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "Activate",
+                "description": ""
+            },
+            {
+                "pin": "Deactivate",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00CC8B8EEBCC5C0E",
@@ -38507,7 +39493,20 @@
         "hash": "001B2AD65F96DDCA",
         "path": "[modules:/zcontrolledbehaviorentity.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "OnFail",
+                "description": ""
+            },
+            {
+                "pin": "OnStart",
+                "description": ""
+            },
+            {
+                "pin": "OnComplete",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "0065BB254631690E",
@@ -39743,7 +40742,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "HaveActiveParticles",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00A7BE8FA5DBBB97",
