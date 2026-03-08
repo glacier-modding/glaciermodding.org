@@ -521,7 +521,24 @@
     {
         "hash": "002B3AB5D7AF8A3C",
         "path": "[modules:/zcompositeentity.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "MakeVisible",
+                "description": ""
+            },
+            {
+                "pin": "MakeInvisible",
+                "description": ""
+            },
+            {
+                "pin": "SetVisible",
+                "description": ""
+            },
+            {
+                "pin": "Detach",
+                "description": ""
+            }
+        ],
         "out": []
     },
     {
