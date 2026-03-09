@@ -590,7 +590,7 @@
                 "description": "Actor is about to die. This will disable perception and behavior selection"
             },
             {
-                "pin": "3606754721",
+                "pin": "BagAndTag",
                 "description": ""
             },
             {
@@ -2963,7 +2963,7 @@
                 "description": ""
             },
             {
-                "pin": "3606754721",
+                "pin": "BagAndTag",
                 "description": ""
             }
         ],
