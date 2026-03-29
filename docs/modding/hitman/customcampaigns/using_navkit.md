@@ -9,20 +9,18 @@ For this tutorial, we will go over how to use [NavKit](https://github.com/glacie
 ## What is NavKit for?
 You can make a map using just the ZHMModSDK and GlacierKit, so why do you need a third tool?
 
-The reason NavKit was created was because NPCs cannot directly use level geometry for pathfinding. They need to have the walkable areas of the map defined explicitly. In Hitman: World of Assassination, the way these are defined is through two files, a navigation mesh (NAVP file), and an AI Reasoning Grid (AIRG) file.
+The reason NavKit was created was because NPCs cannot directly use level geometry for pathfinding. They need to have the walkable areas of the map defined explicitly. In Hitman: World of Assassination, the way these are defined is through two files, a navigation mesh (NAVP) file, and an AI Reasoning Grid (AIRG) file.
 
 NavKit is used to take a level's geometry and generate these two files for the level so that NPCs will be able to walk along the surface of the level normally.
 
 Now that we know why we need NavKit when making custom levels, let's install it.
 
 ## Installing NavKit
-To install NavKit, click the link above, download the latest release `.zip` file, and extract it somewhere on your computer.
+To install NavKit, click the link above, download the latest release `.msi` installer file, and run it.
 
 You will need to make sure you have ZHMModSDK installed (described in the [previous step](scene_modified.md)).
 
 You will need to install [Blender](https://www.blender.org/download/), as NavKit uses it to build a 3D mesh of the extracted scene with the level's geometry. 
-
-In the current version of NavKit you will also need to do one more step, which is to copy the custom `Editor.dll` file from the extracted directory to your `Hitman 3/Retail/mods` folder, overwriting the existing `Editor.dll` file, or you could create a backup of your current copy if you'd like. If you want to uninstall NavKit later, you can always grab another copy of the original `Editor.dll` file from the latest ZHMModSDK release.
 
 You will also need to install the latest Visual C++ Redistributable from https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-140. Make sure you get the X64 version.
 
@@ -31,15 +29,13 @@ That's it, now you should be able to launch the `NavKit.exe` file and see the Na
 ![navkit.jpg](resources/navkit.jpg)
 
 ## Using NavKit
-It may look a little daunting, as there are a lot of options, but most of the time you won't need to adjust the settings.
-
-The first thing you may notice is the cell grid and the coordinate axes. Note that here Y is up and Z is forward, unlike in Hitman, which is Z-up and Y-forward. This is due to the tool NavKit uses (Recast) under the hood for a lot of the generation features. Don't worry, it will automatically convert between the coordinate systems as needed.
+The first thing you may notice is the cell grid and the coordinate axes. Note that here Y is up and Z is forward, unlike in Hitman, which is Z-up and Y-forward. This is due to the tool NavKit uses ([Recast](https://recastnav.com/)) under the hood for a lot of the generation features. Don't worry, it will automatically convert between the coordinate systems as needed.
 
 With NavKit you can load, save, and visualize NAVP and AIRG files. You can also do the same with OBJ files, which are 3D model files.
 
 The main way to use NavKit is to follow these 4 steps:
 1. Extract a scene from the game to a `.nav.json` file.
-2. Take a `.nav.json` file and use it to build a `.obj` file.
+2. Take the `.nav.json` file and use it to build a `.obj` file.
 3. Take the `.obj` file and use it to build a `.navp`. file.
 4. Take the `.navp` file and use it to build a `.airg` file.
 
@@ -75,13 +71,13 @@ Now that we know how NAVP and AIRG files work, we can start to see a problem wit
 
 With our custom mission running, let's get a guard in the room and lure them across the room to see how they interact with our new chair.
 
-Go in to free cam mode on ZHMModSDK and select a guard.
+Go in to free cam mode on ZHMModSDK and select an NPC.
 
 Click the `Move to Hitman` button.
 
-Move 47 out of the guard's vision by selecting him and dragging 47 away using the gizmo.
+Move 47 out of the NPC's vision by selecting him and dragging 47 away using the gizmo.
 
-Throw a coin to lure the guard.
+Throw a coin to lure the NPC.
 
 ![walk_on_chair.jpg](resources/walk_on_chair.jpg)
 
@@ -92,17 +88,9 @@ Let's take a look at the original New York NAVP and see why this is happening.
 First we need to extract the original NAVP and AIRG.
 
 ## Loading a NAVP file and AIRG from the game files
-Go to GlacierKit and on the `Game content` tab, search for `navp`. Scroll down until you see `greedy/mission_raccoon/scene_raccoon_basic.navp`. Click it and then click the `Extract file` button and save it to your computer, keeping track of where you saved it to.
+In NavKit, click `File > Open Navp from Rpkg`. In the dropdown, scroll down until you see `greedy/mission_raccoon/scene_raccoon_basic.navp`. Click it and then click `Open Navp`.
 
-Now search for `airg`. Scroll down until you see `greedy/mission_raccoon/scene_raccoon_basic_scene.airg`. Likewise, click it and then click the `Extract file` button and save it to your computer.
-
-Now switch to NavKit, and press the `Load Navp` button on the `Navp menu`, which is the left sidebar.
-
-Select the `.navp` file you saved and press the `Open` button to load it.
-
-Now press the `Load Airg` button on the `Airg menu` at the bottom of the right sidebar.
-
-Select the `.airg` file you saved and press the `Open` button to load it. It may take a minute to load the `.airg` file.
+Now, click `File > Open Airg from Rpkg`. In the dropdown, scroll down until you see `greedy/mission_raccoon/scene_raccoon_basic_scene.airg`. Click it and then click `Open Airg`.
 
 Once they are both done loading, you should see both the NAVP and AIRG displayed in NavKit.
 ![new_york_navp_and_airg.jpg](resources/new_york_navp_and_airg.jpg)
@@ -116,17 +104,17 @@ As you can see, there is only a cutout for a single chair, and there is a cutout
 Let's generate a new NAVP file and a new AIRG file and set our custom mission to use them to fix this issue.
 
 ## Extracting a Scene
-The first step to generating a new NAVP file and a new AIRG file is the extract a scene.
+The first step to generating a new NAVP file and a new AIRG file is to extract a scene.
 
-For this we will need to set a couple of settings.
+For this we will need to set a couple of settings. Click `Settings > NavKit Settings`.
 
-1. Set your `Hitman 3` directory by pressing the `Set Hitman Directory` button on the top right.
-2. Set the `Output` directory to a directory of your choice by pressing the `Set Output Directory` button. It should be on a drive that has a decent amount of space. I recommend a drive with at least 1 GB of free space, since there will need to be a lot of ALOC (collision) files extracted, and while they are small, the OBJ files can get pretty large.
-3. Set the `blender.exe` path by pressing the `Set Blender Executable` button.
+1. Set your `Hitman 3` directory by pressing the `Browse` button next to `Hitman Directory`.
+2. Set the `Output` directory to a directory of your choice by pressing the `Browse` button next to `Output Directory`. It should be on a drive that has a decent amount of space. I recommend a drive with at least 1 GB of free space, since there will need to be a lot of ALOC (collision) files extracted and an OBJ file will need to be generated. While the ALOC files are small, the OBJ files can get pretty large.
+3. Set the `blender.exe` path by pressing the `Browse` button next to `Blender Executable`.
 
 Now that the settings are configured. Make sure Hitman is running and your custom mission is loaded.
 
-Press the `Extract from game` button on the `Extract menu` on the right sidebar.
+Click `Extract > Extract Scene from game`.
 
 This may take a few minutes, as it walks the entity tree to gather all the entities with collision and extracts all the ALOC files the scenario uses from the RPKG files. Once you have the ALOC files extracted, the next time you export, it will be faster.
 
@@ -135,16 +123,16 @@ Once it is done, you should see some red boxes appear in NavKit. These are `Path
 
 Now that you have the scene extracted, let's save it so we can load it later if we want.
 
-To save the extracted scene, click the `Save NavKit Scene` on the `NavKit Scene menu` on the right sidebar.
+To save the extracted scene, click `File > Save Scene`.
 
-You can save the file anywhere, but I like to keep all my outputs in the output folder. To stay organized, let's create a new folder in the `output` folder for our campaign named `Hitman Campaign Demo`. Create another new folder in that folder named `Bank`. Then name the file `bank.nav.json` and click the `Save` button.
+You can save the file anywhere, but it can be helpful to keep a copy of all the outputs in the output folder. To stay organized, let's create a new folder in the `output` folder for our campaign named `Hitman Campaign Demo`. Create another new folder in that folder named `Bank`. Then name the file `bank.nav.json` and click the `Save` button.
 
 ## Building an OBJ (3D mesh) of the scene
 Now that we have the scene extracted, you can close Hitman if you want.
 
-Click the `Build obj from NavKit Scene` button (not the `Build obj from Navp` button) on the `Obj menu` of the right sidebar.
+Click `Build > Build obj from Scene`.
 
-This may take a few minutes as well, and when it's done, you will see a 3d representation of your custom mission comprised of the collision files for all the entities in the level. These are lower fidelity models of the 3D models of the level geometry that are used to calculate collisions efficiently.
+This may take a few minutes as well, and when it's done, you will see a 3D representation of your custom mission comprised of the collision files for all the entities in the level. These are lower fidelity models of the 3D models of the level geometry that are used to calculate collisions efficiently.
 
 ![navkit_obj_built.jpg](resources/navkit_obj_built.jpg)
 
@@ -152,32 +140,32 @@ As you can see, the new chair is there, and the crate has been moved to the new 
 
 Let's save this OBJ file so we can load it again later if we want.
 
-Save it as `bank.obj` in your new `Bank` folder.
+Save it as `bank.obj` in your new `Bank` folder by clicking `File > Save Obj`.
 
 Now let's build the NAVP.
 
 ## Building a NAVP from an OBJ and NavKit scene file
-Now that we have the `NavKit Scene` file and the `OBJ` file loaded for our custom mission, click the `Build Navp from Obj and Scene` button on the `Navp menu`, which is the left sidebar.
+Now that we have the `NavKit Scene` file and the `OBJ` file loaded for our custom mission, click `Build > Build Navp from Obj and Scene`.
 
-After a minute, the new navp should be loaded.
+After around a minute, the new navp should be loaded.
 ![navkit_generated_navp.jpg](resources/navkit_generated_navp.jpg)
 
 You can see that the new navp has been generated and there are now cutouts for both the chairs. In this case, it also generated some sloped ares on the chairs, but since they are not connected to anything, they shouldn't cause any issues.
 
 > If you'd like to experiment with the settings, you can lower the `Max Climb` or `Max Slope` values using the sliders on the `Navp menu` (the left sidebar) and regenerate the NAVP, but for the tutorial we'll proceed with this version.
 
-Once you are satisfied with the NAVP, click the `Save Navp` and save it to your `Bank` folder as `bank.navp`.
+Once you are satisfied with the NAVP, click `File > Save Navp` and save it to your `Bank` folder as `bank.navp`.
 
 The AIRG waypoints and connections still go through the new chair, so let's build the AIRG.
 
 ## Building an AIRG from a NAVP file
-Now that we have the NAVP loaded, click the `Build Airg from Navp` button on the `Airg menu` on the bottom of the right sidebar.
+Now that we have the NAVP loaded, click `Build > Build Airg from Navp`.
 
 This may take a few minutes. When it's done, you should see that the airg waypoints and connections mostly no longer go through the new chair.
 
 > The AIRG will connect over small gaps like corners or small obstacles. This is OK because it's just used for the initial pathfinding calculation. If the NPC determines it can walk from one AIRG waypoint to another, it will perform the pathfinding calculation using the NAVP to determine the actual path it will walk.
 
-Click the `Save Airg` button and in your new `Bank` folder, save the file as `bank.airg`.
+Click `File > Save Airg` and in your new `Bank` folder, save the file as `bank.airg`.
 
 Now we have a new NAVP file and a new AIRG file for our custom scene that uses the new level geometry properly. Let's make the custom scene use these files.
 
@@ -230,7 +218,7 @@ In GlacierKit, go to the `Text tools` tab on the left sidebar and enter:
 `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.navp].pc_navp`  
 into the `Hash calculator`. Click the copy icon next to the `Hex` field, to copy the value `00DCA47815BC371B`.
 
-Let's save another copy of our NAVP file, this time to the actual mod. In NavKit, click the `Save Navp` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/content/chunk12/`, and use our hashed value `00DCA47815BC371B` for the name.
+Let's save another copy of our NAVP file, this time to the actual mod. In NavKit, click the `Save Navp` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/bank/chunk12/`, and use our hashed value `00DCA47815BC371B` for the name.
 
 Now the game will be able to find and load our NAVP file.
 
@@ -285,7 +273,7 @@ In GlacierKit, go to the `Text tools` tab on the left sidebar and enter:
 `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.airg].pc_airg`  
 into the `Hash calculator`. Click the copy icon next to the `Hex` field, to copy the value `0065C805E39F128A`.
 
-Let's save another copy of our AIRG file, this time to the actual mod. In NavKit, click the `Save Airg` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/content/chunk12/`, and use our hashed value `0065C805E39F128A` for the name.
+Let's save another copy of our AIRG file, this time to the actual mod. In NavKit, click the `Save Airg` button and navigate to `[HITMAN DIRECTORY]/Simple Mod Framework/Mods/HitmanCampaignDemo/bank/chunk12/`, and use our hashed value `0065C805E39F128A` for the name.
 
 Now the game will be able to find and load our AIRG file.
 

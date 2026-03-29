@@ -379,7 +379,7 @@ Replace `[ENTRANCE UUID]` with the new starting location's repository entry UUID
 Click the save button.
 
 ## Creating a new Scene and Scenario
-In the `content` folder, create a new folder named `chunk2`.
+In the the root mod folder make a folder called `modland`. In that folder, create a new folder named `chunk2`.
 
 In GlacierKit, right-click on the new `chunk2` folder, and click `Create file` and name it `scene_modtown.entity.json` and click on it.
 
@@ -878,7 +878,7 @@ Replace the `null` value for the `m_WorldBounds` property with the entity id of 
 Press the save button.
 
 ## Updating the Charset
-For simplicity, let's copy our entire outfit folder from `content/chunk12/Outfits` to `content/chunk2`. This cannot be done from GlacierKit, so in GlacierKit right-click on the `chunk12` folder and click `Show in Explorer`. Copy the outfit folder, then go to the `content/chunk2` folder and paste it.
+For simplicity, let's copy our entire outfit folder from `bank/chunk12/Outfits` to `content/chunk2`. This cannot be done from GlacierKit, so in GlacierKit right-click on the `chunk12` folder and click `Show in Explorer`. Copy the outfit folder, then go to the `content/chunk2` folder and paste it.
 
 In GlacierKit, the new folder should have appeared. Let's modify the files to fit our new mission and NPCs.
 
