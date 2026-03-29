@@ -37,6 +37,10 @@ Scrolling down to the `Hitman 3` table, we can see that the `New York` location 
 
 Create a new folder in the root mod folder named `bank`. In that folder, create a new folder named `chunk12`.
 
+In GlacierKit, open the `manifest.json` file and update the `contentFolders` array to add `"bank"`. It should now look like this:
+
+`"contentFolders": ["shared", "bank"]`
+
 In GlacierKit, right-click the `bank/chunk12` folder and click `New File` and set the name to `scene_bank.entity.json`. Since we gave it a name that ends with `.entity.json`, GlacierKit will initialize the file with the entity template.
 
 Right click [Scenario brick](resources/empty_scenario_brick.entity.json) and press `Save link as...` and save it into your `bank/chunk12` folder with a name of `scenario_bank.entity.json`.

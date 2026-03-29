@@ -381,6 +381,10 @@ Click the save button.
 ## Creating a new Scene and Scenario
 In the the root mod folder make a folder called `modland`. In that folder, create a new folder named `chunk2`.
 
+In GlacierKit, open the `manifest.json` file and update the `contentFolders` array to add `"modland"`. It should now look like this:
+
+`"contentFolders": ["shared", "bank", "modland"]`
+
 In GlacierKit, right-click on the new `chunk2` folder, and click `Create file` and name it `scene_modtown.entity.json` and click on it.
 
 In the `Metadata` tab, in the `Factory hash` field, enter:  
