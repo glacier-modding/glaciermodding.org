@@ -21,7 +21,7 @@ Using either GlacierKit or a text editor or an IDE like WebStorm, Edit the `mani
   "frameworkVersion": "2.33.8",
   "version": "0.1.0",
   "blobsFolders": ["blobs"],
-  "contentFolders": ["content"],
+  "contentFolders": ["shared"],
   "dependencies": [
   ],
   "packagedefinition": [

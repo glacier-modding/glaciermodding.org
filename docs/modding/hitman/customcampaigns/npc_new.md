@@ -103,7 +103,7 @@ Click the save button.
 Our new NPC will need a new outfit, and we will need to make a new outfits brick for our NPC's outfit.
 
 ## Creating a new Outfit file
-In GlacierKit, right-click your `content/chunk12` folder and click `New folder` and name it `Outfits`.
+In GlacierKit, right-click your `bank/chunk12` folder and click `New folder` and name it `Outfits`.
 
 Right-click that new `Outfits` folder and click `New File` and name it `outfit_target_mctargetface_v0.entity.json`. Click on that new file.
 
@@ -202,7 +202,7 @@ We now have a custom charset for our new NPC with the Actor v0 outfit pointing t
 We need to add an outfits brick that uses this charset.
 
 ## Adding a new Outfits brick
-Back on the `Files` tab, right-click the `content/chunk12/Outfits` folder and click `New File` and name it `outfits_bank.entity.json`. Click on that new file.
+Back on the `Files` tab, right-click the `bank/chunk12/Outfits` folder and click `New File` and name it `outfits_bank.entity.json`. Click on that new file.
 
 Switch to the `Metadata` tab and change the Entity type from `Scene` to `Brick`.
 
@@ -467,7 +467,7 @@ Now that we have the mission fully setup, let's replace our template screenshots
 > Updated `bank_entrance_ceo.jpg`
 
 ![campaign_demo_tile.jpg](resources/campaign_demo_tile.jpg)
-> Updated `campaign_deom_tile.jpg`
+> Updated `campaign_demo_tile.jpg`
 
 ![target_mc_targetface.jpg](resources/target_mc_targetface.jpg)
 > Updated `target_mc_targetface.jpg`

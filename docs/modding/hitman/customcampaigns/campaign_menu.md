@@ -10,7 +10,7 @@ For this tutorial, we will go over creating a new campaign category for our exam
 ## Creating the `storyconfig.JSON.patch.json` file
 Open WebStorm and when prompted, open your mod's folder.
 
-In the root folder for your mod, create a new folder named `content`. In that folder create another folder named `chunk0`.
+In the root folder for your mod, create a new folder named `shared`. In that folder create another folder named `chunk0`.
 
 In the `chunk0` folder, create a folder named `Story Config`. In that folder create a file named `storyconfig.JSON.patch.json` and set the contents to this:
 
