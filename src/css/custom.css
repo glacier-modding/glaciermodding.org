@@ -108,13 +108,17 @@
     background: #3ccccc;
 }
 
+[data-theme="light"] .xtea-options,
 [data-theme="dark"] .xtea-options {
-    display: block;
+    display: flex;
+    align-items: center;
     position: absolute;
     top: 70px;
     left: 6px;
+    right: 6px;
 }
 
+[data-theme="light"] .xtea-options span,
 [data-theme="dark"] .xtea-options span {
     color: #05be99;
     padding: 5px;
@@ -170,23 +174,6 @@
     background: #3ccccc;
 }
 
-[data-theme="light"] .xtea-options {
-    display: block;
-    position: absolute;
-    top: 70px;
-    left: 6px;
-}
-
-[data-theme="light"] .xtea-options span {
-    color: #05be99;
-    padding: 5px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-bottom: 2px solid #05be99;
-    margin: 0 1em;
-}
-
 [data-theme="light"] .xtea-options span:hover {
     background: #f5f5f5;
 }
@@ -209,4 +196,25 @@
     line-height: 1.5;
     font-size: 1.25rem;
     text-align: center;
+}
+
+[data-theme="light"] .xtea-options select,
+[data-theme="dark"] .xtea-options select {
+    background: transparent;
+    color: #05be99;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid #05be99;
+    margin: 0 1em;
+    margin-left: auto;
+}
+
+[data-theme="dark"] .xtea-options select:hover {
+    background: #111111;
+}
+
+[data-theme="light"] .xtea-options select:hover {
+    background: #f5f5f5;
 }
