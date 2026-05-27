@@ -11,6 +11,14 @@ const GAME_CONFIGS = {
         ],
         key: new Uint32Array([0x30f95282, 0x1f48c419, 0x295f8548, 0x2a78366d]),
     },
+    H2016: {
+        name: "Hitman 2016 v1.1.0 - v1.1.2",
+        header: [
+            0xa0, 0xbb, 0xa0, 0x1e, 0x64, 0x06, 0x0f, 0x96, 0xb2, 0x5d, 0xcb,
+            0xe3, 0x9f, 0xb5, 0x72, 0xb4
+        ],
+        key: new Uint32Array([0x4b913621, 0x4a424a66, 0x9feea38e, 0x80e44711]),
+    },
     FirstLight: {
         name: "007: First Light",
         header: [
