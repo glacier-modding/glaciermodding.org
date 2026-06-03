@@ -232,6 +232,7 @@ export default function Xtea() {
             /patchlevel=\d+\n/gi,
             "patchlevel=310\n"
         )
+        setTextValue(target.value)
     }
 
     return (
