@@ -15,7 +15,7 @@ const GAME_CONFIGS = {
         name: "Hitman 2016 v1.1.0 - v1.1.2",
         header: [
             0xa0, 0xbb, 0xa0, 0x1e, 0x64, 0x06, 0x0f, 0x96, 0xb2, 0x5d, 0xcb,
-            0xe3, 0x9f, 0xb5, 0x72, 0xb4
+            0xe3, 0x9f, 0xb5, 0x72, 0xb4,
         ],
         key: new Uint32Array([0x4b913621, 0x4a424a66, 0x9feea38e, 0x80e44711]),
     },
@@ -47,7 +47,7 @@ function detectGameFromHeader(buffer) {
 
 export default function Xtea() {
     const [selectedGame, setSelectedGame] = useState(DEFAULT_GAME)
-    const [textValue, setTextValue] = useState('')
+    const [textValue, setTextValue] = useState("")
     const [fileName, setFileName] = useState("compiled")
     const [isEditable, setIsEditable] = useState(false)
     const [wasmReady, setWasmReady] = useState(false)
@@ -242,25 +242,35 @@ export default function Xtea() {
         >
             <div className="container">
                 <div className="xtea-options">
-                    <span id="load" onClick={loadFile}>
+                    <span
+                        id="load"
+                        className="g2m-span-button"
+                        onClick={loadFile}
+                    >
                         Load File
                     </span>
                     <span
                         id="save"
+                        className="g2m-span-button"
                         onClick={saveFile}
-                            style={{
-                                opacity: isEditable ? 1 : 0.5,
-                                pointerEvents: isEditable ? "auto" : "none",
-                                cursor: isEditable ? "pointer" : "not-allowed",
-                            }}
+                        style={{
+                            opacity: isEditable ? 1 : 0.5,
+                            pointerEvents: isEditable ? "auto" : "none",
+                            cursor: isEditable ? "pointer" : "not-allowed",
+                        }}
                     >
                         Save File
                     </span>
-                    <span id="patch" onClick={autopatch}>
+                    <span
+                        id="patch"
+                        className="g2m-span-button"
+                        onClick={autopatch}
+                    >
                         Set Patch Levels
                     </span>
 
                     <select
+                        className="g2m-select"
                         value={selectedGame}
                         onChange={(e) => setSelectedGame(e.target.value)}
                     >
@@ -272,18 +282,15 @@ export default function Xtea() {
                     </select>
                 </div>
 
-                <div id="naming">
-                    <input
-                        type="text"
-                        id="naming-field"
-                        value={fileName}
-                        onChange={(e) => setFileName(e.target.value)}
-                    />
-                </div>
-
                 <div className="wrapper">
                     <textarea
+                        style={{
+                            width: "100%",
+                            height: "95%",
+                            marginTop: "15px",
+                        }}
                         id="packagedefinitions"
+                        className="g2m-textarea"
                         value={textValue}
                         readOnly={!isEditable}
                         onChange={(e) => setTextValue(e.target.value)}

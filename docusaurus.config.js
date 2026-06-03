@@ -68,6 +68,10 @@ module.exports = {
                             to: "/tools/online/xtea",
                         },
                         {
+                            label: "Online Hash Calculator",
+                            to: "/tools/online/hash-calculator",
+                        },
+                        {
                             label: "Material Overrides",
                             to: "/material-overrides",
                         }
