@@ -35081,7 +35081,24 @@
         "hash": "0054F409400C1EB0",
         "path": "[modules:/zvrdragbody.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "OnYankedRight",
+                "description": ""
+            },
+            {
+                "pin": "OnPlacedRight",
+                "description": ""
+            },
+            {
+                "pin": "OnPlacedLeft",
+                "description": ""
+            },
+            {
+                "pin": "OnYankedLeft",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00D4369D6664B47A",
@@ -35136,7 +35153,40 @@
         "hash": "00B497A84E72605D",
         "path": "[modules:/zvrmotiondropitem.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "OnEnterLeft",
+                "description": ""
+            },
+            {
+                "pin": "OnLeaveLeft",
+                "description": ""
+            },
+            {
+                "pin": "OnEnterRight",
+                "description": ""
+            },
+            {
+                "pin": "OnLeaveRight",
+                "description": ""
+            },
+            {
+                "pin": "OnItemDroppedRight",
+                "description": ""
+            },
+            {
+                "pin": "OnItemDroppedLeft",
+                "description": ""
+            },
+            {
+                "pin": "OnStartUpdate",
+                "description": ""
+            },
+            {
+                "pin": "OnStopUpdate",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00826396A59D6844",
