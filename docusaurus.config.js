@@ -93,6 +93,10 @@ module.exports = {
                     label: "HitmanDB",
                 },
                 {
+                    href: "https://bonddb.glaciermodding.org",
+                    label: "BondDB",
+                },
+                {
                     label: "Hitman Resources",
                     href: "https://hitman-resources.netlify.app/",
                 },
