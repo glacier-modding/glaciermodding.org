@@ -85,7 +85,9 @@ export default function Xtea() {
             return null
         }
 
-        const raw = new TextEncoder().encode(textValue)
+        const paddedText = textValue + (textValue.length % 8 ? ' '.repeat(8 - textValue.length % 8) : '')
+
+        const raw = new TextEncoder().encode(paddedText)
         const config = GAME_CONFIGS[selectedGame]
 
         return xtea_wasm.encipher(
