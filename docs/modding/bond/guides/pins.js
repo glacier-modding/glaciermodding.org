@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 
-const pinData = require("./pins_bond.json")
+const pinData = require("./pins.json")
 
 const PinList = ({ pins, title }) => {
     if (pins.length === 0) {
