@@ -26426,5 +26426,16 @@
             }
         ],
         "out": []
+    },
+    {
+        "hash": "01876347C0EA78B4",
+        "path": "[modules:/zvaluebool_operation_signal.class].entitytype",
+        "in": [
+            {
+                "pin": "ForceUpdateValue",
+                "description": ""
+            }
+        ],
+        "out": []
     }
 ]
