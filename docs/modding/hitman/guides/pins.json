@@ -90,6 +90,10 @@
             {
                 "pin": "ItemShot",
                 "description": "Only fires as long as the spawner is still owning the item!"
+            },
+            {
+                "pin": "ItemRequested",
+                "description": ""
             }
         ]
     },
@@ -878,6 +882,18 @@
             {
                 "pin": "OnNoItem",
                 "description": ""
+            },
+            {
+                "pin": "OnDrop",
+                "description": ""
+            },
+            {
+                "pin": "OnFailed",
+                "description": ""
+            },
+            {
+                "pin": "OnPickup",
+                "description": ""
             }
         ]
     },
@@ -1372,6 +1388,50 @@
             {
                 "pin": "NPCHasExclamationMark",
                 "description": ""
+            },
+            {
+                "pin": "AudibleAttentionMaxPan",
+                "description": ""
+            },
+            {
+                "pin": "BodyFoundAccident",
+                "description": ""
+            },
+            {
+                "pin": "BodyFoundMurder",
+                "description": ""
+            },
+            {
+                "pin": "BodyFoundPacify",
+                "description": ""
+            },
+            {
+                "pin": "DeadBodySeenAccident",
+                "description": ""
+            },
+            {
+                "pin": "DeadBodySeenMurder",
+                "description": ""
+            },
+            {
+                "pin": "DeadBodySeenMurderId",
+                "description": ""
+            },
+            {
+                "pin": "FriskFailed",
+                "description": ""
+            },
+            {
+                "pin": "FriskSuccess",
+                "description": ""
+            },
+            {
+                "pin": "HitmanTrespassingSpotted",
+                "description": ""
+            },
+            {
+                "pin": "SecurityCameraAttentionMaxPan",
+                "description": ""
             }
         ]
     },
@@ -1704,10 +1764,6 @@
             },
             {
                 "pin": "OnPause",
-                "description": ""
-            },
-            {
-                "pin": "OnPaintingStolen",
                 "description": ""
             },
             {
@@ -2333,6 +2389,58 @@
             {
                 "pin": "Out5",
                 "description": ""
+            },
+            {
+                "pin": "Out10",
+                "description": ""
+            },
+            {
+                "pin": "Out11",
+                "description": ""
+            },
+            {
+                "pin": "Out12",
+                "description": ""
+            },
+            {
+                "pin": "Out13",
+                "description": ""
+            },
+            {
+                "pin": "Out14",
+                "description": ""
+            },
+            {
+                "pin": "Out15",
+                "description": ""
+            },
+            {
+                "pin": "Out16",
+                "description": ""
+            },
+            {
+                "pin": "Out17",
+                "description": ""
+            },
+            {
+                "pin": "Out18",
+                "description": ""
+            },
+            {
+                "pin": "Out19",
+                "description": ""
+            },
+            {
+                "pin": "Out20",
+                "description": ""
+            },
+            {
+                "pin": "Out21",
+                "description": ""
+            },
+            {
+                "pin": "Out9",
+                "description": ""
             }
         ]
     },
@@ -2356,6 +2464,10 @@
         "out": [
             {
                 "pin": "Started",
+                "description": ""
+            },
+            {
+                "pin": "Stopped",
                 "description": ""
             }
         ]
@@ -2652,6 +2764,62 @@
             {
                 "pin": "Value 4",
                 "description": ""
+            },
+            {
+                "pin": "Value 10",
+                "description": ""
+            },
+            {
+                "pin": "Value 11",
+                "description": ""
+            },
+            {
+                "pin": "Value 12",
+                "description": ""
+            },
+            {
+                "pin": "Value 13",
+                "description": ""
+            },
+            {
+                "pin": "Value 14",
+                "description": ""
+            },
+            {
+                "pin": "Value 15",
+                "description": ""
+            },
+            {
+                "pin": "Value 16",
+                "description": ""
+            },
+            {
+                "pin": "Value 17",
+                "description": ""
+            },
+            {
+                "pin": "Value 18",
+                "description": ""
+            },
+            {
+                "pin": "Value 19",
+                "description": ""
+            },
+            {
+                "pin": "Value 20",
+                "description": ""
+            },
+            {
+                "pin": "Value 7",
+                "description": ""
+            },
+            {
+                "pin": "Value 8",
+                "description": ""
+            },
+            {
+                "pin": "Value 9",
+                "description": ""
             }
         ]
     },
@@ -2787,6 +2955,18 @@
             {
                 "pin": "WeaponFireWhileCrippled",
                 "description": "Fired when user tries to fire weapon while crippled"
+            },
+            {
+                "pin": "WeaponEquipIllegal",
+                "description": ""
+            },
+            {
+                "pin": "WeaponUnEquipIllegal",
+                "description": ""
+            },
+            {
+                "pin": "WeaponUnEquipSuspicious",
+                "description": ""
             }
         ]
     },
@@ -2971,6 +3151,10 @@
             {
                 "pin": "OnGetIActor",
                 "description": ""
+            },
+            {
+                "pin": "OnGetEntityRef",
+                "description": ""
             }
         ]
     },
@@ -3079,6 +3263,22 @@
             {
                 "pin": "OnSafeRoomEnd",
                 "description": ""
+            },
+            {
+                "pin": "OnCorneredBegin",
+                "description": ""
+            },
+            {
+                "pin": "OnCorneredEnd",
+                "description": ""
+            },
+            {
+                "pin": "OnEscapingEnd",
+                "description": ""
+            },
+            {
+                "pin": "OnSafeRoomCompromised",
+                "description": ""
             }
         ]
     },
@@ -3102,6 +3302,10 @@
         "out": [
             {
                 "pin": "Started",
+                "description": ""
+            },
+            {
+                "pin": "Stopped",
                 "description": ""
             }
         ]
@@ -3226,6 +3430,18 @@
             {
                 "pin": "SyncBeat",
                 "description": ""
+            },
+            {
+                "pin": "Duration",
+                "description": ""
+            },
+            {
+                "pin": "Marker",
+                "description": ""
+            },
+            {
+                "pin": "StopEventEnded",
+                "description": ""
             }
         ]
     },
@@ -3246,6 +3462,10 @@
             {
                 "pin": "Output",
                 "description": "The smoothalized output value"
+            },
+            {
+                "pin": "Interpolating",
+                "description": ""
             }
         ]
     },
@@ -3871,6 +4091,10 @@
             {
                 "pin": "ContainedItemEjected",
                 "description": ""
+            },
+            {
+                "pin": "ContainedItemRetrieved",
+                "description": ""
             }
         ]
     },
@@ -4083,6 +4307,10 @@
             {
                 "pin": "OnNoItem",
                 "description": ""
+            },
+            {
+                "pin": "OnGetSetpieceUsed",
+                "description": ""
             }
         ]
     },
@@ -4131,6 +4359,10 @@
             {
                 "pin": "OnResumingRole",
                 "description": ""
+            },
+            {
+                "pin": "OnRunningRole",
+                "description": ""
             }
         ]
     },
@@ -4173,6 +4405,10 @@
             },
             {
                 "pin": "OnReenterRole",
+                "description": ""
+            },
+            {
+                "pin": "OnRunningRole",
                 "description": ""
             }
         ]
@@ -4353,6 +4589,10 @@
             },
             {
                 "pin": "Scarlett",
+                "description": ""
+            },
+            {
+                "pin": "Izumo",
                 "description": ""
             }
         ]
@@ -4942,6 +5182,10 @@
             {
                 "pin": "OnGetItemUsed",
                 "description": ""
+            },
+            {
+                "pin": "OnGetSetpieceUsed",
+                "description": ""
             }
         ]
     },
@@ -5054,6 +5298,14 @@
             {
                 "pin": "DoorClose",
                 "description": "Fired when door is closed by Hitman"
+            },
+            {
+                "pin": "DoorCloseByHitmanFirst",
+                "description": ""
+            },
+            {
+                "pin": "VrDoorInteraction",
+                "description": ""
             }
         ]
     },
@@ -5213,6 +5465,14 @@
             {
                 "pin": "OnFriskPrompt",
                 "description": "Fired when target is prompted to stop and raise arms"
+            },
+            {
+                "pin": "OnFriskStart",
+                "description": ""
+            },
+            {
+                "pin": "OnWarning",
+                "description": ""
             }
         ]
     },
@@ -5271,6 +5531,10 @@
         "out": [
             {
                 "pin": "Stopped",
+                "description": ""
+            },
+            {
+                "pin": "Started",
                 "description": ""
             }
         ]
@@ -5386,6 +5650,10 @@
             {
                 "pin": "HumanShield",
                 "description": "HM is in human shield"
+            },
+            {
+                "pin": "HMState_CloseDoor",
+                "description": ""
             }
         ]
     },
@@ -5437,6 +5705,10 @@
             },
             {
                 "pin": "Vector3",
+                "description": ""
+            },
+            {
+                "pin": "ColorRGB",
                 "description": ""
             }
         ]
@@ -5617,6 +5889,22 @@
             {
                 "pin": "SendEventName",
                 "description": ""
+            },
+            {
+                "pin": "CloseCalled",
+                "description": ""
+            },
+            {
+                "pin": "CrossBackward",
+                "description": ""
+            },
+            {
+                "pin": "OpenCalled",
+                "description": ""
+            },
+            {
+                "pin": "SetOpenCalled",
+                "description": ""
             }
         ]
     },
@@ -5728,6 +6016,30 @@
             {
                 "pin": "InTrespassEntryArea",
                 "description": "tue when Hitman is in trespassing entry area"
+            },
+            {
+                "pin": "TrespassEscortArrest",
+                "description": ""
+            },
+            {
+                "pin": "TrespassEscortOk",
+                "description": ""
+            },
+            {
+                "pin": "TrespassEscortRequest",
+                "description": ""
+            },
+            {
+                "pin": "TrespassEscortRequestRepeat",
+                "description": ""
+            },
+            {
+                "pin": "TrespassEscortStandDown",
+                "description": ""
+            },
+            {
+                "pin": "TrespassEscortStayClose",
+                "description": ""
             }
         ]
     },
@@ -5943,6 +6255,14 @@
             },
             {
                 "pin": "OnSetAmmoScopeType",
+                "description": ""
+            },
+            {
+                "pin": "OnEquipSniper",
+                "description": ""
+            },
+            {
+                "pin": "OnUnequipSniper",
                 "description": ""
             }
         ]
@@ -7009,6 +7329,14 @@
             {
                 "pin": "UnnoticedPacified",
                 "description": ""
+            },
+            {
+                "pin": "DetectedPacified",
+                "description": ""
+            },
+            {
+                "pin": "UnnoticedKill",
+                "description": ""
             }
         ]
     },
@@ -7195,6 +7523,10 @@
             },
             {
                 "pin": "InCrimeSceneEvent",
+                "description": ""
+            },
+            {
+                "pin": "ActorKnockedDown",
                 "description": ""
             }
         ]
@@ -7472,6 +7804,10 @@
         "out": [
             {
                 "pin": "OnEnabled",
+                "description": ""
+            },
+            {
+                "pin": "OnDisabled",
                 "description": ""
             }
         ]
@@ -7935,6 +8271,18 @@
             {
                 "pin": "DoorShowPadlock",
                 "description": "Fired when the padlock on the door should be shown during the unlock animation."
+            },
+            {
+                "pin": "DoorOpenByAnyIn",
+                "description": ""
+            },
+            {
+                "pin": "DoorOpenByAnyOut",
+                "description": ""
+            },
+            {
+                "pin": "VrDoorInteraction",
+                "description": ""
             }
         ]
     },
@@ -7974,6 +8322,10 @@
             },
             {
                 "pin": "FullExperience",
+                "description": ""
+            },
+            {
+                "pin": "UnknownBundle",
                 "description": ""
             }
         ]
@@ -8252,6 +8604,122 @@
             },
             {
                 "pin": "ItemPrimingStop",
+                "description": ""
+            },
+            {
+                "pin": "ActorBotherBody",
+                "description": ""
+            },
+            {
+                "pin": "ActorBotherHead",
+                "description": ""
+            },
+            {
+                "pin": "ActorBotherPos",
+                "description": ""
+            },
+            {
+                "pin": "ActorPacifyBody",
+                "description": ""
+            },
+            {
+                "pin": "ActorPacifyHead",
+                "description": ""
+            },
+            {
+                "pin": "ActorPacifyIActor",
+                "description": ""
+            },
+            {
+                "pin": "ActorPunchBody",
+                "description": ""
+            },
+            {
+                "pin": "ActorPunchPos",
+                "description": ""
+            },
+            {
+                "pin": "ActorSlapBody",
+                "description": ""
+            },
+            {
+                "pin": "ActorSlapHead",
+                "description": ""
+            },
+            {
+                "pin": "ActorSlapIActor",
+                "description": ""
+            },
+            {
+                "pin": "ActorSlapPos",
+                "description": ""
+            },
+            {
+                "pin": "CrowdBotherBody",
+                "description": ""
+            },
+            {
+                "pin": "CrowdBotherHead",
+                "description": ""
+            },
+            {
+                "pin": "CrowdBotherPos",
+                "description": ""
+            },
+            {
+                "pin": "CrowdKillBody",
+                "description": ""
+            },
+            {
+                "pin": "CrowdKillHead",
+                "description": ""
+            },
+            {
+                "pin": "CrowdKillPos",
+                "description": ""
+            },
+            {
+                "pin": "ItemPrimingStart",
+                "description": ""
+            },
+            {
+                "pin": "MeleePrimingStopLeft",
+                "description": ""
+            },
+            {
+                "pin": "MeleePrimingStopRight",
+                "description": ""
+            },
+            {
+                "pin": "SilentTakedownPrimingStop",
+                "description": ""
+            },
+            {
+                "pin": "SnapNeckBrokenNeckEvent",
+                "description": ""
+            },
+            {
+                "pin": "SnapNeckPrimingStart",
+                "description": ""
+            },
+            {
+                "pin": "SnapNeckPrimingStop",
+                "description": ""
+            },
+            {
+                "pin": "SnapNeckStartMovement",
+                "description": ""
+            },
+            {
+                "pin": "SnapNeckStopMovement",
+                "description": ""
+            },
+            {
+                "pin": "StartPrecisionAim",
+                "description": ""
+            },
+            {
+                "pin": "StopPrecisionAim",
                 "description": ""
             }
         ]
@@ -8612,6 +9080,10 @@
             {
                 "pin": "BundleDestroyed",
                 "description": ""
+            },
+            {
+                "pin": "ClothBundleSpawned",
+                "description": ""
             }
         ]
     },
@@ -8800,6 +9272,10 @@
             {
                 "pin": "OnHintCancelled",
                 "description": ""
+            },
+            {
+                "pin": "OnHintUnqueued",
+                "description": ""
             }
         ]
     },
@@ -8980,6 +9456,26 @@
             {
                 "pin": "IsLastTriggered",
                 "description": "Is the last triggered stage"
+            },
+            {
+                "pin": "Disabled",
+                "description": ""
+            },
+            {
+                "pin": "InactiveStage",
+                "description": ""
+            },
+            {
+                "pin": "IsLastTriggeredAndNotTracked",
+                "description": ""
+            },
+            {
+                "pin": "ParentRepositoryId",
+                "description": ""
+            },
+            {
+                "pin": "RepositoryId",
+                "description": ""
             }
         ]
     },
@@ -9054,6 +9550,54 @@
             },
             {
                 "pin": "Select",
+                "description": ""
+            },
+            {
+                "pin": "Accept",
+                "description": ""
+            },
+            {
+                "pin": "ActionX",
+                "description": ""
+            },
+            {
+                "pin": "ActionY",
+                "description": ""
+            },
+            {
+                "pin": "Down",
+                "description": ""
+            },
+            {
+                "pin": "LeftStick",
+                "description": ""
+            },
+            {
+                "pin": "PreviousPage",
+                "description": ""
+            },
+            {
+                "pin": "Right",
+                "description": ""
+            },
+            {
+                "pin": "RightStick",
+                "description": ""
+            },
+            {
+                "pin": "ScrollHorizontal",
+                "description": ""
+            },
+            {
+                "pin": "ScrollVertical",
+                "description": ""
+            },
+            {
+                "pin": "Start",
+                "description": ""
+            },
+            {
+                "pin": "Up",
                 "description": ""
             }
         ]
@@ -9365,6 +9909,10 @@
             {
                 "pin": "AutosaveLoadEnabled",
                 "description": "Is loading from autosave allowed"
+            },
+            {
+                "pin": "GlobalSaveEnabled",
+                "description": ""
             }
         ]
     },
@@ -9433,6 +9981,10 @@
             {
                 "pin": "End",
                 "description": "Fires when action ends"
+            },
+            {
+                "pin": "OnVictimDeathActor",
+                "description": ""
             }
         ]
     },
@@ -9756,6 +10308,22 @@
             {
                 "pin": "DraggingStop",
                 "description": "Fired when Hitman stops dragging."
+            },
+            {
+                "pin": "DraggedBodyElevationChanged",
+                "description": ""
+            },
+            {
+                "pin": "DraggingDirChanged",
+                "description": ""
+            },
+            {
+                "pin": "DraggingStopMoving",
+                "description": ""
+            },
+            {
+                "pin": "GroundSoundMaterialChanged",
+                "description": ""
             }
         ]
     },
@@ -9997,6 +10565,10 @@
         "out": [
             {
                 "pin": "AddedKeyword",
+                "description": ""
+            },
+            {
+                "pin": "RemovedKeyword",
                 "description": ""
             }
         ]
@@ -10322,6 +10894,10 @@
             {
                 "pin": "SetCinemaMode",
                 "description": ""
+            },
+            {
+                "pin": "SetCinemaModeHighFramerate",
+                "description": ""
             }
         ]
     },
@@ -10376,6 +10952,10 @@
             },
             {
                 "pin": "DiffusePower",
+                "description": ""
+            },
+            {
+                "pin": "Off",
                 "description": ""
             }
         ]
@@ -10561,6 +11141,10 @@
             {
                 "pin": "OnCompleted",
                 "description": ""
+            },
+            {
+                "pin": "OnFailed",
+                "description": ""
             }
         ]
     },
@@ -10738,6 +11322,14 @@
             {
                 "pin": "EnterSniperMode",
                 "description": ""
+            },
+            {
+                "pin": "ExitSniperMode",
+                "description": ""
+            },
+            {
+                "pin": "SniperModeZoomLevel",
+                "description": ""
             }
         ]
     },
@@ -10764,6 +11356,66 @@
             },
             {
                 "pin": "ObjectiveCompleted",
+                "description": ""
+            },
+            {
+                "pin": "CounterEnded",
+                "description": ""
+            },
+            {
+                "pin": "CounterStarted",
+                "description": ""
+            },
+            {
+                "pin": "DisplayingObjectivesBarWithoutChanges",
+                "description": ""
+            },
+            {
+                "pin": "HidingObjectivesBar",
+                "description": ""
+            },
+            {
+                "pin": "NewObjectiveAtStartHudDisplayed",
+                "description": ""
+            },
+            {
+                "pin": "NewObjectiveDuringLevelHudDisplayed",
+                "description": ""
+            },
+            {
+                "pin": "ObjectiveCompletedHudDisplayed",
+                "description": ""
+            },
+            {
+                "pin": "ObjectiveFailedHudDisplayed",
+                "description": ""
+            },
+            {
+                "pin": "OnShowExitObjective",
+                "description": ""
+            },
+            {
+                "pin": "PrimaryObjectiveCompleted",
+                "description": ""
+            },
+            {
+                "pin": "RemovalOfObjectiveHudDisplayed",
+                "description": ""
+            },
+            {
+                "pin": "SecondaryObjectiveCompleted",
+                "description": ""
+            },
+            {
+                "pin": "SecondaryObjectiveFailed",
+                "description": ""
+            },
+            {
+                "pin": "TimerEnded",
+                "description": ""
+            },
+            {
+                "pin": "TimersUpdated",
                 "description": ""
             }
         ]
@@ -10955,6 +11607,10 @@
             {
                 "pin": "ItemShot",
                 "description": "Only fires as long as the spawner is still owning the item!"
+            },
+            {
+                "pin": "OnReady",
+                "description": ""
             }
         ]
     },
@@ -11157,6 +11813,34 @@
             {
                 "pin": "ExecutedData",
                 "description": ""
+            },
+            {
+                "pin": "ActivatedInputAction",
+                "description": ""
+            },
+            {
+                "pin": "ExecutedLH",
+                "description": ""
+            },
+            {
+                "pin": "ExecutedRH",
+                "description": ""
+            },
+            {
+                "pin": "Interrupted",
+                "description": ""
+            },
+            {
+                "pin": "ItemUsed",
+                "description": ""
+            },
+            {
+                "pin": "PromptExecuted",
+                "description": ""
+            },
+            {
+                "pin": "SwipeActivated",
+                "description": ""
             }
         ]
     },
@@ -11196,7 +11880,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "ShortBarrel",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00904CDA7C18FC6E",
@@ -11333,6 +12022,10 @@
             {
                 "pin": "Keyword",
                 "description": ""
+            },
+            {
+                "pin": "Keyword2",
+                "description": ""
             }
         ]
     },
@@ -11368,6 +12061,14 @@
             },
             {
                 "pin": "OnEvent5",
+                "description": ""
+            },
+            {
+                "pin": "OnEvent2",
+                "description": ""
+            },
+            {
+                "pin": "OnEvent3",
                 "description": ""
             }
         ]
@@ -11406,6 +12107,38 @@
             },
             {
                 "pin": "Reload_White",
+                "description": ""
+            },
+            {
+                "pin": "AI_Info_Displayed",
+                "description": ""
+            },
+            {
+                "pin": "ChallengePartiallyComplete",
+                "description": ""
+            },
+            {
+                "pin": "ChangeAmmo",
+                "description": ""
+            },
+            {
+                "pin": "Mark_Local",
+                "description": ""
+            },
+            {
+                "pin": "Mark_Remote",
+                "description": ""
+            },
+            {
+                "pin": "Reload_Red",
+                "description": ""
+            },
+            {
+                "pin": "Unmark_Local",
+                "description": ""
+            },
+            {
+                "pin": "Unmark_Remote",
                 "description": ""
             }
         ]
@@ -11465,6 +12198,442 @@
             },
             {
                 "pin": "DialogOpened",
+                "description": ""
+            },
+            {
+                "pin": "GamePauseOnMenuSpace",
+                "description": ""
+            },
+            {
+                "pin": "GameResumeInGame",
+                "description": ""
+            },
+            {
+                "pin": "HoverMapIcon",
+                "description": ""
+            },
+            {
+                "pin": "LevelUp",
+                "description": ""
+            },
+            {
+                "pin": "MapLevelDown",
+                "description": ""
+            },
+            {
+                "pin": "MapLevelUp",
+                "description": ""
+            },
+            {
+                "pin": "MockupAudioEnabled",
+                "description": ""
+            },
+            {
+                "pin": "MultiplayerSessionPopulated",
+                "description": ""
+            },
+            {
+                "pin": "NextPageTabSelected",
+                "description": ""
+            },
+            {
+                "pin": "NoPageTabAvailable",
+                "description": ""
+            },
+            {
+                "pin": "Objectives_PopUp",
+                "description": ""
+            },
+            {
+                "pin": "OnHideGameInBackground",
+                "description": ""
+            },
+            {
+                "pin": "OnShowGameInBackground",
+                "description": ""
+            },
+            {
+                "pin": "PageSelectionChanged",
+                "description": ""
+            },
+            {
+                "pin": "PreviousPageTabSelected",
+                "description": ""
+            },
+            {
+                "pin": "ScoreRating",
+                "description": ""
+            },
+            {
+                "pin": "ScoreStartUpdate",
+                "description": ""
+            },
+            {
+                "pin": "ScoreStopUpdate",
+                "description": ""
+            },
+            {
+                "pin": "ShowDrop",
+                "description": ""
+            },
+            {
+                "pin": "SilentAssassinScore",
+                "description": ""
+            },
+            {
+                "pin": "SliderChanged",
+                "description": ""
+            },
+            {
+                "pin": "ZoomMapIn",
+                "description": ""
+            },
+            {
+                "pin": "ZoomMapOut",
+                "description": ""
+            },
+            {
+                "pin": "play_gui_opportunity_timer",
+                "description": ""
+            },
+            {
+                "pin": "play_gui_pip_hide",
+                "description": ""
+            },
+            {
+                "pin": "play_ui_crowd_blendin",
+                "description": ""
+            },
+            {
+                "pin": "play_ui_crowd_blendout",
+                "description": ""
+            },
+            {
+                "pin": "play_ui_deeptrespass_activate",
+                "description": ""
+            },
+            {
+                "pin": "play_ui_mission_title_appear",
+                "description": ""
+            },
+            {
+                "pin": "play_ui_mission_title_disappear",
+                "description": ""
+            },
+            {
+                "pin": "play_ui_trespass_activate",
+                "description": ""
+            },
+            {
+                "pin": "play_ui_trespass_deactivate",
+                "description": ""
+            },
+            {
+                "pin": "stop_gui_opportunity_timer",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_achievement_mission_story_complete",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_achievement_scorescreen_tick_lp",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_achievement_scorescreen_tick_lp_stop",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_achievement_scorescreen_tick_xp_lp",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_achievement_scorescreen_tick_xp_lp_stop",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_achievement_scorescreen_tile_complete",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_achievement_scorescreen_tile_highlight",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_achievement_scorescreen_total_xp",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_achievement_tiles_appear",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_achievement_tiles_appear_stop",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_detailsscreen_open",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_badge_evergreen_campaign_completed",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_badge_evergreen_campaign_failed",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_badge_evergreen_mild_completed",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_badge_evergreen_mild_failed_left",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_badge_evergreen_mild_failed_wounded",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_badge_init",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_evergreen_campaign_hotfail",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_evergreen_campaign_hotwin",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_evergreen_campaign_mildfail",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_evergreen_campaign_mildwin",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_evergreen_payout_counting_begin",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_evergreen_payout_counting_done",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_evergreen_payout_counting_done_zero",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_evergreen_time_counting_begin",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_evergreen_time_counting_done",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_evergreen_xp_counting_begin",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_evergreen_xp_counting_done",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_evergreen_xp_counting_done_zero",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_levelup",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_mission_rating",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_mission_score",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_mission_time",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_ADAPTABLE_ACCIDENT_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_ADAPTABLE_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_ADAPTABLE_HANDSON_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_ADAPTABLE_SHOOTER_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_BURN_ACCIDENT_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_CLEAN_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_DROPTRAP_ACCIDENT_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_DROWNER_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_ELECTRIC_ACCIDENT_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_EVIDENCE_DESTROYER",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_EXPLOSION_ACCIDENT_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_EXPLOSIVE_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_FLEXIBLE_HANDSON_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_FLEXIBLE_KILLER",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_FLEXIBLE_SHOOTER_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_HEAD_SHOT_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_HIDDEN_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_MELEE_ACCIDENT_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_MELEE_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_NECK_SNAPPER_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_NO_WITNESSES",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_PIANO_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_PISTOL_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_PLAYFULNESS_CLIMBER",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_PLAYFULNESS_HOARDER",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_PLAYFULNESS_PACIFIER",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_PLAYFULNESS_PHOTOGRAPHER",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_PLAYFULNESS_SILLY",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_POISON_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_RIFLE_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_SHADOW_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_SHOTGUN_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_SMG_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_SNIPER_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_STEALTH_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_VERSATILE_ACCIDENT_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_VERSATILE_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_VERSATILE_HANDSON_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_playstyle_sweetener_VERSATILE_SHOOTER_ASSASSIN",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_progressbar_locationmastery_levelup",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_progressbar_text",
+                "description": ""
+            },
+            {
+                "pin": "ui_debrief_scorescreen_star_rating",
                 "description": ""
             }
         ]
@@ -12095,6 +13264,10 @@
             {
                 "pin": "Value",
                 "description": ""
+            },
+            {
+                "pin": "OnFalse",
+                "description": ""
             }
         ]
     },
@@ -12334,6 +13507,10 @@
         "out": [
             {
                 "pin": "OnWrap",
+                "description": ""
+            },
+            {
+                "pin": "OnChange",
                 "description": ""
             }
         ]
@@ -12798,6 +13975,10 @@
             {
                 "pin": "Power",
                 "description": ""
+            },
+            {
+                "pin": "TurnLightOn",
+                "description": ""
             }
         ]
     },
@@ -12819,6 +14000,62 @@
         "out": [
             {
                 "pin": "IsInCampaign",
+                "description": ""
+            },
+            {
+                "pin": "BonusRequirement1",
+                "description": ""
+            },
+            {
+                "pin": "BonusRequirement2",
+                "description": ""
+            },
+            {
+                "pin": "BonusRequirement3",
+                "description": ""
+            },
+            {
+                "pin": "BonusRequirement4",
+                "description": ""
+            },
+            {
+                "pin": "BonusRequirement5",
+                "description": ""
+            },
+            {
+                "pin": "BonusRequirement6",
+                "description": ""
+            },
+            {
+                "pin": "BonusRequirement7",
+                "description": ""
+            },
+            {
+                "pin": "BonusRequirement8",
+                "description": ""
+            },
+            {
+                "pin": "IsAlerted",
+                "description": ""
+            },
+            {
+                "pin": "NumMules",
+                "description": ""
+            },
+            {
+                "pin": "NumSafes",
+                "description": ""
+            },
+            {
+                "pin": "NumStashes",
+                "description": ""
+            },
+            {
+                "pin": "NumSuppliers",
+                "description": ""
+            },
+            {
+                "pin": "NumTargets",
                 "description": ""
             }
         ]
@@ -12989,6 +14226,10 @@
         "out": [
             {
                 "pin": "OnTriggered",
+                "description": ""
+            },
+            {
+                "pin": "IntValue",
                 "description": ""
             }
         ]
@@ -13214,6 +14455,10 @@
             {
                 "pin": "OnTrue",
                 "description": ""
+            },
+            {
+                "pin": "OnFalse",
+                "description": ""
             }
         ]
     },
@@ -13298,6 +14543,18 @@
             {
                 "pin": "OnInteractionBegin",
                 "description": ""
+            },
+            {
+                "pin": "OnInteractionEnd",
+                "description": ""
+            },
+            {
+                "pin": "OnInteractionInterrupted",
+                "description": ""
+            },
+            {
+                "pin": "OnResponderSet",
+                "description": ""
             }
         ]
     },
@@ -13350,6 +14607,18 @@
             {
                 "pin": "OnIActorChanged",
                 "description": ""
+            },
+            {
+                "pin": "OnLeaveDrama",
+                "description": ""
+            },
+            {
+                "pin": "OnPauseDrama",
+                "description": ""
+            },
+            {
+                "pin": "OnUnpauseDrama",
+                "description": ""
             }
         ]
     },
@@ -13379,6 +14648,10 @@
             },
             {
                 "pin": "OnSelectedSkin",
+                "description": ""
+            },
+            {
+                "pin": "OnSelectionMask",
                 "description": ""
             }
         ]
@@ -13562,6 +14835,38 @@
             {
                 "pin": "HM_WeaponPickedUp",
                 "description": ""
+            },
+            {
+                "pin": "VR_BulletChambered",
+                "description": ""
+            },
+            {
+                "pin": "VR_ClipAligned",
+                "description": ""
+            },
+            {
+                "pin": "VR_ClipEject",
+                "description": ""
+            },
+            {
+                "pin": "VR_ClipGrab",
+                "description": ""
+            },
+            {
+                "pin": "VR_ClipInserted",
+                "description": ""
+            },
+            {
+                "pin": "VR_SlideBack",
+                "description": ""
+            },
+            {
+                "pin": "VR_SlideForward",
+                "description": ""
+            },
+            {
+                "pin": "VR_SlideGrab",
+                "description": ""
             }
         ]
     },
@@ -13643,6 +14948,10 @@
         "out": [
             {
                 "pin": "OnValueChanged",
+                "description": ""
+            },
+            {
+                "pin": "OnGet",
                 "description": ""
             }
         ]
@@ -13996,6 +15305,14 @@
             {
                 "pin": "OnOpening",
                 "description": ""
+            },
+            {
+                "pin": "OnClosed",
+                "description": ""
+            },
+            {
+                "pin": "OnOpened",
+                "description": ""
             }
         ]
     },
@@ -14039,6 +15356,10 @@
         "out": [
             {
                 "pin": "NoValue",
+                "description": ""
+            },
+            {
+                "pin": "OnValue",
                 "description": ""
             }
         ]
@@ -14138,6 +15459,10 @@
         "out": [
             {
                 "pin": "OnTrue",
+                "description": ""
+            },
+            {
+                "pin": "OnFalse",
                 "description": ""
             }
         ]
@@ -14287,6 +15612,10 @@
             {
                 "pin": "GetTrue",
                 "description": ""
+            },
+            {
+                "pin": "GetFalse",
+                "description": ""
             }
         ]
     },
@@ -14367,6 +15696,10 @@
             {
                 "pin": "OnItemPlaced",
                 "description": ""
+            },
+            {
+                "pin": "OnItemEquipped",
+                "description": ""
             }
         ]
     },
@@ -14396,6 +15729,10 @@
         "out": [
             {
                 "pin": "OnEqual",
+                "description": ""
+            },
+            {
+                "pin": "OnNotEqual",
                 "description": ""
             }
         ]
@@ -14495,6 +15832,10 @@
             {
                 "pin": "OnDisabledIActor",
                 "description": ""
+            },
+            {
+                "pin": "OnPostDisabledActor",
+                "description": ""
             }
         ]
     },
@@ -14510,6 +15851,30 @@
         "out": [
             {
                 "pin": "OnActorPicked",
+                "description": ""
+            },
+            {
+                "pin": "OnPostActor",
+                "description": ""
+            },
+            {
+                "pin": "OnPostActorPenalty",
+                "description": ""
+            },
+            {
+                "pin": "OnPreActor",
+                "description": ""
+            },
+            {
+                "pin": "OnPreActorPenalty",
+                "description": ""
+            },
+            {
+                "pin": "OnTargetNoticedPacified",
+                "description": ""
+            },
+            {
+                "pin": "OnTimerEnd",
                 "description": ""
             }
         ]
@@ -14583,6 +15948,10 @@
             {
                 "pin": "BundleDestroyed",
                 "description": ""
+            },
+            {
+                "pin": "ClothBundleSpawned",
+                "description": ""
             }
         ]
     },
@@ -14606,6 +15975,10 @@
             },
             {
                 "pin": "Show",
+                "description": ""
+            },
+            {
+                "pin": "Hide",
                 "description": ""
             }
         ]
@@ -14929,6 +16302,10 @@
             {
                 "pin": "OnSuccess",
                 "description": ""
+            },
+            {
+                "pin": "OnFailure",
+                "description": ""
             }
         ]
     },
@@ -15012,6 +16389,14 @@
             },
             {
                 "pin": "ItemReady",
+                "description": ""
+            },
+            {
+                "pin": "ItemSpawned",
+                "description": ""
+            },
+            {
+                "pin": "OnItemDestroyed",
                 "description": ""
             }
         ]
@@ -15239,6 +16624,18 @@
             {
                 "pin": "OnInteractionBegin",
                 "description": ""
+            },
+            {
+                "pin": "OnInteractionEnd",
+                "description": ""
+            },
+            {
+                "pin": "OnInteractionInterrupted",
+                "description": ""
+            },
+            {
+                "pin": "OnResponderSet",
+                "description": ""
             }
         ]
     },
@@ -15306,6 +16703,10 @@
             },
             {
                 "pin": "OnNegativeSide",
+                "description": ""
+            },
+            {
+                "pin": "WithinThreshold",
                 "description": ""
             }
         ]
@@ -15740,6 +17141,10 @@
             {
                 "pin": "OnQueueStarted",
                 "description": ""
+            },
+            {
+                "pin": "OnQueueCompleted",
+                "description": ""
             }
         ]
     },
@@ -15846,6 +17251,14 @@
             {
                 "pin": "OnStart",
                 "description": ""
+            },
+            {
+                "pin": "OnDone",
+                "description": ""
+            },
+            {
+                "pin": "OnFail",
+                "description": ""
             }
         ]
     },
@@ -15860,6 +17273,22 @@
             },
             {
                 "pin": "RightHandIsReloading",
+                "description": ""
+            },
+            {
+                "pin": "LeftHandHoldsFirearm",
+                "description": ""
+            },
+            {
+                "pin": "LeftHandHoldsMelee",
+                "description": ""
+            },
+            {
+                "pin": "LeftHandIsReloading",
+                "description": ""
+            },
+            {
+                "pin": "RightHandHoldsFirearm",
                 "description": ""
             }
         ]
@@ -15900,6 +17329,10 @@
             {
                 "pin": "OnFalse",
                 "description": ""
+            },
+            {
+                "pin": "OnTrue",
+                "description": ""
             }
         ]
     },
@@ -15910,6 +17343,18 @@
         "out": [
             {
                 "pin": "Alpha",
+                "description": ""
+            },
+            {
+                "pin": "BoxSize",
+                "description": ""
+            },
+            {
+                "pin": "IsVisible",
+                "description": ""
+            },
+            {
+                "pin": "ShowRecenterHint",
                 "description": ""
             }
         ]
@@ -15957,6 +17402,50 @@
             },
             {
                 "pin": "VR_StartPrecisionAim",
+                "description": ""
+            },
+            {
+                "pin": "VR_CrowdImpact_Kill",
+                "description": ""
+            },
+            {
+                "pin": "VR_HmdSmallTap",
+                "description": ""
+            },
+            {
+                "pin": "VR_ItemThrowDeadly",
+                "description": ""
+            },
+            {
+                "pin": "VR_ItemThrowNormal",
+                "description": ""
+            },
+            {
+                "pin": "VR_LeftSideSmallTap",
+                "description": ""
+            },
+            {
+                "pin": "VR_NPCImpact_Kill",
+                "description": ""
+            },
+            {
+                "pin": "VR_NPCImpact_Pacify",
+                "description": ""
+            },
+            {
+                "pin": "VR_RightSideSmallTap",
+                "description": ""
+            },
+            {
+                "pin": "VR_StartDraggingBody",
+                "description": ""
+            },
+            {
+                "pin": "VR_StopDraggingBody",
+                "description": ""
+            },
+            {
+                "pin": "VR_UpdateDragBodyForce",
                 "description": ""
             }
         ]
@@ -16110,6 +17599,14 @@
             {
                 "pin": "TargetKeyword",
                 "description": ""
+            },
+            {
+                "pin": "Done",
+                "description": ""
+            },
+            {
+                "pin": "SatellitesPerNetwork",
+                "description": ""
             }
         ]
     },
@@ -16206,6 +17703,34 @@
             {
                 "pin": "SET_DIFFICULTY_normal",
                 "description": ""
+            },
+            {
+                "pin": "ConsumedItem",
+                "description": ""
+            },
+            {
+                "pin": "HIGHLIGHT_DIFFICULTY_normal",
+                "description": ""
+            },
+            {
+                "pin": "HIGHLIGHT_DIFFICULTY_pro1",
+                "description": ""
+            },
+            {
+                "pin": "PAGE_ENTERED_result_looser",
+                "description": ""
+            },
+            {
+                "pin": "PAGE_ENTERED_result_neutral",
+                "description": ""
+            },
+            {
+                "pin": "SET_DIFFICULTY_hard",
+                "description": ""
+            },
+            {
+                "pin": "SET_DIFFICULTY_pro1",
+                "description": ""
             }
         ]
     },
@@ -16269,6 +17794,10 @@
             {
                 "pin": "OnRepositoryIdChanged",
                 "description": ""
+            },
+            {
+                "pin": "OutfitGiven",
+                "description": ""
             }
         ]
     },
@@ -16304,6 +17833,22 @@
             {
                 "pin": "PerfDebugViewVisible",
                 "description": ""
+            },
+            {
+                "pin": "OnBenchmarkEndQuitGame",
+                "description": ""
+            },
+            {
+                "pin": "OnSummaryDisplayed",
+                "description": ""
+            },
+            {
+                "pin": "SummaryVisible",
+                "description": ""
+            },
+            {
+                "pin": "ViewVisible",
+                "description": ""
             }
         ]
     },
@@ -16331,6 +17876,14 @@
         "out": [
             {
                 "pin": "OccludersNone",
+                "description": ""
+            },
+            {
+                "pin": "LateralShift",
+                "description": ""
+            },
+            {
+                "pin": "OccludersAny",
                 "description": ""
             }
         ]
@@ -16461,6 +18014,26 @@
             {
                 "pin": "ScoreCommon",
                 "description": ""
+            },
+            {
+                "pin": "ScoreAwesome",
+                "description": ""
+            },
+            {
+                "pin": "ScoreFail",
+                "description": ""
+            },
+            {
+                "pin": "ScoreFair",
+                "description": ""
+            },
+            {
+                "pin": "ScoreGood",
+                "description": ""
+            },
+            {
+                "pin": "ScoreStopUpdate",
+                "description": ""
             }
         ]
     },
@@ -16482,6 +18055,10 @@
         "out": [
             {
                 "pin": "OnBusy",
+                "description": ""
+            },
+            {
+                "pin": "OnFree",
                 "description": ""
             }
         ]
@@ -16515,6 +18092,10 @@
             {
                 "pin": "UnsetMinimap",
                 "description": ""
+            },
+            {
+                "pin": "SetMinimap",
+                "description": ""
             }
         ]
     },
@@ -16526,6 +18107,10 @@
             {
                 "pin": "EnableSpeakerNameAsCinematic",
                 "description": ""
+            },
+            {
+                "pin": "InstantOffNameAsCinematic",
+                "description": ""
             }
         ]
     },
@@ -16536,6 +18121,34 @@
         "out": [
             {
                 "pin": "ControllerHintOpened",
+                "description": ""
+            },
+            {
+                "pin": "ControllerHintClosed",
+                "description": ""
+            },
+            {
+                "pin": "GlobalHintClosed",
+                "description": ""
+            },
+            {
+                "pin": "GlobalHintOpened",
+                "description": ""
+            },
+            {
+                "pin": "PausedControllerHintClosed",
+                "description": ""
+            },
+            {
+                "pin": "PausedControllerHintOpened",
+                "description": ""
+            },
+            {
+                "pin": "TutorialHintClosed",
+                "description": ""
+            },
+            {
+                "pin": "TutorialHintOpened",
                 "description": ""
             }
         ]
@@ -16600,6 +18213,10 @@
         "out": [
             {
                 "pin": "OnEnabled",
+                "description": ""
+            },
+            {
+                "pin": "OnDisabled",
                 "description": ""
             }
         ]
@@ -16802,6 +18419,10 @@
             {
                 "pin": "CrowdDownNearestActor_Left",
                 "description": ""
+            },
+            {
+                "pin": "CrowdDensityTotal",
+                "description": ""
             }
         ]
     },
@@ -16939,6 +18560,10 @@
             {
                 "pin": "OnFail",
                 "description": ""
+            },
+            {
+                "pin": "OnTerminate",
+                "description": ""
             }
         ]
     },
@@ -16966,6 +18591,10 @@
         "out": [
             {
                 "pin": "OnKnight",
+                "description": ""
+            },
+            {
+                "pin": "OnStone",
                 "description": ""
             }
         ]
@@ -17171,6 +18800,10 @@
             {
                 "pin": "ContractId",
                 "description": ""
+            },
+            {
+                "pin": "ContractLoadFailed",
+                "description": ""
             }
         ]
     },
@@ -17331,6 +18964,10 @@
             },
             {
                 "pin": "Local",
+                "description": ""
+            },
+            {
+                "pin": "OnChange",
                 "description": ""
             }
         ]
@@ -17561,6 +19198,18 @@
         "out": [
             {
                 "pin": "Opened",
+                "description": ""
+            },
+            {
+                "pin": "Closed",
+                "description": ""
+            },
+            {
+                "pin": "FocusGained",
+                "description": ""
+            },
+            {
+                "pin": "FocusLost",
                 "description": ""
             }
         ]
@@ -17961,6 +19610,10 @@
             {
                 "pin": "IIsHotMissionInCampaign",
                 "description": ""
+            },
+            {
+                "pin": "IsHotMission",
+                "description": ""
             }
         ]
     },
@@ -17995,6 +19648,10 @@
         "out": [
             {
                 "pin": "OnTrue",
+                "description": ""
+            },
+            {
+                "pin": "OnFalse",
                 "description": ""
             }
         ]
@@ -24745,7 +26402,16 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "InsideCone",
+                "description": ""
+            },
+            {
+                "pin": "OutsideCone",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00CB3F0A488911D4",
@@ -25259,7 +26925,12 @@
         "hash": "006956FAD006B852",
         "path": "[modules:/zhudsilentassassinoptioncontroller.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "Status",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "0042097BD2858D7F",
@@ -26536,7 +28207,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "LerpWorldMatrix",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00BB6D81C703F3F2",
@@ -31450,7 +33126,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "SerializedMetrics",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "0034BC70BF76D85A",
@@ -33151,7 +34832,12 @@
                 "description": "Set the interpolant T and calculate"
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "LerpWorldMatrix",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "002BF757A4CCADFA",
@@ -34197,7 +35883,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OutSignalData",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "004CAE55C1F56A57",
@@ -34248,7 +35939,28 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "StartUpdate",
+                "description": ""
+            },
+            {
+                "pin": "StopUpdate",
+                "description": ""
+            },
+            {
+                "pin": "SubactionExecuted",
+                "description": ""
+            },
+            {
+                "pin": "Update",
+                "description": ""
+            },
+            {
+                "pin": "UpdateableFloatPolled",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "008486FB355E090B",
@@ -34290,7 +36002,12 @@
         "hash": "00593FDB6B18E4F8",
         "path": "[modules:/zvrinterpolatedalignproximitylistener.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "Tick",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "0038706908F9CFED",
@@ -34301,7 +36018,40 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "Disabled",
+                "description": ""
+            },
+            {
+                "pin": "EmptyHand_in_FreeHolster",
+                "description": ""
+            },
+            {
+                "pin": "EmptyHand_in_UsedHolster",
+                "description": ""
+            },
+            {
+                "pin": "HandOutOfHolster",
+                "description": ""
+            },
+            {
+                "pin": "HandWithCorrectItem_in_FreeHolster",
+                "description": ""
+            },
+            {
+                "pin": "HandWithCorrectItem_in_UsedHolster",
+                "description": ""
+            },
+            {
+                "pin": "HandWithIncorrectItem_in_FreeHolster",
+                "description": ""
+            },
+            {
+                "pin": "HandWithIncorrectItem_in_UsedHolster",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "0090551F2C98B119",
@@ -34322,13 +36072,31 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "FadeToBlackComplete",
+                "description": ""
+            },
+            {
+                "pin": "FadeToGameComplete",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "0016F53890B545CF",
         "path": "[modules:/zvrfademanagerentity.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "FadeToBlack",
+                "description": ""
+            },
+            {
+                "pin": "FadeToGame",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "005690D5364CA0FC",
@@ -34351,7 +36119,16 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OnFalse",
+                "description": ""
+            },
+            {
+                "pin": "OnTrue",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00CFF577E7F33E42",
@@ -34373,7 +36150,16 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OutFalse",
+                "description": ""
+            },
+            {
+                "pin": "OutTrue",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00EE9D18F67D3B21",
@@ -34398,7 +36184,20 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "Added",
+                "description": ""
+            },
+            {
+                "pin": "Done",
+                "description": ""
+            },
+            {
+                "pin": "Pickup",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00CC857730091486",
@@ -34472,7 +36271,64 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OnAligned",
+                "description": ""
+            },
+            {
+                "pin": "OnAlignedLeft",
+                "description": ""
+            },
+            {
+                "pin": "OnAlignedRight",
+                "description": ""
+            },
+            {
+                "pin": "OnCancelled",
+                "description": ""
+            },
+            {
+                "pin": "OnCompleted",
+                "description": ""
+            },
+            {
+                "pin": "OnGripReleased",
+                "description": ""
+            },
+            {
+                "pin": "OnHandSet",
+                "description": ""
+            },
+            {
+                "pin": "OnInterpolationTime",
+                "description": ""
+            },
+            {
+                "pin": "OnInterpolationVelocity",
+                "description": ""
+            },
+            {
+                "pin": "OnItemSet",
+                "description": ""
+            },
+            {
+                "pin": "OnIteration",
+                "description": ""
+            },
+            {
+                "pin": "OnPoseInvalid",
+                "description": ""
+            },
+            {
+                "pin": "OnStartUpdate",
+                "description": ""
+            },
+            {
+                "pin": "OnStopUpdate",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "004099BABF8AA1F1",
@@ -34638,7 +36494,16 @@
         "hash": "005B4367429445DF",
         "path": "[modules:/zhudinputgamestateentity.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "HitmanCanShowItem",
+                "description": ""
+            },
+            {
+                "pin": "HitmanCanSurrender",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "0086D199858194CB",
@@ -34649,7 +36514,16 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "HandLeft",
+                "description": ""
+            },
+            {
+                "pin": "HandRight",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "007696C3183117E1",
@@ -34746,19 +36620,58 @@
         "hash": "00169F1D14D09E49",
         "path": "[modules:/zvrinputaxisentity.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "AxisValue",
+                "description": ""
+            },
+            {
+                "pin": "OnDisabled",
+                "description": ""
+            },
+            {
+                "pin": "OnEnabled",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "000355B74DF594EE",
         "path": "[modules:/zinputcanmovefocusedinteractionentity.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "HasAxisHorizontal",
+                "description": ""
+            },
+            {
+                "pin": "HasAxisVertical",
+                "description": ""
+            },
+            {
+                "pin": "PromptText",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "000198A1FE15B43E",
         "path": "[modules:/zvrfxeventreceiverentity.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "ThirdPersonCameraSnapTurn",
+                "description": ""
+            },
+            {
+                "pin": "ThirdPersonCameraZoomIn",
+                "description": ""
+            },
+            {
+                "pin": "ThirdPersonCameraZoomOut",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00C2D041AF850E39",
@@ -34815,7 +36728,16 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "Position",
+                "description": ""
+            },
+            {
+                "pin": "Rotation",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00E4914F041B5E18",
@@ -34850,7 +36772,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "Item",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00519AD76BCBDF7A",
@@ -34871,7 +36798,16 @@
         "hash": "004F802761F1AA6B",
         "path": "[modules:/zinputcantriggerphotomodeactionentity.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "Icon",
+                "description": ""
+            },
+            {
+                "pin": "PromptText",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "0017E43EA2C26ED3",
@@ -34895,7 +36831,32 @@
         "hash": "00A84D97606E8BF8",
         "path": "[modules:/zvrmotionmovebetweenboxes.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "EnteredA",
+                "description": ""
+            },
+            {
+                "pin": "EnteredALeft",
+                "description": ""
+            },
+            {
+                "pin": "EnteredARight",
+                "description": ""
+            },
+            {
+                "pin": "EnteredB",
+                "description": ""
+            },
+            {
+                "pin": "EnteredBLeft",
+                "description": ""
+            },
+            {
+                "pin": "EnteredBRight",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00517395A945750D",
@@ -34906,7 +36867,44 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OnEquippedLeft",
+                "description": ""
+            },
+            {
+                "pin": "OnEquippedRight",
+                "description": ""
+            },
+            {
+                "pin": "OnPickupLeft",
+                "description": ""
+            },
+            {
+                "pin": "OnPickupRight",
+                "description": ""
+            },
+            {
+                "pin": "OnPlacedLeft",
+                "description": ""
+            },
+            {
+                "pin": "OnPlacedRight",
+                "description": ""
+            },
+            {
+                "pin": "OnYankedLeft",
+                "description": ""
+            },
+            {
+                "pin": "OnYankedRight",
+                "description": ""
+            },
+            {
+                "pin": "RepositoryId",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "0022E747D6721247",
@@ -35019,13 +37017,27 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "Rtcp",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00FD45AA1CE60950",
         "path": "[modules:/zvrtwohandweaponwielding.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "OnSniperFocusEnter",
+                "description": ""
+            },
+            {
+                "pin": "OnSniperFocusExit",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00FA529C0701753B",
@@ -35054,7 +37066,16 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OnAttach",
+                "description": ""
+            },
+            {
+                "pin": "OnDetach",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00C8FF31817E451C",
@@ -35692,7 +37713,16 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "OnCured",
+                "description": ""
+            },
+            {
+                "pin": "OnInfectedPercentageChanged",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00CACD2A96FE9273",
@@ -36300,7 +38330,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "Value",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00D908DF7033B9F9",
@@ -38274,7 +40309,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "Transitioning",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "0065F214FF4798D3",
@@ -38879,7 +40919,108 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "CrowdAlertRatio",
+                "description": ""
+            },
+            {
+                "pin": "CrowdAlertRatio_Back",
+                "description": ""
+            },
+            {
+                "pin": "CrowdAlertRatio_Left",
+                "description": ""
+            },
+            {
+                "pin": "CrowdAlertRatio_Right",
+                "description": ""
+            },
+            {
+                "pin": "CrowdAmbientNearestActor",
+                "description": ""
+            },
+            {
+                "pin": "CrowdAmbientNearestActor_Back",
+                "description": ""
+            },
+            {
+                "pin": "CrowdAmbientNearestActor_Left",
+                "description": ""
+            },
+            {
+                "pin": "CrowdAmbientNearestActor_Right",
+                "description": ""
+            },
+            {
+                "pin": "CrowdAmbientRatio",
+                "description": ""
+            },
+            {
+                "pin": "CrowdAmbientRatio_Back",
+                "description": ""
+            },
+            {
+                "pin": "CrowdAmbientRatio_Left",
+                "description": ""
+            },
+            {
+                "pin": "CrowdAmbientRatio_Right",
+                "description": ""
+            },
+            {
+                "pin": "CrowdDensity1",
+                "description": ""
+            },
+            {
+                "pin": "CrowdDensity1_Back",
+                "description": ""
+            },
+            {
+                "pin": "CrowdDensity1_Left",
+                "description": ""
+            },
+            {
+                "pin": "CrowdDensity1_Right",
+                "description": ""
+            },
+            {
+                "pin": "CrowdDensityTotal",
+                "description": ""
+            },
+            {
+                "pin": "CrowdDownRatio",
+                "description": ""
+            },
+            {
+                "pin": "CrowdDownRatio_Back",
+                "description": ""
+            },
+            {
+                "pin": "CrowdDownRatio_Left",
+                "description": ""
+            },
+            {
+                "pin": "CrowdDownRatio_Right",
+                "description": ""
+            },
+            {
+                "pin": "CrowdScaredRatio",
+                "description": ""
+            },
+            {
+                "pin": "CrowdScaredRatio_Back",
+                "description": ""
+            },
+            {
+                "pin": "CrowdScaredRatio_Left",
+                "description": ""
+            },
+            {
+                "pin": "CrowdScaredRatio_Right",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "001BDCEFDB0F0235",
@@ -39116,7 +41257,12 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "Out",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "0071E5B068B8602E",
@@ -41403,7 +43549,12 @@
         "hash": "003A01D8DE1982AD",
         "path": "[modules:/zentitylifetimeemitterentity.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "LifetimeOccurred",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00313D119A9C2DC1",
@@ -41466,13 +43617,31 @@
                 "description": ""
             }
         ],
-        "out": []
+        "out": [
+            {
+                "pin": "HackingEnabled",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00AFAED4C7A033AF",
         "path": "[modules:/zphotomodehackingcontroller.class].pc_entitytype",
         "in": [],
-        "out": []
+        "out": [
+            {
+                "pin": "OnScan",
+                "description": ""
+            },
+            {
+                "pin": "OnScanCompleted",
+                "description": ""
+            },
+            {
+                "pin": "OnStep",
+                "description": ""
+            }
+        ]
     },
     {
         "hash": "00E77487C3F0748C",
