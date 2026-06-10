@@ -1,0 +1,40 @@
+---
+sidebar_position: 5
+description: Pins
+---
+
+import { PinEntitySearch, PinSearch, InputPins, OutputPins } from './pins.js'
+
+# Pins
+
+Pins are events that are fired between entities in the game. They can either be arbitrary (defined by a developer for a specific prefab), or they can be provided by the core engine entity types. Below you can search through all known entities and their pins as they currently exist in Hitman 3.
+
+## Pins by Entity
+
+You can find the input / output pins of a specific entity by searching for it here using either (part of) its IOI path, or its hash.
+
+<PinEntitySearch />
+
+## Entities by pin
+
+You can find all entities that have a specific pin in their inputs / outputs by searching for it here by name.
+
+<PinSearch />
+
+## All Input Pins
+
+<details>
+    <summary>Click to expand</summary>
+    <div>
+        <InputPins />
+    </div>
+</details>
+
+## All Output Pins
+
+<details>
+    <summary>Click to expand</summary>
+    <div>
+        <OutputPins />
+    </div>
+</details>
