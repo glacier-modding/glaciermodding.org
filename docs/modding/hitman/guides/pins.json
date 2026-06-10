@@ -11555,6 +11555,18 @@
             {
                 "pin": "ResetToDetachPoint",
                 "description": "Place the accessory item at the detach point (if the accessory is not part of actor accessory item pool)"
+            },
+            {
+                "pin": "16665829",
+                "description": ""
+            },
+            {
+                "pin": "4097120009",
+                "description": ""
+            },
+            {
+                "pin": "3324208400",
+                "description": ""
             }
         ],
         "out": [
@@ -12814,7 +12826,12 @@
     {
         "hash": "00AF0659A87368EF",
         "path": "[modules:/zaudiolevelmeterentity.class].pc_entitytype",
-        "in": [],
+        "in": [
+            {
+                "pin": "Enable",
+                "description": ""
+            }
+        ],
         "out": [
             {
                 "pin": "Output",
@@ -28045,6 +28062,18 @@
             {
                 "pin": "GetHero",
                 "description": ""
+            },
+            {
+                "pin": "16665829",
+                "description": ""
+            },
+            {
+                "pin": "4097120009",
+                "description": ""
+            },
+            {
+                "pin": "3324208400",
+                "description": ""
             }
         ],
         "out": [
@@ -35422,6 +35451,10 @@
             {
                 "pin": "Restore",
                 "description": ""
+            },
+            {
+                "pin": "SetIndex",
+                "description": ""
             }
         ],
         "out": []
@@ -38953,6 +38986,10 @@
             {
                 "pin": "ApplyImpulse",
                 "description": ""
+            },
+            {
+                "pin": "429094706",
+                "description": ""
             }
         ],
         "out": []
@@ -41027,6 +41064,14 @@
             {
                 "pin": "SetReference",
                 "description": ""
+            },
+            {
+                "pin": "1239004304",
+                "description": ""
+            },
+            {
+                "pin": "726947990",
+                "description": ""
             }
         ],
         "out": []
@@ -41234,6 +41279,340 @@
         "hash": "0059B1955964CE1C",
         "path": "[modules:/zworlduiimageinstance.class].pc_entitytype",
         "in": [],
+        "out": []
+    },
+    {
+        "hash": "0064EBDAC7F9D18D",
+        "path": "[modules:/zactorclothaction.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "493616836",
+                "description": ""
+            },
+            {
+                "pin": "Reset",
+                "description": ""
+            },
+            {
+                "pin": "1902686892",
+                "description": ""
+            },
+            {
+                "pin": "BlendIn",
+                "description": ""
+            },
+            {
+                "pin": "BlendOut",
+                "description": ""
+            },
+            {
+                "pin": "1208304824",
+                "description": ""
+            },
+            {
+                "pin": "SetIActor",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "001FD3C802439481",
+        "path": "[modules:/zdebugmenuitembool.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00EAAECF74FA21E7",
+        "path": "[modules:/zdebugmenuitemint.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00843C52A3FC8BBF",
+        "path": "[modules:/zdebugmenuitemtrigger.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "007290F8BC39A27A",
+        "path": "[modules:/zentityeventchannelentity.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "Enable",
+                "description": ""
+            },
+            {
+                "pin": "Disable",
+                "description": ""
+            },
+            {
+                "pin": "SetEntity",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "006565E3025F7CA3",
+        "path": "[modules:/zentityeventreceiverentity_zvariant.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00F1A470B505C24D",
+        "path": "[modules:/zentityeventchannelentity_zvariant.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "002A2D779AB91C4F",
+        "path": "[modules:/zentityeventreceiverentity_void.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00441D16055CE093",
+        "path": "[modules:/zentityeventchannelentity_void.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00CEDC564EBB65C5",
+        "path": "[modules:/zentityeventtransmitterentity_zvariant.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "TransmitEvent",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "007E9045E3AD6A46",
+        "path": "[modules:/zentityeventtransmitterentity_void.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "TransmitEvent",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "003A01D8DE1982AD",
+        "path": "[modules:/zentitylifetimeemitterentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00313D119A9C2DC1",
+        "path": "[modules:/zgeomcollectionselectionaspect.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "SetSelectedSkin",
+                "description": ""
+            },
+            {
+                "pin": "346510749",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "008C092BB66496A4",
+        "path": "[modules:/zhm5variantconverterentity_zspatialentityref.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "Get",
+                "description": ""
+            },
+            {
+                "pin": "Variant",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "003DA9082B8313D7",
+        "path": "[modules:/zindexedgeomentityentryentity.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "001CF9A77A093C96",
+        "path": "[modules:/zphotomodehackableentity.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "CancelHack",
+                "description": ""
+            },
+            {
+                "pin": "ScanStep",
+                "description": ""
+            },
+            {
+                "pin": "HackInProgress",
+                "description": ""
+            },
+            {
+                "pin": "AttemptHack",
+                "description": ""
+            },
+            {
+                "pin": "HackCompleted",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "00AFAED4C7A033AF",
+        "path": "[modules:/zphotomodehackingcontroller.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00E77487C3F0748C",
+        "path": "[modules:/zratebasedspatialinterpolator.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "1210153979",
+                "description": ""
+            },
+            {
+                "pin": "2216949768",
+                "description": ""
+            },
+            {
+                "pin": "2721237517",
+                "description": ""
+            },
+            {
+                "pin": "SetSpatial",
+                "description": ""
+            },
+            {
+                "pin": "2593100573",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "00AE91991063DC6B",
+        "path": "[modules:/zratebasedvalueinterpolator.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "422670997",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "00BF31DF5D824DDD",
+        "path": "[modules:/zratebasedvalueinterpolator_scolorrgb.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "422670997",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "00CC4300BECB1AD9",
+        "path": "[modules:/zratebasedvalueinterpolator_svector3.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "422670997",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "0037539CFFEFC6C5",
+        "path": "[modules:/zsignalforkentity_zspatialentityref.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "In",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "0094DA5F128194ED",
+        "path": "[modules:/zspatialproxyentity.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "2786785056",
+                "description": ""
+            },
+            {
+                "pin": "2281062345",
+                "description": ""
+            },
+            {
+                "pin": "SetSpatial",
+                "description": ""
+            },
+            {
+                "pin": "1463215197",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "002EAC5B88549C56",
+        "path": "[modules:/zspatialreferenceaspect.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "2786785056",
+                "description": ""
+            },
+            {
+                "pin": "1463215197",
+                "description": ""
+            },
+            {
+                "pin": "726947990",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "0052083C9CB909C7",
+        "path": "[modules:/ztrespassingruleconditionentity.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "ForceUpdateValue",
+                "description": ""
+            }
+        ],
+        "out": []
+    },
+    {
+        "hash": "002F6320D9332C2B",
+        "path": "[modules:/zvrignorelodinfoclampaspect.class].pc_entitytype",
+        "in": [],
+        "out": []
+    },
+    {
+        "hash": "00729DADF553A357",
+        "path": "[modules:/zvrsplashoutfitselector.class].pc_entitytype",
+        "in": [
+            {
+                "pin": "2532562695",
+                "description": ""
+            }
+        ],
         "out": []
     }
 ]
