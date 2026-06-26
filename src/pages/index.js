@@ -49,9 +49,10 @@ export default function Home() {
                                 HITMAN: World of Assassination (formerly known
                                 as HITMAN 3)
                             </li>
+                            <li>007 First Light</li>
                         </ul>
-                        At the moment we are mainly focusing on HITMAN 3 and
-                        future games.
+                        At the moment we are mainly focusing on HITMAN 3, 007
+                        First Light and future games.
                     </p>
                 </div>
             </main>
