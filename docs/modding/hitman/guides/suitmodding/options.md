@@ -15,6 +15,8 @@ Let us take our [Street Smart](./newoutfit.md) outfit and introduce a pair of gl
 
 First off you actually *cannot* use GlacierKit for this as it does not presently have the ability to patch custom entities, only stock game entities. You will need to download the legacy [QuickEntity Editor](https://github.com/atampy25/quickentity-editor-next/releases/latest/) to make options for your custom entities. So download it now and install it.
 
+Due to a potential bug you may need to manually create the QuickEntity working directory. Hit Win + R, type `%APPDATA%` and hit Enter. In this folder create the folder `app.quickentity.editor`.
+
 ## Preparing
 
 In your mod folder `MyName.StreetSmart`, create a new folder called `patches`. In that folder, make a folder called `gloves`. In that folder, make a folder called `leather`. In that folder, make a folder called `chunk0`.
