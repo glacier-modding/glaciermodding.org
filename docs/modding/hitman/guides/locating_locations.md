@@ -50,10 +50,10 @@ graph TB
             c20[Chunk 20<br/>sheep]    ---> c9
 
             c22[Chunk 22<br/>hokkaido]    ---> c21
-            c24[Chunk 24<br/>colorado]    ---> c21
-            c25[Chunk 25<br/>bangkok]     ---> c21
-            c26[Chunk 26<br/>marrakesh]   ---> c21
-            c23[Chunk 23<br/>coastaltown] ---> c21
+            c24[Chunk 23<br/>colorado]    ---> c21
+            c25[Chunk 24<br/>bangkok]     ---> c21
+            c26[Chunk 25<br/>marrakesh]   ---> c21
+            c23[Chunk 26<br/>coastaltown] ---> c21
             c27[Chunk 27<br/>paris]       ---> c21
 
     end
