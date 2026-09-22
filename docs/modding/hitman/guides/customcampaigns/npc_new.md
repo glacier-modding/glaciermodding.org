@@ -474,7 +474,7 @@ Now that we have the mission fully setup, let's replace our template screenshots
 
 ## Making a new release
 
-Now would be a good time to make a new GitHub release. Follow a similar procedure as we did on the [Committing to GitHub]([http://localhost:3000/docs/modding/customcampaigns](https://glaciermodding.org/docs/modding/hitman/guides/customcampaigns/)/github_commit) page.
+Now would be a good time to make a new GitHub release. Follow a similar procedure as we did on the [Committing to GitHub](github_commit) page.
 
 ## Next Steps
 Now let's make a whole new mission from scratch.

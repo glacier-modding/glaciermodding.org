@@ -3,7 +3,7 @@ sidebar_position: 0
 description: Getting started with Campaign creation
 ---
 
-# Getting started
+# Custom Campaign and Missions
 
 In this category you will find a series of guides related to creating a new campaign for Hitman: World of Assassination. These guides will provide all the information needed to create a new campaign that can be played in Hitman: WoA in Offline mode, as well as on the Peacock server in Online mode.
 

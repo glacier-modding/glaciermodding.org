@@ -5,9 +5,9 @@ sidebar_position: 6
 # NavKit
 
 :::info
-NavKit can be downloaded from [here](/navKit)
+NavKit can be downloaded from [here](/NavKit)
 
-Source code can be found [https://github.com/glacier-modding/navKit](https://github.com/glacier-modding/navKit)
+Source code can be found [https://github.com/glacier-modding/NavKit](https://github.com/glacier-modding/NavKit)
 :::
 
 A tool for creating custom Navp (Navmesh) and Airg (AI Reasoning Grid) files for Hitman WoA.
@@ -24,5 +24,7 @@ You will also need to install the latest Visual C++ Redistributable from https:/
 Now you should be able to launch the `NavKit.exe` file and see the NavKit user interface.
 
 #### Usage:
+
+More details for how to use NavKit are available on the [Using NavKit](../guides/customcampaigns/using_navkit) page of the [Custom Campaign and Missions](../guides/customcampaigns) guide.
 
 ![navKit](/img/navKit/gui.png)

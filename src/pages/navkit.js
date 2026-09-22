@@ -33,7 +33,7 @@ export default function NavKit() {
                             <li>
                                 <a
                                     className="dropdown__link"
-                                    href={`https://github.com/glacier-modding/NavKit/releases/download/${NavKitVersion}/NavKit-windows-x64.zip`}
+                                    href={`https://github.com/glacier-modding/NavKit/releases/download/${NavKitVersion}/NavKit.msi`}
                                 >
                                     Windows
                                 </a>
