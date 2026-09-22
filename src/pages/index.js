@@ -51,7 +51,7 @@ export default function Home() {
                             </li>
                             <li>007 First Light</li>
                         </ul>
-                        At the moment we are mainly focusing on HITMAN 3, 007
+                        At the moment we are mainly focusing on HITMAN WoA, 007
                         First Light and future games.
                     </p>
                 </div>
