@@ -27,4 +27,4 @@ Now you should be able to launch the `NavKit.exe` file and see the NavKit user i
 
 More details for how to use NavKit are available on the [Using NavKit](../guides/customcampaigns/using_navkit) page of the [Custom Campaign and Missions](../guides/customcampaigns) guide.
 
-![navKit](/img/navKit/gui.png)
+![navKit](/img/navkit/gui.png)
