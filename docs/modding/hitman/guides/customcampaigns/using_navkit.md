@@ -26,7 +26,7 @@ You will also need to install the latest Visual C++ Redistributable from https:/
 
 That's it, now you should be able to launch the `NavKit.exe` file and see the NavKit user interface.
 
-![navkit.jpg](resources/navkit.jpg)
+![navkit.jpg](/img/customcampaigns/navkit.jpg)
 
 ## Using NavKit
 The first thing you may notice is the cell grid and the coordinate axes. Note that here Y is up and Z is forward, unlike in Hitman, which is Z-up and Y-forward. This is due to the tool NavKit uses ([Recast](https://recastnav.com/)) under the hood for a lot of the generation features. Don't worry, it will automatically convert between the coordinate systems as needed.
@@ -43,7 +43,7 @@ Once you have the NAVP and AIRG files, you can tell your custom mission to use t
 
 ## Brief overview of navigation mesh (NAVP) files
 A navigation mesh is a simplified 3D mesh of a map's walkable space. The mesh is divided into flat polygons, called areas, and the areas are connected by their edges. In Hitman: World of Assassination, the navigation mesh is saved in the form of a NavPower (NAVP) file.
-![sapienza_navp.jpg](resources/sapienza_navp.jpg)
+![sapienza_navp.jpg](/img/customcampaigns/sapienza_navp.jpg)
 > The official Sapienza NAVP, as visualized in NavKit.  
 
 When an NPC needs to find a path from one point of the map to another, the game:
@@ -56,14 +56,14 @@ The NAVP file is a great tool, but the pathfinding calculations can get a little
 ## Brief overview of AI Reasoning Grid (AIRG) files
 The AI Reasoning Grid is an even more simplified version of a map's walkable space. The "grid" consists of waypoints and connections between them. The waypoints are generated and placed only in valid areas of the NAVP file, and two waypoints are only connected if there is nothing between them, or if only a small obstacle is between them. In Hitman: World of Assassination, the AI Reasoning Grid is saved in the form of an AIRG file.
 
-![sapienza_airg.jpg](resources/sapienza_airg.jpg)
+![sapienza_airg.jpg](/img/customcampaigns/sapienza_airg.jpg)
 >The official Sapienza AIRG, as visualized in NavKit.
 
 ## Putting the NAVP and AIRG files together
 
 Before the game ever checks the navigation mesh, it first checks the simplified AI Reasoning Grid, since the "valid path" check is a much lighter computation. If there is a valid path along connected waypoints from the start point to the end point, only then does it check the navigation mesh.
 
-![sapienza_navp_and_airg.jpg](resources/sapienza_navp_and_airg.jpg)
+![sapienza_navp_and_airg.jpg](/img/customcampaigns/sapienza_navp_and_airg.jpg)
 >The official Sapienza NAVP, and the official Sapienza AIRG, as visualized in NavKit.
 
 ## Custom level geometry with the original navp and airg
@@ -79,7 +79,7 @@ Move 47 out of the NPC's vision by selecting him and dragging 47 away using the 
 
 Throw a coin to lure the NPC.
 
-![walk_on_chair.jpg](resources/walk_on_chair.jpg)
+![walk_on_chair.jpg](/img/customcampaigns/walk_on_chair.jpg)
 
 He's walking on the couch. That's not very polite!
 
@@ -93,11 +93,11 @@ In NavKit, click `File > Open Navp from Rpkg`. In the dropdown, scroll down unti
 Now, click `File > Open Airg from Rpkg`. In the dropdown, scroll down until you see `greedy/mission_raccoon/scene_raccoon_basic_scene.airg`. Click it and then click `Open Airg`.
 
 Once they are both done loading, you should see both the NAVP and AIRG displayed in NavKit.
-![new_york_navp_and_airg.jpg](resources/new_york_navp_and_airg.jpg)
+![new_york_navp_and_airg.jpg](/img/customcampaigns/new_york_navp_and_airg.jpg)
 
 It can be a little tricky to get your bearings when looking at just the NAVP and AIRG, but you should be able to tell where the CEO's office is. Let's fly there and see what it looks like.
 
-![ceo_office_original_navp_and_airg.jpg](resources/ceo_office_original_navp_and_airg.jpg)
+![ceo_office_original_navp_and_airg.jpg](/img/customcampaigns/ceo_office_original_navp_and_airg.jpg)
 
 As you can see, there is only a cutout for a single chair, and there is a cutout for the crate's original position. This is why the guard walked over the chair instead of around it.
 
@@ -119,7 +119,7 @@ Click `Extract > Extract Scene from game`.
 This may take a few minutes, as it walks the entity tree to gather all the entities with collision and extracts all the ALOC files the scenario uses from the RPKG files. Once you have the ALOC files extracted, the next time you export, it will be faster.
 
 Once it is done, you should see some red boxes appear in NavKit. These are `Pathfinding Boxes` with an `Exclude` type. They tell NPCs to avoid that region, even if it is within a valid NAVP area.
-![navkit_extracted_scene.jpg](resources/navkit_extracted_scene.jpg)
+![navkit_extracted_scene.jpg](/img/customcampaigns/navkit_extracted_scene.jpg)
 
 Now that you have the scene extracted, let's save it so we can load it later if we want.
 
@@ -134,7 +134,7 @@ Click `Build > Build obj from Scene`.
 
 This may take a few minutes as well, and when it's done, you will see a 3D representation of your custom mission comprised of the collision files for all the entities in the level. These are lower fidelity models of the 3D models of the level geometry that are used to calculate collisions efficiently.
 
-![navkit_obj_built.jpg](resources/navkit_obj_built.jpg)
+![navkit_obj_built.jpg](/img/customcampaigns/navkit_obj_built.jpg)
 
 As you can see, the new chair is there, and the crate has been moved to the new location.
 
@@ -148,7 +148,7 @@ Now let's build the NAVP.
 Now that we have the `NavKit Scene` file and the `OBJ` file loaded for our custom mission, click `Build > Build Navp from Obj and Scene`.
 
 After around a minute, the new navp should be loaded.
-![navkit_generated_navp.jpg](resources/navkit_generated_navp.jpg)
+![navkit_generated_navp.jpg](/img/customcampaigns/navkit_generated_navp.jpg)
 
 You can see that the new navp has been generated and there are now cutouts for both the chairs. In this case, it also generated some sloped ares on the chairs, but since they are not connected to anything, they shouldn't cause any issues.
 
@@ -173,7 +173,7 @@ Now we have a new NAVP file and a new AIRG file for our custom scene that uses t
 In GlacierKit, go to the `scenario_raccoon.brick` file and click the `Open in editor` button, and in the `Tree` view, search for `navp`. You will see a node named `PathfinderConfiguration`. If you click that node, you will see that the `resource` field is set to:
 `[assembly:/_pro/scenes/missions/greedy/mission_raccoon/scene_raccoon_basic.navp].pc_navp`
 
-![navp_original_node.jpg](resources/navp_original_node.jpg)
+![navp_original_node.jpg](/img/customcampaigns/navp_original_node.jpg)
 
 Let's use a property override to change the `resource` field. We will need to choose a new IOI string for our NAVP. The naming convention for NAVP files is generally to name it the same string as the scene, but ending in `.navp].pc_navp`, so we'll do the same. Since the IOI string for our scene is:
 `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.entity].pc_entitytemplate`
@@ -228,7 +228,7 @@ Let's do the same thing for the AIRG file.
 In GlacierKit, go to the `scenario_raccoon.brick` file and click the `Open in editor` button, and in the `Tree` view, search for `airg`. You will see a node named `AI Reasoning Grid`. If you click that node, you will see that the `resource` field is set to:
 `[assembly:/_pro/scenes/missions/greedy/mission_raccoon/scene_raccoon_basic_scene.airg].pc_airg`
 
-![airg_original_node.jpg](resources/airg_original_node.jpg)
+![airg_original_node.jpg](/img/customcampaigns/airg_original_node.jpg)
 
 Let's use a property override to change the `resource` field. We will need to choose a new IOI string for our AIRG. The naming convention for AIRG files is generally to name it the same string as the scene, but ending in `.airg].pc_airg`, so we'll do the same. Since the IOI string for our scene is:
 `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scene_bank.entity].pc_entitytemplate`
@@ -284,7 +284,7 @@ Redeploy, relaunch and start the custom mission.
 
 Just as before, teleport the guard into the room and lure him with a distraction to the other side of the chair to see how his pathfinding reacts to the new chair.
 
-![navkit_guard_walking_around.jpg](resources/navkit_guard_walking_around.jpg)
+![navkit_guard_walking_around.jpg](/img/customcampaigns/navkit_guard_walking_around.jpg)
 
 We can see that the guard avoids the new chair now.
 

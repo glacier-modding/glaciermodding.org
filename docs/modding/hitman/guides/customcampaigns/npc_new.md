@@ -68,7 +68,7 @@ Now let's create our NPC repository entry. Click the `New item` button and set t
 Copy the id of the new outfit repository entry from under the `Editor` header text and paste it into the `Outfit` field of the new NPC entry.
 
 We can see that we will need a new image file. In our `images/campaign_demo/bank` folder let's create a new file named `target_mc_targetface.jpg` and make it a placeholder picture for the target.
-![target_mc_targetface_template.jpg](resources/target_mc_targetface_template.jpg)
+![target_mc_targetface_template.jpg](/img/customcampaigns/target_mc_targetface_template.jpg)
 
 We will also need this repository entry's id UUID under the `Editor` header text in a moment.
 
@@ -451,25 +451,25 @@ In the `m_aHolders` value array, add the id of the `Target McTargetface` entity 
 
 Let's redeploy, relaunch, and start the mission and see what happens.
 
-![target_menu.jpg](resources/target_menu.jpg)
+![target_menu.jpg](/img/customcampaigns/target_menu.jpg)
 > Our target is visible on the menu
 > 
-![target_with_outfit.jpg](resources/target_with_outfit.jpg)
+![target_with_outfit.jpg](/img/customcampaigns/target_with_outfit.jpg)
 > Our target has a new outfit and is an enforcer for the CEO's office
 
 ## Updating the menu pictures
 Now that we have the mission fully setup, let's replace our template screenshots with some bespoke ones.  
 
-![bank_tile.jpg](resources/bank_tile.jpg)
+![bank_tile.jpg](/img/customcampaigns/bank_tile.jpg)
 > Updated bank `tile.jpg`
 
-![bank_entrance_ceo.jpg](resources/bank_entrance_ceo.jpg)
+![bank_entrance_ceo.jpg](/img/customcampaigns/bank_entrance_ceo.jpg)
 > Updated `bank_entrance_ceo.jpg`
 
-![campaign_demo_tile.jpg](resources/campaign_demo_tile.jpg)
+![campaign_demo_tile.jpg](/img/customcampaigns/campaign_demo_tile.jpg)
 > Updated `campaign_demo_tile.jpg`
 
-![target_mc_targetface.jpg](resources/target_mc_targetface.jpg)
+![target_mc_targetface.jpg](/img/customcampaigns/target_mc_targetface.jpg)
 > Updated `target_mc_targetface.jpg`
 
 ## Making a new release

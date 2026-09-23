@@ -31,4 +31,4 @@ Options:
 
 #### GUI Usage:
 
-![rebone](/img/primport/gui.png)
+![primport](/img/primport/gui.png)

@@ -61,7 +61,7 @@ Press the save button.
 
 ## Create the mission tile image
 In the `blobs/images/campaign_demo` folder, create a new folder named `bank`, and in that folder, create a new image file for named `tile.jpg` with a resolution of 693 by 517.
-![bank_tile_template.jpg](resources/bank_tile_template.jpg)
+![bank_tile_template.jpg](/img/customcampaigns/bank_tile_template.jpg)
 > Here is an example you can use for the `tile.jpg` file 
 
 ## Deploying mod
@@ -70,19 +70,19 @@ Let's deploy the mod and see what it looks like.
 Go to the `Campaigns` tab and you will see the new `Hitman Campaign Demo` campaign.
 
 When you click on the `Hitman Campaign Demo` tile, you will see the new bank mission.  
-![resources/mission_list.jpg](resources/mission_list.jpg)
+![/img/customcampaigns/mission_list.jpg](/img/customcampaigns/mission_list.jpg)
 
 If you click on that mission, you will see the mission menu on the Objectives tab.
-![resources/mission_briefing_tab.jpg](resources/mission_briefing_tab.jpg)
+![/img/customcampaigns/mission_briefing_tab.jpg](/img/customcampaigns/mission_briefing_tab.jpg)
 
 If you click on the briefing tile, you will see our custom briefing.
-![resources/mission_briefing.jpg](resources/mission_briefing.jpg)
+![/img/customcampaigns/mission_briefing.jpg](/img/customcampaigns/mission_briefing.jpg)
 
 If you click the Planning tab, you will see that it shows our new starting location.
-![resources/objectives.jpg](resources/objectives.jpg)
+![/img/customcampaigns/objectives.jpg](/img/customcampaigns/objectives.jpg)
 
 If you click the new location, it will show our new starting location as the only option.
-![resources/starting_locations.jpg](resources/starting_locations.jpg)
+![/img/customcampaigns/starting_locations.jpg](/img/customcampaigns/starting_locations.jpg)
 
 If you go back and press the Play button, the game will crash, as we haven't actually created this scene.
 

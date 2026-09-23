@@ -45,19 +45,19 @@ In the `chunk0` folder, create a folder named `Story Config`. In that folder cre
 > **_Note:_** The extension on this file is case-sensitive, so the file must end in `.JSON.patch.json`.
 
 ### Explanation:
-* This is a json patch file for `0093B70B9E704CE0`, which is the `[assembly:/_pro/online/default/cloudstorage/resources/storyconfig.json].pc_json` file, which is where the campaigns are defined.
+* This is a json patch file for `0093B70B9E704CE0`, which is the `[assembly:/_pro/online/default/cloudstorage//img/customcampaigns/storyconfig.json].pc_json` file, which is where the campaigns are defined.
 * This adds a new campaign, with the `Name` being the value set in the `manifest.json` for `UI_HITMAN_CAMPAIGN_DEMO`.
 * It sets the `BackgroundImage` for the campaign to be a custom image that will be displayed for the campaigns button on the menu.
 * It also adds one mission to that campaign, with the `Id` for that mission being the `Id` defined in the metadata for the bank mission.
 * Replace `[INSERT GENERATED UUID HERE]` with a new UUID. You can generate one using GlacierKit in the `Text tools` section on the left sidebar:  
-![resources/randomUuid.jpg](resources/randomUuid.jpg)
+![/img/customcampaigns/randomUuid.jpg](/img/customcampaigns/randomUuid.jpg)
 
 ## Creating the Background Image for the custom campaign mod
 Create another folder in your root folder named `blobs`. In that folder, create another folder named `images`, and in that folder, another folder named `campaign_demo`. This structure will make it more organized for when you want to add more images later. 
 
 Create a background image and put it in your `blobs/images/campaign_demo` folder.
 
-![campaign_demo_tile_template.jpg](resources/campaign_demo_tile_template.jpg)
+![campaign_demo_tile_template.jpg](/img/customcampaigns/campaign_demo_tile_template.jpg)
 Here is an example you can use for the `campaign_demo_tile.jpg` file
 
 ## Next Steps

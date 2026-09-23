@@ -10,7 +10,7 @@ For this tutorial, we will go over committing your changes to the GitHub Repo. L
 ## Creating the `next-release` branch
 Let's make a few new branches on our repo. In WebStorm, click the `Terminal` button on the bottom of the left sidebar.
 
-![webstorm_terminal.jpg](resources/webstorm_terminal.jpg)
+![Webstorm Terminal](/img/customcampaigns/webstorm_terminal.jpg)
 
 First let's create our `next-release` branch. In the terminal enter:
 ```bat
@@ -47,7 +47,7 @@ Add this line at the end of the file:
 ## Staging files
 
 Switch back to the `Commit` tab.
-![webstorm_git_setup.jpg](resources/webstorm_git_setup.jpg)
+![webstorm_git_setup.jpg](/img/customcampaigns/webstorm_git_setup.jpg)
 
 Now we can see the only files listed are the files we've modified under the `Changes` node, or added under the `Unversioned Files` node. If we were to commit to the repo at this time, the commit would not include our new files, so select both of those new files (colored in red), right-click one of them, and click `Add to VCS` (Version Control System). This will stage the files, so that we are able to commit them.
 
@@ -78,15 +78,15 @@ We can manage branch merges manually using the git CLI, or we can use GitHub to 
 
 Let's create a pull request for this branch. If we click the link in the terminal it will open the `Comparing changes` / `Open a pull request` page for our branch. Alternatively, we can get to that page by navigating back to our repo's page on the GitHub website, and clicking on the green `Compare & pull request` button in the yellow bar that appeared on the top of our repo's contents.
 
-![github_compare_link.jpg](resources/github_compare_link.jpg)
+![github_compare_link.jpg](/img/customcampaigns/github_compare_link.jpg)
 
 We don't actually want to merge our `initial-setup` branch into the `main` branch. Instead, we want to merge this branch into the `next-release` branch, so change the `base` branch to `next-release` in the dropdown list.  
 
-![github_compare_pull_request.jpg](resources/github_compare_pull_request.jpg)
+![github_compare_pull_request.jpg](/img/customcampaigns/github_compare_pull_request.jpg)
 
 Now click the `Create pull request` button.
 
-![github_pull_request.jpg](resources/github_pull_request.jpg)
+![github_pull_request.jpg](/img/customcampaigns/github_pull_request.jpg)
 
 Here you can add a description if you'd like, or review your changes on the `Files changed` tab.
 

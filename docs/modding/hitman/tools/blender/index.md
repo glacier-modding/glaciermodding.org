@@ -4,7 +4,7 @@ title: Glacier 2 Blender Add-on
 description: Details about the Glacier 2 Blender Add-on
 ---
 
-The Glacier 2 [Blender](https://www.blender.org/) Add-on allows importing and exporting various Glacier 2 file formats (Only supports exporting to PRIM at the moment).
+The Glacier 2 [Blender](https://www.blender.org/) Add-on allows importing and exporting various Glacier 2 file formats (Only supports exporting to PRIM and ALOC at the moment).
 
 ![lod_slider](/img/blender/lod_slider.gif)
 
@@ -21,12 +21,12 @@ The following games are supported by this addon:
 The addon supports the following formats:
 
 | Extension     | Description                    | Can import | Can export |
-| ------------- | ------------------------------ | :--------: | :--------: |
+| ------------- | ------------------------------ | :--------: |:----------:|
 | .prim         | Standard RenderPrimitive       |    Yes     |    Yes     |
 | .weightedprim | Weighted RenderPrimitive       |    Yes     |     No     |
 | .linkedprim   | Linked RenderPrimitive         |    Yes     |     No     |
 | .borg         | AnimationBoneData              |    Yes     |     No     |
-| .aloc         | Physics                        |     No     |     No     |
+| .aloc         | Physics                        |     No     |    Yes     |
 | .mjba         | MorphemeJointBoneAnimationData |     No     |     No     |
 | .mrtr         | MorphemeRuntimeRig             |     No     |     No     |
 | .vtxd         | VertexData                     |     No     |     No     |

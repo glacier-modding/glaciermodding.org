@@ -24,7 +24,7 @@ For this tutorial, we will go over creating a custom scene file and a custom sce
 ## Downloading the scenario file from the template
 
 The [Custom-Scenes templates](https://github.com/NotexMods/Custom-Scenes/tree/main/templates) page contains a template for a Scenario Brick, which is copied here for convenience.
-* [Scenario brick](resources/empty_scenario_brick.entity.json)  
+* [Scenario brick](/files/customcampaigns/empty_scenario_brick.entity.json)  
 
 For each mission, it is best practice to create both a Scene and Scenario `entity.json` file for reusability, though not strictly necessary. We will be following that methodology for this guide.
 
@@ -33,7 +33,7 @@ For the Bank mission, we will need to have Simple Mod Framework (SMF) put these 
 To find the correct chunk for the Bank mission, let's look at the [Chunk Data](/docs/modding/hitman/guides/locating_locations.md) page.
 
 Scrolling down to the `Hitman 3` table, we can see that the `New York` location is in `Chunk 12`.
-![resources/chunk_data.jpg](resources/chunk_data.jpg)
+![/img/customcampaigns/chunk_data.jpg](/img/customcampaigns/chunk_data.jpg)
 
 Create a new folder in the root mod folder named `bank`. In that folder, create a new folder named `chunk12`.
 
@@ -43,7 +43,7 @@ In GlacierKit, open the `manifest.json` file and update the `contentFolders` arr
 
 In GlacierKit, right-click the `bank/chunk12` folder and click `New File` and set the name to `scene_bank.entity.json`. Since we gave it a name that ends with `.entity.json`, GlacierKit will initialize the file with the entity template.
 
-Right click [Scenario brick](resources/empty_scenario_brick.entity.json) and press `Save link as...` and save it into your `bank/chunk12` folder with a name of `scenario_bank.entity.json`.
+Right click [Scenario brick](/files/customcampaigns/empty_scenario_brick.entity.json) and press `Save link as...` and save it into your `bank/chunk12` folder with a name of `scenario_bank.entity.json`.
 
 ## Setting the factory and blueprint hashes for the scene
 Now we have our scene and scenario files, but the game doesn't know to tie them to the IOI strings that we created. We can fix that by setting the `Factory hash` and `Blueprint hash` for these files.
@@ -77,7 +77,7 @@ In GlacierKit, while still on the `Metadata` tab for `scene_bank.entity.json`, c
 `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_bank/scenario_bank.brick].pc_entitytype`
 and click the `Continue` button.
 
-![resources/externalScenes.jpg](resources/externalScenes.jpg)
+![/img/customcampaigns/externalScenes.jpg](/img/customcampaigns/externalScenes.jpg)
 
 Now that we have set the `Factory hash` and `Blueprint hash`, and added the scenario to the `External scenes`, we are done with the Scene file. Save the file by pressing the save icon in the tab, or Ctrl+S (if you are on windows). Let's move on to the scenario itself.
 

@@ -18,7 +18,7 @@ In GlacierKit, switch back to the `Files` tab, right-click on the `shared/chunk0
 
 ## Modifying the repository file
 In GlacierKit, click on the `hitman_campaign_demo.repository.json` file. You will see the repository editor:  
-![repository.jpg](resources/repository.jpg)
+![repository.jpg](/img/customcampaigns/repository.jpg)
 Click on the `New item` button, click on the new item that appears, and replace the contents in the text area with this:
 
 ```json
@@ -30,7 +30,7 @@ Click on the `New item` button, click on the new item that appears, and replace 
 }
 ```
 You should now see your custom starting location's repository entry.  
-![repository_ceo_office.jpg](resources/repository_ceo_office.jpg)
+![repository_ceo_office.jpg](/img/customcampaigns/repository_ceo_office.jpg)
 
 Note the new starting location's repository entry's new UUID, just above the Editor text area. We will need that for the next step, so let's keep this file open so we can access it easily later.
 
@@ -38,7 +38,7 @@ Click the save icon.
 
 ## Create the starting location image
 In the `blobs/images/` folder, create a new folder named `entrances`. In that folder create a new folder named `bank`. Inside that folder create a new image named `bank_entrance_ceo.jpg`.
-![bank_tile_template.jpg](resources/bank_tile_template.jpg)
+![bank_tile_template.jpg](/img/customcampaigns/bank_tile_template.jpg)
 > Here is an example you can use for the `bank_entrance_ceo.jpg` file
 
 ## Next Steps

@@ -12,7 +12,7 @@ The Unlockables file contains metadata about, well, you guessed it, things that 
 
 ## Creating and modifying an Unlockables File
 In GlacierKit, on the `Game content` tab, search for unlockables. Open the `assembly:/_pro/online/default/offlineconfig/config.unlockables` file, and click the `Open in editor` button. You will see the Unlockables entries.
-![unlockables.jpg](resources/unlockables.jpg)
+![unlockables.jpg](/img/customcampaigns/unlockables.jpg)
 
 ## Adding a new entry for the starting location 
 Click the `New Item` button and click on the new item. In the editor for your new entry, set the contents to:
@@ -43,7 +43,7 @@ Note, the `STARTING_LOCATION_BANK_CEO_OFFICE` text matches what we set in the ma
 
 Set the `RepositoryId` to the value copied from the repositories file in the previous step.  
 
-![unlockables_ceo_office.jpg](resources/unlockables_ceo_office.jpg)
+![unlockables_ceo_office.jpg](/img/customcampaigns/unlockables_ceo_office.jpg)
 
 Click the save button. Navigate to the `shared/chunk0` folder and set the name to something like `campaign_demo`. Similarly to the repository file we created in the previous section, the only important part of the name is `.unlockables.json`, so you can name it whatever you'd like, but for this tutorial we'll refer to it as `campaign_demo.unlockables.json`.
 

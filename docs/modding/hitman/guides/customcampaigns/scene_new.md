@@ -62,7 +62,7 @@ In the new item, replace the contents with:
 We will need to add a new image: `images/entrances/modtown/modtown_entrance_outside.jpg`, which should have a resolution of 693 x 517.
 
 For now let's reuse the `bank_entrance_ceo.jpg` file from the bank mission:  
-![bank_tile_template.jpg](resources/bank_tile_template.jpg)
+![bank_tile_template.jpg](/img/customcampaigns/bank_tile_template.jpg)
 and rename it to `modtown_entrance_outside.jpg`.
 
 Click on the `New item` button again. In the new item, replace the contents with:
@@ -99,7 +99,7 @@ Replace `[NEW OUTFIT REPOSITORY ENTRY UUID]` with the UUID of the new outfit rep
 We will need to add a new image: `images/campaign_demo/modtown/super_targetman.jpg`, which should have a resolution of 693 x 517.
 
 For now let's reuse the `target_mc_targetface.jpg` file from the bank mission:  
-![target_mc_targetface_template.jpg](resources/target_mc_targetface_template.jpg)
+![target_mc_targetface_template.jpg](/img/customcampaigns/target_mc_targetface_template.jpg)
 and rename it to `super_targetman.jpg`.
 
 ## Updating the Unlockables
@@ -147,10 +147,10 @@ Replace `[NEW GENERATED UUID]` with a newly generated UUID using GlacierKit.
 We will also need to add new two new images: `images/locations/modlandia/tile.jpg`, which should have a resolution of 693 x 517, and `images/locations/modlandia/background.jpg`, which should be big enough to fit fullscreen (something like 1920 x 1080).
 
 For now let's reuse the `tile.jpg` file from the bank mission:  
-![bank_tile.jpg](resources/bank_tile.jpg)
+![bank_tile.jpg](/img/customcampaigns/bank_tile.jpg)
 
 And the `campaign_demo_tile.jpg` file from the campaign folder:  
-![campaign_demo_tile_template.jpg](resources/campaign_demo_tile_template.jpg)
+![campaign_demo_tile_template.jpg](/img/customcampaigns/campaign_demo_tile_template.jpg)
 
 Now that we have our new parent location, let's add the sublocation.
 
@@ -197,10 +197,10 @@ Replace `[ANOTHER NEW GENERATED UUID]` with a different newly generated UUID usi
 We will also need two more new images here: `images/locations/modtown/tile.jpg`, which should have a resolution of 693 x 517, and `images/locations/modtown/background.jpg`, which should be big enough to fit fullscreen (something like 1920 x 1080).
 
 For now let's also reuse the `tile.jpg` file from the bank mission:  
-![bank_tile.jpg](resources/bank_tile.jpg)
+![bank_tile.jpg](/img/customcampaigns/bank_tile.jpg)
 
 And the `campaign_demo_tile.jpg` file from the campaign folder:  
-![campaign_demo_tile_template.jpg](resources/campaign_demo_tile_template.jpg)
+![campaign_demo_tile_template.jpg](/img/customcampaigns/campaign_demo_tile_template.jpg)
 
 Let's also create a new unlockable for the starting location. Click the `New item`. On the new item, set the contents to:
 ```json
@@ -397,7 +397,7 @@ and press the `Continue` button.
 
 Press the save button.
 
-Download the [empty_scenario_brick.entity.json](resources/empty_scenario_brick.entity.json) template again and save it as `shared/chunk2/scenario_modtown.entity.json` and click it.
+Download the [empty_scenario_brick.entity.json](/files/customcampaigns/empty_scenario_brick.entity.json) template again and save it as `shared/chunk2/scenario_modtown.entity.json` and click it.
 In the `Metadata` tab, in the `Factory hash` field, enter:  
 `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scenario_modtown.brick].pc_entitytype`  
 In the `Blueprint hash`, enter:
@@ -604,7 +604,7 @@ Next, click on the `000_Outside` entity and copy the entity id underneath the `E
 	}
 }
 ```
-![autocomplete.jpg](resources/autocomplete.jpg)
+![autocomplete.jpg](/img/customcampaigns/autocomplete.jpg)
 
 ## Creating a new Exit
 
@@ -795,7 +795,7 @@ Press the save button.
 ## Adding lighting and a sky
 Our scenario will also need lighting, a sky, and physics, otherwise everything will be dark and grey.
 
-Download the [tod_day_sunny_clear.entity.json](resources/tod_day_sunny_clear.entity.json) file and save it to your `shared/chunk2` folder as `tod_day_sunny_clear.entity.json`. This is a basic "time of day" brick that we can drop into any custom scene, that sets up a sunny clear day and blue sky.
+Download the [tod_day_sunny_clear.entity.json](/files/customcampaigns/tod_day_sunny_clear.entity.json) file and save it to your `shared/chunk2` folder as `tod_day_sunny_clear.entity.json`. This is a basic "time of day" brick that we can drop into any custom scene, that sets up a sunny clear day and blue sky.
 
 Let's add some IOI strings for the time of day brick as well. In GlacierKit, on the `Settings` tab, in the `Custom paths` section, click the `Add an entry` button and enter:    
 `[assembly:/_pro/scenes/missions/hitman_campaign_demo/tod_day_sunny_clear.brick].pc_entitytype`  
@@ -907,11 +907,11 @@ Press the save button.
 Next, rename the `chunk2/Outfits/outfit_target_mctargetface_v0.entity.json` file to `outfit_super_targetman_v0.entity.json` and click on it. Rename the `OUTFIT_TargetMcTargetface_Actor_v0` node to `OUTFIT_SuperTargetman_Actor_v0` and expand it.
 
 Since our outfit for the other mission took place on the New York brick, we might not have access to some of the outfit parts. For each part, we can check using GlacierKit. Click on the `Belt_StrapBuckle` node, copy the factory hash `0017355DDB3D75A3`, switch to the `Game content` tab and search for that hash. Check the `Separate tree by partition` checkbox.  
-![outfit_checking_chunk_of_part.jpg](resources/outfit_checking_chunk_of_part.jpg)  
+![outfit_checking_chunk_of_part.jpg](/img/customcampaigns/outfit_checking_chunk_of_part.jpg)  
 We can see that the `Belt_StrapBuckle` resource is in the `super` / `chunk0` partition. Consulting our handy [Chunk Data](/docs/modding/hitman/guides/locating_locations.md) guide, we can see that every chunk has access to the content in `chunk0` including the `season3` / `chunk2` partition that our new mission is in. So we are free to use this outfit part. Continuing with the rest of the outfit parts, we can see that every outfit part is in chunk0, except for the resource used by the `Head_TargetMcTargetface` node. We will need to swap that out. First let's rename the `Head_TargetMcTargetface` node to `Head_SuperTargetman`.  
 
 Let's find Super Targetman a new head! In the `Game content` tab search for `head_` and set the dropdown to `Templates`, and make sure the `Separate tree by partition` checkbox is checked. Expand the `super (chunk0)` node and scroll down until you see the nodes with the icons of stacks of boxes in a triangle shape, and that end in `.TEMP`. Choose whichever head you'd like. In this example, `head_hippowhisperer` is used.
-![hippo_whisperer.jpg](resources/hippo_whisperer.jpg)  
+![hippo_whisperer.jpg](/img/customcampaigns/hippo_whisperer.jpg)  
 Click on the head you'd like and click `Open in editor`, and switch to the `Metadata` tab. Copy the `Factory hash` value and switch back to the `outfit_super_targetman_v0.entity.json` file and paste it into the `Head_SuperTargetman` node's `factory` field. Switch back to the `head_hippowhisperer` resource and copy the `Blueprint hash` value and switch back to the `outfit_super_targetman_v0.entity.json` file and paste it into the `Head_SuperTargetman` node's `blueprint` field.  
 
 Next, switch to the `Metadata` tab. In the `Factory hash` text field enter:  
@@ -952,7 +952,7 @@ If the game crashes when you start a mission, there may be an issue with the IOI
 Double check that all the IOI strings are present and are what you expect, for instance, that there is a blueprint for each entity that needs one, and that there were no copy-paste errors. If you see anything amiss, fix the IOI string in the file that references it.  
 
 For instance, if you don't see the `[assembly:/_pro/characters/templates/hitman_campaign_demo/charset_super_targetman.entitytemplate].pc_entityblueprint` IOI string, then open the `charset_super_targetman.entity.json` file, go to the Metadata tab, and set the `Blueprint hash` to that IOI string.  
-![webstorm_sort_lines.jpg](resources/webstorm_sort_lines.jpg)  
+![webstorm_sort_lines.jpg](/img/customcampaigns/webstorm_sort_lines.jpg)  
 
 In this screenshot, we can see that there is a typo for the `scenario_modtown` IOI string. It should be `scenario_modtown.brick`, but it says `scenario_modtown.entity`. In this instance, the fix would be to open the `scenario_modtown.entity.json` file and in the Metadata tab, replace the hash with the correct IOI string.  
 
@@ -966,7 +966,7 @@ Sometimes (usually) if it crashes, there's more than one issue, so don't get dis
 
 ## Deploying and generating the NAVP and AIRG
 
-![modtown_initial.jpg](resources/modtown_initial.jpg)
+![modtown_initial.jpg](/img/customcampaigns/modtown_initial.jpg)
 The lighting is nice, there is a sky, and there is a floor we can walk on that reflects the sky properly. But the NPC isn't where we expected him. Let's see if we can fix that by making a NAVP and AIRG.
 
 Open NavKit and click the `Extract from game and build obj` button on the `Extract menu` on the right sidebar.
@@ -974,7 +974,7 @@ Open NavKit and click the `Extract from game and build obj` button on the `Extra
 Once that's done, click the `Build Navp from Obj and Scene` button on the left sidebar.
 
 Once that's done, click the `Build Airg from Navp` button on the `Airg menu` on the right sidebar.
-![navkit_modtown.jpg](resources/navkit_modtown.jpg)
+![navkit_modtown.jpg](/img/customcampaigns/navkit_modtown.jpg)
 Let's make some new IOI strings for the NAVP and AIRG. For the NAVP, let's use:  
 `[assembly:/_pro/scenes/missions/hitman_campaign_demo/mission_modtown/scene_modtown.navp].pc_navp`  
 In GlacierKit, go to the `Settings` tab and on the `Custom paths` section, scroll down and press the `Add an entry` button. Paste in that IOI string and press `Continue`.
@@ -1026,11 +1026,11 @@ Right-click on the `AI Reasoning Grid` node and click `Create Entity`, name it `
 ```
 
 Deploy the mod, relaunch Hitman and start the mission.
-![modtown_with_navp_and_airg.jpg](resources/modtown_with_navp_and_airg.jpg)
+![modtown_with_navp_and_airg.jpg](/img/customcampaigns/modtown_with_navp_and_airg.jpg)
 Now our NPC is in the right spot, and reacts properly when distracted or panicking.
-![modtown_super_targetman_panic.jpg](resources/modtown_super_targetman_panic.jpg)
+![modtown_super_targetman_panic.jpg](/img/customcampaigns/modtown_super_targetman_panic.jpg)
 If we take out the target, the exit appears and functions properly.
-![modtown_exit.jpg](resources/modtown_exit.jpg)
+![modtown_exit.jpg](/img/customcampaigns/modtown_exit.jpg)
 
 ## Finding and adding geometry from in-game
 Let's add a building for our NPC. We can build one with a few walls, and a door.
@@ -1072,11 +1072,11 @@ Let's use these entities:
 `penthouse_wall_door_interior_6x2_a`  
 `penthouse_wall_corner_edge_interior_6m_a`  
 `[assembly:/_pro/environment/templates/architecture/doors/doors_gecko_a.template?/gecko_singledoor_penthouse_staff_bathroom_a.entitytemplate].pc_entitytype`  
-![dubai_penthouse_wall.jpg](resources/dubai_penthouse_wall.jpg)
-![dubai_penthouse_corner.jpg](resources/dubai_penthouse_corner.jpg)
+![dubai_penthouse_wall.jpg](/img/customcampaigns/dubai_penthouse_wall.jpg)
+![dubai_penthouse_corner.jpg](/img/customcampaigns/dubai_penthouse_corner.jpg)
 
 In GlacierKit, if the `Game content` tab, search for `scenario_gecko.brick` and click on it, click on the `Open in Editor` button and in the `Tree` view, search for `penthouse_wall_interior_6x4_a`. Right-click on one of the entities and click `Clipboard > Copy`.  
-![dubai_scenario_copying_a_wall.jpg](resources/dubai_scenario_copying_a_wall.jpg)
+![dubai_scenario_copying_a_wall.jpg](/img/customcampaigns/dubai_scenario_copying_a_wall.jpg)
 Switch back to the `scenario_modland.entity.json` file and on the tree view, right-click in the `Environment > 000_Outside > Geometry > House` node and click `Clipboard > paste`.
 
 Click on the new node and set the `m_eidParent` value to the entity id of the `House` entity. Set the `position` object to:
@@ -1134,24 +1134,24 @@ Press the save button, redeploy, relaunch hitman, and start the mission.
 We can see that the door is rotated improperly, as are some of the walls. With GlacierKit open to `scenario_modtown.entity.json` we can change the transform of objects in our scenario and have the changes mirrored to GlacierKit, which makes editing the scenario relatively easy. First click the `Rebuild entity tree`.
 
 Next, click on the door and press the `Tab` key to switch the gizmo from `translate` mode to `rotate` mode. Rotate the door so that it fits in the doorframe of the wall.
-![modtown_rotate_gizmo.jpg](resources/modtown_rotate_gizmo.jpg)
+![modtown_rotate_gizmo.jpg](/img/customcampaigns/modtown_rotate_gizmo.jpg)
 
 If you move past the walls, we can see that they are actually only one-sided, which is why we make two copies for each wall, so that for each wall we can have one facing each direction.
 
 Click on the wall with the doorframe and rotate that 180 degrees.
-![modtown_rotated_wall.jpg](resources/modtown_rotated_wall.jpg)
+![modtown_rotated_wall.jpg](/img/customcampaigns/modtown_rotated_wall.jpg)
 
 Select another wall and move it and rotate it so that it connects with our first wall. Also make sure to move another copy to that same spot and rotate it 180 degrees away from that.
-![modtown_translated_walls.jpg](resources/modtown_translated_walls.jpg)
+![modtown_translated_walls.jpg](/img/customcampaigns/modtown_translated_walls.jpg)
 
 With the corner pieces, move those so that they fit into the outer corners of the house.
-![modtown_corners_placed.jpg](resources/modtown_corners_placed.jpg)
+![modtown_corners_placed.jpg](/img/customcampaigns/modtown_corners_placed.jpg)
 
 Press the save button in GlacierKit to save the scenario. Close the game, redeploy, relaunch, and start the mission.
 
 ## Regenerating the NAVP and AIRG
 Now that we've modified the geometry, the old NAVP and AIRG don't accurately represent the scenario. If we were to throw a coin behind the house for instance, Super Targetman would just walk right through the walls.
-![modtown_need_new_navp.jpg](resources/modtown_need_new_navp.jpg)
+![modtown_need_new_navp.jpg](/img/customcampaigns/modtown_need_new_navp.jpg)
 
 Let's open NavKit up, and follow the same steps as before:  
 1. Click the `Extract from game and build obj` button
@@ -1160,9 +1160,9 @@ Let's open NavKit up, and follow the same steps as before:
 4. Click the `Build Airg from Navp` button
 5. Save the AIRG file to `shared/chunk2/00D89D1CB094AD54.airg`  
 
-![modtown_new_navp_and_airg.jpg](resources/modtown_new_navp_and_airg.jpg)  
+![modtown_new_navp_and_airg.jpg](/img/customcampaigns/modtown_new_navp_and_airg.jpg)  
 Redeploy, relaunch, and start the mission, and now Super Targetman will walk around the house if you throw a coin behind the house, or walk through the door if you lure him into the house.
-![modtown_avoiding_house.jpg](resources/modtown_avoiding_house.jpg)
+![modtown_avoiding_house.jpg](/img/customcampaigns/modtown_avoiding_house.jpg)
 
 ## Next Steps
 We've seen how to reuse existing assets to build a scenario, but on the next page, we'll create all new 3D Geometry for our mission.
