@@ -7,6 +7,8 @@ description: Committing to GitHub
 
 For this tutorial, we will go over committing your changes to the GitHub Repo. Let's try out our git commit strategy, manage our branches, and update our `.gitignore` file.
 
+You can follow along here for step-by-step instructions specifically for this guide. There is also more information available on the [Contributing to GitHub Projects](/docs/modding/github) page. 
+
 ## Creating the `next-release` branch
 Let's make a few new branches on our repo. In WebStorm, click the `Terminal` button on the bottom of the left sidebar.
 
