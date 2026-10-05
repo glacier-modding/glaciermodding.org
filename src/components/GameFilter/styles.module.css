@@ -1,0 +1,30 @@
+.filterBar {
+    position: sticky;
+    top: calc(var(--ifm-navbar-height, 60px) + 0.5rem);
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1rem;
+    margin: 1rem 0;
+    background: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: var(--ifm-global-radius);
+}
+
+.filterLabel {
+    font-weight: 600;
+}
+
+.filterOption {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.hidden {
+    display: none !important;
+}
